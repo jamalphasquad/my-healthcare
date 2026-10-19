@@ -1,15 +1,27 @@
 import fs from 'node:fs';
-import { SITE, write, img, abs } from './lib.mjs';
+import { SITE, LAYOUT, write, img, abs } from './lib.mjs';
 import { home, clinicsIndex, clinicPage, articlesIndex, articlePage } from './pages.mjs';
 import { staticPages } from './static-pages.mjs';
-import { CLINICS, AREAS, SERVICES, NETWORK, COMING_SOON } from './clinics.mjs';
+import { CLINICS as RAW_CLINICS, NETWORKS, SERVICES, COMING_SOON } from './clinics.mjs';
+import { normalizeClinic, deriveAreas } from './clinic-data.mjs';
 import { NEWS } from './articles-news.mjs';
 import { GUIDES } from './articles-guides.mjs';
 import { SEO } from './seo.mjs';
-
-const TOPICS = [['prevention', 'Dengue & haze'], ['heart-diabetes', 'Heart & diabetes'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['clinic-guides', 'Clinic guides']];
+import { buildIndex, searchPage } from './search.mjs';
 
 const ARTICLES = [...NEWS, ...GUIDES];
+// Footer topic links, kept to categories that have at least one article.
+const TOPICS = [['prevention', 'Dengue & haze'], ['heart-diabetes', 'Heart & diabetes'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['guides', 'Guides'], ['clinic-guides', 'Clinic guides']]
+  .filter(([cat]) => ARTICLES.some((a) => a.cat === cat));
+
+for (const c of RAW_CLINICS) if (SEO[c.slug]) [c.seoTitle, c.seoDesc] = SEO[c.slug];
+const CLINICS = RAW_CLINICS.map((c) => normalizeClinic(c, NETWORKS));
+const dup = CLINICS.map((c) => c.slug).find((s, i, all) => all.indexOf(s) !== i);
+if (dup) throw new Error('Duplicate clinic slug: ' + dup);
+const AREAS = deriveAreas(CLINICS);
+const comingSoon = COMING_SOON.filter((n) => !AREAS.some((a) => a.label.toLowerCase() === n.toLowerCase()));
+LAYOUT.areas = AREAS;
+
 const fill = (html) => html.replace(/\{\{img:([^|]+)\|([^}]+)\}\}/g, (_, n, alt) => img(n, alt, { sizes: '(max-width: 760px) 100vw, 700px' }));
 for (const a of ARTICLES) {
   for (const s of a.sections) s.html = fill(s.html);
@@ -19,15 +31,18 @@ for (const a of ARTICLES) {
 }
 ARTICLES.find((a) => a.slug === 'breast-cancer-screening-malaysia').clinicsFilter = 'womens';
 for (const a of ARTICLES) if (SEO[a.slug]) [a.seoTitle, a.desc] = SEO[a.slug];
-for (const c of CLINICS) if (SEO[c.slug]) [c.seoTitle, c.seoDesc] = SEO[c.slug];
 
-const ctx = { clinics: CLINICS, areas: AREAS, services: SERVICES, articles: ARTICLES, topics: TOPICS, network: NETWORK };
-home({ ...ctx, faqs: FAQS(), featuredSlug: 'breast-cancer-screening-malaysia', comingSoon: COMING_SOON });
+// Only offer service filters that at least one clinic provides.
+const services = SERVICES.filter(([k]) => CLINICS.some((c) => c.serviceKeys.includes(k)));
+const ctx = { clinics: CLINICS, areas: AREAS, services, articles: ARTICLES, topics: TOPICS };
+home({ ...ctx, faqs: FAQS(), featuredSlug: 'breast-cancer-screening-malaysia', comingSoon });
 clinicsIndex(ctx);
 for (const c of CLINICS) clinicPage(c, ctx);
 articlesIndex({ ...ctx, featuredSlug: 'dengue-klang-valley-first-three-days' });
 for (const a of ARTICLES) articlePage(a, ctx);
 staticPages(TOPICS);
+searchPage(TOPICS);
+const indexed = buildIndex(ctx);
 
 // sitemap + robots
 const urls = [
@@ -42,14 +57,37 @@ ${urls.map(([p, pr, cf, im, mod]) => `  <url><loc>${abs(p)}</loc><lastmod>${mod 
 </urlset>
 `);
 write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /404.html\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
-console.log('built', ARTICLES.length, 'articles,', CLINICS.length, 'clinics;', ARTICLES.map((a) => a.slug + ':' + a.words).join(' '));
+
+// Cloudflare Pages config (not served as pages).
+// _headers: caching and security headers. CSS/JS URLs carry ?v=, images keep their names, so they get shorter lifetimes.
+write('_headers', `/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/assets/img/*
+  Cache-Control: public, max-age=2592000
+
+/assets/css/*
+  Cache-Control: public, max-age=86400
+
+/assets/js/*
+  Cache-Control: public, max-age=86400
+
+/assets/search-index.json
+  Cache-Control: public, max-age=3600
+`);
+// _routes.json: only run the www-redirect function (functions/_middleware.js) for pages, not static files.
+write('_routes.json', JSON.stringify({ version: 1, include: ['/*'], exclude: ['/assets/*', '/favicon*', '/apple-touch-icon.png', '/site.webmanifest', '/robots.txt', '/sitemap.xml'] }, null, 2) + '\n');
+console.log('built', ARTICLES.length, 'articles,', CLINICS.length, 'clinics,', indexed, 'search docs;', ARTICLES.map((a) => a.slug + ':' + a.words).join(' '));
 
 function FAQS() {
   return [
     ['What number do I call in a medical emergency in Malaysia?', 'Call <a href="tel:999">999</a> from any phone. From a mobile phone, <a href="tel:112">112</a> also connects you to emergency services.'],
-    ['Which clinics near Kelana Jaya, Subang and Sungai Buloh are open late?', 'MediPulih Klinik Subang Perdana (Shah Alam) and MediPulih Klinik Seri Pristana (Sungai Buloh) list hours of 8am to 11pm every day. MediPulih Klinik Kelana Jaya is open on weekdays, 8am to 5pm. Use the “Open now” switch above to see which clinics are open right now.'],
-    ['Do I need a referral to see a specialist?', 'Private specialist centres in the Klang Valley usually accept appointments without a referral, although some insurers ask for a GP letter. Government hospitals generally require a referral for specialist clinics.'],
-    ['Can I get free health screening in Selangor or Kuala Lumpur?', 'Yes, if you are eligible. PERKESO contributors aged 40–59 can book free screening through the SEHATi app, PeKa B40 covers eligible lower-income Malaysians aged 40 and over, and LPPKN offers free or subsidised mammograms for women aged 40–70. See our <a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">screening guide</a>.'],
-    ['How do I get my clinic listed?', 'Listing is free. <a href="/contact/">Send us</a> your clinic details and registration information, and we will check them before publishing.'],
+    ['How do I find a clinic that is open now in Kuala Lumpur?', 'Use the clinic directory above. Each listing shows opening hours in Malaysia time, and the “Open now” switch shows clinics open at this moment. Hours can differ on public holidays, so please call ahead.'],
+    ['Do I need a referral to see a specialist?', 'Private specialist centres in Kuala Lumpur usually accept appointments without a referral, although some insurers ask for a GP letter. Government hospitals generally require a referral for specialist clinics.'],
+    ['Can I get free health screening in Kuala Lumpur?', 'Yes, if you are eligible. PERKESO contributors aged 40–59 can book free screening through the SEHATi app, PeKa B40 covers eligible lower-income Malaysians aged 40 and over, and LPPKN offers free or subsidised mammograms for women aged 40–70. See our <a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">screening guide</a>.'],
+    ['How do I get my clinic listed?', 'Listing is free. <a href="/contact/#list">Send us</a> your clinic details and registration information, and we will check them before publishing.'],
   ];
 }

@@ -13,10 +13,10 @@ export function staticPages(topics) {
   };
 
   page({
-    path: '/about/', crumb: 'About', h1: 'About MalaysiaHealthcare.my', type: 'AboutPage',
-    title: 'About Us & Editorial Policy | MalaysiaHealthcare.my',
-    desc: 'Who we are, how we choose clinics for our Klang Valley directory, and how we research and update our health articles for Malaysians.',
-    body: `<p>MalaysiaHealthcare.my is an independent guide to everyday healthcare in Kuala Lumpur and the wider Klang Valley. We have two simple aims: help people find a nearby clinic quickly, and share calm, practical health information written for Malaysia.</p>
+    path: '/about/', crumb: 'About', h1: 'About HealthcareDirectory.my', type: 'AboutPage',
+    title: 'About Us & Editorial Policy | HealthcareDirectory.my',
+    desc: 'Who we are, how we choose clinics for our Kuala Lumpur directory, and how we research and update our health articles for Malaysians.',
+    body: `<p>HealthcareDirectory.my is an independent directory of clinics and a guide to everyday healthcare in Kuala Lumpur, Malaysia. We have two simple aims: help people find a nearby clinic quickly, and share calm, practical health information written for Malaysia.</p>
 <h2 id="directory">How the clinic directory works</h2>
 <p>We are starting small and growing area by area. Each listing shows the clinic's address, phone number, opening hours and main services, taken from the clinic's own published information and public listings. Opening status (“Open now”) is calculated in Malaysia time (GMT+8) from the published hours. It does not account for public holidays, so please call ahead on cuti umum.</p>
 <p>Clinic details can change. If you spot something out of date, please <a href="/contact/">let us know</a> and we will check and correct it.</p>
@@ -33,10 +33,10 @@ export function staticPages(topics) {
 
   page({
     path: '/contact/', crumb: 'Contact', h1: 'Contact us & list your clinic', type: 'ContactPage',
-    title: 'Contact & List Your Clinic | MalaysiaHealthcare.my',
-    desc: 'Get in touch with MalaysiaHealthcare.my, suggest a correction, or list your clinic in our Kuala Lumpur and Klang Valley directory free of charge.',
-    body: `<p>We would love to hear from you, whether you have spotted an error, have a story idea, or run a clinic in Kuala Lumpur or the Klang Valley.</p>
-<div class="box box--mint"><span class="eyebrow">Email</span><p><a href="mailto:hello@malaysiahealthcare.my">hello@malaysiahealthcare.my</a></p><p>We usually reply within two working days.</p></div>
+    title: 'Contact & List Your Clinic | HealthcareDirectory.my',
+    desc: 'Get in touch with HealthcareDirectory.my, suggest a correction, or list your clinic in our Kuala Lumpur clinic directory free of charge.',
+    body: `<p>We would love to hear from you, whether you have spotted an error, have a story idea, or run a clinic in Kuala Lumpur.</p>
+<div class="box box--mint"><span class="eyebrow">Email</span><p><a href="mailto:hello@healthcaredirectory.my">hello@healthcaredirectory.my</a></p><p>We usually reply within two working days.</p></div>
 <h2 id="list">List your clinic</h2>
 <p>Listing is free. Please email us with:</p>
 <ul>
@@ -53,10 +53,10 @@ export function staticPages(topics) {
 
   page({
     path: '/privacy/', crumb: 'Privacy', h1: 'Privacy notice (PDPA)',
-    title: 'Privacy Notice (PDPA) | MalaysiaHealthcare.my',
-    desc: 'How MalaysiaHealthcare.my collects, uses and protects personal data under Malaysia’s Personal Data Protection Act 2010 (PDPA), and your rights.',
+    title: 'Privacy Notice (PDPA) | HealthcareDirectory.my',
+    desc: 'How HealthcareDirectory.my collects, uses and protects personal data under Malaysia’s Personal Data Protection Act 2010 (PDPA), and your rights.',
     body: `<p>Last updated: ${longDate(SITE.updated)}</p>
-<p>This notice explains how MalaysiaHealthcare.my handles personal data, in line with Malaysia’s Personal Data Protection Act 2010 (PDPA).</p>
+<p>This notice explains how HealthcareDirectory.my handles personal data, in line with Malaysia’s Personal Data Protection Act 2010 (PDPA).</p>
 <h2 id="collect">What we collect</h2>
 <ul>
 <li><strong>Emails you send us.</strong> If you contact us, we keep your message and email address so we can reply.</li>
@@ -69,12 +69,12 @@ export function staticPages(topics) {
 <h2 id="third">Third-party services</h2>
 <p>Pages load fonts from Google Fonts, and clinic pages may show an embedded Google Map. These services may receive your IP address when the content loads. Links to clinics, WhatsApp and maps take you to third-party sites with their own privacy policies.</p>
 <h2 id="rights">Your rights</h2>
-<p>You may ask to access or correct your personal data, or ask us to stop processing it, by emailing <a href="mailto:hello@malaysiahealthcare.my">hello@malaysiahealthcare.my</a>.</p>`,
+<p>You may ask to access or correct your personal data, or ask us to stop processing it, by emailing <a href="mailto:hello@healthcaredirectory.my">hello@healthcaredirectory.my</a>.</p>`,
   });
 
   // 404
   write('404.html',
-    head({ path: '/404.html', title: 'Page not found | MalaysiaHealthcare.my', desc: 'Sorry, we could not find that page.', noindex: true }) +
+    head({ path: '/404.html', title: 'Page not found | HealthcareDirectory.my', desc: 'Sorry, we could not find that page.', noindex: true }) +
     header('') +
     `<div class="text-page" style="text-align:center">
 <p class="eyebrow" style="margin-top:40px">Error 404</p>

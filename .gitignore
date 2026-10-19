@@ -147,3 +147,7 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Cloudflare Pages deploy staging folder (tools/deploy.mjs)
+.deploy/
+.wrangler/

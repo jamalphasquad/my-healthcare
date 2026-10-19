@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://malaysiahealthcare.my/sitemap.xml
+Sitemap: https://healthcaredirectory.my/sitemap.xml

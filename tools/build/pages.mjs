@@ -9,10 +9,12 @@ export const rangeText = (r) => (!r || !r.length ? 'Closed' : r.length === 1 && 
 
 function hoursSpec(hours) {
   const out = [];
+  if (!hours) return out;
   for (let d = 0; d < 7; d++) for (const [a, b] of hours[d] || []) out.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: SCHEMA_DAYS[d], opens: hm(a), closes: hm(b) });
   return out;
 }
 function summaryHours(hours) {
+  if (!hours) return 'Hours not confirmed yet – please call';
   // group consecutive days (Mon..Sun order) with identical ranges
   const order = [1, 2, 3, 4, 5, 6, 0], short = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const groups = [];
@@ -32,35 +34,36 @@ export function clinicLd(c) {
     alternateName: c.altNames,
     url: abs(`/clinics/${c.slug}/`),
     image: abs(`/assets/img/${c.image}-og.jpg`),
-    telephone: c.phoneIntl,
-    address: { '@type': 'PostalAddress', streetAddress: c.street, addressLocality: c.locality, postalCode: c.postcode, addressRegion: c.state, addressCountry: 'MY' },
+    ...(c.phoneIntl ? { telephone: c.phoneIntl } : {}),
+    address: { '@type': 'PostalAddress', ...(c.street ? { streetAddress: c.street } : {}), addressLocality: c.locality, ...(c.postcode ? { postalCode: c.postcode } : {}), addressRegion: c.state, addressCountry: 'MY' },
     ...(c.geo ? { geo: { '@type': 'GeoCoordinates', latitude: c.geo[0], longitude: c.geo[1] } } : {}),
     hasMap: c.mapsUrl,
-    openingHoursSpecification: hoursSpec(c.hours),
+    ...(c.hours ? { openingHoursSpecification: hoursSpec(c.hours) } : {}),
     medicalSpecialty: c.specialties || ['PrimaryCare'],
     availableService: c.services.map((s) => ({ '@type': 'MedicalProcedure', name: s.name })).slice(0, 12),
     isAcceptingNewPatients: true,
-    parentOrganization: { '@type': 'MedicalOrganization', name: c.network.name, ...(c.network.url ? { url: c.network.url } : {}) },
+    ...(c.network ? { parentOrganization: { '@type': 'MedicalOrganization', name: c.network.name, ...(c.network.url ? { url: c.network.url } : {}) } } : {}),
     ...(c.sameAs?.length ? { sameAs: c.sameAs } : {}),
     areaServed: c.areaServed.map((n) => ({ '@type': 'Place', name: n })),
   };
 }
 
-const telHref = (c) => 'tel:' + c.phoneIntl.replace(/[^+\d]/g, '');
+const telHref = (c) => (c.phoneIntl ? 'tel:' + c.phoneIntl.replace(/[^+\d]/g, '') : null);
+const hoursAttr = (c) => (c.hours ? ` data-hours='${JSON.stringify(c.hours)}'` : '');
+export const miniClinic = (c) => `<a href="/clinics/${c.slug}/"${hoursAttr(c)}><span class="a">${esc(c.areaLabel)}, ${esc(c.locality)}</span><span class="n">${esc(c.name)}</span><span class="h">${esc(summaryHours(c.hours))}</span></a>`;
 const dirHref = (c) => c.mapsUrl;
 
 export function clinicCard(c, o = {}) {
-  return `<article class="clinic" data-area="${c.areaSlug}" data-services="${c.serviceKeys.join('|')}" data-hours='${JSON.stringify(c.hours)}'>
-<a class="clinic__media" href="/clinics/${c.slug}/" tabindex="-1" aria-hidden="true">${img(c.image, c.imageAlt, { sizes: '(max-width: 760px) 100vw, 380px' })}<span class="status">${esc(c.statusFallback || 'See hours')}</span></a>
+  return `<article class="clinic" data-area="${c.areaSlug}" data-services="${c.serviceKeys.join('|')}"${hoursAttr(c)}>
+<a class="clinic__media" href="/clinics/${c.slug}/" tabindex="-1" aria-hidden="true">${img(c.image, c.imageAlt, { sizes: '(max-width: 760px) 100vw, 380px' })}<span class="status">${c.hours ? 'See hours' : 'Call to confirm hours'}</span></a>
 <div class="clinic__body">
 <span class="meta">${esc(c.cardSpec)} &middot; ${esc(c.areaLabel)}</span>
 <${o.h || 'h3'} class="clinic__name"><a href="/clinics/${c.slug}/">${esc(c.name)}</a></${o.h || 'h3'}>
-<address class="clinic__addr">${esc(c.addressLine)}</address>
+${c.addressLine ? `<address class="clinic__addr">${esc(c.addressLine)}</address>` : ''}
 <p class="clinic__hours js-today">${esc(summaryHours(c.hours))}</p>
 <div class="clinic__tags">${c.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
 <div class="clinic__actions">
-<a class="a-line" href="${telHref(c)}">Call</a>
-<a class="a-line" href="/clinics/${c.slug}/">Details</a>
+${telHref(c) ? `<a class="a-line" href="${telHref(c)}">Call</a>\n` : ''}<a class="a-line" href="/clinics/${c.slug}/">Details</a>
 <a class="a-fill" href="${dirHref(c)}" target="_blank" rel="noopener">Directions</a>
 </div>
 </div>
@@ -68,9 +71,13 @@ export function clinicCard(c, o = {}) {
 }
 
 export function directory(clinics, areas, services, o = {}) {
+  if (!clinics.length) return `<div id="${o.id || 'directory'}" style="scroll-margin-top:90px">
+<div class="section-head"><div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics in Kuala Lumpur'}</${o.h || 'h2'}></div></div>
+<div class="empty"><p>New clinic listings are on their way.</p><span style="color:var(--muted);max-width:520px;line-height:1.6">We are adding clinics across Kuala Lumpur now. Run a clinic? Listing is free.</span><a class="btn" href="/contact/#list">List your clinic</a></div>
+</div>`;
   return `<div data-directory id="${o.id || 'directory'}" style="scroll-margin-top:90px">
 <div class="section-head">
-<div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics in the Klang Valley'}</${o.h || 'h2'}></div>
+<div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics in Kuala Lumpur'}</${o.h || 'h2'}></div>
 <label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
 </div>
 <div class="chips chips-scroll" role="group" aria-label="Filter by area" style="margin-bottom:12px">
@@ -81,7 +88,7 @@ ${areas.map((a) => `<button type="button" class="chip" data-filter-area="${a.slu
 <button type="button" class="chip chip--soft" data-filter-service="all" aria-pressed="true">All services</button>
 ${services.map(([k, l]) => `<button type="button" class="chip chip--soft" data-filter-service="${k}" aria-pressed="false">${esc(l)}</button>`).join('\n')}
 </div>
-<p class="result-text" aria-live="polite">${clinics.length} clinics in the Klang Valley</p>
+<p class="result-text" aria-live="polite">${clinics.length} ${clinics.length === 1 ? 'clinic' : 'clinics'} listed</p>
 <div class="clinic-grid">
 ${clinics.map((c) => clinicCard(c)).join('\n')}
 </div>
@@ -109,8 +116,8 @@ export function home({ clinics, areas, services, articles, faqs, topics, feature
     '@context': 'https://schema.org',
     '@graph': [
       WEBSITE, ORG,
-      { '@type': 'WebPage', '@id': SITE.url + '/#webpage', url: SITE.url + '/', name: 'Clinics in Kuala Lumpur & Klang Valley and health awareness', isPartOf: { '@id': SITE.url + '/#website' }, about: { '@id': SITE.url + '/#org' }, inLanguage: SITE.lang, primaryImageOfPage: abs('/assets/img/kl-skyline-og.jpg') },
-      { '@type': 'ItemList', name: 'Clinics in the Klang Valley', itemListElement: clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`/clinics/${c.slug}/`), name: c.name })) },
+      { '@type': 'WebPage', '@id': SITE.url + '/#webpage', url: SITE.url + '/', name: 'Clinics in Kuala Lumpur and health awareness for Malaysians', isPartOf: { '@id': SITE.url + '/#website' }, about: { '@id': SITE.url + '/#org' }, inLanguage: SITE.lang, primaryImageOfPage: abs('/assets/img/kl-skyline-og.jpg') },
+      ...(clinics.length ? [{ '@type': 'ItemList', name: 'Clinics in Kuala Lumpur', itemListElement: clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`/clinics/${c.slug}/`), name: c.name })) }] : []),
       { '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) },
     ],
   };
@@ -118,7 +125,7 @@ export function home({ clinics, areas, services, articles, faqs, topics, feature
     path: '/',
     title: SEO.home[0],
     desc: SEO.home[1],
-    ogTitle: 'Find a clinic near you in KL & the Klang Valley | MalaysiaHealthcare.my',
+    ogTitle: `Find a clinic near you in Kuala Lumpur | ${SITE.name}`,
     ogDesc: 'Clinics by neighbourhood with hours and directions, plus health awareness guides written for Malaysia.',
     image: 'kl-skyline', imageAlt: 'Kuala Lumpur skyline with Menara Kuala Lumpur',
     geo: { region: 'MY-14', place: 'Kuala Lumpur', pos: [3.139, 101.6869] },
@@ -127,19 +134,19 @@ export function home({ clinics, areas, services, articles, faqs, topics, feature
   }) + header('') + `
 <section class="wrap hero" aria-labelledby="hero-h">
 <div class="stack g24">
-<span class="eyebrow">Kuala Lumpur &amp; Klang Valley &middot; Clinics &amp; health guides</span>
-<h1 id="hero-h" class="h-hero">Calm, trusted care for <em>every corner of the Klang Valley.</em></h1>
-<p class="lede" style="max-width:520px">Find a clinic near you in Kelana Jaya, Subang Perdana, Sungai Buloh and beyond — with opening hours, directions and clear health guidance written for Malaysians.</p>
-<form class="finder" id="finder" role="search" aria-label="Find a clinic" action="/clinics/">
+<span class="eyebrow">Kuala Lumpur &middot; Clinic directory &amp; health guides</span>
+<h1 id="hero-h" class="h-hero">Calm, trusted care for <em>every corner of KL.</em></h1>
+<p class="lede" style="max-width:520px">Find a clinic near you in Kuala Lumpur — with opening hours, directions and clear health guidance written for Malaysians.</p>
+${clinics.length ? `<form class="finder" id="finder" role="search" aria-label="Find a clinic" action="/clinics/">
 <div class="finder__field"><span class="finder__label" id="finder-service-label">I need</span><select id="finder-service" name="service" aria-labelledby="finder-service-label" data-dropdown><option value="all">Any service</option>${services.map(([k, l]) => `<option value="${k}">${esc(l)}</option>`).join('')}</select></div>
 <div class="finder__field"><span class="finder__label" id="finder-area-label">Near</span><select id="finder-area" name="area" aria-labelledby="finder-area-label" data-dropdown><option value="all">Anywhere</option>${areas.map((a) => `<option value="${a.slug}">${esc(a.label)}</option>`).join('')}</select></div>
 <button class="btn btn--sq" type="submit">Find clinics</button>
-</form>
-<div class="trust"><span>Free to use</span><span aria-hidden="true">&middot;</span><span>Hours shown in Malaysia time</span><span aria-hidden="true">&middot;</span><span>Updated ${longDate(SITE.updated).replace(/^\d+ /, '')}</span></div>
+</form>` : '<div class="cta-row"><a class="btn" href="/articles/">Read health guides</a><a class="btn btn--ghost" href="/contact/#list">List your clinic</a></div>'}
+<div class="trust"><span>Free to use</span><span aria-hidden="true">&middot;</span><span>${clinics.length ? 'Hours shown in Malaysia time' : 'KL clinics coming soon'}</span><span aria-hidden="true">&middot;</span><span>Updated ${longDate(SITE.updated).replace(/^\d+ /, '')}</span></div>
 </div>
 <div class="hero__media">
 ${img('kl-skyline', 'Kuala Lumpur skyline with Menara Kuala Lumpur under a blue sky', { eager: true, sizes: '(max-width: 960px) 100vw, 560px' })}
-<div class="hero__badge"><span class="pulse" aria-hidden="true"></span><span><strong class="js-open-count">${clinics.length} clinics listed</strong><br><span class="sub">across the Klang Valley</span></span></div>
+<div class="hero__badge"><span class="pulse" aria-hidden="true"></span><span>${clinics.length ? `<strong class="js-open-count">${clinics.length} ${clinics.length === 1 ? 'clinic' : 'clinics'} listed</strong>` : '<strong>New clinics being added</strong>'}<br><span class="sub">across Kuala Lumpur</span></span></div>
 </div>
 </section>
 
@@ -195,8 +202,8 @@ ${rest.map((a) => postCard(a)).join('\n')}
 <div class="wrap areas__grid">
 <div class="stack g16">
 <span class="eyebrow">By neighbourhood</span>
-<h2 id="nb-h">Healthcare close to home, across the Klang Valley.</h2>
-<p>Each neighbourhood guide covers its clinics, opening hours, and how to get there by LRT, MRT or car. We are adding new areas across Kuala Lumpur every month.</p>
+<h2 id="nb-h">Healthcare close to home, across KL.</h2>
+<p>Each neighbourhood lists its clinics, opening hours, and how to get there by LRT, MRT or car. We are adding new areas across Kuala Lumpur every month.</p>
 ${img('kl-city-park', 'Green park in Kuala Lumpur with city towers behind', { sizes: '(max-width: 760px) 100vw, 560px' })}
 </div>
 <ul class="area-list">
@@ -207,13 +214,13 @@ ${comingSoon.map((n) => `<li><span class="soon"><span class="name">${esc(n)}</sp
 </section>
 
 <section class="faq" aria-labelledby="faq-h">
-<h2 id="faq-h">Common questions about healthcare in the Klang Valley</h2>
+<h2 id="faq-h">Common questions about healthcare in KL</h2>
 <div class="qa">
 ${faqs.map(([q, a], i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q)}</summary><p>${a}</p></details>`).join('\n')}
 </div>
 </section>
 
-${newsletter('Awareness campaigns, screening reminders and new Klang Valley clinics. No spam.')}
+${newsletter('Awareness campaigns, screening reminders and new Kuala Lumpur clinics. No spam.')}
 ` + footer(topics);
   write('index.html', html);
 }
@@ -233,11 +240,12 @@ export function newsletter(text) {
 }
 
 /* --------------------------- CLINICS INDEX --------------------------- */
-export function clinicsIndex({ clinics, areas, services, topics, network }) {
+export function clinicsIndex({ clinics, areas, services, topics }) {
+  const networks = [...new Map(clinics.filter((c) => c.network).map((c) => [c.network.name, c.network])).values()];
   const items = [['/', 'Home'], ['/clinics/', 'Clinics']];
   const ld = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'CollectionPage', url: abs('/clinics/'), name: 'Clinics in Kuala Lumpur & the Klang Valley', inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' } },
-    { '@type': 'ItemList', itemListElement: clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, item: clinicLd(c) })) },
+    { '@type': 'CollectionPage', url: abs('/clinics/'), name: 'Clinics in Kuala Lumpur', inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' } },
+    ...(clinics.length ? [{ '@type': 'ItemList', itemListElement: clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, item: clinicLd(c) })) }] : []),
     crumbsLd(items), ORG, WEBSITE] };
   const html = head({
     path: '/clinics/',
@@ -248,17 +256,17 @@ export function clinicsIndex({ clinics, areas, services, topics, network }) {
 <section class="wrap" style="padding-top:40px">
 ${crumbs(items)}
 <div class="stack g16" style="margin:28px 0 40px;max-width:760px">
-<h1 class="h-hero" style="font-size:clamp(38px,5vw,60px)">Clinics in Kuala Lumpur &amp; <em>the Klang Valley</em></h1>
-<p class="lede">Neighbourhood clinics with opening hours, phone numbers and directions. We are starting in Petaling Jaya, Shah Alam and Sungai Buloh, and adding new Kuala Lumpur areas every month.</p>
+<h1 class="h-hero" style="font-size:clamp(38px,5vw,60px)">Clinics in <em>Kuala Lumpur</em></h1>
+<p class="lede">Neighbourhood clinics with opening hours, phone numbers and directions, with new Kuala Lumpur areas added every month.</p>
 </div>
 ${directory(clinics, areas, services, { h: 'h2', heading: 'All listed clinics' })}
 </section>
-<section class="wrap section" aria-labelledby="net-h">
+${networks.filter((n) => n.blurb).map((n, i) => `<section class="wrap section" aria-labelledby="net-h${i}">
 <div class="callout-bar" style="padding:32px">
-<div class="stack g10" style="max-width:720px"><h2 id="net-h" style="font-size:30px;line-height:1.15">About the ${esc(network.name)} network</h2><p style="color:var(--muted);line-height:1.6">${network.blurb}</p></div>
-${network.url ? `<a class="btn" href="${network.url}" target="_blank" rel="noopener">Visit ${esc(network.name)}</a>` : ''}
+<div class="stack g10" style="max-width:720px"><h2 id="net-h${i}" style="font-size:30px;line-height:1.15">About the ${esc(n.name)} network</h2><p style="color:var(--muted);line-height:1.6">${n.blurb}</p></div>
+${n.url ? `<a class="btn" href="${n.url}" target="_blank" rel="noopener">Visit ${esc(n.name)}</a>` : ''}
 </div>
-</section>
+</section>`).join('\n') || '<div style="height:72px"></div>'}
 ` + footer(topics);
   write('clinics/index.html', html);
 }
@@ -266,7 +274,7 @@ ${network.url ? `<a class="btn" href="${network.url}" target="_blank" rel="noope
 /* --------------------------- CLINIC PAGE --------------------------- */
 export function clinicPage(c, { clinics, articles, topics }) {
   const items = [['/', 'Home'], ['/clinics/', 'Clinics'], [`/clinics/${c.slug}/`, c.name]];
-  const others = clinics.filter((x) => x !== c);
+  const others = c.network ? clinics.filter((x) => x !== c && x.network && x.network.name === c.network.name) : [];
   const guide = articles.find((a) => a.clinic === c.slug);
   const faqLd = c.faqs?.length ? [{ '@type': 'FAQPage', mainEntity: c.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) }] : [];
   const ld = { '@context': 'https://schema.org', '@graph': [clinicLd(c), { '@type': 'WebPage', url: abs(`/clinics/${c.slug}/`), name: c.name, about: { '@id': abs(`/clinics/${c.slug}/#clinic`) }, inLanguage: SITE.lang, dateModified: SITE.updated }, crumbsLd(items), ...faqLd, ORG, WEBSITE] };
@@ -275,25 +283,26 @@ export function clinicPage(c, { clinics, articles, topics }) {
     path: `/clinics/${c.slug}/`,
     title: c.seoTitle, desc: c.seoDesc,
     image: c.image, imageAlt: c.imageAlt,
-    geo: { region: 'MY-10', place: `${c.areaLabel}, ${c.locality}`, pos: c.geo },
+    geo: { region: c.region, place: `${c.areaLabel}, ${c.locality}`, pos: c.geo },
     ld,
   }) + header('clinics') + `
 <div class="wrap" style="padding-top:36px">${crumbs(items)}</div>
-<section class="wrap cp-head" data-clinic-profile data-hours='${JSON.stringify(c.hours)}' aria-labelledby="clinic-h">
+<section class="wrap cp-head" data-clinic-profile${hoursAttr(c)} aria-labelledby="clinic-h">
 <div class="stack g24">
 <span class="eyebrow">${esc(c.cardSpec)} &middot; ${esc(c.areaLabel)}, ${esc(c.locality)}</span>
 <h1 id="clinic-h">${esc(c.name)}</h1>
 <p class="lede">${c.intro}</p>
 <div class="cta-row">
-<a class="btn" href="${telHref(c)}">Call ${esc(c.phone)}</a>
+${telHref(c) ? `<a class="btn" href="${telHref(c)}">Call ${esc(c.phone)}</a>` : ''}
+${c.booking ? `<a class="btn${telHref(c) ? ' btn--ghost' : ''}" href="${c.booking}" target="_blank" rel="noopener">Book online</a>` : ''}
 ${c.whatsapp ? `<a class="btn btn--ghost" href="https://wa.me/${c.whatsapp.replace(/\D/g, '')}" target="_blank" rel="noopener">WhatsApp</a>` : ''}
 <a class="btn btn--ghost" href="${dirHref(c)}" target="_blank" rel="noopener">Get directions</a>
 </div>
 <div class="facts"><dl>
-<div class="row"><dt>Status</dt><dd><span class="status" style="position:static;display:inline-flex;padding:0;background:none">See hours below</span> <span class="js-today" style="color:var(--muted-2)"></span></dd></div>
-<div class="row"><dt>Address</dt><dd><address style="font-style:normal">${esc(c.street)},<br>${esc(c.postcode)} ${esc(c.locality)}, ${esc(c.state)}</address></dd></div>
-<div class="row"><dt>Phone</dt><dd><a href="${telHref(c)}">${esc(c.phone)}</a>${c.whatsapp && c.whatsapp !== c.phone ? `<br>WhatsApp: <a href="https://wa.me/${c.whatsapp.replace(/\D/g, '')}">${esc(c.whatsapp)}</a>` : ''}</dd></div>
-<div class="row"><dt>Network</dt><dd>${c.network.url ? `<a href="${c.network.url}" target="_blank" rel="noopener">${esc(c.network.name)}</a>` : esc(c.network.name)}</dd></div>
+<div class="row"><dt>Status</dt><dd>${c.hours ? '<span class="status" style="position:static;display:inline-flex;padding:0;background:none">See hours below</span> <span class="js-today" style="color:var(--muted-2)"></span>' : 'Hours not confirmed yet – please call ahead'}</dd></div>
+<div class="row"><dt>Address</dt><dd><address style="font-style:normal">${esc(c.street || c.areaLabel)},<br>${esc(c.cityLine)}</address></dd></div>
+${c.phone ? `<div class="row"><dt>Phone</dt><dd><a href="${telHref(c)}">${esc(c.phone)}</a>${c.whatsapp && c.whatsapp !== c.phone ? `<br>WhatsApp: <a href="https://wa.me/${c.whatsapp.replace(/\D/g, '')}">${esc(c.whatsapp)}</a>` : ''}</dd></div>` : ''}
+${c.network ? `<div class="row"><dt>Network</dt><dd>${c.network.url ? `<a href="${c.network.url}" target="_blank" rel="noopener">${esc(c.network.name)}</a>` : esc(c.network.name)}</dd></div>` : ''}
 ${c.gettingThere ? `<div class="row"><dt>Getting there</dt><dd>${c.gettingThere}</dd></div>` : ''}
 </dl></div>
 </div>
@@ -301,10 +310,10 @@ ${c.gettingThere ? `<div class="row"><dt>Getting there</dt><dd>${c.gettingThere}
 <div class="cp-photo">${img(c.image, c.imageAlt, { eager: true, sizes: '(max-width: 960px) 100vw, 520px' })}</div>
 <div class="box box--white">
 <span class="eyebrow">Opening hours</span>
-<table class="hours"><tbody>
+${c.hours ? `<table class="hours"><tbody>
 ${[1, 2, 3, 4, 5, 6, 0].map((d) => `<tr data-day="${d}"><td>${DAYS[d]}</td><td>${rangeText(c.hours[d])}</td></tr>`).join('\n')}
 </tbody></table>
-<p style="font-size:13px;color:var(--faint)">${c.hoursNote || 'Hours may differ on public holidays. Please call ahead.'}</p>
+<p style="font-size:13px;color:var(--faint)">${c.hoursNote || 'Hours may differ on public holidays. Please call ahead.'}</p>` : '<p style="color:var(--muted);line-height:1.6">We are still confirming this clinic’s opening hours. Please call ahead before visiting.</p>'}
 </div>
 </div>
 </section>
@@ -315,6 +324,7 @@ ${[1, 2, 3, 4, 5, 6, 0].map((d) => `<tr data-day="${d}"><td>${DAYS[d]}</td><td>$
 <h2 id="services" style="margin-top:0">Services at ${esc(c.short)}</h2>
 <ul class="service-grid">${c.services.map((s) => `<li>${esc(s.name)}${s.note ? `<span>${esc(s.note)}</span>` : ''}</li>`).join('')}</ul>
 ${c.about}
+${c.incomplete ? '<div class="box box--mint"><span class="eyebrow">Listing in progress</span><p style="font-size:16px;line-height:1.6">Some details for this clinic are still being confirmed. Please call ahead, and <a href="/contact/">let us know</a> if anything has changed.</p></div>' : ''}
 ${c.faqs?.length ? `<h2 id="faq">Frequently asked questions</h2>
 <div class="qa">${c.faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${a}</p></details>`).join('')}</div>` : ''}
 <p style="font-size:14px;color:var(--muted-2)">Details last checked ${longDate(SITE.updated)}. Clinic information comes from the clinic's own published details and public listings. Spotted a change? <a href="/contact/">Tell us</a>.</p>
@@ -324,8 +334,8 @@ ${c.faqs?.length ? `<h2 id="faq">Frequently asked questions</h2>
 <iframe class="map" title="Map showing ${esc(c.name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=${mapQ}&amp;output=embed"></iframe>
 <a href="${dirHref(c)}" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></div>
 ${guide ? `<div class="box box--mint"><span class="eyebrow">Clinic guide</span><a href="/articles/${guide.slug}/" style="font-family:var(--serif);font-size:22px;line-height:1.25;color:var(--ink)">${esc(guide.title)}</a></div>` : ''}
-<div class="stack g12"><h2 style="font-size:26px">Other ${esc(c.network.name)} branches</h2>
-<div class="mini-clinics">${others.map((o) => `<a href="/clinics/${o.slug}/" data-hours='${JSON.stringify(o.hours)}'><span class="a">${esc(o.areaLabel)}</span><span class="n">${esc(o.name)}</span><span class="h">${esc(summaryHours(o.hours))}</span></a>`).join('')}</div></div>
+${others.length ? `<div class="stack g12"><h2 style="font-size:26px">Other ${esc(c.network.name)} branches</h2>
+<div class="mini-clinics">${others.map(miniClinic).join('')}</div></div>` : ''}
 </aside>
 </div>
 </div></section>
@@ -340,7 +350,7 @@ export function articlesIndex({ articles, topics, featuredSlug }) {
   const list = articles.filter((a) => a !== featured);
   const cats = [...new Map(articles.map((a) => [a.cat, a.catLabel])).entries()];
   const ld = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Blog', '@id': abs('/articles/#blog'), name: 'MalaysiaHealthcare.my Health Articles', url: abs('/articles/'), inLanguage: SITE.lang, publisher: { '@id': SITE.url + '/#org' },
+    { '@type': 'Blog', '@id': abs('/articles/#blog'), name: `${SITE.name} Health Articles`, url: abs('/articles/'), inLanguage: SITE.lang, publisher: { '@id': SITE.url + '/#org' },
       blogPost: articles.map((a) => ({ '@type': 'BlogPosting', headline: a.title, url: abs(`/articles/${a.slug}/`), datePublished: a.published, dateModified: a.modified, image: abs(`/assets/img/${a.image}-og.jpg`) })) },
     crumbsLd(items), ORG, WEBSITE] };
   const html = head({
@@ -354,7 +364,7 @@ ${crumbs(items)}
 <div class="blog-head__grid">
 <div class="stack g16">
 <h1 id="blog-h" class="h-hero" style="font-size:clamp(40px,5vw,62px)">Health articles, <em>written for Malaysia.</em></h1>
-<p class="lede" style="max-width:540px">Calm, practical guidance based on Ministry of Health and WHO advice — with links to clinics near you in the Klang Valley.</p>
+<p class="lede" style="max-width:540px">Calm, practical guidance based on Ministry of Health and WHO advice — with links to clinics near you in Kuala Lumpur.</p>
 </div>
 <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search articles</span><input id="article-search" type="search" placeholder="Search articles — e.g. dengue, diabetes" autocomplete="off"></label>
 </div>
@@ -371,7 +381,7 @@ ${img(featured.image, featured.imageAlt, { sizes: '(max-width: 960px) 100vw, 600
 <span class="eyebrow${featured.cat === 'womens-health' ? ' cat-pink' : ''}">Featured &middot; ${esc(featured.catLabel)}</span>
 <h2>${esc(featured.title)}</h2>
 <p>${esc(featured.excerpt)}</p>
-<div class="byline"><span class="avatar" aria-hidden="true">MH</span><span>${esc(featured.author)} &middot; ${featured.mins} min read &middot; ${shortDate(featured.modified)}</span></div>
+<div class="byline"><span class="avatar" aria-hidden="true">HD</span><span>${esc(featured.author)} &middot; ${featured.mins} min read &middot; ${shortDate(featured.modified)}</span></div>
 </div>
 </a>
 </section>
@@ -397,7 +407,7 @@ ${[featured, ...list].map((a, i) => (i === 0 ? postCard(a, { date: true }).repla
 </ol>
 </div></section>
 
-${newsletter('New articles, screening reminders and Klang Valley clinic updates. No spam.').replace('class="wrap nl"', 'class="wrap nl" style="padding-top:72px"')}
+${newsletter('New articles, screening reminders and Kuala Lumpur clinic updates. No spam.').replace('class="wrap nl"', 'class="wrap nl" style="padding-top:72px"')}
 ` + footer(topics);
   // the featured article is shown in the grid only when filtering
   write('articles/index.html', html.replace('<article class="post" data-is-featured', '<article class="post" data-is-featured hidden'));
@@ -414,10 +424,10 @@ export function articlePage(a, { articles, clinics, topics }) {
     { '@type': a.medical ? 'MedicalWebPage' : 'WebPage', '@id': url + '#page', url, name: a.title, inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' }, lastReviewed: a.modified,
       ...(a.about ? { about: { '@type': 'MedicalCondition', name: a.about[0], ...(a.about[1] ? { alternateName: a.about[1] } : {}) } } : {}),
       ...(guideClinic ? { about: { '@id': abs(`/clinics/${guideClinic.slug}/#clinic`) } } : {}),
-      audience: { '@type': 'PeopleAudience', geographicArea: { '@type': 'AdministrativeArea', name: 'Klang Valley, Malaysia' } },
+      audience: { '@type': 'PeopleAudience', geographicArea: { '@type': 'AdministrativeArea', name: 'Kuala Lumpur, Malaysia' } },
       primaryImageOfPage: abs(`/assets/img/${a.image}-og.jpg`) },
     { '@type': a.news ? 'NewsArticle' : 'Article', '@id': url + '#article', headline: a.title, description: a.desc, image: [abs(`/assets/img/${a.image}-og.jpg`)], datePublished: a.published, dateModified: a.modified, articleSection: a.catLabel, wordCount: a.words,
-      author: { '@type': 'Organization', name: 'MalaysiaHealthcare.my Editorial Team', url: abs('/about/') }, publisher: { '@id': SITE.url + '/#org' }, mainEntityOfPage: url, inLanguage: SITE.lang,
+      author: { '@type': 'Organization', name: `${SITE.name} Editorial Team`, url: abs('/about/') }, publisher: { '@id': SITE.url + '/#org' }, mainEntityOfPage: url, inLanguage: SITE.lang,
       ...(a.sources?.length ? { citation: a.sources.map(([t, u]) => ({ '@type': 'CreativeWork', name: t, url: u })) } : {}) },
     crumbsLd(items),
     ...(a.faqs?.length ? [{ '@type': 'FAQPage', mainEntity: a.faqs.map(([q, ans]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: ans.replace(/<[^>]+>/g, '') } })) }] : []),
@@ -426,12 +436,13 @@ export function articlePage(a, { articles, clinics, topics }) {
   ];
   const share = encodeURIComponent(a.title + ' ' + url);
   const toc = a.sections.filter((s) => s.toc !== false);
+  const nearby = clinics.filter((c) => !a.clinicsFilter || c.serviceKeys.includes(a.clinicsFilter));
   const showClinics = a.clinicsBlock !== false && !guideClinic;
   const html = head({
-    path: `/articles/${a.slug}/`, title: a.seoTitle || `${a.title} | MalaysiaHealthcare.my`, desc: a.desc,
+    path: `/articles/${a.slug}/`, title: a.seoTitle || `${a.title} | ${SITE.name}`, desc: a.desc,
     ogTitle: a.title, ogDesc: a.excerpt, ogType: 'article', image: a.image, imageAlt: a.imageAlt,
     article: { published: a.published, modified: a.modified, section: a.catLabel },
-    geo: guideClinic ? { region: 'MY-10', place: `${guideClinic.areaLabel}, ${guideClinic.locality}`, pos: guideClinic.geo } : undefined,
+    geo: guideClinic ? { region: guideClinic.region, place: `${guideClinic.areaLabel}, ${guideClinic.locality}`, pos: guideClinic.geo } : undefined,
     preload: preloadImg(a.image, '(max-width: 1200px) 100vw, 1152px') + '\n',
     ld: { '@context': 'https://schema.org', '@graph': graph },
   }) + header('articles', { progress: true }) + `
@@ -442,7 +453,7 @@ ${crumbs(items)}
 <h1>${esc(a.title)}</h1>
 <p class="standfirst">${a.standfirst}</p>
 <div class="art-meta">
-<div class="who"><span class="avatar" aria-hidden="true">MH</span><span><span>Written by</span><br><strong>${esc(a.author)}</strong></span></div>
+<div class="who"><span class="avatar" aria-hidden="true">HD</span><span><span>Written by</span><br><strong>${esc(a.author)}</strong></span></div>
 <span>Published <time datetime="${a.published}">${longDate(a.published)}</time>${a.modified !== a.published ? ` &middot; Updated <time datetime="${a.modified}">${longDate(a.modified)}</time>` : ''}</span>
 </div>
 </header>
@@ -464,11 +475,11 @@ ${toc.map((s) => `<a href="#${s.id}">${esc(s.tocLabel || s.h)}</a>`).join('\n')}
 <div class="prose">
 ${a.keyPoints?.length ? `<div class="box box--mint"><span class="eyebrow">Key points</span><ul>${a.keyPoints.map((k) => `<li>${k}</li>`).join('')}</ul></div>` : ''}
 ${a.sections.map((s) => `<h2 id="${s.id}">${esc(s.h)}</h2>\n${s.html}`).join('\n')}
-${showClinics ? `<h2 id="where">Where to get checked in the Klang Valley</h2>
-<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
-<div class="mini-clinics">${clinics.filter((c) => !a.clinicsFilter || c.serviceKeys.includes(a.clinicsFilter)).map((c) => `<a href="/clinics/${c.slug}/" data-hours='${JSON.stringify(c.hours)}'><span class="a">${esc(c.areaLabel)}, ${esc(c.locality)}</span><span class="n">${esc(c.name)}</span><span class="h">${esc(summaryHours(c.hours))}</span></a>`).join('')}</div>
-<a class="btn" href="/clinics/" style="align-self:flex-start">See all clinics</a>` : ''}
-${guideClinic ? `<div class="callout-bar"><div class="stack" style="gap:4px"><strong style="font-family:var(--serif);font-size:22px;font-weight:500">${esc(guideClinic.name)}</strong><span style="font-size:15px;color:var(--muted)">${esc(guideClinic.addressLine)} &middot; <a href="tel:${guideClinic.phoneIntl.replace(/[^+\d]/g, '')}">${esc(guideClinic.phone)}</a></span></div><a class="btn" href="/clinics/${guideClinic.slug}/">Hours &amp; directions</a></div>` : ''}
+${showClinics ? `<h2 id="where">Where to get checked in Kuala Lumpur</h2>
+${nearby.length ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
+<div class="mini-clinics">${nearby.map(miniClinic).join('')}</div>` : '<p>Any GP clinic can assess you and arrange tests or referrals. Our Kuala Lumpur clinic directory lists opening hours, phone numbers and directions as clinics are added.</p>'}
+<a class="btn" href="/clinics/" style="align-self:flex-start">${nearby.length ? 'See all clinics' : 'Browse the clinic directory'}</a>` : ''}
+${guideClinic ? `<div class="callout-bar"><div class="stack" style="gap:4px"><strong style="font-family:var(--serif);font-size:22px;font-weight:500">${esc(guideClinic.name)}</strong><span style="font-size:15px;color:var(--muted)">${esc(guideClinic.addressLine)}${telHref(guideClinic) ? ` &middot; <a href="${telHref(guideClinic)}">${esc(guideClinic.phone)}</a>` : ''}</span></div><a class="btn" href="/clinics/${guideClinic.slug}/">Hours &amp; directions</a></div>` : ''}
 ${a.faqs?.length ? `<h2 id="faq">Frequently asked questions</h2><div class="qa">${a.faqs.map(([q, ans]) => `<details><summary>${esc(q)}</summary><p>${ans}</p></details>`).join('')}</div>` : ''}
 <div class="sources">
 ${a.sources?.length ? `<strong>Sources</strong><ol>${a.sources.map(([t, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join('')}</ol>` : ''}

@@ -3,13 +3,18 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const SITE = {
-  name: 'MalaysiaHealthcare.my',
-  url: 'https://malaysiahealthcare.my',
+  name: 'HealthcareDirectory.my',
+  url: 'https://healthcaredirectory.my',
+  email: 'hello@healthcaredirectory.my',
   locale: 'en_MY',
   lang: 'en-MY',
   year: 2026,
-  updated: '2026-10-08',
+  updated: '2026-10-19',
 };
+// Brand as shown in the header and footer: "HealthcareDirectory" + accent ".my"
+const BRAND = 'HealthcareDirectory<span>.my</span>';
+// Set by build.mjs so the footer can link to the areas that have clinics.
+export const LAYOUT = { areas: [] };
 const META = JSON.parse(fs.readFileSync(new URL('./imgmeta.json', import.meta.url)));
 // Output goes to the repository root (two levels up) unless OUT is set.
 export const OUT = process.env.OUT || fileURLToPath(new URL('../../', import.meta.url));
@@ -48,8 +53,8 @@ export function head(p) {
 <link rel="alternate" hreflang="x-default" href="${url}">
 <meta name="robots" content="${p.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
 <meta name="theme-color" content="#2F5D50">
-<meta name="geo.region" content="${p.geo?.region || 'MY-10'}">
-<meta name="geo.placename" content="${esc(p.geo?.place || 'Klang Valley, Selangor')}">
+<meta name="geo.region" content="${p.geo?.region || 'MY-14'}">
+<meta name="geo.placename" content="${esc(p.geo?.place || 'Kuala Lumpur')}">
 ${p.geo?.pos ? `<meta name="geo.position" content="${p.geo.pos[0]};${p.geo.pos[1]}">\n<meta name="ICBM" content="${p.geo.pos[0]}, ${p.geo.pos[1]}">\n` : ''}<meta property="og:type" content="${p.ogType || 'website'}">
 <meta property="og:locale" content="${SITE.locale}">
 <meta property="og:site_name" content="${SITE.name}">
@@ -71,7 +76,7 @@ ${p.article ? `<meta property="article:published_time" content="${p.article.publ
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=4">
 ${p.preload || ''}${ld}
 </head>
 <body>
@@ -82,26 +87,49 @@ ${p.preload || ''}${ld}
 
 const NAV = [
   ['/clinics/', 'Clinics', 'clinics'],
-  ['/articles/', 'Health articles', 'articles'],
+  ['/articles/', 'Articles', 'articles'],
   ['/#awareness', 'Awareness', 'awareness'],
-  ['/#areas', 'Neighbourhoods', 'areas'],
+  ['/#areas', 'Areas', 'areas'],
 ];
+const ICON_SEARCH = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+const ICON_CLOSE = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+
+// Search box markup shared by the header pill and the mobile popup.
+// Without JavaScript the form simply submits to /search/?q=…
+function searchForm(id, o = {}) {
+  return `<form class="${o.cls}" action="/search/" method="get" role="search" data-search="${id}"${o.attrs || ''}>
+<label class="sr-only" for="${id}-q">Search ${SITE.name}</label>
+<span class="hs__icon">${ICON_SEARCH}</span>
+<input id="${id}-q" class="hs__input" type="search" name="q" placeholder="${o.placeholder || 'Search health topics'}" autocomplete="off" spellcheck="false" enterkeyhint="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="${id}-list">
+${o.kbd ? '<kbd class="hs__kbd" aria-hidden="true">/</kbd>' : ''}${o.close ? `<button type="button" class="hs__close" data-search-close aria-label="Close search">${ICON_CLOSE}</button>` : ''}
+<div class="hs__panel" ${o.inline ? '' : 'hidden'}><ul class="hs__list" id="${id}-list" role="listbox" aria-label="Search results"></ul></div>
+</form>`;
+}
+
 export function header(active, o = {}) {
   return `<div class="topbar"><div class="wrap">
 <span>Medical emergency? Call <a href="tel:999"><strong>999</strong></a> &middot; from mobile, <a href="tel:112"><strong>112</strong></a></span>
-<span class="muted">Serving Kuala Lumpur &amp; the Klang Valley</span>
+<span class="muted">Serving Kuala Lumpur, Malaysia</span>
 </div></div>
 <header class="site-header">
-<nav class="wrap nav" aria-label="Main">
-<a class="brand" href="/" aria-label="MalaysiaHealthcare.my home"><span class="brand__mark" aria-hidden="true">m</span><span class="brand__name">MalaysiaHealthcare<span>.my</span></span></a>
-<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<div class="nav__links" id="nav-links">
+<div class="wrap nav">
+<a class="brand" href="/" aria-label="${SITE.name} home"><span class="brand__mark" aria-hidden="true">h</span><span class="brand__name">${BRAND}</span></a>
+${o.noHeaderSearch ? '<span class="hs hs--spacer"></span>' : searchForm('hs', { cls: 'hs', kbd: true })}
+<nav class="nav__links" id="nav-links" aria-label="Main">
 ${NAV.map(([h, l, k]) => `<a href="${h}"${k === active ? ' aria-current="page"' : ''}>${l}</a>`).join('\n')}
 <a class="btn" href="/clinics/">Find a clinic</a>
-</div>
 </nav>
+<button class="icon-btn search-btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-modal" aria-label="Search"${o.noHeaderSearch ? ' hidden' : ''}>${ICON_SEARCH}</button>
+<button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
 ${o.progress ? '<div class="progress" aria-hidden="true"></div>' : ''}
 </header>
+${o.noHeaderSearch ? '' : `<div class="smodal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search the site" hidden>
+<div class="smodal__backdrop" data-search-close></div>
+<div class="smodal__box">
+${searchForm('ms', { cls: 'hs hs--modal', close: true, inline: true, placeholder: 'Search clinics, articles, topics' })}
+</div>
+</div>`}
 <main id="main">
 `;
 }
@@ -111,36 +139,35 @@ export function footer(topics) {
 <footer class="footer">
 <div class="wrap footer__grid">
 <div class="stack g12">
-<span class="footer__brand">MalaysiaHealthcare<span>.my</span></span>
-<p>An independent guide to clinics and health awareness in Kuala Lumpur and the Klang Valley, Malaysia.</p>
+<span class="footer__brand">${BRAND}</span>
+<p>An independent directory of clinics and a health awareness guide for Kuala Lumpur, Malaysia.</p>
 <p>Medical emergency: call <a href="tel:999">999</a> (or <a href="tel:112">112</a> from a mobile).</p>
 </div>
 <nav aria-label="Clinics">
 <span class="h">Clinics</span>
-<a href="/clinics/medipulih-klinik-kelana-jaya/">Kelana Jaya</a>
-<a href="/clinics/medipulih-klinik-subang-perdana/">Subang Perdana</a>
-<a href="/clinics/medipulih-klinik-seri-pristana/">Seri Pristana</a>
+${LAYOUT.areas.slice(0, 5).map((a) => `<a href="${a.href}">${esc(a.label)}</a>`).join('\n')}
 <a href="/clinics/">All clinics</a>
+<a href="/contact/#list">List your clinic</a>
 </nav>
 <nav aria-label="Topics">
 <span class="h">Topics</span>
 ${topics.map(([slug, label]) => `<a href="/articles/#topic-${slug}">${label}</a>`).join('\n')}
 </nav>
 <nav aria-label="Site">
-<span class="h">MalaysiaHealthcare.my</span>
+<span class="h">${SITE.name}</span>
 <a href="/about/">About &amp; editorial policy</a>
-<a href="/contact/">List your clinic</a>
 <a href="/contact/">Contact</a>
+<a href="/search/">Search</a>
 <a href="/privacy/">Privacy (PDPA)</a>
 </nav>
 </div>
 <div class="wrap footer__base">
 <span>Information is for general awareness and does not replace advice from a registered medical practitioner.</span>
-<span>&copy; ${SITE.year} MalaysiaHealthcare.my &middot; Klang Valley, Malaysia</span>
+<span>&copy; ${SITE.year} ${SITE.name} &middot; Kuala Lumpur, Malaysia</span>
 </div>
 </footer>
 </div>
-<script src="/assets/js/site.js?v=2" defer></script>
+<script src="/assets/js/site.js?v=4" defer></script>
 </body>
 </html>
 `;
@@ -170,9 +197,10 @@ export const ORG = {
   name: SITE.name,
   url: SITE.url + '/',
   logo: { '@type': 'ImageObject', url: SITE.url + '/assets/icon-512.png', width: 512, height: 512 },
+  email: SITE.email,
   areaServed: [
     { '@type': 'City', name: 'Kuala Lumpur' },
-    { '@type': 'State', name: 'Selangor' },
+    { '@type': 'Country', name: 'Malaysia' },
   ],
 };
 export const WEBSITE = {
@@ -182,6 +210,7 @@ export const WEBSITE = {
   name: SITE.name,
   inLanguage: SITE.lang,
   publisher: { '@id': SITE.url + '/#org' },
+  potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: SITE.url + '/search/?q={search_term_string}' }, 'query-input': 'required name=search_term_string' },
 };
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

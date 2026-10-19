@@ -1,7 +1,7 @@
 {
-  "name": "MalaysiaHealthcare.my",
-  "short_name": "MY Healthcare",
-  "description": "Clinics and health awareness for Kuala Lumpur and the Klang Valley.",
+  "name": "HealthcareDirectory.my",
+  "short_name": "Healthcare Dir",
+  "description": "Clinic directory and health awareness guides for Kuala Lumpur, Malaysia.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F5F3EC",

@@ -1,5 +1,5 @@
 const PUB = '2026-10-08';
-const AUTHOR = 'MalaysiaHealthcare.my Editorial Team';
+const AUTHOR = 'HealthcareDirectory.my Editorial Team';
 const figure = (name, alt, cap) => `<figure>{{img:${name}|${alt}}}${cap ? `<figcaption>${cap}</figcaption>` : ''}</figure>`;
 
 export const NEWS = [
@@ -73,7 +73,7 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
       ['New Straits Times — 73 heat-related illness cases, four deaths (7 Jul 2026)', 'https://www.nst.com.my/amp/news/nation/2026/07/1482825/health-ministry-records-73-heat-related-illness-cases-four-deaths-jan-1'],
       ['Department of Environment — APIMS', 'https://eqms.doe.gov.my/APIMS/main'],
     ],
-    related: ['dengue-klang-valley-first-three-days', 'clinic-or-emergency-department', 'medipulih-klinik-seri-pristana-guide'],
+    related: ['dengue-klang-valley-first-three-days', 'clinic-or-emergency-department', 'world-mental-health-day-2026-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -120,7 +120,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
 <p><strong>Wolbachia mosquitoes:</strong> in some areas, health authorities release mosquitoes carrying <em>Wolbachia</em> bacteria, which reduce the spread of dengue. Officials credited the programme with a 36% drop in Putrajaya’s cases in early 2026.</p>
 <p><strong>Vaccine:</strong> the Qdenga dengue vaccine received conditional approval in Malaysia in 2024 for people aged 4 and over, given as two doses three months apart. It is available at private clinics and hospitals but is not part of the national immunisation programme. Ask your doctor whether it suits you.</p>` },
     ],
-    clinicsIntro: 'Any GP clinic can assess a fever and arrange a blood test. These neighbourhood clinics are in our directory, two of them open until 11pm daily:',
+    clinicsIntro: 'Any GP clinic can assess a fever and arrange a blood test. These neighbourhood clinics are in our directory:',
     faqs: [
       ['Can I take ibuprofen if I think I have dengue?', 'No. Use paracetamol for fever and pain. Ibuprofen, aspirin and other NSAIDs can increase the risk of bleeding in dengue.'],
       ['Is there a dengue vaccine in Malaysia?', 'Yes. Qdenga has conditional approval for people aged 4 and over and is available privately. It is not part of the national immunisation programme, so ask your doctor whether it is suitable for you.'],
@@ -135,7 +135,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       ['CodeBlue — No plans yet for dengue vaccine in national programme (Jul 2025)', 'https://codeblue.galencentre.org/2025/07/no-plans-yet-for-dengue-vaccine-in-national-programme-wolbachia-expansion-in-focus/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['haze-air-quality-klang-valley', 'medipulih-klinik-subang-perdana-guide', 'clinic-or-emergency-department'],
+    related: ['haze-air-quality-klang-valley', 'check-blood-pressure-at-home', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -190,7 +190,7 @@ ${figure('mammogram-machine', 'A mammography machine in a clinic room', 'A mammo
       ['PERKESO SEHATi — Health screening programme', 'https://sehati.ladesk.com/'],
       ['Media Selangor — Selangor Saring (Jul 2026)', 'https://mediaselangor.com/en/2026/07/382862'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'medipulih-klinik-seri-pristana-guide', 'world-mental-health-day-2026-malaysia'],
+    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'check-blood-pressure-at-home', 'world-mental-health-day-2026-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -251,7 +251,7 @@ ${figure('morning-walk', 'A woman walking along a tree-lined path in morning lig
       ['Free Malaysia Today — 1 million Malaysians suffer from depression, says survey (16 May 2024)', 'https://www.freemalaysiatoday.com/category/nation/2024/05/16/1-million-malaysians-suffer-from-depression-says-survey'],
       ['Befrienders Kuala Lumpur', 'https://findahelpline.com/organizations/befrienders-kuala-lumpur'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'clinic-or-emergency-department', 'medipulih-klinik-kelana-jaya-guide'],
+    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'clinic-or-emergency-department', 'haze-air-quality-klang-valley'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -314,6 +314,6 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk beside a notebook'
       ['CodeBlue — Over two million adults live with three NCDs: NHMS 2023 (May 2024)', 'https://codeblue.galencentre.org/2024/05/over-two-million-adults-in-malaysia-live-with-three-ncds-nhms-2023/'],
       ['PERKESO SEHATi — Health screening programme', 'https://sehati.ladesk.com/'],
     ],
-    related: ['check-blood-pressure-at-home', 'medipulih-klinik-kelana-jaya-guide', 'breast-cancer-screening-malaysia'],
+    related: ['check-blood-pressure-at-home', 'world-mental-health-day-2026-malaysia', 'breast-cancer-screening-malaysia'],
   },
 ];
