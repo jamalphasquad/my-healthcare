@@ -322,5 +322,50 @@
    960,
    1280
   ]
+ },
+ "aesthetic-treatment-room": {
+  "w": 1280,
+  "h": 852,
+  "widths": [
+   480,
+   960,
+   1280
+  ]
+ },
+ "aesthetic-suite": {
+  "w": 1280,
+  "h": 855,
+  "widths": [
+   480,
+   960,
+   1280
+  ]
+ },
+ "aesthetic-device": {
+  "w": 1280,
+  "h": 853,
+  "widths": [
+   480,
+   960,
+   1280
+  ]
+ },
+ "facial-treatment": {
+  "w": 1280,
+  "h": 853,
+  "widths": [
+   480,
+   960,
+   1280
+  ]
+ },
+ "gp-consultation": {
+  "w": 1280,
+  "h": 853,
+  "widths": [
+   480,
+   960,
+   1280
+  ]
  }
 }

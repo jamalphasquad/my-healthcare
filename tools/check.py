@@ -5,7 +5,7 @@ ROOT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.pat
 files = []
 for d, _, fs in os.walk(ROOT):
     top = os.path.relpath(d, ROOT).split(os.sep)[0]
-    if top in ('.git', '.claude', 'tools'): continue
+    if top in ('.git', '.claude', 'tools', '.deploy', 'functions'): continue
     for f in fs:
         if f.endswith('.html'): files.append(os.path.join(d, f))
 def exists(href, base):

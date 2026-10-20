@@ -17,6 +17,7 @@ const SYNONYMS = [
   [/emergency|999/i, 'kecemasan emergency a&e hospital'],
   [/clinic/i, 'klinik doctor doktor gp'],
   [/screening/i, 'saringan check-up checkup medical'],
+  [/aesthetic|skin|dermal|botox|filler|laser/i, 'aesthetic estetik kecantikan beauty kulit skin botox filler laser facial'],
 ];
 const synonyms = (s) => SYNONYMS.filter(([re]) => re.test(s)).map(([, k]) => k).join(' ');
 

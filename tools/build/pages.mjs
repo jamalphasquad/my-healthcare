@@ -257,7 +257,7 @@ export function clinicsIndex({ clinics, areas, services, topics }) {
 ${crumbs(items)}
 <div class="stack g16" style="margin:28px 0 40px;max-width:760px">
 <h1 class="h-hero" style="font-size:clamp(38px,5vw,60px)">Clinics in <em>Kuala Lumpur</em></h1>
-<p class="lede">Neighbourhood clinics with opening hours, phone numbers and directions, with new Kuala Lumpur areas added every month.</p>
+<p class="lede">Neighbourhood clinics across Kuala Lumpur and nearby Petaling Jaya, Subang Jaya, Puchong, Ampang and Cheras, with opening hours, phone numbers and directions.</p>
 </div>
 ${directory(clinics, areas, services, { h: 'h2', heading: 'All listed clinics' })}
 </section>

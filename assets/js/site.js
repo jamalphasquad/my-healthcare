@@ -178,10 +178,10 @@
       });
       $$('[data-filter-area]', dir).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-filter-area') === state.area ? 'true' : 'false'); });
       $$('[data-filter-service]', dir).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-filter-service') === state.service ? 'true' : 'false'); });
-      var areaLabel = state.area === 'all' ? 'Kuala Lumpur' : (($('[data-filter-area="' + state.area + '"]', dir) || {}).textContent || state.area);
+      var areaLabel = state.area === 'all' ? '' : ' in ' + (($('[data-filter-area="' + state.area + '"]', dir) || {}).textContent || state.area);
       var svcLabel = state.service === 'all' ? '' : ' · ' + (($('[data-filter-service="' + state.service + '"]', dir) || {}).textContent || state.service);
       var rt = $('.result-text', dir);
-      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + ' in ' + areaLabel + svcLabel + (state.openNow ? ' · open now' : '');
+      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + (areaLabel || ' listed') + svcLabel + (state.openNow ? ' · open now' : '');
       var empty = $('.empty', dir); if (empty) empty.hidden = shown !== 0;
       if (areaSel) { areaSel.value = state.area; if (areaSel._sync) areaSel._sync(); }
       if (svcSel) { svcSel.value = state.service; if (svcSel._sync) svcSel._sync(); }

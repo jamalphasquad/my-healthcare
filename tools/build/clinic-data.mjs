@@ -8,9 +8,19 @@ const FALLBACK = [
   ['doctor-consultation', 'a doctor talking with a patient'],
   ['stethoscope-desk', 'a stethoscope on a doctor’s desk'],
   ['nurse-stethoscope', 'a doctor holding a stethoscope'],
+  ['gp-consultation', 'a doctor listening to a patient in a consultation room'],
 ];
 const pick = (slug) => FALLBACK[[...slug].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7) % FALLBACK.length];
 const cut = (s, n) => (s.length <= n ? s : s.slice(0, s.lastIndexOf(' ', n - 1)).replace(/[,·:–-]\s*$/, ''));
+
+// Longest title that fits in 60 characters; skips the area when the name already contains it.
+function seoTitle(c, locality) {
+  const has = (s) => c.name.toLowerCase().includes(s.toLowerCase());
+  const place = has(c.areaLabel) ? (has(locality) ? '' : locality) : c.areaLabel;
+  const where = place ? `, ${place}` : '';
+  const options = [`${c.name}${where}: Hours & Phone`, `${c.name}: Hours & Phone`, `${c.name}${where}`, c.name];
+  return options.find((t) => t.length <= 60) || cut(c.name, 60);
+}
 
 export function normalizeClinic(c, networks = {}) {
   for (const k of ['slug', 'name', 'areaLabel']) if (!c[k]) throw new Error(`Clinic is missing "${k}": ${JSON.stringify(c).slice(0, 80)}`);
@@ -42,7 +52,7 @@ export function normalizeClinic(c, networks = {}) {
     intro: c.intro || `A clinic in ${where}. We are still confirming some details for this listing, so please call ahead before visiting.`,
     about: c.about || '',
     incomplete: !(c.phone && hasHours && c.street),
-    seoTitle: c.seoTitle || cut(`${c.name}, ${c.areaLabel}: Hours & Phone`, 60),
+    seoTitle: c.seoTitle || seoTitle(c, locality),
     seoDesc: c.seoDesc || cut(`${c.name} in ${where}${c.street ? ', ' + c.street : ''}. Opening hours, phone number, services and directions, plus other clinics near ${c.areaLabel}.`, 155),
   };
 }
