@@ -8,6 +8,7 @@ import { NEWS } from './articles-news.mjs';
 import { GUIDES } from './articles-guides.mjs';
 import { SEO } from './seo.mjs';
 import { buildIndex, searchPage } from './search.mjs';
+import { buildCollections } from './collections.mjs';
 
 const ARTICLES = [...NEWS, ...GUIDES];
 // Footer topic links, kept to categories that have at least one article.
@@ -35,6 +36,11 @@ for (const a of ARTICLES) if (SEO[a.slug]) [a.seoTitle, a.desc] = SEO[a.slug];
 // Only offer service filters that at least one clinic provides.
 const services = SERVICES.filter(([k]) => CLINICS.some((c) => c.serviceKeys.includes(k)));
 const ctx = { clinics: CLINICS, areas: AREAS, services, articles: ARTICLES, topics: TOPICS };
+// Area, service and network landing pages first, so other pages can link to them.
+const coll = buildCollections(ctx);
+ctx.coll = coll;
+LAYOUT.services = coll.serviceLinks || [];
+const collectionPages = [...coll.areas, ...coll.services, ...coll.networks];
 home({ ...ctx, faqs: FAQS(), featuredSlug: 'breast-cancer-screening-malaysia', comingSoon });
 clinicsIndex(ctx);
 for (const c of CLINICS) clinicPage(c, ctx);
@@ -42,11 +48,12 @@ articlesIndex({ ...ctx, featuredSlug: 'dengue-klang-valley-first-three-days' });
 for (const a of ARTICLES) articlePage(a, ctx);
 staticPages(TOPICS);
 searchPage(TOPICS);
-const indexed = buildIndex(ctx);
+const indexed = buildIndex({ ...ctx, collectionPages });
 
 // sitemap + robots
 const urls = [
   ['/', '1.0', 'weekly'], ['/clinics/', '0.9', 'weekly'], ['/articles/', '0.9', 'daily'],
+  ...collectionPages.map((x) => [x.url, '0.8', 'weekly', x.image]),
   ...CLINICS.map((c) => [`/clinics/${c.slug}/`, '0.8', 'monthly', c.image]),
   ...ARTICLES.map((a) => [`/articles/${a.slug}/`, '0.7', 'monthly', a.image, a.modified]),
   ['/about/', '0.4', 'yearly'], ['/contact/', '0.4', 'yearly'], ['/privacy/', '0.2', 'yearly'],
@@ -80,7 +87,7 @@ write('_headers', `/*
 `);
 // _routes.json: only run the www-redirect function (functions/_middleware.js) for pages, not static files.
 write('_routes.json', JSON.stringify({ version: 1, include: ['/*'], exclude: ['/assets/*', '/favicon*', '/apple-touch-icon.png', '/site.webmanifest', '/robots.txt', '/sitemap.xml'] }, null, 2) + '\n');
-console.log('built', ARTICLES.length, 'articles,', CLINICS.length, 'clinics,', indexed, 'search docs;', ARTICLES.map((a) => a.slug + ':' + a.words).join(' '));
+console.log('built', ARTICLES.length, 'articles,', CLINICS.length, 'clinics,', `${coll.areas.length} area / ${coll.services.length} service / ${coll.networks.length} network pages,`, indexed, 'search docs;', ARTICLES.map((a) => a.slug + ':' + a.words).join(' '));
 
 function FAQS() {
   return [

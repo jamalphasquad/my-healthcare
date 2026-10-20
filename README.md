@@ -60,6 +60,8 @@ The HTML files are generated, so edit the sources in `tools/build/`, not the HTM
 | `clinics.mjs` | Clinic details: address, phone, hours, services, panels, FAQs, and the area filters |
 | `articles-news.mjs` | News-based health articles |
 | `articles-guides.mjs` | Everyday guides and clinic guides |
+| `collections.mjs` | Area pages (`/clinics/<area>/`), service pages (open late, Saturday, Sunday, aesthetic, GP, towns) and network pages, generated from the clinic data. A page is only created when 2+ clinics qualify. |
+| `areas.mjs` | Short local intro and transit note for each area page |
 | `seo.mjs` | Search titles (60 characters or fewer) and meta descriptions (155 or fewer). The build fails if one is too long. |
 | `pages.mjs` | Page templates: home, clinics, clinic page, blog, article |
 | `static-pages.mjs` | About, Contact, Privacy and 404 |

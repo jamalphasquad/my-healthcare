@@ -64,9 +64,33 @@ export function deriveAreas(clinics) {
     a.clinics.push(c);
     map.set(c.areaSlug, a);
   }
-  return [...map.values()].map((a) => ({
-    ...a,
-    count: a.clinics.length,
-    href: a.clinics.length === 1 ? `/clinics/${a.clinics[0].slug}/` : `/clinics/#area-${a.slug}`,
-  }));
+  return [...map.values()].map((a) => {
+    const located = a.clinics.filter((c) => c.geo);
+    return {
+      ...a,
+      count: a.clinics.length,
+      href: `/clinics/${a.slug}/`,
+      locality: a.clinics[0].locality,
+      region: a.clinics[0].region,
+      // centre of the area's clinics, used for "nearby" lists and the map
+      geo: located.length ? [located.reduce((s, c) => s + c.geo[0], 0) / located.length, located.reduce((s, c) => s + c.geo[1], 0) / located.length] : null,
+    };
+  });
 }
+
+// Straight-line distance in km between two [lat, lng] points.
+export function distanceKm(a, b) {
+  const rad = (d) => (d * Math.PI) / 180;
+  const dLat = rad(b[0] - a[0]), dLng = rad(b[1] - a[1]);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a[0])) * Math.cos(rad(b[0])) * Math.sin(dLng / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(h));
+}
+
+// Closest clinics to a point: those within `within` km, or at least `min` of the nearest.
+export function nearestClinics(point, clinics, { exclude = () => false, max = 4, within = 6, min = 2 } = {}) {
+  if (!point) return [];
+  const ranked = clinics.filter((c) => c.geo && !exclude(c)).map((c) => ({ c, km: distanceKm(point, c.geo) })).sort((x, y) => x.km - y.km);
+  const close = ranked.filter((r) => r.km <= within);
+  return (close.length >= min ? close : ranked.slice(0, min)).slice(0, max);
+}
+export const kmText = (km) => (km < 1 ? `${Math.round(km * 1000 / 50) * 50} m` : `${km.toFixed(1)} km`);

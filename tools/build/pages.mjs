@@ -1,4 +1,5 @@
 import { SEO } from './seo.mjs';
+import { nearestClinics, kmText } from './clinic-data.mjs';
 import { head, header, footer, crumbs, crumbsLd, write, img, preloadImg, esc, abs, ORG, WEBSITE, SITE, longDate, shortDate } from './lib.mjs';
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -107,8 +108,17 @@ ${o.date ? `<time datetime="${a.modified}">${shortDate(a.modified)}</time>` : ''
 </article>`;
 }
 
+// Links to the generated area, service and network pages (see collections.mjs).
+export function browseLinks(coll, o = {}) {
+  if (!coll) return '';
+  const groups = [['Browse by need', coll.serviceLinks], ['Browse by area', coll.areaLinks], ['Clinic networks', coll.networkLinks]]
+    .filter(([, links]) => links?.length && !(o.skip || []).includes(links));
+  if (!groups.length) return '';
+  return `<nav class="browse" aria-label="Browse clinics">${groups.map(([h, links]) => `<div class="browse__group"><span class="browse__h">${h}</span><div class="chips">${links.map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}</div></div>`).join('')}</nav>`;
+}
+
 /* ------------------------------ HOME ------------------------------ */
-export function home({ clinics, areas, services, articles, faqs, topics, featuredSlug, comingSoon }) {
+export function home({ clinics, areas, services, articles, faqs, topics, featuredSlug, comingSoon, coll }) {
   const featured = articles.find((a) => a.slug === featuredSlug);
   const rest = articles.filter((a) => a !== featured).slice(0, 6);
   const homeCats = [...new Map(rest.map((a) => [a.cat, a.catLabel])).entries()];
@@ -172,6 +182,7 @@ ${img('kl-skyline', 'Kuala Lumpur skyline with Menara Kuala Lumpur under a blue 
 <section id="clinics" class="band" aria-labelledby="cl-h" style="scroll-margin-top:70px">
 <div class="wrap section">
 ${directory(clinics, areas, services)}
+${browseLinks(coll, { skip: [coll?.areaLinks] })}
 </div>
 </section>
 
@@ -240,7 +251,7 @@ export function newsletter(text) {
 }
 
 /* --------------------------- CLINICS INDEX --------------------------- */
-export function clinicsIndex({ clinics, areas, services, topics }) {
+export function clinicsIndex({ clinics, areas, services, topics, coll }) {
   const networks = [...new Map(clinics.filter((c) => c.network).map((c) => [c.network.name, c.network])).values()];
   const items = [['/', 'Home'], ['/clinics/', 'Clinics']];
   const ld = { '@context': 'https://schema.org', '@graph': [
@@ -260,6 +271,7 @@ ${crumbs(items)}
 <p class="lede">Neighbourhood clinics across Kuala Lumpur and nearby Petaling Jaya, Subang Jaya, Puchong, Ampang and Cheras, with opening hours, phone numbers and directions.</p>
 </div>
 ${directory(clinics, areas, services, { h: 'h2', heading: 'All listed clinics' })}
+${browseLinks(coll)}
 </section>
 ${networks.filter((n) => n.blurb).map((n, i) => `<section class="wrap section" aria-labelledby="net-h${i}">
 <div class="callout-bar" style="padding:32px">
@@ -272,9 +284,12 @@ ${n.url ? `<a class="btn" href="${n.url}" target="_blank" rel="noopener">Visit $
 }
 
 /* --------------------------- CLINIC PAGE --------------------------- */
-export function clinicPage(c, { clinics, articles, topics }) {
-  const items = [['/', 'Home'], ['/clinics/', 'Clinics'], [`/clinics/${c.slug}/`, c.name]];
-  const others = c.network ? clinics.filter((x) => x !== c && x.network && x.network.name === c.network.name) : [];
+export function clinicPage(c, { clinics, articles, topics, coll }) {
+  const areaUrl = `/clinics/${c.areaSlug}/`;
+  const hasArea = !!coll?.areaLinks?.some(([h]) => h === areaUrl);
+  const items = [['/', 'Home'], ['/clinics/', 'Clinics'], ...(hasArea ? [[areaUrl, c.areaLabel]] : []), [`/clinics/${c.slug}/`, c.name]];
+  const nearby = nearestClinics(c.geo, clinics, { exclude: (x) => x === c, max: 4, within: 5, min: 3 });
+  const networkUrl = c.network && coll?.networkLinks?.find(([, label]) => label === `${c.network.name} branches`)?.[0];
   const guide = articles.find((a) => a.clinic === c.slug);
   const faqLd = c.faqs?.length ? [{ '@type': 'FAQPage', mainEntity: c.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) }] : [];
   const ld = { '@context': 'https://schema.org', '@graph': [clinicLd(c), { '@type': 'WebPage', url: abs(`/clinics/${c.slug}/`), name: c.name, about: { '@id': abs(`/clinics/${c.slug}/#clinic`) }, inLanguage: SITE.lang, dateModified: SITE.updated }, crumbsLd(items), ...faqLd, ORG, WEBSITE] };
@@ -302,7 +317,7 @@ ${c.whatsapp ? `<a class="btn btn--ghost" href="https://wa.me/${c.whatsapp.repla
 <div class="row"><dt>Status</dt><dd>${c.hours ? '<span class="status" style="position:static;display:inline-flex;padding:0;background:none">See hours below</span> <span class="js-today" style="color:var(--muted-2)"></span>' : 'Hours not confirmed yet – please call ahead'}</dd></div>
 <div class="row"><dt>Address</dt><dd><address style="font-style:normal">${esc(c.street || c.areaLabel)},<br>${esc(c.cityLine)}</address></dd></div>
 ${c.phone ? `<div class="row"><dt>Phone</dt><dd><a href="${telHref(c)}">${esc(c.phone)}</a>${c.whatsapp && c.whatsapp !== c.phone ? `<br>WhatsApp: <a href="https://wa.me/${c.whatsapp.replace(/\D/g, '')}">${esc(c.whatsapp)}</a>` : ''}</dd></div>` : ''}
-${c.network ? `<div class="row"><dt>Network</dt><dd>${c.network.url ? `<a href="${c.network.url}" target="_blank" rel="noopener">${esc(c.network.name)}</a>` : esc(c.network.name)}</dd></div>` : ''}
+${c.network ? `<div class="row"><dt>Network</dt><dd>${networkUrl ? `<a href="${networkUrl}">${esc(c.network.name)}</a>` : esc(c.network.name)}${c.network.url ? ` &middot; <a href="${c.network.url}" target="_blank" rel="noopener">website</a>` : ''}</dd></div>` : ''}
 ${c.gettingThere ? `<div class="row"><dt>Getting there</dt><dd>${c.gettingThere}</dd></div>` : ''}
 </dl></div>
 </div>
@@ -334,8 +349,14 @@ ${c.faqs?.length ? `<h2 id="faq">Frequently asked questions</h2>
 <iframe class="map" title="Map showing ${esc(c.name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=${mapQ}&amp;output=embed"></iframe>
 <a href="${dirHref(c)}" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></div>
 ${guide ? `<div class="box box--mint"><span class="eyebrow">Clinic guide</span><a href="/articles/${guide.slug}/" style="font-family:var(--serif);font-size:22px;line-height:1.25;color:var(--ink)">${esc(guide.title)}</a></div>` : ''}
-${others.length ? `<div class="stack g12"><h2 style="font-size:26px">Other ${esc(c.network.name)} branches</h2>
-<div class="mini-clinics">${others.map(miniClinic).join('')}</div></div>` : ''}
+${nearby.length ? `<div class="stack g12"><h2 style="font-size:26px">Nearby clinics</h2>
+<div class="mini-clinics">${nearby.map(({ c: o, km }) => `<a href="/clinics/${o.slug}/"${hoursAttr(o)}><span class="a">${esc(o.areaLabel)} &middot; ${kmText(km)} away</span><span class="n">${esc(o.name)}</span><span class="h">${esc(summaryHours(o.hours))}</span></a>`).join('')}</div>
+<p style="font-size:13px;color:var(--faint)">Straight-line distances.</p></div>` : ''}
+<div class="stack g12"><h2 style="font-size:22px">More clinics</h2><div class="chips">
+${hasArea ? `<a class="chip" href="${areaUrl}">Clinics in ${esc(c.areaLabel)}</a>` : ''}
+${networkUrl ? `<a class="chip" href="${networkUrl}">All ${esc(c.network.name)} branches</a>` : ''}
+${(coll?.serviceLinks || []).map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}
+</div></div>
 </aside>
 </div>
 </div></section>

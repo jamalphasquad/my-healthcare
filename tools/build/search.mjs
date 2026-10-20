@@ -21,7 +21,7 @@ const SYNONYMS = [
 ];
 const synonyms = (s) => SYNONYMS.filter(([re]) => re.test(s)).map(([, k]) => k).join(' ');
 
-export function buildIndex({ articles, clinics }) {
+export function buildIndex({ articles, clinics, collectionPages = [] }) {
   const docs = [];
   for (const a of articles) {
     const gc = a.clinic && clinics.find((c) => c.slug === a.clinic);
@@ -49,6 +49,7 @@ export function buildIndex({ articles, clinics }) {
     ['Contact & list your clinic', '/contact/', 'Get in touch, report a correction, or list your clinic in our directory for free.', 'contact email list your clinic add clinic correction'],
     ['Privacy notice (PDPA)', '/privacy/', 'How we handle personal data under Malaysia’s Personal Data Protection Act 2010.', 'privacy pdpa personal data'],
   ];
+  for (const x of collectionPages) docs.push({ type: 'Clinic list', cat: '', title: x.title, url: x.url, desc: x.desc, headings: '', keywords: `${x.keywords} klinik clinics near`, body: '' });
   for (const [title, url, desc, keywords] of pages) docs.push({ type: 'Page', cat: '', title, url, desc, headings: '', keywords, body: '' });
   write('assets/search-index.json', JSON.stringify(docs));
   return docs.length;
