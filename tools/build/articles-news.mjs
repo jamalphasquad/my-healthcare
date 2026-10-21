@@ -58,6 +58,9 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
 <div class="box box--pink" role="note"><span class="box__title">Call 999 for possible heatstroke</span><ul><li>Very high body temperature with confusion, slurred speech or fainting</li><li>Hot, dry skin, or a seizure</li><li>Move the person somewhere cool, loosen clothing and cool them with water while waiting for help.</li></ul></div>` },
       { id: 'doctor', h: 'When to see a doctor', html: `<p>See a GP if you have a cough, wheeze or sore throat that does not improve within a few days, if your asthma inhaler is needed more often than usual, or if a child seems unusually tired or breathless. Go to an emergency department or call <a href="tel:999">999</a> for severe shortness of breath, chest pain, blue lips or confusion.</p>` },
     ],
+    clinicsMode: 'directory',
+    clinicsIntro: "See a GP for a cough, wheeze or sore throat that does not settle, or if your asthma inhaler is needed more often. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, including those open in the evening and at weekends.",
+    clinicLinks: [["/clinics/gp-clinics/", "GP clinics"], ["/clinics/open-late/", "Clinics open late"], ["/clinics/open-saturday/", "Clinics open on Saturday"]],
     faqs: [
       ['Is it safe to exercise outdoors during haze?', 'When the API is above 100, it is better to exercise indoors or postpone. People with asthma, heart disease or other risk factors should avoid outdoor exertion altogether until air quality improves.'],
       ['Is a surgical mask enough for haze?', 'A surgical mask blocks larger particles but lets many fine haze particles through. A well-fitted N95 or KN95 mask gives much better protection for adults.'],
@@ -120,7 +123,9 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
 <p><strong>Wolbachia mosquitoes:</strong> in some areas, health authorities release mosquitoes carrying <em>Wolbachia</em> bacteria, which reduce the spread of dengue. Officials credited the programme with a 36% drop in Putrajaya’s cases in early 2026.</p>
 <p><strong>Vaccine:</strong> the Qdenga dengue vaccine received conditional approval in Malaysia in 2024 for people aged 4 and over, given as two doses three months apart. It is available at private clinics and hospitals but is not part of the national immunisation programme. Ask your doctor whether it suits you.</p>` },
     ],
-    clinicsIntro: 'Any GP clinic can assess a fever and arrange a blood test. These neighbourhood clinics are in our directory:',
+    clinicsMode: 'directory',
+    clinicsIntro: "Any GP clinic can assess a fever and arrange a blood test (full blood count). Fevers often start in the evening or at the weekend, so our directory shows which clinics are open late and on weekends, with opening hours in Malaysia time.",
+    clinicLinks: [["/clinics/gp-clinics/", "GP clinics"], ["/clinics/open-late/", "Clinics open late"], ["/clinics/open-sunday/", "Clinics open on Sunday"]],
     faqs: [
       ['Can I take ibuprofen if I think I have dengue?', 'No. Use paracetamol for fever and pain. Ibuprofen, aspirin and other NSAIDs can increase the risk of bleeding in dengue.'],
       ['Is there a dengue vaccine in Malaysia?', 'Yes. Qdenga has conditional approval for people aged 4 and over and is available privately. It is not part of the national immunisation programme, so ask your doctor whether it is suitable for you.'],
@@ -175,7 +180,9 @@ ${figure('mammogram-machine', 'A mammography machine in a clinic room', 'A mammo
 <p>Several private hospitals in the Klang Valley also run Pink October mammogram promotions until the end of October or November. Eligibility and availability change, so check the latest details before booking.</p>` },
       { id: 'what-happens', h: 'What happens at a mammogram', html: `<p>You will undress from the waist up and stand in front of the machine. Each breast is gently pressed between two plates for a few seconds while the X-ray is taken. Avoid deodorant or talcum powder on the day, as it can show up on the image. Results usually go to the doctor who referred you, who will explain them and arrange any follow-up.</p>` },
     ],
-    clinicsIntro: 'A GP can do a clinical breast examination, answer questions about your risk and refer you for a mammogram. These clinics in our directory list women’s health services:',
+    clinicsMode: 'directory',
+    clinicsIntro: "A GP can do a clinical breast examination, answer questions about your risk and refer you for a mammogram. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, with opening hours and directions.",
+    clinicLinks: [["/clinics/gp-clinics/", "GP clinics"], ["/clinics/open-saturday/", "Clinics open on Saturday"]],
     faqs: [
       ['At what age should I start having mammograms in Malaysia?', 'NCSM reports that the Ministry of Health recommends a mammogram every two years from 50 to 74, with women aged 40–49 discussing their own risk with a doctor. Women with a strong family history may start earlier.'],
       ['Can I get a free mammogram in Selangor or Kuala Lumpur?', 'Yes, if you are eligible. LPPKN offers free mammograms for women aged 40–70 with household income of RM10,000 or less, PERKESO screening includes mammograms for contributors aged 40–59, and Selangor Saring offers free screening for Selangor residents.'],
@@ -237,7 +244,9 @@ ${figure('morning-walk', 'A woman walking along a tree-lined path in morning lig
 </tbody></table></div>` },
       { id: 'gp', h: 'How a GP can help', html: `<p>Your family doctor is a good place to start. A GP can talk through how you are feeling, screen for depression and anxiety, check for physical causes such as thyroid problems, start treatment, and refer you to a psychologist, psychiatrist or a MENTARI centre if needed. Several clinics in our directory list mental health counselling among their services.</p>` },
     ],
-    clinicsIntro: 'These clinics in our directory list mental health counselling. Call ahead to ask about appointments:',
+    clinicsMode: 'directory',
+    clinicsIntro: "A GP is a good first step for low mood, anxiety or stress. They can assess how you are feeling and refer you on if needed. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, including evening and weekend hours.",
+    clinicLinks: [["/clinics/gp-clinics/", "GP clinics"], ["/clinics/open-late/", "Clinics open late"], ["/clinics/open-saturday/", "Clinics open on Saturday"]],
     faqs: [
       ['What is Talian HEAL 15555?', 'It is the Ministry of Health’s free psychosocial support line, open from 8am to midnight every day, including public holidays.'],
       ['Is there a 24-hour emotional support line in Kuala Lumpur?', 'Befrienders Kuala Lumpur offers confidential emotional support 24 hours a day on 03-7627 2929.'],
@@ -301,7 +310,9 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk beside a notebook'
 <p>Under 40 and not eligible? A basic check at a private GP clinic is still quick and affordable, and well worth doing.</p>` },
       { id: 'habits', h: 'Small habits that help', html: `<ul><li>Order <em>kurang manis</em> or <em>kosong</em>, and swap one sweet drink a day for plain water.</li><li>Walk for 30 minutes on most days. Two 15-minute walks count too.</li><li>Add more ulam and vegetables to your plate.</li><li>Aim for seven hours of sleep.</li><li>If you smoke, ask your doctor about help to quit.</li></ul>` },
     ],
-    clinicsIntro: 'These neighbourhood clinics in our directory offer health screening and chronic disease follow-up:',
+    clinicsMode: 'directory',
+    clinicsIntro: "Most GP clinics can check your blood pressure, blood sugar and cholesterol in one visit. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, including those open on Saturdays for people who work weekdays.",
+    clinicLinks: [["/clinics/gp-clinics/", "GP clinics"], ["/clinics/open-saturday/", "Clinics open on Saturday"], ["/clinics/open-late/", "Clinics open late"]],
     faqs: [
       ['How do I know if I have high blood pressure?', 'The only way to know is to measure it. Most people with high blood pressure feel completely well.'],
       ['Who can get PERKESO’s free health screening?', 'Malaysians aged 40–59 who are active PERKESO contributors with at least 12 months of contributions. Book through the SEHATi app and check the latest eligibility there.'],

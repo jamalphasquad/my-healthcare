@@ -31,7 +31,6 @@ for (const a of ARTICLES) {
   a.words = text.split(/\s+/).filter(Boolean).length;
   a.mins = Math.max(3, Math.round(a.words / 200));
 }
-ARTICLES.find((a) => a.slug === 'breast-cancer-screening-malaysia').clinicsFilter = 'womens';
 for (const a of ARTICLES) if (SEO[a.slug]) [a.seoTitle, a.desc] = SEO[a.slug];
 
 // Only offer service filters that at least one clinic provides.

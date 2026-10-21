@@ -443,8 +443,9 @@ export function articlePage(a, { articles, clinics, topics }) {
   const guideClinic = a.clinic ? clinics.find((c) => c.slug === a.clinic) : null;
   const share = encodeURIComponent(a.title + ' ' + url);
   const picked = a.clinicsPick ? a.clinicsPick.map((s) => clinics.find((c) => c.slug === s)).filter(Boolean) : clinics.filter((c) => !a.clinicsFilter || c.serviceKeys.includes(a.clinicsFilter));
-  // clinicsMode 'directory': link to directory pages only, without naming clinics next to the article content
-  const directoryOnly = a.clinicsMode === 'directory';
+  // By default articles link to directory pages without naming clinics next to the content
+  // (MAB guidelines on educational articles). clinicsMode: 'list' names clinics instead.
+  const directoryOnly = a.clinicsMode !== 'list';
   const nearby = directoryOnly ? [] : picked.slice(0, a.clinicsLimit || 6);
   const whereHeading = a.clinicsHeading || 'Where to get checked in Kuala Lumpur';
   const showClinics = a.clinicsBlock !== false && !guideClinic;
@@ -502,7 +503,7 @@ ${toc.map((s) => `<a href="#${s.id}">${esc(s.tocLabel || s.h)}</a>`).join('\n')}
 ${a.keyPoints?.length ? `<div class="box box--mint"><span class="eyebrow">Key points</span><ul>${a.keyPoints.map((k) => `<li>${k}</li>`).join('')}</ul></div>` : ''}
 ${a.sections.map((s) => `<h2 id="${s.id}">${esc(s.h)}</h2>\n${s.html}`).join('\n')}
 ${showClinics ? `<h2 id="where">${esc(whereHeading)}</h2>
-${directoryOnly ? `<p>${a.clinicsIntro}</p>` : nearby.length ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
+${directoryOnly ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. Our directory lists clinics across Kuala Lumpur and nearby Selangor, with opening hours and directions.'}</p>` : nearby.length ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
 <div class="mini-clinics">${nearby.map(miniClinic).join('')}</div>` : '<p>Any GP clinic can assess you and arrange tests or referrals. Our Kuala Lumpur clinic directory lists opening hours, phone numbers and directions as clinics are added.</p>'}
 <a class="btn" href="/clinics/" style="align-self:flex-start">${nearby.length ? 'See all clinics' : 'Browse the clinic directory'}</a>
 ${a.clinicLinks?.length ? `<div class="chips">${a.clinicLinks.map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}</div>` : ''}` : ''}
