@@ -441,6 +441,14 @@ export function articlePage(a, { articles, clinics, topics }) {
   const related = (a.related || []).map((s) => articles.find((x) => x.slug === s)).filter(Boolean).slice(0, 3);
   while (related.length < 3) { const n = articles.find((x) => x !== a && !related.includes(x)); if (!n) break; related.push(n); }
   const guideClinic = a.clinic ? clinics.find((c) => c.slug === a.clinic) : null;
+  const share = encodeURIComponent(a.title + ' ' + url);
+  const picked = a.clinicsPick ? a.clinicsPick.map((s) => clinics.find((c) => c.slug === s)).filter(Boolean) : clinics.filter((c) => !a.clinicsFilter || c.serviceKeys.includes(a.clinicsFilter));
+  // clinicsMode 'directory': link to directory pages only, without naming clinics next to the article content
+  const directoryOnly = a.clinicsMode === 'directory';
+  const nearby = directoryOnly ? [] : picked.slice(0, a.clinicsLimit || 6);
+  const whereHeading = a.clinicsHeading || 'Where to get checked in Kuala Lumpur';
+  const showClinics = a.clinicsBlock !== false && !guideClinic;
+  const toc = [...a.sections.filter((s) => s.toc !== false), ...(a.clinicsBlock !== false && !a.clinic ? [{ id: 'where', h: a.clinicsTocLabel || whereHeading }] : [])];
   const graph = [
     { '@type': a.medical ? 'MedicalWebPage' : 'WebPage', '@id': url + '#page', url, name: a.title, inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' }, lastReviewed: a.modified,
       ...(a.about ? { about: { '@type': 'MedicalCondition', name: a.about[0], ...(a.about[1] ? { alternateName: a.about[1] } : {}) } } : {}),
@@ -449,16 +457,13 @@ export function articlePage(a, { articles, clinics, topics }) {
       primaryImageOfPage: abs(`/assets/img/${a.image}-og.jpg`) },
     { '@type': a.news ? 'NewsArticle' : 'Article', '@id': url + '#article', headline: a.title, description: a.desc, image: [abs(`/assets/img/${a.image}-og.jpg`)], datePublished: a.published, dateModified: a.modified, articleSection: a.catLabel, wordCount: a.words,
       author: { '@type': 'Organization', name: `${SITE.name} Editorial Team`, url: abs('/about/') }, publisher: { '@id': SITE.url + '/#org' }, mainEntityOfPage: url, inLanguage: SITE.lang,
-      ...(a.sources?.length ? { citation: a.sources.map(([t, u]) => ({ '@type': 'CreativeWork', name: t, url: u })) } : {}) },
+      ...(a.sources?.length ? { citation: a.sources.map(([t, u]) => ({ '@type': 'CreativeWork', name: t, url: u })) } : {}),
+      ...(nearby.length && showClinics ? { mentions: nearby.map((c) => ({ '@id': abs(`/clinics/${c.slug}/#clinic`), '@type': 'MedicalClinic', name: c.name })) } : {}) },
     crumbsLd(items),
     ...(a.faqs?.length ? [{ '@type': 'FAQPage', mainEntity: a.faqs.map(([q, ans]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: ans.replace(/<[^>]+>/g, '') } })) }] : []),
     ...(guideClinic ? [clinicLd(guideClinic)] : []),
     ORG, WEBSITE,
   ];
-  const share = encodeURIComponent(a.title + ' ' + url);
-  const toc = a.sections.filter((s) => s.toc !== false);
-  const nearby = clinics.filter((c) => !a.clinicsFilter || c.serviceKeys.includes(a.clinicsFilter));
-  const showClinics = a.clinicsBlock !== false && !guideClinic;
   const html = head({
     path: `/articles/${a.slug}/`, title: a.seoTitle || `${a.title} | ${SITE.name}`, desc: a.desc,
     ogTitle: a.title, ogDesc: a.excerpt, ogType: 'article', image: a.image, imageAlt: a.imageAlt,
@@ -496,10 +501,11 @@ ${toc.map((s) => `<a href="#${s.id}">${esc(s.tocLabel || s.h)}</a>`).join('\n')}
 <div class="prose">
 ${a.keyPoints?.length ? `<div class="box box--mint"><span class="eyebrow">Key points</span><ul>${a.keyPoints.map((k) => `<li>${k}</li>`).join('')}</ul></div>` : ''}
 ${a.sections.map((s) => `<h2 id="${s.id}">${esc(s.h)}</h2>\n${s.html}`).join('\n')}
-${showClinics ? `<h2 id="where">Where to get checked in Kuala Lumpur</h2>
-${nearby.length ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
+${showClinics ? `<h2 id="where">${esc(whereHeading)}</h2>
+${directoryOnly ? `<p>${a.clinicsIntro}</p>` : nearby.length ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
 <div class="mini-clinics">${nearby.map(miniClinic).join('')}</div>` : '<p>Any GP clinic can assess you and arrange tests or referrals. Our Kuala Lumpur clinic directory lists opening hours, phone numbers and directions as clinics are added.</p>'}
-<a class="btn" href="/clinics/" style="align-self:flex-start">${nearby.length ? 'See all clinics' : 'Browse the clinic directory'}</a>` : ''}
+<a class="btn" href="/clinics/" style="align-self:flex-start">${nearby.length ? 'See all clinics' : 'Browse the clinic directory'}</a>
+${a.clinicLinks?.length ? `<div class="chips">${a.clinicLinks.map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}</div>` : ''}` : ''}
 ${guideClinic ? `<div class="callout-bar"><div class="stack" style="gap:4px"><strong style="font-family:var(--serif);font-size:22px;font-weight:500">${esc(guideClinic.name)}</strong><span style="font-size:15px;color:var(--muted)">${esc(guideClinic.addressLine)}${telHref(guideClinic) ? ` &middot; <a href="${telHref(guideClinic)}">${esc(guideClinic.phone)}</a>` : ''}</span></div><a class="btn" href="/clinics/${guideClinic.slug}/">Hours &amp; directions</a></div>` : ''}
 ${a.faqs?.length ? `<h2 id="faq">Frequently asked questions</h2><div class="qa">${a.faqs.map(([q, ans]) => `<details><summary>${esc(q)}</summary><p>${ans}</p></details>`).join('')}</div>` : ''}
 <div class="sources">

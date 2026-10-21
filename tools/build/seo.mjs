@@ -1,5 +1,8 @@
 // Search titles (≤60 chars) and meta descriptions (≤155 chars), kept in one place.
 export const SEO = {
+  'weight-loss-injections-malaysia': ['Weight-Loss Injections Malaysia: Ozempic, Wegovy, Mounjaro', 'Which weight-loss injections are registered in Malaysia, who they are for, side effects and why buying pens online is risky. Updated October 2026.'],
+  'skin-boosters-malaysia': ['Skin Boosters Malaysia: Profhilo, Rejuran & Juvelook Guide', 'What skin boosters like Profhilo, Rejuran and Juvelook do, how many sessions you need, risks, typical costs and how to check a clinic is legal.'],
+  'flu-vaccine-malaysia': ['Flu Vaccine Malaysia 2026: Who Needs It, Cost & Free Shots', 'Who should get a flu vaccine in Malaysia, the best time, typical private clinic costs, free shots for seniors via MySejahtera, and side effects.'],
   'haze-air-quality-klang-valley': ['Haze in the Klang Valley: API Levels, Masks & Health Tips', 'Haze has pushed air quality to unhealthy levels across Selangor and KL. What the API means, who is most at risk, which masks work and when to see a doctor.'],
   'dengue-klang-valley-first-three-days': ['Dengue in the Klang Valley: First 3 Days & Warning Signs', 'Dengue cases have surged in Selangor and KL in 2026. Early symptoms, warning signs that need A&E, safe home care and where to get a blood test.'],
   'breast-cancer-screening-malaysia': ['Breast Cancer Screening in Malaysia & Free Mammograms', 'Half of breast cancers in Malaysia are found late. Self-checks and mammograms explained, plus free or subsidised mammograms in Selangor and KL.'],

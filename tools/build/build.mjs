@@ -6,13 +6,14 @@ import { CLINICS as RAW_CLINICS, NETWORKS, SERVICES, COMING_SOON } from './clini
 import { normalizeClinic, deriveAreas } from './clinic-data.mjs';
 import { NEWS } from './articles-news.mjs';
 import { GUIDES } from './articles-guides.mjs';
+import { OCT_2026 } from './articles-2026-10.mjs';
 import { SEO } from './seo.mjs';
 import { buildIndex, searchPage } from './search.mjs';
 import { buildCollections } from './collections.mjs';
 
-const ARTICLES = [...NEWS, ...GUIDES];
+const ARTICLES = [...OCT_2026, ...NEWS, ...GUIDES]; // newest first
 // Footer topic links, kept to categories that have at least one article.
-const TOPICS = [['prevention', 'Dengue & haze'], ['heart-diabetes', 'Heart & diabetes'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['guides', 'Guides'], ['clinic-guides', 'Clinic guides']]
+const TOPICS = [['prevention', 'Prevention'], ['heart-diabetes', 'Heart & diabetes'], ['weight', 'Weight & metabolism'], ['aesthetics', 'Aesthetics & skin'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['guides', 'Guides'], ['clinic-guides', 'Clinic guides']]
   .filter(([cat]) => ARTICLES.some((a) => a.cat === cat));
 
 for (const c of RAW_CLINICS) if (SEO[c.slug]) [c.seoTitle, c.seoDesc] = SEO[c.slug];
@@ -44,7 +45,7 @@ const collectionPages = [...coll.areas, ...coll.services, ...coll.networks];
 home({ ...ctx, faqs: FAQS(), featuredSlug: 'breast-cancer-screening-malaysia', comingSoon });
 clinicsIndex(ctx);
 for (const c of CLINICS) clinicPage(c, ctx);
-articlesIndex({ ...ctx, featuredSlug: 'dengue-klang-valley-first-three-days' });
+articlesIndex({ ...ctx, featuredSlug: 'weight-loss-injections-malaysia' });
 for (const a of ARTICLES) articlePage(a, ctx);
 staticPages(TOPICS);
 searchPage(TOPICS);

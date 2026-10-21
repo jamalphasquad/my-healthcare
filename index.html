@@ -88,7 +88,7 @@
 <h1 id="hero-h" class="h-hero">Calm, trusted care for <em>every corner of KL.</em></h1>
 <p class="lede" style="max-width:520px">Find a clinic near you in Kuala Lumpur — with opening hours, directions and clear health guidance written for Malaysians.</p>
 <form class="finder" id="finder" role="search" aria-label="Find a clinic" action="/clinics/">
-<div class="finder__field"><span class="finder__label" id="finder-service-label">I need</span><select id="finder-service" name="service" aria-labelledby="finder-service-label" data-dropdown><option value="all">Any service</option><option value="gp">General practice</option><option value="chronic">Chronic disease care</option><option value="screening">Health screening</option><option value="minor-surgery">Minor surgery &amp; wound care</option><option value="aesthetic">Aesthetics &amp; skin</option></select></div>
+<div class="finder__field"><span class="finder__label" id="finder-service-label">I need</span><select id="finder-service" name="service" aria-labelledby="finder-service-label" data-dropdown><option value="all">Any service</option><option value="gp">General practice</option><option value="chronic">Chronic disease care</option><option value="screening">Health screening</option><option value="minor-surgery">Minor surgery &amp; wound care</option><option value="aesthetic">Aesthetics &amp; skin</option><option value="weight">Weight management</option></select></div>
 <div class="finder__field"><span class="finder__label" id="finder-area-label">Near</span><select id="finder-area" name="area" aria-labelledby="finder-area-label" data-dropdown><option value="all">Anywhere</option><option value="jalan-tun-razak">Jalan Tun Razak</option><option value="mont-kiara">Mont Kiara</option><option value="desa-sri-hartamas">Desa Sri Hartamas</option><option value="solaris-dutamas">Solaris Dutamas</option><option value="damansara-heights">Damansara Heights</option><option value="kl-sentral">KL Sentral</option><option value="mutiara-damansara">Mutiara Damansara</option><option value="subang-jaya">Subang Jaya</option><option value="taman-kinrara">Taman Kinrara</option><option value="ampang">Ampang</option><option value="cheras">Cheras</option><option value="phileo-damansara">Phileo Damansara</option><option value="bukit-bintang">Bukit Bintang</option></select></div>
 <button class="btn btn--sq" type="submit">Find clinics</button>
 </form>
@@ -149,6 +149,7 @@
 <button type="button" class="chip chip--soft" data-filter-service="screening" aria-pressed="false">Health screening</button>
 <button type="button" class="chip chip--soft" data-filter-service="minor-surgery" aria-pressed="false">Minor surgery &amp; wound care</button>
 <button type="button" class="chip chip--soft" data-filter-service="aesthetic" aria-pressed="false">Aesthetics &amp; skin</button>
+<button type="button" class="chip chip--soft" data-filter-service="weight" aria-pressed="false">Weight management</button>
 </div>
 <p class="result-text" aria-live="polite">14 clinics listed</p>
 <div class="clinic-grid">
@@ -197,7 +198,7 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="solaris-dutamas" data-services="gp|chronic|screening|minor-surgery" data-hours='{"0":[[540,750]],"1":[[540,780],[840,1050]],"2":[[540,780],[840,1050]],"3":[[540,780],[840,1050]],"4":[[540,780],[840,1050]],"5":[[540,780],[840,1050]],"6":[[540,780],[840,870]]}'>
+<article class="clinic" data-area="solaris-dutamas" data-services="gp|chronic|screening|minor-surgery|weight" data-hours='{"0":[[540,750]],"1":[[540,780],[840,1050]],"2":[[540,780],[840,1050]],"3":[[540,780],[840,1050]],"4":[[540,780],[840,1050]],"5":[[540,780],[840,1050]],"6":[[540,780],[840,870]]}'>
 <a class="clinic__media" href="/clinics/klinik-segara-solaris-dutamas/" tabindex="-1" aria-hidden="true"><img src="/assets/img/treatment-room-960.webp" srcset="/assets/img/treatment-room-480.webp 480w, /assets/img/treatment-room-960.webp 960w, /assets/img/treatment-room-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a clean clinic treatment room" width="960" height="641" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
 <span class="meta">General practice &middot; Solaris Dutamas</span>
@@ -375,10 +376,10 @@
 <div class="stack g10"><span class="eyebrow">Health articles</span><h2 id="ar-h" class="h-section">Clear guidance, <em>written for Malaysia.</em></h2></div>
 <div class="chips" role="group" aria-label="Filter articles by topic">
 <button type="button" class="chip" data-home-cat="all" aria-pressed="true">All</button>
+<button type="button" class="chip" data-home-cat="aesthetics" aria-pressed="false">Aesthetics &amp; skin</button>
+<button type="button" class="chip" data-home-cat="weight" aria-pressed="false">Weight &amp; metabolism</button>
 <button type="button" class="chip" data-home-cat="prevention" aria-pressed="false">Prevention</button>
 <button type="button" class="chip" data-home-cat="mental-wellbeing" aria-pressed="false">Mental wellbeing</button>
-<button type="button" class="chip" data-home-cat="heart-diabetes" aria-pressed="false">Heart &amp; diabetes</button>
-<button type="button" class="chip" data-home-cat="guides" aria-pressed="false">Guides</button>
 </div>
 </div>
 <article class="feature">
@@ -391,6 +392,27 @@
 </div>
 </article>
 <div class="post-grid" data-home-posts>
+<article class="post" data-cat="aesthetics">
+<a class="post__img" href="/articles/skin-boosters-malaysia/" tabindex="-1" aria-hidden="true"><img src="/assets/img/facial-treatment-960.webp" srcset="/assets/img/facial-treatment-480.webp 480w, /assets/img/facial-treatment-960.webp 960w, /assets/img/facial-treatment-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="A facial skin treatment being carried out in a clinic" width="960" height="640" loading="lazy" decoding="async"></a>
+<span class="meta">Aesthetics &amp; skin &middot; 6 min read</span>
+<h3><a href="/articles/skin-boosters-malaysia/">Skin boosters in Malaysia: Profhilo, Rejuran, Juvelook and exosomes explained</a></h3>
+<p>What Profhilo, Rejuran, Juvelook and other skin boosters actually do, how many sessions they take, the risks, and how to check a clinic and product are legal.</p>
+
+</article>
+<article class="post" data-cat="weight">
+<a class="post__img" href="/articles/weight-loss-injections-malaysia/" tabindex="-1" aria-hidden="true"><img src="/assets/img/waist-measurement-960.webp" srcset="/assets/img/waist-measurement-480.webp 480w, /assets/img/waist-measurement-960.webp 960w, /assets/img/waist-measurement-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="A man measuring his waist with a tape measure" width="960" height="640" loading="lazy" decoding="async"></a>
+<span class="meta">Weight &amp; metabolism &middot; 6 min read</span>
+<h3><a href="/articles/weight-loss-injections-malaysia/">Weight-loss injections in Malaysia: what Ozempic, Wegovy and Mounjaro can and can’t do</a></h3>
+<p>Which injections are actually registered for weight loss in Malaysia, who they’re meant for, the side effects, and why “slimming pens” sold online are risky.</p>
+
+</article>
+<article class="post" data-cat="prevention">
+<a class="post__img" href="/articles/flu-vaccine-malaysia/" tabindex="-1" aria-hidden="true"><img src="/assets/img/vaccination-960.webp" srcset="/assets/img/vaccination-480.webp 480w, /assets/img/vaccination-960.webp 960w, /assets/img/vaccination-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="A doctor giving a vaccine injection in the upper arm" width="960" height="640" loading="lazy" decoding="async"></a>
+<span class="meta">Prevention &middot; 5 min read</span>
+<h3><a href="/articles/flu-vaccine-malaysia/">Flu vaccine in Malaysia: who should get it, when, and how to get a free shot</a></h3>
+<p>Flu circulates all year in Malaysia. Who should get vaccinated, the best timing, free shots for seniors, typical costs and what to expect.</p>
+
+</article>
 <article class="post" data-cat="prevention">
 <a class="post__img" href="/articles/haze-air-quality-klang-valley/" tabindex="-1" aria-hidden="true"><img src="/assets/img/kl-twin-towers-dusk-960.webp" srcset="/assets/img/kl-twin-towers-dusk-480.webp 480w, /assets/img/kl-twin-towers-dusk-960.webp 960w, /assets/img/kl-twin-towers-dusk-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Kuala Lumpur skyline and the Petronas Twin Towers under a hazy sky at dusk" width="960" height="640" loading="lazy" decoding="async"></a>
 <span class="meta">Prevention &middot; 5 min read</span>
@@ -410,27 +432,6 @@
 <span class="meta">Mental wellbeing &middot; 3 min read</span>
 <h3><a href="/articles/world-mental-health-day-2026-malaysia/">World Mental Health Day 2026: how to check in, and where to call in Malaysia</a></h3>
 <p>Calls to Talian HEAL 15555 have more than tripled since 2023. Simple ways to check in on yourself and others, plus the helplines worth saving.</p>
-
-</article>
-<article class="post" data-cat="heart-diabetes">
-<a class="post__img" href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/" tabindex="-1" aria-hidden="true"><img src="/assets/img/glucometer-960.webp" srcset="/assets/img/glucometer-480.webp 480w, /assets/img/glucometer-960.webp 960w, /assets/img/glucometer-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="Hands using a glucometer to check blood sugar" width="960" height="720" loading="lazy" decoding="async"></a>
-<span class="meta">Heart &amp; diabetes &middot; 3 min read</span>
-<h3><a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">Most young Malaysians with diabetes or high blood pressure don’t know it</a></h3>
-<p>Over 80% of adults aged 18–29 with diabetes or high blood pressure are undiagnosed. Which simple checks you need, and how to get them free.</p>
-
-</article>
-<article class="post" data-cat="heart-diabetes">
-<a class="post__img" href="/articles/check-blood-pressure-at-home/" tabindex="-1" aria-hidden="true"><img src="/assets/img/bp-monitor-960.webp" srcset="/assets/img/bp-monitor-480.webp 480w, /assets/img/bp-monitor-960.webp 960w, /assets/img/bp-monitor-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="A blood pressure cuff and stethoscope on a white surface" width="960" height="720" loading="lazy" decoding="async"></a>
-<span class="meta">Heart &amp; diabetes &middot; 3 min read</span>
-<h3><a href="/articles/check-blood-pressure-at-home/">A five-minute routine for checking blood pressure at home</a></h3>
-<p>How to sit, when to measure, and what numbers to bring to your doctor, following Malaysia’s clinical guidelines.</p>
-
-</article>
-<article class="post" data-cat="guides">
-<a class="post__img" href="/articles/clinic-or-emergency-department/" tabindex="-1" aria-hidden="true"><img src="/assets/img/treatment-room-960.webp" srcset="/assets/img/treatment-room-480.webp 480w, /assets/img/treatment-room-960.webp 960w, /assets/img/treatment-room-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="A clean, empty clinic treatment room with an examination bed" width="960" height="641" loading="lazy" decoding="async"></a>
-<span class="meta">Guides &middot; 3 min read</span>
-<h3><a href="/articles/clinic-or-emergency-department/">Clinic or emergency department? A simple guide for Klang Valley families</a></h3>
-<p>When to call 999, when to head to the emergency department, and when your neighbourhood GP is the better choice.</p>
 
 </article>
 </div>
@@ -511,8 +512,10 @@
 </nav>
 <nav aria-label="Topics">
 <span class="h">Topics</span>
-<a href="/articles/#topic-prevention">Dengue & haze</a>
+<a href="/articles/#topic-prevention">Prevention</a>
 <a href="/articles/#topic-heart-diabetes">Heart & diabetes</a>
+<a href="/articles/#topic-weight">Weight & metabolism</a>
+<a href="/articles/#topic-aesthetics">Aesthetics & skin</a>
 <a href="/articles/#topic-womens-health">Women's health</a>
 <a href="/articles/#topic-mental-wellbeing">Mental wellbeing</a>
 <a href="/articles/#topic-guides">Guides</a>

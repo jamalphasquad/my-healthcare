@@ -76,6 +76,7 @@ export const SERVICES = [
   ['occupational', 'Occupational health'],
   ['mental', 'Mental health counselling'],
   ['aesthetic', 'Aesthetics & skin'],
+  ['weight', 'Weight management'],
 ];
 
 export const CLINICS = [
@@ -122,7 +123,7 @@ export const CLINICS = [
     mapsUrl: maps('Klinik Segara Solaris Dutamas', 'ChIJjVbkqWBIzDERD_Jnzyf8MJQ'),
     hours: wk([[540, 780], [840, 1050]], [[540, 780], [840, 870]], [[540, 750]]),
     hoursNote: 'Hours from the branch’s Google Maps listing, checked October 2026, with a 1–2pm lunch break. A partner page lists slightly longer weekend hours, so please call ahead.',
-    serviceKeys: ['gp', 'chronic', 'screening', 'minor-surgery'],
+    serviceKeys: ['gp', 'chronic', 'screening', 'minor-surgery', 'weight'],
     services: [
       { name: 'General practice', note: 'Walk-in care for everyday illness' },
       { name: 'Chronic disease care', note: 'Including diabetes and thyroid conditions' },

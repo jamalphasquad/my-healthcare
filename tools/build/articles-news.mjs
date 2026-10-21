@@ -73,7 +73,7 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
       ['New Straits Times — 73 heat-related illness cases, four deaths (7 Jul 2026)', 'https://www.nst.com.my/amp/news/nation/2026/07/1482825/health-ministry-records-73-heat-related-illness-cases-four-deaths-jan-1'],
       ['Department of Environment — APIMS', 'https://eqms.doe.gov.my/APIMS/main'],
     ],
-    related: ['dengue-klang-valley-first-three-days', 'clinic-or-emergency-department', 'world-mental-health-day-2026-malaysia'],
+    related: ['flu-vaccine-malaysia', 'dengue-klang-valley-first-three-days', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -314,6 +314,6 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk beside a notebook'
       ['CodeBlue — Over two million adults live with three NCDs: NHMS 2023 (May 2024)', 'https://codeblue.galencentre.org/2024/05/over-two-million-adults-in-malaysia-live-with-three-ncds-nhms-2023/'],
       ['PERKESO SEHATi — Health screening programme', 'https://sehati.ladesk.com/'],
     ],
-    related: ['check-blood-pressure-at-home', 'world-mental-health-day-2026-malaysia', 'breast-cancer-screening-malaysia'],
+    related: ['weight-loss-injections-malaysia', 'check-blood-pressure-at-home', 'breast-cancer-screening-malaysia'],
   },
 ];
