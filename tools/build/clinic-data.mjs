@@ -1,6 +1,9 @@
 // Fills in defaults for incomplete clinic records and derives the area list.
 const slugify = (s) => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-const REGION = { 'kuala lumpur': 'MY-14', 'wilayah persekutuan kuala lumpur': 'MY-14', selangor: 'MY-10', putrajaya: 'MY-16' };
+const REGION = {
+  'kuala lumpur': 'MY-14', 'wilayah persekutuan kuala lumpur': 'MY-14', selangor: 'MY-10', putrajaya: 'MY-16',
+  johor: 'MY-01', melaka: 'MY-04', 'negeri sembilan': 'MY-05', 'pulau pinang': 'MY-07', penang: 'MY-07', perak: 'MY-08',
+};
 // Neutral stock photos for clinics without a photo of their own, picked per clinic so cards vary.
 const FALLBACK = [
   ['clinic-waiting-room', 'a bright, calm clinic waiting area'],

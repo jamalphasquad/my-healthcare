@@ -42,14 +42,21 @@ node tools/deploy.mjs
 
 - `_headers`: caching and security headers.
 - `_routes.json`: limits the redirect function to pages, so static files don't invoke it.
-- `functions/_middleware.js`: 301-redirects `www.healthcaredirectory.my` to the bare domain.
+- `functions/_middleware.js`: 301-redirects `www.healthcaredirectory.my` and `healthcaredirectory.pages.dev` to the bare domain, and marks preview deployments `noindex`.
+
+After a deploy, tell Bing, Yandex, Naver and Seznam about new or changed pages through IndexNow (the build writes the key file):
+
+```bash
+node tools/indexnow.mjs            # every URL in the live sitemap
+node tools/indexnow.mjs /articles/  # only URLs containing /articles/
+```
 
 ## Before launch
 
 - **Newsletter:** set `data-endpoint` on `.js-newsletter` forms to a Formspree, Buttondown or similar URL. Until then the form tells visitors sign-ups open soon.
 - **Contact email:** `hello@healthcaredirectory.my` is used across the site (`SITE.email` in `tools/build/lib.mjs`). Create the mailbox, or set up forwarding.
 - **Clinic details:** listings can go live with incomplete details (the page then shows “Listing in progress” and asks visitors to call ahead). Confirm hours and phone numbers with each clinic.
-- **Search Console:** verify the domain and submit `https://healthcaredirectory.my/sitemap.xml`.
+- **Search engines:** verify the domain in Google Search Console and Bing Webmaster Tools and submit `https://healthcaredirectory.my/sitemap.xml`. If you verify with a meta tag rather than DNS, put the code in `SITE.googleVerification` or `SITE.bingVerification` in `tools/build/lib.mjs`.
 
 ## Editing content
 
@@ -58,6 +65,8 @@ The HTML files are generated, so edit the sources in `tools/build/`, not the HTM
 | File | What it holds |
 |---|---|
 | `clinics.mjs` | Clinic details: address, phone, hours, services, panels, FAQs, and the area filters |
+| `careclinics-data.mjs` | CareClinics branches, exported from the CareClinics clinic records. Spread into `CLINICS`. |
+| `articles-2026-10.mjs`, `articles-2026-10b.mjs` | October 2026 articles (aesthetics, weight, vaccines, screening) |
 | `articles-news.mjs` | News-based health articles |
 | `articles-guides.mjs` | Everyday guides and clinic guides |
 | `collections.mjs` | Area pages (`/clinics/<area>/`), service pages (open late, Saturday, Sunday, aesthetic, GP, towns) and network pages, generated from the clinic data. A page is only created when 2+ clinics qualify. |

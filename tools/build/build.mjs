@@ -7,11 +7,12 @@ import { normalizeClinic, deriveAreas } from './clinic-data.mjs';
 import { NEWS } from './articles-news.mjs';
 import { GUIDES } from './articles-guides.mjs';
 import { OCT_2026 } from './articles-2026-10.mjs';
+import { OCT_2026_B } from './articles-2026-10b.mjs';
 import { SEO } from './seo.mjs';
 import { buildIndex, searchPage } from './search.mjs';
 import { buildCollections } from './collections.mjs';
 
-const ARTICLES = [...OCT_2026, ...NEWS, ...GUIDES]; // newest first
+const ARTICLES = [...OCT_2026_B, ...OCT_2026, ...NEWS, ...GUIDES]; // newest first
 // Footer topic links, kept to categories that have at least one article.
 const TOPICS = [['prevention', 'Prevention'], ['heart-diabetes', 'Heart & diabetes'], ['weight', 'Weight & metabolism'], ['aesthetics', 'Aesthetics & skin'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['guides', 'Guides'], ['clinic-guides', 'Clinic guides']]
   .filter(([cat]) => ARTICLES.some((a) => a.cat === cat));
@@ -44,7 +45,7 @@ const collectionPages = [...coll.areas, ...coll.services, ...coll.networks];
 home({ ...ctx, faqs: FAQS(), featuredSlug: 'breast-cancer-screening-malaysia', comingSoon });
 clinicsIndex(ctx);
 for (const c of CLINICS) clinicPage(c, ctx);
-articlesIndex({ ...ctx, featuredSlug: 'weight-loss-injections-malaysia' });
+articlesIndex({ ...ctx, featuredSlug: 'free-health-screening-malaysia' });
 for (const a of ARTICLES) articlePage(a, ctx);
 staticPages(TOPICS);
 searchPage(TOPICS);
@@ -63,6 +64,7 @@ write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.map(([p, pr, cf, im, mod]) => `  <url><loc>${abs(p)}</loc><lastmod>${mod || SITE.updated}</lastmod><changefreq>${cf}</changefreq><priority>${pr}</priority>${im ? `<image:image><image:loc>${abs(`/assets/img/${im}-og.jpg`)}</image:loc></image:image>` : ''}</url>`).join('\n')}
 </urlset>
 `);
+if (SITE.indexNowKey) write(`${SITE.indexNowKey}.txt`, SITE.indexNowKey);
 write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /404.html\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
 
 // Cloudflare Pages config (not served as pages).

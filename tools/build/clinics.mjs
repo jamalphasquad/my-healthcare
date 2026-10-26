@@ -16,7 +16,7 @@
      areaLabel: 'Bukit Bintang',                    // neighbourhood shown on cards and filters
      areaSlug: 'bukit-bintang',                     // optional, derived from areaLabel
      locality: 'Kuala Lumpur',                      // city / town
-     state: 'Kuala Lumpur',                         // 'Kuala Lumpur' or 'Selangor'
+     state: 'Kuala Lumpur',                         // state name, e.g. 'Selangor', 'Johor'
      street: '88 Jalan Alor',
      postcode: '50200',
      phone: '03-0000 0000', phoneIntl: '+60300000000',
@@ -38,6 +38,8 @@
      areaServed: ['Bukit Bintang', 'Pudu'],
    }
 */
+import { CARECLINICS } from './careclinics-data.mjs';
+
 export const daily = (a, b) => Object.fromEntries([0, 1, 2, 3, 4, 5, 6].map((d) => [d, [[a, b]]]));
 export const weekdays = (a, b) => Object.fromEntries([0, 1, 2, 3, 4, 5, 6].map((d) => [d, d === 0 || d === 6 ? [] : [[a, b]]]));
 
@@ -45,6 +47,11 @@ export const weekdays = (a, b) => Object.fromEntries([0, 1, 2, 3, 4, 5, 6].map((
 export const wk = (weekday, sat = [], sun = []) => Object.fromEntries([0, 1, 2, 3, 4, 5, 6].map((d) => [d, d === 0 ? sun : d === 6 ? sat : weekday]));
 
 export const NETWORKS = {
+  careclinics: {
+    name: 'CareClinics',
+    url: 'https://careclinics.com.my/',
+    blurb: 'CareClinics is a network of family clinics run by Careclinics Healthcare Services Sdn Bhd since 2003, with branches in the Klang Valley, Negeri Sembilan, Melaka, Johor, Perak and Penang. Several branches are open 24 hours. Hours and services vary by branch, so check the branch page or call before you go.',
+  },
   segara: {
     name: 'Klinik Segara',
     blurb: 'Klinik Segara is a group of general practice clinics sharing the Klinik Segara name, with branches across Kuala Lumpur and nearby Petaling Jaya, Subang Jaya, Puchong, Ampang and Cheras. Hours vary by branch, and several are office-hours clinics in commercial buildings, so check the branch page before you go.',
@@ -299,6 +306,7 @@ export const CLINICS = [
     gettingThere: 'In the Beauty Hall on Level 7 of Pavilion Kuala Lumpur, a short walk from Bukit Bintang MRT and Monorail stations.',
     areaServed: ['Bukit Bintang', 'KLCC', 'Kuala Lumpur'],
   },
+  ...CARECLINICS,
 ];
 
 // Kuala Lumpur neighbourhoods shown as "coming soon" until they have listings.

@@ -9,7 +9,12 @@ export const SITE = {
   locale: 'en_MY',
   lang: 'en-MY',
   year: 2026,
-  updated: '2026-10-19',
+  updated: '2026-10-26',
+  // IndexNow key (Bing, Yandex, Seznam, Naver). The build publishes /<key>.txt; tools/indexnow.mjs submits URLs.
+  indexNowKey: 'c18b6333843ce1b5889de1d4c23eef1e',
+  // Search console verification codes, added once you have them (or verify Google by DNS TXT in Cloudflare).
+  googleVerification: '',
+  bingVerification: '',
 };
 // Brand as shown in the header and footer: "HealthcareDirectory" + accent ".my"
 const BRAND = 'HealthcareDirectory<span>.my</span>';
@@ -53,6 +58,9 @@ export function head(p) {
 <link rel="alternate" hreflang="x-default" href="${url}">
 <meta name="robots" content="${p.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
 <meta name="theme-color" content="#2F5D50">
+${SITE.googleVerification ? `<meta name="google-site-verification" content="${SITE.googleVerification}">
+` : ''}${SITE.bingVerification ? `<meta name="msvalidate.01" content="${SITE.bingVerification}">
+` : ''}
 <meta name="geo.region" content="${p.geo?.region || 'MY-14'}">
 <meta name="geo.placename" content="${esc(p.geo?.place || 'Kuala Lumpur')}">
 ${p.geo?.pos ? `<meta name="geo.position" content="${p.geo.pos[0]};${p.geo.pos[1]}">\n<meta name="ICBM" content="${p.geo.pos[0]}, ${p.geo.pos[1]}">\n` : ''}<meta property="og:type" content="${p.ogType || 'website'}">
@@ -109,7 +117,7 @@ ${o.kbd ? '<kbd class="hs__kbd" aria-hidden="true">/</kbd>' : ''}${o.close ? `<b
 export function header(active, o = {}) {
   return `<div class="topbar"><div class="wrap">
 <span>Medical emergency? Call <a href="tel:999"><strong>999</strong></a> &middot; from mobile, <a href="tel:112"><strong>112</strong></a></span>
-<span class="muted">Serving Kuala Lumpur, Malaysia</span>
+<span class="muted">Serving KL, Selangor &amp; beyond</span>
 </div></div>
 <header class="site-header">
 <div class="wrap nav">
@@ -140,7 +148,7 @@ export function footer(topics) {
 <div class="wrap footer__grid">
 <div class="stack g12">
 <span class="footer__brand">${BRAND}</span>
-<p>An independent directory of clinics and a health awareness guide for Kuala Lumpur, Malaysia.</p>
+<p>An independent directory of clinics and a health awareness guide for Malaysia.</p>
 <p>Medical emergency: call <a href="tel:999">999</a> (or <a href="tel:112">112</a> from a mobile).</p>
 </div>
 <nav aria-label="Clinics">
@@ -164,7 +172,7 @@ ${topics.map(([slug, label]) => `<a href="/articles/#topic-${slug}">${label}</a>
 </div>
 <div class="wrap footer__base">
 <span>Information is for general awareness and does not replace advice from a registered medical practitioner.</span>
-<span>&copy; ${SITE.year} ${SITE.name} &middot; Kuala Lumpur, Malaysia</span>
+<span>&copy; ${SITE.year} ${SITE.name} &middot; Malaysia</span>
 </div>
 </footer>
 </div>

@@ -20,6 +20,9 @@ const PUBLIC = [
   'robots.txt', 'sitemap.xml', '_headers', '_routes.json',
 ];
 
+// IndexNow key file (<32 hex>.txt) written by the build
+PUBLIC.push(...fs.readdirSync(ROOT).filter((f) => /^[0-9a-f]{32}\.txt$/.test(f)));
+
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'dist'), { recursive: true });
 for (const item of PUBLIC) {

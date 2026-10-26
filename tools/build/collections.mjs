@@ -95,15 +95,34 @@ export function buildCollections({ clinics, areas, topics }) {
   const claim = (slug, what) => { if (taken.has(slug)) throw new Error(`URL clash: /clinics/${slug}/ (${what})`); taken.add(slug); return slug; };
   const checked = new Date(SITE.updated + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
+  // Pages say "Kuala Lumpur" while every listing is in the Klang Valley, "Malaysia" once they spread further.
+  const klangValley = clinics.every((c) => ['Kuala Lumpur', 'Selangor', 'Putrajaya'].includes(c.state));
+  const scope = klangValley ? 'Kuala Lumpur' : 'Malaysia';
+  const around = klangValley ? 'in and around Kuala Lumpur' : 'in Kuala Lumpur, Selangor and other states';
+  const stateList = list([...new Set(clinics.map((c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state)))]);
+
   // ---- service pages (defined first so area pages can link to them)
   const SERVICES = [
     {
-      slug: 'open-late', crumb: 'Open late', name: 'Clinics open late in Kuala Lumpur',
+      slug: 'open-24-hours', crumb: 'Open 24 hours', name: `24-hour clinics in ${scope}`,
+      test: (c) => c.hours && [0, 1, 2, 3, 4, 5, 6].every((d) => (c.hours[d] || []).some(([a, b]) => a === 0 && b >= 1440)),
+      eyebrow: 'Klinik 24 jam', h1: 'Clinics open <em>24 hours</em>',
+      intro: `GP clinics ${around} that stay open around the clock, every day of the week. Useful for fevers, infections and minor injuries at night. For emergencies, call 999.`,
+      title: () => `24-Hour Clinics in ${scope} (Klinik 24 Jam)`,
+      desc: (n) => `${n} clinics open 24 hours a day, 7 days a week (klinik 24 jam) ${around}, with addresses, phone numbers and directions.`,
+      column: ['State', (c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state)],
+      faqs: () => [
+        ['Can I walk in to a 24-hour clinic at night?', 'Yes, 24-hour GP clinics accept walk-ins at any time. Calling first can save a wasted trip, as a doctor may occasionally be away on a home visit or the clinic may be busy.'],
+        ['Is a 24-hour clinic the same as an emergency department?', 'No. A 24-hour clinic can treat everyday illness and minor injuries. For chest pain, difficulty breathing, signs of stroke, heavy bleeding or a serious injury, call <a href="tel:999">999</a> or go to a hospital emergency department. See our guide on <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a>.'],
+      ],
+    },
+    {
+      slug: 'open-late', crumb: 'Open late', name: `Clinics open late in ${scope}`,
       test: (c) => c.hours && latestClose(c.hours) >= 1260,
       eyebrow: 'Evening clinics', h1: 'Clinics <em>open late</em>',
       intro: 'When illness can’t wait until morning. Each of these clinics stays open until at least 9pm on some days. Check the table for each clinic’s closing times.',
-      title: () => 'Clinics Open Late in Kuala Lumpur (Until 9pm+)',
-      desc: (n) => `${n} clinics in and around Kuala Lumpur open until 9pm or later, with closing times for each day, phone numbers and directions.`,
+      title: () => `Clinics Open Late in ${scope} (Until 9pm+)`,
+      desc: (n) => `${n} clinics ${around} open until 9pm or later, with closing times for each day, phone numbers and directions.`,
       column: ['Closes', (c) => { const wd = closing(c.hours, 1), sat = closing(c.hours, 6), sun = closing(c.hours, 0); return [`Weekdays ${wd ? time(wd) : 'closed'}`, `Sat ${sat ? time(sat) : 'closed'}`, `Sun ${sun ? time(sun) : 'closed'}`].join(' · '); }],
       faqs: (cs) => {
         const latest = Math.max(...cs.map((c) => latestClose(c.hours)));
@@ -115,12 +134,12 @@ export function buildCollections({ clinics, areas, topics }) {
       },
     },
     {
-      slug: 'open-saturday', crumb: 'Open on Saturday', name: 'Clinics open on Saturday in Kuala Lumpur',
+      slug: 'open-saturday', crumb: 'Open on Saturday', name: `Clinics open on Saturday in ${scope}`,
       test: (c) => opensOn(c, 6),
       eyebrow: 'Weekend clinics', h1: 'Clinics open on <em>Saturday</em>',
-      intro: 'Clinics in and around Kuala Lumpur with Saturday hours. Many close earlier than on weekdays, so check the time before you go.',
-      title: () => 'Clinics Open on Saturday in Kuala Lumpur',
-      desc: (n) => `${n} clinics in and around Kuala Lumpur open on Saturday, with Saturday opening hours, phone numbers and directions for each.`,
+      intro: `Clinics ${around} with Saturday hours. Many close earlier than on weekdays, so check the time before you go.`,
+      title: () => `Clinics Open on Saturday in ${scope}`,
+      desc: (n) => `${n} clinics ${around} open on Saturday, with Saturday opening hours, phone numbers and directions for each.`,
       column: ['Saturday hours', (c) => rangeText(c.hours[6])],
       faqs: (cs) => {
         const allDay = cs.filter((c) => closing(c.hours, 6) >= 1080).map((c) => c.name);
@@ -131,12 +150,12 @@ export function buildCollections({ clinics, areas, topics }) {
       },
     },
     {
-      slug: 'open-sunday', crumb: 'Open on Sunday', name: 'Clinics open on Sunday in Kuala Lumpur',
+      slug: 'open-sunday', crumb: 'Open on Sunday', name: `Clinics open on Sunday in ${scope}`,
       test: (c) => opensOn(c, 0),
       eyebrow: 'Weekend clinics', h1: 'Clinics open on <em>Sunday</em>',
-      intro: 'Most GP clinics close on Sundays. These clinics in and around Kuala Lumpur keep Sunday hours.',
-      title: () => 'Clinics Open on Sunday in Kuala Lumpur (Klinik Buka Ahad)',
-      desc: (n) => `${n} clinics in and around Kuala Lumpur open on Sunday (klinik buka hari Ahad), with Sunday hours, phone numbers and directions.`,
+      intro: `Most GP clinics close on Sundays. These clinics ${around} keep Sunday hours.`,
+      title: () => `Clinics Open on Sunday in ${scope} (Klinik Buka Ahad)`,
+      desc: (n) => `${n} clinics ${around} open on Sunday (klinik buka hari Ahad), with Sunday hours, phone numbers and directions.`,
       column: ['Sunday hours', (c) => rangeText(c.hours[0])],
       faqs: (cs) => [
         ['Which clinics are open on Sunday?', `${list(cs.map((c) => `${c.name} (${rangeText(c.hours[0])})`))}.`],
@@ -162,12 +181,12 @@ export function buildCollections({ clinics, areas, topics }) {
       ],
     },
     {
-      slug: 'gp-clinics', crumb: 'GP clinics', name: 'GP clinics in Kuala Lumpur & Selangor',
+      slug: 'gp-clinics', crumb: 'GP clinics', name: klangValley ? 'GP clinics in Kuala Lumpur & Selangor' : 'GP clinics in Malaysia',
       test: (c) => c.serviceKeys.includes('gp'),
-      eyebrow: 'General practice', h1: 'GP clinics in <em>Kuala Lumpur</em> &amp; nearby',
-      intro: 'General practice clinics for everyday illness: fevers, coughs, infections, minor injuries and medical certificates, across Kuala Lumpur and nearby Selangor.',
-      title: () => 'GP Clinics in Kuala Lumpur & Selangor: Hours & Phone',
-      desc: (n) => `${n} GP clinics in Kuala Lumpur, Petaling Jaya, Subang Jaya, Puchong, Ampang and Cheras, with opening hours, phone numbers and directions.`,
+      eyebrow: 'General practice', h1: klangValley ? 'GP clinics in <em>Kuala Lumpur</em> &amp; nearby' : 'GP clinics in <em>Malaysia</em>',
+      intro: `General practice clinics for everyday illness: fevers, coughs, infections, minor injuries and medical certificates, across ${stateList}.`,
+      title: () => (klangValley ? 'GP Clinics in Kuala Lumpur & Selangor: Hours & Phone' : 'GP Clinics in KL, Selangor & Malaysia: Hours & Phone'),
+      desc: (n) => `${n} GP clinics in ${stateList}, with opening hours, phone numbers and directions.`,
       column: ['Weekday hours', (c) => dayHours(c, 1)],
       faqs: () => [
         ['Do I need an appointment to see a GP?', 'Most GP clinics accept walk-ins. Calling ahead can save waiting time, especially in the evening and at weekends.'],
@@ -178,13 +197,15 @@ export function buildCollections({ clinics, areas, topics }) {
   // Town pages for places outside Kuala Lumpur with several clinics, e.g. Petaling Jaya.
   const towns = [...new Set(clinics.map((c) => c.locality))].filter((t) => t !== 'Kuala Lumpur');
   for (const t of towns) {
+    const st = clinics.find((c) => c.locality === t).state;
+    const stName = st === 'Pulau Pinang' ? 'Penang' : st;
     SERVICES.push({
       slug: slugify(t), crumb: t, name: `Clinics in ${t}`,
       test: (c) => c.locality === t,
-      eyebrow: 'Selangor', h1: `Clinics in <em>${esc(t)}</em>`,
+      eyebrow: esc(stName), h1: `Clinics in <em>${esc(t)}</em>`,
       intro: `Clinics in ${t}, with opening hours, phone numbers and directions.`,
       title: () => `Clinics in ${t}: Hours, Phone & Directions`,
-      desc: (n) => `${n} clinics in ${t}, Selangor, with opening hours, phone numbers, services and directions. Updated ${checked}.`,
+      desc: () => `Clinics in ${t}${st === t ? '' : `, ${stName}`}: ${list(clinics.filter((c) => c.locality === t).map((c) => c.name))}. Opening hours, phone numbers and directions.`,
       column: ['Area', (c) => c.areaLabel],
       faqs: () => [],
     });
@@ -253,10 +274,10 @@ export function buildCollections({ clinics, areas, topics }) {
 ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><td><a href="/clinics/${c.areaSlug}/">${esc(c.areaLabel)}</a></td><td>${esc(s.column[1](c))}</td></tr>`).join('\n')}
 </tbody></table></div>` : '';
     const p = {
-      slug: s.slug, crumb: s.crumb, name: s.name, place: 'Kuala Lumpur',
+      slug: s.slug, crumb: s.crumb, name: s.name, place: scope,
       eyebrow: s.eyebrow, h1: s.h1, intro: s.intro,
       facts: [plural(cs.length, 'clinic') + ' listed', `${plural(new Set(cs.map((c) => c.areaSlug)).size, 'area')}`, `${plural(cs.filter((c) => c.state === 'Kuala Lumpur').length, 'clinic')} in Kuala Lumpur`],
-      listHeading: esc(s.name.replace(/ in Kuala Lumpur.*$/, '')),
+      listHeading: esc(s.name.replace(/ in (Kuala Lumpur|Malaysia).*$/, '')),
       // the first heading on the page gets no top margin
       body: table + (s.body ? (table ? s.body.replace(' style="margin-top:0"', '') : s.body) : ''),
       faqs: s.faqs(cs), clinics: cs, checked, where: 'that fits this list', topics,
@@ -282,7 +303,7 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
       faqs: [[`How many ${n.name} branches are there?`, `We list ${plural(cs.length, 'branch', 'branches')}: ${list(cs.map((c) => `${esc(c.name)} (${esc(c.areaLabel)})`))}.`]],
       clinics: cs, checked, where: `in the ${esc(n.name)} network`, topics,
       title: cut(`${n.name} Branches: Locations, Hours & Phone`, 60),
-      desc: cut(`All ${cs.length} ${n.name} branches in Kuala Lumpur and Selangor, with addresses, opening hours, phone numbers and directions for each.`, 155),
+      desc: cut(`All ${cs.length} ${n.name} branches in ${list([...new Set(cs.map((c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state)))])}, with addresses, opening hours, phone numbers and directions for each.`, 155),
       links: [['Branch areas', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks]],
     };
     page(p);

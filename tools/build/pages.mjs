@@ -51,11 +51,23 @@ export function clinicLd(c) {
 
 const telHref = (c) => (c.phoneIntl ? 'tel:' + c.phoneIntl.replace(/[^+\d]/g, '') : null);
 const hoursAttr = (c) => (c.hours ? ` data-hours='${JSON.stringify(c.hours)}'` : '');
-export const miniClinic = (c) => `<a href="/clinics/${c.slug}/"${hoursAttr(c)}><span class="a">${esc(c.areaLabel)}, ${esc(c.locality)}</span><span class="n">${esc(c.name)}</span><span class="h">${esc(summaryHours(c.hours))}</span></a>`;
+// "Bangsar, Kuala Lumpur", or just "Kajang" when the area and town are the same
+const placeOf = (c) => (c.areaLabel === c.locality ? c.areaLabel : `${c.areaLabel}, ${c.locality}`);
+export const miniClinic = (c) => `<a href="/clinics/${c.slug}/"${hoursAttr(c)}><span class="a">${esc(placeOf(c))}</span><span class="n">${esc(c.name)}</span><span class="h">${esc(summaryHours(c.hours))}</span></a>`;
 const dirHref = (c) => c.mapsUrl;
 
+const slugOf = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+// Directory filter buttons: neighbourhoods while there are only a few, states once there are many.
+// Each card's data-area holds the key the buttons filter on (see site.js).
+export function filterGroups(clinics, areas) {
+  if (areas.length <= 12) return { kind: 'area', label: 'area', items: areas.map((a) => ({ slug: a.slug, label: a.label })), key: (c) => c.areaSlug };
+  const order = ['Kuala Lumpur', 'Selangor', 'Putrajaya', 'Negeri Sembilan', 'Melaka', 'Johor', 'Perak', 'Pulau Pinang'];
+  const states = [...new Set(clinics.map((c) => c.state))].sort((a, b) => (order.indexOf(a) + 99 * (order.indexOf(a) < 0)) - (order.indexOf(b) + 99 * (order.indexOf(b) < 0)));
+  return { kind: 'state', label: 'state', items: states.map((s) => ({ slug: slugOf(s), label: s === 'Pulau Pinang' ? 'Penang' : s })), key: (c) => slugOf(c.state) };
+}
+
 export function clinicCard(c, o = {}) {
-  return `<article class="clinic" data-area="${c.areaSlug}" data-services="${c.serviceKeys.join('|')}"${hoursAttr(c)}>
+  return `<article class="clinic" data-area="${o.key ? o.key(c) : c.areaSlug}" data-services="${c.serviceKeys.join('|')}"${hoursAttr(c)}>
 <a class="clinic__media" href="/clinics/${c.slug}/" tabindex="-1" aria-hidden="true">${img(c.image, c.imageAlt, { sizes: '(max-width: 760px) 100vw, 380px' })}<span class="status">${c.hours ? 'See hours' : 'Call to confirm hours'}</span></a>
 <div class="clinic__body">
 <span class="meta">${esc(c.cardSpec)} &middot; ${esc(c.areaLabel)}</span>
@@ -72,18 +84,19 @@ ${telHref(c) ? `<a class="a-line" href="${telHref(c)}">Call</a>\n` : ''}<a class
 }
 
 export function directory(clinics, areas, services, o = {}) {
+  const groups = filterGroups(clinics, areas);
   if (!clinics.length) return `<div id="${o.id || 'directory'}" style="scroll-margin-top:90px">
-<div class="section-head"><div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics in Kuala Lumpur'}</${o.h || 'h2'}></div></div>
-<div class="empty"><p>New clinic listings are on their way.</p><span style="color:var(--muted);max-width:520px;line-height:1.6">We are adding clinics across Kuala Lumpur now. Run a clinic? Listing is free.</span><a class="btn" href="/contact/#list">List your clinic</a></div>
+<div class="section-head"><div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics near you'}</${o.h || 'h2'}></div></div>
+<div class="empty"><p>New clinic listings are on their way.</p><span style="color:var(--muted);max-width:520px;line-height:1.6">We are adding clinics across Malaysia now. Run a clinic? Listing is free.</span><a class="btn" href="/contact/#list">List your clinic</a></div>
 </div>`;
   return `<div data-directory id="${o.id || 'directory'}" style="scroll-margin-top:90px">
 <div class="section-head">
-<div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics in Kuala Lumpur'}</${o.h || 'h2'}></div>
+<div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics near you'}</${o.h || 'h2'}></div>
 <label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
 </div>
-<div class="chips chips-scroll" role="group" aria-label="Filter by area" style="margin-bottom:12px">
-<button type="button" class="chip" data-filter-area="all" aria-pressed="true">All areas</button>
-${areas.map((a) => `<button type="button" class="chip" data-filter-area="${a.slug}" aria-pressed="false">${esc(a.label)}</button>`).join('\n')}
+<div class="chips chips-scroll" role="group" aria-label="Filter by ${groups.label}" style="margin-bottom:12px">
+<button type="button" class="chip" data-filter-area="all" aria-pressed="true">${groups.kind === 'state' ? 'All states' : 'All areas'}</button>
+${groups.items.map((a) => `<button type="button" class="chip" data-filter-area="${a.slug}" aria-pressed="false">${esc(a.label)}</button>`).join('\n')}
 </div>
 <div class="chips chips-scroll" role="group" aria-label="Filter by service" style="margin-bottom:28px">
 <button type="button" class="chip chip--soft" data-filter-service="all" aria-pressed="true">All services</button>
@@ -91,7 +104,7 @@ ${services.map(([k, l]) => `<button type="button" class="chip chip--soft" data-f
 </div>
 <p class="result-text" aria-live="polite">${clinics.length} ${clinics.length === 1 ? 'clinic' : 'clinics'} listed</p>
 <div class="clinic-grid">
-${clinics.map((c) => clinicCard(c)).join('\n')}
+${clinics.map((c) => clinicCard(c, { key: groups.key })).join('\n')}
 </div>
 <div class="empty" hidden><p>No clinics match these filters yet.</p><button type="button" class="btn" data-reset>Show all clinics</button></div>
 <p class="note">Opening status uses Malaysia time (GMT+8) and published hours; please call ahead on public holidays.</p>
@@ -126,8 +139,8 @@ export function home({ clinics, areas, services, articles, faqs, topics, feature
     '@context': 'https://schema.org',
     '@graph': [
       WEBSITE, ORG,
-      { '@type': 'WebPage', '@id': SITE.url + '/#webpage', url: SITE.url + '/', name: 'Clinics in Kuala Lumpur and health awareness for Malaysians', isPartOf: { '@id': SITE.url + '/#website' }, about: { '@id': SITE.url + '/#org' }, inLanguage: SITE.lang, primaryImageOfPage: abs('/assets/img/kl-skyline-og.jpg') },
-      ...(clinics.length ? [{ '@type': 'ItemList', name: 'Clinics in Kuala Lumpur', itemListElement: clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`/clinics/${c.slug}/`), name: c.name })) }] : []),
+      { '@type': 'WebPage', '@id': SITE.url + '/#webpage', url: SITE.url + '/', name: 'Clinics in Kuala Lumpur, Selangor and across Malaysia, and health awareness for Malaysians', isPartOf: { '@id': SITE.url + '/#website' }, about: { '@id': SITE.url + '/#org' }, inLanguage: SITE.lang, primaryImageOfPage: abs('/assets/img/kl-skyline-og.jpg') },
+      ...(clinics.length ? [{ '@type': 'ItemList', name: 'Clinics in Malaysia', itemListElement: clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`/clinics/${c.slug}/`), name: c.name })) }] : []),
       { '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) },
     ],
   };
@@ -135,7 +148,7 @@ export function home({ clinics, areas, services, articles, faqs, topics, feature
     path: '/',
     title: SEO.home[0],
     desc: SEO.home[1],
-    ogTitle: `Find a clinic near you in Kuala Lumpur | ${SITE.name}`,
+    ogTitle: `Find a clinic near you in KL, Selangor & beyond | ${SITE.name}`,
     ogDesc: 'Clinics by neighbourhood with hours and directions, plus health awareness guides written for Malaysia.',
     image: 'kl-skyline', imageAlt: 'Kuala Lumpur skyline with Menara Kuala Lumpur',
     geo: { region: 'MY-14', place: 'Kuala Lumpur', pos: [3.139, 101.6869] },
@@ -144,12 +157,12 @@ export function home({ clinics, areas, services, articles, faqs, topics, feature
   }) + header('') + `
 <section class="wrap hero" aria-labelledby="hero-h">
 <div class="stack g24">
-<span class="eyebrow">Kuala Lumpur &middot; Clinic directory &amp; health guides</span>
-<h1 id="hero-h" class="h-hero">Calm, trusted care for <em>every corner of KL.</em></h1>
-<p class="lede" style="max-width:520px">Find a clinic near you in Kuala Lumpur — with opening hours, directions and clear health guidance written for Malaysians.</p>
+<span class="eyebrow">Malaysia &middot; Clinic directory &amp; health guides</span>
+<h1 id="hero-h" class="h-hero">Calm, trusted care, <em>close to home.</em></h1>
+<p class="lede" style="max-width:520px">Find a clinic near you in Kuala Lumpur, Selangor and across Malaysia — with opening hours, directions and clear health guidance written for Malaysians.</p>
 ${clinics.length ? `<form class="finder" id="finder" role="search" aria-label="Find a clinic" action="/clinics/">
 <div class="finder__field"><span class="finder__label" id="finder-service-label">I need</span><select id="finder-service" name="service" aria-labelledby="finder-service-label" data-dropdown><option value="all">Any service</option>${services.map(([k, l]) => `<option value="${k}">${esc(l)}</option>`).join('')}</select></div>
-<div class="finder__field"><span class="finder__label" id="finder-area-label">Near</span><select id="finder-area" name="area" aria-labelledby="finder-area-label" data-dropdown><option value="all">Anywhere</option>${areas.map((a) => `<option value="${a.slug}">${esc(a.label)}</option>`).join('')}</select></div>
+<div class="finder__field"><span class="finder__label" id="finder-area-label">Near</span><select id="finder-area" name="area" aria-labelledby="finder-area-label" data-dropdown><option value="all">Anywhere</option>${filterGroups(clinics, areas).items.map((a) => `<option value="${a.slug}">${esc(a.label)}</option>`).join('')}</select></div>
 <button class="btn btn--sq" type="submit">Find clinics</button>
 </form>` : '<div class="cta-row"><a class="btn" href="/articles/">Read health guides</a><a class="btn btn--ghost" href="/contact/#list">List your clinic</a></div>'}
 <div class="trust"><span>Free to use</span><span aria-hidden="true">&middot;</span><span>${clinics.length ? 'Hours shown in Malaysia time' : 'KL clinics coming soon'}</span><span aria-hidden="true">&middot;</span><span>Updated ${longDate(SITE.updated).replace(/^\d+ /, '')}</span></div>
@@ -213,8 +226,8 @@ ${rest.map((a) => postCard(a)).join('\n')}
 <div class="wrap areas__grid">
 <div class="stack g16">
 <span class="eyebrow">By neighbourhood</span>
-<h2 id="nb-h">Healthcare close to home, across KL.</h2>
-<p>Each neighbourhood lists its clinics, opening hours, and how to get there by LRT, MRT or car. We are adding new areas across Kuala Lumpur every month.</p>
+<h2 id="nb-h">Healthcare close to home, area by area.</h2>
+<p>Each neighbourhood lists its clinics, opening hours, and how to get there by LRT, MRT or car. We are adding new areas across Malaysia every month.</p>
 ${img('kl-city-park', 'Green park in Kuala Lumpur with city towers behind', { sizes: '(max-width: 760px) 100vw, 560px' })}
 </div>
 <ul class="area-list">
@@ -225,13 +238,13 @@ ${comingSoon.map((n) => `<li><span class="soon"><span class="name">${esc(n)}</sp
 </section>
 
 <section class="faq" aria-labelledby="faq-h">
-<h2 id="faq-h">Common questions about healthcare in KL</h2>
+<h2 id="faq-h">Common questions about finding a clinic</h2>
 <div class="qa">
 ${faqs.map(([q, a], i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q)}</summary><p>${a}</p></details>`).join('\n')}
 </div>
 </section>
 
-${newsletter('Awareness campaigns, screening reminders and new Kuala Lumpur clinics. No spam.')}
+${newsletter('Awareness campaigns, screening reminders and new clinic listings. No spam.')}
 ` + footer(topics);
   write('index.html', html);
 }
@@ -255,7 +268,7 @@ export function clinicsIndex({ clinics, areas, services, topics, coll }) {
   const networks = [...new Map(clinics.filter((c) => c.network).map((c) => [c.network.name, c.network])).values()];
   const items = [['/', 'Home'], ['/clinics/', 'Clinics']];
   const ld = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'CollectionPage', url: abs('/clinics/'), name: 'Clinics in Kuala Lumpur', inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' } },
+    { '@type': 'CollectionPage', url: abs('/clinics/'), name: 'Clinics in Malaysia', inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' } },
     ...(clinics.length ? [{ '@type': 'ItemList', itemListElement: clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, item: clinicLd(c) })) }] : []),
     crumbsLd(items), ORG, WEBSITE] };
   const html = head({
@@ -267,8 +280,8 @@ export function clinicsIndex({ clinics, areas, services, topics, coll }) {
 <section class="wrap" style="padding-top:40px">
 ${crumbs(items)}
 <div class="stack g16" style="margin:28px 0 40px;max-width:760px">
-<h1 class="h-hero" style="font-size:clamp(38px,5vw,60px)">Clinics in <em>Kuala Lumpur</em></h1>
-<p class="lede">Neighbourhood clinics across Kuala Lumpur and nearby Petaling Jaya, Subang Jaya, Puchong, Ampang and Cheras, with opening hours, phone numbers and directions.</p>
+<h1 class="h-hero" style="font-size:clamp(38px,5vw,60px)">Clinics in <em>Malaysia</em></h1>
+<p class="lede">Neighbourhood clinics across Kuala Lumpur and Selangor, plus Negeri Sembilan, Melaka, Johor, Perak and Penang, with opening hours, phone numbers and directions. Several are open 24 hours.</p>
 </div>
 ${directory(clinics, areas, services, { h: 'h2', heading: 'All listed clinics' })}
 ${browseLinks(coll)}
@@ -304,7 +317,7 @@ export function clinicPage(c, { clinics, articles, topics, coll }) {
 <div class="wrap" style="padding-top:36px">${crumbs(items)}</div>
 <section class="wrap cp-head" data-clinic-profile${hoursAttr(c)} aria-labelledby="clinic-h">
 <div class="stack g24">
-<span class="eyebrow">${esc(c.cardSpec)} &middot; ${esc(c.areaLabel)}, ${esc(c.locality)}</span>
+<span class="eyebrow">${esc(c.cardSpec)} &middot; ${esc(placeOf(c))}</span>
 <h1 id="clinic-h">${esc(c.name)}</h1>
 <p class="lede">${c.intro}</p>
 <div class="cta-row">
@@ -385,7 +398,7 @@ ${crumbs(items)}
 <div class="blog-head__grid">
 <div class="stack g16">
 <h1 id="blog-h" class="h-hero" style="font-size:clamp(40px,5vw,62px)">Health articles, <em>written for Malaysia.</em></h1>
-<p class="lede" style="max-width:540px">Calm, practical guidance based on Ministry of Health and WHO advice — with links to clinics near you in Kuala Lumpur.</p>
+<p class="lede" style="max-width:540px">Calm, practical guidance based on Ministry of Health and WHO advice — with links to clinics near you.</p>
 </div>
 <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search articles</span><input id="article-search" type="search" placeholder="Search articles — e.g. dengue, diabetes" autocomplete="off"></label>
 </div>
@@ -428,7 +441,7 @@ ${[featured, ...list].map((a, i) => (i === 0 ? postCard(a, { date: true }).repla
 </ol>
 </div></section>
 
-${newsletter('New articles, screening reminders and Kuala Lumpur clinic updates. No spam.').replace('class="wrap nl"', 'class="wrap nl" style="padding-top:72px"')}
+${newsletter('New articles, screening reminders and clinic updates. No spam.').replace('class="wrap nl"', 'class="wrap nl" style="padding-top:72px"')}
 ` + footer(topics);
   // the featured article is shown in the grid only when filtering
   write('articles/index.html', html.replace('<article class="post" data-is-featured', '<article class="post" data-is-featured hidden'));
@@ -447,7 +460,7 @@ export function articlePage(a, { articles, clinics, topics }) {
   // (MAB guidelines on educational articles). clinicsMode: 'list' names clinics instead.
   const directoryOnly = a.clinicsMode !== 'list';
   const nearby = directoryOnly ? [] : picked.slice(0, a.clinicsLimit || 6);
-  const whereHeading = a.clinicsHeading || 'Where to get checked in Kuala Lumpur';
+  const whereHeading = a.clinicsHeading || 'Where to get checked';
   const showClinics = a.clinicsBlock !== false && !guideClinic;
   const toc = [...a.sections.filter((s) => s.toc !== false), ...(a.clinicsBlock !== false && !a.clinic ? [{ id: 'where', h: a.clinicsTocLabel || whereHeading }] : [])];
   const graph = [
@@ -503,8 +516,8 @@ ${toc.map((s) => `<a href="#${s.id}">${esc(s.tocLabel || s.h)}</a>`).join('\n')}
 ${a.keyPoints?.length ? `<div class="box box--mint"><span class="eyebrow">Key points</span><ul>${a.keyPoints.map((k) => `<li>${k}</li>`).join('')}</ul></div>` : ''}
 ${a.sections.map((s) => `<h2 id="${s.id}">${esc(s.h)}</h2>\n${s.html}`).join('\n')}
 ${showClinics ? `<h2 id="where">${esc(whereHeading)}</h2>
-${directoryOnly ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. Our directory lists clinics across Kuala Lumpur and nearby Selangor, with opening hours and directions.'}</p>` : nearby.length ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
-<div class="mini-clinics">${nearby.map(miniClinic).join('')}</div>` : '<p>Any GP clinic can assess you and arrange tests or referrals. Our Kuala Lumpur clinic directory lists opening hours, phone numbers and directions as clinics are added.</p>'}
+${directoryOnly ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. Our directory lists clinics across Kuala Lumpur, Selangor and other states, with opening hours and directions.'}</p>` : nearby.length ? `<p>${a.clinicsIntro || 'Any GP clinic can assess you and arrange tests or referrals. These neighbourhood clinics are listed in our directory:'}</p>
+<div class="mini-clinics">${nearby.map(miniClinic).join('')}</div>` : '<p>Any GP clinic can assess you and arrange tests or referrals. Our clinic directory lists opening hours, phone numbers and directions as clinics are added.</p>'}
 <a class="btn" href="/clinics/" style="align-self:flex-start">${nearby.length ? 'See all clinics' : 'Browse the clinic directory'}</a>
 ${a.clinicLinks?.length ? `<div class="chips">${a.clinicLinks.map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}</div>` : ''}` : ''}
 ${guideClinic ? `<div class="callout-bar"><div class="stack" style="gap:4px"><strong style="font-family:var(--serif);font-size:22px;font-weight:500">${esc(guideClinic.name)}</strong><span style="font-size:15px;color:var(--muted)">${esc(guideClinic.addressLine)}${telHref(guideClinic) ? ` &middot; <a href="${telHref(guideClinic)}">${esc(guideClinic.phone)}</a>` : ''}</span></div><a class="btn" href="/clinics/${guideClinic.slug}/">Hours &amp; directions</a></div>` : ''}

@@ -15,8 +15,8 @@ export function staticPages(topics) {
   page({
     path: '/about/', crumb: 'About', h1: 'About HealthcareDirectory.my', type: 'AboutPage',
     title: 'About Us & Editorial Policy | HealthcareDirectory.my',
-    desc: 'Who we are, how we choose clinics for our Kuala Lumpur directory, and how we research and update our health articles for Malaysians.',
-    body: `<p>HealthcareDirectory.my is an independent directory of clinics and a guide to everyday healthcare in Kuala Lumpur, Malaysia. We have two simple aims: help people find a nearby clinic quickly, and share calm, practical health information written for Malaysia.</p>
+    desc: 'Who we are, how we choose clinics for our directory, and how we research and update our health articles for Malaysians.',
+    body: `<p>HealthcareDirectory.my is an independent directory of clinics and a guide to everyday healthcare in Malaysia, starting with Kuala Lumpur and Selangor. We have two simple aims: help people find a nearby clinic quickly, and share calm, practical health information written for Malaysia.</p>
 <h2 id="directory">How the clinic directory works</h2>
 <p>We are starting small and growing area by area. Each listing shows the clinic's address, phone number, opening hours and main services, taken from the clinic's own published information and public listings. Opening status (“Open now”) is calculated in Malaysia time (GMT+8) from the published hours. It does not account for public holidays, so please call ahead on cuti umum.</p>
 <p>Clinic details can change. If you spot something out of date, please <a href="/contact/">let us know</a> and we will check and correct it.</p>
@@ -34,8 +34,8 @@ export function staticPages(topics) {
   page({
     path: '/contact/', crumb: 'Contact', h1: 'Contact us & list your clinic', type: 'ContactPage',
     title: 'Contact & List Your Clinic | HealthcareDirectory.my',
-    desc: 'Get in touch with HealthcareDirectory.my, suggest a correction, or list your clinic in our Kuala Lumpur clinic directory free of charge.',
-    body: `<p>We would love to hear from you, whether you have spotted an error, have a story idea, or run a clinic in Kuala Lumpur.</p>
+    desc: 'Get in touch with HealthcareDirectory.my, suggest a correction, or list your clinic in our Malaysia clinic directory free of charge.',
+    body: `<p>We would love to hear from you, whether you have spotted an error, have a story idea, or run a clinic in Malaysia.</p>
 <div class="box box--mint"><span class="eyebrow">Email</span><p><a href="mailto:hello@healthcaredirectory.my">hello@healthcaredirectory.my</a></p><p>We usually reply within two working days.</p></div>
 <h2 id="list">List your clinic</h2>
 <p>Listing is free. Please email us with:</p>
