@@ -5,6 +5,8 @@
 // _routes.json (written by the build) keeps static assets out of this function.
 const CANONICAL = 'healthcaredirectory.my';
 const PAGES_HOST = 'healthcaredirectory.pages.dev';
+// _headers doesn't apply to responses made here, so the redirect sets HSTS itself.
+const HSTS = 'max-age=31536000; includeSubDomains';
 
 export async function onRequest({ request, next }) {
   const url = new URL(request.url);
@@ -12,7 +14,7 @@ export async function onRequest({ request, next }) {
     url.hostname = CANONICAL;
     url.protocol = 'https:';
     url.port = '';
-    return Response.redirect(url.toString(), 301);
+    return new Response(null, { status: 301, headers: { Location: url.toString(), 'Strict-Transport-Security': HSTS } });
   }
   const res = await next();
   if (url.hostname.endsWith(`.${PAGES_HOST}`)) {

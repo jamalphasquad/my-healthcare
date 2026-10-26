@@ -70,6 +70,7 @@ write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /404.html\n\nSitemap: ${
 // Cloudflare Pages config (not served as pages).
 // _headers: caching and security headers. CSS/JS URLs carry ?v=, images keep their names, so they get shorter lifetimes.
 write('_headers', `/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
