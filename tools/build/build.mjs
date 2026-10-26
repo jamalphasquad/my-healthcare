@@ -87,6 +87,9 @@ write('_headers', `/*
 
 /assets/search-index.json
   Cache-Control: public, max-age=3600
+
+/assets/clinic-cards.json
+  Cache-Control: public, max-age=86400
 `);
 // _routes.json: only run the www-redirect function (functions/_middleware.js) for pages, not static files.
 write('_routes.json', JSON.stringify({ version: 1, include: ['/*'], exclude: ['/assets/*', '/favicon*', '/apple-touch-icon.png', '/site.webmanifest', '/robots.txt', '/sitemap.xml'] }, null, 2) + '\n');

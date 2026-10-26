@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { SEO } from './seo.mjs';
 import { nearestClinics, kmText } from './clinic-data.mjs';
 import { head, header, footer, crumbs, crumbsLd, write, img, preloadImg, esc, abs, ORG, WEBSITE, SITE, longDate, shortDate } from './lib.mjs';
@@ -83,13 +84,24 @@ ${telHref(c) ? `<a class="a-line" href="${telHref(c)}">Call</a>\n` : ''}<a class
 </article>`;
 }
 
+// Every directory card as pre-rendered HTML, for the paginated home directory (site.js fetches it).
+// Returns the published URL, versioned by content so it can be cached.
+export function writeClinicCards(clinics, areas) {
+  const groups = filterGroups(clinics, areas);
+  const json = JSON.stringify(clinics.map((c) => clinicCard(c, { key: groups.key })));
+  write('assets/clinic-cards.json', json);
+  return '/assets/clinic-cards.json?v=' + createHash('sha1').update(json).digest('hex').slice(0, 10);
+}
+
+// o.pageSize + o.src: render only the first page; site.js loads the rest from o.src and paginates.
 export function directory(clinics, areas, services, o = {}) {
   const groups = filterGroups(clinics, areas);
+  const paged = o.pageSize && o.src && clinics.length > o.pageSize;
   if (!clinics.length) return `<div id="${o.id || 'directory'}" style="scroll-margin-top:90px">
 <div class="section-head"><div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics near you'}</${o.h || 'h2'}></div></div>
 <div class="empty"><p>New clinic listings are on their way.</p><span style="color:var(--muted);max-width:520px;line-height:1.6">We are adding clinics across Malaysia now. Run a clinic? Listing is free.</span><a class="btn" href="/contact/#list">List your clinic</a></div>
 </div>`;
-  return `<div data-directory id="${o.id || 'directory'}" style="scroll-margin-top:90px">
+  return `<div data-directory id="${o.id || 'directory'}"${paged ? ` data-src="${o.src}" data-page-size="${o.pageSize}"` : ''} style="scroll-margin-top:90px">
 <div class="section-head">
 <div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics near you'}</${o.h || 'h2'}></div>
 <label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
@@ -102,11 +114,13 @@ ${groups.items.map((a) => `<button type="button" class="chip" data-filter-area="
 <button type="button" class="chip chip--soft" data-filter-service="all" aria-pressed="true">All services</button>
 ${services.map(([k, l]) => `<button type="button" class="chip chip--soft" data-filter-service="${k}" aria-pressed="false">${esc(l)}</button>`).join('\n')}
 </div>
-<p class="result-text" aria-live="polite">${clinics.length} ${clinics.length === 1 ? 'clinic' : 'clinics'} listed</p>
+<p class="result-text" aria-live="polite">${clinics.length} ${clinics.length === 1 ? 'clinic' : 'clinics'} listed${paged ? ` &middot; showing 1–${o.pageSize}` : ''}</p>
 <div class="clinic-grid">
-${clinics.map((c) => clinicCard(c, { key: groups.key })).join('\n')}
+${(paged ? clinics.slice(0, o.pageSize) : clinics).map((c) => clinicCard(c, { key: groups.key })).join('\n')}
 </div>
 <div class="empty" hidden><p>No clinics match these filters yet.</p><button type="button" class="btn" data-reset>Show all clinics</button></div>
+${paged ? `<nav class="pager" aria-label="Clinic result pages" hidden></nav>
+<p class="pager__all"><a href="/clinics/">See all ${clinics.length} clinics on one page</a></p>` : ''}
 <p class="note">Opening status uses Malaysia time (GMT+8) and published hours; please call ahead on public holidays.</p>
 </div>`;
 }
@@ -194,7 +208,7 @@ ${img('kl-skyline', 'Kuala Lumpur skyline with Menara Kuala Lumpur under a blue 
 
 <section id="clinics" class="band" aria-labelledby="cl-h" style="scroll-margin-top:70px">
 <div class="wrap section">
-${directory(clinics, areas, services)}
+${directory(clinics, areas, services, { pageSize: 12, src: clinics.length ? writeClinicCards(clinics, areas) : '' })}
 ${browseLinks(coll, { skip: [coll?.areaLinks] })}
 </div>
 </section>

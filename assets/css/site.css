@@ -249,6 +249,12 @@ body.is-locked{overflow:hidden}
 .empty{border:1px dashed var(--border);border-radius:22px;padding:40px;text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center}
 .empty p{font-family:var(--serif);font-size:24px}
 .note{margin-top:28px;font-size:13px;color:var(--faint)}
+.pager{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-top:32px}
+.pager .chip{min-width:42px;text-align:center}
+.pager .chip[aria-current="page"]{background:var(--primary);color:#F5F3EC;border-color:var(--primary)}
+.pager .chip:disabled{opacity:.45;cursor:default;border-color:var(--chip)}
+.pager__gap{color:var(--muted-2);padding:0 2px}
+.pager__all{margin:16px 0 0;text-align:center;font-size:14px}
 
 /* article cards */
 .feature{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:36px;align-items:center;margin-bottom:56px}

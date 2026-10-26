@@ -156,63 +156,121 @@
     if (t) t.textContent = st.text;
   }
 
-  /* ---------- Clinic directory filters ---------- */
+  /* ---------- Clinic directory filters ----------
+     A paginated directory (data-src, on the home page) renders only its first page;
+     the full card list comes from a JSON file of pre-rendered cards, and only the
+     current page's cards are kept in the grid. */
   var dir = $('[data-directory]');
   if (dir) {
     var cards = $$('.clinic', dir);
     var state = { area: 'all', service: 'all', openNow: false };
-    cards.forEach(function (c) { var h = parseHours(c); if (h) { c._st = hoursState(h); paintStatus(c, c._st); } });
+    var grid = $('.clinic-grid', dir), pager = $('.pager', dir);
+    var pageSize = +dir.getAttribute('data-page-size') || 0, page = 1;
+    function prime(c) {
+      if (c._primed) return; c._primed = true;
+      var h = parseHours(c); if (h) { c._st = hoursState(h); paintStatus(c, c._st); }
+    }
+    function countOpen() {
+      var openCount = cards.filter(function (c) { return c._st && c._st.open; }).length;
+      $$('.js-open-count').forEach(function (el) { el.textContent = openCount + (openCount === 1 ? ' clinic open now' : ' clinics open now'); });
+    }
+    cards.forEach(prime);
 
-    var openCount = cards.filter(function (c) { return c._st && c._st.open; }).length;
-    $$('.js-open-count').forEach(function (el) { el.textContent = openCount + (openCount === 1 ? ' clinic open now' : ' clinics open now'); });
+    var ready = Promise.resolve(), src = dir.getAttribute('data-src');
+    if (src && window.fetch && 'content' in document.createElement('template')) {
+      ready = fetch(src).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (list) {
+        // <template> keeps the off-page cards inert, so their images load only once shown
+        var tpl = document.createElement('template');
+        tpl.innerHTML = list.join('');
+        // the first page is already on screen: keep those elements
+        cards = $$('.clinic', tpl.content).map(function (c, i) { return cards[i] || c; });
+        cards.forEach(prime);
+      }).catch(function () { pageSize = 0; }); // filter just the cards already on the page
+    } else pageSize = 0;
+    ready.then(countOpen);
+
+    function renderPager(pages) {
+      if (!pager) return;
+      pager.hidden = pages < 2;
+      if (pages < 2) { pager.innerHTML = ''; return; }
+      // 1 … 4 5 6 … 12 (a gap of a single page shows the number instead)
+      var keep = [];
+      for (var i = 1; i <= pages; i++) if (i === 1 || i === pages || Math.abs(i - page) <= 1) keep.push(i);
+      var nums = [];
+      keep.forEach(function (n, j) {
+        var prev = keep[j - 1];
+        if (prev && n - prev === 2) nums.push(prev + 1); else if (prev && n - prev > 2) nums.push(0);
+        nums.push(n);
+      });
+      var btn = function (n, label, extra) { return '<button type="button" class="chip" data-page="' + n + '"' + extra + '>' + label + '</button>'; };
+      pager.innerHTML = btn(page - 1, '&larr; Prev', page === 1 ? ' disabled aria-label="Previous page"' : ' aria-label="Previous page"')
+        + nums.map(function (n) {
+          return n ? btn(n, n, ' aria-label="Page ' + n + '"' + (n === page ? ' aria-current="page"' : '')) : '<span class="pager__gap" aria-hidden="true">&hellip;</span>';
+        }).join('')
+        + btn(page + 1, 'Next &rarr;', page === pages ? ' disabled aria-label="Next page"' : ' aria-label="Next page"');
+    }
 
     var areaSel = $('#finder-area'), svcSel = $('#finder-service');
     function apply() {
-      var shown = 0;
+      var matches = [];
       cards.forEach(function (c) {
         var okA = state.area === 'all' || c.getAttribute('data-area') === state.area;
         var okS = state.service === 'all' || (c.getAttribute('data-services') || '').split('|').indexOf(state.service) > -1;
         var okO = !state.openNow || (c._st && c._st.open);
         var vis = okA && okS && okO;
-        c.hidden = !vis; if (vis) shown++;
+        c.hidden = !vis; if (vis) matches.push(c);
       });
+      var shown = matches.length, range = '';
+      if (pageSize) {
+        var pages = Math.max(1, Math.ceil(shown / pageSize));
+        page = Math.min(page, pages);
+        var from = (page - 1) * pageSize, slice = matches.slice(from, from + pageSize);
+        var frag = document.createDocumentFragment();
+        slice.forEach(function (c) { frag.appendChild(c); });
+        grid.textContent = ''; grid.appendChild(frag);
+        renderPager(pages);
+        if (pages > 1) range = ' · showing ' + (from + 1) + '–' + (from + slice.length);
+      }
       $$('[data-filter-area]', dir).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-filter-area') === state.area ? 'true' : 'false'); });
       $$('[data-filter-service]', dir).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-filter-service') === state.service ? 'true' : 'false'); });
       var areaLabel = state.area === 'all' ? '' : ' in ' + (($('[data-filter-area="' + state.area + '"]', dir) || {}).textContent || state.area);
       var svcLabel = state.service === 'all' ? '' : ' · ' + (($('[data-filter-service="' + state.service + '"]', dir) || {}).textContent || state.service);
       var rt = $('.result-text', dir);
-      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + (areaLabel || ' listed') + svcLabel + (state.openNow ? ' · open now' : '');
+      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + (areaLabel || ' listed') + svcLabel + (state.openNow ? ' · open now' : '') + range;
       var empty = $('.empty', dir); if (empty) empty.hidden = shown !== 0;
       if (areaSel) { areaSel.value = state.area; if (areaSel._sync) areaSel._sync(); }
       if (svcSel) { svcSel.value = state.service; if (svcSel._sync) svcSel._sync(); }
     }
+    // a new filter starts again at page 1; wait for the full list on paginated directories
+    function refilter() { page = 1; ready.then(apply); }
     dir.addEventListener('click', function (e) {
-      var a = e.target.closest('[data-filter-area]'), s = e.target.closest('[data-filter-service]'), r = e.target.closest('[data-reset]');
+      var a = e.target.closest('[data-filter-area]'), s = e.target.closest('[data-filter-service]'), r = e.target.closest('[data-reset]'), p = e.target.closest('[data-page]');
       if (a) state.area = a.getAttribute('data-filter-area');
       if (s) state.service = s.getAttribute('data-filter-service');
       if (r) state = { area: 'all', service: 'all', openNow: false };
-      if (a || s || r) { var on = $('#open-now'); if (on) on.checked = state.openNow; apply(); }
+      if (a || s || r) { var on = $('#open-now'); if (on) on.checked = state.openNow; refilter(); }
+      if (p && !p.disabled) { page = +p.getAttribute('data-page'); apply(); dir.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
     var on = $('#open-now');
-    if (on) on.addEventListener('change', function () { state.openNow = on.checked; apply(); });
+    if (on) on.addEventListener('change', function () { state.openNow = on.checked; refilter(); });
 
     var finder = $('#finder');
     if (finder) finder.addEventListener('submit', function (e) {
       e.preventDefault();
-      state.area = areaSel.value; state.service = svcSel.value; apply();
+      state.area = areaSel.value; state.service = svcSel.value; refilter();
       dir.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     $$('[data-preset-service]').forEach(function (b) {
       b.addEventListener('click', function (e) {
         e.preventDefault();
-        state.area = 'all'; state.service = b.getAttribute('data-preset-service'); apply();
+        state.area = 'all'; state.service = b.getAttribute('data-preset-service'); refilter();
         dir.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
     // Area links with several clinics point to /clinics/#area-<slug>
     var hashArea = location.hash.match(/^#area-(.+)$/);
     if (hashArea && $('[data-filter-area="' + hashArea[1] + '"]', dir)) state.area = hashArea[1];
-    apply();
+    ready.then(apply);
   }
 
   /* ---------- Single clinic page: today's hours ---------- */
