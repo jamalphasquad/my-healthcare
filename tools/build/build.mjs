@@ -88,7 +88,7 @@ write('_headers', `/*
 /assets/search-index.json
   Cache-Control: public, max-age=3600
 
-/assets/clinic-cards.json
+/assets/cards/*
   Cache-Control: public, max-age=86400
 `);
 // _routes.json: only run the www-redirect function (functions/_middleware.js) for pages, not static files.

@@ -3,7 +3,7 @@
 //   service pages  /clinics/<service>/       e.g. /clinics/open-sunday/  (only when 2+ clinics qualify)
 //   network pages  /clinics/<network>/       e.g. /clinics/klinik-segara/
 import { head, header, footer, crumbs, crumbsLd, write, esc, abs, ORG, WEBSITE, SITE, LAYOUT } from './lib.mjs';
-import { clinicCard, rangeText } from './pages.mjs';
+import { clinicCard, rangeText, firstPage, pagedList, pager, listedText } from './pages.mjs';
 import { nearestClinics, kmText } from './clinic-data.mjs';
 import { AREA_INFO } from './areas.mjs';
 
@@ -31,7 +31,7 @@ function page(p) {
     '@graph': [
       { '@type': 'CollectionPage', '@id': abs(url) + '#page', url: abs(url), name: p.name, description: p.desc, inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' }, dateModified: SITE.updated,
         ...(p.geo ? { spatialCoverage: { '@type': 'Place', name: p.place, geo: { '@type': 'GeoCoordinates', latitude: +p.geo[0].toFixed(6), longitude: +p.geo[1].toFixed(6) } } } : {}) },
-      { '@type': 'ItemList', name: p.name, numberOfItems: p.clinics.length, itemListElement: p.clinics.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`/clinics/${c.slug}/`), name: c.name })) },
+      { '@type': 'ItemList', name: p.name, numberOfItems: p.clinics.length, itemListElement: firstPage(p.clinics).map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`/clinics/${c.slug}/`), name: c.name })) },
       crumbsLd(items),
       ...(p.faqs.length ? [{ '@type': 'FAQPage', mainEntity: p.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) }] : []),
       ORG, WEBSITE,
@@ -51,17 +51,17 @@ ${crumbs(items)}
 <p class="lede">${p.intro}</p>
 </div>
 <ul class="facts-row" aria-label="At a glance">${p.facts.map((f) => `<li>${f}</li>`).join('')}</ul>
-<div data-directory id="list" style="scroll-margin-top:90px;margin-top:36px">
+<div data-directory id="list"${pagedList(p.slug, p.clinics)} style="scroll-margin-top:90px;margin-top:36px">
 <div class="section-head">
 <div class="stack g10"><span class="eyebrow">Clinic list</span><h2 id="list-h" class="h-section" style="font-size:clamp(28px,3vw,38px)">${p.listHeading}</h2></div>
 <label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
 </div>
-<p class="result-text" aria-live="polite">${plural(p.clinics.length, 'clinic')} listed</p>
+<p class="result-text" aria-live="polite">${listedText(p.clinics)}</p>
 <div class="clinic-grid">
-${p.clinics.map((c) => clinicCard(c)).join('\n')}
+${firstPage(p.clinics).map((c) => clinicCard(c)).join('\n')}
 </div>
 <div class="empty" hidden><p>None of these clinics are open right now.</p><button type="button" class="btn" data-reset>Show all</button></div>
-<p class="note">Opening status uses Malaysia time (GMT+8) and published hours; please call ahead on public holidays.</p>
+${pager(p.clinics)}<p class="note">Opening status uses Malaysia time (GMT+8) and published hours; please call ahead on public holidays.</p>
 </div>
 </section>
 
