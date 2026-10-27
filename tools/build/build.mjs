@@ -9,6 +9,7 @@ import { GUIDES } from './articles-guides.mjs';
 import { OCT_2026 } from './articles-2026-10.mjs';
 import { OCT_2026_B } from './articles-2026-10b.mjs';
 import { SEO } from './seo.mjs';
+import { GBP } from './gbp.mjs';
 import { buildIndex, searchPage } from './search.mjs';
 import { buildCollections } from './collections.mjs';
 
@@ -18,6 +19,7 @@ const TOPICS = [['prevention', 'Prevention'], ['heart-diabetes', 'Heart & diabet
   .filter(([cat]) => ARTICLES.some((a) => a.cat === cat));
 
 for (const c of RAW_CLINICS) if (SEO[c.slug]) [c.seoTitle, c.seoDesc] = SEO[c.slug];
+for (const c of RAW_CLINICS) if (GBP[c.slug]) Object.assign(c, GBP[c.slug]); // match Google Business Profiles
 const CLINICS = RAW_CLINICS.map((c) => normalizeClinic(c, NETWORKS));
 const dup = CLINICS.map((c) => c.slug).find((s, i, all) => all.indexOf(s) !== i);
 if (dup) throw new Error('Duplicate clinic slug: ' + dup);

@@ -45,13 +45,15 @@ export function clinicLd(c) {
     availableService: c.services.map((s) => ({ '@type': 'MedicalProcedure', name: s.name })).slice(0, 12),
     isAcceptingNewPatients: true,
     ...(c.network ? { parentOrganization: { '@type': 'MedicalOrganization', name: c.network.name, ...(c.network.url ? { url: c.network.url } : {}) } } : {}),
-    ...(c.sameAs?.length ? { sameAs: c.sameAs } : {}),
+    ...((c.sameAs?.length || c.website) ? { sameAs: [...new Set([...(c.sameAs || []), ...(c.website ? [c.website] : [])])] } : {}),
     areaServed: c.areaServed.map((n) => ({ '@type': 'Place', name: n })),
   };
 }
 
 const telHref = (c) => (c.phoneIntl ? 'tel:' + c.phoneIntl.replace(/[^+\d]/g, '') : null);
 const hoursAttr = (c) => (c.hours ? ` data-hours='${JSON.stringify(c.hours)}'` : '');
+// "careclinics.com.my" or "Facebook page" for a clinic's own website link
+const siteLabel = (u) => (/facebook\.com/.test(u) ? 'Facebook page' : u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''));
 // "Bangsar, Kuala Lumpur", or just "Kajang" when the area and town are the same
 const placeOf = (c) => (c.areaLabel === c.locality ? c.areaLabel : `${c.areaLabel}, ${c.locality}`);
 export const miniClinic = (c) => `<a href="/clinics/${c.slug}/"${hoursAttr(c)}><span class="a">${esc(placeOf(c))}</span><span class="n">${esc(c.name)}</span><span class="h">${esc(summaryHours(c.hours))}</span></a>`;
@@ -347,7 +349,8 @@ ${c.whatsapp ? `<a class="btn btn--ghost" href="https://wa.me/${c.whatsapp.repla
 <div class="row"><dt>Status</dt><dd>${c.hours ? '<span class="status" style="position:static;display:inline-flex;padding:0;background:none">See hours below</span> <span class="js-today" style="color:var(--muted-2)"></span>' : 'Hours not confirmed yet – please call ahead'}</dd></div>
 <div class="row"><dt>Address</dt><dd><address style="font-style:normal">${esc(c.street || c.areaLabel)},<br>${esc(c.cityLine)}</address></dd></div>
 ${c.phone ? `<div class="row"><dt>Phone</dt><dd><a href="${telHref(c)}">${esc(c.phone)}</a>${c.whatsapp && c.whatsapp !== c.phone ? `<br>WhatsApp: <a href="https://wa.me/${c.whatsapp.replace(/\D/g, '')}">${esc(c.whatsapp)}</a>` : ''}</dd></div>` : ''}
-${c.network ? `<div class="row"><dt>Network</dt><dd>${networkUrl ? `<a href="${networkUrl}">${esc(c.network.name)}</a>` : esc(c.network.name)}${c.network.url ? ` &middot; <a href="${c.network.url}" target="_blank" rel="noopener">website</a>` : ''}</dd></div>` : ''}
+${c.website ? `<div class="row"><dt>Website</dt><dd><a href="${c.website}" target="_blank" rel="noopener">${esc(siteLabel(c.website))}</a></dd></div>` : ''}
+${c.network ? `<div class="row"><dt>Network</dt><dd>${networkUrl ? `<a href="${networkUrl}">${esc(c.network.name)}</a>` : esc(c.network.name)}</dd></div>` : ''}
 ${c.gettingThere ? `<div class="row"><dt>Getting there</dt><dd>${c.gettingThere}</dd></div>` : ''}
 </dl></div>
 </div>
