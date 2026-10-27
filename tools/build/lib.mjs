@@ -9,7 +9,7 @@ export const SITE = {
   locale: 'en_MY',
   lang: 'en-MY',
   year: 2026,
-  updated: '2026-10-26',
+  updated: '2026-10-27',
   // IndexNow key (Bing, Yandex, Seznam, Naver). The build publishes /<key>.txt; tools/indexnow.mjs submits URLs.
   indexNowKey: 'c18b6333843ce1b5889de1d4c23eef1e',
   // Search console verification codes, added once you have them (or verify Google by DNS TXT in Cloudflare).

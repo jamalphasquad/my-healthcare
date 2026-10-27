@@ -1,5 +1,8 @@
 // Search titles (≤60 chars) and meta descriptions (≤155 chars), kept in one place.
 export const SEO = {
+  'budget-2027-health-malaysia': ['Budget 2027 Health Malaysia: What Changes for Patients', 'What Budget 2027 means for patients in KL: MediAsas, help with medical bills, free screening, shorter waits, elderly care and tax relief changes.'],
+  'mediasas-malaysia': ['MediAsas Malaysia 2027: Cover, Premiums & Who It Suits', 'MediAsas launches in January 2027. Teras vs Fleksi, annual limits, deductibles, what is covered and excluded, expected premiums and paying with EPF.'],
+  'world-diabetes-day-2026-kl': ['World Diabetes Day 2026: Free Blood Sugar Tests in KL', 'World Diabetes Day is 14 November. Which blood sugar test to ask for, Malaysia’s HbA1c cut-offs, free tests in KL and what to do about prediabetes.'],
   'free-health-screening-malaysia': ['Free Health Screening in Malaysia 2026: Who Qualifies', 'PERKESO HSP, PeKa B40, Selangor Saring and free checks at Klinik Kesihatan: who qualifies, what is tested, how to book, and Budget 2027 changes.'],
   'dengue-vaccine-qdenga-malaysia': ['Dengue Vaccine in Malaysia: Qdenga Explained (2026)', 'Who can get the Qdenga dengue vaccine in Malaysia, how well it works, the DENV-3 caveat, side effects and typical cost. Not in the national programme.'],
   'hpv-vaccine-malaysia': ['HPV Vaccine in Malaysia 2026: Schools, Catch-Up & Adults', 'Year 6 girls now get one free HPV dose at school. Catch-up options, vaccines for boys and adults, typical cost, side effects and cervical screening.'],
