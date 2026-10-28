@@ -60,7 +60,7 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
 <p>N95 masks may not fit young children properly, and some people with heart or lung disease find them hard to breathe through. For children, keeping them indoors on high-API days matters more than the mask. If you have a long-term heart or lung condition, ask your doctor before using an N95 for long periods.</p>` },
       { id: 'heat', h: 'Heat is the next challenge', html: `<p>MetMalaysia has put the chance of a “Super El Niño” between October and December 2026 at more than 90%, with the hottest weather expected from February to May 2027. The Ministry of Health recorded 73 heat-related illnesses and 4 deaths nationwide between 1 January and 7 July 2026.</p>
 <div class="box box--pink" role="note"><span class="box__title">Call 999 for possible heatstroke</span><ul><li>Very high body temperature with confusion, slurred speech or fainting</li><li>Hot, dry skin, or a seizure</li><li>Move the person somewhere cool, loosen clothing and cool them with water while waiting for help.</li></ul></div>` },
-      { id: 'doctor', h: 'When to see a doctor', html: `<p>See a GP if you have a cough, wheeze or sore throat that does not improve within a few days, if your asthma inhaler is needed more often than usual, or if a child seems unusually tired or breathless. Go to an emergency department or call <a href="tel:999">999</a> for severe shortness of breath, chest pain, blue lips or confusion.</p>` },
+      { id: 'doctor', h: 'When to see a doctor', html: `<p>See a GP if you have a cough, wheeze or sore throat that does not improve within a few days (see our guide to a <a href="/articles/persistent-cough-malaysia/">cough that won’t go away</a>), if your asthma inhaler is needed more often than usual, or if a child seems unusually tired or breathless. Go to an emergency department or call <a href="tel:999">999</a> for severe shortness of breath, chest pain, blue lips or confusion.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsIntro: "See a GP for a cough, wheeze or sore throat that does not settle, or if your asthma inhaler is needed more often. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, including those open in the evening and at weekends.",
@@ -87,7 +87,7 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
       ['New Straits Times — 73 heat-related illness cases, four deaths (7 Jul 2026)', 'https://www.nst.com.my/amp/news/nation/2026/07/1482825/health-ministry-records-73-heat-related-illness-cases-four-deaths-jan-1'],
       ['Department of Environment — APIMS', 'https://eqms.doe.gov.my/APIMS/main'],
     ],
-    related: ['flu-vaccine-malaysia', 'dengue-klang-valley-first-three-days', 'clinic-or-emergency-department'],
+    related: ['persistent-cough-malaysia', 'influenza-a-malaysia', 'floods-health-risks-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -155,7 +155,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       ['CodeBlue — No plans yet for dengue vaccine in national programme (Jul 2025)', 'https://codeblue.galencentre.org/2025/07/no-plans-yet-for-dengue-vaccine-in-national-programme-wolbachia-expansion-in-focus/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['dengue-vaccine-qdenga-malaysia', 'haze-air-quality-klang-valley', 'clinic-or-emergency-department'],
+    related: ['floods-health-risks-malaysia', 'dengue-vaccine-qdenga-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */

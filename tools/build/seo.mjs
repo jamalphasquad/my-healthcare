@@ -1,5 +1,8 @@
 // Search titles (≤60 chars) and meta descriptions (≤155 chars), kept in one place.
 export const SEO = {
+  'floods-health-risks-malaysia': ['Floods & Your Health: Leptospirosis, Diarrhoea & Safety', 'Monsoon floods bring leptospirosis (kencing tikus), diarrhoea and skin infections. Symptoms, safe water, wound care, clean-up and contacts in Malaysia.'],
+  'hfmd-children-malaysia': ['HFMD in Children: Symptoms, Contagious Period & Home Care', 'HFMD symptoms in babies and children (simptom HFMD), how long it is contagious, home care for mouth ulcers, warning signs, and HFMD vs measles in Malaysia.'],
+  'persistent-cough-malaysia': ['Cough That Won’t Go Away? Causes, Medicine & When to Worry', 'Why a cough lingers (batuk berpanjangan) after flu or haze, TB and other causes, what cough medicine helps, kids’ fever medicine and when to see a doctor.'],
   'influenza-a-malaysia': ['Influenza A Malaysia: Symptoms, A vs B & How Long It Lasts', 'Influenza A symptoms, how long it lasts and how contagious it is, influenza A vs B, antiviral medicine, and warning signs in children. A Malaysian guide.'],
   'stroke-heart-attack-kuala-lumpur': ['Stroke & Heart Attack in KL: Warning Signs & Where to Go', 'Stroke and heart attack warning signs (BE FAST), what to do while waiting for 999, treatment time windows, and which KL hospitals treat stroke fast.'],
   'thalassaemia-screening-malaysia': ['Thalassaemia Screening in Malaysia: Free Tests & Carriers', 'Free thalassaemia (thalassemia) screening in Malaysia: who qualifies, Budget 2027 changes, the blood test, and what carrier results mean for your family.'],

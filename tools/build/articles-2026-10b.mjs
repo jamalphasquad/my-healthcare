@@ -207,7 +207,7 @@ ${figure('aedes-mosquito', 'A close-up of an Aedes mosquito on skin', 'Dengue is
       ['CodeBlue — Why Malaysians choose to invest in dengue vaccination (Nov 2024)', 'https://codeblue.galencentre.org/2024/11/why-malaysians-choose-to-invest-in-dengue-vaccination/'],
       ['WHO — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['dengue-klang-valley-first-three-days', 'flu-vaccine-malaysia', 'clinic-or-emergency-department'],
+    related: ['dengue-klang-valley-first-three-days', 'floods-health-risks-malaysia', 'flu-vaccine-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
