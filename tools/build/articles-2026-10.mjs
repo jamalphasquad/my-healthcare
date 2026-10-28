@@ -105,13 +105,15 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
     desc: 'Which weight-loss injections are registered in Malaysia, who they are for, side effects, and why buying pens online is risky. Updated October 2026.',
     excerpt: 'Which injections are actually registered for weight loss in Malaysia, who they’re meant for, the side effects, and why “slimming pens” sold online are risky.',
     standfirst: 'Weight-loss injections are among the most searched health topics in Malaysia. Here is what is registered, who these medicines are meant for, what to expect, and how to stay safe.',
-    cat: 'weight', catLabel: 'Weight & metabolism', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    cat: 'weight', catLabel: 'Weight & metabolism', published: PUB, modified: '2026-10-28', author: AUTHOR, news: true, medical: true,
     about: ['Obesity', 'Obesiti'],
     image: 'waist-measurement', imageAlt: 'A man measuring his waist with a tape measure',
     keyPoints: [
       'These medicines (GLP-1 medicines such as semaglutide, liraglutide and tirzepatide) are prescription-only in Malaysia. Only a registered doctor can prescribe them.',
       'Wegovy, Saxenda and Mounjaro are registered for weight management. Ozempic is registered for type 2 diabetes, not weight loss.',
       'They are meant for adults with a BMI of 30 or more, or 27 or more with a weight-related condition, alongside diet and exercise.',
+      'Mounjaro (tirzepatide) works on two gut hormones, GIP and GLP-1, and led to more weight loss than semaglutide in a head-to-head trial.',
+      'There is no Mounjaro pill. Weight-loss pills approved in the US are not registered in Malaysia.',
       'Stomach side effects are common, and most people regain weight after stopping.',
       'Never buy “slimming pens” online or from salons. MOH has raided sellers and removed hundreds of listings in 2026.',
     ],
@@ -124,7 +126,7 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
 <tbody>
 <tr><td>Wegovy (semaglutide 2.4 mg)</td><td>Weight management</td></tr>
 <tr><td>Saxenda (liraglutide 3 mg)</td><td>Weight management, including some teenagers aged 12+</td></tr>
-<tr><td>Mounjaro (tirzepatide)</td><td>Type 2 diabetes and, in the current product information, weight management</td></tr>
+<tr><td>Mounjaro (tirzepatide)</td><td>Type 2 diabetes, and weight management in adults</td></tr>
 <tr><td>Ozempic (semaglutide)</td><td>Type 2 diabetes only, not weight loss</td></tr>
 <tr><td>Generic liraglutide</td><td>Weight management (first generic registered in October 2026)</td></tr>
 <tr><td>Zepbound (tirzepatide)</td><td>Not registered in Malaysia</td></tr>
@@ -135,12 +137,41 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
 <p>Malaysia’s Clinical Practice Guidelines on obesity (2023) use lower BMI cut-offs for Asians when defining obesity (27.5 and above). They recommend medicines only <strong>alongside</strong> diet, physical activity and behaviour change, under a doctor’s supervision.</p>
 ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consultation', 'A doctor will check your weight history, other conditions and medicines before suggesting any treatment.')}` },
       { id: 'results', h: 'How much weight do people lose?', tocLabel: 'Expected results', html: `<p>In the main clinical trials, adults taking semaglutide 2.4 mg lost about 15% of their body weight on average over 68 weeks, compared with about 2% on placebo. In the tirzepatide trial, average weight loss at the highest dose was about 21% over 72 weeks. Results vary a lot between people, and they depend on staying on treatment and keeping up healthy habits.</p>
-<p>The weight tends to come back after stopping. In one study, people regained about two-thirds of the weight they had lost within a year of stopping semaglutide. Many doctors therefore treat obesity as a long-term condition, like high blood pressure.</p>` },
+<p>The weight tends to come back after stopping. In one study, people regained about two-thirds of the weight they had lost within a year of stopping semaglutide. In a tirzepatide study, people switched to placebo regained about 15% of their body weight over the following year, while those who continued kept losing weight. Many doctors therefore treat obesity as a long-term condition, like high blood pressure.</p>` },
+      { id: 'mounjaro', h: 'Mounjaro: what it is used for and how it works', tocLabel: 'About Mounjaro', html: `<p><strong>What it’s used for:</strong> in Malaysia, Mounjaro (tirzepatide) is registered for adults with <strong>type 2 diabetes</strong>, and for <strong>weight management</strong> in adults with a BMI of 30 or more, or 27 to 30 with at least one weight-related condition such as high blood pressure, high cholesterol, sleep apnoea, heart disease, prediabetes or type 2 diabetes.</p>
+<p><strong>How it works:</strong> most medicines in this group copy one gut hormone, GLP-1. Tirzepatide acts on two: <strong>GIP and GLP-1</strong>. Together they reduce appetite, help you feel full sooner, and improve blood sugar control.</p>
+<p><strong>How it’s taken:</strong> one injection under the skin, <strong>once a week</strong>. Treatment starts at 2.5 mg and is increased in steps every 4 weeks or more, to a usual maintenance dose of 5, 10 or 15 mg. The slow increase helps limit stomach side effects.</p>
+<p><strong>Results:</strong> in the main weight-loss trial, adults on the highest dose lost about 21% of their body weight over 72 weeks, against about 3% on placebo. In a 2025 head-to-head trial, people on tirzepatide lost 20.2% of their weight, compared with 13.7% on semaglutide.</p>` },
+      { id: 'compare', h: 'Mounjaro vs Wegovy vs Saxenda', tocLabel: 'Mounjaro vs Saxenda', html: `<div class="table-wrap"><table>
+<thead><tr><th></th><th>Mounjaro</th><th>Wegovy</th><th>Saxenda</th></tr></thead>
+<tbody>
+<tr><td>Active ingredient</td><td>Tirzepatide</td><td>Semaglutide 2.4 mg</td><td>Liraglutide 3 mg</td></tr>
+<tr><td>How it works</td><td>GIP and GLP-1</td><td>GLP-1</td><td>GLP-1</td></tr>
+<tr><td>How often</td><td>Once a week</td><td>Once a week</td><td>Once a day</td></tr>
+<tr><td>Average weight loss in main trial</td><td>About 21% over 72 weeks (highest dose)</td><td>About 15% over 68 weeks</td><td>8.4 kg vs 2.8 kg on placebo over 56 weeks</td></tr>
+<tr><td>Teenagers</td><td>Adults only</td><td>Check with your doctor</td><td>Registered from age 12 (over 60 kg)</td></tr>
+</tbody></table></div>
+<p><strong>Saxenda vs Mounjaro:</strong> Saxenda is an older, daily injection with smaller average weight loss. Mounjaro is weekly and led to more weight loss in trials. But “best” depends on you: your other conditions, how you tolerate side effects, availability and cost. A generic liraglutide was registered in Malaysia in October 2026, which may make that option more affordable. The Saxenda label advises stopping if you haven’t lost at least 5% of your weight after 12 weeks on the full dose.</p>` },
+      { id: 'pill', h: 'Is there a Mounjaro pill?', tocLabel: 'Is there a pill?', html: `<p><strong>No.</strong> Mounjaro is only available as an injection, in pens and vials. There is no tablet form of tirzepatide.</p>
+<p>Weight-loss pills in this group do exist elsewhere, but <strong>none is registered in Malaysia</strong>:</p>
+<ul>
+<li><strong>Orforglipron</strong>, a once-daily GLP-1 pill, was approved in the US in April 2026 for weight management. It is a different medicine from Mounjaro.</li>
+<li>A <strong>25 mg semaglutide pill</strong> (oral Wegovy) was approved in the US in December 2025.</li>
+<li>In Malaysia, oral semaglutide tablets are registered only for <strong>type 2 diabetes</strong>, at lower doses.</li>
+</ul>
+<p>Any “Mounjaro pill” or “tirzepatide tablet” sold online is not a registered product. Don’t take it.</p>` },
       { id: 'side-effects', h: 'Side effects and safety', html: `<p>Stomach and gut side effects are the most common, especially when starting or increasing the dose. In the semaglutide weight-management trials:</p>
 <ul><li>Nausea: 44% (vs 16% on placebo)</li><li>Diarrhoea: 30%</li><li>Vomiting: 25%</li><li>Constipation: 24%</li></ul>
-<p>Less common but important risks include inflammation of the pancreas (pancreatitis), gallstones, hair loss and loss of muscle along with fat. They are <strong>not for use in pregnancy</strong>, and the product information advises stopping them before a planned pregnancy. People with a personal or family history of a rare thyroid cancer (medullary thyroid carcinoma) should not use semaglutide or tirzepatide.</p>
+<p>Less common but important risks include inflammation of the pancreas (pancreatitis), gallstones, hair loss and loss of muscle along with fat. They are <strong>not for use in pregnancy</strong>, and the product information advises stopping them before a planned pregnancy. The US labels advise people with a personal or family history of a rare thyroid cancer (medullary thyroid carcinoma) not to use semaglutide or tirzepatide.</p>
+<p><strong>Side effects of Mounjaro:</strong> according to its Malaysian product information, nausea and diarrhoea are very common. Vomiting, constipation, indigestion, stomach pain, bloating, reduced appetite, tiredness, dizziness, hair loss and injection-site reactions are common. Also important:</p>
+<ul>
+<li><strong>Low blood sugar</strong> is more likely if you also take insulin or a sulphonylurea for diabetes. Your doctor may lower those doses.</li>
+<li><strong>Dehydration</strong> from vomiting or diarrhoea can harm the kidneys. Drink enough fluids.</li>
+<li><strong>Before surgery or sedation</strong>, tell the doctor you take it, as there is a risk of inhaling stomach contents under anaesthesia.</li>
+<li><strong>Contraception:</strong> use effective contraception during treatment, and stop at least a month before a planned pregnancy. Tirzepatide can lower levels of the contraceptive pill. The US label advises adding a barrier method for 4 weeks after starting and after each dose increase, so ask your doctor.</li>
+</ul>
 <div class="box box--pink" role="note"><span class="box__title">See a doctor urgently if you have</span><ul><li>Severe, persistent stomach pain, sometimes spreading to the back</li><li>Repeated vomiting and signs of dehydration</li><li>Yellowing of the skin or eyes</li></ul></div>` },
-      { id: 'online', h: 'Why “slimming pens” sold online are risky', tocLabel: 'The risk of buying online', html: `<p>In August 2026, the Ministry of Health warned the public about “pen kurus” sold online and claiming to contain <strong>retatrutide</strong>, an experimental medicine that is not approved anywhere in the world. Between January and July 2026, its Pharmacy Enforcement Division carried out <strong>30 raids</strong> on weight-loss products, 17 of them involving online sales, and seized goods worth RM477,142. It also took down 209 e-commerce listings.</p>
+      { id: 'online', h: 'Why “slimming pens” sold online are risky', tocLabel: 'The risk of buying online', html: `<p>In August 2026, the Ministry of Health warned the public about “pen kurus” sold online and claiming to contain <strong>retatrutide</strong>, an experimental medicine that is not approved anywhere in the world. Between January and July 2026, its Pharmacy Enforcement Division carried out <strong>30 raids</strong> on weight-loss products, 17 of them involving online sales, and seized goods worth RM477,142. It also took down 209 e-commerce listings. In April 2026, customs officers at KLIA seized more than 12,000 units of unregistered injections believed to contain tirzepatide, labelled “Tirzide”.</p>
 <p>Pens bought outside a clinic or pharmacy may be fake, unregistered, wrongly stored or the wrong dose. To protect yourself:</p>
 <ul>
 <li>Only get these medicines through a doctor who has assessed you.</li>
@@ -160,6 +191,10 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['Is Ozempic approved for weight loss in Malaysia?', 'No. In Malaysia, Ozempic is registered for type 2 diabetes. Wegovy, which contains a higher dose of the same medicine (semaglutide), is the version registered for weight management.'],
       ['Is Mounjaro available for weight loss in Malaysia?', 'Mounjaro (tirzepatide) is registered in Malaysia, and its current product information includes weight management as well as type 2 diabetes. It is prescription-only, so a doctor must assess you first.'],
       ['Can I buy weight-loss injections online in Malaysia?', 'You should not. These medicines are Group B poisons that need a prescription, and the Ministry of Health has raided sellers and removed online listings in 2026. Pens sold online may be fake or unregistered.'],
+      ['What is Mounjaro used for?', 'In Malaysia, Mounjaro (tirzepatide) is registered for adults with type 2 diabetes, and for weight management in adults with a BMI of 30 or more, or 27 or more with a weight-related condition. It is a once-weekly injection that needs a prescription.'],
+      ['Is there a Mounjaro pill?', 'No. Mounjaro is only available as an injection. Weight-loss pills such as orforglipron and oral semaglutide 25 mg are approved in the US but are not registered in Malaysia, so any “Mounjaro pill” sold online is not genuine.'],
+      ['Saxenda vs Mounjaro: which is better?', 'Mounjaro is a weekly injection that led to more weight loss in trials (about 21% vs about 8%). Saxenda is a daily injection and is also registered for some teenagers. The right choice depends on your health, side effects and cost, so discuss it with your doctor.'],
+      ['What are the side effects of Mounjaro?', 'The most common are nausea, diarrhoea, vomiting, constipation, indigestion and reduced appetite, especially when starting or increasing the dose. Less common but serious risks include pancreatitis, gallbladder problems and dehydration affecting the kidneys.'],
       ['Will I regain weight if I stop the injections?', 'Many people do. Studies show a large part of the weight lost often returns within a year of stopping, which is why doctors pair medicines with long-term lifestyle changes.'],
     ],
     sources: [
@@ -174,10 +209,15 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['Sinar Daily — Online weight-loss drugs evade Malaysia’s prescription laws (5 Mar 2026)', 'https://www.sinardaily.my/article/734317/focus/exclusives/online-weight-loss-drugs-evade-malaysias-prescription-laws'],
       ['NEJM — Once-weekly semaglutide in adults with overweight or obesity (STEP 1, 2021)', 'https://www.nejm.org/doi/full/10.1056/NEJMoa2032183'],
       ['NEJM — Tirzepatide once weekly for the treatment of obesity (SURMOUNT-1, 2022)', 'https://www.nejm.org/doi/full/10.1056/NEJMoa2206038'],
+      ['NEJM — Tirzepatide as compared with semaglutide for the treatment of obesity (SURMOUNT-5, 2025)', 'https://doi.org/10.1056/NEJMoa2416394'],
+      ['NEJM — A randomized, controlled trial of 3.0 mg of liraglutide in weight management (SCALE, 2015)', 'https://www.nejm.org/doi/full/10.1056/NEJMoa1411892'],
+      ['Kosmo — Unregistered medicines worth RM7.7 million seized at KLIA (28 Apr 2026)', 'https://www.kosmo.com.my/2026/04/28/akps-tumpas-penyeludupan-ubat-tidak-berdaftar-bernilai-rm7-7-juta/'],
+      ['BioSpace — FDA approves orforglipron (1 Apr 2026)', 'https://www.biospace.com/press-releases/fda-approves-lillys-foundayo-orforglipron-the-only-glp-1-pill-for-weight-loss-that-can-be-taken-any-time-of-day-without-food-or-water-restrictions'],
+      ['Novo Nordisk — FDA approves oral semaglutide 25 mg for weight management (22 Dec 2025)', 'https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=916472'],
       ['Wilding et al. — Weight regain after withdrawal of semaglutide (STEP 1 extension, 2022)', 'https://discovery.ucl.ac.uk/id/eprint/10149199/'],
       ['NHS — Semaglutide', 'https://www.nhs.uk/medicines/semaglutide/'],
     ],
-    related: ['world-diabetes-day-2026-kl', 'undiagnosed-diabetes-high-blood-pressure-young-adults', 'check-blood-pressure-at-home'],
+    related: ['world-diabetes-day-2026-kl', 'skin-boosters-malaysia', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -186,9 +226,9 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
     title: 'Flu vaccine in Malaysia: who should get it, when, and how to get a free shot',
     crumb: 'Flu vaccine in Malaysia',
     desc: 'Who should get a flu vaccine in Malaysia, the best time, typical private clinic costs, free shots for seniors through MySejahtera, and side effects.',
-    excerpt: 'Flu circulates all year in Malaysia. Who should get vaccinated, the best timing, free shots for seniors, typical costs and what to expect.',
+    excerpt: 'Flu circulates all year in Malaysia. Who should get vaccinated, how long the vaccine lasts, the best timing, free shots for seniors, typical costs and what to expect.',
     standfirst: 'Flu spreads all year round in Malaysia, with surges that close classrooms and fill clinics. A yearly vaccine is the simplest protection. Here is who needs it, when to get it, and how to get one free if you are eligible.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-10-28', author: AUTHOR, news: true, medical: true,
     about: ['Influenza', 'Selesema'],
     image: 'vaccination', imageAlt: 'A doctor giving a vaccine injection in the upper arm',
     keyPoints: [
@@ -197,10 +237,11 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       'From 2026, free flu shots were reported to cover everyone aged 60+ and those aged 50–59 with a chronic illness. Book through MySejahtera.',
       'At private clinics, a flu shot is commonly advertised at roughly RM50–RM150.',
       'Side effects are usually mild, such as a sore arm or low fever for a day or two.',
+      'Protection starts about two weeks after the injection and fades over the following months, so you need a new vaccine every year.',
     ],
     sections: [
       { id: 'why', h: 'Why get a flu vaccine?', html: `<p>Influenza is not just a bad cold. It can cause high fever, body aches and exhaustion that last a week or more. In older people, young children, pregnant women and people with heart, lung or kidney disease, it can lead to pneumonia and hospital stays.</p>
-<p>Flu circulates <strong>all year round</strong> in Malaysia, with surges. In late 2025, a wave of flu clusters swept through schools. By the end of October that year, flu-like illness still made up about 8% of clinic consultations, and severe respiratory infections about 10% of related hospital admissions. In September 2026, an influenza A cluster sickened dozens of students at a boarding school in Ipoh.</p>
+<p>Flu circulates <strong>all year round</strong> in Malaysia, with surges. In late 2025, a wave of flu clusters swept through schools. By the end of October that year, flu-like illness still made up about 8% of clinic consultations, and severe respiratory infections about 10% of related hospital admissions. In September 2026, an influenza A cluster sickened dozens of students at a boarding school in Ipoh. Read more about <a href="/articles/influenza-a-malaysia/">influenza A symptoms, how long it lasts and treatment</a>.</p>
 ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu symptoms usually come on suddenly: fever, chills, aches, cough and tiredness.')}` },
       { id: 'who', h: 'Who should get vaccinated', html: `<p>The Ministry of Health encourages a yearly flu vaccine, especially for:</p>
 <ul>
@@ -213,6 +254,15 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu sympt
       { id: 'free', h: 'Free flu vaccines for seniors', html: `<p>In 2025, the government offered free flu vaccines to people aged 60 and over with at least one chronic illness, at 649 selected government health clinics, booked through <strong>MySejahtera</strong>.</p>
 <p>In May 2026, news reports said the programme had widened. It now covers <strong>everyone aged 60 and over</strong>, and <strong>people aged 50–59 with at least one chronic condition</strong> such as diabetes, obesity, high blood pressure, high cholesterol, cancer, or heart, lung or kidney disease. You book a slot in MySejahtera at a Klinik Kesihatan, and walk-ins are accepted while stock lasts.</p>
 <p>Supply and dates can change during the year, so check MySejahtera or ask your nearest Klinik Kesihatan before you go.</p>` },
+      { id: 'how-long', h: 'What the vaccine protects against, and how long it lasts', tocLabel: 'How long it lasts', html: `<p><strong>What it’s for:</strong> the flu vaccine protects against influenza, the virus that causes flu, not against colds or other coughs. Each year’s vaccine covers the strains expected to circulate: two influenza A strains (H1N1 and H3N2) and one influenza B strain. It lowers your chance of catching flu and, more importantly, of becoming seriously ill, needing hospital care or passing it on to vulnerable family members.</p>
+<p><strong>How long it lasts:</strong></p>
+<ul>
+<li>Protection starts about <strong>two weeks</strong> after the injection.</li>
+<li>It is strongest in the first few months and <strong>fades over time</strong>, which is why one dose a year is recommended.</li>
+<li>The flu virus also changes, and the vaccine is updated every year to match. Last year’s vaccine may not match this year’s strains.</li>
+</ul>
+<p>How well it works varies from year to year, depending on how closely the vaccine matches the circulating strains. Even when you still catch flu, the illness is usually milder.</p>
+<p><strong>For children:</strong> children can be vaccinated from <strong>6 months</strong> of age. Children under 9 having a flu vaccine for the first time usually need <strong>two doses at least four weeks apart</strong>, then one dose a year after that. Flu spreads quickly in schools and kindergartens, so vaccinating children also helps protect grandparents and babies at home.</p>` },
       { id: 'timing', h: 'When is the best time?', html: `<p>Because flu circulates all year here, any time is better than not at all. The Ministry of Health suggests <strong>March or September</strong>, ahead of the seasonal peaks.</p>
 <ul>
 <li>It takes about <strong>two weeks</strong> after the injection to build protection.</li>
@@ -238,6 +288,9 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu sympt
       ['When is the best time to get a flu vaccine in Malaysia?', 'The Ministry of Health suggests March or September. Flu circulates all year, so if you missed those months, get vaccinated now, and at least two weeks before any trip.'],
       ['Can I get the flu vaccine and a COVID-19 vaccine together?', 'Yes. They can be given on the same day, usually in different arms.'],
       ['Can I get flu from the flu vaccine?', 'No. The injected flu vaccine does not contain live virus. A sore arm or mild fever for a day or two is a normal response.'],
+      ['How long does the flu vaccine last? (Vaksin influenza tahan berapa lama?)', 'Protection starts about two weeks after the injection and fades over the following months. Because protection wanes and flu strains change, you need a new vaccine every year.'],
+      ['What is the flu vaccine for? (Vaksin influenza untuk apa?)', 'It protects against influenza, the virus that causes flu, including two influenza A strains and one influenza B strain. It lowers the risk of catching flu and of serious illness, but does not prevent colds.'],
+      ['Can children get the flu vaccine? (Vaksin influenza untuk kanak-kanak)', 'Yes, from 6 months of age. Children under 9 having their first flu vaccine usually need two doses at least four weeks apart, then one dose every year.'],
     ],
     sources: [
       ['The Star — More Malaysians can get a free flu vaccine (25 May 2026)', 'https://www.thestar.com.my/lifestyle/health/2026/05/25/more-malaysians-can-get-a-free-flu-vaccine'],
@@ -250,9 +303,10 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu sympt
       ['OGSM — Malaysian Maternal Immunisation Consensus Guidelines (2024)', 'https://www.ogsm.org.my/docs/MIG%20eBook-min.pdf'],
       ['WHO — Recommended composition of influenza vaccines for the 2027 southern hemisphere season (25 Sep 2026)', 'https://www.who.int/news/item/25-09-2026-recommendations-announced-for-influenza-vaccine-composition-for-the-2027-southern-hemisphere-influenza-season'],
       ['Ministry of Finance — Budget 2026 tax measures (vaccination relief)', 'https://belanjawan.mof.gov.my/pdf/belanjawan2026/ucapan/tax-measures.pdf'],
-      ['US CDC — Key facts about seasonal flu vaccine', 'https://www.cdc.gov/flu/vaccines/keyfacts.html'],
+      ['US CDC — Key facts about seasonal flu vaccine (Sep 2026)', 'https://www.cdc.gov/flu/vaccines/keyfacts.html'],
+      ['US CDC — Types of influenza viruses (Sep 2025)', 'https://www.cdc.gov/flu/about/viruses-types.html'],
       ['US CDC — Getting flu and COVID-19 vaccines at the same time', 'https://www.cdc.gov/flu/prevent/coadministration.htm'],
     ],
-    related: ['dengue-vaccine-qdenga-malaysia', 'haze-air-quality-klang-valley', 'clinic-or-emergency-department'],
+    related: ['influenza-a-malaysia', 'dengue-vaccine-qdenga-malaysia', 'clinic-or-emergency-department'],
   },
 ];

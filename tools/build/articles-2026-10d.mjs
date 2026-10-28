@@ -8,6 +8,137 @@ const figure = (name, alt, cap) => `<figure>{{img:${name}|${alt}}}${cap ? `<figc
 export const OCT_2026_D = [
   /* ------------------------------------------------------------------ */
   {
+    slug: 'influenza-a-malaysia',
+    title: 'Influenza A in Malaysia: symptoms, how long it lasts, A vs B, and when you need antiviral medicine',
+    crumb: 'Influenza A in Malaysia',
+    desc: 'Influenza A symptoms, how long it lasts and how contagious it is, the difference between influenza A and B, antiviral medicine, and warning signs in children.',
+    excerpt: 'Influenza A clusters keep closing classrooms in Malaysia. How to tell flu from a cold, how long it lasts and stays contagious, A vs B, who needs antiviral medicine, and the warning signs in children.',
+    standfirst: 'Influenza A spreads all year in Malaysia, and clusters in schools and kindergartens send many families to the clinic. Most people recover at home within a week or two, but some need antiviral medicine early, and a few need urgent care. Here is what to expect, how long you are contagious, and when to see a doctor.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    about: ['Influenza', 'Demam influenza'],
+    image: 'fever-thermometer', imageAlt: 'A digital thermometer showing a fever reading',
+    keyPoints: [
+      'Influenza A is the type of flu virus behind most outbreaks and all flu pandemics. Influenza B usually spreads more slowly but is not always milder, especially in children.',
+      'Symptoms start about 2 days after infection, usually suddenly: fever or chills, cough, sore throat, body aches, headache and tiredness.',
+      'You are contagious from a day before symptoms start until about 5–7 days after, and longer in young children.',
+      'Most people recover within a few days to two weeks with rest, fluids and paracetamol. Antibiotics don’t work against flu.',
+      'Antiviral medicine works best within 48 hours and is mainly for high-risk people: young children, older adults, pregnant women and anyone with a long-term illness.',
+    ],
+    sections: [
+      { id: 'situation', h: 'Influenza A in Malaysia', tocLabel: 'Flu in Malaysia', html: `<p>Flu circulates all year round in Malaysia, with surges that are often reported around mid-year and from November to January. Schools and kindergartens are where clusters most often start.</p>
+<ul>
+<li><strong>October 2025:</strong> flu clusters jumped from 14 to 97 in a single week. About 85% were in schools and kindergartens, and around 6,000 students fell ill. By November, 95.6% of samples tested were influenza A (H3).</li>
+<li><strong>Early 2026:</strong> the Ministry of Health’s epidemiology bulletin reported that outbreaks of influenza-like illness in the first 12 weeks of 2026 were 350% higher than in the same period of 2025.</li>
+<li><strong>September 2026:</strong> an influenza A cluster at a boarding school in Ipoh left 46 students with flu-like illness. All were reported stable.</li>
+</ul>
+<p>The Ministry advises parents to check children for fever, runny nose or cough before school, and to keep them at home and seek treatment if they have symptoms.</p>` },
+      { id: 'a-vs-b', h: 'What is the difference between influenza A and B?', tocLabel: 'Influenza A vs B', html: `<div class="table-wrap"><table>
+<thead><tr><th></th><th>Influenza A</th><th>Influenza B</th></tr></thead>
+<tbody>
+<tr><td>Who it infects</td><td>People, birds and other animals</td><td>Mainly people</td></tr>
+<tr><td>Types</td><td>Subtypes such as H1N1 and H3N2</td><td>One main lineage, B/Victoria</td></tr>
+<tr><td>How it changes</td><td>Changes quickly; the only type that causes pandemics</td><td>Changes more slowly</td></tr>
+<tr><td>Outbreaks</td><td>Causes most large outbreaks</td><td>Smaller outbreaks, often in children</td></tr>
+<tr><td>Covered by the vaccine?</td><td>Yes, two A strains</td><td>Yes, one B strain</td></tr>
+</tbody></table></div>
+<p><strong>Is influenza A worse than B?</strong> Influenza A causes more large outbreaks and often hits older adults hard. But influenza B is not necessarily milder. In children it can be just as severe, and in one US study about a third of children who died from flu had influenza B. The symptoms are the same, and only a lab or rapid test can tell them apart. Treatment is the same for both.</p>` },
+      { id: 'symptoms', h: 'Symptoms: flu or a cold?', tocLabel: 'Symptoms', html: `<p>Flu usually starts <strong>suddenly</strong>, often within hours. A cold comes on gradually and is milder.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Symptom</th><th>Flu</th><th>Common cold</th></tr></thead>
+<tbody>
+<tr><td>Onset</td><td>Sudden</td><td>Gradual</td></tr>
+<tr><td>Fever or chills</td><td>Common, often high</td><td>Rare or mild</td></tr>
+<tr><td>Body aches and tiredness</td><td>Common, often severe</td><td>Mild</td></tr>
+<tr><td>Cough and sore throat</td><td>Common</td><td>Common</td></tr>
+<tr><td>Runny or blocked nose</td><td>Sometimes</td><td>Common</td></tr>
+<tr><td>Headache</td><td>Common</td><td>Uncommon</td></tr>
+</tbody></table></div>
+<p>Not everyone with flu has a fever. <strong>Children</strong> are more likely to have vomiting or diarrhoea, and very young children may just seem unusually sleepy, irritable or off their food.</p>
+${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu usually hits suddenly, with fever, aches and exhaustion, while a cold builds up slowly.')}` },
+      { id: 'how-long', h: 'How long does influenza A last, and is it contagious?', tocLabel: 'How long it lasts', html: `<ul>
+<li><strong>Incubation:</strong> symptoms usually start about 2 days after you catch the virus, but anywhere from 1 to 4 days.</li>
+<li><strong>Contagious period:</strong> from about 1 day before symptoms start until 5–7 days after. You are most contagious in the first 3 days. Young children and people with weak immune systems can spread it for longer.</li>
+<li><strong>How long it lasts:</strong> most people feel better within a few days to two weeks. Fever usually settles first. A cough and tiredness can linger for a week or two after that.</li>
+</ul>
+<p>Yes, influenza A is <strong>very contagious</strong>. It spreads through droplets when people cough, sneeze or talk, and from hands that touch contaminated surfaces. Stay home while you have a fever, and wear a mask around others if you must go out.</p>
+<p><strong>When can children go back to school?</strong> The US CDC advises returning to normal activities once symptoms have been improving and the fever has been gone for at least 24 hours without fever medicine. Ask your doctor for a medical certificate if your child needs one.</p>` },
+      { id: 'home-care', h: 'Treating flu at home', tocLabel: 'Home treatment', html: `<ul>
+<li><strong>Rest</strong> and stay home from work or school.</li>
+<li><strong>Drink plenty of fluids</strong>: water, clear soups or oral rehydration salts, especially if there is vomiting or diarrhoea.</li>
+<li><strong>Paracetamol</strong> for fever and aches, at the dose on the label for the person’s age and weight.</li>
+<li><strong>Don’t give aspirin to anyone under 16.</strong> It is linked to Reye’s syndrome, a rare but serious illness.</li>
+<li><strong>Antibiotics don’t work</strong> against flu, which is caused by a virus. Your doctor may prescribe them only if a bacterial infection develops, such as some pneumonias or ear infections.</li>
+</ul>
+<p>If you aren’t improving after a week, or you start to feel better and then get worse again, see a doctor.</p>` },
+      { id: 'antivirals', h: 'Antiviral medicine for influenza', tocLabel: 'Antiviral medicine', html: `<p>Antiviral medicines attack the flu virus itself. In Malaysia, they include <strong>oseltamivir</strong>, taken as capsules or liquid for 5 days, and <strong>baloxavir</strong>, a single dose for people aged 12 and over. Both need a doctor’s prescription.</p>
+<ul>
+<li>They work best when started <strong>within 48 hours</strong> of symptoms starting.</li>
+<li>In otherwise healthy people, they shorten the illness by about a day. The bigger benefit is lowering the risk of complications in people at high risk.</li>
+<li>The most common side effect of oseltamivir is nausea or vomiting. Taking it with food helps.</li>
+</ul>
+<p>Doctors mainly recommend antivirals for people who are very ill or at higher risk of complications:</p>
+<ul>
+<li>Children under 5, especially under 2</li>
+<li>Adults aged 65 and over</li>
+<li>Pregnant women</li>
+<li>People with asthma or other lung disease, diabetes, heart disease, kidney or liver disease, or a weakened immune system</li>
+</ul>
+<p>Most healthy adults and older children with mild flu recover without them. If you or your child is in a high-risk group, see a doctor <strong>early</strong>, rather than waiting to see if it passes. Antivirals at private clinics can be costly, so ask about the price.</p>` },
+      { id: 'warning', h: 'Warning signs that need urgent care', tocLabel: 'Warning signs', html: `<div class="box box--pink" role="note"><span class="box__title">Go to an emergency department or call 999 if a child has</span><ul>
+<li>Fast or difficult breathing, or the ribs pulling in with each breath</li>
+<li>Bluish lips or face</li>
+<li>Signs of dehydration: no urine for 8 hours, a dry mouth, or no tears when crying</li>
+<li>Not waking up, not alert, or not interacting</li>
+<li>A seizure</li>
+<li>A fever above 40°C that doesn’t come down with medicine, or any fever in a baby under 12 weeks old</li>
+<li>Fever or cough that gets better, then comes back worse</li>
+</ul></div>
+<div class="box box--pink" role="note"><span class="box__title">In adults, get urgent care for</span><ul>
+<li>Difficulty breathing or shortness of breath</li>
+<li>Pain or pressure in the chest or abdomen that won’t go away</li>
+<li>Persistent dizziness, confusion, or being hard to wake</li>
+<li>A seizure, not passing urine, or severe weakness</li>
+<li>Symptoms that improve, then return worse</li>
+</ul></div>
+<p>See our guide to <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a> if you aren’t sure where to go.</p>` },
+      { id: 'prevent', h: 'Preventing influenza A', tocLabel: 'Prevention', html: `<ul>
+<li><strong>Get a yearly flu vaccine.</strong> It protects against two influenza A strains (H1N1 and H3N2) and one influenza B strain, and is free for many older adults. See our <a href="/articles/flu-vaccine-malaysia/">flu vaccine guide</a>.</li>
+<li><strong>Wash your hands</strong> often with soap and water, and cover coughs and sneezes.</li>
+<li><strong>Wear a mask</strong> if you have symptoms and must be around others.</li>
+<li><strong>Keep sick children at home</strong>, and avoid crowds while you are unwell.</li>
+</ul>` },
+    ],
+    clinicsMode: 'directory',
+    clinicsHeading: 'Where to see a doctor for flu',
+    clinicsTocLabel: 'Where to see a doctor',
+    clinicsIntro: 'Any GP clinic can assess flu symptoms, prescribe antiviral medicine for people at higher risk, and give a medical certificate. Flu often strikes in the evening or at the weekend, so our directory shows clinics open late, at weekends and around the clock.',
+    clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-late/', 'Clinics open late'], ['/clinics/open-sunday/', 'Clinics open on Sunday'], ['/clinics/open-24-hours/', '24-hour clinics']],
+    faqs: [
+      ['What is the difference between influenza A and B? (Apa beza influenza A dan B?)', 'Influenza A infects people and animals, changes quickly and causes most large outbreaks and all pandemics. Influenza B mainly infects people and changes more slowly. The symptoms and treatment are the same, and the yearly vaccine covers both.'],
+      ['Is influenza A contagious?', 'Yes, very. You can spread it from about 1 day before symptoms start until 5–7 days after, and young children can spread it for longer. Stay home while you have a fever.'],
+      ['How long does influenza A last? (Influenza A berapa lama?)', 'Most people recover within a few days to two weeks. Fever usually settles in a few days, but a cough and tiredness can last a week or two longer.'],
+      ['What medicine is used for influenza A? (Ubat influenza A)', 'Most people only need rest, fluids and paracetamol. Doctors may prescribe antiviral medicine such as oseltamivir for people at high risk or who are very ill, ideally within 48 hours of symptoms starting. Antibiotics don’t work against flu.'],
+      ['Is influenza A worse than influenza B?', 'Influenza A causes more outbreaks and is often harder on older adults, but influenza B can be just as severe, especially in children. Both should be taken seriously in high-risk people.'],
+      ['What are the signs of influenza in children? (Tanda demam influenza kanak-kanak)', 'Sudden fever, cough, sore throat, runny nose, aches and tiredness. Children are more likely than adults to have vomiting or diarrhoea. Seek urgent care for fast or difficult breathing, bluish lips, dehydration, a seizure or a fever above 40°C.'],
+    ],
+    sources: [
+      ['The Star — 6,000 students down with influenza (13 Oct 2025)', 'https://www.thestar.com.my/news/nation/2025/10/13/6000-students-down-with-influenza-school-told-to-follow-health-ministry-guidelines'],
+      ['The Star — Early treatment crucial to prevent severe influenza complications, says Health Ministry (11 Oct 2025)', 'https://www.thestar.com.my/news/nation/2025/10/11/early-treatment-crucial-to-prevent-severe-influenza-complications-says-health-ministry'],
+      ['Ministry of Health — Epidemiology Bulletin, EW1–12/2026', 'https://www.moh.gov.my/images/04-penerbitan/buletin/epidemiologi/BULETIN_EPIDEMIOLOGI_BAHAGIAN_KAWALAN_PENYAKIT_BIL.12026_compressed.pdf'],
+      ['The Star — Nearly 50 students at Ipoh boarding school suffer flu-like illness (16 Sep 2026)', 'https://www.thestar.com.my/news/nation/2026/09/16/nearly-50-students-at-ipoh-boarding-school-suffer-flu-like-illness'],
+      ['CodeBlue — Too few Malaysian adults are protected against influenza (21 May 2026)', 'https://codeblue.galencentre.org/2026/05/too-few-malaysian-adults-are-protected-against-influenza/'],
+      ['US CDC — Types of influenza viruses (Sep 2025)', 'https://www.cdc.gov/flu/about/viruses-types.html'],
+      ['US CDC — Signs and symptoms of flu', 'https://www.cdc.gov/flu/signs-symptoms/index.html'],
+      ['US CDC — How flu spreads', 'https://www.cdc.gov/flu/spread/index.html'],
+      ['US CDC — Influenza antiviral medications (Jun 2026)', 'https://www.cdc.gov/flu/treatment/antiviral-drugs.html'],
+      ['NHS — Flu (reviewed Feb 2026)', 'https://www.nhs.uk/conditions/flu/'],
+      ['WHO — Recommended composition of influenza vaccines for the 2026 southern hemisphere season (26 Sep 2025)', 'https://www.who.int/news/item/26-09-2025-recommendations-announced-for-influenza-vaccine-composition-for-the-2026-southern-hemisphere-influenza-season'],
+    ],
+    related: ['flu-vaccine-malaysia', 'clinic-or-emergency-department', 'haze-air-quality-klang-valley'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
     slug: 'stroke-heart-attack-kuala-lumpur',
     title: 'Stroke or heart attack in Kuala Lumpur: the warning signs, what to do, and where to get treated fast',
     crumb: 'Stroke and heart attack in KL',
