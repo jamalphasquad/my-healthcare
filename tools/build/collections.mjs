@@ -3,7 +3,7 @@
 //   service pages  /clinics/<service>/       e.g. /clinics/open-sunday/  (only when 2+ clinics qualify)
 //   network pages  /clinics/<network>/       e.g. /clinics/klinik-segara/
 import { head, header, footer, crumbs, crumbsLd, write, esc, abs, ORG, WEBSITE, SITE, LAYOUT } from './lib.mjs';
-import { clinicCard, rangeText, firstPage, pagedList, pager, listedText } from './pages.mjs';
+import { clinicCard, rangeText, firstPage, pagedList, pager, listedText, summaryHours, guideLinks } from './pages.mjs';
 import { nearestClinics, kmText } from './clinic-data.mjs';
 import { AREA_INFO } from './areas.mjs';
 
@@ -21,6 +21,25 @@ const latestClose = (h) => Math.max(...[0, 1, 2, 3, 4, 5, 6].map((d) => closing(
 const opensOn = (c, d) => !!(c.hours && c.hours[d] && c.hours[d].length);
 const weekendDays = (c) => [6, 0].filter((d) => opensOn(c, d));
 const dayHours = (c, d) => (c.hours ? rangeText(c.hours[d]) : 'Call to confirm');
+// Bilingual title: people search for both "clinics in Cheras" and "klinik Cheras". Longest option that fits.
+const placeTitle = (label, where) => [`Clinics in ${where} (Klinik ${label}): Hours & Phone`, `Clinics in ${label} (Klinik ${label}): Hours & Phone`, `Clinics in ${where}: Hours & Phone`, `Clinics in ${label}: Hours & Phone`, `Clinics in ${label}`].find((t) => t.length <= 60);
+const hoursTable = (cs, first) => `<h2 id="hours"${first ? ' style="margin-top:0"' : ''}>Opening hours at a glance</h2>
+<div class="table-wrap"><table><thead><tr><th>Clinic</th><th>Address</th><th>Opening hours</th></tr></thead><tbody>
+${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><td>${esc(c.addressLine)}</td><td>${esc(summaryHours(c.hours))}</td></tr>`).join('\n')}
+</tbody></table></div>
+<p>Hours can change on public holidays and during Ramadan, so call the clinic before you go.</p>`;
+// Questions people search for about clinics in a place, answered from the listings.
+function placeFaqs(label, here, pool) {
+  const weekend = pool.filter((c) => weekendDays(c).length);
+  const late = pool.filter((c) => c.hours && latestClose(c.hours) >= 1200).sort((x, y) => latestClose(y.hours) - latestClose(x.hours));
+  return [
+    [`Which clinics are in ${label}?`, here.map((c) => `<a href="/clinics/${c.slug}/">${esc(c.name)}</a>${c.addressLine ? `, ${esc(c.addressLine)}` : ''}`).join('; ') + '.'],
+    [`Is there a clinic open on weekends in or near ${label}?`, weekend.length
+      ? `${list(weekend.map((c) => `${esc(c.name)} (${weekendDays(c).map((d) => DAYS[d]).join(' and ')})`))} ${weekend.length > 1 ? 'have' : 'has'} weekend hours.`
+      : `None of the listed clinics in or near ${esc(label)} open at weekends. See our list of <a href="/clinics/open-saturday/">clinics open on Saturday</a>.`],
+    ...(late.length ? [[`Which clinic near ${label} is open latest?`, `${esc(late[0].name)} is open until ${time(latestClose(late[0].hours))} on some days. Check the clinic page for each day’s hours.`]] : []),
+  ];
+}
 
 // --- shared page template --------------------------------------------------------------
 function page(p) {
@@ -88,7 +107,7 @@ ${p.links.map(([h, links]) => links.length ? `<div class="stack g12"><h2 style="
 }
 
 // --- builders ---------------------------------------------------------------------------
-export function buildCollections({ clinics, areas, topics }) {
+export function buildCollections({ clinics, areas, topics, articles }) {
   const out = { areas: [], services: [], networks: [] };
   if (!clinics.length) return out;
   const taken = new Set(clinics.map((c) => c.slug));
@@ -204,10 +223,10 @@ export function buildCollections({ clinics, areas, topics }) {
       test: (c) => c.locality === t,
       eyebrow: esc(stName), h1: `Clinics in <em>${esc(t)}</em>`,
       intro: `Clinics in ${t}, with opening hours, phone numbers and directions.`,
-      title: () => `Clinics in ${t}: Hours, Phone & Directions`,
+      title: () => placeTitle(t, t),
       desc: () => `Clinics in ${t}${st === t ? '' : `, ${stName}`}: ${list(clinics.filter((c) => c.locality === t).map((c) => c.name))}. Opening hours, phone numbers and directions.`,
       column: ['Area', (c) => c.areaLabel],
-      faqs: () => [],
+      faqs: (cs) => placeFaqs(t, cs, cs),
     });
   }
 
@@ -231,18 +250,10 @@ export function buildCollections({ clinics, areas, topics }) {
     const here = a.clinics;
     const nearby = nearestClinics(a.geo, clinics, { exclude: (c) => c.areaSlug === a.slug, max: 4, within: 6, min: 2 });
     const pool = [...here, ...nearby.filter((r) => r.km <= 6).map((r) => r.c)];
-    const weekend = pool.filter((c) => weekendDays(c).length);
-    const late = pool.filter((c) => c.hours && latestClose(c.hours) >= 1200).sort((x, y) => latestClose(y.hours) - latestClose(x.hours));
     const svc = [...new Set(here.flatMap((c) => c.services.map((s) => s.name)))];
     const where = `${a.label}${a.locality && a.locality !== a.label ? `, ${a.locality}` : ''}`;
-    const faqs = [
-      [`Which clinics are in ${a.label}?`, here.map((c) => `<a href="/clinics/${c.slug}/">${esc(c.name)}</a>${c.addressLine ? `, ${esc(c.addressLine)}` : ''}`).join('; ') + '.'],
-      [`Is there a clinic open on weekends in or near ${a.label}?`, weekend.length
-        ? `${list(weekend.map((c) => `${esc(c.name)} (${weekendDays(c).map((d) => DAYS[d]).join(' and ')})`))} ${weekend.length > 1 ? 'have' : 'has'} weekend hours.`
-        : `None of the listed clinics in or near ${esc(a.label)} open at weekends. See our list of <a href="/clinics/open-saturday/">clinics open on Saturday</a>.`],
-      ...(late.length ? [[`Which clinic near ${a.label} is open latest?`, `${esc(late[0].name)} is open until ${time(latestClose(late[0].hours))} on some days. Check the clinic page for each day’s hours.`]] : []),
-    ];
-    const title = [`Clinics in ${where}: Hours & Phone`, `Clinics in ${a.label}: Hours & Phone`, `Clinics in ${a.label}`].find((t) => t.length <= 60);
+    const faqs = placeFaqs(a.label, here, pool);
+    const title = placeTitle(a.label, where);
     const p = {
       slug: a.slug, crumb: a.label, name: `Clinics in ${where}`, place: where, geo: a.geo, region: a.region,
       mapQuery: `${a.label}, ${a.locality}, Malaysia`,
@@ -255,12 +266,13 @@ export function buildCollections({ clinics, areas, topics }) {
         svc.length ? `Services: ${esc(svc.slice(0, 3).join(', '))}${svc.length > 3 ? '…' : ''}` : '',
       ].filter(Boolean),
       listHeading: `Clinics in ${esc(a.label)}`,
-      body: info.transit ? `<h2 id="getting-there" style="margin-top:0">Getting there</h2><p>${esc(info.transit)}</p>` : '',
+      body: (info.transit ? `<h2 id="getting-there" style="margin-top:0">Getting there</h2><p>${esc(info.transit)}</p>
+` : '') + hoursTable(here, !info.transit),
       faqs, nearby, nearbyHeading: `Other clinics near ${esc(a.label)}`,
       clinics: here, checked, where: `in ${esc(a.label)}`, topics,
       title: cut(title, 60),
       desc: cut(`Clinics in ${where}: ${list(here.map((c) => c.name))}. Opening hours, phone numbers and directions, plus ${plural(nearby.length, 'other clinic')} nearby.${here.length === 1 ? ` Updated ${checked.replace(/^\d+ /, '')}.` : ''}`, 155),
-      links: [['Nearby areas', nearby.map(({ c }) => [`/clinics/${c.areaSlug}/`, c.areaLabel]).filter((l, i, all) => all.findIndex((x) => x[0] === l[0]) === i)], ['Browse by need', serviceLinks]],
+      links: [['Nearby areas', nearby.map(({ c }) => [`/clinics/${c.areaSlug}/`, c.areaLabel]).filter((l, i, all) => all.findIndex((x) => x[0] === l[0]) === i)], ['Browse by need', serviceLinks], ['Health guides', guideLinks(articles, here.every((c) => c.serviceKeys.includes('aesthetic')))]],
     };
     page(p);
     out.areas.push({ slug: a.slug, url: `/clinics/${a.slug}/`, title: p.name, desc: p.desc, image: here[0].image, keywords: [a.label, a.locality, ...here.flatMap((c) => c.areaServed)].join(' ') });
@@ -282,7 +294,7 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
       body: table + (s.body ? (table ? s.body.replace(' style="margin-top:0"', '') : s.body) : ''),
       faqs: s.faqs(cs), clinics: cs, checked, where: 'that fits this list', topics,
       title: cut(s.title(cs.length), 60), desc: cut(s.desc(cs.length), 155),
-      links: [['Browse by area', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks.filter(([h]) => h !== `/clinics/${s.slug}/`)]],
+      links: [['Browse by area', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks.filter(([h]) => h !== `/clinics/${s.slug}/`)], ['Health guides', guideLinks(articles, s.slug === 'aesthetic-clinics')]],
     };
     page(p);
     out.services.push({ slug: s.slug, url: `/clinics/${s.slug}/`, label: s.crumb, title: p.name, desc: p.desc, image: cs[0].image, keywords: s.crumb });
@@ -304,7 +316,7 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
       clinics: cs, checked, where: `in the ${esc(n.name)} network`, topics,
       title: cut(`${n.name} Branches: Locations, Hours & Phone`, 60),
       desc: cut(`All ${cs.length} ${n.name} branches in ${list([...new Set(cs.map((c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state)))])}, with addresses, opening hours, phone numbers and directions for each.`, 155),
-      links: [['Branch areas', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks]],
+      links: [['Branch areas', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks], ['Health guides', guideLinks(articles, cs.every((c) => c.serviceKeys.includes('aesthetic')))]],
     };
     page(p);
     out.networks.push({ slug, url: `/clinics/${slug}/`, label: n.name, title: p.name, desc: p.desc, image: cs[0].image, keywords: n.name });

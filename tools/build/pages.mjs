@@ -15,7 +15,7 @@ function hoursSpec(hours) {
   for (let d = 0; d < 7; d++) for (const [a, b] of hours[d] || []) out.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: SCHEMA_DAYS[d], opens: hm(a), closes: hm(b) });
   return out;
 }
-function summaryHours(hours) {
+export function summaryHours(hours) {
   if (!hours) return 'Hours not confirmed yet – please call';
   // group consecutive days (Mon..Sun order) with identical ranges
   const order = [1, 2, 3, 4, 5, 6, 0], short = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -26,6 +26,25 @@ function summaryHours(hours) {
     if (g && g.t === t) g.days.push(d); else groups.push({ t, days: [d] });
   }
   return groups.map((g) => (g.days.length > 1 ? `${short[g.days[0]]}–${short[g.days[g.days.length - 1]]}` : short[g.days[0]]) + ' ' + g.t).join(' · ');
+}
+
+// Health guides linked from clinic and area pages, so articles get links from the directory.
+const GP_GUIDES = ['clinic-or-emergency-department', 'free-health-screening-malaysia', 'dengue-klang-valley-first-three-days'];
+const AESTHETIC_GUIDES = ['pico-laser-melasma-malaysia', 'skin-boosters-malaysia', 'weight-loss-injections-malaysia'];
+export const guideLinks = (articles, aesthetic) => (aesthetic ? AESTHETIC_GUIDES : GP_GUIDES)
+  .map((s) => articles.find((a) => a.slug === s)).filter(Boolean).map((a) => [`/articles/${a.slug}/`, a.crumb || a.title]);
+
+// Questions people search for about a clinic, answered from its listing, for clinics without their own FAQs.
+function listingFaqs(c, sundayPage) {
+  if (c.faqs?.length) return c.faqs;
+  const out = [];
+  if (c.hours) {
+    out.push([`What are ${c.short}’s opening hours?`, `${summaryHours(c.hours)}. Hours may differ on public holidays, so please call ahead.`]);
+    const sun = c.hours[0]?.length;
+    out.push([`Is ${c.short} open on Sunday?`, sun ? `Yes, ${esc(c.short)} is open on Sunday, ${rangeText(c.hours[0])}.` : `No, ${esc(c.short)} is closed on Sundays.${sundayPage ? ' See our list of <a href="/clinics/open-sunday/">clinics open on Sunday</a>.' : ''}`]);
+  }
+  if (c.street) out.push([`Where is ${c.short}?`, `${esc(c.addressLine)}.${telHref(c) ? ` Call <a href="${telHref(c)}">${esc(c.phone)}</a> before you go.` : ''}`]);
+  return out;
 }
 
 export function clinicLd(c) {
@@ -323,7 +342,8 @@ export function clinicPage(c, { clinics, articles, topics, coll }) {
   const nearby = nearestClinics(c.geo, clinics, { exclude: (x) => x === c, max: 4, within: 5, min: 3 });
   const networkUrl = c.network && coll?.networkLinks?.find(([, label]) => label === `${c.network.name} branches`)?.[0];
   const guide = articles.find((a) => a.clinic === c.slug);
-  const faqLd = c.faqs?.length ? [{ '@type': 'FAQPage', mainEntity: c.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) }] : [];
+  const faqs = listingFaqs(c, coll?.serviceLinks?.some(([h]) => h === '/clinics/open-sunday/'));
+  const faqLd = faqs.length ? [{ '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) }] : [];
   const ld = { '@context': 'https://schema.org', '@graph': [clinicLd(c), { '@type': 'WebPage', url: abs(`/clinics/${c.slug}/`), name: c.name, about: { '@id': abs(`/clinics/${c.slug}/#clinic`) }, inLanguage: SITE.lang, dateModified: SITE.updated }, crumbsLd(items), ...faqLd, ORG, WEBSITE] };
   const mapQ = encodeURIComponent(c.mapQuery || `${c.name}, ${c.addressLine}`);
   const html = head({
@@ -373,8 +393,8 @@ ${[1, 2, 3, 4, 5, 6, 0].map((d) => `<tr data-day="${d}"><td>${DAYS[d]}</td><td>$
 <ul class="service-grid">${c.services.map((s) => `<li>${esc(s.name)}${s.note ? `<span>${esc(s.note)}</span>` : ''}</li>`).join('')}</ul>
 ${c.about}
 ${c.incomplete ? '<div class="box box--mint"><span class="eyebrow">Listing in progress</span><p style="font-size:16px;line-height:1.6">Some details for this clinic are still being confirmed. Please call ahead, and <a href="/contact/">let us know</a> if anything has changed.</p></div>' : ''}
-${c.faqs?.length ? `<h2 id="faq">Frequently asked questions</h2>
-<div class="qa">${c.faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${a}</p></details>`).join('')}</div>` : ''}
+${faqs.length ? `<h2 id="faq">Frequently asked questions</h2>
+<div class="qa">${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${a}</p></details>`).join('')}</div>` : ''}
 <p style="font-size:14px;color:var(--muted-2)">Details last checked ${longDate(SITE.updated)}. Clinic information comes from the clinic's own published details and public listings. Spotted a change? <a href="/contact/">Tell us</a>.</p>
 </div>
 <aside class="stack g24" aria-label="Map and nearby clinics">
@@ -389,6 +409,9 @@ ${nearby.length ? `<div class="stack g12"><h2 style="font-size:26px">Nearby clin
 ${hasArea ? `<a class="chip" href="${areaUrl}">Clinics in ${esc(c.areaLabel)}</a>` : ''}
 ${networkUrl ? `<a class="chip" href="${networkUrl}">All ${esc(c.network.name)} branches</a>` : ''}
 ${(coll?.serviceLinks || []).map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}
+</div></div>
+<div class="stack g12"><h2 style="font-size:22px">Health guides</h2><div class="chips">
+${guideLinks(articles, c.serviceKeys.includes('aesthetic')).map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}
 </div></div>
 </aside>
 </div>

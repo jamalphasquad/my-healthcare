@@ -94,7 +94,7 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
       ['US FDA — Sculptra summary of safety and effectiveness (2023)', 'https://www.accessdata.fda.gov/cdrh_docs/pdf3/P030050S039B.pdf'],
       ['Case report — Skin necrosis after exosome injection, J Cosmet Dermatol (2025)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12359287/'],
     ],
-    related: ['weight-loss-injections-malaysia', 'clinic-or-emergency-department', 'breast-cancer-screening-malaysia'],
+    related: ['pico-laser-melasma-malaysia', 'weight-loss-injections-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -177,7 +177,7 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['Wilding et al. — Weight regain after withdrawal of semaglutide (STEP 1 extension, 2022)', 'https://discovery.ucl.ac.uk/id/eprint/10149199/'],
       ['NHS — Semaglutide', 'https://www.nhs.uk/medicines/semaglutide/'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'check-blood-pressure-at-home', 'clinic-or-emergency-department'],
+    related: ['world-diabetes-day-2026-kl', 'undiagnosed-diabetes-high-blood-pressure-young-adults', 'check-blood-pressure-at-home'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -253,6 +253,6 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu sympt
       ['US CDC — Key facts about seasonal flu vaccine', 'https://www.cdc.gov/flu/vaccines/keyfacts.html'],
       ['US CDC — Getting flu and COVID-19 vaccines at the same time', 'https://www.cdc.gov/flu/prevent/coadministration.htm'],
     ],
-    related: ['clinic-or-emergency-department', 'haze-air-quality-klang-valley', 'world-mental-health-day-2026-malaysia'],
+    related: ['dengue-vaccine-qdenga-malaysia', 'haze-air-quality-klang-valley', 'clinic-or-emergency-department'],
   },
 ];

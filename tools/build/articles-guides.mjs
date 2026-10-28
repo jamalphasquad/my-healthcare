@@ -7,7 +7,7 @@ export const GUIDES = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'check-blood-pressure-at-home',
-    title: 'A five-minute routine for checking blood pressure at home',
+    title: 'How to check your blood pressure at home: a five-minute routine',
     crumb: 'Checking blood pressure at home',
     seoTitle: 'How to Check Blood Pressure at Home: A 5-Minute Routine (Malaysia Guide)',
     desc: 'How to measure blood pressure correctly at home, following Malaysia’s Clinical Practice Guidelines: the right monitor, how to sit, when to measure, and what the numbers mean.',
@@ -55,7 +55,7 @@ ${figure('bp-check-desk', 'A home blood pressure monitor next to an open noteboo
       ['Ministry of Health Malaysia — Clinical Practice Guidelines: Management of Hypertension, 5th edition (2018)', 'https://mymahtas2.moh.gov.my/files/CPG%20Maagement%20of%20Hypertension%20CPG%202018%20V3.8%20FA.pdf'],
       ['Institute for Public Health — NHMS 2023 fact sheet', 'https://iku.moh.gov.my/images/nhms2023/fact-sheet-nhms-2023.pdf'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'clinic-or-emergency-department', 'breast-cancer-screening-malaysia'],
+    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'world-diabetes-day-2026-kl', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */

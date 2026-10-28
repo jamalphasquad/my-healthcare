@@ -113,7 +113,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
       ['MOH — Management of Breast Cancer, 3rd edition, Quick Reference (2019)', 'https://mymahtas2.moh.gov.my/files/QR_Management_of_Breast_Cancer_(Third_Edition)_%20(1).pdf'],
       ['MOH — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017)', 'https://mymahtas2.moh.gov.my/files/CPG%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'breast-cancer-screening-malaysia', 'check-blood-pressure-at-home'],
+    related: ['world-diabetes-day-2026-kl', 'budget-2027-health-malaysia', 'breast-cancer-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

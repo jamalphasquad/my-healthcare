@@ -140,13 +140,13 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       ['CodeBlue — No plans yet for dengue vaccine in national programme (Jul 2025)', 'https://codeblue.galencentre.org/2025/07/no-plans-yet-for-dengue-vaccine-in-national-programme-wolbachia-expansion-in-focus/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['haze-air-quality-klang-valley', 'check-blood-pressure-at-home', 'clinic-or-emergency-department'],
+    related: ['dengue-vaccine-qdenga-malaysia', 'haze-air-quality-klang-valley', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
   {
     slug: 'breast-cancer-screening-malaysia',
-    title: 'When should Malaysian women start breast screening?',
+    title: 'Breast cancer screening in Malaysia: when to start, and where to get a free mammogram',
     crumb: 'Breast cancer screening',
     seoTitle: 'Breast Cancer Screening in Malaysia: When to Start & Free Mammograms (2026)',
     desc: 'Half of breast cancers in Malaysia are found at a late stage. Self-checks, clinical exams and mammograms explained, plus free and subsidised mammograms for women in Selangor and KL.',
@@ -266,7 +266,7 @@ ${figure('morning-walk', 'A woman walking along a tree-lined path in morning lig
   /* ------------------------------------------------------------------ */
   {
     slug: 'undiagnosed-diabetes-high-blood-pressure-young-adults',
-    title: 'Most young Malaysians with diabetes or high blood pressure don’t know it',
+    title: 'Undiagnosed diabetes and high blood pressure: most young Malaysians don’t know they have it',
     crumb: 'Undiagnosed diabetes & high blood pressure',
     seoTitle: 'Undiagnosed Diabetes & High Blood Pressure in Young Malaysians: Free Screening',
     desc: 'Over 80% of Malaysians aged 18–29 with diabetes or hypertension are undiagnosed, the health minister said in October 2026. Why it goes unnoticed, which checks you need, and free screening options.',
@@ -325,6 +325,6 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk beside a notebook'
       ['CodeBlue — Over two million adults live with three NCDs: NHMS 2023 (May 2024)', 'https://codeblue.galencentre.org/2024/05/over-two-million-adults-in-malaysia-live-with-three-ncds-nhms-2023/'],
       ['PERKESO SEHATi — Health screening programme', 'https://sehati.ladesk.com/'],
     ],
-    related: ['weight-loss-injections-malaysia', 'check-blood-pressure-at-home', 'breast-cancer-screening-malaysia'],
+    related: ['world-diabetes-day-2026-kl', 'check-blood-pressure-at-home', 'free-health-screening-malaysia'],
   },
 ];
