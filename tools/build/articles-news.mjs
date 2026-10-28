@@ -6,33 +6,37 @@ export const NEWS = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'haze-air-quality-klang-valley',
-    title: 'Haze is back in the Klang Valley: how to protect your family when the API climbs',
+    title: 'Haze in the Klang Valley: how to protect your family when the API climbs',
     crumb: 'Haze and air quality',
     seoTitle: 'Haze in the Klang Valley (October 2026): API Levels, Masks & Health Tips',
     desc: 'Haze has pushed air quality to unhealthy levels across Selangor and Kuala Lumpur. What the API numbers mean, who is most at risk, which masks work, and when to see a doctor.',
-    excerpt: 'Every Selangor monitoring station read “unhealthy” this week. What the API means, which masks help, and how to protect children and older family members.',
-    standfirst: 'Smoke from fires in Sumatra and Kalimantan has pushed air quality into the unhealthy range across Selangor and Kuala Lumpur. A few simple habits can make a real difference to how you and your family feel.',
-    cat: 'prevention', catLabel: 'Prevention', mins: 7, published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'October’s haze closed schools across the Klang Valley before the monsoon brought relief. What the API means, which masks help, and how to protect children and older family members.',
+    standfirst: 'Smoke from fires in Sumatra and Kalimantan pushed air quality into the unhealthy range across Selangor and Kuala Lumpur in September and October 2026. The monsoon has brought relief, but haze can return quickly. A few simple habits make a real difference to how you and your family feel.',
+    cat: 'prevention', catLabel: 'Prevention', mins: 7, published: PUB, modified: '2026-10-28', author: AUTHOR, news: true, medical: true,
     about: ['Haze-related respiratory illness'],
     image: 'kl-twin-towers-dusk', imageAlt: 'Kuala Lumpur skyline and the Petronas Twin Towers under a hazy sky at dusk',
     keyPoints: [
-      'On 8 October 2026, all six Selangor monitoring stations recorded unhealthy air (API 101–200).',
+      'Haze peaked in early to mid-October 2026, closing schools across Selangor, Kuala Lumpur, Putrajaya and Melaka. By 26 October most areas were back to good or moderate air.',
+      'The Northeast Monsoon, which began on 27 October, is expected to stop smoke drifting in from neighbouring countries until March 2027.',
+      'Upper respiratory infections rose 167% and asthma cases 127% in one week in September, the Health Minister told Parliament.',
       'Children, older people, pregnant women and anyone with asthma, COPD or heart disease are most at risk.',
       'Stay indoors with windows closed when the API is above 100, and use a well-fitted N95 mask if you must go out.',
       'See a doctor for wheezing, chest tightness or breathlessness that does not settle. For severe breathing difficulty, call 999.',
     ],
     sections: [
-      { id: 'now', h: 'What is happening now', tocLabel: 'What is happening now', html: `<p>At 9am on 8 October 2026, 38 of Malaysia’s 68 air-quality monitoring stations recorded an <strong>unhealthy</strong> Air Pollutant Index (API) reading, between 101 and 200. Every station in Selangor was in that range: Johan Setia (178), Shah Alam (170), Banting (167), Klang (166), Petaling Jaya (165) and Kuala Selangor (155). In and around Kuala Lumpur, Putrajaya read 173, Cheras 172 and Batu Muda 168.</p>
+      { id: 'now', h: 'What is happening now', tocLabel: 'What is happening now', html: `<p><strong>Update, 28 October:</strong> the haze has eased. On 25 October the highest reading in the Klang Valley was Batu Muda at 93 (moderate), and by 26 October most areas were good or moderate. The Northeast Monsoon began on 27 October and runs until March 2027. MetMalaysia expects it to bring wetter weather, with three to five episodes of heavy rain between November and January, and to stop smoke drifting in from neighbouring countries. Parts of Sarawak, Johor and Negeri Sembilan still had unhealthy readings on 25 October.</p>
+<p><strong>How bad it got:</strong> at 9am on 8 October 2026, 38 of Malaysia’s 68 air-quality monitoring stations recorded an <strong>unhealthy</strong> Air Pollutant Index (API) reading, between 101 and 200. Every station in Selangor was in that range: Johan Setia (178), Shah Alam (170), Banting (167), Klang (166), Petaling Jaya (165) and Kuala Selangor (155). In and around Kuala Lumpur, Putrajaya read 173, Cheras 172 and Batu Muda 168.</p>
 <p>The Department of Environment has linked the haze to fire hotspots across the Strait. On 29 September it reported 327 hotspots in Kalimantan and 191 in Sumatra. Johan Setia came close to “very unhealthy” on 18 September, reaching 198.</p>
-<p>The ASEAN weather centre expects haze to stay elevated from October to December 2026. Rain during the inter-monsoon period may bring some relief from late October, but conditions can change quickly from day to day.</p>` },
+<p>All schools in Selangor, Kuala Lumpur, Putrajaya and Melaka closed on 9 October. From 12 October, the Education Ministry closes schools in an area when the API goes above 180, or stays above 150 for three days in a row.</p>
+<p>The haze took a toll on health. On 15 October, the Health Minister told Parliament that in one week in September, upper respiratory infections rose 167% to 7,065 cases, asthma 127% to 1,117 cases and conjunctivitis 83%. The Ministry activated its National Haze Operations Room on 4 September.</p>` },
       { id: 'api', h: 'What the API numbers mean', html: `<p>Check the latest reading for your area on the Department of Environment’s <a href="https://eqms.doe.gov.my/APIMS/main" target="_blank" rel="noopener">APIMS portal</a> before planning time outdoors.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>API</th><th>Status</th><th>What to do</th></tr></thead>
 <tbody>
 <tr><td>0–50</td><td>Good</td><td>Normal activities.</td></tr>
 <tr><td>51–100</td><td>Moderate</td><td>Sensitive groups should watch for symptoms.</td></tr>
-<tr><td>101–200</td><td>Unhealthy</td><td>Cut down outdoor activity, especially for at-risk groups. Schools reportedly stop outdoor activities above 100.</td></tr>
-<tr><td>201–300</td><td>Very unhealthy</td><td>Stay indoors as much as possible. Selangor has said schools close at 200.</td></tr>
+<tr><td>101–200</td><td>Unhealthy</td><td>Cut down outdoor activity, especially for at-risk groups. The Ministry of Health advises stopping school outdoor activities above 100. Schools close above 180, or above 150 for three days in a row.</td></tr>
+<tr><td>201–300</td><td>Very unhealthy</td><td>Stay indoors as much as possible.</td></tr>
 <tr><td>Above 300</td><td>Hazardous</td><td>Follow official instructions closely.</td></tr>
 </tbody></table></div>` },
       { id: 'risk', h: 'Who is most at risk', html: `<p>Haze particles are small enough to reach deep into the lungs. Most healthy adults notice sore eyes, a scratchy throat or a cough. Some people are more likely to become unwell:</p>
@@ -65,8 +69,15 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
       ['Is it safe to exercise outdoors during haze?', 'When the API is above 100, it is better to exercise indoors or postpone. People with asthma, heart disease or other risk factors should avoid outdoor exertion altogether until air quality improves.'],
       ['Is a surgical mask enough for haze?', 'A surgical mask blocks larger particles but lets many fine haze particles through. A well-fitted N95 or KN95 mask gives much better protection for adults.'],
       ['Where can I check the API for my area?', 'The Department of Environment publishes live readings on its APIMS portal at eqms.doe.gov.my, updated every hour.'],
+      ['When do schools close because of haze?', 'Since 12 October 2026, the Education Ministry closes schools in an area when the API goes above 180, or stays above 150 for three days in a row.'],
+      ['Is the haze over?', 'In the Klang Valley, air quality was back to good or moderate by 26 October 2026, and the Northeast Monsoon is expected to keep smoke away until March 2027. Haze can return quickly, so check the API before outdoor plans.'],
     ],
     sources: [
+      ['Free Malaysia Today — Klang Valley haze clears (25 Oct 2026)', 'https://www.freemalaysiatoday.com/category/nation/2026/10/25/klang-valley-haze-clears-but-serian-nears-very-unhealthy-api'],
+      ['New Straits Times — Haze eases as Northeast Monsoon set to begin (26 Oct 2026)', 'https://www.nst.com.my/amp/news/nation/2026/10/1563994/haze-eases-northeast-monsoon-set-begin'],
+      ['The Star — Spikes in URTI, asthma and conjunctivitis cases since September (15 Oct 2026)', 'https://www.thestar.com.my/news/nation/2026/10/15/spikes-in-urti-asthma-conjunctivitis-cases-since-sept'],
+      ['Bernama — Health Minister on haze-related illness (15 Oct 2026)', 'https://bernama.com/en/news.php?id=2620676'],
+      ['Free Malaysia Today — Selangor, Melaka schools to close over worsening haze (8 Oct 2026)', 'https://www.freemalaysiatoday.com/category/nation/2026/10/08/selangor-melaka-schools-to-close-tomorrow-over-worsening-haze'],
       ['Malay Mail — Haze persists as 38 areas record unhealthy API (8 Oct 2026)', 'https://www.malaymail.com/news/malaysia/2026/10/08/haze-persists-as-38-areas-record-unhealthy-api-segamat-highest-at-187/238182'],
       ['Media Selangor — Air quality update (8 Oct 2026)', 'https://mediaselangor.com/en/2026/10/399920'],
       ['The Star — Smoke from Kalimantan, Sumatra hotspots causing haze, says DOE (30 Sep 2026)', 'https://www.thestar.com.my/news/nation/2026/09/30/smoke-from-kalimantan-sumatra-hotspots-causing-haze-in-m039sia-says-doe'],
@@ -88,12 +99,13 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
     desc: 'Dengue cases in Selangor and Kuala Lumpur have surged in 2026. Symptoms in the first three days, warning signs that need A&E, safe home care, and where to get a blood test.',
     excerpt: 'Cases are up sharply in Selangor and KL this year. Warning signs, why rest and fluids matter, which painkillers to avoid, and when to go straight to A&E.',
     standfirst: 'Dengue cases have risen sharply across Selangor and Kuala Lumpur in 2026. Most people recover with rest and fluids, but knowing the warning signs, and which painkillers to avoid, makes the difference.',
-    cat: 'prevention', catLabel: 'Prevention', mins: 7, published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    cat: 'prevention', catLabel: 'Prevention', mins: 7, published: PUB, modified: '2026-10-28', author: AUTHOR, news: true, medical: true,
     about: ['Dengue fever', 'Demam denggi'],
     image: 'aedes-mosquito', imageAlt: 'Close-up of an Aedes mosquito with black-and-white striped legs',
     caption: 'The Aedes mosquito, which spreads dengue, has distinctive black-and-white markings and bites mostly during the day',
     keyPoints: [
-      'Malaysia recorded 65,979 dengue cases by early September 2026, up 66% on the same period last year. Selangor has the most cases of any state.',
+      'Malaysia recorded 78,702 dengue cases and 68 deaths between 4 January and 27 October 2026. Selangor has the most cases, followed by Kuala Lumpur and Putrajaya.',
+      'The monsoon brings heavy rain from November to January, so clear standing water after every downpour.',
       'Dengue usually starts with a sudden high fever, headache and body aches.',
       'The riskiest time is often when the fever <em>starts to come down</em>, around days 3 to 7.',
       'Use paracetamol for fever. Avoid aspirin, ibuprofen and other NSAIDs.',
@@ -101,6 +113,8 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
     ],
     sections: [
       { id: 'this-year', h: 'Why 2026 has been a hard dengue year', html: `<p>By epidemiological week 35, Malaysia had recorded <strong>65,979 dengue cases and 62 deaths</strong>, up from 39,616 cases and 32 deaths over the same period in 2025. The Klang Valley has been hit hardest. By mid-August, Selangor had 25,090 cases (up 61%), while Kuala Lumpur and Putrajaya together had 10,316 (up 106%). By 7 October, Selangor’s total for the year had passed 31,000, according to the iDengue portal.</p>
+<p><strong>Update, 28 October:</strong> iDengue recorded <strong>78,702 cases nationwide</strong> between 4 January and 27 October, with 68 deaths. Selangor had 32,959 cases, Kuala Lumpur and Putrajaya 13,143, and Johor 12,877.</p>
+<p>The Northeast Monsoon began on 27 October, and MetMalaysia expects three to five episodes of heavy rain between November and January. Rain followed by sunny days creates new breeding sites, so keep clearing standing water through the wet season.</p>
 <p>The Ministry of Health has linked the rise to a shift in the dominant virus type from DENV-2 to <strong>DENV-3</strong>, a strain many people have little immunity to, along with erratic weather that alternates heavy rain and heat. More than 70% of mosquito breeding sites found by health officers are in and around homes.</p>` },
       { id: 'what', h: 'What dengue is', html: `<p>Dengue is a viral infection spread by <em>Aedes</em> mosquitoes, which bite mostly during the day. In a dense, humid region like the Klang Valley, they breed easily in small pockets of clean standing water: flower-pot trays, roof gutters, discarded containers.</p>
 <p>Many infections are mild. But a small number of people develop severe dengue, which needs hospital care. Knowing what to watch for helps you act at the right time.</p>` },
@@ -121,7 +135,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
 </ul>` },
       { id: 'prevention', h: 'Prevention at home', html: `<p>Ten minutes a week makes a real difference. Walk around your home and empty, scrub or cover anything that holds water: plant trays, pails, pet bowls, roof gutters and air-conditioner drip trays. Use repellent during the day, and wear long sleeves outdoors in the early morning and late afternoon.</p>
 <p><strong>Wolbachia mosquitoes:</strong> in some areas, health authorities release mosquitoes carrying <em>Wolbachia</em> bacteria, which reduce the spread of dengue. Officials credited the programme with a 36% drop in Putrajaya’s cases in early 2026.</p>
-<p><strong>Vaccine:</strong> the Qdenga dengue vaccine received conditional approval in Malaysia in 2024 for people aged 4 and over, given as two doses three months apart. It is available at private clinics and hospitals but is not part of the national immunisation programme. Ask your doctor whether it suits you.</p>` },
+<p><strong>Vaccine:</strong> the Qdenga dengue vaccine received conditional approval in Malaysia in 2024 for people aged 4 and over, given as two doses three months apart. It is available at private clinics and hospitals but is not part of the national immunisation programme. It gives less protection against DENV-3 in people who have never had dengue, so ask your doctor whether it suits you. See our <a href="/articles/dengue-vaccine-qdenga-malaysia/">dengue vaccine guide</a>.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsIntro: "Any GP clinic can assess a fever and arrange a blood test (full blood count). Fevers often start in the evening or at the weekend, so our directory shows which clinics are open late and on weekends, with opening hours in Malaysia time.",
@@ -132,10 +146,11 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       ['How long after a mosquito bite do dengue symptoms start?', 'Usually 4 to 10 days after the bite.'],
     ],
     sources: [
+      ['iDengue — National dengue statistics, 4 Jan to 27 Oct 2026 (accessed 28 Oct 2026)', 'https://idengue.mysa.gov.my/'],
+      ['New Straits Times — Haze eases as Northeast Monsoon set to begin (26 Oct 2026)', 'https://www.nst.com.my/amp/news/nation/2026/10/1563994/haze-eases-northeast-monsoon-set-begin'],
       ['Bernama — Dengue cases rise 66% (9 Sep 2026)', 'https://www.bernama.com/en/general/news.php?id=2605035'],
       ['Reuters via Sowetan — Dengue cases up in Klang Valley, health ministry warns (21 Aug 2026)', 'https://www.sowetan.co.za/news/world/2026-08-21-dengue-fever-cases-up-56-in-klang-valley-health-ministry-warns/'],
       ['New Straits Times — Sharp rise in dengue cases and deaths (6 Jul 2026)', 'https://www.nst.com.my/amp/news/nation/2026/07/1481420/malaysia-records-sharp-rise-dengue-cases-and-deaths'],
-      ['iDengue — Ministry of Health dengue portal', 'https://idengue.mysa.gov.my/'],
       ['Malay Mail — Putrajaya dengue cases drop 36.2% (4 May 2026)', 'https://www.malaymail.com/news/malaysia/2026/05/04/putrajaya-dengue-cases-drop-362pc-wolbachia-method-shows-success/218719'],
       ['CodeBlue — No plans yet for dengue vaccine in national programme (Jul 2025)', 'https://codeblue.galencentre.org/2025/07/no-plans-yet-for-dengue-vaccine-in-national-programme-wolbachia-expansion-in-focus/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],

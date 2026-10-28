@@ -62,7 +62,7 @@ export const OCT_2026_C = [
 </ul>
 <p>The new ambulances matter. In 2025, only about a third of the most urgent emergency calls were reached within the 15-minute target. In an emergency, always call <a href="tel:999">999</a>. If you are unsure whether you need an ambulance, see our guide to <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a>.</p>` },
       { id: 'screening', h: 'Screening, fertility and vaccines', tocLabel: 'Screening and vaccines', html: `<ul>
-<li><strong>Thalassaemia:</strong> free screening at Ministry of Health facilities is extended to the <strong>husbands and children of carriers</strong>. Thalassaemia is an inherited blood disorder. Two carriers have a 1 in 4 chance in each pregnancy of having a child with thalassaemia major, who needs lifelong blood transfusions. Screening helps couples know their risk.</li>
+<li><strong>Thalassaemia:</strong> free screening at Ministry of Health facilities is extended to the <strong>husbands and children of carriers</strong>. Thalassaemia is an inherited blood disorder. Two carriers have a 1 in 4 chance in each pregnancy of having a child with thalassaemia major, who needs lifelong blood transfusions. Screening helps couples know their risk. See our <a href="/articles/thalassaemia-screening-malaysia/">thalassaemia screening guide</a>.</li>
 <li><strong>Fertility (BuAi programme):</strong> subsidised fertility treatment (intrauterine insemination) for 2,000 couples through LPPKN, and men’s wellness services for 42,000 people.</li>
 <li><strong>HPV vaccine:</strong> the school programme for about 230,000 Year 6 girls moves to a vaccine that covers nine HPV types instead of two. See our <a href="/articles/hpv-vaccine-malaysia/">HPV vaccine guide</a>.</li>
 <li><strong>Drivers:</strong> commercial vehicle drivers get PERKESO health screening vouchers worth up to RM30.</li>
@@ -122,7 +122,7 @@ ${figure('caregiver-wheelchair', 'A carer pushing an older man in a wheelchair o
       ['RinggitPlus — Budget 2027: what changes for your money in 2027', 'https://ringgitplus.com/en/blog/budget-2027/budget-2027-what-changes-for-your-money-in-2027.html'],
       ['SAYS — All the healthcare reforms proposed under Budget 2027', 'https://says.com/my/news/list-all-healthcare-reforms-proposed-budget-2027-benefit-you'],
     ],
-    related: ['mediasas-malaysia', 'free-health-screening-malaysia', 'hpv-vaccine-malaysia'],
+    related: ['mediasas-malaysia', 'thalassaemia-screening-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

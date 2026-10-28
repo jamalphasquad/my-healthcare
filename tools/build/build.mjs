@@ -9,12 +9,13 @@ import { GUIDES } from './articles-guides.mjs';
 import { OCT_2026 } from './articles-2026-10.mjs';
 import { OCT_2026_B } from './articles-2026-10b.mjs';
 import { OCT_2026_C } from './articles-2026-10c.mjs';
+import { OCT_2026_D } from './articles-2026-10d.mjs';
 import { SEO } from './seo.mjs';
 import { GBP } from './gbp.mjs';
 import { buildIndex, searchPage } from './search.mjs';
 import { buildCollections } from './collections.mjs';
 
-const ARTICLES = [...OCT_2026_C, ...OCT_2026_B, ...OCT_2026, ...NEWS, ...GUIDES]; // newest first
+const ARTICLES = [...OCT_2026_D, ...OCT_2026_C, ...OCT_2026_B, ...OCT_2026, ...NEWS, ...GUIDES]; // newest first
 // Footer topic links, kept to categories that have at least one article.
 const TOPICS = [['prevention', 'Prevention'], ['heart-diabetes', 'Heart & diabetes'], ['weight', 'Weight & metabolism'], ['aesthetics', 'Aesthetics & skin'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['guides', 'Guides'], ['clinic-guides', 'Clinic guides']]
   .filter(([cat]) => ARTICLES.some((a) => a.cat === cat));

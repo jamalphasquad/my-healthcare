@@ -55,7 +55,7 @@ ${figure('bp-check-desk', 'A home blood pressure monitor next to an open noteboo
       ['Ministry of Health Malaysia — Clinical Practice Guidelines: Management of Hypertension, 5th edition (2018)', 'https://mymahtas2.moh.gov.my/files/CPG%20Maagement%20of%20Hypertension%20CPG%202018%20V3.8%20FA.pdf'],
       ['Institute for Public Health — NHMS 2023 fact sheet', 'https://iku.moh.gov.my/images/nhms2023/fact-sheet-nhms-2023.pdf'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'world-diabetes-day-2026-kl', 'clinic-or-emergency-department'],
+    related: ['stroke-heart-attack-kuala-lumpur', 'world-diabetes-day-2026-kl', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -118,6 +118,6 @@ ${figure('doctor-consultation', 'A doctor talking with a patient across a desk',
       ['Ministry of Health Malaysia — official portal', 'https://www.moh.gov.my/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['dengue-klang-valley-first-three-days', 'haze-air-quality-klang-valley', 'check-blood-pressure-at-home'],
+    related: ['stroke-heart-attack-kuala-lumpur', 'dengue-klang-valley-first-three-days', 'check-blood-pressure-at-home'],
   },
 ];

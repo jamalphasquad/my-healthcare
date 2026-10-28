@@ -58,7 +58,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
 <ul>
 <li><strong>PeKa B40 continues</strong>, with RM80 million for free screening and treatment support for STR recipients and their spouses aged 40+.</li>
 <li><strong>Screening vouchers for commercial vehicle drivers</strong>, worth up to RM30, through PERKESO.</li>
-<li><strong>Free thalassaemia screening</strong> at MOH facilities extended to the husbands and children of families who carry the gene.</li>
+<li><strong>Free <a href="/articles/thalassaemia-screening-malaysia/">thalassaemia screening</a></strong> at MOH facilities extended to the husbands and children of families who carry the gene.</li>
 <li>Screening and mobile clinics run by university teaching hospitals for rural and lower-income communities.</li>
 </ul>` },
       { id: 'by-age', h: 'Which screenings you need at your age', tocLabel: 'Screenings by age', html: `<p>Malaysia’s Ministry of Health Clinical Practice Guidelines recommend these checks for adults at average risk. Your doctor may advise earlier or more frequent tests if you have risk factors or a family history.</p>
