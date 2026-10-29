@@ -1,5 +1,9 @@
 // Search titles (≤60 chars) and meta descriptions (≤155 chars), kept in one place.
 export const SEO = {
+  'pregnancy-due-date-calculator-malaysia': ['Pregnancy Due Date Calculator Malaysia (Kiraan Minggu Hamil)', 'Free due date calculator: find how many weeks pregnant you are, plus antenatal check-ups in Malaysia, the pink book, warning signs and ectopic pregnancy.'],
+  'baby-vaccination-schedule-malaysia': ['Baby Vaccination Schedule Malaysia (NIP): Jadual Imunisasi', 'Malaysia’s free childhood vaccine schedule from birth to 15: the 6-in-1 at 2, 3 and 5 months, pneumococcal, MMR, side effects and optional vaccines.'],
+  'gout-malaysia': ['Gout in Malaysia: Symptoms, Uric Acid Levels & Treatment', 'Gout symptoms, what your uric acid level means, foods and drinks to limit, treatment that prevents attacks, and gout vs pseudogout. A Malaysian guide.'],
+  'itchy-skin-eczema-hives-malaysia': ['Itchy Skin: Eczema, Hives (Gegata), Scabies & When to Worry', 'Eczema, pompholyx, hives (gegata), heat rash, scabies and fungal rashes: how to tell them apart, what helps, hidden-steroid creams, when to see a doctor.'],
   'floods-health-risks-malaysia': ['Floods & Your Health: Leptospirosis, Diarrhoea & Safety', 'Monsoon floods bring leptospirosis (kencing tikus), diarrhoea and skin infections. Symptoms, safe water, wound care, clean-up and contacts in Malaysia.'],
   'hfmd-children-malaysia': ['HFMD in Children: Symptoms, Contagious Period & Home Care', 'HFMD symptoms in babies and children (simptom HFMD), how long it is contagious, home care for mouth ulcers, warning signs, and HFMD vs measles in Malaysia.'],
   'persistent-cough-malaysia': ['Cough That Won’t Go Away? Causes, Medicine & When to Worry', 'Why a cough lingers (batuk berpanjangan) after flu or haze, TB and other causes, what cough medicine helps, kids’ fever medicine and when to see a doctor.'],

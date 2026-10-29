@@ -191,7 +191,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most childre
 <tr><td>Rash</td><td>Spots or blisters mainly on palms, soles and bottom</td><td>Red, blotchy rash starting at the hairline and spreading down the whole body</td></tr>
 <tr><td>Vaccine</td><td>None in Malaysia</td><td>MMR, free under the National Immunisation Programme</td></tr>
 </tbody></table></div>
-<p>Malaysia recorded <strong>3,791 measles cases in 2024</strong>, up from 2,002 in 2023, and 3 children died, all unvaccinated. The National Immunisation Programme gives the MMR vaccine at <strong>9 and 12 months</strong>, with an extra early dose in Sabah. The Ministry of Health has extended its free catch-up measles-rubella dose until 31 December 2026 for children who missed it. Book through MySejahtera or ask at a Klinik Kesihatan.</p>
+<p>Malaysia recorded <strong>3,791 measles cases in 2024</strong>, up from 2,002 in 2023, and 3 children died, all unvaccinated. The National Immunisation Programme gives the MMR vaccine at <strong>9 and 12 months</strong>, with an extra early dose in Sabah. If your child has missed a measles vaccine, ask at your Klinik Kesihatan about a free catch-up dose. See our <a href="/articles/baby-vaccination-schedule-malaysia/">vaccination schedule guide</a>.</p>
 <p>If you think your child has measles, call the clinic before you go, so staff can keep other patients safe.</p>` },
     ],
     clinicsMode: 'directory',
@@ -220,7 +220,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most childre
       ['US CDC — Measles signs and symptoms (Aug 2026)', 'https://www.cdc.gov/measles/signs-symptoms/index.html'],
       ['Cleveland Clinic — Calamine lotion', 'https://my.clevelandclinic.org/health/drugs/23338-calamine-lotion'],
     ],
-    related: ['persistent-cough-malaysia', 'influenza-a-malaysia', 'clinic-or-emergency-department'],
+    related: ['baby-vaccination-schedule-malaysia', 'persistent-cough-malaysia', 'itchy-skin-eczema-hives-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -689,6 +689,6 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'Scre
       ['Berita RTM — 57,910 students identified as thalassaemia carriers (23 Feb 2026)', 'https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/57910-murid-dikesan-pembawa-talasemia/'],
       ['MyGOV — Premarital HIV screening (updated Aug 2026)', 'https://www.malaysia.gov.my/my/topics/ujian-saringan-hiv-praperkahwinan'],
     ],
-    related: ['budget-2027-health-malaysia', 'free-health-screening-malaysia', 'hpv-vaccine-malaysia'],
+    related: ['pregnancy-due-date-calculator-malaysia', 'budget-2027-health-malaysia', 'free-health-screening-malaysia'],
   },
 ];

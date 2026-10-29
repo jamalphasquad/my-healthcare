@@ -233,6 +233,18 @@ ${img('kl-skyline', 'Kuala Lumpur skyline with Menara Kuala Lumpur under a blue 
 </div>
 </section>
 
+${articles.some((a) => `/articles/${a.slug}/` === DUE_CALC_URL) ? `<section id="due-date" class="wrap calc-home" aria-labelledby="due-h">
+<div class="calc-home__box">
+<div class="stack g12">
+<span class="eyebrow">Free tool &middot; Pregnancy</span>
+<h2 id="due-h" class="h-section">When is your baby <em>due?</em></h2>
+<p>Enter the first day of your last period to see your due date, how many weeks pregnant you are, and when your key check-ups and scans fall.</p>
+<a href="${DUE_CALC_URL}">Read the week-by-week pregnancy guide &rarr;</a>
+</div>
+${dueDateCalc('home-due')}
+</div>
+</section>
+` : ''}
 <section id="clinics" class="band" aria-labelledby="cl-h" style="scroll-margin-top:70px">
 <div class="wrap section">
 ${directory(clinics, areas, services)}
@@ -293,6 +305,24 @@ ${faqs.map(([q, a], i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q)}<
 ${newsletter('Awareness campaigns, screening reminders and new clinic listings. No spam.')}
 ` + footer(topics);
   write('index.html', html);
+}
+
+// Pregnancy due date calculator, used on the home page and in the pregnancy guide.
+// assets/js/site.js works the dates out in the browser; nothing is sent or stored.
+export const DUE_CALC_URL = '/articles/pregnancy-due-date-calculator-malaysia/';
+export function dueDateCalc(id) {
+  const cycles = Array.from({ length: 25 }, (_, i) => i + 21);
+  return `<form class="calc" id="${id}" data-due-calc novalidate>
+<div class="calc__fields">
+<label class="calc__field"><span>First day of your last period</span><input type="date" name="lmp" required></label>
+<label class="calc__field"><span>Usual cycle length</span><select name="cycle">${cycles.map((n) => `<option value="${n}"${n === 28 ? ' selected' : ''}>${n} days</option>`).join('')}</select></label>
+<button class="btn btn--sq" type="submit">Calculate</button>
+</div>
+<p class="calc__error" role="alert" hidden></p>
+<div class="calc__result" aria-live="polite" hidden></div>
+<p class="calc__note">Worked out in your browser: nothing you enter is stored or sent. An early pregnancy scan gives the most accurate due date.</p>
+<noscript><p class="calc__note">This calculator needs JavaScript. To work out your due date yourself, add 280 days (40 weeks) to the first day of your last period.</p></noscript>
+</form>`;
 }
 
 export function newsletter(text) {
@@ -527,6 +557,7 @@ export function articlePage(a, { articles, clinics, topics }) {
     crumbsLd(items),
     ...(a.faqs?.length ? [{ '@type': 'FAQPage', mainEntity: a.faqs.map(([q, ans]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: ans.replace(/<[^>]+>/g, '') } })) }] : []),
     ...(guideClinic ? [clinicLd(guideClinic)] : []),
+    ...(a.ld || []),
     ORG, WEBSITE,
   ];
   const html = head({

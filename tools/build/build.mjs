@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { SITE, LAYOUT, write, img, abs } from './lib.mjs';
-import { home, clinicsIndex, clinicPage, articlesIndex, articlePage } from './pages.mjs';
+import { home, clinicsIndex, clinicPage, articlesIndex, articlePage, dueDateCalc } from './pages.mjs';
 import { staticPages } from './static-pages.mjs';
 import { CLINICS as RAW_CLINICS, NETWORKS, SERVICES, COMING_SOON } from './clinics.mjs';
 import { normalizeClinic, deriveAreas } from './clinic-data.mjs';
@@ -10,12 +10,13 @@ import { OCT_2026 } from './articles-2026-10.mjs';
 import { OCT_2026_B } from './articles-2026-10b.mjs';
 import { OCT_2026_C } from './articles-2026-10c.mjs';
 import { OCT_2026_D } from './articles-2026-10d.mjs';
+import { OCT_2026_E } from './articles-2026-10e.mjs';
 import { SEO } from './seo.mjs';
 import { GBP } from './gbp.mjs';
 import { buildIndex, searchPage } from './search.mjs';
 import { buildCollections } from './collections.mjs';
 
-const ARTICLES = [...OCT_2026_D, ...OCT_2026_C, ...OCT_2026_B, ...OCT_2026, ...NEWS, ...GUIDES]; // newest first
+const ARTICLES = [...OCT_2026_E, ...OCT_2026_D, ...OCT_2026_C, ...OCT_2026_B, ...OCT_2026, ...NEWS, ...GUIDES]; // newest first
 // Footer topic links, kept to categories that have at least one article.
 const TOPICS = [['prevention', 'Prevention'], ['heart-diabetes', 'Heart & diabetes'], ['weight', 'Weight & metabolism'], ['aesthetics', 'Aesthetics & skin'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['guides', 'Guides'], ['clinic-guides', 'Clinic guides']]
   .filter(([cat]) => ARTICLES.some((a) => a.cat === cat));
@@ -29,7 +30,9 @@ const AREAS = deriveAreas(CLINICS);
 const comingSoon = COMING_SOON.filter((n) => !AREAS.some((a) => a.label.toLowerCase() === n.toLowerCase()));
 LAYOUT.areas = AREAS;
 
-const fill = (html) => html.replace(/\{\{img:([^|]+)\|([^}]+)\}\}/g, (_, n, alt) => img(n, alt, { sizes: '(max-width: 760px) 100vw, 700px' }));
+const fill = (html) => html
+  .replace(/\{\{img:([^|]+)\|([^}]+)\}\}/g, (_, n, alt) => img(n, alt, { sizes: '(max-width: 760px) 100vw, 700px' }))
+  .replace('{{calc:due-date}}', () => dueDateCalc('article-due'));
 for (const a of ARTICLES) {
   for (const s of a.sections) s.html = fill(s.html);
   const text = [a.standfirst, ...(a.keyPoints || []), ...a.sections.map((s) => s.h + ' ' + s.html), ...(a.faqs || []).flat()].join(' ').replace(/<[^>]+>/g, ' ');

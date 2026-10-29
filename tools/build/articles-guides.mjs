@@ -55,7 +55,7 @@ ${figure('bp-check-desk', 'A home blood pressure monitor next to an open noteboo
       ['Ministry of Health Malaysia — Clinical Practice Guidelines: Management of Hypertension, 5th edition (2018)', 'https://mymahtas2.moh.gov.my/files/CPG%20Maagement%20of%20Hypertension%20CPG%202018%20V3.8%20FA.pdf'],
       ['Institute for Public Health — NHMS 2023 fact sheet', 'https://iku.moh.gov.my/images/nhms2023/fact-sheet-nhms-2023.pdf'],
     ],
-    related: ['stroke-heart-attack-kuala-lumpur', 'world-diabetes-day-2026-kl', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
+    related: ['stroke-heart-attack-kuala-lumpur', 'gout-malaysia', 'world-diabetes-day-2026-kl'],
   },
 
   /* ------------------------------------------------------------------ */

@@ -644,4 +644,64 @@
     });
     if (spInput.value) spRun(); else spInput.focus();
   }
+
+  /* ---------- Pregnancy due date calculator ----------
+     Naegele's rule: due date = first day of last period + 280 days, shifted by
+     (cycle length - 28) days. All dates are handled as UTC midnights so time zones
+     and daylight saving can't move them by a day. Nothing leaves the browser. */
+  var DAY = 864e5;
+  var utcToday = function () { var d = new Date(); return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()); };
+  var isoDate = function (t) { return new Date(t).toISOString().slice(0, 10); };
+  var longD = function (t) { return new Date(t).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }); };
+  var shortD = function (t) { return new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); };
+  var weeksText = function (days) {
+    var w = Math.floor(days / 7), d = days % 7;
+    return w + (w === 1 ? ' week' : ' weeks') + (d ? ' and ' + d + (d === 1 ? ' day' : ' days') : '');
+  };
+  $$('[data-due-calc]').forEach(function (form) {
+    var lmp = form.elements.lmp, cycle = form.elements.cycle;
+    var err = $('.calc__error', form), out = $('.calc__result', form);
+    var today = utcToday();
+    lmp.max = isoDate(today);
+    lmp.min = isoDate(today - 300 * DAY);
+    function fail(msg) { err.textContent = msg; err.hidden = false; out.hidden = true; lmp.setAttribute('aria-invalid', 'true'); }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(lmp.value);
+      if (!m) return fail('Enter the first day of your last period.');
+      var start = Date.UTC(+m[1], +m[2] - 1, +m[3]);
+      if (start > today) return fail('That date is in the future. Enter the first day of your last period.');
+      // Day 0 of pregnancy, adjusted for cycles longer or shorter than 28 days.
+      var day0 = start + (parseInt(cycle.value, 10) - 28) * DAY;
+      var due = day0 + 280 * DAY;
+      var ga = Math.round((today - day0) / DAY);
+      if (ga > 43 * 7) return fail('That date is more than 42 weeks ago. Check the date, or speak to your doctor or midwife.');
+      err.hidden = true; lmp.removeAttribute('aria-invalid');
+      var at = function (w, d) { return day0 + (w * 7 + (d || 0)) * DAY; };
+      // Trimesters as the Ministry of Health's antenatal record uses them: up to 12 weeks, 13-27, 28+.
+      var tri = ga < 13 * 7 ? 'First trimester' : ga < 28 * 7 ? 'Second trimester' : 'Third trimester';
+      var left = Math.round((due - today) / DAY);
+      var now = ga < 0
+        ? 'By these dates, pregnancy would not have started yet.'
+        : 'You are <strong>' + weeksText(ga) + '</strong> pregnant &middot; ' + tri + '. ' +
+          (left > 0 ? left + (left === 1 ? ' day' : ' days') + ' to go.' : left === 0 ? 'Your due date is today.' : 'Your due date was ' + -left + (left === -1 ? ' day' : ' days') + ' ago.');
+      // Milestones from the Ministry of Health Perinatal Care Manual (2020) and the free Tdap programme.
+      var steps = [
+        ['Book your first check-up', 'before 12 weeks', at(12)],
+        ['Second trimester starts', '13 weeks', at(13)],
+        ['Mid-pregnancy scan', '18 to 21 weeks', at(18), at(21, 6)],
+        ['Diabetes test, if at risk', '24 to 26 weeks', at(24), at(26, 6)],
+        ['Third trimester; start counting kicks', '28 weeks', at(28)],
+        ['Whooping cough (Tdap) jab', '28 to 32 weeks', at(28), at(32, 6)],
+        ['Full term', '39 weeks', at(39)],
+      ];
+      out.innerHTML = '<p class="calc__due"><span>Estimated due date</span><strong>' + longD(due) + '</strong></p>' +
+        '<p class="calc__now">' + now + '</p>' +
+        (ga >= 0 ? '<div class="calc__bar" role="img" aria-label="' + Math.min(100, Math.round(ga / 280 * 100)) + '% of the way to your due date"><span style="width:' + Math.min(100, Math.max(2, ga / 280 * 100)) + '%"></span></div>' : '') +
+        '<ul class="calc__steps">' + steps.map(function (s) {
+          return '<li' + ((s[3] || s[2]) < today ? ' class="is-past"' : '') + '><span>' + s[0] + ' <em>' + s[1] + '</em></span><span>' + shortD(s[2]) + (s[3] ? ' – ' + shortD(s[3]) : '') + '</span></li>';
+        }).join('') + '</ul>';
+      out.hidden = false;
+    });
+  });
 })();

@@ -286,7 +286,7 @@ ${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'The vac
       ['European Medicines Agency — Gardasil 9 product information', 'https://www.ema.europa.eu/en/medicines/human/EPAR/gardasil-9'],
       ['Cochrane Malaysia — New research confirms HPV vaccination prevents cervical cancer', 'https://malaysia.cochrane.org/news/penyelidikan-baru-mengesahkan-vaksinasi-hpv-mencegah-kanser-serviks'],
     ],
-    related: ['breast-cancer-screening-malaysia', 'free-health-screening-malaysia', 'flu-vaccine-malaysia'],
+    related: ['baby-vaccination-schedule-malaysia', 'breast-cancer-screening-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -392,6 +392,6 @@ ${figure('facial-treatment', 'A doctor examining facial skin in a clinic', 'A do
       ['NPRA — Cancellation of notified cosmetic products', 'https://www.npra.gov.my/index.php/en/consumers/safety-information/cancellation-of-notified-cosmetic-products.html'],
       ['KKM / NPRA — Media statement on cosmetics containing scheduled poisons (Nov 2025)', 'https://www.npra.gov.my/easyarticles/images/shared/Press%20Release/Press-release-Nov-2025.pdf'],
     ],
-    related: ['skin-boosters-malaysia', 'weight-loss-injections-malaysia', 'breast-cancer-screening-malaysia'],
+    related: ['itchy-skin-eczema-hives-malaysia', 'skin-boosters-malaysia', 'weight-loss-injections-malaysia'],
   },
 ];

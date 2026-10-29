@@ -329,6 +329,6 @@ ${figure('morning-walk', 'People walking in a park in the morning', 'Thirty minu
       ['Diabetes Malaysia — WDD state event, Kuala Lumpur (14 Nov 2026)', 'https://diabetesmalaysia.org.my/events/wdd-state-event-kuala-lumpur/'],
       ['NHS — High blood sugar (hyperglycaemia) (reviewed Mar 2026)', 'https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'free-health-screening-malaysia', 'check-blood-pressure-at-home'],
+    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'gout-malaysia', 'free-health-screening-malaysia'],
   },
 ];
