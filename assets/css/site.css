@@ -222,6 +222,7 @@ body.is-locked{overflow:hidden}
 .chips-scroll .chip{flex:none}
 @media (min-width:761px){.chips-scroll{flex-wrap:wrap;overflow:visible;margin:0;padding:0}}
 .result-text{margin:0 0 18px;font-size:14px;color:var(--muted-2)}
+.dir-search{max-width:620px;margin-bottom:18px;box-shadow:none}
 
 /* clinic cards */
 .clinic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:20px}

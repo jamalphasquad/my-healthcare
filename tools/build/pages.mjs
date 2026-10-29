@@ -88,8 +88,12 @@ export function filterGroups(clinics, areas) {
   return { kind: 'state', label: 'state', items: states.map((s) => ({ slug: slugOf(s), label: s === 'Pulau Pinang' ? 'Penang' : s })), key: (c) => slugOf(c.state) };
 }
 
+// Words the directory search matches against (see site.js): lowercase, punctuation as spaces.
+const searchText = (c) => [c.name, ...(c.altNames || []), c.areaLabel, c.locality, c.district, c.state, c.addressLine, c.cardSpec, c.network?.name, ...c.tags, ...c.services.map((s) => s.name)]
+  .filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter((w, i, all) => all.indexOf(w) === i).join(' ');
+
 export function clinicCard(c, o = {}) {
-  return `<article class="clinic" data-area="${o.key ? o.key(c) : c.areaSlug}" data-services="${c.serviceKeys.join('|')}"${hoursAttr(c)}>
+  return `<article class="clinic" data-area="${o.key ? o.key(c) : c.areaSlug}" data-services="${c.serviceKeys.join('|')}" data-q="${esc(searchText(c))}"${hoursAttr(c)}>
 <a class="clinic__media" href="/clinics/${c.slug}/" tabindex="-1" aria-hidden="true">${img(c.image, c.imageAlt, { sizes: '(max-width: 760px) 100vw, 380px' })}<span class="status">${c.hours ? 'See hours' : 'Call to confirm hours'}</span></a>
 <div class="clinic__body">
 <span class="meta">${esc(c.cardSpec)} &middot; ${esc(c.areaLabel)}</span>
@@ -132,6 +136,7 @@ export function directory(clinics, areas, services, o = {}) {
 <div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics near you'}</${o.h || 'h2'}></div>
 <label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
 </div>
+<label class="search dir-search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search clinics</span><input id="dir-q" type="search" placeholder="Search ${clinics.length} clinics by name, area, postcode or service" autocomplete="off" enterkeyhint="search"></label>
 <div class="chips chips-scroll" role="group" aria-label="Filter by ${groups.label}" style="margin-bottom:12px">
 <button type="button" class="chip" data-filter-area="all" aria-pressed="true">${groups.kind === 'state' ? 'All states' : 'All areas'}</button>
 ${groups.items.map((a) => `<button type="button" class="chip" data-filter-area="${a.slug}" aria-pressed="false">${esc(a.label)}</button>`).join('\n')}

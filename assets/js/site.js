@@ -163,7 +163,7 @@
   var dir = $('[data-directory]');
   if (dir) {
     var cards = $$('.clinic', dir);
-    var state = { area: 'all', service: 'all', openNow: false };
+    var state = { area: 'all', service: 'all', openNow: false, q: '' };
     var grid = $('.clinic-grid', dir), pager = $('.pager', dir);
     var pageSize = +dir.getAttribute('data-page-size') || 0, page = 1;
     function prime(c) {
@@ -211,13 +211,17 @@
     }
 
     var areaSel = $('#finder-area'), svcSel = $('#finder-service');
+    // every word typed must start a word on the card (name, area, address, postcode, services)
+    var dirQ = $('#dir-q', dir);
     function apply() {
-      var matches = [];
+      var matches = [], terms = state.q.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean);
       cards.forEach(function (c) {
         var okA = state.area === 'all' || c.getAttribute('data-area') === state.area;
         var okS = state.service === 'all' || (c.getAttribute('data-services') || '').split('|').indexOf(state.service) > -1;
         var okO = !state.openNow || (c._st && c._st.open);
-        var vis = okA && okS && okO;
+        var hay = ' ' + (c.getAttribute('data-q') || '') + ' ';
+        var okQ = terms.every(function (t) { return hay.indexOf(' ' + t) > -1; });
+        var vis = okA && okS && okO && okQ;
         c.hidden = !vis; if (vis) matches.push(c);
       });
       var shown = matches.length, range = '';
@@ -236,7 +240,7 @@
       var areaLabel = state.area === 'all' ? '' : ' in ' + (($('[data-filter-area="' + state.area + '"]', dir) || {}).textContent || state.area);
       var svcLabel = state.service === 'all' ? '' : ' · ' + (($('[data-filter-service="' + state.service + '"]', dir) || {}).textContent || state.service);
       var rt = $('.result-text', dir);
-      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + (areaLabel || ' listed') + svcLabel + (state.openNow ? ' · open now' : '') + range;
+      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + (areaLabel || ' listed') + svcLabel + (state.openNow ? ' · open now' : '') + (terms.length ? ' · matching “' + state.q.trim() + '”' : '') + range;
       var empty = $('.empty', dir); if (empty) empty.hidden = shown !== 0;
       if (areaSel) { areaSel.value = state.area; if (areaSel._sync) areaSel._sync(); }
       if (svcSel) { svcSel.value = state.service; if (svcSel._sync) svcSel._sync(); }
@@ -247,12 +251,19 @@
       var a = e.target.closest('[data-filter-area]'), s = e.target.closest('[data-filter-service]'), r = e.target.closest('[data-reset]'), p = e.target.closest('[data-page]');
       if (a) state.area = a.getAttribute('data-filter-area');
       if (s) state.service = s.getAttribute('data-filter-service');
-      if (r) state = { area: 'all', service: 'all', openNow: false };
+      if (r) { state = { area: 'all', service: 'all', openNow: false, q: '' }; if (dirQ) dirQ.value = ''; }
       if (a || s || r) { var on = $('#open-now'); if (on) on.checked = state.openNow; refilter(); }
       if (p && !p.disabled) { page = +p.getAttribute('data-page'); apply(); dir.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
     var on = $('#open-now');
     if (on) on.addEventListener('change', function () { state.openNow = on.checked; refilter(); });
+    if (dirQ) {
+      dirQ.closest('label').hidden = false;
+      // /clinics/?q=… opens with the search filled in
+      dirQ.value = state.q = new URLSearchParams(location.search).get('q') || '';
+      dirQ.addEventListener('input', function () { state.q = dirQ.value; refilter(); });
+      dirQ.addEventListener('keydown', function (e) { if (e.key === 'Enter') e.preventDefault(); });
+    }
 
     var finder = $('#finder');
     if (finder) finder.addEventListener('submit', function (e) {

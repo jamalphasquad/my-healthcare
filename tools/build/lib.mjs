@@ -84,7 +84,7 @@ ${p.article ? `<meta property="article:published_time" content="${p.article.publ
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=9">
+<link rel="stylesheet" href="/assets/css/site.css?v=10">
 ${p.preload || ''}${ld}
 </head>
 <body>
@@ -176,7 +176,7 @@ ${topics.map(([slug, label]) => `<a href="/articles/#topic-${slug}">${label}</a>
 </div>
 </footer>
 </div>
-<script src="/assets/js/site.js?v=7" defer></script>
+<script src="/assets/js/site.js?v=8" defer></script>
 </body>
 </html>
 `;
