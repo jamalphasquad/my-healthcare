@@ -173,6 +173,9 @@ export function home({ clinics, areas, services, articles, faqs, topics, feature
   const featured = articles.find((a) => a.slug === featuredSlug);
   const rest = articles.filter((a) => a !== featured).slice(0, 6);
   const homeCats = [...new Map(rest.map((a) => [a.cat, a.catLabel])).entries()];
+  // Neighbourhoods with the most clinics first; the rest are reachable through the area search.
+  const AREA_TOP = 10;
+  const byCount = [...areas].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
   const ld = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -268,10 +271,15 @@ ${rest.map((a) => postCard(a)).join('\n')}
 <p>Each neighbourhood lists its clinics, opening hours, and how to get there by LRT, MRT or car. We are adding new areas across Malaysia every month.</p>
 ${img('kl-city-park', 'Green park in Kuala Lumpur with city towers behind', { sizes: '(max-width: 760px) 100vw, 560px' })}
 </div>
-<ul class="area-list">
-${areas.map((a) => `<li><a href="${a.href}"><span class="name">Clinics in ${esc(a.label)}</span><span class="count">${a.count} ${a.count === 1 ? 'clinic' : 'clinics'} listed &middot; ${esc(a.district)}</span></a></li>`).join('\n')}
-${comingSoon.map((n) => `<li><span class="soon"><span class="name">${esc(n)}</span><span class="count">Coming soon</span></span></li>`).join('\n')}
+<div class="stack g16" data-areas>
+<label class="search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search neighbourhoods</span><input type="search" data-area-q placeholder="Search ${areas.length} areas — e.g. Cheras, Petaling Jaya" autocomplete="off" aria-controls="area-list"></label>
+<ul class="area-list" id="area-list">
+${byCount.map((a, i) => `<li data-area="${esc(`${a.label} ${a.district} ${a.clinics[0].state}`.toLowerCase())}"${i >= AREA_TOP ? ' hidden' : ''}><a href="${a.href}"><span class="name">Clinics in ${esc(a.label)}</span><span class="count">${a.count} ${a.count === 1 ? 'clinic' : 'clinics'} listed &middot; ${esc(a.district)}</span></a></li>`).join('\n')}
+${comingSoon.map((n) => `<li data-area="${esc(n.toLowerCase())}" hidden><span class="soon"><span class="name">${esc(n)}</span><span class="count">Coming soon</span></span></li>`).join('\n')}
 </ul>
+<p class="area-empty" role="status" aria-live="polite"></p>
+${areas.length > AREA_TOP ? `<button type="button" class="area-more" data-area-more hidden>Show all ${areas.length} areas</button>` : ''}
+</div>
 </div>
 </section>
 

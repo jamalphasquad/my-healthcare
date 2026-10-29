@@ -285,6 +285,11 @@ body.is-locked{overflow:hidden}
 .area-list .name{font-family:var(--serif);font-size:21px;line-height:1.2}
 .area-list .count{font-size:13px;color:#BFD6C9}
 .area-list .soon{opacity:.6;border-style:dashed}
+.areas .search{box-shadow:none}
+.areas .area-empty{font-size:15px;color:#D5E3DA}
+.area-empty:empty{display:none}
+.area-more{align-self:flex-start;background:none;border:1px solid rgba(245,243,236,.4);border-radius:999px;color:#F5F3EC;font:inherit;font-size:15px;font-weight:500;padding:10px 20px;cursor:pointer}
+.area-more:hover{background:rgba(245,243,236,.12)}
 
 /* faq */
 .faq{max-width:860px;margin:0 auto;padding:80px var(--gutter)}

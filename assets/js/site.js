@@ -334,6 +334,28 @@
     });
   }
 
+  /* Home: neighbourhood search. The top areas show by default; search or "Show all" reveals the rest. */
+  var areaBox = $('[data-areas]');
+  if (areaBox) {
+    var areaQ = $('[data-area-q]', areaBox), areaMore = $('[data-area-more]', areaBox), areaEmpty = $('.area-empty', areaBox);
+    var areaItems = $$('[data-area]', areaBox), areaTop = areaItems.filter(function (li) { return !li.hidden; }).length;
+    var showAll = false;
+    var filterAreas = function () {
+      var q = areaQ.value.trim().toLowerCase(), shown = 0;
+      areaItems.forEach(function (li, i) {
+        var on = q ? li.getAttribute('data-area').indexOf(q) !== -1 : (showAll || i < areaTop);
+        li.hidden = !on;
+        if (on) shown++;
+      });
+      areaEmpty.textContent = q && !shown ? 'No areas match “' + areaQ.value.trim() + '” yet. Try a nearby town, or search all clinics.' : '';
+      if (areaMore) areaMore.hidden = !!q || showAll;
+    };
+    areaQ.closest('label').hidden = false;
+    areaQ.addEventListener('input', filterAreas);
+    if (areaMore) areaMore.addEventListener('click', function () { showAll = true; filterAreas(); });
+    filterAreas();
+  }
+
   /* ---------- Article: reading progress, active TOC, copy link ---------- */
   var bar = $('.progress'), toc = $$('.toc nav a');
   if (bar || toc.length) {
