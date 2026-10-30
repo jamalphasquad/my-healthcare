@@ -593,7 +593,7 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk', 'High blood pres
       ['New Straits Times — IJN enhances heart attack emergency service (25 Apr 2019)', 'https://www.nst.com.my/amp/lifestyle/heal/2019/04/482786/ijn-enhances-heart-attack-emergency-service'],
       ['Institute for Public Health — National Health and Morbidity Survey 2023 fact sheet', 'https://iku.moh.gov.my/images/nhms2023/fact-sheet-nhms-2023.pdf'],
     ],
-    related: ['clinic-or-emergency-department', 'check-blood-pressure-at-home', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
+    related: ['clinic-or-emergency-department', 'headaches-malaysia', 'check-blood-pressure-at-home'],
   },
 
   /* ------------------------------------------------------------------ */

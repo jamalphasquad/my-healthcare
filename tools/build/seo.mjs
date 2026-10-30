@@ -1,5 +1,9 @@
 // Search titles (≤60 chars) and meta descriptions (≤155 chars), kept in one place.
 export const SEO = {
+  'anxiety-malaysia': ['Anxiety: Signs, How to Overcome It & Help in Malaysia', 'What anxiety is (apakah anxiety), signs and panic attacks, self-help that works, magnesium evidence, treatment, where to get help, and SPM exam stress.'],
+  'hiv-malaysia': ['HIV in Malaysia: Symptoms, Testing, PrEP & HIV vs AIDS', 'Early HIV symptoms and rash, HIV vs AIDS, where to get tested in Malaysia, self-test kits, free PrEP, PEP within 72 hours and the premarital HIV test.'],
+  'stomach-pain-gastric-malaysia': ['Stomach Pain & Gastric: Causes by Location & Warning Signs', 'What left, right or upper-middle stomach pain can mean, what “gastric” is, H. pylori, pharmacy medicines, foods, children with vomiting, and warning signs.'],
+  'headaches-malaysia': ['Headaches: Types, Causes, Relief & When to Worry (Malaysia)', 'Tension headache, migraine and cluster headache, pain at the back of the head, why headaches keep coming back, painkillers, koyok and emergency signs.'],
   'pregnancy-due-date-calculator-malaysia': ['Pregnancy Due Date Calculator Malaysia (Kiraan Minggu Hamil)', 'Free due date calculator: find how many weeks pregnant you are, plus antenatal check-ups in Malaysia, the pink book, warning signs and ectopic pregnancy.'],
   'baby-vaccination-schedule-malaysia': ['Baby Vaccination Schedule Malaysia (NIP): Jadual Imunisasi', 'Malaysia’s free childhood vaccine schedule from birth to 15: the 6-in-1 at 2, 3 and 5 months, pneumococcal, MMR, side effects and optional vaccines.'],
   'gout-malaysia': ['Gout in Malaysia: Symptoms, Uric Acid Levels & Treatment', 'Gout symptoms, what your uric acid level means, foods and drinks to limit, treatment that prevents attacks, and gout vs pseudogout. A Malaysian guide.'],

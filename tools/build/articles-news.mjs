@@ -275,7 +275,7 @@ ${figure('morning-walk', 'A woman walking along a tree-lined path in morning lig
       ['Free Malaysia Today — 1 million Malaysians suffer from depression, says survey (16 May 2024)', 'https://www.freemalaysiatoday.com/category/nation/2024/05/16/1-million-malaysians-suffer-from-depression-says-survey'],
       ['Befrienders Kuala Lumpur', 'https://findahelpline.com/organizations/befrienders-kuala-lumpur'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'clinic-or-emergency-department', 'haze-air-quality-klang-valley'],
+    related: ['anxiety-malaysia', 'clinic-or-emergency-department', 'headaches-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

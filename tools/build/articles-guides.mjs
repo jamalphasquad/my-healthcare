@@ -118,6 +118,6 @@ ${figure('doctor-consultation', 'A doctor talking with a patient across a desk',
       ['Ministry of Health Malaysia — official portal', 'https://www.moh.gov.my/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['stroke-heart-attack-kuala-lumpur', 'dengue-klang-valley-first-three-days', 'check-blood-pressure-at-home'],
+    related: ['stroke-heart-attack-kuala-lumpur', 'stomach-pain-gastric-malaysia', 'headaches-malaysia'],
   },
 ];
