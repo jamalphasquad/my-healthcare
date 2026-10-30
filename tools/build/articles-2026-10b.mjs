@@ -70,7 +70,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
 <tr><td>Cholesterol</td><td>All adults over 30. From 18 if you are at high risk, for example with a strong family history</td></tr>
 <tr><td>Cervical screening</td><td>Women aged 30–49: HPV test, every 5 years if negative. Pap smear at ages 21–29 and 50–65</td></tr>
 <tr><td>Breast (mammogram)</td><td>Every 2 years for women aged 50–74. Earlier for women at high risk</td></tr>
-<tr><td>Bowel (colorectal)</td><td>Ages 50–75: a stool test (iFOBT) every year, with colonoscopy if positive</td></tr>
+<tr><td><a href="/articles/bowel-cancer-screening-malaysia/">Bowel (colorectal)</a></td><td>Ages 50–75: a stool test (iFOBT) every year, with colonoscopy if positive</td></tr>
 </tbody></table></div>` },
       { id: 'prepare', h: 'How to prepare, and what to do with your results', tocLabel: 'Preparing and results', html: `<ul>
 <li><strong>Ask whether you need to fast.</strong> If your tests include a fasting blood test, you will usually be asked not to eat for 8 to 10 hours beforehand. Plain water is fine.</li>
@@ -113,7 +113,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
       ['MOH — Management of Breast Cancer, 3rd edition, Quick Reference (2019)', 'https://mymahtas2.moh.gov.my/files/QR_Management_of_Breast_Cancer_(Third_Edition)_%20(1).pdf'],
       ['MOH — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017)', 'https://mymahtas2.moh.gov.my/files/CPG%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
     ],
-    related: ['world-diabetes-day-2026-kl', 'budget-2027-health-malaysia', 'breast-cancer-screening-malaysia'],
+    related: ['bowel-cancer-screening-malaysia', 'world-diabetes-day-2026-kl', 'breast-cancer-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

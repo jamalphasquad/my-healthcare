@@ -94,7 +94,7 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
       ['US FDA — Sculptra summary of safety and effectiveness (2023)', 'https://www.accessdata.fda.gov/cdrh_docs/pdf3/P030050S039B.pdf'],
       ['Case report — Skin necrosis after exosome injection, J Cosmet Dermatol (2025)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12359287/'],
     ],
-    related: ['pico-laser-melasma-malaysia', 'weight-loss-injections-malaysia', 'clinic-or-emergency-department'],
+    related: ['acne-malaysia', 'pico-laser-melasma-malaysia', 'weight-loss-injections-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

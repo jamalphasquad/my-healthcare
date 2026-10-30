@@ -445,6 +445,427 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['Göbel et al. — Peppermint oil in the acute treatment of tension-type headache (Schmerz, 2016)', 'https://pubmed.ncbi.nlm.nih.gov/27106030/'],
       ['Borhani Haghighi et al. — Cutaneous application of menthol 10% for migraine (Int J Clin Pract, 2010)', 'https://pubmed.ncbi.nlm.nih.gov/20456191/'],
     ],
-    related: ['stroke-heart-attack-kuala-lumpur', 'anxiety-malaysia', 'check-blood-pressure-at-home'],
+    related: ['vertigo-dizziness-malaysia', 'stroke-heart-attack-kuala-lumpur', 'anxiety-malaysia'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'acne-malaysia',
+    title: 'Acne (jerawat): causes, what spots in different places mean, and treatments that work',
+    crumb: 'Acne (jerawat)',
+    desc: 'What causes acne, spots on the forehead, around the mouth, back and bottom, “fungal acne”, treatments that work, acne patches, unsafe creams and when to see a doctor.',
+    excerpt: 'About two in three Malaysian teenagers get acne, and many adults do too. What causes it, why spots on the back or around the mouth may not be acne at all, which treatments work, and why to avoid creams with hidden steroids.',
+    standfirst: 'Acne is one of the most common skin conditions in Malaysia, affecting about two in three teenagers and many adults. Most acne responds well to the right treatment, but it takes time, and some spots that look like acne need different care. Here is what causes it, what different locations can mean, which treatments the evidence supports, and when to see a doctor.',
+    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    about: ['Acne vulgaris', 'Jerawat'],
+    image: 'aesthetic-suite', imageAlt: 'A clean aesthetic treatment room with a treatment bed',
+    keyPoints: [
+      'Acne is caused by oily skin, blocked pores, skin bacteria and inflammation, often driven by hormones. It isn’t caused by dirt, and scrubbing makes it worse.',
+      'Itchy, uniform bumps on the back and chest are often “fungal acne” (Malassezia folliculitis), which is common in hot, humid weather and needs antifungal treatment.',
+      'A rash of small bumps around the mouth may be perioral dermatitis, often triggered by steroid creams, not acne.',
+      'Benzoyl peroxide, topical retinoids and azelaic acid work, but take 8 to 12 weeks. Doctors can add antibiotics, hormonal treatment or isotretinoin.',
+      'Avoid unregistered creams: NPRA has cancelled products containing hidden steroids, tretinoin and mercury.',
+    ],
+    sections: [
+      { id: 'what', h: 'What causes acne?', tocLabel: 'Causes', html: `<p>Acne starts in the hair follicles (pores). Four things work together:</p>
+<ul>
+<li>The skin makes too much oil (sebum), often driven by hormones during puberty, periods, pregnancy or conditions such as polycystic ovary syndrome (PCOS)</li>
+<li>Dead skin cells block the pores, forming blackheads and whiteheads</li>
+<li>Bacteria that normally live on the skin (<em>Cutibacterium acnes</em>) multiply in the blocked pore</li>
+<li>Inflammation turns blocked pores into red spots, pus-filled spots, and deeper nodules or cysts</li>
+</ul>
+<p>Malaysia’s 2022 acne guidelines report acne in about <strong>two-thirds of teenagers</strong> aged 13 to 17. It usually improves after the teenage years, but adult acne is common, especially in women.</p>
+<p><strong>What makes it worse:</strong> stress, picking or squeezing spots, oily cosmetics and hair products, and possibly high-sugar diets and large amounts of milk (the evidence is limited). Acne isn’t caused by dirty skin. The evidence on chocolate is mixed.</p>` },
+      { id: 'location', h: 'Spots in different places: what they can mean', tocLabel: 'Spots by location', html: `<div class="table-wrap"><table>
+<thead><tr><th>Where</th><th>What it may be</th></tr></thead>
+<tbody>
+<tr><td>Forehead, hairline, eyebrows</td><td>Acne, often aggravated by oily hair, fringes and hair products. Spots from hair products can take 4 to 6 weeks to clear after stopping the product.</td></tr>
+<tr><td>Around the mouth, lips and nose</td><td>Often <strong>perioral dermatitis</strong>: small red bumps that spare the skin right next to the lip. It is commonly triggered by steroid creams, or inhaled and nasal steroids, and can flare when they are stopped. It needs different treatment from acne.</td></tr>
+<tr><td>Jawline and chin in adult women</td><td>Often linked to hormones. Acne with irregular periods or excess hair can be a sign of PCOS.</td></tr>
+<tr><td>Upper back and chest</td><td>Acne, or <strong>“fungal acne”</strong> (Malassezia folliculitis): small, uniform, <strong>itchy</strong> bumps without blackheads, common in hot, humid weather and in young men. It is treated with antifungal washes or tablets, not acne creams.</td></tr>
+<tr><td>Buttocks</td><td>Usually <strong>folliculitis</strong> (inflamed hair follicles) from sweat, friction and tight clothing, rather than true acne</td></tr>
+</tbody></table></div>
+<p>“Face mapping”, the idea that spots in certain areas reflect problems with particular organs, has no scientific basis.</p>
+${figure('facial-treatment', 'A doctor examining facial skin in a clinic', 'A doctor can tell acne apart from look-alikes such as perioral dermatitis and fungal acne.')}` },
+      { id: 'treatments', h: 'Acne treatments that work', tocLabel: 'Treatments', html: `<p>These treatments are recommended in Malaysian and international guidelines:</p>
+<ul>
+<li><strong>Benzoyl peroxide:</strong> kills acne bacteria and reduces inflammation. Available from pharmacies. It can bleach fabrics and cause dryness, so start with a low strength.</li>
+<li><strong>Topical retinoids</strong> (adapalene, tretinoin): unblock pores and prevent new spots. They cause dryness at first, make the skin sensitive to sun, and must not be used in pregnancy.</li>
+<li><strong>Azelaic acid:</strong> treats spots and helps fade dark marks left by acne.</li>
+<li><strong>Salicylic acid:</strong> sold over the counter, with modest benefit for mild acne.</li>
+<li><strong>Topical antibiotics</strong> (clindamycin): prescribed, and always used <strong>with</strong> benzoyl peroxide or a retinoid, never alone, to prevent resistance.</li>
+<li><strong>Oral antibiotics</strong> (such as doxycycline): for moderate acne, usually for no more than 3 to 4 months, alongside a cream.</li>
+<li><strong>Hormonal treatment:</strong> the combined contraceptive pill or spironolactone can help women with hormone-related acne.</li>
+<li><strong>Isotretinoin tablets:</strong> very effective for severe, scarring or persistent acne. In Malaysia, guidelines say it should be prescribed by dermatologists. It causes serious birth defects, so women must use contraception during treatment and for a month afterwards, and doctors monitor blood tests and mood.</li>
+</ul>
+<p><strong>Be patient:</strong> most treatments take <strong>8 to 12 weeks</strong> to work. Use them on the whole area, not just on spots, and keep going after the skin clears to prevent relapse.</p>` },
+      { id: 'patches', h: 'Do acne patches work?', tocLabel: 'Acne patches', html: `<p>Hydrocolloid acne patches absorb fluid from a spot and, just as importantly, stop you touching and picking it. They can help a single surfaced whitehead heal, but the research is small, and they don’t treat deep cysts or prevent new acne.</p>` },
+      { id: 'donts', h: 'What not to do', html: `<ul>
+<li><strong>Don’t pick or squeeze</strong> spots. It spreads inflammation and causes scars and dark marks.</li>
+<li><strong>Don’t scrub</strong>, or use toothpaste, lemon or alcohol on spots. Wash twice a day with a gentle cleanser.</li>
+<li><strong>Don’t use steroid creams</strong> on the face. They can worsen acne and cause perioral dermatitis.</li>
+<li><strong>Avoid unregistered “acne” or “whitening” creams</strong>. The National Pharmaceutical Regulatory Agency (NPRA) has repeatedly cancelled cosmetics found to contain hidden steroids, tretinoin, hydroquinone and mercury, which can thin and damage the skin and harm the kidneys and nerves. Check products on the NPRA website.</li>
+</ul>` },
+      { id: 'marks', h: 'Dark marks and scars', html: `<p>Dark marks after acne (post-inflammatory hyperpigmentation) are very common in Asian skin, affecting up to 87% of acne patients in some studies, and can last more than a year. Treating acne early, sun protection, and azelaic acid or retinoids help them fade. Acne scars affect many people with acne.</p>
+<p>Once acne is controlled, scars can be improved with treatments such as chemical peels, laser resurfacing and microneedling at a doctor-led aesthetic clinic. See our guide to <a href="/articles/pico-laser-melasma-malaysia/">laser treatments and checking a clinic</a>.</p>` },
+      { id: 'doctor', h: 'When to see a doctor', html: `<ul>
+<li>Painful, deep nodules or cysts, or acne that is leaving scars or dark marks</li>
+<li>No improvement after 2 to 3 months of pharmacy treatment</li>
+<li>Acne affecting your confidence, mood or daily life</li>
+<li>Sudden adult acne with irregular periods or excess hair, which may be PCOS</li>
+<li>Itchy bumps on the back and chest that don’t respond to acne treatment</li>
+<li>Acne during pregnancy, as some treatments aren’t safe</li>
+</ul>
+<p>Seek help urgently for acne that suddenly becomes painful and ulcerated with fever, or if acne is making you feel hopeless or think about harming yourself.</p>` },
+    ],
+    clinicsMode: 'directory',
+    clinicsHeading: 'Where to get acne treated',
+    clinicsTocLabel: 'Where to get treated',
+    clinicsIntro: 'A GP can diagnose acne and its look-alikes, prescribe creams and tablets, and refer you to a dermatologist for severe acne. For acne scars, choose a doctor-led aesthetic clinic. Our directory lists GP and aesthetic clinics across Kuala Lumpur, Selangor and other states.',
+    clinicLinks: [['/clinics/aesthetic-clinics/', 'Aesthetic clinics'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/bukit-bintang/', 'Clinics in Bukit Bintang']],
+    faqs: [
+      ['How do I get rid of acne? (Cara hilangkan jerawat)', 'Wash twice daily with a gentle cleanser, don’t pick spots, and use an evidence-based treatment such as benzoyl peroxide, a topical retinoid or azelaic acid for at least 8 to 12 weeks. See a doctor if it doesn’t improve or leaves scars.'],
+      ['Why do I get acne on my eyebrows and forehead? (Jerawat di kening)', 'Often from oily skin, oily hair, fringes, and hair or skin products that block pores. Spots caused by hair products can take 4 to 6 weeks to clear after stopping the product.'],
+      ['Why do I get spots around my lips? (Jerawat di bibir)', 'Small red bumps around the mouth may be perioral dermatitis rather than acne, often triggered by steroid creams or inhalers. See a doctor, as acne creams can make it worse.'],
+      ['Why do I get acne on my bottom? (Jerawat di punggung)', 'Spots on the buttocks are usually folliculitis, inflammation of hair follicles from sweat, friction and tight clothing, rather than acne. Loose cotton clothing and gentle washing help.'],
+      ['Do acne patches work? (Patch jerawat)', 'They help single surfaced whiteheads heal and stop you picking, but evidence is limited and they don’t treat deep cysts or prevent new spots.'],
+      ['What is fungal acne?', 'Malassezia folliculitis causes small, uniform, itchy bumps on the back and chest, common in hot, humid climates. It is caused by yeast, not acne bacteria, and is treated with antifungals.'],
+    ],
+    sources: [
+      ['Ministry of Health — Clinical Practice Guidelines: Management of Acne Vulgaris, 2nd edition (2022)', 'https://mymahtas2.moh.gov.my/files/e-CPG_Acne-7_4_23.pdf'],
+      ['Reynolds et al. — Guidelines of care for the management of acne vulgaris (American Academy of Dermatology, 2024)', 'https://pubmed.ncbi.nlm.nih.gov/38300170/'],
+      ['NHS — Acne (Sep 2026)', 'https://www.nhs.uk/conditions/acne/'],
+      ['American Academy of Dermatology — Adult acne', 'https://www.aad.org/public/diseases/acne/really-acne/adult-acne'],
+      ['American Academy of Dermatology — Hair products and acne', 'https://www.aad.org/public/diseases/acne/causes/hair-products'],
+      ['American Academy of Dermatology — Acne scars: diagnosis and treatment', 'https://www.aad.org/public/diseases/acne/derm-treat/scars'],
+      ['DermNet — Malassezia folliculitis', 'https://dermnetnz.org/topics/malassezia-folliculitis'],
+      ['DermNet — Periorificial dermatitis', 'https://dermnetnz.org/topics/periorificial-dermatitis'],
+      ['British Association of Dermatologists — Acne patient information leaflet', 'https://www.skinhealthinfo.org.uk/condition/acne/'],
+      ['NPRA — Press release on cancelled cosmetic products (Nov 2025)', 'https://www.npra.gov.my/easyarticles/images/shared/Press%20Release/Press-release-Nov-2025.pdf'],
+      ['The Star — Health Ministry bans cosmetic products containing scheduled poisons (2 Apr 2026)', 'https://www.thestar.com.my/news/nation/2026/04/02/health-ministry-bans-cosmetic-products-containing-scheduled-poisons'],
+    ],
+    related: ['itchy-skin-eczema-hives-malaysia', 'pico-laser-melasma-malaysia', 'skin-boosters-malaysia'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'bowel-cancer-screening-malaysia',
+    title: 'Bowel cancer in Malaysia: symptoms, free stool test screening and colonoscopy',
+    crumb: 'Bowel cancer screening',
+    desc: 'Bowel (colorectal) cancer is the most common cancer in Malaysian men. Symptoms (kanser usus simptom), risk factors, free iFOBT stool tests from 50 and colonoscopy.',
+    excerpt: 'Bowel cancer is the most common cancer in Malaysian men, and 3 in 4 cases are found late. The symptoms to watch for, who is at risk, the free stool test at government clinics from age 50, and what a colonoscopy involves.',
+    standfirst: 'Bowel cancer, also called colorectal or colon cancer (kanser usus), is now the most common cancer in Malaysian men and the second most common in women. Three in four cases are found only at a late stage, yet a simple home stool test can pick it up early, when it is far more treatable. Here are the symptoms, who should be screened, and how to get tested in Malaysia.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    about: ['Colorectal cancer', 'Kanser kolorektal'],
+    image: 'nurse-stethoscope', imageAlt: 'A doctor holding a stethoscope',
+    keyPoints: [
+      'Bowel cancer is the most common cancer in Malaysian men and the second most common in women. Cases rose by more than half between 2012–2016 and 2017–2021.',
+      'About 3 in 4 cases are diagnosed at stage 3 or 4. Early bowel cancer often causes no symptoms.',
+      'Symptoms include blood in the stool, a change in bowel habit, tummy pain or bloating, unexplained weight loss and tiredness from anaemia.',
+      'Adults aged 50 to 75 at average risk should do a stool test (iFOBT), free at government health clinics. A positive result needs a colonoscopy.',
+      'If a close relative had bowel cancer, colonoscopy screening usually starts at 40, or earlier.',
+    ],
+    sections: [
+      { id: 'malaysia', h: 'Bowel cancer in Malaysia', tocLabel: 'In Malaysia', html: `<p>According to the Malaysia National Cancer Registry report for 2017–2021:</p>
+<ul>
+<li>Bowel (colorectal) cancer made up <strong>14.1% of all cancers</strong>, the second most common overall after breast cancer, and the <strong>most common cancer in men</strong>.</li>
+<li>About <strong>23,900 people</strong> were diagnosed in those five years, up 54% from 2012–2016. About 15% were under 50.</li>
+<li>About <strong>three in four</strong> cases with a known stage were found at <strong>stage 3 or 4</strong>. Only about 6% were caught at stage 1.</li>
+<li>The lifetime risk is about <strong>1 in 44 for men</strong> and <strong>1 in 62 for women</strong>, and highest among Chinese Malaysians (1 in 30 men).</li>
+</ul>
+<p>Finding it early makes a big difference. In US data, about 9 in 10 people whose cancer is found before it spreads are alive 5 years later, compared with about 1 in 7 when it has spread to distant organs.</p>` },
+      { id: 'symptoms', h: 'Bowel cancer symptoms (kanser usus simptom)', tocLabel: 'Symptoms', html: `<ul>
+<li><strong>Blood in your stool</strong>, which may look red or black, or bleeding from the bottom</li>
+<li>A <strong>change in bowel habit</strong>, such as looser stools, constipation or going more often, lasting several weeks</li>
+<li>Feeling you need to go even after you have just been</li>
+<li>Tummy pain, a lump in the tummy, or bloating</li>
+<li>Losing weight without trying</li>
+<li>Tiredness or breathlessness from <strong>anaemia</strong> (low blood count)</li>
+</ul>
+<p>Most people with these symptoms don’t have cancer. Haemorrhoids (piles), for example, are a common cause of bleeding. But you can’t tell the difference yourself, so <strong>always get bleeding from the bottom checked</strong> by a doctor. Malaysian guidelines advise an urgent colonoscopy within 2 weeks for unexplained rectal bleeding with a change in bowel habit or weight loss, or for iron-deficiency anaemia.</p>
+<p>Early bowel cancer often causes <strong>no symptoms at all</strong>, which is why screening matters.</p>` },
+      { id: 'risk', h: 'Who is at higher risk?', tocLabel: 'Risk factors', html: `<ul>
+<li>Being <strong>50 or older</strong>, though younger adults can get it</li>
+<li>A <strong>close relative</strong> (parent, brother, sister or child) with bowel cancer, or inherited conditions such as Lynch syndrome</li>
+<li>A history of bowel polyps, or inflammatory bowel disease (Crohn’s disease or ulcerative colitis)</li>
+<li>Smoking, alcohol, being overweight and being inactive</li>
+<li>A diet high in <strong>processed meat</strong> (such as sausages, ham and luncheon meat) and red meat, and low in fruit and vegetables. The WHO’s cancer agency classifies processed meat as a cause of bowel cancer.</li>
+</ul>` },
+      { id: 'screening', h: 'Free bowel cancer screening: the stool test', tocLabel: 'Free screening', html: `<p>Malaysian guidelines recommend that adults aged <strong>50 to 75</strong> at average risk do an <strong>immunochemical faecal occult blood test (iFOBT)</strong>, also called a FIT test. It detects tiny amounts of blood in the stool that you can’t see.</p>
+<ul>
+<li><strong>Where:</strong> it is offered <strong>free at government health clinics (Klinik Kesihatan)</strong>, apart from the registration fee. Ask for it at your next visit. Selangor’s Selangor Saring programme has also included the test. Private clinics and pharmacies offer it for a fee.</li>
+<li><strong>How:</strong> you collect a small stool sample at home with the kit, and return it to the clinic. There are no diet restrictions.</li>
+<li><strong>How often:</strong> the 2017 guidelines recommend yearly testing if negative. Some clinics schedule a repeat every 2 years.</li>
+<li><strong>If positive:</strong> you are referred for a colonoscopy. A positive test doesn’t mean you have cancer. Most positives are due to polyps or other causes, but it must be followed up.</li>
+</ul>
+<p>Too few Malaysians take part. Between 2014 and 2018, only about 55% of people with a positive stool test went on to have the colonoscopy they needed. In Selangor’s screening programme, only 15–27% of people with abnormal results followed up. <strong>If your test is positive, please go for the colonoscopy.</strong></p>
+${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 'The stool test is done at home and returned to the clinic for testing.')}` },
+      { id: 'family', h: 'If bowel cancer runs in your family', tocLabel: 'Family history', html: `<p>Malaysian guidelines recommend colonoscopy, rather than the stool test, for people with a family history:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Family history</th><th>When to start colonoscopy</th></tr></thead>
+<tbody>
+<tr><td>A parent, brother, sister or child diagnosed before 60, or any relative before 50</td><td>At 40, or 10 years younger than the youngest relative was at diagnosis, whichever is earlier. Repeat every 3 to 5 years.</td></tr>
+<tr><td>A parent, brother, sister or child diagnosed at 60 or older</td><td>At 40. Repeat every 10 years.</td></tr>
+</tbody></table></div>
+<p>Tell your doctor about your family history, including the age your relative was diagnosed.</p>` },
+      { id: 'colonoscopy', h: 'What happens during a colonoscopy', tocLabel: 'Colonoscopy', html: `<p>A colonoscopy uses a thin, flexible tube with a camera to look inside the large bowel. It can find cancer early, and <strong>remove polyps</strong> before they turn into cancer.</p>
+<ul>
+<li><strong>Before:</strong> you follow a special diet and take a strong laxative to empty the bowel.</li>
+<li><strong>During:</strong> the test usually takes 30 to 45 minutes. You are usually offered sedation and painkillers. Polyps can be removed and small samples (biopsies) taken.</li>
+<li><strong>After:</strong> don’t drive for 24 hours if you had sedation. Slight bleeding for a day or two is common.</li>
+<li><strong>Risks:</strong> serious complications are uncommon. In the UK screening programme, a tear in the bowel happens in about 1 in 1,700 colonoscopies.</li>
+</ul>` },
+      { id: 'treatment', h: 'Treatment', html: `<p>Surgery to remove the cancer is the main treatment and offers the best chance of cure. Chemotherapy and radiotherapy may be used before or after surgery, and newer targeted treatments and immunotherapy help some people with advanced cancer. Treatment is planned by a team of specialists.</p>
+<p>You can lower your risk by staying active, keeping a healthy weight, not smoking, limiting alcohol, eating less processed and red meat, and eating more fruit and vegetables.</p>` },
+    ],
+    clinicsMode: 'directory',
+    clinicsHeading: 'Where to ask about bowel cancer screening',
+    clinicsTocLabel: 'Where to get screened',
+    clinicsIntro: 'Your nearest Klinik Kesihatan offers the free stool test from age 50. Private GP clinics can also arrange a stool test, check symptoms such as bleeding, and refer you for colonoscopy. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
+    clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-late/', 'Clinics open late']],
+    faqs: [
+      ['What are the symptoms of bowel cancer? (Kanser usus simptom)', 'Blood in the stool or bleeding from the bottom, a change in bowel habit lasting weeks, tummy pain or bloating, unexplained weight loss, and tiredness from anaemia. Early bowel cancer often has no symptoms.'],
+      ['Is bowel cancer screening free in Malaysia?', 'Yes. The iFOBT stool test is offered free at government health clinics for adults aged 50 to 75 at average risk, apart from the registration fee. A positive result is followed by a colonoscopy at a government hospital.'],
+      ['How is the iFOBT stool test done?', 'You collect a small stool sample at home using the kit and return it to the clinic. It detects hidden blood. There are no diet restrictions.'],
+      ['At what age should I start bowel cancer screening?', 'At 50 for most people. If a close relative had bowel cancer, colonoscopy usually starts at 40, or 10 years before the age your relative was diagnosed, if they were under 60.'],
+      ['Can bowel cancer affect young people?', 'Yes. About 15% of bowel cancers in Malaysia in 2017–2021 were in people under 50. Don’t ignore symptoms such as bleeding because you are young.'],
+      ['Is bleeding from the bottom always cancer?', 'No. Haemorrhoids (piles) and fissures are common causes. But you can’t tell the cause yourself, so always have rectal bleeding checked by a doctor.'],
+    ],
+    sources: [
+      ['Institut Kanser Negara — Summary of Malaysia National Cancer Registry Report 2017–2021 (Jul 2024)', 'https://nci.moh.gov.my/images/pdf/SUMMARY-OF-MALAYSIA-NATIONAL-CANCER-REGISTRY-REPORT-2017-2021.pdf'],
+      ['Ministry of Health — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017), Quick Reference', 'https://mymahtas2.moh.gov.my/files/QR%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
+      ['Ministry of Health — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017)', 'https://mymahtas2.moh.gov.my/files/CPG%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
+      ['Chandran et al. — Overview of the colorectal cancer screening programme in Malaysia (Med J Malaysia, 2020)', 'https://mail.e-mjm.org/2020/v75n3/colorectal-cancer.pdf'],
+      ['PLOS ONE — Colorectal cancer screening in Malaysian primary care (Dec 2022)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9799312/'],
+      ['CodeBlue — Selangor Saring reveals reluctance for follow-ups (27 Aug 2025)', 'https://codeblue.galencentre.org/2025/08/selangor-saring-reveals-poor-state-of-peoples-health-reluctance-for-follow-ups/'],
+      ['NHS — Bowel cancer symptoms (Sep 2026)', 'https://www.nhs.uk/conditions/bowel-cancer/symptoms/'],
+      ['World Health Organization — Colorectal cancer fact sheet (Feb 2026)', 'https://www.who.int/news-room/fact-sheets/detail/colorectal-cancer'],
+      ['IARC — Consumption of red meat and processed meat (Oct 2015)', 'https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf'],
+      ['GOV.UK — Bowel cancer screening: having a colonoscopy (Jun 2025)', 'https://www.gov.uk/government/publications/bowel-cancer-screening-colonoscopy/bowel-cancer-screening-having-a-colonoscopy-fit'],
+      ['American Cancer Society — Survival rates for colorectal cancer (Jan 2026)', 'https://www.cancer.org/cancer/types/colon-rectal-cancer/detection-diagnosis-staging/survival-rates.html'],
+    ],
+    related: ['free-health-screening-malaysia', 'stomach-pain-gastric-malaysia', 'breast-cancer-screening-malaysia'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'blood-pressure-cholesterol-malaysia',
+    title: 'High blood pressure and cholesterol: signs, normal levels, and how to lower them',
+    crumb: 'Blood pressure and cholesterol',
+    desc: 'Signs and causes of high blood pressure (darah tinggi), normal BP and cholesterol levels, why “lower it in 5 minutes” is a myth, and what medicines do.',
+    excerpt: 'Nearly 1 in 3 Malaysian adults has high blood pressure, and 1 in 3 has high cholesterol, often without knowing. Normal levels, causes, what really lowers them and how fast, and what to know about blood pressure and cholesterol medicines.',
+    standfirst: 'High blood pressure (darah tinggi) and high cholesterol rarely cause symptoms, yet together they are the main reasons Malaysians have heart attacks and strokes. Here are the normal levels, what causes them to rise, what really brings them down, and what to expect from medicines.',
+    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    about: ['Hypertension', 'Darah tinggi'],
+    image: 'bp-check-desk', imageAlt: 'A blood pressure monitor on a desk',
+    keyPoints: [
+      '29.2% of Malaysian adults have high blood pressure and 33.3% have high cholesterol, according to NHMS 2023. Many don’t know.',
+      'High blood pressure usually has no signs. Only a blood pressure check can tell you. A reading of 140/90 or above, on repeated checks, is high.',
+      'There is no safe way to lower blood pressure in 5 minutes. Very high blood pressure with chest pain, breathlessness, weakness or vision changes is an emergency: call 999.',
+      'Cutting salt to less than 1 teaspoon a day, losing weight, exercise and less alcohol can lower blood pressure by several points each.',
+      'Statins lower LDL cholesterol by about 20–55%. True statin side effects are less common than many people think.',
+    ],
+    sections: [
+      { id: 'malaysia', h: 'How common are they in Malaysia?', tocLabel: 'In Malaysia', html: `<p>According to the National Health and Morbidity Survey (NHMS) 2023:</p>
+<ul>
+<li><strong>29.2%</strong> of adults have high blood pressure, and 11.9% of adults, about 2.7 million people, have it without knowing. Of those who are treated, fewer than half have it under control.</li>
+<li><strong>33.3%</strong> have high cholesterol, and <strong>about half</strong> of them don’t know.</li>
+<li>More than 60% of adults aged 18 to 39 with diabetes, high blood pressure or high cholesterol were unaware of it.</li>
+</ul>
+<p>Ischaemic heart disease, which both conditions lead to, is Malaysia’s leading cause of death. See our article on <a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">undiagnosed conditions in young adults</a>.</p>` },
+      { id: 'bp-levels', h: 'Blood pressure levels', tocLabel: 'Blood pressure levels', html: `<p>Blood pressure is written as two numbers: the top (systolic) is the pressure when the heart beats, and the bottom (diastolic) is the pressure between beats. Malaysia’s hypertension guidelines classify it as:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Reading (mmHg)</th><th>Category</th></tr></thead>
+<tbody>
+<tr><td>Below 120/80</td><td>Optimal</td></tr>
+<tr><td>120–129 / 80–84</td><td>Normal</td></tr>
+<tr><td>130–139 / 85–89</td><td>At risk</td></tr>
+<tr><td>140–159 / 90–99</td><td>Stage 1 (mild) hypertension</td></tr>
+<tr><td>160–179 / 100–109</td><td>Stage 2 (moderate)</td></tr>
+<tr><td>180 / 110 or higher</td><td>Stage 3 (severe)</td></tr>
+</tbody></table></div>
+<p>One high reading doesn’t mean you have hypertension. Doctors confirm it with repeated readings, often at home. See our guide to <a href="/articles/check-blood-pressure-at-home/">checking your blood pressure at home</a>. On treatment, the target for most people is below 140/90, and lower for some people with diabetes, kidney disease or heart disease.</p>` },
+      { id: 'signs', h: 'Signs of high blood pressure (tanda darah tinggi)', tocLabel: 'Signs', html: `<p>High blood pressure is called a <strong>“silent disease”</strong>. Most people feel completely well. Headaches, dizziness or tiredness are not reliable signs, and only a blood pressure check can tell you.</p>
+<div class="box box--pink" role="note"><span class="box__title">When high blood pressure is an emergency</span><p style="font-size:16px;line-height:1.6">A reading of <strong>180/110 or higher</strong> needs prompt medical attention. Call <a href="tel:999">999</a> or go to an emergency department straight away if it comes with chest pain, breathlessness, severe headache, confusion, weakness or numbness, difficulty speaking, or vision changes. If you have no symptoms, sit quietly for 5 minutes, recheck, and see a doctor the same day if it is still very high.</p></div>` },
+      { id: 'causes', h: 'What causes high blood pressure? (Punca darah tinggi)', tocLabel: 'Causes', html: `<p>Most high blood pressure has no single cause. It builds up with:</p>
+<ul>
+<li>Too much <strong>salt</strong>. Malaysians eat around 8 to 9.5 g of salt a day, well above the recommended limit</li>
+<li>Being overweight, and not being active</li>
+<li>Alcohol and smoking</li>
+<li>Getting older, and having a family history</li>
+<li>Stress</li>
+</ul>
+<p>Sometimes another condition or medicine is the cause, especially in younger people. Examples include kidney disease, <strong>sleep apnoea</strong> (heavy snoring with daytime sleepiness), thyroid or hormone problems, and medicines such as anti-inflammatory painkillers, steroids, decongestants and the contraceptive pill. Tell your doctor about any traditional or herbal remedies you take, too.</p>` },
+      { id: 'lower-bp', h: 'How to lower blood pressure', tocLabel: 'Lowering blood pressure', html: `<p><strong>Can you lower blood pressure in 5 minutes?</strong> No, not safely. Slow, deep breathing may bring it down a little for a short time, and practised regularly it can help a few points. But there is no quick fix, and Malaysian guidelines warn that lowering very high blood pressure too fast can itself cause a stroke or heart attack. If a reading is very high, follow the emergency advice above.</p>
+<p>What does work, over weeks to months, according to Malaysia’s hypertension guidelines:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Change</th><th>Typical effect on blood pressure</th></tr></thead>
+<tbody>
+<tr><td>Cut salt to less than 5 g (about 1 teaspoon) a day</td><td>Up to about 8/3 mmHg lower in Asian adults with hypertension</td></tr>
+<tr><td>Lose weight</td><td>About 1 mmHg lower per kg lost</td></tr>
+<tr><td>A healthy diet rich in fruit, vegetables and low-fat dairy</td><td>Several points lower</td></tr>
+<tr><td>150 minutes of moderate exercise a week</td><td>Several points lower</td></tr>
+<tr><td>Cut down alcohol</td><td>About 3/2 mmHg lower</td></tr>
+</tbody></table></div>
+<p>Cooking with less salt, soy sauce and stock cubes, and choosing fewer processed and hawker foods, makes the biggest difference for most Malaysians.</p>` },
+      { id: 'bp-medicines', h: 'Blood pressure medicines', tocLabel: 'BP medicines', html: `<p>If lifestyle changes aren’t enough, or your blood pressure is high, your doctor will prescribe one or more medicines. The main groups are ACE inhibitors, angiotensin receptor blockers (ARBs), calcium channel blockers, diuretics and beta blockers. Common side effects to know:</p>
+<ul>
+<li><strong>ACE inhibitors</strong> (names often end in “-pril”): a dry, persistent cough in some people. Your doctor can switch you to an ARB.</li>
+<li><strong>Calcium channel blockers</strong> such as amlodipine: ankle swelling, flushing or headache.</li>
+<li><strong>Beta blockers</strong>: tiredness and cold hands and feet.</li>
+</ul>
+<p>Most people need treatment for life. <strong>Don’t stop your medicine</strong> when your readings become normal, because that usually means the medicine is working. Talk to your doctor about any side effects instead.</p>` },
+      { id: 'cholesterol-levels', h: 'Normal cholesterol levels (kadar kolesterol normal)', tocLabel: 'Cholesterol levels', html: `<p>A cholesterol test measures several fats in the blood. You usually don’t need to fast. Malaysian guidelines use these levels to flag a problem:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Test</th><th>Flag level (mmol/L)</th></tr></thead>
+<tbody>
+<tr><td>Total cholesterol</td><td>Above 5.2 is high</td></tr>
+<tr><td>LDL (“bad”) cholesterol</td><td>Target depends on your heart risk (see below)</td></tr>
+<tr><td>HDL (“good”) cholesterol</td><td>Below 1.0 in men or 1.2 in women is low</td></tr>
+<tr><td>Triglycerides</td><td>Above 1.7 is high</td></tr>
+</tbody></table></div>
+<p><strong>LDL targets depend on your risk.</strong> The higher your risk of a heart attack or stroke, the lower your LDL should be. For people at very high risk, such as after a heart attack or stroke, Malaysia’s 2023 guidelines aim for <strong>1.4 mmol/L or lower</strong> and a reduction of more than half. Your doctor will work out your risk using your age, blood pressure, smoking, diabetes and family history.</p>` },
+      { id: 'lower-cholesterol', h: 'How to lower cholesterol', tocLabel: 'Lowering cholesterol', html: `<ul>
+<li>Cut down on <strong>saturated fat</strong> (fatty meat, coconut milk and ghee-heavy dishes, butter) and avoid trans fats in fried snacks and baked goods.</li>
+<li>Eat more fibre: oats, whole grains, beans, fruit and vegetables. About 3 g of oat beta-glucan a day lowers LDL slightly.</li>
+<li>Choose fewer refined carbohydrates, such as large servings of white rice and sweet drinks.</li>
+<li>Exercise regularly, lose weight if you are overweight, and stop smoking.</li>
+</ul>
+<p><strong>How fast?</strong> Diet changes take weeks to months. Statins usually reach their full effect within about a month, and doctors recheck cholesterol 1 to 3 months after starting.</p>
+<p><strong>Statins</strong> are the main cholesterol medicine. They lower LDL by about 20 to 55%, depending on the type and dose, and reduce heart attacks and strokes. Other medicines, such as ezetimibe, can be added.</p>` },
+      { id: 'statin-side-effects', h: 'Side effects of cholesterol medicine (kesan sampingan ubat kolesterol)', tocLabel: 'Statin side effects', html: `<p>Statins are among the most studied medicines in the world, and serious side effects are rare:</p>
+<ul>
+<li><strong>Muscle aches:</strong> many people report them, but in trials they happen only slightly more often than with a dummy pill. In one study, people who had stopped statins because of side effects felt almost the same symptoms when taking a placebo. Serious muscle damage is rare. Most people who can’t tolerate one statin do fine on another.</li>
+<li><strong>Liver:</strong> a mild rise in liver tests happens in under 3% of people. Liver failure is extremely rare.</li>
+<li><strong>Diabetes:</strong> statins slightly increase the chance of developing diabetes, mainly in people already at risk, but the heart benefits are far greater.</li>
+</ul>
+<p>Don’t stop a statin on your own. If you have side effects, talk to your doctor about changing the dose or type.</p>
+${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls', 'More vegetables, fruit, oats and beans, and less saturated fat, help lower cholesterol.')}` },
+    ],
+    clinicsMode: 'directory',
+    clinicsHeading: 'Where to get your blood pressure and cholesterol checked',
+    clinicsTocLabel: 'Where to get checked',
+    clinicsIntro: 'Any GP clinic can check your blood pressure in minutes and arrange a cholesterol test. Government health clinics offer free checks, and many people qualify for free screening. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
+    clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-late/', 'Clinics open late']],
+    faqs: [
+      ['What are the signs of high blood pressure? (Tanda darah tinggi)', 'Usually none. High blood pressure is a “silent disease”, and only a blood pressure check can tell you. Very high blood pressure with chest pain, breathlessness, severe headache, weakness or vision changes is an emergency.'],
+      ['How can I lower my blood pressure quickly? (Cara menurunkan darah tinggi dengan cepat)', 'There is no safe way to lower it within minutes, and lowering very high blood pressure too fast can be dangerous. Over weeks, cutting salt, losing weight, exercise and less alcohol all help. If a reading is 180/110 or higher with symptoms, call 999.'],
+      ['What is a normal cholesterol level? (Kadar kolesterol normal)', 'Malaysian guidelines flag total cholesterol above 5.2 mmol/L, HDL below 1.0 (men) or 1.2 (women), and triglycerides above 1.7. Your LDL target depends on your heart risk.'],
+      ['What are the side effects of cholesterol medicine? (Kesan ubat kolesterol)', 'Statins can cause muscle aches in some people, mild liver test changes and a slightly higher diabetes risk, but serious side effects are rare. Talk to your doctor rather than stopping it yourself.'],
+      ['Can I stop my blood pressure medicine when my readings are normal?', 'No. Normal readings usually mean the medicine is working. Most people need it long term. Talk to your doctor before changing anything.'],
+      ['How fast can I lower my cholesterol? (Menurunkan kolesterol dengan cepat)', 'Statins reach their full effect in about a month. Diet changes take weeks to months. Your doctor will usually recheck cholesterol 1 to 3 months after a change.'],
+    ],
+    sources: [
+      ['Ministry of Health — Clinical Practice Guidelines: Management of Hypertension, 5th edition (2018)', 'https://mymahtas2.moh.gov.my/files/CPG%20Maagement%20of%20Hypertension%20CPG%202018%20V3.8%20FA.pdf'],
+      ['Ministry of Health — Clinical Practice Guidelines: Management of Dyslipidaemia, 5th edition (2017)', 'https://mymahtas2.moh.gov.my/files/CPG%20Management%20of%20Dyslipidaemia%202017%20(5th%20Edition).pdf'],
+      ['Academy of Medicine of Malaysia — Clinical practice guidelines list (incl. Dyslipidaemia, 6th edition, 2023)', 'https://www.acadmed.org.my/index.cfm?menuid=67'],
+      ['Institute for Public Health — NHMS 2023 key findings', 'https://iku.nih.gov.my/images/nhms2023/key-findings-nhms-2023.pdf'],
+      ['Department of Statistics Malaysia — Statistics on Causes of Death, Malaysia 2025', 'https://www.dosm.gov.my/portal-main/release-content/statistics-on-causes-of-death-malaysia-2025'],
+      ['NHS — High blood pressure (Jul 2024)', 'https://www.nhs.uk/conditions/high-blood-pressure-hypertension/'],
+      ['NHS — Side effects of amlodipine (Jun 2026)', 'https://www.nhs.uk/medicines/amlodipine/side-effects-of-amlodipine/'],
+      ['NHS — Side effects of ramipril (Mar 2026)', 'https://www.nhs.uk/medicines/ramipril/side-effects-of-ramipril/'],
+      ['Chaddha et al. — Device and non-device-guided slow breathing to reduce blood pressure (2019)', 'https://pubmed.ncbi.nlm.nih.gov/31331557/'],
+      ['American College of Cardiology — SAMSON trial summary (Nov 2020)', 'https://www.acc.org/Latest-in-Cardiology/Articles/2020/11/12/20/28/sun-1028am-SAMSON-aha-2020'],
+    ],
+    related: ['check-blood-pressure-at-home', 'stroke-heart-attack-kuala-lumpur', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'vertigo-dizziness-malaysia',
+    title: 'Vertigo and dizziness: common causes, exercises that help, and when it’s a stroke',
+    crumb: 'Vertigo and dizziness',
+    desc: 'Why vertigo happens (sebab vertigo): BPPV, inner ear infections, Ménière’s, low blood pressure. The Epley manoeuvre, medicines such as cinnarizine, and stroke signs.',
+    excerpt: 'A brief spin when you roll over in bed is usually BPPV, which a simple head manoeuvre often fixes. The common causes of vertigo and dizziness, exercises that help, what anti-dizziness medicines can and can’t do, and the signs that dizziness is a stroke.',
+    standfirst: 'Vertigo, the feeling that you or the room is spinning, is frightening but usually comes from a harmless inner ear problem. The most common cause can often be fixed in minutes with a head manoeuvre. Occasionally, though, sudden vertigo is a sign of a stroke. Here is how to tell the difference, what helps, and when to get urgent help.',
+    cat: 'guides', catLabel: 'Guides', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    about: ['Vertigo', 'Vertigo (pening berpusing)'],
+    image: 'yoga-balance', imageAlt: 'A woman holding a yoga balance pose on a rock by the sea',
+    keyPoints: [
+      'Vertigo is a spinning sensation. Dizziness can also mean feeling light-headed, faint or unsteady, which often has different causes.',
+      'The most common cause is BPPV: brief spinning, usually under a minute, when you roll over in bed, look up or bend down.',
+      'The Epley manoeuvre fixes BPPV in about 7 or 8 in 10 people after one to three treatments. Anti-dizziness tablets aren’t recommended for BPPV.',
+      'Medicines such as cinnarizine and betahistine are available from pharmacists in Malaysia, but should only be used for a few days, as they can slow recovery and cause drowsiness.',
+      'Call 999 for vertigo with double vision, slurred speech, weakness, numbness, sudden hearing loss or inability to walk. It may be a stroke.',
+    ],
+    sections: [
+      { id: 'what', h: 'Vertigo or dizziness?', tocLabel: 'Vertigo vs dizziness', html: `<ul>
+<li><strong>Vertigo:</strong> a false sense that you or your surroundings are <strong>spinning</strong> or moving. It usually comes from the inner ear, and sometimes from the brain.</li>
+<li><strong>Light-headedness:</strong> feeling faint or about to pass out, often from low blood pressure, dehydration, low blood sugar or anaemia.</li>
+<li><strong>Imbalance:</strong> feeling unsteady on your feet, common in older people.</li>
+</ul>
+<p>Telling your doctor <strong>what it feels like, how long it lasts, and what brings it on</strong> is the most useful information for working out the cause. About 1 in 13 people have vertigo from an inner ear or balance problem at some point in their lives, more often women and older adults.</p>` },
+      { id: 'causes', h: 'Why does vertigo happen? (Sebab vertigo)', tocLabel: 'Causes', html: `<div class="table-wrap"><table>
+<thead><tr><th>Cause</th><th>Typical pattern</th></tr></thead>
+<tbody>
+<tr><td><strong>BPPV</strong> (benign paroxysmal positional vertigo)</td><td>Brief spinning, usually under 1 minute, triggered by rolling over in bed, looking up or bending down. Caused by tiny crystals in the inner ear moving out of place. Hearing is normal. Most common in people in their 50s to 70s, and after head injury.</td></tr>
+<tr><td><strong>Vestibular neuritis and labyrinthitis</strong></td><td>Sudden, severe vertigo lasting days, often after a cold or flu, with nausea and vomiting. Labyrinthitis also affects hearing or causes ringing. Balance usually recovers over 2 to 6 weeks.</td></tr>
+<tr><td><strong>Ménière’s disease</strong></td><td>Attacks of vertigo, usually lasting 20 minutes to several hours, with hearing loss, ringing (tinnitus) and a feeling of pressure in one ear</td></tr>
+<tr><td><strong>Vestibular migraine</strong></td><td>Vertigo lasting minutes to days, often with migraine headaches or sensitivity to light. More common in women.</td></tr>
+<tr><td><strong>Low blood pressure on standing</strong></td><td>Light-headedness when getting up quickly, from dehydration, some blood pressure medicines, diabetes or older age</td></tr>
+<tr><td><strong>Other causes</strong></td><td>Low blood sugar in diabetes, anaemia, anxiety, heat exhaustion, and new medicines</td></tr>
+</tbody></table></div>
+<p>In older adults, medicines are a common cause of dizziness. Bring a list of your medicines to your doctor.</p>` },
+      { id: 'epley', h: 'Exercises for vertigo at home', tocLabel: 'Exercises', html: `<p><strong>The Epley manoeuvre</strong> is a series of head and body positions that move the loose crystals back to where they belong. It is the recommended treatment for the most common type of BPPV:</p>
+<ul>
+<li>About 7 or 8 in 10 people improve after one to three treatments.</li>
+<li>It works far better than older home exercises (Brandt-Daroff exercises).</li>
+<li>You don’t need to sleep upright or restrict head movements afterwards.</li>
+</ul>
+<p>The manoeuvre depends on which ear is affected, so it is best to have a doctor or physiotherapist confirm the diagnosis and do it the first time. They can then teach you how to repeat it at home if the vertigo comes back.</p>
+<p><strong>Vestibular rehabilitation</strong> is a programme of balance and eye-head exercises, guided by a physiotherapist. It helps the brain adapt after vestibular neuritis, and for lasting unsteadiness. Keeping gently active and walking early, rather than staying in bed, also speeds recovery.</p>
+${figure('physio-weights', 'Small exercise weights on a mat', 'Balance exercises, guided by a physiotherapist, help the brain adapt after an inner ear problem.')}` },
+      { id: 'medicines', h: 'Medicines for vertigo, including cinnarizine', tocLabel: 'Medicines', html: `<p>Anti-dizziness medicines, called vestibular suppressants, can ease severe symptoms for a short time:</p>
+<ul>
+<li><strong>Cinnarizine</strong>, <strong>dimenhydrinate</strong> and <strong>promethazine</strong> (antihistamines) and <strong>betahistine</strong> can be supplied by a pharmacist in Malaysia without a prescription. <strong>Prochlorperazine</strong>, for severe nausea and vertigo, needs a prescription.</li>
+<li><strong>Use them only for a few days.</strong> In vestibular neuritis, taking them for longer than about 3 days can slow the brain’s natural recovery.</li>
+<li><strong>They aren’t recommended for BPPV.</strong> They don’t fix the cause, and they increase the risk of falls.</li>
+<li><strong>Side effects:</strong> cinnarizine commonly causes drowsiness, so don’t drive or drink alcohol. Rarely, especially in older people with long-term use, it can cause stiff, slow or jerky movements. Betahistine, used mainly for Ménière’s disease, usually doesn’t cause drowsiness.</li>
+</ul>
+<p>Check with a doctor or pharmacist before using these medicines if you are older, pregnant, or have Parkinson’s disease, glaucoma, or liver or kidney disease.</p>` },
+      { id: 'stroke', h: 'When dizziness is a stroke', tocLabel: 'Stroke warning signs', html: `<p>A stroke in the back of the brain can cause sudden vertigo, and sometimes looks just like an inner ear infection. In one study, vertigo was the first symptom in nearly half of people with this type of stroke. A normal CT scan doesn’t rule it out.</p>
+<div class="box box--pink" role="note"><span class="box__title">Call 999 if vertigo or dizziness comes with</span><ul>
+<li>Double vision or loss of vision</li>
+<li>Slurred speech or difficulty speaking</li>
+<li>Weakness, numbness or tingling in the face, arm or leg</li>
+<li>Clumsiness, or being unable to stand or walk</li>
+<li>Sudden hearing loss in one ear</li>
+</ul><p style="font-size:16px;line-height:1.6">Remember <strong>BE FAST</strong>: Balance, Eyes, Face, Arm, Speech, Time to call 999.</p></div>
+<p>The risk is higher in people over 50, and those with high blood pressure, diabetes, high cholesterol, an irregular heartbeat (atrial fibrillation), a previous mini-stroke, or who smoke. See our <a href="/articles/stroke-heart-attack-kuala-lumpur/">stroke and heart attack guide</a>.</p>` },
+      { id: 'safety', h: 'Staying safe, and when to see a doctor', tocLabel: 'Safety and when to see a doctor', html: `<ul>
+<li>Sit or lie down as soon as you feel dizzy. Lying still in a quiet, dark room helps during an attack.</li>
+<li>Get up slowly, sitting on the edge of the bed for a minute first.</li>
+<li>Don’t drive, climb ladders or use machinery while dizzy.</li>
+<li>Older people should take extra care to prevent falls. About 1 in 3 adults over 65 falls each year.</li>
+</ul>
+<p><strong>See a doctor</strong> if vertigo keeps coming back or doesn’t settle, if you aren’t improving after a few days of an inner ear infection, or if dizziness started after a new medicine. Get urgent help for vertigo with a severe headache, vomiting that won’t stop, fever, or sudden hearing loss.</p>` },
+    ],
+    clinicsMode: 'directory',
+    clinicsHeading: 'Where to see a doctor about vertigo',
+    clinicsTocLabel: 'Where to see a doctor',
+    clinicsIntro: 'A GP can work out the likely cause of vertigo, perform the Epley manoeuvre for BPPV, check your blood pressure and medicines, and refer you to an ENT specialist or physiotherapist if needed. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
+    clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-late/', 'Clinics open late'], ['/clinics/open-24-hours/', '24-hour clinics']],
+    faqs: [
+      ['What causes vertigo? (Sebab vertigo)', 'The most common cause is BPPV, when tiny crystals in the inner ear move out of place. Others include inner ear infections (vestibular neuritis and labyrinthitis), Ménière’s disease and vestibular migraine. Rarely, it is a stroke.'],
+      ['What exercise can I do for vertigo at home?', 'For BPPV, the Epley manoeuvre is the most effective treatment. Have a doctor or physiotherapist confirm which ear is affected and do it the first time, then they can teach you to repeat it at home.'],
+      ['Is cinnarizine good for vertigo?', 'Cinnarizine can ease severe vertigo and nausea for a few days, and a pharmacist can supply it in Malaysia. It causes drowsiness, isn’t recommended for BPPV, and long-term use can slow recovery and, rarely, cause movement problems in older people.'],
+      ['How long does vertigo last?', 'BPPV attacks last under a minute but can recur for weeks until treated. Vestibular neuritis causes severe vertigo for a few days, with balance recovering over 2 to 6 weeks. Ménière’s attacks last 20 minutes to several hours.'],
+      ['How do I know if dizziness is a stroke?', 'Call 999 if dizziness comes with double vision, slurred speech, weakness or numbness, clumsiness, being unable to walk, or sudden hearing loss. Use BE FAST: Balance, Eyes, Face, Arm, Speech, Time.'],
+      ['Why do I feel dizzy when I stand up?', 'Usually because blood pressure drops briefly when you stand, especially if you are dehydrated, older, diabetic or on blood pressure medicines. Get up slowly, drink enough fluids, and see a doctor if it keeps happening.'],
+    ],
+    sources: [
+      ['Bhattacharyya et al. — Clinical practice guideline: benign paroxysmal positional vertigo, update (AAO-HNS, 2017)', 'https://doi.org/10.1177/0194599816689667'],
+      ['Muncie et al. — Dizziness: approach to evaluation and management (American Family Physician, 2017)', 'https://www.aafp.org/pubs/afp/issues/2017/0201/p154.html'],
+      ['NHS — Vertigo', 'https://www.nhs.uk/conditions/vertigo/'],
+      ['NHS — Dizziness', 'https://www.nhs.uk/symptoms/dizziness/'],
+      ['NHS — Labyrinthitis and vestibular neuritis (Aug 2026)', 'https://www.nhs.uk/conditions/labyrinthitis/'],
+      ['NHS — Ménière’s disease (Sep 2026)', 'https://www.nhs.uk/conditions/menieres-disease/'],
+      ['NHS — Low blood pressure', 'https://www.nhs.uk/conditions/low-blood-pressure-hypotension/'],
+      ['NHS — Cinnarizine (Aug 2026)', 'https://www.nhs.uk/medicines/cinnarizine/'],
+      ['NHS — Betahistine (Sep 2026)', 'https://www.nhs.uk/medicines/betahistine/'],
+      ['Ministry of Health — Poisons List, First Schedule, Poisons Act 1952', 'https://pharmacy.moh.gov.my/sites/default/files/document-upload/poisons-list_1.pdf'],
+      ['NHS — Stroke: causes', 'https://www.nhs.uk/conditions/stroke/causes/'],
+    ],
+    related: ['stroke-heart-attack-kuala-lumpur', 'headaches-malaysia', 'blood-pressure-cholesterol-malaysia'],
   },
 ];

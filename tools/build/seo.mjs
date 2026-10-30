@@ -1,5 +1,9 @@
 // Search titles (≤60 chars) and meta descriptions (≤155 chars), kept in one place.
 export const SEO = {
+  'acne-malaysia': ['Acne (Jerawat): Causes, Spots by Location & Treatments', 'What causes acne, spots on the eyebrows, lips, back and bottom, fungal acne, treatments that work, acne patches, unsafe creams and when to see a doctor.'],
+  'bowel-cancer-screening-malaysia': ['Bowel Cancer Malaysia: Symptoms & Free Stool Test Screening', 'Bowel cancer is the most common cancer in Malaysian men. Symptoms (kanser usus simptom), risk factors, the free iFOBT stool test from 50, and colonoscopy.'],
+  'blood-pressure-cholesterol-malaysia': ['High Blood Pressure & Cholesterol: Signs, Levels, Lowering', 'Signs and causes of high blood pressure (darah tinggi), normal BP and cholesterol levels, why lowering it in 5 minutes is a myth, and statin side effects.'],
+  'vertigo-dizziness-malaysia': ['Vertigo & Dizziness: Causes, Home Exercises & Stroke Signs', 'Why vertigo happens (sebab vertigo): BPPV, inner ear infections, Ménière’s, low blood pressure. The Epley manoeuvre, cinnarizine and stroke warning signs.'],
   'anxiety-malaysia': ['Anxiety: Signs, How to Overcome It & Help in Malaysia', 'What anxiety is (apakah anxiety), signs and panic attacks, self-help that works, magnesium evidence, treatment, where to get help, and SPM exam stress.'],
   'hiv-malaysia': ['HIV in Malaysia: Symptoms, Testing, PrEP & HIV vs AIDS', 'Early HIV symptoms and rash, HIV vs AIDS, where to get tested in Malaysia, self-test kits, free PrEP, PEP within 72 hours and the premarital HIV test.'],
   'stomach-pain-gastric-malaysia': ['Stomach Pain & Gastric: Causes by Location & Warning Signs', 'What left, right or upper-middle stomach pain can mean, what “gastric” is, H. pylori, pharmacy medicines, foods, children with vomiting, and warning signs.'],

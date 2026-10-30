@@ -340,6 +340,6 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk beside a notebook'
       ['CodeBlue — Over two million adults live with three NCDs: NHMS 2023 (May 2024)', 'https://codeblue.galencentre.org/2024/05/over-two-million-adults-in-malaysia-live-with-three-ncds-nhms-2023/'],
       ['PERKESO SEHATi — Health screening programme', 'https://sehati.ladesk.com/'],
     ],
-    related: ['world-diabetes-day-2026-kl', 'check-blood-pressure-at-home', 'free-health-screening-malaysia'],
+    related: ['blood-pressure-cholesterol-malaysia', 'world-diabetes-day-2026-kl', 'check-blood-pressure-at-home'],
   },
 ];
