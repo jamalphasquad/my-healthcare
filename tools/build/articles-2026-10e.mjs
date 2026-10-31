@@ -414,6 +414,6 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['The Star — Health Ministry bans cosmetic products containing scheduled poisons (2 Apr 2026)', 'https://www.thestar.com.my/news/nation/2026/04/02/health-ministry-bans-cosmetic-products-containing-scheduled-poisons'],
       ['Mothership — HSA warns of potent steroid in “zero-steroid” eczema cream (23 Jul 2026)', 'https://mothership.sg/2026/07/hsa-warning-products/'],
     ],
-    related: ['acne-malaysia', 'pico-laser-melasma-malaysia', 'hfmd-children-malaysia'],
+    related: ['psoriasis-malaysia', 'acne-malaysia', 'hfmd-children-malaysia'],
   },
 ];

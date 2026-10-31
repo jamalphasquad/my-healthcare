@@ -46,7 +46,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
 <p><strong>What is tested in 2026:</strong> a physical examination and family history, full blood count, HbA1c (average blood sugar), a fasting cholesterol profile, a urine test and a mental health screening, followed by a review of your results with a doctor. Women are also offered a Pap smear and a mammogram. For a small extra charge you can add blood group, liver and kidney tests.</p>
 <p><strong>How to book:</strong> download the <strong>SEHATi</strong> app, check your eligibility and choose a panel clinic. The clinic will confirm your eligibility with your IC number. If you are not eligible, SEHATi also lists paid screening packages for PERKESO contributors.</p>
 <p>PERKESO has not published a closing date for 2026, so check the SEHATi app for the latest details.</p>` },
-      { id: 'peka-b40', h: 'PeKa B40 (for STR recipients aged 40+)', tocLabel: 'PeKa B40', html: `<p>PeKa B40 is a government scheme run by ProtectHealth for lower-income Malaysians. You qualify if you are a Malaysian aged <strong>40 or above</strong> and receive <strong>Sumbangan Tunai Rahmah (STR)</strong>, or are the spouse of a recipient. Eligibility is automatic, so there is nothing to register.</p>
+      { id: 'peka-b40', h: 'PeKa B40 (for STR recipients aged 40+)', tocLabel: 'PeKa B40', html: `<p>PeKa B40 is a government scheme run by ProtectHealth for lower-income Malaysians. You qualify if you are a Malaysian aged <strong>40 or above</strong> and receive <strong>Sumbangan Tunai Rahmah (STR)</strong>, or are the spouse of a recipient. Eligibility is automatic, so there is nothing to register. See our <a href="/articles/peka-b40-malaysia/">PeKa B40 guide</a> for how to check and the full list of benefits.</p>
 <p>The free screening covers your health history and risk factors, a physical examination, blood and urine tests, a mental health screening, and a breast examination for women or a prostate examination for men at risk. It is done at private GP clinics registered with PeKa B40. You can check your eligibility with your IC number on the PeKa B40 website.</p>
 <p>Since 2019 the scheme has served more than 1.9 million people. Budget 2027 allocates RM80 million to continue it.</p>` },
       { id: 'klinik-kesihatan', h: 'Free checks at government health clinics', tocLabel: 'Klinik Kesihatan', html: `<p>Under the National Health Screening Initiative (NHSI), government health clinics and PeKa B40 clinics offer free basic screening for <strong>blood sugar, blood pressure, BMI, cholesterol and mental health</strong>. If a result is abnormal, you are referred for confirmatory tests and follow-up.</p>
@@ -113,7 +113,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
       ['MOH — Management of Breast Cancer, 3rd edition, Quick Reference (2019)', 'https://mymahtas2.moh.gov.my/files/QR_Management_of_Breast_Cancer_(Third_Edition)_%20(1).pdf'],
       ['MOH — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017)', 'https://mymahtas2.moh.gov.my/files/CPG%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
     ],
-    related: ['bowel-cancer-screening-malaysia', 'world-diabetes-day-2026-kl', 'breast-cancer-screening-malaysia'],
+    related: ['peka-b40-malaysia', 'bowel-cancer-screening-malaysia', 'world-diabetes-day-2026-kl'],
   },
 
   /* ------------------------------------------------------------------ */

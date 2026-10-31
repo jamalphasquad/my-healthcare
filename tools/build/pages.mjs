@@ -31,8 +31,14 @@ export function summaryHours(hours) {
 // Health guides linked from clinic and area pages, so articles get links from the directory.
 const GP_GUIDES = ['clinic-or-emergency-department', 'free-health-screening-malaysia', 'dengue-klang-valley-first-three-days'];
 const AESTHETIC_GUIDES = ['pico-laser-melasma-malaysia', 'skin-boosters-malaysia', 'weight-loss-injections-malaysia'];
-export const guideLinks = (articles, aesthetic) => (aesthetic ? AESTHETIC_GUIDES : GP_GUIDES)
+export const guideLinks = (articles, aesthetic, extra = []) => [...extra, ...(aesthetic ? AESTHETIC_GUIDES : GP_GUIDES)]
   .map((s) => articles.find((a) => a.slug === s)).filter(Boolean).map((a) => [`/articles/${a.slug}/`, a.crumb || a.title]);
+
+// Panels a clinic lists, read from its "Which panels…" FAQ answer.
+export const panels = (c) => ((c.faqs || []).find(([q]) => /^Which panels/.test(q))?.[1] || '').replace(/^The clinic lists /, '').replace(/\. Check with.*$/, '').split(', ').filter(Boolean);
+// Guides about a scheme, linked from clinics on that panel.
+const PANEL_GUIDES = [['PeKa B40 (ProtectHealth)', 'peka-b40-malaysia'], ['FOMEMA', 'fomema-medical-check-up']];
+const panelGuides = (c) => PANEL_GUIDES.filter(([p]) => panels(c).includes(p)).map(([, s]) => s);
 
 // Questions people search for about a clinic, answered from its listing, for clinics without their own FAQs.
 function listingFaqs(c, sundayPage) {
@@ -454,7 +460,7 @@ ${networkUrl ? `<a class="chip" href="${networkUrl}">All ${esc(c.network.name)} 
 ${(coll?.serviceLinks || []).map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}
 </div></div>
 <div class="stack g12"><h2 style="font-size:22px">Health guides</h2><div class="chips">
-${guideLinks(articles, c.serviceKeys.includes('aesthetic')).map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}
+${guideLinks(articles, c.serviceKeys.includes('aesthetic'), panelGuides(c)).map(([href, label]) => `<a class="chip" href="${href}">${esc(label)}</a>`).join('')}
 </div></div>
 </aside>
 </div>

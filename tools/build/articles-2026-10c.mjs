@@ -122,7 +122,7 @@ ${figure('caregiver-wheelchair', 'A carer pushing an older man in a wheelchair o
       ['RinggitPlus — Budget 2027: what changes for your money in 2027', 'https://ringgitplus.com/en/blog/budget-2027/budget-2027-what-changes-for-your-money-in-2027.html'],
       ['SAYS — All the healthcare reforms proposed under Budget 2027', 'https://says.com/my/news/list-all-healthcare-reforms-proposed-budget-2027-benefit-you'],
     ],
-    related: ['mediasas-malaysia', 'thalassaemia-screening-malaysia', 'free-health-screening-malaysia'],
+    related: ['peka-b40-malaysia', 'mediasas-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -329,6 +329,6 @@ ${figure('morning-walk', 'People walking in a park in the morning', 'Thirty minu
       ['Diabetes Malaysia — WDD state event, Kuala Lumpur (14 Nov 2026)', 'https://diabetesmalaysia.org.my/events/wdd-state-event-kuala-lumpur/'],
       ['NHS — High blood sugar (hyperglycaemia) (reviewed Mar 2026)', 'https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'gout-malaysia', 'free-health-screening-malaysia'],
+    related: ['normal-blood-sugar-level-malaysia', 'undiagnosed-diabetes-high-blood-pressure-young-adults', 'free-health-screening-malaysia'],
   },
 ];

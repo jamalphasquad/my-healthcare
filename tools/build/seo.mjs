@@ -1,5 +1,9 @@
 // Search titles (≤60 chars) and meta descriptions (≤155 chars), kept in one place.
 export const SEO = {
+  'peka-b40-malaysia': ['PeKa B40 (PeKa Sihat): Eligibility, Semakan & Free Screening', 'PeKa B40 eligibility (kelayakan), how to check (semakan), the free health screening, RM20,000 device aid and other benefits, plus mySalam and PERKESO.'],
+  'fomema-medical-check-up': ['FOMEMA Medical Check-Up 2026: Fees, Tests, Results & Appeals', 'FOMEMA medical exam for foreign workers: who needs it, what is tested, 2026 fees with SST (RM226.56 / RM237.36), how to check results online and appeals.'],
+  'normal-blood-sugar-level-malaysia': ['Normal Blood Sugar Level & HbA1c Chart (Malaysia Guidelines)', 'Normal blood sugar in mmol/L, HbA1c normal range, prediabetes and diabetes cut-offs (HbA1c 6.3% in Malaysia), targets and early signs of kencing manis.'],
+  'psoriasis-malaysia': ['Psoriasis: Symptoms, Scalp Psoriasis, Triggers & Treatment', 'Psoriasis signs, scalp psoriasis vs dandruff, psoriasis vs kurap, triggers, psoriatic arthritis and treatment in Malaysia, from creams to biologics.'],
   'acne-malaysia': ['Acne (Jerawat): Causes, Spots by Location & Treatments', 'What causes acne, spots on the eyebrows, lips, back and bottom, fungal acne, treatments that work, acne patches, unsafe creams and when to see a doctor.'],
   'bowel-cancer-screening-malaysia': ['Bowel Cancer Malaysia: Symptoms & Free Stool Test Screening', 'Bowel cancer is the most common cancer in Malaysian men. Symptoms (kanser usus simptom), risk factors, the free iFOBT stool test from 50, and colonoscopy.'],
   'blood-pressure-cholesterol-malaysia': ['High Blood Pressure & Cholesterol: Signs, Levels, Lowering', 'Signs and causes of high blood pressure (darah tinggi), normal BP and cholesterol levels, why lowering it in 5 minutes is a myth, and statin side effects.'],

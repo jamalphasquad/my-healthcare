@@ -3,7 +3,7 @@
 //   service pages  /clinics/<service>/       e.g. /clinics/open-sunday/  (only when 2+ clinics qualify)
 //   network pages  /clinics/<network>/       e.g. /clinics/klinik-segara/
 import { head, header, footer, crumbs, crumbsLd, write, esc, abs, ORG, WEBSITE, SITE, LAYOUT } from './lib.mjs';
-import { clinicCard, rangeText, firstPage, pagedList, pager, listedText, summaryHours, guideLinks } from './pages.mjs';
+import { clinicCard, rangeText, firstPage, pagedList, pager, listedText, summaryHours, guideLinks, panels } from './pages.mjs';
 import { nearestClinics, kmText } from './clinic-data.mjs';
 import { AREA_INFO } from './areas.mjs';
 
@@ -21,6 +21,8 @@ const latestClose = (h) => Math.max(...[0, 1, 2, 3, 4, 5, 6].map((d) => closing(
 const opensOn = (c, d) => !!(c.hours && c.hours[d] && c.hours[d].length);
 const weekendDays = (c) => [6, 0].filter((d) => opensOn(c, d));
 const dayHours = (c, d) => (c.hours ? rangeText(c.hours[d]) : 'Call to confirm');
+const hasPanel = (c, p) => panels(c).includes(p);
+const stateName = (c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state);
 // Bilingual title: people search for both "clinics in Cheras" and "klinik Cheras". Longest option that fits.
 const placeTitle = (label, where) => [`Clinics in ${where} (Klinik ${label}): Hours & Phone`, `Clinics in ${label} (Klinik ${label}): Hours & Phone`, `Clinics in ${where}: Hours & Phone`, `Clinics in ${label}: Hours & Phone`, `Clinics in ${label}`].find((t) => t.length <= 60);
 const hoursTable = (cs, first) => `<h2 id="hours"${first ? ' style="margin-top:0"' : ''}>Opening hours at a glance</h2>
@@ -210,6 +212,52 @@ export function buildCollections({ clinics, areas, topics, articles }) {
       faqs: () => [
         ['Do I need an appointment to see a GP?', 'Most GP clinics accept walk-ins. Calling ahead can save waiting time, especially in the evening and at weekends.'],
         ['When should I go to an emergency department instead?', 'Call <a href="tel:999">999</a> or go to a hospital emergency department for chest pain, difficulty breathing, signs of stroke, heavy bleeding or a serious injury. See our guide on <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a>.'],
+      ],
+    },
+    // Panel pages, from the panels each clinic lists. Counts are small, so the copy points to the official search too.
+    {
+      slug: 'peka-b40-clinics', crumb: 'PeKa B40 clinics', name: `PeKa B40 panel clinics in ${scope}`,
+      test: (c) => hasPanel(c, 'PeKa B40 (ProtectHealth)'),
+      eyebrow: 'Klinik panel PeKa B40', h1: '<em>PeKa B40</em> panel clinics',
+      intro: `Clinics ${around} that list PeKa B40 (ProtectHealth) among their panels. STR recipients and their spouses aged 40 and above can get a free health screening at these clinics. Bring your MyKad, and call ahead to confirm.`,
+      title: () => `PeKa B40 Panel Clinics in ${scope} (Klinik PeKa B40)`,
+      desc: (n) => `${n} PeKa B40 panel clinics (klinik panel PeKa B40) ${around} for the free health screening, with opening hours, phone numbers and directions.`,
+      column: ['State', stateName],
+      body: `<h2 id="about-peka">About PeKa B40</h2>
+<p>PeKa B40 is the Ministry of Health scheme, run by ProtectHealth, that gives STR recipients and their spouses aged 40 and above a free health screening, with blood tests for diabetes, cholesterol and kidney function. It is being renamed PeKa Sihat. Check your eligibility at <a href="https://kelayakan.pekab40.com.my/semakan-kelayakan" target="_blank" rel="noopener">kelayakan.pekab40.com.my</a>, and see the <a href="https://bms.pekab40.com.my/provider" target="_blank" rel="noopener">official provider search</a> for every panel clinic. Read our <a href="/articles/peka-b40-malaysia/">PeKa B40 guide</a> for the full list of benefits.</p>`,
+      faqs: () => [
+        ['Who can get a free screening at a PeKa B40 clinic?', 'Malaysians aged 40 and above who receive Sumbangan Tunai Rahmah (STR), and their registered spouses aged 40 and above. There is no need to register first; bring your MyKad.'],
+        ['Do I need an appointment for PeKa B40 screening?', 'Calling ahead is a good idea, as clinics may set times for screening. The screening takes two visits: one for the check-up and tests, and one to go through your results.'],
+      ],
+    },
+    {
+      slug: 'fomema-clinics', crumb: 'FOMEMA clinics', name: `FOMEMA panel clinics in ${scope}`,
+      test: (c) => hasPanel(c, 'FOMEMA'),
+      eyebrow: 'Foreign worker medical exam', h1: '<em>FOMEMA</em> panel clinics',
+      intro: `Clinics ${around} on the FOMEMA panel for the compulsory medical examination of foreign workers and domestic helpers. Some also have FOMEMA X-ray facilities on site.`,
+      title: () => `FOMEMA Clinics in ${scope}: Hours, Phone & X-ray`,
+      desc: (n) => `${n} FOMEMA panel clinics ${around} for foreign worker medical check-ups, showing which have FOMEMA X-ray on site, with hours and directions.`,
+      column: ['FOMEMA X-ray', (c) => (hasPanel(c, 'FOMEMA (X-ray)') ? 'X-ray at this clinic' : 'Exam only')],
+      body: `<h2 id="about-fomema">About the FOMEMA exam</h2>
+<p>Employers register workers and pay on the <a href="https://portal.fomema.my/" target="_blank" rel="noopener">FOMEMA portal</a>, then choose a panel clinic. From 25 May 2026 the fee is RM226.56 for men and RM237.36 for women, including SST. The exam is needed within 30 days of arrival and every year before permit renewal. Check a clinic’s panel status on the <a href="https://fomema2u.com.my/" target="_blank" rel="noopener">FOMEMA website</a>, and read our <a href="/articles/fomema-medical-check-up/">FOMEMA guide</a> for tests, results and appeals.</p>`,
+      faqs: () => [
+        ['Can a worker walk in to a FOMEMA clinic?', 'The employer must register the worker and pay on the FOMEMA portal first, choosing the clinic. Then the worker attends with their passport. Calling the clinic ahead is a good idea.'],
+        ['Do all FOMEMA clinics do the chest X-ray?', 'No. The table above shows which clinics list FOMEMA X-ray on site. Others refer the worker to a FOMEMA-registered X-ray facility.'],
+      ],
+    },
+    {
+      slug: 'perkeso-panel-clinics', crumb: 'PERKESO clinics', name: `PERKESO panel clinics in ${scope}`,
+      test: (c) => hasPanel(c, 'PERKESO (HSP)'),
+      eyebrow: 'Klinik panel PERKESO', h1: '<em>PERKESO</em> health screening clinics',
+      intro: `Clinics ${around} that list PERKESO’s Health Screening Programme (HSP) among their panels. Eligible contributors aged 40 to 59 can get a free health screening here.`,
+      title: () => `PERKESO Panel Clinics in ${scope} (Klinik Panel PERKESO)`,
+      desc: (n) => `${n} PERKESO (SOCSO) panel clinics (klinik panel PERKESO) ${around} for the free Health Screening Programme, with hours, phone numbers and directions.`,
+      column: ['State', stateName],
+      body: `<h2 id="about-hsp">About PERKESO’s free health screening</h2>
+<p>PERKESO’s Health Screening Programme is free for Malaysian contributors aged 40 to 59 who are active under the Invalidity Scheme with at least 12 months of contributions. Check your eligibility and book in PERKESO’s <a href="https://sehati.perkeso.gov.my/" target="_blank" rel="noopener">SEHATi</a> app or portal. See our guide to <a href="/articles/peka-b40-malaysia/">PeKa B40, mySalam and PERKESO screening</a>.</p>`,
+      faqs: () => [
+        ['Who can get PERKESO’s free health screening?', 'Malaysian PERKESO contributors aged 40 to 59 who are active under the Invalidity Scheme, with at least 12 months of contributions.'],
+        ['How do I book a PERKESO health screening?', 'Check your eligibility and choose a panel clinic in PERKESO’s SEHATi app or portal, then call the clinic to confirm a time.'],
       ],
     },
   ];
