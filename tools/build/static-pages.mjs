@@ -61,6 +61,7 @@ export function staticPages(topics) {
 <ul>
 <li><strong>Emails you send us.</strong> If you contact us, we keep your message and email address so we can reply.</li>
 <li><strong>Newsletter sign-ups.</strong> If you subscribe, we store your email address only to send the newsletter. You can unsubscribe at any time.</li>
+<li><strong>Your location, only if you ask.</strong> When you tap “Near me” or “Use my location”, your browser asks your permission and then shares your approximate position with the page so it can sort clinics by distance. This happens in your browser: your location is not sent to us or stored.</li>
 <li><strong>Basic usage data.</strong> Like most websites, our hosting provider may log technical data such as IP address and browser type for security and performance.</li>
 </ul>
 <p>We do not ask for, and you should not send us, medical records or health details.</p>

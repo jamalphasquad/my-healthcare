@@ -3,7 +3,7 @@
 //   service pages  /clinics/<service>/       e.g. /clinics/open-sunday/  (only when 2+ clinics qualify)
 //   network pages  /clinics/<network>/       e.g. /clinics/klinik-segara/
 import { head, header, footer, crumbs, crumbsLd, write, esc, abs, ORG, WEBSITE, SITE, LAYOUT } from './lib.mjs';
-import { clinicCard, rangeText, firstPage, pagedList, pager, listedText, summaryHours, guideLinks, panels } from './pages.mjs';
+import { clinicCard, rangeText, firstPage, pagedList, pager, listedText, summaryHours, guideLinks, panels, listTools, nearMsg } from './pages.mjs';
 import { nearestClinics, kmText } from './clinic-data.mjs';
 import { AREA_INFO } from './areas.mjs';
 
@@ -70,14 +70,14 @@ ${crumbs(items)}
 <span class="eyebrow">${p.eyebrow}</span>
 <h1 class="h-hero" style="font-size:clamp(36px,5vw,58px)">${p.h1}</h1>
 <p class="lede">${p.intro}</p>
-</div>
+${p.cta || ''}</div>
 <ul class="facts-row" aria-label="At a glance">${p.facts.map((f) => `<li>${f}</li>`).join('')}</ul>
 <div data-directory id="list"${pagedList(p.slug, p.clinics)} style="scroll-margin-top:90px;margin-top:36px">
 <div class="section-head">
 <div class="stack g10"><span class="eyebrow">Clinic list</span><h2 id="list-h" class="h-section" style="font-size:clamp(28px,3vw,38px)">${p.listHeading}</h2></div>
-<label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
+${listTools()}
 </div>
-<p class="result-text" aria-live="polite">${listedText(p.clinics)}</p>
+${nearMsg}<p class="result-text" aria-live="polite">${listedText(p.clinics)}</p>
 <div class="clinic-grid">
 ${firstPage(p.clinics).map((c) => clinicCard(c)).join('\n')}
 </div>
@@ -128,11 +128,15 @@ export function buildCollections({ clinics, areas, topics, articles }) {
       slug: 'open-24-hours', crumb: 'Open 24 hours', name: `24-hour clinics in ${scope}`,
       test: (c) => c.hours && [0, 1, 2, 3, 4, 5, 6].every((d) => (c.hours[d] || []).some(([a, b]) => a === 0 && b >= 1440)),
       eyebrow: 'Klinik 24 jam', h1: 'Clinics open <em>24 hours</em>',
-      intro: `GP clinics ${around} that stay open around the clock, every day of the week. Useful for fevers, infections and minor injuries at night. For emergencies, call 999.`,
-      title: () => `24-Hour Clinics in ${scope} (Klinik 24 Jam)`,
-      desc: (n) => `${n} clinics open 24 hours a day, 7 days a week (klinik 24 jam) ${around}, with addresses, phone numbers and directions.`,
+      intro: `GP clinics ${around} that stay open around the clock, every day of the week. Useful for fevers, infections and minor injuries at night. Tap “Near me” to see the nearest one first. For emergencies, call 999.`,
+      title: () => `24 Hour Clinics Near Me in ${scope} (Klinik 24 Jam)`,
+      desc: (n) => `${n} clinics open 24 hours (klinik 24 jam) ${around}. Find the nearest 24-hour clinic near you, with addresses, phone numbers and directions.`,
+      body: (cs) => `<h2 id="by-state">24-hour clinics by state</h2>
+${[...new Set(cs.map(stateName))].map((st) => `<h3>Klinik 24 jam in ${esc(st)}</h3>
+<ul>${cs.filter((c) => stateName(c) === st).map((c) => `<li><a href="/clinics/${c.slug}/">${esc(c.name)}</a>, ${esc(c.areaLabel)}${c.locality !== c.areaLabel ? `, ${esc(c.locality)}` : ''}</li>`).join('')}</ul>`).join('\n')}`,
       column: ['State', (c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state)],
       faqs: () => [
+        ['Where is the nearest 24-hour clinic to me?', 'Tap “Near me” above the list and allow location access. The list is then sorted with the nearest 24-hour clinic first, showing the distance to each. You can also browse the clinics by state below the list.'],
         ['Can I walk in to a 24-hour clinic at night?', 'Yes, 24-hour GP clinics accept walk-ins at any time. Calling first can save a wasted trip, as a doctor may occasionally be away on a home visit or the clinic may be busy.'],
         ['Is a 24-hour clinic the same as an emergency department?', 'No. A 24-hour clinic can treat everyday illness and minor injuries. For chest pain, difficulty breathing, signs of stroke, heavy bleeding or a serious injury, call <a href="tel:999">999</a> or go to a hospital emergency department. See our guide on <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a>.'],
       ],
@@ -280,7 +284,8 @@ export function buildCollections({ clinics, areas, topics, articles }) {
 
   const services = SERVICES.map((s) => ({ ...s, clinics: clinics.filter(s.test) })).filter((s) => s.clinics.length >= MIN_CLINICS && !taken.has(s.slug));
   services.forEach((s) => claim(s.slug, 'service page'));
-  const serviceLinks = services.map((s) => [`/clinics/${s.slug}/`, s.crumb]);
+  claim('near-me', 'near-me page');
+  const serviceLinks = [['/clinics/near-me/', 'Clinics near me'], ...services.map((s) => [`/clinics/${s.slug}/`, s.crumb])];
   LAYOUT.services = serviceLinks; // footer links on every page, including these
 
   // ---- network pages
@@ -327,6 +332,7 @@ export function buildCollections({ clinics, areas, topics, articles }) {
   }
 
   // ---- service pages
+  const bodyOf = (s, cs) => (typeof s.body === 'function' ? s.body(cs) : s.body);
   for (const s of services) {
     const cs = s.clinics;
     const table = s.column ? `<h2 id="table" style="margin-top:0">${esc(s.column[0])} at a glance</h2>
@@ -339,7 +345,7 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
       facts: [plural(cs.length, 'clinic') + ' listed', `${plural(new Set(cs.map((c) => c.areaSlug)).size, 'area')}`, `${plural(cs.filter((c) => c.state === 'Kuala Lumpur').length, 'clinic')} in Kuala Lumpur`],
       listHeading: esc(s.name.replace(/ in (Kuala Lumpur|Malaysia).*$/, '')),
       // the first heading on the page gets no top margin
-      body: table + (s.body ? (table ? s.body.replace(' style="margin-top:0"', '') : s.body) : ''),
+      body: table + (s.body ? (table ? bodyOf(s, cs).replace(' style="margin-top:0"', '') : bodyOf(s, cs)) : ''),
       faqs: s.faqs(cs), clinics: cs, checked, where: 'that fits this list', topics,
       title: cut(s.title(cs.length), 60), desc: cut(s.desc(cs.length), 155),
       links: [['Browse by area', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks.filter(([h]) => h !== `/clinics/${s.slug}/`)], ['Health guides', guideLinks(articles, s.slug === 'aesthetic-clinics')]],
@@ -368,6 +374,38 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
     };
     page(p);
     out.networks.push({ slug, url: `/clinics/${slug}/`, label: n.name, title: p.name, desc: p.desc, image: cs[0].image, keywords: n.name });
+  }
+
+  // ---- "near me" page: every clinic, sorted by distance in the browser when the visitor allows it
+  {
+    const p = {
+      slug: 'near-me', crumb: 'Clinics near me', name: 'Clinics near me', place: scope,
+      eyebrow: 'Klinik terdekat', h1: 'Find a clinic <em>near you</em>',
+      intro: `Allow your location and we’ll sort the ${clinics.length} clinics we list ${around} by distance, nearest first, showing which are open now. Your location stays on your device.`,
+      cta: `<div class="near-hero"><button type="button" class="btn" data-near-me hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>Use my location</button><a class="btn btn--ghost" href="/clinics/">Search by area or postcode</a></div>`,
+      facts: [plural(clinics.length, 'clinic') + ' listed', `${plural(services.find((s) => s.slug === 'open-24-hours')?.clinics.length || 0, 'clinic')} open 24 hours`, `${plural(clinics.filter((c) => weekendDays(c).length).length, 'clinic')} open at weekends`],
+      listHeading: 'Clinics nearest to you',
+      body: `<h2 id="how" style="margin-top:0">How “near me” works</h2>
+<ul>
+<li><strong>Tap “Use my location”</strong> and allow location access when your browser asks. The list is re-ordered with the nearest clinic first, and each card shows the straight-line distance.</li>
+<li><strong>Turn on “Open now”</strong> to see only clinics open at this moment, using Malaysia time.</li>
+<li><strong>Your location stays private.</strong> It is used in your browser only to sort the list, and is not sent to us or stored. See our <a href="/privacy/">privacy notice</a>.</li>
+<li><strong>Prefer not to share your location?</strong> <a href="/clinics/">Search all clinics</a> by area, postcode or service instead.</li>
+</ul>
+<p>Need a clinic in the middle of the night? See our <a href="/clinics/open-24-hours/">24-hour clinics</a>. For chest pain, difficulty breathing, signs of stroke or heavy bleeding, don’t wait for a clinic: call <a href="tel:999">999</a> or go to the nearest emergency department.</p>`,
+      faqs: [
+        ['How do I find the nearest clinic to me?', 'Tap “Use my location” on this page and allow location access. The clinics we list are sorted by distance, nearest first, and you can turn on “Open now” to see only clinics that are open.'],
+        ['Is my location stored?', 'No. Your browser shares your position with this page only after you allow it, and it is used on your device to sort the list. It is not sent to us or saved.'],
+        ['Why is the nearest clinic still far away?', `We list ${clinics.length} clinics so far, mostly in Kuala Lumpur and Selangor, and are adding more. If we don’t list a clinic near you yet, your nearest Klinik Kesihatan or GP may not appear here.`],
+        ['Should I go to a clinic or an emergency department?', 'A clinic can treat everyday illness and minor injuries. For chest pain, difficulty breathing, signs of stroke, heavy bleeding or a serious injury, call <a href="tel:999">999</a> or go to an emergency department. See our guide on <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a>.'],
+      ],
+      clinics, checked, where: 'near you', topics,
+      title: 'Clinic Near Me: Find the Nearest Klinik Open Now',
+      desc: cut(`Find a clinic near you (klinik terdekat): sort ${clinics.length} clinics ${around} by distance, see which are open now, and get hours, phone numbers and directions.`, 155),
+      links: [['Browse by need', serviceLinks.filter(([h]) => h !== '/clinics/near-me/')], ['Browse by area', areaLinks], ['Health guides', guideLinks(articles, false)]],
+    };
+    page(p);
+    out.services.unshift({ slug: p.slug, url: '/clinics/near-me/', label: p.crumb, title: p.name, desc: p.desc, image: clinics[0].image, keywords: 'near me nearest clinic klinik terdekat berdekatan open now' });
   }
 
   out.serviceLinks = serviceLinks;

@@ -240,7 +240,7 @@
       var areaLabel = state.area === 'all' ? '' : ' in ' + (($('[data-filter-area="' + state.area + '"]', dir) || {}).textContent || state.area);
       var svcLabel = state.service === 'all' ? '' : ' · ' + (($('[data-filter-service="' + state.service + '"]', dir) || {}).textContent || state.service);
       var rt = $('.result-text', dir);
-      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + (areaLabel || ' listed') + svcLabel + (state.openNow ? ' · open now' : '') + (terms.length ? ' · matching “' + state.q.trim() + '”' : '') + range;
+      if (rt) rt.textContent = shown + (shown === 1 ? ' clinic' : ' clinics') + (areaLabel || ' listed') + svcLabel + (state.openNow ? ' · open now' : '') + (state.near ? ' · nearest first' : '') + (terms.length ? ' · matching “' + state.q.trim() + '”' : '') + range;
       var empty = $('.empty', dir); if (empty) empty.hidden = shown !== 0;
       if (areaSel) { areaSel.value = state.area; if (areaSel._sync) areaSel._sync(); }
       if (svcSel) { svcSel.value = state.service; if (svcSel._sync) svcSel._sync(); }
@@ -251,7 +251,7 @@
       var a = e.target.closest('[data-filter-area]'), s = e.target.closest('[data-filter-service]'), r = e.target.closest('[data-reset]'), p = e.target.closest('[data-page]');
       if (a) state.area = a.getAttribute('data-filter-area');
       if (s) state.service = s.getAttribute('data-filter-service');
-      if (r) { state = { area: 'all', service: 'all', openNow: false, q: '' }; if (dirQ) dirQ.value = ''; }
+      if (r) { state = { area: 'all', service: 'all', openNow: false, q: '', near: state.near }; if (dirQ) dirQ.value = ''; }
       if (a || s || r) { var on = $('#open-now'); if (on) on.checked = state.openNow; refilter(); }
       if (p && !p.disabled) { page = +p.getAttribute('data-page'); apply(); dir.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
@@ -264,6 +264,47 @@
       dirQ.addEventListener('input', function () { state.q = dirQ.value; refilter(); });
       dirQ.addEventListener('keydown', function (e) { if (e.key === 'Enter') e.preventDefault(); });
     }
+
+    // "Near me": sort the list by straight-line distance from the visitor. The position stays in the browser.
+    var nearMsg = $('.near-msg', dir);
+    function say(t) { if (nearMsg) { nearMsg.hidden = false; nearMsg.textContent = t; } }
+    function km(a, b) {
+      var r = Math.PI / 180, x = Math.sin((b[0] - a[0]) * r / 2), y = Math.sin((b[1] - a[1]) * r / 2);
+      return 12742 * Math.asin(Math.sqrt(x * x + Math.cos(a[0] * r) * Math.cos(b[0] * r) * y * y));
+    }
+    function kmText(d) { return d < 0.1 ? 'under 100 m' : (d < 10 ? d.toFixed(1) : Math.round(d)) + ' km'; }
+    function sortByDistance(me) {
+      cards.forEach(function (c) {
+        var g = (c.getAttribute('data-geo') || '').split(',');
+        c._km = g.length === 2 ? km(me, [+g[0], +g[1]]) : Infinity;
+        var d = $('.js-dist', c); if (d) d.textContent = isFinite(c._km) ? ' · ' + kmText(c._km) + ' away' : '';
+      });
+      cards.sort(function (a, b) { return a._km - b._km; });
+      if (!pageSize) cards.forEach(function (c) { grid.appendChild(c); }); // short lists keep every card in the grid
+      state.near = true; page = 1; apply();
+      var first = cards[0], name = first && $('.clinic__name', first);
+      if (!first || !isFinite(first._km)) say('Sorted by distance from you.');
+      else if (first._km > 30) say('We don’t list a clinic near you yet. The nearest we list is ' + name.textContent + ', ' + kmText(first._km) + ' away.');
+      else say('Sorted by distance from you. Nearest: ' + name.textContent + ', ' + kmText(first._km) + ' away (straight line).');
+    }
+    function nearMe(btn) {
+      if (!navigator.geolocation) { say('Your browser can’t share your location. Try searching by area instead.'); return; }
+      btn.disabled = true; say('Finding your location…');
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        btn.disabled = false;
+        ready.then(function () {
+          sortByDistance([pos.coords.latitude, pos.coords.longitude]);
+          dir.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }, function (err) {
+        btn.disabled = false;
+        say(err.code === 1 ? 'Location access is turned off for this site. Allow it in your browser settings, or search by area instead.' : 'We couldn’t get your location. Please try again, or search by area instead.');
+      }, { timeout: 15000, maximumAge: 300000 });
+    }
+    $$('[data-near-me]').forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener('click', function () { nearMe(b); });
+    });
 
     var finder = $('#finder');
     if (finder) finder.addEventListener('submit', function (e) {

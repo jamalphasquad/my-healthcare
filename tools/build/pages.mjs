@@ -99,10 +99,10 @@ const searchText = (c) => [c.name, ...(c.altNames || []), c.areaLabel, c.localit
   .filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter((w, i, all) => all.indexOf(w) === i).join(' ');
 
 export function clinicCard(c, o = {}) {
-  return `<article class="clinic" data-area="${o.key ? o.key(c) : c.areaSlug}" data-services="${c.serviceKeys.join('|')}" data-q="${esc(searchText(c))}"${hoursAttr(c)}>
+  return `<article class="clinic" data-area="${o.key ? o.key(c) : c.areaSlug}" data-services="${c.serviceKeys.join('|')}" data-q="${esc(searchText(c))}"${c.geo ? ` data-geo="${c.geo.join(',')}"` : ''}${hoursAttr(c)}>
 <a class="clinic__media" href="/clinics/${c.slug}/" tabindex="-1" aria-hidden="true">${img(c.image, c.imageAlt, { sizes: '(max-width: 760px) 100vw, 380px' })}<span class="status">${c.hours ? 'See hours' : 'Call to confirm hours'}</span></a>
 <div class="clinic__body">
-<span class="meta">${esc(c.cardSpec)} &middot; ${esc(c.areaLabel)}</span>
+<span class="meta">${esc(c.cardSpec)} &middot; ${esc(c.areaLabel)}<span class="js-dist"></span></span>
 <${o.h || 'h3'} class="clinic__name"><a href="/clinics/${c.slug}/">${esc(c.name)}</a></${o.h || 'h3'}>
 ${c.addressLine ? `<address class="clinic__addr">${esc(c.addressLine)}</address>` : ''}
 <p class="clinic__hours js-today">${esc(summaryHours(c.hours))}</p>
@@ -128,6 +128,10 @@ export function pagedList(name, clinics, key) {
   return ` data-src="/assets/cards/${name}.json?v=${createHash('sha1').update(json).digest('hex').slice(0, 10)}" data-page-size="${PAGE_SIZE}"`;
 }
 export const pager = (clinics) => (clinics.length > PAGE_SIZE ? '<nav class="pager" aria-label="Clinic result pages" hidden></nav>\n' : '');
+// The tools above a clinic list: sort by distance (shown by site.js when location is available) and open now.
+export const listTools = () => `<div class="dir-tools"><button type="button" class="chip near-btn" data-near-me hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>Near me</button>
+<label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label></div>`;
+export const nearMsg = '<p class="near-msg" role="status" hidden></p>\n';
 export const listedText = (clinics) => `${clinics.length} ${clinics.length === 1 ? 'clinic' : 'clinics'} listed${clinics.length > PAGE_SIZE ? ` &middot; showing 1–${PAGE_SIZE}` : ''}`;
 
 // o.cards: name of the card file (see pagedList); the home page and /clinics/ share 'all'.
@@ -140,9 +144,9 @@ export function directory(clinics, areas, services, o = {}) {
   return `<div data-directory id="${o.id || 'directory'}"${pagedList(o.cards || 'all', clinics, groups.key)} style="scroll-margin-top:90px">
 <div class="section-head">
 <div class="stack g10"><span class="eyebrow">Clinic directory</span><${o.h || 'h2'} id="cl-h" class="h-section">${o.heading || 'Clinics near you'}</${o.h || 'h2'}></div>
-<label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
+${listTools()}
 </div>
-<label class="search dir-search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search clinics</span><input id="dir-q" type="search" placeholder="Search ${clinics.length} clinics by name, area, postcode or service" autocomplete="off" enterkeyhint="search"></label>
+${nearMsg}<label class="search dir-search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search clinics</span><input id="dir-q" type="search" placeholder="Search ${clinics.length} clinics by name, area, postcode or service" autocomplete="off" enterkeyhint="search"></label>
 <div class="chips chips-scroll" role="group" aria-label="Filter by ${groups.label}" style="margin-bottom:12px">
 <button type="button" class="chip" data-filter-area="all" aria-pressed="true">${groups.kind === 'state' ? 'All states' : 'All areas'}</button>
 ${groups.items.map((a) => `<button type="button" class="chip" data-filter-area="${a.slug}" aria-pressed="false">${esc(a.label)}</button>`).join('\n')}

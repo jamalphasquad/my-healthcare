@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=10">
+<link rel="stylesheet" href="/assets/css/site.css?v=11">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://healthcaredirectory.my/clinics/peka-b40-clinics/#page","url":"https://healthcaredirectory.my/clinics/peka-b40-clinics/","name":"PeKa B40 panel clinics in Malaysia","description":"9 PeKa B40 panel clinics (klinik panel PeKa B40) in Kuala Lumpur, Selangor and other states for the free health screening, with opening hours, phone","inLanguage":"en-MY","isPartOf":{"@id":"https://healthcaredirectory.my/#website"},"dateModified":"2026-10-30"},{"@type":"ItemList","name":"PeKa B40 panel clinics in Malaysia","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://healthcaredirectory.my/clinics/careclinics-poliklinik-cahaya-pandamaran/","name":"Careclinics Poliklinik Cahaya (Pandamaran)"},{"@type":"ListItem","position":2,"url":"https://healthcaredirectory.my/clinics/klinik-menara-sendayan/","name":"Klinik Menara (Sendayan)"},{"@type":"ListItem","position":3,"url":"https://healthcaredirectory.my/clinics/klinik-pmc-batu-gajah/","name":"Klinik PMC Batu Gajah"},{"@type":"ListItem","position":4,"url":"https://healthcaredirectory.my/clinics/careclinics-sai-poliklinik/","name":"Careclinics Sai Poliklinik"},{"@type":"ListItem","position":5,"url":"https://healthcaredirectory.my/clinics/careclinics-poliklinik-samudra/","name":"Careclinics Poliklinik Samudra"},{"@type":"ListItem","position":6,"url":"https://healthcaredirectory.my/clinics/careclinics-klinik-wong-singh-country-homes/","name":"Careclinics Klinik Wong Singh (Country Homes)"},{"@type":"ListItem","position":7,"url":"https://healthcaredirectory.my/clinics/poliklinik-cahaya-desa-pandan/","name":"Poliklinik Cahaya (Desa Pandan)"},{"@type":"ListItem","position":8,"url":"https://healthcaredirectory.my/clinics/klinik-menara-scaf-klia/","name":"Klinik Menara SCAF (KLIA)"},{"@type":"ListItem","position":9,"url":"https://healthcaredirectory.my/clinics/klinik-perubatan-the-pearl-king-street/","name":"Klinik Perubatan The Pearl (King Street)"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://healthcaredirectory.my/"},{"@type":"ListItem","position":2,"name":"Clinics","item":"https://healthcaredirectory.my/clinics/"},{"@type":"ListItem","position":3,"name":"PeKa B40 clinics","item":"https://healthcaredirectory.my/clinics/peka-b40-clinics/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who can get a free screening at a PeKa B40 clinic?","acceptedAnswer":{"@type":"Answer","text":"Malaysians aged 40 and above who receive Sumbangan Tunai Rahmah (STR), and their registered spouses aged 40 and above. There is no need to register first; bring your MyKad."}},{"@type":"Question","name":"Do I need an appointment for PeKa B40 screening?","acceptedAnswer":{"@type":"Answer","text":"Calling ahead is a good idea, as clinics may set times for screening. The screening takes two visits: one for the check-up and tests, and one to go through your results."}}]},{"@type":"Organization","@id":"https://healthcaredirectory.my/#org","name":"HealthcareDirectory.my","url":"https://healthcaredirectory.my/","logo":{"@type":"ImageObject","url":"https://healthcaredirectory.my/assets/icon-512.png","width":512,"height":512},"email":"hello@healthcaredirectory.my","areaServed":[{"@type":"City","name":"Kuala Lumpur"},{"@type":"Country","name":"Malaysia"}]},{"@type":"WebSite","@id":"https://healthcaredirectory.my/#website","url":"https://healthcaredirectory.my/","name":"HealthcareDirectory.my","inLanguage":"en-MY","publisher":{"@id":"https://healthcaredirectory.my/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://healthcaredirectory.my/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}</script>
 </head>
 <body>
@@ -91,14 +91,16 @@
 <div data-directory id="list" style="scroll-margin-top:90px;margin-top:36px">
 <div class="section-head">
 <div class="stack g10"><span class="eyebrow">Clinic list</span><h2 id="list-h" class="h-section" style="font-size:clamp(28px,3vw,38px)">PeKa B40 panel clinics</h2></div>
-<label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label>
+<div class="dir-tools"><button type="button" class="chip near-btn" data-near-me hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>Near me</button>
+<label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label></div>
 </div>
+<p class="near-msg" role="status" hidden></p>
 <p class="result-text" aria-live="polite">9 clinics listed</p>
 <div class="clinic-grid">
-<article class="clinic" data-area="pandamaran" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics poliklinik cahaya pandamaran port klang selangor 90 solok pendamar indah 1 taman 42000 family clinic open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
+<article class="clinic" data-area="pandamaran" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics poliklinik cahaya pandamaran port klang selangor 90 solok pendamar indah 1 taman 42000 family clinic open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="2.9892233,101.4207098" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
 <a class="clinic__media" href="/clinics/careclinics-poliklinik-cahaya-pandamaran/" tabindex="-1" aria-hidden="true"><img src="/assets/img/nurse-stethoscope-960.webp" srcset="/assets/img/nurse-stethoscope-480.webp 480w, /assets/img/nurse-stethoscope-960.webp 960w, /assets/img/nurse-stethoscope-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a doctor holding a stethoscope" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; Pandamaran</span>
+<span class="meta">Family clinic &middot; Pandamaran<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/careclinics-poliklinik-cahaya-pandamaran/">Careclinics Poliklinik Cahaya (Pandamaran)</a></h3>
 <address class="clinic__addr">90, Solok Pendamar Indah 1, Taman Pendamar Indah, 42000 Port Klang, Selangor</address>
 <p class="clinic__hours js-today">Mon–Sun Open 24 hours</p>
@@ -110,10 +112,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="bandar-sri-sendayan" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik menara sendayan careclinics bandar sri seremban negeri sembilan 168 jalan pusat dagangan 3 71950 family clinic open daily until 11pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[480,1320]],"1":[[480,1380]],"2":[[480,1380]],"3":[[480,1380]],"4":[[480,1380]],"5":[[480,1380]],"6":[[480,1320]]}'>
+<article class="clinic" data-area="bandar-sri-sendayan" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik menara sendayan careclinics bandar sri seremban negeri sembilan 168 jalan pusat dagangan 3 71950 family clinic open daily until 11pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="2.6818533,101.8671617" data-hours='{"0":[[480,1320]],"1":[[480,1380]],"2":[[480,1380]],"3":[[480,1380]],"4":[[480,1380]],"5":[[480,1380]],"6":[[480,1320]]}'>
 <a class="clinic__media" href="/clinics/klinik-menara-sendayan/" tabindex="-1" aria-hidden="true"><img src="/assets/img/doctor-consultation-960.webp" srcset="/assets/img/doctor-consultation-480.webp 480w, /assets/img/doctor-consultation-960.webp 960w, /assets/img/doctor-consultation-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a doctor talking with a patient" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; Bandar Sri Sendayan</span>
+<span class="meta">Family clinic &middot; Bandar Sri Sendayan<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/klinik-menara-sendayan/">Klinik Menara (Sendayan)</a></h3>
 <address class="clinic__addr">168, Jalan Pusat Dagangan Sendayan 3/3, Bandar Sri Sendayan, 71950 Seremban, Negeri Sembilan</address>
 <p class="clinic__hours js-today">Mon–Fri 8am – 11pm · Sat–Sun 8am – 10pm</p>
@@ -125,10 +127,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="batu-gajah" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik pmc batu gajah careclinics perak 1 jalan kemajuan 31000 family clinic open daily until 10pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[480,1320]],"1":[[480,1320]],"2":[[480,1320]],"3":[[480,1320]],"4":[[480,1320]],"5":[[480,1320]],"6":[[480,1320]]}'>
+<article class="clinic" data-area="batu-gajah" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik pmc batu gajah careclinics perak 1 jalan kemajuan 31000 family clinic open daily until 10pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="4.472581,101.041924" data-hours='{"0":[[480,1320]],"1":[[480,1320]],"2":[[480,1320]],"3":[[480,1320]],"4":[[480,1320]],"5":[[480,1320]],"6":[[480,1320]]}'>
 <a class="clinic__media" href="/clinics/klinik-pmc-batu-gajah/" tabindex="-1" aria-hidden="true"><img src="/assets/img/treatment-room-960.webp" srcset="/assets/img/treatment-room-480.webp 480w, /assets/img/treatment-room-960.webp 960w, /assets/img/treatment-room-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a clean clinic treatment room" width="960" height="641" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; Batu Gajah</span>
+<span class="meta">Family clinic &middot; Batu Gajah<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/klinik-pmc-batu-gajah/">Klinik PMC Batu Gajah</a></h3>
 <address class="clinic__addr">1, Jalan Kemajuan, 31000 Batu Gajah, Perak</address>
 <p class="clinic__hours js-today">Mon–Sun 8am – 10pm</p>
@@ -140,10 +142,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="bestari-jaya" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics sai poliklinik bestari jaya selangor no 6 g 8 jalan aman suria 1 taman 45600 family clinic open daily until 9pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[480,780]],"1":[[480,1260]],"2":[[480,1260]],"3":[[480,1260]],"4":[[480,1260]],"5":[[480,1260]],"6":[[480,1260]]}'>
+<article class="clinic" data-area="bestari-jaya" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics sai poliklinik bestari jaya selangor no 6 g 8 jalan aman suria 1 taman 45600 family clinic open daily until 9pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="3.3800321,101.4126944" data-hours='{"0":[[480,780]],"1":[[480,1260]],"2":[[480,1260]],"3":[[480,1260]],"4":[[480,1260]],"5":[[480,1260]],"6":[[480,1260]]}'>
 <a class="clinic__media" href="/clinics/careclinics-sai-poliklinik/" tabindex="-1" aria-hidden="true"><img src="/assets/img/clinic-waiting-room-960.webp" srcset="/assets/img/clinic-waiting-room-480.webp 480w, /assets/img/clinic-waiting-room-960.webp 960w, /assets/img/clinic-waiting-room-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a bright, calm clinic waiting area" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; Bestari Jaya</span>
+<span class="meta">Family clinic &middot; Bestari Jaya<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/careclinics-sai-poliklinik/">Careclinics Sai Poliklinik</a></h3>
 <address class="clinic__addr">No. 6-G &amp; 8-G, Jalan Aman Suria 1, Taman Aman Suria, 45600 Bestari Jaya, Selangor</address>
 <p class="clinic__hours js-today">Mon–Sat 8am – 9pm · Sun 8am – 1pm</p>
@@ -155,10 +157,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="taman-samudra" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics poliklinik samudra taman batu caves selangor 564 565 jalan samudera utara 1 68100 family clinic open daily until 10pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[480,1320]],"1":[[480,1320]],"2":[[480,1320]],"3":[[480,1320]],"4":[[480,1320]],"5":[[480,1320]],"6":[[480,1320]]}'>
+<article class="clinic" data-area="taman-samudra" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics poliklinik samudra taman batu caves selangor 564 565 jalan samudera utara 1 68100 family clinic open daily until 10pm vaccinations general practice chronic disease care health screening pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="3.2355383,101.6977572" data-hours='{"0":[[480,1320]],"1":[[480,1320]],"2":[[480,1320]],"3":[[480,1320]],"4":[[480,1320]],"5":[[480,1320]],"6":[[480,1320]]}'>
 <a class="clinic__media" href="/clinics/careclinics-poliklinik-samudra/" tabindex="-1" aria-hidden="true"><img src="/assets/img/nurse-stethoscope-960.webp" srcset="/assets/img/nurse-stethoscope-480.webp 480w, /assets/img/nurse-stethoscope-960.webp 960w, /assets/img/nurse-stethoscope-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a doctor holding a stethoscope" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; Taman Samudra</span>
+<span class="meta">Family clinic &middot; Taman Samudra<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/careclinics-poliklinik-samudra/">Careclinics Poliklinik Samudra</a></h3>
 <address class="clinic__addr">564 &amp; 565, Jalan Samudera Utara 1, Taman Samudra, 68100 Batu Caves, Selangor</address>
 <p class="clinic__hours js-today">Mon–Sun 8am – 10pm</p>
@@ -170,10 +172,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="bandar-country-homes" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics klinik wong singh country homes bandar rawang selangor 4 5 jalan desa 1 48000 family clinic open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
+<article class="clinic" data-area="bandar-country-homes" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="careclinics klinik wong singh country homes bandar rawang selangor 4 5 jalan desa 1 48000 family clinic open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="3.3282972,101.5280235" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
 <a class="clinic__media" href="/clinics/careclinics-klinik-wong-singh-country-homes/" tabindex="-1" aria-hidden="true"><img src="/assets/img/nurse-stethoscope-960.webp" srcset="/assets/img/nurse-stethoscope-480.webp 480w, /assets/img/nurse-stethoscope-960.webp 960w, /assets/img/nurse-stethoscope-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a doctor holding a stethoscope" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; Bandar Country Homes</span>
+<span class="meta">Family clinic &middot; Bandar Country Homes<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/careclinics-klinik-wong-singh-country-homes/">Careclinics Klinik Wong Singh (Country Homes)</a></h3>
 <address class="clinic__addr">4 &amp; 5, Jalan Desa 1/1, Bandar Country Homes, 48000 Rawang, Selangor</address>
 <p class="clinic__hours js-today">Mon–Sun Open 24 hours</p>
@@ -185,10 +187,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="desa-pandan" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="poliklinik cahaya desa pandan clinic careclinics kuala lumpur 15 jalan 2 76c 55100 family open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
+<article class="clinic" data-area="desa-pandan" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="poliklinik cahaya desa pandan clinic careclinics kuala lumpur 15 jalan 2 76c 55100 family open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="3.147576,101.7362136" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
 <a class="clinic__media" href="/clinics/poliklinik-cahaya-desa-pandan/" tabindex="-1" aria-hidden="true"><img src="/assets/img/doctor-consultation-960.webp" srcset="/assets/img/doctor-consultation-480.webp 480w, /assets/img/doctor-consultation-960.webp 960w, /assets/img/doctor-consultation-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a doctor talking with a patient" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; Desa Pandan</span>
+<span class="meta">Family clinic &middot; Desa Pandan<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/poliklinik-cahaya-desa-pandan/">Poliklinik Cahaya (Desa Pandan)</a></h3>
 <address class="clinic__addr">15, Jalan 2/76C, Desa Pandan, 55100 Kuala Lumpur</address>
 <p class="clinic__hours js-today">Mon–Sun Open 24 hours</p>
@@ -200,10 +202,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="klia" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik menara scaf klia sepang selangor unit b0 g0 00 block southern common amenities facilities jalan s3 64000 family clinic careclinics open saturdays vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[],"1":[[480,1080]],"2":[[480,1080]],"3":[[480,1080]],"4":[[480,1080]],"5":[[480,1080]],"6":[[480,1080]]}'>
+<article class="clinic" data-area="klia" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik menara scaf klia sepang selangor unit b0 g0 00 block southern common amenities facilities jalan s3 64000 family clinic careclinics open saturdays vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="2.73257,101.7224929" data-hours='{"0":[],"1":[[480,1080]],"2":[[480,1080]],"3":[[480,1080]],"4":[[480,1080]],"5":[[480,1080]],"6":[[480,1080]]}'>
 <a class="clinic__media" href="/clinics/klinik-menara-scaf-klia/" tabindex="-1" aria-hidden="true"><img src="/assets/img/nurse-stethoscope-960.webp" srcset="/assets/img/nurse-stethoscope-480.webp 480w, /assets/img/nurse-stethoscope-960.webp 960w, /assets/img/nurse-stethoscope-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a doctor holding a stethoscope" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; KLIA</span>
+<span class="meta">Family clinic &middot; KLIA<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/klinik-menara-scaf-klia/">Klinik Menara SCAF (KLIA)</a></h3>
 <address class="clinic__addr">Unit B0-G0-00, Block B0, Southern Common Amenities &amp; Facilities (SCAF), Jalan KLIA S3, KLIA, 64000 Sepang, Selangor</address>
 <p class="clinic__hours js-today">Mon–Sat 8am – 6pm · Sun Closed</p>
@@ -215,10 +217,10 @@
 </div>
 </div>
 </article>
-<article class="clinic" data-area="george-town" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik perubatan the pearl king street kingstreet george town pulau pinang 99 10200 family clinic careclinics open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
+<article class="clinic" data-area="george-town" data-services="gp|chronic|screening|vaccination|womens|mental|occupational" data-q="klinik perubatan the pearl king street kingstreet george town pulau pinang 99 10200 family clinic careclinics open 24 hours vaccinations health screening general practice chronic disease care pap smear blood urine tests x ray ultrasound mental services occupational digital brain function" data-geo="5.4166369,100.3391039" data-hours='{"0":[[0,1440]],"1":[[0,1440]],"2":[[0,1440]],"3":[[0,1440]],"4":[[0,1440]],"5":[[0,1440]],"6":[[0,1440]]}'>
 <a class="clinic__media" href="/clinics/klinik-perubatan-the-pearl-king-street/" tabindex="-1" aria-hidden="true"><img src="/assets/img/treatment-room-960.webp" srcset="/assets/img/treatment-room-480.webp 480w, /assets/img/treatment-room-960.webp 960w, /assets/img/treatment-room-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a clean clinic treatment room" width="960" height="641" loading="lazy" decoding="async"><span class="status">See hours</span></a>
 <div class="clinic__body">
-<span class="meta">Family clinic &middot; George Town</span>
+<span class="meta">Family clinic &middot; George Town<span class="js-dist"></span></span>
 <h3 class="clinic__name"><a href="/clinics/klinik-perubatan-the-pearl-king-street/">Klinik Perubatan The Pearl (King Street)</a></h3>
 <address class="clinic__addr">99, King Street, George Town, 10200 George Town, Pulau Pinang</address>
 <p class="clinic__hours js-today">Mon–Sun Open 24 hours</p>
@@ -260,7 +262,7 @@
 
 
 <div class="stack g12"><h2 style="font-size:22px">Browse by area</h2><div class="chips"><a class="chip" href="/clinics/pandamaran/">Pandamaran</a><a class="chip" href="/clinics/bandar-sri-sendayan/">Bandar Sri Sendayan</a><a class="chip" href="/clinics/batu-gajah/">Batu Gajah</a><a class="chip" href="/clinics/bestari-jaya/">Bestari Jaya</a><a class="chip" href="/clinics/taman-samudra/">Taman Samudra</a><a class="chip" href="/clinics/bandar-country-homes/">Bandar Country Homes</a><a class="chip" href="/clinics/desa-pandan/">Desa Pandan</a><a class="chip" href="/clinics/klia/">KLIA</a><a class="chip" href="/clinics/george-town/">George Town</a></div></div>
-<div class="stack g12"><h2 style="font-size:22px">Browse by need</h2><div class="chips"><a class="chip" href="/clinics/open-24-hours/">Open 24 hours</a><a class="chip" href="/clinics/open-late/">Open late</a><a class="chip" href="/clinics/open-saturday/">Open on Saturday</a><a class="chip" href="/clinics/open-sunday/">Open on Sunday</a><a class="chip" href="/clinics/aesthetic-clinics/">Aesthetic clinics</a><a class="chip" href="/clinics/gp-clinics/">GP clinics</a><a class="chip" href="/clinics/fomema-clinics/">FOMEMA clinics</a><a class="chip" href="/clinics/perkeso-panel-clinics/">PERKESO clinics</a><a class="chip" href="/clinics/petaling-jaya/">Petaling Jaya</a><a class="chip" href="/clinics/melaka/">Melaka</a><a class="chip" href="/clinics/shah-alam/">Shah Alam</a><a class="chip" href="/clinics/batu-caves/">Batu Caves</a><a class="chip" href="/clinics/sepang/">Sepang</a></div></div>
+<div class="stack g12"><h2 style="font-size:22px">Browse by need</h2><div class="chips"><a class="chip" href="/clinics/near-me/">Clinics near me</a><a class="chip" href="/clinics/open-24-hours/">Open 24 hours</a><a class="chip" href="/clinics/open-late/">Open late</a><a class="chip" href="/clinics/open-saturday/">Open on Saturday</a><a class="chip" href="/clinics/open-sunday/">Open on Sunday</a><a class="chip" href="/clinics/aesthetic-clinics/">Aesthetic clinics</a><a class="chip" href="/clinics/gp-clinics/">GP clinics</a><a class="chip" href="/clinics/fomema-clinics/">FOMEMA clinics</a><a class="chip" href="/clinics/perkeso-panel-clinics/">PERKESO clinics</a><a class="chip" href="/clinics/petaling-jaya/">Petaling Jaya</a><a class="chip" href="/clinics/melaka/">Melaka</a><a class="chip" href="/clinics/shah-alam/">Shah Alam</a><a class="chip" href="/clinics/batu-caves/">Batu Caves</a><a class="chip" href="/clinics/sepang/">Sepang</a></div></div>
 <div class="stack g12"><h2 style="font-size:22px">Health guides</h2><div class="chips"><a class="chip" href="/articles/clinic-or-emergency-department/">Clinic or emergency department?</a><a class="chip" href="/articles/free-health-screening-malaysia/">Free health screening in Malaysia</a><a class="chip" href="/articles/dengue-klang-valley-first-three-days/">Dengue in the Klang Valley</a></div></div>
 </aside>
 </div>
@@ -280,9 +282,9 @@
 <a href="/clinics/desa-sri-hartamas/">Desa Sri Hartamas</a>
 <a href="/clinics/solaris-dutamas/">Solaris Dutamas</a>
 <a href="/clinics/damansara-heights/">Damansara Heights</a>
+<a href="/clinics/near-me/">Clinics near me</a>
 <a href="/clinics/open-24-hours/">Open 24 hours</a>
 <a href="/clinics/open-late/">Open late</a>
-<a href="/clinics/open-saturday/">Open on Saturday</a>
 <a href="/clinics/">All clinics</a>
 <a href="/contact/#list">List your clinic</a>
 </nav>
@@ -310,6 +312,6 @@
 </div>
 </footer>
 </div>
-<script src="/assets/js/site.js?v=8" defer></script>
+<script src="/assets/js/site.js?v=9" defer></script>
 </body>
 </html>
