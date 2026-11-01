@@ -26,7 +26,7 @@ export const NOV_2026_A = [
       'More than half of Malaysian adults are overweight or obese. Losing just 5–10% of your weight improves blood sugar, blood pressure and cholesterol.',
     ],
     sections: [
-      { id: 'calculator', h: 'BMI calculator', tocLabel: 'BMI calculator', html: `<p>Enter your height in centimetres and weight in kilograms. Add your waist measurement if you know it. The calculator is for adults aged 18 and over.</p>
+      { id: 'calculator', h: 'BMI calculator', tocLabel: 'BMI calculator', html: `<p>Enter your height and weight in centimetres and kilograms, or switch to feet, inches and pounds. Add your waist measurement if you know it. The calculator is for adults aged 18 and over.</p>
 {{calc:bmi}}` },
       { id: 'categories', h: 'BMI categories for Malaysians', tocLabel: 'BMI categories', html: `<div class="table-wrap"><table>
 <thead><tr><th>BMI (kg/m²)</th><th>Malaysian category</th><th>International (WHO) category</th></tr></thead>
@@ -40,6 +40,7 @@ export const NOV_2026_A = [
 </tbody></table></div>
 <p>The Malaysian categories come from the Ministry of Health’s <em>Clinical Practice Guidelines on the Management of Obesity</em> (2nd edition, 2023). They follow a World Health Organization expert review, which found that Asian people have a high risk of type 2 diabetes and heart disease at BMIs below the international cut-off of 25.</p>` },
       { id: 'how', h: 'How to calculate BMI (cara kira BMI)', tocLabel: 'How to calculate', html: `<p><strong>BMI = weight (kg) ÷ height (m) × height (m)</strong></p>
+<p>In pounds and inches: <strong>BMI = 703 × weight (lb) ÷ height (in) × height (in)</strong>.</p>
 <p><strong>Example:</strong> someone who weighs 70 kg and is 1.65 m tall:</p>
 <ol>
 <li>Height squared: 1.65 × 1.65 = 2.72</li>
@@ -87,7 +88,7 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
     clinicLinks: [['/clinics/near-me/', 'Clinics near me'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/peka-b40-clinics/', 'PeKa B40 panel clinics']],
     faqs: [
       ['What is a normal BMI in Malaysia?', 'For adults, a healthy BMI in Malaysia is 18.5 to 22.9. A BMI of 23 to 27.4 is overweight and 27.5 or more is obese.'],
-      ['How do I calculate my BMI?', 'Divide your weight in kilograms by your height in metres squared. For example, 70 kg ÷ (1.65 m × 1.65 m) = 25.7.'],
+      ['How do I calculate my BMI?', 'Divide your weight in kilograms by your height in metres squared. For example, 70 kg ÷ (1.65 m × 1.65 m) = 25.7. In pounds and inches, multiply your weight in pounds by 703 and divide by your height in inches squared.'],
       ['Why are Malaysian BMI cut-offs lower than international ones?', 'Asian people tend to carry more body fat at the same BMI and develop diabetes and heart disease at lower weights, so Malaysia uses 23 and 27.5 instead of 25 and 30.'],
       ['What is my ideal weight for my height?', 'The healthy range is the weight that gives a BMI of 18.5 to 22.9. For example, for someone 160 cm tall, that is about 47 to 59 kg.'],
       ['What waist size is too big?', 'In Malaysia, a waist of 90 cm or more for men, or 80 cm or more for women, signals abdominal obesity and a higher risk of diabetes and heart disease.'],

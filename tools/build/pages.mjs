@@ -265,7 +265,7 @@ ${articles.some((a) => `/articles/${a.slug}/` === BMI_CALC_URL) ? `<section id="
 <div class="stack g12">
 <span class="eyebrow">Free tool &middot; Weight</span>
 <h2 id="bmi-h" class="h-section">What is your <em>BMI?</em></h2>
-<p>Enter your height and weight to see your BMI using the Malaysian categories, and the healthy weight range for your height.</p>
+<p>Enter your height and weight, in cm and kg or feet and pounds, to see your BMI using the Malaysian categories and the healthy weight range for your height.</p>
 <a href="${BMI_CALC_URL}">Read the BMI guide &rarr;</a>
 </div>
 ${bmiCalc('home-bmi')}
@@ -357,17 +357,19 @@ export function dueDateCalc(id) {
 export const BMI_CALC_URL = '/articles/bmi-calculator-malaysia/';
 export function bmiCalc(id) {
   return `<form class="calc" id="${id}" data-bmi-calc novalidate>
+<div class="unit-toggle" role="group" aria-label="Units"><button type="button" class="chip" data-units="metric" aria-pressed="true">cm &amp; kg</button><button type="button" class="chip" data-units="imperial" aria-pressed="false">ft, in &amp; lb</button></div>
 <div class="calc__fields calc__fields--bmi">
-<label class="calc__field"><span>Height (cm)</span><input type="number" name="height" inputmode="decimal" min="100" max="230" step="0.1" placeholder="e.g. 165" required></label>
-<label class="calc__field"><span>Weight (kg)</span><input type="number" name="weight" inputmode="decimal" min="25" max="300" step="0.1" placeholder="e.g. 62" required></label>
-<label class="calc__field"><span>Waist (cm, optional)</span><input type="number" name="waist" inputmode="decimal" min="40" max="200" step="0.1" placeholder="e.g. 80"></label>
+<label class="calc__field" data-metric><span>Height (cm)</span><input type="number" name="height" inputmode="decimal" step="0.1" placeholder="e.g. 165" required></label>
+<div class="calc__field" data-imperial hidden><span>Height (ft, in)</span><div class="calc__pair"><input type="number" name="ft" inputmode="numeric" step="1" placeholder="ft" aria-label="Height, feet"><input type="number" name="inch" inputmode="decimal" step="0.1" placeholder="in" aria-label="Height, inches"></div></div>
+<label class="calc__field"><span data-label="weight">Weight (kg)</span><input type="number" name="weight" inputmode="decimal" step="0.1" placeholder="e.g. 62" required></label>
+<label class="calc__field"><span data-label="waist">Waist (cm, optional)</span><input type="number" name="waist" inputmode="decimal" step="0.1" placeholder="e.g. 80"></label>
 <label class="calc__field"><span>Sex (for waist)</span><select name="sex"><option value="">Choose</option><option value="f">Female</option><option value="m">Male</option></select></label>
 <button class="btn btn--sq" type="submit">Calculate BMI</button>
 </div>
 <p class="calc__error" role="alert" hidden></p>
 <div class="calc__result" aria-live="polite" hidden></div>
 <p class="calc__note">For adults aged 18 and over, using the Malaysian BMI categories. Worked out in your browser: nothing you enter is stored or sent.</p>
-<noscript><p class="calc__note">This calculator needs JavaScript. To work out your BMI yourself, divide your weight in kg by your height in metres squared.</p></noscript>
+<noscript><p class="calc__note">This calculator needs JavaScript. To work out your BMI yourself, divide your weight in kg by your height in metres squared, or multiply your weight in pounds by 703 and divide by your height in inches squared.</p></noscript>
 </form>`;
 }
 

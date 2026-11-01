@@ -766,42 +766,85 @@
     [27.5, 'Overweight (pre-obese)', 'over'],
     [Infinity, 'Obese', 'obese'],
   ];
+  var KG_LB = 2.20462, CM_IN = 2.54;
   $$('[data-bmi-calc]').forEach(function (form) {
     var el = form.elements, err = $('.calc__error', form), out = $('.calc__result', form);
+    var units = 'metric', fields = [el.height, el.ft, el.inch, el.weight, el.waist];
     function num(i) { var v = parseFloat(String(i.value).replace(',', '.')); return isFinite(v) ? v : NaN; }
+    function round(v, d) { var p = Math.pow(10, d || 0); return Math.round(v * p) / p; }
+    function clearInvalid() { fields.forEach(function (i) { i.removeAttribute('aria-invalid'); }); }
     function fail(msg, input) {
       err.textContent = msg; err.hidden = false; out.hidden = true;
-      [el.height, el.weight, el.waist].forEach(function (i) { i.removeAttribute('aria-invalid'); });
-      if (input) input.setAttribute('aria-invalid', 'true');
+      clearInvalid(); if (input) input.setAttribute('aria-invalid', 'true');
     }
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var h = num(el.height), w = num(el.weight), waist = num(el.waist);
-      if (!(h >= 100 && h <= 230)) return fail('Enter your height in centimetres, between 100 and 230.', el.height);
-      if (!(w >= 25 && w <= 300)) return fail('Enter your weight in kilograms, between 25 and 300.', el.weight);
-      if (el.waist.value && !(waist >= 40 && waist <= 200)) return fail('Enter your waist in centimetres, between 40 and 200, or leave it blank.', el.waist);
-      err.hidden = true; [el.height, el.weight, el.waist].forEach(function (i) { i.removeAttribute('aria-invalid'); });
-      var m = h / 100, bmi = w / (m * m), r1 = Math.round(bmi * 10) / 10;
+    // Switching units converts whatever is already entered, and re-shows any result in the new units.
+    function setUnits(u) {
+      if (u === units) return;
+      var imp = u === 'imperial', h = num(el.height), ft = num(el.ft), inch = num(el.inch), w = num(el.weight), waist = num(el.waist);
+      if (imp) {
+        if (h > 0) { var tin = round(h / CM_IN, 1); el.ft.value = Math.floor(tin / 12); el.inch.value = round(tin - Math.floor(tin / 12) * 12, 1); }
+        if (w > 0) el.weight.value = round(w * KG_LB, 1);
+        if (waist > 0) el.waist.value = round(waist / CM_IN, 1);
+      } else {
+        if (ft > 0 || inch > 0) el.height.value = round(((ft || 0) * 12 + (inch || 0)) * CM_IN, 1);
+        if (w > 0) el.weight.value = round(w / KG_LB, 1);
+        if (waist > 0) el.waist.value = round(waist * CM_IN, 1);
+      }
+      units = u;
+      $('[data-metric]', form).hidden = imp;
+      $('[data-imperial]', form).hidden = !imp;
+      $('[data-label="weight"]', form).textContent = imp ? 'Weight (lb)' : 'Weight (kg)';
+      $('[data-label="waist"]', form).textContent = imp ? 'Waist (in, optional)' : 'Waist (cm, optional)';
+      el.weight.placeholder = imp ? 'e.g. 137' : 'e.g. 62';
+      el.waist.placeholder = imp ? 'e.g. 31' : 'e.g. 80';
+      $$('[data-units]', form).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-units') === u ? 'true' : 'false'); });
+      err.hidden = true; clearInvalid();
+      if (!out.hidden) calculate();
+    }
+    form.addEventListener('click', function (e) { var b = e.target.closest('[data-units]'); if (b) setUnits(b.getAttribute('data-units')); });
+
+    function calculate() {
+      var imp = units === 'imperial', h, heightText;
+      if (imp) {
+        var ft = num(el.ft), inch = el.inch.value === '' ? 0 : num(el.inch);
+        if (!(ft >= 3 && ft <= 7 && inch >= 0 && inch < 12)) return fail('Enter your height in feet and inches, for example 5 ft 5 in.', el.ft);
+        h = (ft * 12 + inch) * CM_IN; heightText = ft + ' ft ' + round(inch, 1) + ' in';
+      } else { h = num(el.height); heightText = h + ' cm'; }
+      if (!(h >= 100 && h <= 230)) return fail(imp ? 'Enter a height between 3 ft 4 in and 7 ft 6 in.' : 'Enter your height in centimetres, between 100 and 230.', imp ? el.ft : el.height);
+      var w = num(el.weight) / (imp ? KG_LB : 1);
+      if (!(w >= 25 && w <= 300)) return fail(imp ? 'Enter your weight in pounds, between 55 and 660.' : 'Enter your weight in kilograms, between 25 and 300.', el.weight);
+      var waist = NaN;
+      if (el.waist.value) {
+        waist = num(el.waist) * (imp ? CM_IN : 1);
+        if (!(waist >= 40 && waist <= 200)) return fail(imp ? 'Enter your waist in inches, between 16 and 79, or leave it blank.' : 'Enter your waist in centimetres, between 40 and 200, or leave it blank.', el.waist);
+      }
+      err.hidden = true; clearInvalid();
+      // weights shown in the chosen units: kg to the nearest 0.5, lb to the nearest pound
+      var wt = function (kg, step) { return imp ? Math.max(step ? 1 : 0, Math.round(kg * KG_LB)) + ' lb' : (step ? Math.max(0.5, Math.round(kg * 2) / 2) : round(kg, 1)) + ' kg'; };
+      var m = h / 100, bmi = w / (m * m), r1 = round(bmi, 1);
       var band = BMI_BANDS.filter(function (b) { return r1 < b[0]; })[0];
       var lo = 18.5 * m * m, hi = 22.9 * m * m;
-      var gap = r1 < 18.5 ? 'Gaining about <strong>' + Math.max(0.5, Math.round((lo - w) * 2) / 2) + ' kg</strong> would bring you into the healthy range.'
-        : r1 > 22.9 ? 'Losing about <strong>' + Math.max(0.5, Math.round((w - hi) * 2) / 2) + ' kg</strong> would bring you into the healthy range. Even losing 5% of your weight (' + Math.round(w * 0.05 * 10) / 10 + ' kg) improves health.'
+      var gap = r1 < 18.5 ? 'Gaining about <strong>' + wt(lo - w, true) + '</strong> would bring you into the healthy range.'
+        : r1 > 22.9 ? 'Losing about <strong>' + wt(w - hi, true) + '</strong> would bring you into the healthy range. Even losing 5% of your weight (' + wt(w * 0.05) + ') improves health.'
         : 'You are within the healthy range for your height.';
       // position on a 15 to 40 scale
       var pos = Math.min(100, Math.max(0, (bmi - 15) / 25 * 100));
       var waistLine = '';
       if (el.waist.value) {
         var cut = el.sex.value === 'm' ? 90 : el.sex.value === 'f' ? 80 : 0;
+        var len = function (cm) { return imp ? round(cm / CM_IN, 1) + ' in' : round(cm, 1) + ' cm'; };
+        var cutText = imp ? len(cut) + ' (' + cut + ' cm)' : cut + ' cm', who = cut === 90 ? 'men' : 'women';
         waistLine = !cut ? '<p class="calc__now">Choose your sex to check your waist against the Malaysian cut-off.</p>'
-          : waist >= cut ? '<p class="calc__now">Your waist of ' + waist + ' cm is <strong>at or above ' + cut + ' cm</strong>, the cut-off for ' + (cut === 90 ? 'men' : 'women') + ' in Malaysia. Fat around the waist raises the risk of diabetes and heart disease' + (band[2] === 'ok' ? ', even at a healthy BMI' : '') + '.</p>'
-          : '<p class="calc__now">Your waist of ' + waist + ' cm is below the ' + cut + ' cm cut-off for ' + (cut === 90 ? 'men' : 'women') + '.</p>';
+          : waist >= cut ? '<p class="calc__now">Your waist of ' + len(waist) + ' is <strong>at or above ' + cutText + '</strong>, the cut-off for ' + who + ' in Malaysia. Fat around the waist raises the risk of diabetes and heart disease' + (band[2] === 'ok' ? ', even at a healthy BMI' : '') + '.</p>'
+          : '<p class="calc__now">Your waist of ' + len(waist) + ' is below the ' + cutText + ' cut-off for ' + who + '.</p>';
       }
       out.innerHTML = '<p class="calc__due"><span>Your BMI</span><strong>' + r1.toFixed(1) + ' &middot; ' + band[1] + '</strong></p>' +
         '<div class="bmi-scale" role="img" aria-label="BMI ' + r1.toFixed(1) + ' on a scale from 15 to 40"><span class="bmi-scale__mark" style="left:' + pos + '%"></span></div>' +
         '<div class="bmi-scale__labels" aria-hidden="true"><span>18.5</span><span>23</span><span>27.5</span></div>' +
         '<p class="calc__now">' + gap + '</p>' +
-        '<p class="calc__now">Healthy weight for your height (' + h + ' cm): <strong>' + (Math.round(lo * 10) / 10) + ' to ' + (Math.round(hi * 10) / 10) + ' kg</strong> (BMI 18.5 to 22.9).</p>' + waistLine;
+        '<p class="calc__now">Healthy weight for your height (' + heightText + '): <strong>' + wt(lo).replace(/ (kg|lb)$/, '') + ' to ' + wt(hi) + '</strong> (BMI 18.5 to 22.9).</p>' + waistLine;
       out.hidden = false;
-    });
+    }
+    form.addEventListener('submit', function (e) { e.preventDefault(); calculate(); });
   });
 })();
