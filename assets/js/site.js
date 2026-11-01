@@ -756,4 +756,52 @@
       out.hidden = false;
     });
   });
+
+  /* ---------- BMI calculator ----------
+     BMI = weight (kg) / height (m) squared, with the Malaysian (Asian) cut-offs from the
+     Clinical Practice Guidelines on obesity: 18.5, 23 and 27.5. Nothing leaves the browser. */
+  var BMI_BANDS = [
+    [18.5, 'Underweight', 'under'],
+    [23, 'Healthy weight', 'ok'],
+    [27.5, 'Overweight (pre-obese)', 'over'],
+    [Infinity, 'Obese', 'obese'],
+  ];
+  $$('[data-bmi-calc]').forEach(function (form) {
+    var el = form.elements, err = $('.calc__error', form), out = $('.calc__result', form);
+    function num(i) { var v = parseFloat(String(i.value).replace(',', '.')); return isFinite(v) ? v : NaN; }
+    function fail(msg, input) {
+      err.textContent = msg; err.hidden = false; out.hidden = true;
+      [el.height, el.weight, el.waist].forEach(function (i) { i.removeAttribute('aria-invalid'); });
+      if (input) input.setAttribute('aria-invalid', 'true');
+    }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var h = num(el.height), w = num(el.weight), waist = num(el.waist);
+      if (!(h >= 100 && h <= 230)) return fail('Enter your height in centimetres, between 100 and 230.', el.height);
+      if (!(w >= 25 && w <= 300)) return fail('Enter your weight in kilograms, between 25 and 300.', el.weight);
+      if (el.waist.value && !(waist >= 40 && waist <= 200)) return fail('Enter your waist in centimetres, between 40 and 200, or leave it blank.', el.waist);
+      err.hidden = true; [el.height, el.weight, el.waist].forEach(function (i) { i.removeAttribute('aria-invalid'); });
+      var m = h / 100, bmi = w / (m * m), r1 = Math.round(bmi * 10) / 10;
+      var band = BMI_BANDS.filter(function (b) { return r1 < b[0]; })[0];
+      var lo = 18.5 * m * m, hi = 22.9 * m * m;
+      var gap = r1 < 18.5 ? 'Gaining about <strong>' + Math.max(0.5, Math.round((lo - w) * 2) / 2) + ' kg</strong> would bring you into the healthy range.'
+        : r1 > 22.9 ? 'Losing about <strong>' + Math.max(0.5, Math.round((w - hi) * 2) / 2) + ' kg</strong> would bring you into the healthy range. Even losing 5% of your weight (' + Math.round(w * 0.05 * 10) / 10 + ' kg) improves health.'
+        : 'You are within the healthy range for your height.';
+      // position on a 15 to 40 scale
+      var pos = Math.min(100, Math.max(0, (bmi - 15) / 25 * 100));
+      var waistLine = '';
+      if (el.waist.value) {
+        var cut = el.sex.value === 'm' ? 90 : el.sex.value === 'f' ? 80 : 0;
+        waistLine = !cut ? '<p class="calc__now">Choose your sex to check your waist against the Malaysian cut-off.</p>'
+          : waist >= cut ? '<p class="calc__now">Your waist of ' + waist + ' cm is <strong>at or above ' + cut + ' cm</strong>, the cut-off for ' + (cut === 90 ? 'men' : 'women') + ' in Malaysia. Fat around the waist raises the risk of diabetes and heart disease' + (band[2] === 'ok' ? ', even at a healthy BMI' : '') + '.</p>'
+          : '<p class="calc__now">Your waist of ' + waist + ' cm is below the ' + cut + ' cm cut-off for ' + (cut === 90 ? 'men' : 'women') + '.</p>';
+      }
+      out.innerHTML = '<p class="calc__due"><span>Your BMI</span><strong>' + r1.toFixed(1) + ' &middot; ' + band[1] + '</strong></p>' +
+        '<div class="bmi-scale" role="img" aria-label="BMI ' + r1.toFixed(1) + ' on a scale from 15 to 40"><span class="bmi-scale__mark" style="left:' + pos + '%"></span></div>' +
+        '<div class="bmi-scale__labels" aria-hidden="true"><span>18.5</span><span>23</span><span>27.5</span></div>' +
+        '<p class="calc__now">' + gap + '</p>' +
+        '<p class="calc__now">Healthy weight for your height (' + h + ' cm): <strong>' + (Math.round(lo * 10) / 10) + ' to ' + (Math.round(hi * 10) / 10) + ' kg</strong> (BMI 18.5 to 22.9).</p>' + waistLine;
+      out.hidden = false;
+    });
+  });
 })();

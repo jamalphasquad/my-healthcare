@@ -198,7 +198,7 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
       ['American Diabetes Association — Standards of Care in Diabetes 2026: Diagnosis and classification', 'https://doi.org/10.2337/dc26-S002'],
       ['NHS — Diabetes symptoms', 'https://www.nhs.uk/conditions/diabetes/'],
     ],
-    related: ['world-diabetes-day-2026-kl', 'undiagnosed-diabetes-high-blood-pressure-young-adults', 'peka-b40-malaysia'],
+    related: ['bmi-calculator-malaysia', 'world-diabetes-day-2026-kl', 'peka-b40-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -314,7 +314,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tes
       ['CodeBlue — MMA on additional foreign worker medical screening (30 Jan 2024)', 'https://codeblue.galencentre.org/2024/01/additional-foreign-worker-medical-screening-necessary-to-protect-the-population-against-import-of-communicable-diseases-mma/'],
       ['EMGS — Medical screening for international students', 'https://visa.educationmalaysia.gov.my/guidelines/medical-screening'],
     ],
-    related: ['persistent-cough-malaysia', 'free-health-screening-malaysia', 'hiv-malaysia'],
+    related: ['typhoid-injection-food-handlers-malaysia', 'persistent-cough-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

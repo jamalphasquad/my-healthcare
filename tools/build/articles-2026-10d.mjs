@@ -220,7 +220,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most childre
       ['US CDC — Measles signs and symptoms (Aug 2026)', 'https://www.cdc.gov/measles/signs-symptoms/index.html'],
       ['Cleveland Clinic — Calamine lotion', 'https://my.clevelandclinic.org/health/drugs/23338-calamine-lotion'],
     ],
-    related: ['baby-vaccination-schedule-malaysia', 'persistent-cough-malaysia', 'itchy-skin-eczema-hives-malaysia'],
+    related: ['chickenpox-malaysia', 'baby-vaccination-schedule-malaysia', 'rsv-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -477,7 +477,7 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu usual
       ['NHS — Flu (reviewed Feb 2026)', 'https://www.nhs.uk/conditions/flu/'],
       ['WHO — Recommended composition of influenza vaccines for the 2026 southern hemisphere season (26 Sep 2025)', 'https://www.who.int/news/item/26-09-2025-recommendations-announced-for-influenza-vaccine-composition-for-the-2026-southern-hemisphere-influenza-season'],
     ],
-    related: ['flu-vaccine-malaysia', 'persistent-cough-malaysia', 'hfmd-children-malaysia'],
+    related: ['rsv-malaysia', 'flu-vaccine-malaysia', 'tonsillitis-sore-throat-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

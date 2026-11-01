@@ -217,7 +217,7 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['Wilding et al. — Weight regain after withdrawal of semaglutide (STEP 1 extension, 2022)', 'https://discovery.ucl.ac.uk/id/eprint/10149199/'],
       ['NHS — Semaglutide', 'https://www.nhs.uk/medicines/semaglutide/'],
     ],
-    related: ['world-diabetes-day-2026-kl', 'skin-boosters-malaysia', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
+    related: ['bmi-calculator-malaysia', 'world-diabetes-day-2026-kl', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -307,6 +307,6 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu sympt
       ['US CDC — Types of influenza viruses (Sep 2025)', 'https://www.cdc.gov/flu/about/viruses-types.html'],
       ['US CDC — Getting flu and COVID-19 vaccines at the same time', 'https://www.cdc.gov/flu/prevent/coadministration.htm'],
     ],
-    related: ['influenza-a-malaysia', 'dengue-vaccine-qdenga-malaysia', 'clinic-or-emergency-department'],
+    related: ['influenza-a-malaysia', 'shingles-kayap-malaysia', 'rsv-malaysia'],
   },
 ];

@@ -338,7 +338,7 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
       ['World Health Organization — Dengue and severe dengue (Aug 2025)', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
       ['Malaysia National Cancer Registry Report 2017–2021 (summary)', 'https://nci.moh.gov.my/images/pdf/SUMMARY-OF-MALAYSIA-NATIONAL-CANCER-REGISTRY-REPORT-2017-2021.pdf'],
     ],
-    related: ['clinic-or-emergency-department', 'dengue-klang-valley-first-three-days', 'pregnancy-due-date-calculator-malaysia'],
+    related: ['appendicitis-malaysia', 'clinic-or-emergency-department', 'dengue-klang-valley-first-three-days'],
   },
 
   /* ------------------------------------------------------------------ */

@@ -260,6 +260,18 @@ ${dueDateCalc('home-due')}
 </div>
 </section>
 ` : ''}
+${articles.some((a) => `/articles/${a.slug}/` === BMI_CALC_URL) ? `<section id="bmi" class="wrap calc-home" aria-labelledby="bmi-h">
+<div class="calc-home__box">
+<div class="stack g12">
+<span class="eyebrow">Free tool &middot; Weight</span>
+<h2 id="bmi-h" class="h-section">What is your <em>BMI?</em></h2>
+<p>Enter your height and weight to see your BMI using the Malaysian categories, and the healthy weight range for your height.</p>
+<a href="${BMI_CALC_URL}">Read the BMI guide &rarr;</a>
+</div>
+${bmiCalc('home-bmi')}
+</div>
+</section>
+` : ''}
 <section id="clinics" class="band" aria-labelledby="cl-h" style="scroll-margin-top:70px">
 <div class="wrap section">
 ${directory(clinics, areas, services)}
@@ -337,6 +349,25 @@ export function dueDateCalc(id) {
 <div class="calc__result" aria-live="polite" hidden></div>
 <p class="calc__note">Worked out in your browser: nothing you enter is stored or sent. An early pregnancy scan gives the most accurate due date.</p>
 <noscript><p class="calc__note">This calculator needs JavaScript. To work out your due date yourself, add 280 days (40 weeks) to the first day of your last period.</p></noscript>
+</form>`;
+}
+
+// BMI calculator with the Malaysian (Asian) cut-offs, used on the home page and in the BMI guide.
+// assets/js/site.js does the sums in the browser; nothing is sent or stored.
+export const BMI_CALC_URL = '/articles/bmi-calculator-malaysia/';
+export function bmiCalc(id) {
+  return `<form class="calc" id="${id}" data-bmi-calc novalidate>
+<div class="calc__fields calc__fields--bmi">
+<label class="calc__field"><span>Height (cm)</span><input type="number" name="height" inputmode="decimal" min="100" max="230" step="0.1" placeholder="e.g. 165" required></label>
+<label class="calc__field"><span>Weight (kg)</span><input type="number" name="weight" inputmode="decimal" min="25" max="300" step="0.1" placeholder="e.g. 62" required></label>
+<label class="calc__field"><span>Waist (cm, optional)</span><input type="number" name="waist" inputmode="decimal" min="40" max="200" step="0.1" placeholder="e.g. 80"></label>
+<label class="calc__field"><span>Sex (for waist)</span><select name="sex"><option value="">Choose</option><option value="f">Female</option><option value="m">Male</option></select></label>
+<button class="btn btn--sq" type="submit">Calculate BMI</button>
+</div>
+<p class="calc__error" role="alert" hidden></p>
+<div class="calc__result" aria-live="polite" hidden></div>
+<p class="calc__note">For adults aged 18 and over, using the Malaysian BMI categories. Worked out in your browser: nothing you enter is stored or sent.</p>
+<noscript><p class="calc__note">This calculator needs JavaScript. To work out your BMI yourself, divide your weight in kg by your height in metres squared.</p></noscript>
 </form>`;
 }
 

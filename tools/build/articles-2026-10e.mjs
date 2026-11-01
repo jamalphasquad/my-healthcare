@@ -225,7 +225,7 @@ ${figure('vaccination', 'A vaccine injection being given in the upper arm', 'Bab
       ['US CDC — DTaP vaccine information statement', 'https://www.cdc.gov/vaccines/hcp/current-vis/dtap.html'],
       ['Utusan — Child immunisation records in MySejahtera (Jul 2022)', 'https://www.utusan.com.my/nasional/2022/07/akses-rekod-imunisasi-kanak-kanak-kesihatan-di-mysejahtera/'],
     ],
-    related: ['pregnancy-due-date-calculator-malaysia', 'hfmd-children-malaysia', 'hpv-vaccine-malaysia'],
+    related: ['rsv-malaysia', 'chickenpox-malaysia', 'pregnancy-due-date-calculator-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
