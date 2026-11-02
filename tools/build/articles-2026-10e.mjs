@@ -225,7 +225,7 @@ ${figure('vaccination', 'A vaccine injection being given in the upper arm', 'Bab
       ['US CDC — DTaP vaccine information statement', 'https://www.cdc.gov/vaccines/hcp/current-vis/dtap.html'],
       ['Utusan — Child immunisation records in MySejahtera (Jul 2022)', 'https://www.utusan.com.my/nasional/2022/07/akses-rekod-imunisasi-kanak-kanak-kesihatan-di-mysejahtera/'],
     ],
-    related: ['rsv-malaysia', 'chickenpox-malaysia', 'pregnancy-due-date-calculator-malaysia'],
+    related: ['tetanus-injection-att-malaysia', 'hepatitis-b-malaysia', 'rsv-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -374,7 +374,7 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
 </ul><p style="font-size:16px;line-height:1.6">These are signs of anaphylaxis, a severe allergic reaction.</p></div>` },
       { id: 'other', h: 'Heat rash, scabies and fungal rashes', tocLabel: 'Other causes', html: `<ul>
 <li><strong>Heat rash</strong> comes from blocked sweat glands. Keep cool, wear loose cotton clothes, and avoid heavy creams. Calamine lotion can soothe it. It usually clears within a few days.</li>
-<li><strong>Scabies</strong> is caused by tiny mites and spreads by close skin contact. It needs a prescription treatment, and <strong>everyone in the household</strong> should be treated at the same time, even without symptoms. Itching can continue for 2 to 4 weeks after successful treatment.</li>
+<li><strong>Scabies</strong> is caused by tiny mites and spreads by close skin contact. It needs a prescription treatment, and <strong>everyone in the household</strong> should be treated at the same time, even without symptoms. Itching can continue for 2 to 4 weeks after successful treatment. See our full guide to <a href="/articles/scabies-kudis-buta-malaysia/">scabies (kudis buta)</a>.</li>
 <li><strong>Ringworm (kurap)</strong> is a fungal infection, treated with antifungal cream. Steroid creams can make it worse.</li>
 <li><strong>Pityriasis versicolor (panau)</strong> is a harmless yeast overgrowth that isn’t contagious, but often comes back in hot, humid weather. Antifungal shampoos and creams help.</li>
 </ul>
@@ -414,6 +414,6 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['The Star — Health Ministry bans cosmetic products containing scheduled poisons (2 Apr 2026)', 'https://www.thestar.com.my/news/nation/2026/04/02/health-ministry-bans-cosmetic-products-containing-scheduled-poisons'],
       ['Mothership — HSA warns of potent steroid in “zero-steroid” eczema cream (23 Jul 2026)', 'https://mothership.sg/2026/07/hsa-warning-products/'],
     ],
-    related: ['psoriasis-malaysia', 'acne-malaysia', 'hfmd-children-malaysia'],
+    related: ['scabies-kudis-buta-malaysia', 'psoriasis-malaysia', 'acne-malaysia'],
   },
 ];

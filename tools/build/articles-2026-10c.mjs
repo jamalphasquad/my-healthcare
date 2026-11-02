@@ -228,7 +228,7 @@ ${figure('gp-consultation', 'A doctor talking with a patient in a consultation r
       ['RinggitPlus — Premium hikes drive over 340,000 medical insurance cancellations (27 Jan 2026)', 'https://ringgitplus.com/en/blog/personal-finance-news/premium-hikes-drive-over-340000-medical-insurance-cancellations.html'],
       ['CodeBlue — Bank Negara caps medical insurance premium hikes at 10% for most policyholders (Dec 2024)', 'https://codeblue.galencentre.org/2024/12/bank-negara-caps-medical-insurance-premium-hikes-at-10-for-most-policyholders/'],
     ],
-    related: ['budget-2027-health-malaysia', 'clinic-or-emergency-department', 'free-health-screening-malaysia'],
+    related: ['mysalam-malaysia', 'budget-2027-health-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

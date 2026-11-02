@@ -113,7 +113,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
       ['MOH — Management of Breast Cancer, 3rd edition, Quick Reference (2019)', 'https://mymahtas2.moh.gov.my/files/QR_Management_of_Breast_Cancer_(Third_Edition)_%20(1).pdf'],
       ['MOH — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017)', 'https://mymahtas2.moh.gov.my/files/CPG%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
     ],
-    related: ['peka-b40-malaysia', 'bowel-cancer-screening-malaysia', 'world-diabetes-day-2026-kl'],
+    related: ['peka-b40-malaysia', 'pap-smear-hpv-test-malaysia', 'bowel-cancer-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -252,6 +252,7 @@ ${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'The vac
 <li><strong>Aged 30 to 49:</strong> an HPV test, repeated every 5 years if negative. You can often take the sample yourself.</li>
 <li><strong>Aged 21 to 29 and 50 to 65:</strong> a Pap smear.</li>
 </ul>
+<p>See our guide to the <a href="/articles/pap-smear-hpv-test-malaysia/">Pap smear and HPV test</a> for what happens and what your results mean.</p>
 <p>Free options include government health clinics, the Ministry of Health’s ROSE programme at government hospitals, and free HPV tests for eligible women aged 30 to 65 at LPPKN’s Klinik Nur Sejahtera. About 65% of women in the ROSE programme had not been screened in the previous three years.</p>
 <div class="box box--pink" role="note"><span class="box__title">See a doctor if you notice</span><ul><li>Bleeding between periods, after sex or after menopause</li><li>Unusual vaginal discharge</li><li>Pelvic pain or pain during sex</li></ul></div>` },
       { id: 'side-effects', h: 'Side effects and safety', html: `<p>The HPV vaccine has been used worldwide for more than 15 years and has a strong safety record. Common side effects are redness, swelling or pain at the injection site. Less common are mild fever, headache or joint pain.</p>
@@ -286,7 +287,7 @@ ${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'The vac
       ['European Medicines Agency — Gardasil 9 product information', 'https://www.ema.europa.eu/en/medicines/human/EPAR/gardasil-9'],
       ['Cochrane Malaysia — New research confirms HPV vaccination prevents cervical cancer', 'https://malaysia.cochrane.org/news/penyelidikan-baru-mengesahkan-vaksinasi-hpv-mencegah-kanser-serviks'],
     ],
-    related: ['baby-vaccination-schedule-malaysia', 'hiv-malaysia', 'free-health-screening-malaysia'],
+    related: ['pap-smear-hpv-test-malaysia', 'baby-vaccination-schedule-malaysia', 'hiv-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

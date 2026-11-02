@@ -212,7 +212,7 @@ ${figure('mammogram-machine', 'A mammography machine in a clinic room', 'A mammo
       ['PERKESO SEHATi — Health screening programme', 'https://sehati.ladesk.com/'],
       ['Media Selangor — Selangor Saring (Jul 2026)', 'https://mediaselangor.com/en/2026/07/382862'],
     ],
-    related: ['undiagnosed-diabetes-high-blood-pressure-young-adults', 'check-blood-pressure-at-home', 'world-mental-health-day-2026-malaysia'],
+    related: ['pap-smear-hpv-test-malaysia', 'undiagnosed-diabetes-high-blood-pressure-young-adults', 'check-blood-pressure-at-home'],
   },
 
   /* ------------------------------------------------------------------ */

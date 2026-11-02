@@ -60,7 +60,7 @@ export const OCT_2026_D = [
 <li>Wear <strong>boots and gloves</strong> in floodwater and mud, and avoid wading where you can.</li>
 <li><strong>Cover cuts</strong> with waterproof plasters before going into water.</li>
 <li>If you get a cut, wash it well with clean water and soap, and keep it clean and dry.</li>
-<li>Flood wounds count as dirty wounds. See a doctor for a <strong>tetanus booster</strong> if your last one was 5 or more years ago, or if you aren’t sure.</li>
+<li>Flood wounds count as dirty wounds. See a doctor for a <strong>tetanus booster</strong> if your last one was 5 or more years ago, or if you aren’t sure. See our guide to the <a href="/articles/tetanus-injection-att-malaysia/">tetanus injection (ATT)</a>.</li>
 <li>See a doctor if a wound becomes red, swollen, hot or painful, or leaks pus.</li>
 </ul>` },
       { id: 'clean-up', h: 'Cleaning up safely', html: `<ul>
@@ -115,7 +115,7 @@ ${figure('aedes-mosquito', 'A close-up of an Aedes mosquito on skin', 'Clear sta
       ['US CDC — Tetanus: clinical guidance', 'https://www.cdc.gov/tetanus/hcp/clinical-guidance/index.html'],
       ['US CDC — Mold clean-up after a disaster', 'https://www.cdc.gov/mold-health/about/clean-up.html'],
     ],
-    related: ['dengue-klang-valley-first-three-days', 'haze-air-quality-klang-valley', 'clinic-or-emergency-department'],
+    related: ['tetanus-injection-att-malaysia', 'dengue-klang-valley-first-three-days', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */

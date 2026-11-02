@@ -60,7 +60,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'The PeKa 
 <li><strong>RM50 a day</strong> in income replacement when you are admitted to a government hospital, for up to 14 days (RM700) a year.</li>
 <li>Help with <strong>medical devices</strong> of up to RM30,000.</li>
 </ul>
-<p>By the end of 2025, about 1.88 million people had received mySalam payouts, totalling RM1.42 billion. Check your status and how to claim on the official <a href="https://www.mysalam.com.my/" target="_blank" rel="noopener">mySalam website</a>.</p>` },
+<p>By the end of 2025, about 1.88 million people had received mySalam payouts, totalling RM1.42 billion. See our <a href="/articles/mysalam-malaysia/">mySalam guide</a> for how to check your status and make a claim, or go to the official <a href="https://www.mysalam.com.my/" target="_blank" rel="noopener">mySalam website</a>.</p>` },
       { id: 'madani', h: 'What happened to Skim Perubatan Madani?', tocLabel: 'Skim Perubatan Madani', html: `<p><strong>Skim Perubatan Madani (SPM)</strong> began in June 2023 and let STR recipients see a private GP for minor illnesses such as coughs, colds, diarrhoea and minor wounds, up to RM250 a year for a household, RM125 for a senior living alone and RM75 for a single adult. From February 2024 it ran in 10 districts only, including Kuala Lumpur, Petaling, Klang, Gombak and Hulu Langat.</p>
 <p>Its budget was halved to RM50 million for 2026, and the scheme was <strong>reportedly not funded in Budget 2027</strong>. The Ministry of Health hasn’t issued a closure notice, so check <a href="https://www.protecthealth.com.my/" target="_blank" rel="noopener">ProtectHealth</a> or MySejahtera for the latest before you go. Klinik Kesihatan remain the lowest-cost option for everyday illness.</p>` },
       { id: 'perkeso', h: 'PERKESO free health screening (for workers)', tocLabel: 'PERKESO screening', html: `<p>If you work and contribute to PERKESO (SOCSO), you may qualify for its free <strong>Health Screening Programme (HSP)</strong>, separate from PeKa B40:</p>
@@ -97,7 +97,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'The PeKa 
       ['PERKESO — Health Screening Programme (HSP 3.0) leaflet', 'https://www.mma.org.my/web/wp-content/uploads/Risalah-HSP-3.0.pdf'],
       ['Bernama — PERKESO health screening findings (May 2026)', 'https://www.bernama.com/bm/news.php?id=2574936'],
     ],
-    related: ['free-health-screening-malaysia', 'budget-2027-health-malaysia', 'normal-blood-sugar-level-malaysia'],
+    related: ['mysalam-malaysia', 'free-health-screening-malaysia', 'budget-2027-health-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -243,7 +243,7 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
 <li><strong>Urine tests</strong> for drugs (including opiates and cannabis, with <strong>methamphetamine</strong> added in December 2023), pregnancy in women, and sugar and protein.</li>
 </ul>
 <p>Conditions that can make a worker <strong>unsuitable</strong> include infectious diseases such as TB (including old TB that could become active again), hepatitis B and C, HIV, syphilis, malaria, filariasis and leprosy, as well as cancer, epilepsy, serious psychiatric illness, drug use and pregnancy. Chronic conditions such as high blood pressure, diabetes, heart disease, asthma and kidney disease may also lead to an unsuitable result, or to a monitoring programme.</p>
-<p>According to FOMEMA figures cited by the Malaysian Medical Association, in 2023 the screening detected more than 6,400 cases of TB and more than 3,300 cases of hepatitis B among foreign workers, which is why the checks matter for public health. See our guide to a <a href="/articles/persistent-cough-malaysia/">cough that won’t go away</a> for the signs of TB.</p>
+<p>According to FOMEMA figures cited by the Malaysian Medical Association, in 2023 the screening detected more than 6,400 cases of TB and more than 3,300 cases of hepatitis B among foreign workers, which is why the checks matter for public health. See our guide to <a href="/articles/hepatitis-b-malaysia/">hepatitis B</a>, and to a to a <a href="/articles/persistent-cough-malaysia/">cough that won’t go away</a> for the signs of TB.</p>
 ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tests in the FOMEMA exam include HIV, hepatitis B and C, syphilis and malaria.')}` },
       { id: 'fees', h: 'FOMEMA fees in 2026', tocLabel: 'Fees', html: `<div class="table-wrap"><table>
 <thead><tr><th></th><th>Male worker</th><th>Female worker</th></tr></thead>
@@ -314,7 +314,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tes
       ['CodeBlue — MMA on additional foreign worker medical screening (30 Jan 2024)', 'https://codeblue.galencentre.org/2024/01/additional-foreign-worker-medical-screening-necessary-to-protect-the-population-against-import-of-communicable-diseases-mma/'],
       ['EMGS — Medical screening for international students', 'https://visa.educationmalaysia.gov.my/guidelines/medical-screening'],
     ],
-    related: ['typhoid-injection-food-handlers-malaysia', 'persistent-cough-malaysia', 'free-health-screening-malaysia'],
+    related: ['hepatitis-b-malaysia', 'typhoid-injection-food-handlers-malaysia', 'persistent-cough-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

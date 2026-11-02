@@ -215,7 +215,7 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'A la
       ['MyGOV — Premarital HIV screening (Aug 2026)', 'https://www.malaysia.gov.my/my/topics/ujian-saringan-hiv-praperkahwinan'],
       ['CodeBlue — People living with HIV still face discrimination in hospitals (Apr 2025)', 'https://codeblue.galencentre.org/2025/04/people-living-with-hiv-still-face-discrimination-in-malaysian-hospitals-says-mac'],
     ],
-    related: ['hpv-vaccine-malaysia', 'free-health-screening-malaysia', 'anxiety-malaysia'],
+    related: ['syphilis-sti-testing-malaysia', 'hpv-vaccine-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -644,7 +644,7 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
       ['GOV.UK — Bowel cancer screening: having a colonoscopy (Jun 2025)', 'https://www.gov.uk/government/publications/bowel-cancer-screening-colonoscopy/bowel-cancer-screening-having-a-colonoscopy-fit'],
       ['American Cancer Society — Survival rates for colorectal cancer (Jan 2026)', 'https://www.cancer.org/cancer/types/colon-rectal-cancer/detection-diagnosis-staging/survival-rates.html'],
     ],
-    related: ['free-health-screening-malaysia', 'stomach-pain-gastric-malaysia', 'breast-cancer-screening-malaysia'],
+    related: ['piles-buasir-malaysia', 'free-health-screening-malaysia', 'stomach-pain-gastric-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
