@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=15">
+<link rel="stylesheet" href="/assets/css/site.css?v=16">
 <link rel="preload" as="image" type="image/webp" imagesrcset="/assets/img/kl-skyline-480.webp 480w, /assets/img/kl-skyline-960.webp 960w, /assets/img/kl-skyline-1280.webp 1280w" imagesizes="(max-width: 960px) 100vw, 560px">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://healthcaredirectory.my/#website","url":"https://healthcaredirectory.my/","name":"HealthcareDirectory.my","inLanguage":"en-MY","publisher":{"@id":"https://healthcaredirectory.my/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://healthcaredirectory.my/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https://healthcaredirectory.my/#org","name":"HealthcareDirectory.my","url":"https://healthcaredirectory.my/","logo":{"@type":"ImageObject","url":"https://healthcaredirectory.my/assets/icon-512.png","width":512,"height":512},"email":"hello@healthcaredirectory.my","areaServed":[{"@type":"City","name":"Kuala Lumpur"},{"@type":"Country","name":"Malaysia"}]},{"@type":"WebPage","@id":"https://healthcaredirectory.my/#webpage","url":"https://healthcaredirectory.my/","name":"Clinics in Kuala Lumpur, Selangor and across Malaysia, and health awareness for Malaysians","isPartOf":{"@id":"https://healthcaredirectory.my/#website"},"about":{"@id":"https://healthcaredirectory.my/#org"},"inLanguage":"en-MY","primaryImageOfPage":"https://healthcaredirectory.my/assets/img/kl-skyline-og.jpg"},{"@type":"ItemList","name":"Clinics in Malaysia","itemListElement":[{"@type":"ListItem","position":1,"url":"https://healthcaredirectory.my/clinics/klinik-segara-intermark/","name":"Klinik Segara The Intermark"},{"@type":"ListItem","position":2,"url":"https://healthcaredirectory.my/clinics/klinik-segara-mont-kiara/","name":"Klinik Segara Plaza Mont Kiara"},{"@type":"ListItem","position":3,"url":"https://healthcaredirectory.my/clinics/klinik-segara-desa-sri-hartamas/","name":"Klinik Segara Desa Sri Hartamas"},{"@type":"ListItem","position":4,"url":"https://healthcaredirectory.my/clinics/klinik-segara-solaris-dutamas/","name":"Klinik Segara Solaris Dutamas"},{"@type":"ListItem","position":5,"url":"https://healthcaredirectory.my/clinics/klinik-segara-menara-dungun/","name":"Klinik Segara Menara Dungun"},{"@type":"ListItem","position":6,"url":"https://healthcaredirectory.my/clinics/klinik-segara-mercu-uem/","name":"Klinik Segara Mercu UEM"},{"@type":"ListItem","position":7,"url":"https://healthcaredirectory.my/clinics/klinik-segara-the-curve/","name":"Klinik Segara The Curve"},{"@type":"ListItem","position":8,"url":"https://healthcaredirectory.my/clinics/klinik-segara-surian-tower/","name":"Klinik Segara Surian Tower"},{"@type":"ListItem","position":9,"url":"https://healthcaredirectory.my/clinics/klinik-segara-ss14/","name":"Klinik Segara SS14"},{"@type":"ListItem","position":10,"url":"https://healthcaredirectory.my/clinics/klinik-segara-taman-kinrara/","name":"Klinik Segara Taman Kinrara"},{"@type":"ListItem","position":11,"url":"https://healthcaredirectory.my/clinics/klinik-segara-ampang/","name":"Klinik Segara Ampang"},{"@type":"ListItem","position":12,"url":"https://healthcaredirectory.my/clinics/klinik-segara-alam-jaya/","name":"Klinik Segara @ Alam Jaya"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What number do I call in a medical emergency in Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Call 999 from any phone. From a mobile phone, 112 also connects you to emergency services."}},{"@type":"Question","name":"How do I find a clinic that is open now in Kuala Lumpur?","acceptedAnswer":{"@type":"Answer","text":"Use the clinic directory above. Each listing shows opening hours in Malaysia time, and the “Open now” switch shows clinics open at this moment. Hours can differ on public holidays, so please call ahead."}},{"@type":"Question","name":"Do I need a referral to see a specialist?","acceptedAnswer":{"@type":"Answer","text":"Private specialist centres in Kuala Lumpur usually accept appointments without a referral, although some insurers ask for a GP letter. Government hospitals generally require a referral for specialist clinics."}},{"@type":"Question","name":"Can I get free health screening in Kuala Lumpur?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you are eligible. PERKESO contributors aged 40–59 can book free screening through the SEHATi app, PeKa B40 covers eligible lower-income Malaysians aged 40 and over, and LPPKN offers free or subsidised mammograms for women aged 40–70. See our screening guide."}},{"@type":"Question","name":"How do I get my clinic listed?","acceptedAnswer":{"@type":"Answer","text":"Listing is free. Send us your clinic details and registration information, and we will check them before publishing."}}]}]}</script>
 </head>
@@ -396,11 +396,15 @@
 <section id="articles" class="wrap section" aria-labelledby="ar-h" style="padding-top:80px;padding-bottom:80px">
 <div class="section-head" style="margin-bottom:32px">
 <div class="stack g10"><span class="eyebrow">Health articles</span><h2 id="ar-h" class="h-section">Clear guidance, <em>written for Malaysia.</em></h2></div>
-<div class="chips" role="group" aria-label="Filter articles by topic">
+<div class="chips chips-scroll" role="group" aria-label="Filter articles by topic">
 <button type="button" class="chip" data-home-cat="all" aria-pressed="true">All</button>
 <button type="button" class="chip" data-home-cat="weight" aria-pressed="false">Weight &amp; metabolism</button>
 <button type="button" class="chip" data-home-cat="guides" aria-pressed="false">Guides</button>
 <button type="button" class="chip" data-home-cat="prevention" aria-pressed="false">Prevention</button>
+<button type="button" class="chip" data-home-cat="heart-diabetes" aria-pressed="false">Heart &amp; diabetes</button>
+<button type="button" class="chip" data-home-cat="aesthetics" aria-pressed="false">Aesthetics &amp; skin</button>
+<button type="button" class="chip" data-home-cat="mental-wellbeing" aria-pressed="false">Mental wellbeing</button>
+<button type="button" class="chip" data-home-cat="womens-health" aria-pressed="false">Women's health</button>
 </div>
 </div>
 <article class="feature">
@@ -412,7 +416,7 @@
 <span style="font-size:14px;color:var(--muted-2)">Updated <time datetime="2026-10-08">8 October 2026</time></span>
 </div>
 </article>
-<div class="post-grid" data-home-posts>
+<div class="post-grid" data-home-posts data-api="/api/articles">
 <article class="post" data-cat="weight">
 <a class="post__img" href="/articles/bmi-calculator-malaysia/" tabindex="-1" aria-hidden="true"><img src="/assets/img/waist-measurement-960.webp" srcset="/assets/img/waist-measurement-480.webp 480w, /assets/img/waist-measurement-960.webp 960w, /assets/img/waist-measurement-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 380px" alt="A person measuring their waist with a tape measure" width="960" height="640" loading="lazy" decoding="async"></a>
 <span class="meta">Weight &amp; metabolism &middot; 6 min read</span>
@@ -456,7 +460,7 @@
 
 </article>
 </div>
-<p style="margin-top:40px"><a class="btn btn--ghost" href="/articles/">See all health articles</a></p>
+<p style="margin-top:40px"><a class="btn btn--ghost" href="/articles/" data-home-all>See all health articles</a></p>
 </section>
 
 <section id="areas" class="areas" aria-labelledby="nb-h">
@@ -587,6 +591,6 @@
 </div>
 </footer>
 </div>
-<script src="/assets/js/site.js?v=15" defer></script>
+<script src="/assets/js/site.js?v=16" defer></script>
 </body>
 </html>

@@ -201,7 +201,8 @@ export function browseLinks(coll, o = {}) {
 export function home({ clinics, areas, services, articles, faqs, topics, featuredSlug, comingSoon, coll }) {
   const featured = articles.find((a) => a.slug === featuredSlug);
   const rest = articles.filter((a) => a !== featured).slice(0, 6);
-  const homeCats = [...new Map(rest.map((a) => [a.cat, a.catLabel])).entries()];
+  // every topic: a chip loads that topic's newest articles from /api/articles
+  const homeCats = [...new Map(articles.map((a) => [a.cat, a.catLabel])).entries()];
   // Neighbourhoods with the most clinics first; the rest are reachable through the area search.
   const AREA_TOP = 10;
   const byCount = [...areas].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
@@ -296,7 +297,7 @@ ${browseLinks(coll, { skip: [coll?.areaLinks] })}
 <section id="articles" class="wrap section" aria-labelledby="ar-h" style="padding-top:80px;padding-bottom:80px">
 <div class="section-head" style="margin-bottom:32px">
 <div class="stack g10"><span class="eyebrow">Health articles</span><h2 id="ar-h" class="h-section">Clear guidance, <em>written for Malaysia.</em></h2></div>
-<div class="chips" role="group" aria-label="Filter articles by topic">
+<div class="chips chips-scroll" role="group" aria-label="Filter articles by topic">
 <button type="button" class="chip" data-home-cat="all" aria-pressed="true">All</button>
 ${homeCats.map(([k, l]) => `<button type="button" class="chip" data-home-cat="${k}" aria-pressed="false">${esc(l)}</button>`).join('\n')}
 </div>
@@ -310,10 +311,10 @@ ${homeCats.map(([k, l]) => `<button type="button" class="chip" data-home-cat="${
 <span style="font-size:14px;color:var(--muted-2)">Updated <time datetime="${featured.modified}">${longDate(featured.modified)}</time></span>
 </div>
 </article>
-<div class="post-grid" data-home-posts>
+<div class="post-grid" data-home-posts data-api="/api/articles">
 ${rest.map((a) => postCard(a)).join('\n')}
 </div>
-<p style="margin-top:40px"><a class="btn btn--ghost" href="/articles/">See all health articles</a></p>
+<p style="margin-top:40px"><a class="btn btn--ghost" href="/articles/" data-home-all>See all health articles</a></p>
 </section>
 
 <section id="areas" class="areas" aria-labelledby="nb-h">

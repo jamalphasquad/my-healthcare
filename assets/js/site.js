@@ -411,15 +411,42 @@
     filter();
   }
 
-  /* Home: article topic chips */
+  /* Home: article topic chips. "All" shows the newest articles already on the page; a topic asks
+     the server (data-api) for that topic's newest six. */
   var homePosts = $('[data-home-posts]');
   if (homePosts) {
-    var hp = $$('.post', homePosts);
+    var hp = $$('.post', homePosts), homeAll = $('[data-home-all]'), homeSeq = 0;
+    var homeApi = homePosts.getAttribute('data-api');
+    var featureLink = $('.feature h3 a'), featureHref = featureLink && featureLink.getAttribute('href');
+    var homeShow = function (cards) { homePosts.textContent = ''; cards.forEach(function (c) { homePosts.appendChild(c); }); };
     $$('[data-home-cat]').forEach(function (b) {
       b.addEventListener('click', function () {
-        var c = b.getAttribute('data-home-cat');
-        hp.forEach(function (p) { p.hidden = !(c === 'all' || p.getAttribute('data-cat') === c); });
+        var c = b.getAttribute('data-home-cat'), mine = ++homeSeq, label = b.textContent;
         $$('[data-home-cat]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        if (homeAll) {
+          homeAll.href = c === 'all' ? '/articles/' : '/articles/#topic-' + c;
+          homeAll.textContent = c === 'all' ? 'See all health articles' : 'See all ' + label + ' articles';
+        }
+        if (c === 'all' || !homeApi) {
+          homeShow(hp); hp.forEach(function (p) { p.hidden = !(c === 'all' || p.getAttribute('data-cat') === c); });
+          return;
+        }
+        homePosts.setAttribute('aria-busy', 'true');
+        // one extra, in case the featured article above is among them
+        fetch(homeApi + '?' + new URLSearchParams({ cat: c, size: 7 }))
+          .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+          .then(function (d) {
+            if (mine !== homeSeq) return; // another chip was clicked since
+            var tpl = document.createElement('template'); tpl.innerHTML = d.cards.join('');
+            $$('time', tpl.content).forEach(function (t) { t.remove(); }); // home cards show no date
+            homeShow($$('.post', tpl.content).filter(function (p) { return $('h3 a', p).getAttribute('href') !== featureHref; }).slice(0, 6));
+          })
+          .catch(function () {
+            // no server: filter the cards already on the page
+            if (mine !== homeSeq) return;
+            homeShow(hp); hp.forEach(function (p) { p.hidden = p.getAttribute('data-cat') !== c; });
+          })
+          .then(function () { if (mine === homeSeq) homePosts.removeAttribute('aria-busy'); });
       });
     });
   }
