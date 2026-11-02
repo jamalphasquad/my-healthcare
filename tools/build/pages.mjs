@@ -357,11 +357,12 @@ export function dueDateCalc(id) {
 export const BMI_CALC_URL = '/articles/bmi-calculator-malaysia/';
 export function bmiCalc(id) {
   return `<form class="calc" id="${id}" data-bmi-calc novalidate>
-<div class="unit-toggle" role="group" aria-label="Units"><button type="button" class="chip" data-units="metric" aria-pressed="true">cm &amp; kg</button><button type="button" class="chip" data-units="imperial" aria-pressed="false">ft, in &amp; lb</button></div>
 <div class="calc__fields calc__fields--bmi">
-<label class="calc__field" data-metric><span>Height (cm)</span><input type="number" name="height" inputmode="decimal" step="0.1" placeholder="e.g. 165" required></label>
-<div class="calc__field" data-imperial hidden><span>Height (ft, in)</span><div class="calc__pair"><input type="number" name="ft" inputmode="numeric" step="1" placeholder="ft" aria-label="Height, feet"><input type="number" name="inch" inputmode="decimal" step="0.1" placeholder="in" aria-label="Height, inches"></div></div>
-<label class="calc__field"><span data-label="weight">Weight (kg)</span><input type="number" name="weight" inputmode="decimal" step="0.1" placeholder="e.g. 62" required></label>
+<div class="calc__field"><span class="calc__label">Height <span class="mini-toggle" role="group" aria-label="Height units"><button type="button" data-hunit="cm" aria-pressed="true">cm</button><button type="button" data-hunit="ft" aria-pressed="false">ft, in</button></span></span>
+<input type="number" name="height" inputmode="decimal" step="0.1" placeholder="e.g. 165" aria-label="Height in centimetres" data-cm>
+<div class="calc__pair" data-ft hidden><input type="number" name="ft" inputmode="numeric" step="1" placeholder="ft" aria-label="Height, feet"><input type="number" name="inch" inputmode="decimal" step="0.1" placeholder="in" aria-label="Height, inches"></div></div>
+<div class="calc__field"><span class="calc__label">Weight <span class="mini-toggle" role="group" aria-label="Weight units"><button type="button" data-wunit="kg" aria-pressed="true">kg</button><button type="button" data-wunit="lb" aria-pressed="false">lb</button></span></span>
+<input type="number" name="weight" inputmode="decimal" step="0.1" placeholder="e.g. 62" aria-label="Weight in kilograms"></div>
 <label class="calc__field"><span data-label="waist">Waist (cm, optional)</span><input type="number" name="waist" inputmode="decimal" step="0.1" placeholder="e.g. 80"></label>
 <label class="calc__field"><span>Sex (for waist)</span><select name="sex"><option value="">Choose</option><option value="f">Female</option><option value="m">Male</option></select></label>
 <button class="btn btn--sq" type="submit">Calculate BMI</button>

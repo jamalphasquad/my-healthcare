@@ -769,7 +769,8 @@
   var KG_LB = 2.20462, CM_IN = 2.54;
   $$('[data-bmi-calc]').forEach(function (form) {
     var el = form.elements, err = $('.calc__error', form), out = $('.calc__result', form);
-    var units = 'metric', fields = [el.height, el.ft, el.inch, el.weight, el.waist];
+    // Height (and waist) and weight have their own units: cm or ft/in, kg or lb.
+    var hu = 'cm', wu = 'kg', fields = [el.height, el.ft, el.inch, el.weight, el.waist];
     function num(i) { var v = parseFloat(String(i.value).replace(',', '.')); return isFinite(v) ? v : NaN; }
     function round(v, d) { var p = Math.pow(10, d || 0); return Math.round(v * p) / p; }
     function clearInvalid() { fields.forEach(function (i) { i.removeAttribute('aria-invalid'); }); }
@@ -777,50 +778,71 @@
       err.textContent = msg; err.hidden = false; out.hidden = true;
       clearInvalid(); if (input) input.setAttribute('aria-invalid', 'true');
     }
-    // Switching units converts whatever is already entered, and re-shows any result in the new units.
-    function setUnits(u) {
-      if (u === units) return;
-      var imp = u === 'imperial', h = num(el.height), ft = num(el.ft), inch = num(el.inch), w = num(el.weight), waist = num(el.waist);
-      if (imp) {
-        if (h > 0) { var tin = round(h / CM_IN, 1); el.ft.value = Math.floor(tin / 12); el.inch.value = round(tin - Math.floor(tin / 12) * 12, 1); }
-        if (w > 0) el.weight.value = round(w * KG_LB, 1);
-        if (waist > 0) el.waist.value = round(waist / CM_IN, 1);
-      } else {
-        if (ft > 0 || inch > 0) el.height.value = round(((ft || 0) * 12 + (inch || 0)) * CM_IN, 1);
-        if (w > 0) el.weight.value = round(w / KG_LB, 1);
-        if (waist > 0) el.waist.value = round(waist * CM_IN, 1);
-      }
-      units = u;
-      $('[data-metric]', form).hidden = imp;
-      $('[data-imperial]', form).hidden = !imp;
-      $('[data-label="weight"]', form).textContent = imp ? 'Weight (lb)' : 'Weight (kg)';
-      $('[data-label="waist"]', form).textContent = imp ? 'Waist (in, optional)' : 'Waist (cm, optional)';
-      el.weight.placeholder = imp ? 'e.g. 137' : 'e.g. 62';
-      el.waist.placeholder = imp ? 'e.g. 31' : 'e.g. 80';
-      $$('[data-units]', form).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-units') === u ? 'true' : 'false'); });
-      err.hidden = true; clearInvalid();
-      if (!out.hidden) calculate();
+    function press(attr, value) { $$('[' + attr + ']', form).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute(attr) === value ? 'true' : 'false'); }); }
+    // Switching converts whatever is already entered, and re-shows any result in the new units.
+    // Converting back and forth shouldn't drift: a value that hasn't been edited since it was
+    // converted goes back to exactly what was typed.
+    var memo = {};
+    function convert(key, now, compute, write) {
+      var m = memo[key], next = m && m.shown === now ? m.orig : compute();
+      if (next == null) return;
+      write(next); memo[key] = { shown: String(next), orig: now };
     }
-    form.addEventListener('click', function (e) { var b = e.target.closest('[data-units]'); if (b) setUnits(b.getAttribute('data-units')); });
+    function setHeightUnit(u) {
+      if (u === hu) return;
+      var ft = u === 'ft', pair = function () { return el.ft.value + '|' + el.inch.value; };
+      if (ft) convert('h', el.height.value, function () {
+        var h = num(el.height); if (!(h > 0)) return null;
+        var tin = round(h / CM_IN, 1), f = Math.floor(tin / 12); return f + '|' + round(tin - f * 12, 1);
+      }, function (v) { var p = v.split('|'); el.ft.value = p[0]; el.inch.value = p[1]; });
+      else convert('h', pair(), function () {
+        var f = num(el.ft), i = num(el.inch); return f > 0 || i > 0 ? String(round(((f || 0) * 12 + (i || 0)) * CM_IN, 1)) : null;
+      }, function (v) { el.height.value = v; });
+      convert('waist', el.waist.value, function () {
+        var w = num(el.waist); return w > 0 ? String(round(ft ? w / CM_IN : w * CM_IN, 1)) : null;
+      }, function (v) { el.waist.value = v; });
+      hu = u;
+      el.height.hidden = ft;
+      $('[data-ft]', form).hidden = !ft;
+      $('[data-label="waist"]', form).textContent = ft ? 'Waist (in, optional)' : 'Waist (cm, optional)';
+      el.waist.placeholder = ft ? 'e.g. 31' : 'e.g. 80';
+      press('data-hunit', u); changed();
+    }
+    function setWeightUnit(u) {
+      if (u === wu) return;
+      convert('weight', el.weight.value, function () {
+        var w = num(el.weight); return w > 0 ? String(round(u === 'lb' ? w * KG_LB : w / KG_LB, 1)) : null;
+      }, function (v) { el.weight.value = v; });
+      wu = u;
+      el.weight.placeholder = u === 'lb' ? 'e.g. 137' : 'e.g. 62';
+      el.weight.setAttribute('aria-label', u === 'lb' ? 'Weight in pounds' : 'Weight in kilograms');
+      press('data-wunit', u); changed();
+    }
+    function changed() { err.hidden = true; clearInvalid(); if (!out.hidden) calculate(); }
+    form.addEventListener('click', function (e) {
+      var h = e.target.closest('[data-hunit]'), w = e.target.closest('[data-wunit]');
+      if (h) setHeightUnit(h.getAttribute('data-hunit'));
+      if (w) setWeightUnit(w.getAttribute('data-wunit'));
+    });
 
     function calculate() {
-      var imp = units === 'imperial', h, heightText;
-      if (imp) {
-        var ft = num(el.ft), inch = el.inch.value === '' ? 0 : num(el.inch);
-        if (!(ft >= 3 && ft <= 7 && inch >= 0 && inch < 12)) return fail('Enter your height in feet and inches, for example 5 ft 5 in.', el.ft);
-        h = (ft * 12 + inch) * CM_IN; heightText = ft + ' ft ' + round(inch, 1) + ' in';
+      var inFt = hu === 'ft', inLb = wu === 'lb', h, heightText;
+      if (inFt) {
+        var f = num(el.ft), i = el.inch.value === '' ? 0 : num(el.inch);
+        if (!(f >= 3 && f <= 7 && i >= 0 && i < 12)) return fail('Enter your height in feet and inches, for example 5 ft 5 in.', el.ft);
+        h = (f * 12 + i) * CM_IN; heightText = f + ' ft ' + round(i, 1) + ' in';
       } else { h = num(el.height); heightText = h + ' cm'; }
-      if (!(h >= 100 && h <= 230)) return fail(imp ? 'Enter a height between 3 ft 4 in and 7 ft 6 in.' : 'Enter your height in centimetres, between 100 and 230.', imp ? el.ft : el.height);
-      var w = num(el.weight) / (imp ? KG_LB : 1);
-      if (!(w >= 25 && w <= 300)) return fail(imp ? 'Enter your weight in pounds, between 55 and 660.' : 'Enter your weight in kilograms, between 25 and 300.', el.weight);
+      if (!(h >= 100 && h <= 230)) return fail(inFt ? 'Enter a height between 3 ft 4 in and 7 ft 6 in.' : 'Enter your height in centimetres, between 100 and 230.', inFt ? el.ft : el.height);
+      var w = num(el.weight) / (inLb ? KG_LB : 1);
+      if (!(w >= 25 && w <= 300)) return fail(inLb ? 'Enter your weight in pounds, between 55 and 660.' : 'Enter your weight in kilograms, between 25 and 300.', el.weight);
       var waist = NaN;
       if (el.waist.value) {
-        waist = num(el.waist) * (imp ? CM_IN : 1);
-        if (!(waist >= 40 && waist <= 200)) return fail(imp ? 'Enter your waist in inches, between 16 and 79, or leave it blank.' : 'Enter your waist in centimetres, between 40 and 200, or leave it blank.', el.waist);
+        waist = num(el.waist) * (inFt ? CM_IN : 1);
+        if (!(waist >= 40 && waist <= 200)) return fail(inFt ? 'Enter your waist in inches, between 16 and 79, or leave it blank.' : 'Enter your waist in centimetres, between 40 and 200, or leave it blank.', el.waist);
       }
       err.hidden = true; clearInvalid();
-      // weights shown in the chosen units: kg to the nearest 0.5, lb to the nearest pound
-      var wt = function (kg, step) { return imp ? Math.max(step ? 1 : 0, Math.round(kg * KG_LB)) + ' lb' : (step ? Math.max(0.5, Math.round(kg * 2) / 2) : round(kg, 1)) + ' kg'; };
+      // weights in the chosen unit: kg to the nearest 0.5, lb to the nearest pound
+      var wt = function (kg, step) { return inLb ? Math.max(step ? 1 : 0, Math.round(kg * KG_LB)) + ' lb' : (step ? Math.max(0.5, Math.round(kg * 2) / 2) : round(kg, 1)) + ' kg'; };
       var m = h / 100, bmi = w / (m * m), r1 = round(bmi, 1);
       var band = BMI_BANDS.filter(function (b) { return r1 < b[0]; })[0];
       var lo = 18.5 * m * m, hi = 22.9 * m * m;
@@ -832,8 +854,8 @@
       var waistLine = '';
       if (el.waist.value) {
         var cut = el.sex.value === 'm' ? 90 : el.sex.value === 'f' ? 80 : 0;
-        var len = function (cm) { return imp ? round(cm / CM_IN, 1) + ' in' : round(cm, 1) + ' cm'; };
-        var cutText = imp ? len(cut) + ' (' + cut + ' cm)' : cut + ' cm', who = cut === 90 ? 'men' : 'women';
+        var len = function (cm) { return inFt ? round(cm / CM_IN, 1) + ' in' : round(cm, 1) + ' cm'; };
+        var cutText = inFt ? len(cut) + ' (' + cut + ' cm)' : cut + ' cm', who = cut === 90 ? 'men' : 'women';
         waistLine = !cut ? '<p class="calc__now">Choose your sex to check your waist against the Malaysian cut-off.</p>'
           : waist >= cut ? '<p class="calc__now">Your waist of ' + len(waist) + ' is <strong>at or above ' + cutText + '</strong>, the cut-off for ' + who + ' in Malaysia. Fat around the waist raises the risk of diabetes and heart disease' + (band[2] === 'ok' ? ', even at a healthy BMI' : '') + '.</p>'
           : '<p class="calc__now">Your waist of ' + len(waist) + ' is below the ' + cutText + ' cut-off for ' + who + '.</p>';

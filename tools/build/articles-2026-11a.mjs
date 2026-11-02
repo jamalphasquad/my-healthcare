@@ -26,7 +26,7 @@ export const NOV_2026_A = [
       'More than half of Malaysian adults are overweight or obese. Losing just 5–10% of your weight improves blood sugar, blood pressure and cholesterol.',
     ],
     sections: [
-      { id: 'calculator', h: 'BMI calculator', tocLabel: 'BMI calculator', html: `<p>Enter your height and weight in centimetres and kilograms, or switch to feet, inches and pounds. Add your waist measurement if you know it. The calculator is for adults aged 18 and over.</p>
+      { id: 'calculator', h: 'BMI calculator', tocLabel: 'BMI calculator', html: `<p>Enter your height in centimetres or feet and inches, and your weight in kilograms or pounds: use the small switches beside each label. Add your waist measurement if you know it. The calculator is for adults aged 18 and over.</p>
 {{calc:bmi}}` },
       { id: 'categories', h: 'BMI categories for Malaysians', tocLabel: 'BMI categories', html: `<div class="table-wrap"><table>
 <thead><tr><th>BMI (kg/m²)</th><th>Malaysian category</th><th>International (WHO) category</th></tr></thead>

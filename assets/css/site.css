@@ -493,7 +493,10 @@ a.chip:hover{text-decoration:none;color:var(--ink)}
 .bmi-scale__labels{position:relative;height:16px;font-size:12px;color:var(--muted)}
 .bmi-scale__labels span{position:absolute;transform:translateX(-50%)}
 .bmi-scale__labels span:nth-child(1){left:14%}.bmi-scale__labels span:nth-child(2){left:32%}.bmi-scale__labels span:nth-child(3){left:50%}
-.unit-toggle{display:flex;gap:8px;margin-bottom:12px}
-.calc__field[hidden]{display:none}
+.calc__label{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:24px}
+.mini-toggle{display:inline-flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;background:var(--card)}
+.mini-toggle button{border:0;background:transparent;color:var(--muted-2);font-size:12px;line-height:1;padding:5px 9px;cursor:pointer}
+.mini-toggle button[aria-pressed="true"]{background:var(--primary);color:#F5F3EC}
 .calc__pair{display:flex;gap:6px}
+.calc__pair[hidden],.calc__field input[hidden]{display:none}
 .calc__pair input{min-width:0}
