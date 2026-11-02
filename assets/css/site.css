@@ -253,7 +253,8 @@ body.is-locked{overflow:hidden}
 .pager{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-top:32px}
 .pager .chip{min-width:42px;text-align:center}
 .pager .chip[aria-current="page"]{background:var(--primary);color:#F5F3EC;border-color:var(--primary)}
-.pager .chip:disabled{opacity:.45;cursor:default;border-color:var(--chip)}
+.pager .chip:disabled,.pager .chip[aria-disabled="true"]{opacity:.45;cursor:default;border-color:var(--chip)}
+.pager a.chip{justify-content:center}
 .pager__gap{color:var(--muted-2);padding:0 2px}
 
 /* article cards */

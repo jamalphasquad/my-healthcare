@@ -156,6 +156,25 @@
     if (t) t.textContent = st.text;
   }
 
+  /* Pager buttons (data-page): 1 … 4 5 6 … 12, where a gap of a single page shows the number instead.
+     pageNums in tools/build/pages.mjs uses the same rule for the blog's page links. */
+  function pagerButtons(page, pages) {
+    var keep = [];
+    for (var i = 1; i <= pages; i++) if (i === 1 || i === pages || Math.abs(i - page) <= 1) keep.push(i);
+    var nums = [];
+    keep.forEach(function (n, j) {
+      var prev = keep[j - 1];
+      if (prev && n - prev === 2) nums.push(prev + 1); else if (prev && n - prev > 2) nums.push(0);
+      nums.push(n);
+    });
+    var btn = function (n, label, extra) { return '<button type="button" class="chip" data-page="' + n + '"' + extra + '>' + label + '</button>'; };
+    return btn(page - 1, '&larr; Prev', page === 1 ? ' disabled aria-label="Previous page"' : ' aria-label="Previous page"')
+      + nums.map(function (n) {
+        return n ? btn(n, n, ' aria-label="Page ' + n + '"' + (n === page ? ' aria-current="page"' : '')) : '<span class="pager__gap" aria-hidden="true">&hellip;</span>';
+      }).join('')
+      + btn(page + 1, 'Next &rarr;', page === pages ? ' disabled aria-label="Next page"' : ' aria-label="Next page"');
+  }
+
   /* ---------- Clinic directory filters ----------
      A paginated directory (data-src, on the home page) renders only its first page;
      the full card list comes from a JSON file of pre-rendered cards, and only the
@@ -192,22 +211,7 @@
     function renderPager(pages) {
       if (!pager) return;
       pager.hidden = pages < 2;
-      if (pages < 2) { pager.innerHTML = ''; return; }
-      // 1 … 4 5 6 … 12 (a gap of a single page shows the number instead)
-      var keep = [];
-      for (var i = 1; i <= pages; i++) if (i === 1 || i === pages || Math.abs(i - page) <= 1) keep.push(i);
-      var nums = [];
-      keep.forEach(function (n, j) {
-        var prev = keep[j - 1];
-        if (prev && n - prev === 2) nums.push(prev + 1); else if (prev && n - prev > 2) nums.push(0);
-        nums.push(n);
-      });
-      var btn = function (n, label, extra) { return '<button type="button" class="chip" data-page="' + n + '"' + extra + '>' + label + '</button>'; };
-      pager.innerHTML = btn(page - 1, '&larr; Prev', page === 1 ? ' disabled aria-label="Previous page"' : ' aria-label="Previous page"')
-        + nums.map(function (n) {
-          return n ? btn(n, n, ' aria-label="Page ' + n + '"' + (n === page ? ' aria-current="page"' : '')) : '<span class="pager__gap" aria-hidden="true">&hellip;</span>';
-        }).join('')
-        + btn(page + 1, 'Next &rarr;', page === pages ? ' disabled aria-label="Next page"' : ' aria-label="Next page"');
+      pager.innerHTML = pages < 2 ? '' : pagerButtons(page, pages);
     }
 
     var areaSel = $('#finder-area'), svcSel = $('#finder-service');
@@ -342,27 +346,61 @@
     if (el) el.textContent = (st.open ? 'Open now · ' : 'Closed now · ') + st.text.replace('Today ', '');
   });
 
-  /* ---------- Blog search & topics ---------- */
+  /* ---------- Blog search & topics ----------
+     Each blog page (/articles/, /articles/page/2/ …) is its own page with links to the others.
+     A search or topic filter asks the server (data-api, a Pages Function) for one page of
+     matching cards at a time. Clearing the filters brings back this page's own list. */
   var blog = $('[data-blog]');
   if (blog) {
-    var posts = $$('.post', blog), q = $('#article-search'), cat = 'all';
-    var featured = $('[data-featured]'), heading = $('#latest-h'), count = $('.js-count');
-    function filter() {
-      var term = (q && q.value || '').trim().toLowerCase(), n = 0;
-      posts.forEach(function (p) {
-        var okC = cat === 'all' || p.getAttribute('data-cat') === cat;
-        var okQ = !term || p.textContent.toLowerCase().indexOf(term) > -1;
-        // the featured article sits above the grid; only list it when filtering
-        var dup = p.hasAttribute('data-is-featured') && cat === 'all' && !term;
-        p.hidden = !(okC && okQ) || dup; if (!p.hidden) n++;
-      });
+    var grid = $('.post-grid', blog), pager = $('.pager', blog), q = $('#article-search'), cat = 'all', bpage = 1, seq = 0, timer;
+    var featured = $('[data-featured]'), heading = $('#latest-h'), count = $('.js-count'), empty = $('.empty', blog);
+    var own = $$('.post', grid), api = blog.getAttribute('data-api');
+    var orig = { heading: heading && heading.textContent, count: count && count.textContent, pager: pager && pager.innerHTML, hidden: pager && pager.hidden };
+    function show(cards) { grid.textContent = ''; cards.forEach(function (c) { grid.appendChild(c); }); }
+    function load(scroll) {
+      var term = (q && q.value || '').trim(), on = cat !== 'all' || !!term, mine = ++seq;
       $$('[data-cat-filter]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-cat-filter') === cat ? 'true' : 'false'); });
-      if (featured) featured.hidden = cat !== 'all' || !!term;
-      if (heading) heading.textContent = cat !== 'all' ? (($('[data-cat-filter="' + cat + '"]') || {}).textContent || 'Articles') : term ? 'Search results' : 'Latest articles';
-      if (count) count.textContent = n + (n === 1 ? ' article' : ' articles');
-      var empty = $('.empty', blog); if (empty) empty.hidden = n !== 0;
+      if (featured) featured.hidden = on;
+      if (!on) {
+        show(own); if (empty) empty.hidden = true;
+        if (heading) heading.textContent = orig.heading;
+        if (count) count.textContent = orig.count;
+        if (pager) { pager.innerHTML = orig.pager; pager.hidden = orig.hidden; }
+        return;
+      }
+      if (heading) heading.textContent = cat !== 'all' ? (($('[data-cat-filter="' + cat + '"]') || {}).textContent || 'Articles') : 'Search results';
+      blog.setAttribute('aria-busy', 'true');
+      fetch(api + '?' + new URLSearchParams({ q: term, cat: cat, page: bpage }))
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          if (mine !== seq) return; // a newer search has started
+          var tpl = document.createElement('template'); tpl.innerHTML = d.cards.join('');
+          show($$('.post', tpl.content));
+          bpage = d.page;
+          if (count) count.textContent = d.total + (d.total === 1 ? ' article' : ' articles') + (d.pages > 1 ? ' · page ' + d.page + ' of ' + d.pages : '');
+          if (pager) { pager.hidden = d.pages < 2; pager.innerHTML = d.pages < 2 ? '' : pagerButtons(d.page, d.pages); }
+          if (empty) empty.hidden = d.total !== 0;
+          if (scroll) blog.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        })
+        .catch(function () {
+          // offline or no server: filter just the cards on this page
+          if (mine !== seq) return;
+          var term2 = term.toLowerCase(), hits = own.filter(function (p) {
+            return (cat === 'all' || p.getAttribute('data-cat') === cat) && (!term2 || p.textContent.toLowerCase().indexOf(term2) > -1);
+          });
+          show(hits);
+          if (count) count.textContent = hits.length + (hits.length === 1 ? ' article' : ' articles') + ' on this page';
+          if (pager) { pager.innerHTML = orig.pager; pager.hidden = orig.hidden; }
+          if (empty) empty.hidden = hits.length !== 0;
+        })
+        .then(function () { if (mine === seq) blog.removeAttribute('aria-busy'); });
     }
-    if (q) q.addEventListener('input', filter);
+    function filter() { bpage = 1; load(); }
+    if (q) q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(filter, 250); });
+    blog.addEventListener('click', function (e) {
+      var p = e.target.closest('button[data-page]');
+      if (p && !p.disabled) { bpage = +p.getAttribute('data-page'); load(true); }
+    });
     document.addEventListener('click', function (e) {
       var b = e.target.closest('[data-cat-filter]'), r = e.target.closest('[data-blog-reset]');
       if (b) { cat = b.getAttribute('data-cat-filter'); filter(); }

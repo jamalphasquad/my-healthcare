@@ -43,6 +43,9 @@ node tools/deploy.mjs
 - `_headers`: caching and security headers.
 - `_routes.json`: limits the redirect function to pages, so static files don't invoke it.
 - `functions/_middleware.js`: 301-redirects `www.healthcaredirectory.my` and `healthcaredirectory.pages.dev` to the bare domain, and marks preview deployments `noindex`.
+- `functions/api/articles.js`: `/api/articles?q=&cat=&page=`, the blog's search and topic filters. It filters every article on the server and returns one page of 12 cards, read from `functions/api/articles-data.json` (written by the build). The blog itself is static pages: `/articles/`, `/articles/page/2/` and so on.
+
+`python -m http.server` doesn't run Functions, so blog search falls back to the cards on the current page. To run the site with Functions locally, use `wrangler pages dev . --port 8788`.
 
 After a deploy, tell Bing, Yandex, Naver and Seznam about new or changed pages through IndexNow (the build writes the key file):
 

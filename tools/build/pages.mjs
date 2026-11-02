@@ -1,7 +1,9 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { SEO } from './seo.mjs';
 import { nearestClinics, kmText } from './clinic-data.mjs';
-import { head, header, footer, crumbs, crumbsLd, write, img, preloadImg, esc, abs, ORG, WEBSITE, SITE, longDate, shortDate } from './lib.mjs';
+import { head, header, footer, crumbs, crumbsLd, write, OUT, img, preloadImg, esc, abs, ORG, WEBSITE, SITE, longDate, shortDate } from './lib.mjs';
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const SCHEMA_DAYS = DAYS.map((d) => 'https://schema.org/' + d);
@@ -128,6 +130,18 @@ export function pagedList(name, clinics, key) {
   return ` data-src="/assets/cards/${name}.json?v=${createHash('sha1').update(json).digest('hex').slice(0, 10)}" data-page-size="${PAGE_SIZE}"`;
 }
 export const pager = (clinics) => (clinics.length > PAGE_SIZE ? '<nav class="pager" aria-label="Clinic result pages" hidden></nav>\n' : '');
+// Page numbers for a pager: 1 … 4 5 6 … 12, with 0 for a gap (a gap of a single page shows the number). site.js uses the same rule.
+export function pageNums(page, pages) {
+  const keep = [];
+  for (let i = 1; i <= pages; i++) if (i === 1 || i === pages || Math.abs(i - page) <= 1) keep.push(i);
+  const nums = [];
+  keep.forEach((n, j) => {
+    const prev = keep[j - 1];
+    if (prev && n - prev === 2) nums.push(prev + 1); else if (prev && n - prev > 2) nums.push(0);
+    nums.push(n);
+  });
+  return nums;
+}
 // The tools above a clinic list: sort by distance (shown by site.js when location is available) and open now.
 export const listTools = () => `<div class="dir-tools"><button type="button" class="chip near-btn" data-near-me hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>Near me</button>
 <label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label></div>`;
@@ -508,21 +522,45 @@ ${guideLinks(articles, c.serviceKeys.includes('aesthetic'), panelGuides(c)).map(
 }
 
 /* --------------------------- ARTICLES INDEX --------------------------- */
+// The blog lists POSTS_PER_PAGE articles per page: /articles/, then /articles/page/2/ and on.
+// Search and topic filters run on the server: functions/api/articles.js filters every article
+// and returns one page of pre-rendered cards, from the data file written below.
+export const POSTS_PER_PAGE = 12;
+const blogPath = (n) => (n === 1 ? '/articles/' : `/articles/page/${n}/`);
+function blogPager(n, pages) {
+  if (pages < 2) return '<nav class="pager" aria-label="Article pages" hidden></nav>';
+  const link = (k, label, extra = '') => `<a class="chip" href="${blogPath(k)}"${extra}>${label}</a>`;
+  return `<nav class="pager" aria-label="Article pages">
+${n > 1 ? link(n - 1, '&larr; Prev', ' rel="prev" aria-label="Previous page"') : '<span class="chip" aria-disabled="true">&larr; Prev</span>'}
+${pageNums(n, pages).map((k) => (k ? link(k, k, ` aria-label="Page ${k}"${k === n ? ' aria-current="page"' : ''}`) : '<span class="pager__gap" aria-hidden="true">&hellip;</span>')).join('\n')}
+${n < pages ? link(n + 1, 'Next &rarr;', ' rel="next" aria-label="Next page"') : '<span class="chip" aria-disabled="true">Next &rarr;</span>'}
+</nav>`;
+}
+
 export function articlesIndex({ articles, topics, featuredSlug }) {
-  const items = [['/', 'Home'], ['/articles/', 'Health articles']];
   const featured = articles.find((a) => a.slug === featuredSlug);
   const list = articles.filter((a) => a !== featured);
+  const pages = Math.max(1, Math.ceil(list.length / POSTS_PER_PAGE));
   const cats = [...new Map(articles.map((a) => [a.cat, a.catLabel])).entries()];
-  const ld = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Blog', '@id': abs('/articles/#blog'), name: `${SITE.name} Health Articles`, url: abs('/articles/'), inLanguage: SITE.lang, publisher: { '@id': SITE.url + '/#org' },
-      blogPost: articles.map((a) => ({ '@type': 'BlogPosting', headline: a.title, url: abs(`/articles/${a.slug}/`), datePublished: a.published, dateModified: a.modified, image: abs(`/assets/img/${a.image}-og.jpg`) })) },
-    crumbsLd(items), ORG, WEBSITE] };
-  const html = head({
-    path: '/articles/',
-    title: SEO.articles[0],
-    desc: SEO.articles[1],
-    image: featured.image, imageAlt: featured.imageAlt, ld,
-  }) + header('articles') + `
+  // data for the search API; q is the text a search matches (what the card shows)
+  write('functions/api/articles-data.json', JSON.stringify(articles.map((a) => ({
+    cat: a.cat, q: [a.catLabel, `${a.mins} min read`, a.title, a.excerpt, shortDate(a.modified)].join(' ').toLowerCase(), html: postCard(a, { date: true }),
+  }))));
+  // drop pages left over from a longer list
+  fs.rmSync(path.join(OUT, 'articles/page'), { recursive: true, force: true });
+  for (let n = 1; n <= pages; n++) {
+    const posts = list.slice((n - 1) * POSTS_PER_PAGE, n * POSTS_PER_PAGE);
+    const items = [['/', 'Home'], ['/articles/', 'Health articles'], ...(n > 1 ? [[blogPath(n), `Page ${n}`]] : [])];
+    const ld = { '@context': 'https://schema.org', '@graph': [
+      { '@type': 'Blog', '@id': abs('/articles/#blog'), name: `${SITE.name} Health Articles`, url: abs('/articles/'), inLanguage: SITE.lang, publisher: { '@id': SITE.url + '/#org' },
+        blogPost: (n === 1 ? [featured, ...posts] : posts).map((a) => ({ '@type': 'BlogPosting', headline: a.title, url: abs(`/articles/${a.slug}/`), datePublished: a.published, dateModified: a.modified, image: abs(`/assets/img/${a.image}-og.jpg`) })) },
+      crumbsLd(items), ORG, WEBSITE] };
+    const html = head({
+      path: blogPath(n),
+      title: n === 1 ? SEO.articles[0] : `Health Articles, Page ${n} | ${SITE.name}`,
+      desc: n === 1 ? SEO.articles[1] : `Page ${n} of ${pages}. ${SEO.articles[1]}`,
+      image: featured.image, imageAlt: featured.imageAlt, ld,
+    }) + header('articles') + `
 <section class="wrap blog-head" aria-labelledby="blog-h">
 ${crumbs(items)}
 <div class="blog-head__grid">
@@ -537,7 +575,7 @@ ${crumbs(items)}
 ${cats.map(([k, l]) => `<button type="button" class="chip" id="topic-${k}" data-cat-filter="${k}" aria-pressed="false">${esc(l)}</button>`).join('\n')}
 </div>
 </section>
-
+${n === 1 ? `
 <section class="wrap" aria-label="Featured article" data-featured style="padding-bottom:56px">
 <a class="featured" href="/articles/${featured.slug}/">
 ${img(featured.image, featured.imageAlt, { sizes: '(max-width: 960px) 100vw, 600px', eager: true })}
@@ -549,16 +587,17 @@ ${img(featured.image, featured.imageAlt, { sizes: '(max-width: 960px) 100vw, 600
 </div>
 </a>
 </section>
-
-<section class="wrap" data-blog aria-labelledby="latest-h" style="padding-bottom:72px">
+` : ''}
+<section class="wrap" data-blog data-api="/api/articles" data-page-size="${POSTS_PER_PAGE}" aria-labelledby="latest-h" style="padding-bottom:72px;scroll-margin-top:90px">
 <div class="section-head" style="align-items:baseline;margin-bottom:24px">
-<h2 id="latest-h" style="font-size:32px">Latest articles</h2>
-<span class="js-count" aria-live="polite" style="font-size:14px;color:var(--muted-2)">${list.length} articles</span>
+<h2 id="latest-h" style="font-size:32px">${n === 1 ? 'Latest articles' : 'More articles'}</h2>
+<span class="js-count" aria-live="polite" style="font-size:14px;color:var(--muted-2)">${articles.length} articles${pages > 1 ? ` &middot; page ${n} of ${pages}` : ''}</span>
 </div>
 <div class="post-grid">
-${[featured, ...list].map((a, i) => (i === 0 ? postCard(a, { date: true }).replace('<article class="post"', '<article class="post" data-is-featured') : postCard(a, { date: true }))).join('\n')}
+${posts.map((a) => postCard(a, { date: true })).join('\n')}
 </div>
 <div class="empty" hidden><p>No articles match that search yet.</p><button type="button" class="btn" data-blog-reset>Show all articles</button></div>
+${blogPager(n, pages)}
 </section>
 
 <section class="band" aria-labelledby="cal-h"><div class="wrap section stack" style="gap:28px">
@@ -573,8 +612,8 @@ ${[featured, ...list].map((a, i) => (i === 0 ? postCard(a, { date: true }).repla
 
 ${newsletter('New articles, screening reminders and clinic updates. No spam.').replace('class="wrap nl"', 'class="wrap nl" style="padding-top:72px"')}
 ` + footer(topics);
-  // the featured article is shown in the grid only when filtering
-  write('articles/index.html', html.replace('<article class="post" data-is-featured', '<article class="post" data-is-featured hidden'));
+    write(blogPath(n).slice(1) + 'index.html', html);
+  }
 }
 
 /* --------------------------- ARTICLE PAGE --------------------------- */
