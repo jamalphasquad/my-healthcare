@@ -315,7 +315,7 @@ ${figure('doctor-consultation', 'A doctor talking with a patient in a consultati
       ['American College of Rheumatology — Gout (Feb 2025)', 'https://rheumatology.org/patients/gout'],
       ['American College of Rheumatology — Calcium pyrophosphate deposition (Feb 2025)', 'https://rheumatology.org/patients/calcium-pyrophosphate-deposition-cppd'],
     ],
-    related: ['check-blood-pressure-at-home', 'weight-loss-injections-malaysia', 'world-diabetes-day-2026-kl'],
+    related: ['blood-test-results-explained-malaysia', 'check-blood-pressure-at-home', 'weight-loss-injections-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -376,7 +376,7 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
 <li><strong>Heat rash</strong> comes from blocked sweat glands. Keep cool, wear loose cotton clothes, and avoid heavy creams. Calamine lotion can soothe it. It usually clears within a few days.</li>
 <li><strong>Scabies</strong> is caused by tiny mites and spreads by close skin contact. It needs a prescription treatment, and <strong>everyone in the household</strong> should be treated at the same time, even without symptoms. Itching can continue for 2 to 4 weeks after successful treatment. See our full guide to <a href="/articles/scabies-kudis-buta-malaysia/">scabies (kudis buta)</a>.</li>
 <li><strong>Ringworm (kurap)</strong> is a fungal infection, treated with antifungal cream. Steroid creams can make it worse.</li>
-<li><strong>Pityriasis versicolor (panau)</strong> is a harmless yeast overgrowth that isn’t contagious, but often comes back in hot, humid weather. Antifungal shampoos and creams help.</li>
+<li><strong>Pityriasis versicolor (panau)</strong> is a harmless yeast overgrowth that isn’t contagious, but often comes back in hot, humid weather. Antifungal shampoos and creams help. See our guide to <a href="/articles/kurap-panau-fungal-skin-infection-malaysia/">kurap, panau and fungal skin infections</a>.</li>
 </ul>
 <p>Itch powders (bedak gatal) may feel soothing, but there is little evidence that they treat any of these conditions.</p>` },
       { id: 'doctor', h: 'When to see a doctor', html: `<ul>
@@ -414,6 +414,6 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['The Star — Health Ministry bans cosmetic products containing scheduled poisons (2 Apr 2026)', 'https://www.thestar.com.my/news/nation/2026/04/02/health-ministry-bans-cosmetic-products-containing-scheduled-poisons'],
       ['Mothership — HSA warns of potent steroid in “zero-steroid” eczema cream (23 Jul 2026)', 'https://mothership.sg/2026/07/hsa-warning-products/'],
     ],
-    related: ['scabies-kudis-buta-malaysia', 'psoriasis-malaysia', 'acne-malaysia'],
+    related: ['scabies-kudis-buta-malaysia', 'kurap-panau-fungal-skin-infection-malaysia', 'psoriasis-malaysia'],
   },
 ];

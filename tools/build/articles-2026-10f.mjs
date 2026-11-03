@@ -338,7 +338,7 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
       ['World Health Organization — Dengue and severe dengue (Aug 2025)', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
       ['Malaysia National Cancer Registry Report 2017–2021 (summary)', 'https://nci.moh.gov.my/images/pdf/SUMMARY-OF-MALAYSIA-NATIONAL-CANCER-REGISTRY-REPORT-2017-2021.pdf'],
     ],
-    related: ['appendicitis-malaysia', 'clinic-or-emergency-department', 'dengue-klang-valley-first-three-days'],
+    related: ['food-poisoning-gastroenteritis-malaysia', 'appendicitis-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -544,7 +544,7 @@ ${figure('facial-treatment', 'A doctor examining facial skin in a clinic', 'A do
       ['NPRA — Press release on cancelled cosmetic products (Nov 2025)', 'https://www.npra.gov.my/easyarticles/images/shared/Press%20Release/Press-release-Nov-2025.pdf'],
       ['The Star — Health Ministry bans cosmetic products containing scheduled poisons (2 Apr 2026)', 'https://www.thestar.com.my/news/nation/2026/04/02/health-ministry-bans-cosmetic-products-containing-scheduled-poisons'],
     ],
-    related: ['itchy-skin-eczema-hives-malaysia', 'pico-laser-melasma-malaysia', 'skin-boosters-malaysia'],
+    related: ['pcos-malaysia', 'itchy-skin-eczema-hives-malaysia', 'pico-laser-melasma-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

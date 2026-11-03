@@ -30,7 +30,7 @@ export const OCT_2026_D = [
 <p>Check river levels on the Department of Irrigation and Drainage’s <a href="https://publicinfobanjir.water.gov.my/" target="_blank" rel="noopener">Public Infobanjir</a> site, and follow MetMalaysia’s weather warnings.</p>` },
       { id: 'illnesses', h: 'Illnesses to watch for during and after floods', tocLabel: 'Flood illnesses', html: `<p>The Ministry of Health and the National Security Council list these as the main flood-related diseases:</p>
 <ul>
-<li><strong>Diarrhoea and food poisoning</strong>, including dysentery and, rarely, cholera</li>
+<li><strong>Diarrhoea and food poisoning</strong>, including dysentery and, rarely, cholera. See our guide to <a href="/articles/food-poisoning-gastroenteritis-malaysia/">food poisoning and rehydration</a>.</li>
 <li><strong>Hepatitis A and E</strong>, from contaminated water and food</li>
 <li><strong>Leptospirosis</strong>, from water or mud contaminated with animal urine</li>
 <li><strong>Chest infections</strong> and flu, which spread easily in crowded relief centres</li>
@@ -346,7 +346,7 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
       ['NHS — Ibuprofen for children (reviewed Aug 2026)', 'https://www.nhs.uk/medicines/ibuprofen-for-children/'],
       ['Ministry of Health — Home care advice for dengue patients', 'https://www2.moh.gov.my/moh/resources/Borang/Denggi/HOME_CARD_ADVICE_FOR_DENGUE_PATIENTS.pdf'],
     ],
-    related: ['influenza-a-malaysia', 'fomema-medical-check-up', 'clinic-or-emergency-department'],
+    related: ['pneumonia-pneumococcal-vaccine-malaysia', 'influenza-a-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -477,7 +477,7 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu usual
       ['NHS — Flu (reviewed Feb 2026)', 'https://www.nhs.uk/conditions/flu/'],
       ['WHO — Recommended composition of influenza vaccines for the 2026 southern hemisphere season (26 Sep 2025)', 'https://www.who.int/news/item/26-09-2025-recommendations-announced-for-influenza-vaccine-composition-for-the-2026-southern-hemisphere-influenza-season'],
     ],
-    related: ['rsv-malaysia', 'flu-vaccine-malaysia', 'tonsillitis-sore-throat-malaysia'],
+    related: ['pneumonia-pneumococcal-vaccine-malaysia', 'rsv-malaysia', 'flu-vaccine-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -689,6 +689,6 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'Scre
       ['Berita RTM — 57,910 students identified as thalassaemia carriers (23 Feb 2026)', 'https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/57910-murid-dikesan-pembawa-talasemia/'],
       ['MyGOV — Premarital HIV screening (updated Aug 2026)', 'https://www.malaysia.gov.my/my/topics/ujian-saringan-hiv-praperkahwinan'],
     ],
-    related: ['pregnancy-due-date-calculator-malaysia', 'budget-2027-health-malaysia', 'free-health-screening-malaysia'],
+    related: ['blood-test-results-explained-malaysia', 'pregnancy-due-date-calculator-malaysia', 'free-health-screening-malaysia'],
   },
 ];

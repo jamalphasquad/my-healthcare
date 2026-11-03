@@ -103,7 +103,7 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
       ['CodeBlue — NHMS 2023: over half of Malaysian adults overweight or obese (May 2024)', 'https://codeblue.galencentre.org/2024/05/nhms-2023-over-half-of-malaysian-adults-overweight-or-obese/'],
       ['NHS — BMI calculator and what BMI means', 'https://www.nhs.uk/health-assessment-tools/calculate-your-body-mass-index/calculate-bmi-for-adults'],
     ],
-    related: ['weight-loss-injections-malaysia', 'normal-blood-sugar-level-malaysia', 'blood-pressure-cholesterol-malaysia'],
+    related: ['weight-loss-injections-malaysia', 'normal-blood-sugar-level-malaysia', 'thyroid-hyperthyroidism-hypothyroidism-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -281,7 +281,7 @@ ${figure('fresh-vegetables', 'Fresh broccoli, tomatoes, cucumber and red peppers
       ['World Health Organization — Typhoid fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/typhoid'],
       ['US CDC — Typhoid vaccine information statement', 'https://www.cdc.gov/vaccines/hcp/current-vis/typhoid.html'],
     ],
-    related: ['clinic-or-emergency-department', 'floods-health-risks-malaysia', 'fomema-medical-check-up'],
+    related: ['food-poisoning-gastroenteritis-malaysia', 'floods-health-risks-malaysia', 'fomema-medical-check-up'],
   },
 
   /* ------------------------------------------------------------------ */
