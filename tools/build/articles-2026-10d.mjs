@@ -220,7 +220,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most childre
       ['US CDC — Measles signs and symptoms (Aug 2026)', 'https://www.cdc.gov/measles/signs-symptoms/index.html'],
       ['Cleveland Clinic — Calamine lotion', 'https://my.clevelandclinic.org/health/drugs/23338-calamine-lotion'],
     ],
-    related: ['chickenpox-malaysia', 'baby-vaccination-schedule-malaysia', 'rsv-malaysia'],
+    related: ['fever-in-children-malaysia', 'chickenpox-malaysia', 'rsv-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

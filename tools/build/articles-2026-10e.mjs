@@ -315,7 +315,7 @@ ${figure('doctor-consultation', 'A doctor talking with a patient in a consultati
       ['American College of Rheumatology — Gout (Feb 2025)', 'https://rheumatology.org/patients/gout'],
       ['American College of Rheumatology — Calcium pyrophosphate deposition (Feb 2025)', 'https://rheumatology.org/patients/calcium-pyrophosphate-deposition-cppd'],
     ],
-    related: ['blood-test-results-explained-malaysia', 'check-blood-pressure-at-home', 'weight-loss-injections-malaysia'],
+    related: ['kidney-stones-batu-karang-malaysia', 'blood-test-results-explained-malaysia', 'check-blood-pressure-at-home'],
   },
 
   /* ------------------------------------------------------------------ */

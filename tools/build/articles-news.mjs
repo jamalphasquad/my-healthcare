@@ -87,7 +87,7 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
       ['New Straits Times — 73 heat-related illness cases, four deaths (7 Jul 2026)', 'https://www.nst.com.my/amp/news/nation/2026/07/1482825/health-ministry-records-73-heat-related-illness-cases-four-deaths-jan-1'],
       ['Department of Environment — APIMS', 'https://eqms.doe.gov.my/APIMS/main'],
     ],
-    related: ['persistent-cough-malaysia', 'influenza-a-malaysia', 'floods-health-risks-malaysia'],
+    related: ['conjunctivitis-red-eyes-malaysia', 'persistent-cough-malaysia', 'influenza-a-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -155,7 +155,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       ['CodeBlue — No plans yet for dengue vaccine in national programme (Jul 2025)', 'https://codeblue.galencentre.org/2025/07/no-plans-yet-for-dengue-vaccine-in-national-programme-wolbachia-expansion-in-focus/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['floods-health-risks-malaysia', 'dengue-vaccine-qdenga-malaysia', 'clinic-or-emergency-department'],
+    related: ['fever-in-children-malaysia', 'dengue-vaccine-qdenga-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -212,7 +212,7 @@ ${figure('mammogram-machine', 'A mammography machine in a clinic room', 'A mammo
       ['PERKESO SEHATi — Health screening programme', 'https://sehati.ladesk.com/'],
       ['Media Selangor — Selangor Saring (Jul 2026)', 'https://mediaselangor.com/en/2026/07/382862'],
     ],
-    related: ['pap-smear-hpv-test-malaysia', 'undiagnosed-diabetes-high-blood-pressure-young-adults', 'check-blood-pressure-at-home'],
+    related: ['pap-smear-hpv-test-malaysia', 'contraception-malaysia', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
   },
 
   /* ------------------------------------------------------------------ */

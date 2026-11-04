@@ -133,7 +133,7 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['New Straits Times — 47,000 couples to benefit from fertility assistance programme (May 2026)', 'https://www.nst.com.my/amp/news/nation/2026/05/1436584/47000-couples-benefit-fertility-assistance-programme'],
       ['The Star — Govt stepping up efforts to address rising fertility problems (Nov 2025)', 'https://www.thestar.com.my/news/nation/2025/11/25/govt-stepping-up-efforts-to-address-rising-fertility-problems-among-malaysians'],
     ],
-    related: ['bmi-calculator-malaysia', 'normal-blood-sugar-level-malaysia', 'acne-malaysia'],
+    related: ['period-pain-senggugut-malaysia', 'contraception-malaysia', 'normal-blood-sugar-level-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -847,6 +847,6 @@ ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a 
       ['Asia News Network / The Star — Malaysia faces uphill battle as infections may get harder to cure (May 2025)', 'https://asianews.network/malaysia-faces-uphill-battle-as-infections-may-get-harder-to-cure/'],
       ['Galen Centre — Tackling benign prostate hyperplasia among Malaysian men (Nov 2023)', 'https://ova.galencentre.org/tackling-benign-prostate-hyperplasia-an-unseen-challenge-among-malaysian-men/'],
     ],
-    related: ['pap-smear-hpv-test-malaysia', 'syphilis-sti-testing-malaysia', 'clinic-or-emergency-department'],
+    related: ['kidney-stones-batu-karang-malaysia', 'pap-smear-hpv-test-malaysia', 'syphilis-sti-testing-malaysia'],
   },
 ];

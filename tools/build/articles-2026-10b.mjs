@@ -287,7 +287,7 @@ ${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'The vac
       ['European Medicines Agency — Gardasil 9 product information', 'https://www.ema.europa.eu/en/medicines/human/EPAR/gardasil-9'],
       ['Cochrane Malaysia — New research confirms HPV vaccination prevents cervical cancer', 'https://malaysia.cochrane.org/news/penyelidikan-baru-mengesahkan-vaksinasi-hpv-mencegah-kanser-serviks'],
     ],
-    related: ['pap-smear-hpv-test-malaysia', 'baby-vaccination-schedule-malaysia', 'hiv-malaysia'],
+    related: ['pap-smear-hpv-test-malaysia', 'warts-ketuat-malaysia', 'baby-vaccination-schedule-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
