@@ -130,7 +130,7 @@ export const NOV_2026_D = [
       ['Galen Centre — Why are unmarried women having difficulty accessing contraceptives? (Mar 2023)', 'https://ova.galencentre.org/why-are-unmarried-women-having-difficulty-accessing-contraceptives-when-moh-has-no-policy-against-it/'],
       ['FRHAM — State member associations', 'https://www.frham.org.my/state-member-associations/'],
     ],
-    related: ['pcos-malaysia', 'period-pain-senggugut-malaysia', 'syphilis-sti-testing-malaysia'],
+    related: ['pregnancy-test-early-signs-malaysia', 'pcos-malaysia', 'period-pain-senggugut-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -556,7 +556,7 @@ ${figure('treatment-room', 'A clean, white clinic treatment room with an examina
       ['American Academy of Dermatology — Warts: diagnosis and treatment (May 2025)', 'https://www.aad.org/public/diseases/a-z/warts-treatment'],
       ['Cochrane — Topical treatments for skin warts (2012)', 'https://www.cochrane.org/CD001781/SKIN_topical-treatments-for-skin-warts'],
     ],
-    related: ['kurap-panau-fungal-skin-infection-malaysia', 'hpv-vaccine-malaysia', 'boils-styes-bisul-ketumbit-malaysia'],
+    related: ['skin-tags-keloids-lipomas-moles-malaysia', 'kurap-panau-fungal-skin-infection-malaysia', 'hpv-vaccine-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

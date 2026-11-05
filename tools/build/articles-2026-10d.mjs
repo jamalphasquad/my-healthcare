@@ -689,6 +689,6 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'Scre
       ['Berita RTM — 57,910 students identified as thalassaemia carriers (23 Feb 2026)', 'https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/57910-murid-dikesan-pembawa-talasemia/'],
       ['MyGOV — Premarital HIV screening (updated Aug 2026)', 'https://www.malaysia.gov.my/my/topics/ujian-saringan-hiv-praperkahwinan'],
     ],
-    related: ['blood-test-results-explained-malaysia', 'pregnancy-due-date-calculator-malaysia', 'free-health-screening-malaysia'],
+    related: ['g6pd-deficiency-malaysia', 'blood-test-results-explained-malaysia', 'pregnancy-due-date-calculator-malaysia'],
   },
 ];

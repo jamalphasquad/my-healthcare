@@ -87,7 +87,7 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
       ['New Straits Times — 73 heat-related illness cases, four deaths (7 Jul 2026)', 'https://www.nst.com.my/amp/news/nation/2026/07/1482825/health-ministry-records-73-heat-related-illness-cases-four-deaths-jan-1'],
       ['Department of Environment — APIMS', 'https://eqms.doe.gov.my/APIMS/main'],
     ],
-    related: ['conjunctivitis-red-eyes-malaysia', 'persistent-cough-malaysia', 'influenza-a-malaysia'],
+    related: ['allergies-resdung-antihistamines-malaysia', 'conjunctivitis-red-eyes-malaysia', 'persistent-cough-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

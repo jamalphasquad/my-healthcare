@@ -124,7 +124,7 @@ ${figure('nurse-stethoscope', 'A doctor holding a stethoscope', 'Regular antenat
       ['Department of Statistics Malaysia — Maternal deaths (open data)', 'https://storage.dosm.gov.my/demography/death_maternal.csv'],
       ['Skrine — Employment (Amendment) Act 2022 comes into force', 'https://www.skrine.com/insights/alerts/december-2022/employment-amendment-act-2022-comes-into-force-on'],
     ],
-    related: ['baby-vaccination-schedule-malaysia', 'thalassaemia-screening-malaysia', 'flu-vaccine-malaysia'],
+    related: ['pregnancy-test-early-signs-malaysia', 'baby-vaccination-schedule-malaysia', 'thalassaemia-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -414,6 +414,6 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['The Star — Health Ministry bans cosmetic products containing scheduled poisons (2 Apr 2026)', 'https://www.thestar.com.my/news/nation/2026/04/02/health-ministry-bans-cosmetic-products-containing-scheduled-poisons'],
       ['Mothership — HSA warns of potent steroid in “zero-steroid” eczema cream (23 Jul 2026)', 'https://mothership.sg/2026/07/hsa-warning-products/'],
     ],
-    related: ['scabies-kudis-buta-malaysia', 'kurap-panau-fungal-skin-infection-malaysia', 'psoriasis-malaysia'],
+    related: ['semut-charlie-paederus-dermatitis-malaysia', 'allergies-resdung-antihistamines-malaysia', 'scabies-kudis-buta-malaysia'],
   },
 ];

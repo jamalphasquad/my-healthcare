@@ -17,12 +17,13 @@ import { NOV_2026_A } from './articles-2026-11a.mjs';
 import { NOV_2026_B } from './articles-2026-11b.mjs';
 import { NOV_2026_C } from './articles-2026-11c.mjs';
 import { NOV_2026_D } from './articles-2026-11d.mjs';
+import { NOV_2026_E } from './articles-2026-11e.mjs';
 import { SEO } from './seo.mjs';
 import { GBP } from './gbp.mjs';
 import { buildIndex, searchPage } from './search.mjs';
 import { buildCollections } from './collections.mjs';
 
-const ARTICLES = [...NOV_2026_D, ...NOV_2026_C, ...NOV_2026_B, ...NOV_2026_A, ...OCT_2026_G, ...OCT_2026_F, ...OCT_2026_E, ...OCT_2026_D, ...OCT_2026_C, ...OCT_2026_B, ...OCT_2026, ...NEWS, ...GUIDES]; // newest first
+const ARTICLES = [...NOV_2026_E, ...NOV_2026_D, ...NOV_2026_C, ...NOV_2026_B, ...NOV_2026_A, ...OCT_2026_G, ...OCT_2026_F, ...OCT_2026_E, ...OCT_2026_D, ...OCT_2026_C, ...OCT_2026_B, ...OCT_2026, ...NEWS, ...GUIDES]; // newest first
 // Footer topic links, kept to categories that have at least one article.
 const TOPICS = [['prevention', 'Prevention'], ['heart-diabetes', 'Heart & diabetes'], ['weight', 'Weight & metabolism'], ['aesthetics', 'Aesthetics & skin'], ['womens-health', "Women's health"], ['mental-wellbeing', 'Mental wellbeing'], ['guides', 'Guides'], ['clinic-guides', 'Clinic guides']]
   .filter(([cat]) => ARTICLES.some((a) => a.cat === cat));
