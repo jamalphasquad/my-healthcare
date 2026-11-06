@@ -245,7 +245,7 @@ ${figure('medications', 'Blister packs of tablets', 'Anti-inflammatory painkille
       ['NHS — Vaginal discharge (Feb 2024)', 'https://www.nhs.uk/conditions/vaginal-discharge/'],
       ['Human Resources Online — Putrajaya to study period leave before implementing (Jul 2022)', 'https://www.humanresourcesonline.net/putrajaya-has-to-look-into-feasibility-of-period-leave-policies-before-implementing-minister-siti'],
     ],
-    related: ['pcos-malaysia', 'contraception-malaysia', 'pap-smear-hpv-test-malaysia'],
+    related: ['anaemia-iron-deficiency-malaysia', 'pcos-malaysia', 'contraception-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

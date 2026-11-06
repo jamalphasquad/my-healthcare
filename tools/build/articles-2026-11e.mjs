@@ -629,7 +629,7 @@ ${figure('yoga-balance', 'A woman holding a yoga balance pose on a rock by the s
       ['Utusan Malaysia — Unlicensed bone-setting can cause paralysis (Mar 2025)', 'https://www.utusan.com.my/gaya/2025/03/guna-khidmat-bone-setting-tidak-bertauliah-boleh-sebabkan-lumpuh/'],
       ['The Star — Offering a second chance to injured workers (Apr 2026)', 'https://www.thestar.com.my/lifestyle/health/health-matters/2026/04/27/offering-a-second-chanceto-injured-workers'],
     ],
-    related: ['clinic-or-emergency-department', 'bmi-calculator-malaysia', 'medical-certificate-mc-malaysia'],
+    related: ['frozen-shoulder-pain-malaysia', 'clinic-or-emergency-department', 'medical-certificate-mc-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

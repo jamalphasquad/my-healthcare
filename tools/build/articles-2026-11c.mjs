@@ -513,7 +513,7 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
 <tr><td>Platelets</td><td>About 150–400 ×10⁹/L</td><td>Low: higher bleeding risk, for example in <a href="/articles/dengue-klang-valley-first-three-days/">dengue</a>. High: inflammation, iron deficiency</td></tr>
 </tbody></table></div>
 <p>Haemoglobin is sometimes reported in g/dL: divide g/L by 10 (so 130 g/L is 13.0 g/dL).</p>
-<p><strong>Small red cells are common in Malaysia.</strong> They can mean iron deficiency, which is treated with iron, or thalassaemia trait, which isn’t, and iron tablets don’t help. A doctor can check your iron levels and arrange a thalassaemia test. See our guide to <a href="/articles/thalassaemia-screening-malaysia/">thalassaemia screening</a>.</p>` },
+<p><strong>Small red cells are common in Malaysia.</strong> They can mean iron deficiency, which is treated with iron, or thalassaemia trait, where iron tablets don’t help unless you are also low in iron. A doctor can check your iron levels and arrange a thalassaemia test. See our guide to <a href="/articles/thalassaemia-screening-malaysia/">thalassaemia screening</a>.</p>` },
       { id: 'crp-esr', h: 'CRP and ESR: inflammation markers', tocLabel: 'CRP and ESR', html: `<ul>
 <li><strong>CRP (C-reactive protein)</strong> is made by the liver when there is inflammation or infection, and rises within hours. A normal result is usually below about 5 to 10 mg/L, depending on the lab. Very high levels often point to a bacterial infection.</li>
 <li><strong>ESR (erythrocyte sedimentation rate)</strong> measures how fast red cells settle in a tube in an hour. It rises more slowly than CRP and is naturally higher in women, older people, pregnancy and anaemia. Typical upper limits are around 15 to 20 mm/hr for men and 20 to 30 mm/hr for women, depending on age.</li>
@@ -616,7 +616,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Fast
       ['NHS — Chronic kidney disease: diagnosis', 'https://www.nhs.uk/conditions/kidney-disease/diagnosis/'],
       ['NHS — Blood tests', 'https://www.nhs.uk/tests-and-treatments/blood-tests/'],
     ],
-    related: ['free-health-screening-malaysia', 'normal-blood-sugar-level-malaysia', 'peka-b40-malaysia'],
+    related: ['anaemia-iron-deficiency-malaysia', 'free-health-screening-malaysia', 'normal-blood-sugar-level-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -818,7 +818,7 @@ ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a 
 <li>For frequent infections, a doctor may suggest a non-antibiotic preventive medicine (methenamine), a low-dose antibiotic at night for several months, or a single dose after sex, and may check for an underlying cause with a scan.</li>
 </ul>` },
       { id: 'men', h: 'UTIs in men, and “kencing tak lawas”', tocLabel: 'In men', html: `<p>UTIs are less common in men and are always worth checking, as they can involve the prostate or point to a problem with bladder emptying.</p>
-<p><strong>Kencing tak lawas</strong>, the feeling that the bladder hasn’t emptied fully, with a weak stream, dribbling and getting up at night to pass urine, is often due to an <strong>enlarged prostate</strong> (benign prostatic hyperplasia) rather than infection. About 1 in 6 Malaysian men aged 40 and over has it, rising to 1 in 3 at 75 and over. It can be treated, so see a doctor. <strong>Being unable to pass urine at all is an emergency.</strong></p>` },
+<p><strong>Kencing tak lawas</strong>, the feeling that the bladder hasn’t emptied fully, with a weak stream, dribbling and getting up at night to pass urine, is often due to an <strong>enlarged prostate</strong> (benign prostatic hyperplasia) rather than infection. About 1 in 6 Malaysian men aged 40 and over has it, rising to 1 in 3 at 75 and over. See our guide to the <a href="/articles/enlarged-prostate-psa-test-malaysia/">enlarged prostate and PSA test</a>. It can be treated, so see a doctor. <strong>Being unable to pass urine at all is an emergency.</strong></p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get a UTI treated',
@@ -847,6 +847,6 @@ ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a 
       ['Asia News Network / The Star — Malaysia faces uphill battle as infections may get harder to cure (May 2025)', 'https://asianews.network/malaysia-faces-uphill-battle-as-infections-may-get-harder-to-cure/'],
       ['Galen Centre — Tackling benign prostate hyperplasia among Malaysian men (Nov 2023)', 'https://ova.galencentre.org/tackling-benign-prostate-hyperplasia-an-unseen-challenge-among-malaysian-men/'],
     ],
-    related: ['kidney-stones-batu-karang-malaysia', 'pap-smear-hpv-test-malaysia', 'syphilis-sti-testing-malaysia'],
+    related: ['enlarged-prostate-psa-test-malaysia', 'kidney-stones-batu-karang-malaysia', 'pap-smear-hpv-test-malaysia'],
   },
 ];

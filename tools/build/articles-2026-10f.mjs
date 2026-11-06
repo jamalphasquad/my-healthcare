@@ -767,7 +767,7 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['Chaddha et al. — Device and non-device-guided slow breathing to reduce blood pressure (2019)', 'https://pubmed.ncbi.nlm.nih.gov/31331557/'],
       ['American College of Cardiology — SAMSON trial summary (Nov 2020)', 'https://www.acc.org/Latest-in-Cardiology/Articles/2020/11/12/20/28/sun-1028am-SAMSON-aha-2020'],
     ],
-    related: ['check-blood-pressure-at-home', 'stroke-heart-attack-kuala-lumpur', 'undiagnosed-diabetes-high-blood-pressure-young-adults'],
+    related: ['low-blood-pressure-darah-rendah-malaysia', 'check-blood-pressure-at-home', 'stroke-heart-attack-kuala-lumpur'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -866,6 +866,6 @@ ${figure('physio-weights', 'Small exercise weights on a mat', 'Balance exercises
       ['Ministry of Health — Poisons List, First Schedule, Poisons Act 1952', 'https://pharmacy.moh.gov.my/sites/default/files/document-upload/poisons-list_1.pdf'],
       ['NHS — Stroke: causes', 'https://www.nhs.uk/conditions/stroke/causes/'],
     ],
-    related: ['stroke-heart-attack-kuala-lumpur', 'headaches-malaysia', 'blood-pressure-cholesterol-malaysia'],
+    related: ['low-blood-pressure-darah-rendah-malaysia', 'stroke-heart-attack-kuala-lumpur', 'headaches-malaysia'],
   },
 ];

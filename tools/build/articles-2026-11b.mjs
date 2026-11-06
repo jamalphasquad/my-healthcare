@@ -135,7 +135,7 @@ ${figure('fresh-vegetables', 'Fresh broccoli, tomatoes, cucumber and red peppers
       ['NPRA — Product registration FAQ', 'https://npra.gov.my/index.php/en/component/content/article/37-faq/623-product-registration'],
       ['Poskus et al. — Perianal diseases in pregnancy and after childbirth (BJOG, 2014)', 'https://pubmed.ncbi.nlm.nih.gov/24810254/'],
     ],
-    related: ['bowel-cancer-screening-malaysia', 'stomach-pain-gastric-malaysia', 'clinic-or-emergency-department'],
+    related: ['constipation-sembelit-malaysia', 'bowel-cancer-screening-malaysia', 'stomach-pain-gastric-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

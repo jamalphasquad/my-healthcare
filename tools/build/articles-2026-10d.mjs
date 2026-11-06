@@ -220,7 +220,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most childre
       ['US CDC — Measles signs and symptoms (Aug 2026)', 'https://www.cdc.gov/measles/signs-symptoms/index.html'],
       ['Cleveland Clinic — Calamine lotion', 'https://my.clevelandclinic.org/health/drugs/23338-calamine-lotion'],
     ],
-    related: ['fever-in-children-malaysia', 'chickenpox-malaysia', 'rsv-malaysia'],
+    related: ['fever-in-children-malaysia', 'mouth-ulcers-cold-sores-malaysia', 'chickenpox-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -346,7 +346,7 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
       ['NHS — Ibuprofen for children (reviewed Aug 2026)', 'https://www.nhs.uk/medicines/ibuprofen-for-children/'],
       ['Ministry of Health — Home care advice for dengue patients', 'https://www2.moh.gov.my/moh/resources/Borang/Denggi/HOME_CARD_ADVICE_FOR_DENGUE_PATIENTS.pdf'],
     ],
-    related: ['pneumonia-pneumococcal-vaccine-malaysia', 'influenza-a-malaysia', 'clinic-or-emergency-department'],
+    related: ['tuberculosis-tb-malaysia', 'pneumonia-pneumococcal-vaccine-malaysia', 'influenza-a-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -689,6 +689,6 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'Scre
       ['Berita RTM — 57,910 students identified as thalassaemia carriers (23 Feb 2026)', 'https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/57910-murid-dikesan-pembawa-talasemia/'],
       ['MyGOV — Premarital HIV screening (updated Aug 2026)', 'https://www.malaysia.gov.my/my/topics/ujian-saringan-hiv-praperkahwinan'],
     ],
-    related: ['g6pd-deficiency-malaysia', 'blood-test-results-explained-malaysia', 'pregnancy-due-date-calculator-malaysia'],
+    related: ['anaemia-iron-deficiency-malaysia', 'g6pd-deficiency-malaysia', 'blood-test-results-explained-malaysia'],
   },
 ];

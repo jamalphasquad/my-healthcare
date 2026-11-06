@@ -243,7 +243,7 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
 <li><strong>Urine tests</strong> for drugs (including opiates and cannabis, with <strong>methamphetamine</strong> added in December 2023), pregnancy in women, and sugar and protein.</li>
 </ul>
 <p>Conditions that can make a worker <strong>unsuitable</strong> include infectious diseases such as TB (including old TB that could become active again), hepatitis B and C, HIV, syphilis, malaria, filariasis and leprosy, as well as cancer, epilepsy, serious psychiatric illness, drug use and pregnancy. Chronic conditions such as high blood pressure, diabetes, heart disease, asthma and kidney disease may also lead to an unsuitable result, or to a monitoring programme.</p>
-<p>According to FOMEMA figures cited by the Malaysian Medical Association, in 2023 the screening detected more than 6,400 cases of TB and more than 3,300 cases of hepatitis B among foreign workers, which is why the checks matter for public health. See our guide to <a href="/articles/hepatitis-b-malaysia/">hepatitis B</a>, and to a to a <a href="/articles/persistent-cough-malaysia/">cough that won’t go away</a> for the signs of TB.</p>
+<p>According to FOMEMA figures cited by the Malaysian Medical Association, in 2023 the screening detected more than 6,400 cases of TB and more than 3,300 cases of hepatitis B among foreign workers, which is why the checks matter for public health. See our guide to <a href="/articles/hepatitis-b-malaysia/">hepatitis B</a> and <a href="/articles/tuberculosis-tb-malaysia/">tuberculosis (TB)</a>.</p>
 ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tests in the FOMEMA exam include HIV, hepatitis B and C, syphilis and malaria.')}` },
       { id: 'fees', h: 'FOMEMA fees in 2026', tocLabel: 'Fees', html: `<div class="table-wrap"><table>
 <thead><tr><th></th><th>Male worker</th><th>Female worker</th></tr></thead>
@@ -314,7 +314,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tes
       ['CodeBlue — MMA on additional foreign worker medical screening (30 Jan 2024)', 'https://codeblue.galencentre.org/2024/01/additional-foreign-worker-medical-screening-necessary-to-protect-the-population-against-import-of-communicable-diseases-mma/'],
       ['EMGS — Medical screening for international students', 'https://visa.educationmalaysia.gov.my/guidelines/medical-screening'],
     ],
-    related: ['hepatitis-b-malaysia', 'typhoid-injection-food-handlers-malaysia', 'persistent-cough-malaysia'],
+    related: ['tuberculosis-tb-malaysia', 'hepatitis-b-malaysia', 'typhoid-injection-food-handlers-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
