@@ -634,7 +634,7 @@ export function articlePage(a, { articles, clinics, topics }) {
   const showClinics = a.clinicsBlock !== false && !guideClinic;
   const toc = [...a.sections.filter((s) => s.toc !== false), ...(a.clinicsBlock !== false && !a.clinic ? [{ id: 'where', h: a.clinicsTocLabel || whereHeading }] : [])];
   const graph = [
-    { '@type': a.medical ? 'MedicalWebPage' : 'WebPage', '@id': url + '#page', url, name: a.title, inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' }, lastReviewed: a.modified,
+    { '@type': a.medical ? 'MedicalWebPage' : 'WebPage', '@id': url + '#page', url, name: a.title, inLanguage: SITE.lang, isPartOf: { '@id': SITE.url + '/#website' },
       ...(a.about ? { about: { '@type': 'MedicalCondition', name: a.about[0], ...(a.about[1] ? { alternateName: a.about[1] } : {}) } } : {}),
       ...(guideClinic ? { about: { '@id': abs(`/clinics/${guideClinic.slug}/#clinic`) } } : {}),
       audience: { '@type': 'PeopleAudience', geographicArea: { '@type': 'AdministrativeArea', name: 'Kuala Lumpur, Malaysia' } },

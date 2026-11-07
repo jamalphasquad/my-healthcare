@@ -650,7 +650,7 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
   /* ------------------------------------------------------------------ */
   {
     slug: 'blood-pressure-cholesterol-malaysia',
-    title: 'High blood pressure and cholesterol: signs, normal levels, and how to lower them',
+    title: 'High blood pressure and cholesterol: signs, normal levels (tekanan darah normal), and how to lower them',
     crumb: 'Blood pressure and cholesterol',
     desc: 'Signs and causes of high blood pressure (darah tinggi), normal BP and cholesterol levels, why “lower it in 5 minutes” is a myth, and what medicines do.',
     excerpt: 'Nearly 1 in 3 Malaysian adults has high blood pressure, and 1 in 3 has high cholesterol, often without knowing. Normal levels, causes, what really lowers them and how fast, and what to know about blood pressure and cholesterol medicines.',
@@ -673,7 +673,7 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
 <li>More than 60% of adults aged 18 to 39 with diabetes, high blood pressure or high cholesterol were unaware of it.</li>
 </ul>
 <p>Ischaemic heart disease, which both conditions lead to, is Malaysia’s leading cause of death. See our article on <a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">undiagnosed conditions in young adults</a>.</p>` },
-      { id: 'bp-levels', h: 'Blood pressure levels', tocLabel: 'Blood pressure levels', html: `<p>Blood pressure is written as two numbers: the top (systolic) is the pressure when the heart beats, and the bottom (diastolic) is the pressure between beats. Malaysia’s hypertension guidelines classify it as:</p>
+      { id: 'bp-levels', h: 'Normal blood pressure levels (tekanan darah normal)', tocLabel: 'Blood pressure levels', html: `<p>Blood pressure is written as two numbers: the top (systolic) is the pressure when the heart beats, and the bottom (diastolic) is the pressure between beats. Malaysia’s hypertension guidelines classify it as:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Reading (mmHg)</th><th>Category</th></tr></thead>
 <tbody>
