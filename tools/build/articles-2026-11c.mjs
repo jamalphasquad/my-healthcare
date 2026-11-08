@@ -369,7 +369,7 @@ ${figure('fresh-vegetables', 'Fresh broccoli, tomatoes, cucumber and red peppers
       ['Cochrane — Probiotics for treating acute infectious diarrhoea (Dec 2020)', 'https://pubmed.ncbi.nlm.nih.gov/33295643/'],
       ['World Health Organization — Five keys to safer food', 'https://www.who.int/activities/promoting-safe-food-handling/five-key-to-safer-food'],
     ],
-    related: ['stomach-pain-gastric-malaysia', 'floods-health-risks-malaysia', 'typhoid-injection-food-handlers-malaysia'],
+    related: ['rotavirus-vaccine-malaysia', 'stomach-pain-gastric-malaysia', 'floods-health-risks-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

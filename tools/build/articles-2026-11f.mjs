@@ -106,7 +106,7 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
       ['Galen Centre — Recognising and treating a frozen shoulder (Jan 2025)', 'https://ova.galencentre.org/recognising-and-treating-a-frozen-shoulder/'],
       ['CodeBlue — NHMS 2023: over two million adults live with three NCDs (May 2024)', 'https://codeblue.galencentre.org/2024/05/over-two-million-adults-in-malaysia-live-with-three-ncds-nhms-2023/'],
     ],
-    related: ['slipped-disc-sciatica-malaysia', 'normal-blood-sugar-level-malaysia', 'thyroid-hyperthyroidism-hypothyroidism-malaysia'],
+    related: ['trigger-finger-carpal-tunnel-malaysia', 'slipped-disc-sciatica-malaysia', 'normal-blood-sugar-level-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -219,7 +219,7 @@ ${figure('caring-hands', 'An older person’s hands held gently by another perso
       ['The Star — Take precautions during hot weather, urges Health Ministry (25 Mar 2026)', 'https://www.thestar.com.my/news/nation/2026/03/25/take-precautions-during-hot-weather-urges-health-ministry'],
       ['Raffles Medical Group — Fasting during Ramadan: what an older person needs to know', 'https://www.rafflesmedicalgroup.com/health-resources/health-articles/fasting-during-ramadan-what-an-older-person-needs-to-know/'],
     ],
-    related: ['blood-pressure-cholesterol-malaysia', 'vertigo-dizziness-malaysia', 'check-blood-pressure-at-home'],
+    related: ['normal-heart-rate-palpitations-malaysia', 'blood-pressure-cholesterol-malaysia', 'vertigo-dizziness-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

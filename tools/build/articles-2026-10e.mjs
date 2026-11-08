@@ -124,7 +124,7 @@ ${figure('nurse-stethoscope', 'A doctor holding a stethoscope', 'Regular antenat
       ['Department of Statistics Malaysia — Maternal deaths (open data)', 'https://storage.dosm.gov.my/demography/death_maternal.csv'],
       ['Skrine — Employment (Amendment) Act 2022 comes into force', 'https://www.skrine.com/insights/alerts/december-2022/employment-amendment-act-2022-comes-into-force-on'],
     ],
-    related: ['pregnancy-test-early-signs-malaysia', 'baby-vaccination-schedule-malaysia', 'thalassaemia-screening-malaysia'],
+    related: ['gestational-diabetes-bsp-malaysia', 'pregnancy-test-early-signs-malaysia', 'baby-vaccination-schedule-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -225,7 +225,7 @@ ${figure('vaccination', 'A vaccine injection being given in the upper arm', 'Bab
       ['US CDC — DTaP vaccine information statement', 'https://www.cdc.gov/vaccines/hcp/current-vis/dtap.html'],
       ['Utusan — Child immunisation records in MySejahtera (Jul 2022)', 'https://www.utusan.com.my/nasional/2022/07/akses-rekod-imunisasi-kanak-kanak-kesihatan-di-mysejahtera/'],
     ],
-    related: ['tetanus-injection-att-malaysia', 'hepatitis-b-malaysia', 'rsv-malaysia'],
+    related: ['rotavirus-vaccine-malaysia', 'tetanus-injection-att-malaysia', 'hepatitis-b-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

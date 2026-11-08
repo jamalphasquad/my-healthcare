@@ -346,7 +346,7 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
       ['NHS — Ibuprofen for children (reviewed Aug 2026)', 'https://www.nhs.uk/medicines/ibuprofen-for-children/'],
       ['Ministry of Health — Home care advice for dengue patients', 'https://www2.moh.gov.my/moh/resources/Borang/Denggi/HOME_CARD_ADVICE_FOR_DENGUE_PATIENTS.pdf'],
     ],
-    related: ['tuberculosis-tb-malaysia', 'pneumonia-pneumococcal-vaccine-malaysia', 'influenza-a-malaysia'],
+    related: ['urti-common-cold-selsema-malaysia', 'tuberculosis-tb-malaysia', 'pneumonia-pneumococcal-vaccine-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -477,7 +477,7 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu usual
       ['NHS — Flu (reviewed Feb 2026)', 'https://www.nhs.uk/conditions/flu/'],
       ['WHO — Recommended composition of influenza vaccines for the 2026 southern hemisphere season (26 Sep 2025)', 'https://www.who.int/news/item/26-09-2025-recommendations-announced-for-influenza-vaccine-composition-for-the-2026-southern-hemisphere-influenza-season'],
     ],
-    related: ['pneumonia-pneumococcal-vaccine-malaysia', 'rsv-malaysia', 'flu-vaccine-malaysia'],
+    related: ['urti-common-cold-selsema-malaysia', 'pneumonia-pneumococcal-vaccine-malaysia', 'rsv-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

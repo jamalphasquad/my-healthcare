@@ -714,6 +714,6 @@ ${figure('medications', 'Blister packs of tablets and capsules', 'Simple painkil
       ['American Academy of Family Physicians — Clinical practice guideline: tonsillectomy in children', 'https://www.aafp.org/pubs/afp/issues/2011/0901/p566.html'],
       ['The Star — Wrong treatment of sore throats is fuelling antimicrobial resistance (Jul 2025)', 'https://www.thestar.com.my/lifestyle/health/2025/07/02/wrong-treatment-of-sore-throats-is-fuelling-antimicrobial-resistance'],
     ],
-    related: ['influenza-a-malaysia', 'persistent-cough-malaysia', 'clinic-or-emergency-department'],
+    related: ['urti-common-cold-selsema-malaysia', 'influenza-a-malaysia', 'persistent-cough-malaysia'],
   },
 ];

@@ -113,7 +113,7 @@ ${figure('mental-health', 'Letter tiles spelling “mental health” next to a s
       ['Bernama — MENTARI community mental health centres (2024)', 'https://www.bernama.com/en/news.php?id=2322914'],
       ['Befrienders Kuala Lumpur', 'https://www.befrienders.org.my/'],
     ],
-    related: ['world-mental-health-day-2026-malaysia', 'clinic-or-emergency-department', 'persistent-cough-malaysia'],
+    related: ['world-mental-health-day-2026-malaysia', 'normal-heart-rate-palpitations-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -767,7 +767,7 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['Chaddha et al. — Device and non-device-guided slow breathing to reduce blood pressure (2019)', 'https://pubmed.ncbi.nlm.nih.gov/31331557/'],
       ['American College of Cardiology — SAMSON trial summary (Nov 2020)', 'https://www.acc.org/Latest-in-Cardiology/Articles/2020/11/12/20/28/sun-1028am-SAMSON-aha-2020'],
     ],
-    related: ['low-blood-pressure-darah-rendah-malaysia', 'check-blood-pressure-at-home', 'stroke-heart-attack-kuala-lumpur'],
+    related: ['normal-heart-rate-palpitations-malaysia', 'low-blood-pressure-darah-rendah-malaysia', 'check-blood-pressure-at-home'],
   },
 
   /* ------------------------------------------------------------------ */

@@ -245,7 +245,7 @@ ${figure('medications', 'Blister packs of tablets', 'Anti-inflammatory painkille
       ['NHS — Vaginal discharge (Feb 2024)', 'https://www.nhs.uk/conditions/vaginal-discharge/'],
       ['Human Resources Online — Putrajaya to study period leave before implementing (Jul 2022)', 'https://www.humanresourcesonline.net/putrajaya-has-to-look-into-feasibility-of-period-leave-policies-before-implementing-minister-siti'],
     ],
-    related: ['anaemia-iron-deficiency-malaysia', 'pcos-malaysia', 'contraception-malaysia'],
+    related: ['bartholin-cyst-ovarian-cyst-fibroids-malaysia', 'anaemia-iron-deficiency-malaysia', 'pcos-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -689,7 +689,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most fevers 
       ['CodeBlue — Watch out for dengue warning signs (Feb 2024)', 'https://codeblue.galencentre.org/2024/02/watch-out-for-dengue-warning-signs/'],
       ['bpac NZ — Paracetamol dosing (2018)', 'https://bpac.org.nz/2018/paracetamol.aspx'],
     ],
-    related: ['dengue-klang-valley-first-three-days', 'hfmd-children-malaysia', 'clinic-or-emergency-department'],
+    related: ['painkillers-paracetamol-ibuprofen-malaysia', 'dengue-klang-valley-first-three-days', 'hfmd-children-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
