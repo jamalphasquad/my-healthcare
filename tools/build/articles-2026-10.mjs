@@ -307,6 +307,6 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu sympt
       ['US CDC — Types of influenza viruses (Sep 2025)', 'https://www.cdc.gov/flu/about/viruses-types.html'],
       ['US CDC — Getting flu and COVID-19 vaccines at the same time', 'https://www.cdc.gov/flu/prevent/coadministration.htm'],
     ],
-    related: ['pneumonia-pneumococcal-vaccine-malaysia', 'influenza-a-malaysia', 'rsv-malaysia'],
+    related: ['umrah-haj-vaccine-meningitis-malaysia', 'pneumonia-pneumococcal-vaccine-malaysia', 'influenza-a-malaysia'],
   },
 ];

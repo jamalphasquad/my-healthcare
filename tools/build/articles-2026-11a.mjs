@@ -109,13 +109,13 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
   /* ------------------------------------------------------------------ */
   {
     slug: 'medical-certificate-mc-malaysia',
-    title: 'Medical certificates (MC) in Malaysia: sick leave rights, online MCs and the rules',
-    crumb: 'Medical certificate (MC)',
-    desc: 'Your MC and sick leave rights in Malaysia: 14 to 22 days a year, 60 days hospitalisation, the 48-hour rule, who can issue an MC, online MCs and fake MC penalties.',
+    title: 'Medical chit (MC) in Malaysia: what it means, sick leave rights and the rules',
+    crumb: 'Medical chit (MC)',
+    desc: 'What a medical chit (MC chit) means, and your sick leave rights in Malaysia: 14 to 22 days a year, 60 days hospitalisation, the 48-hour rule, time chits, online MCs and fake MC penalties.',
     excerpt: 'How many days of paid sick leave you get, the 48-hour rule for telling your employer, which doctors can issue an MC, why MCs from video consultations are no longer allowed, and the penalties for buying a fake MC.',
-    standfirst: 'A medical certificate (MC, or “MC chit”) is the doctor’s note that lets you take paid sick leave. Malaysian law sets how many sick days you get and how quickly you must tell your employer, and the Malaysian Medical Council sets the rules for doctors who issue MCs. Here is what employees and employers need to know.',
-    cat: 'guides', catLabel: 'Guides', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: false,
-    about: ['Medical certificate', 'Sick leave', 'Surat cuti sakit'],
+    standfirst: 'A medical chit, MC chit or medical certificate (MC) is the doctor’s note that lets you take paid sick leave. Malaysian law sets how many sick days you get and how quickly you must tell your employer, and the Malaysian Medical Council sets the rules for doctors who issue MCs. Here is what employees and employers need to know.',
+    cat: 'guides', catLabel: 'Guides', published: PUB, modified: '2026-11-09', author: AUTHOR, news: false, medical: false,
+    about: ['Medical certificate', 'Medical chit', 'Sick leave', 'Surat cuti sakit'],
     image: 'doctor-notes', imageAlt: 'A doctor in blue gloves writing notes on a clipboard',
     keyPoints: [
       'Under the Employment Act 1955, employees get 14 days of paid sick leave a year with less than 2 years’ service, 18 days with 2 to 5 years, and 22 days with 5 years or more, plus up to 60 days of hospitalisation leave.',
@@ -125,7 +125,7 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
       'Buying or using a fake MC is a crime under the Penal Code. Police recorded 33 cases from 2022 to March 2026.',
     ],
     sections: [
-      { id: 'what', h: 'What is an MC?', tocLabel: 'What an MC is', html: `<p>An MC (medical certificate, or <em>sijil cuti sakit</em>) is a certificate from a doctor stating that you are unfit for work or school for a set period. In Malaysia it is often called an “MC chit”, meaning a short note. Your employer uses it to approve paid sick leave.</p>
+      { id: 'what', h: 'What is a medical chit (MC)?', tocLabel: 'What a medical chit is', html: `<p>A medical chit is the everyday Malaysian name for a medical certificate, or MC (<em>sijil cuti sakit</em>, or <em>surat MC</em>). It is a certificate from a doctor stating that you are unfit for work or school for a set period. “Chit” simply means a short note, so “medical chit” and “MC chit” mean the same thing as an MC. Your employer uses it to approve paid sick leave.</p>
 <p>A valid MC should show:</p>
 <ul>
 <li>your name and MyKad or passport number</li>
@@ -153,7 +153,7 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
 <li><strong>Tell your employer within 48 hours</strong> of the start of your sick leave. Under the Employment Act, sick leave that isn’t certified by a doctor, or isn’t notified within 48 hours, is treated as absence without permission. Being absent for more than 2 days in a row without telling your employer can be treated as breaking your contract.</li>
 <li><strong>Who can issue the MC:</strong> a registered medical practitioner, including your company’s panel doctor or a government medical officer, or a dental surgeon. The doctor must examine you.</li>
 <li><strong>Panel clinics:</strong> if your employer has appointed panel clinics, you are usually expected to use them. Check your company’s policy before seeing another doctor, for example if no panel clinic is open or nearby.</li>
-<li><strong>Time slips are not MCs.</strong> A time slip (or attendance letter) only shows you visited a clinic, for example for a check-up. Whether it covers time off depends on your employer’s policy.</li>
+<li><strong>A time chit is not an MC.</strong> A time chit (also called a time slip or attendance letter) only shows you visited a clinic, for example for a check-up. Whether it covers time off depends on your employer’s policy.</li>
 <li><strong>Caring for a sick child:</strong> sick leave under the Employment Act is for your own illness. Time off to care for a sick child or family member depends on your employer’s policy, for example emergency or family care leave.</li>
 </ul>` },
       { id: 'online', h: 'Are online MCs valid?', tocLabel: 'Online MCs', html: `<p>Not if they are issued only after an online consultation. In a notification dated 23 September 2025, publicised in November 2025, the <strong>Malaysian Medical Council (MMC)</strong> said that issuing a medical certificate solely after a virtual consultation is <strong>not allowed</strong>, and doctors who do so face disciplinary action.</p>
@@ -183,8 +183,8 @@ ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a 
       ['Do I have to tell my employer about my MC?', 'Yes, within 48 hours of the start of your sick leave. Otherwise the absence can be treated as unauthorised.'],
       ['Is an MC from an online consultation valid in Malaysia?', 'No. The Malaysian Medical Council doesn’t allow doctors to issue an MC solely after a virtual consultation. You need to be examined in person.'],
       ['Can my employer reject an MC from a non-panel clinic?', 'If your employer has panel clinics, you are usually expected to use them. Check your company policy, especially for times when no panel clinic is available.'],
-      ['What does MC chit mean?', 'It is an informal Malaysian and Singaporean term for a medical certificate, the doctor’s note that certifies you are unfit for work.'],
-      ['Is a time slip the same as an MC?', 'No. A time slip only shows you attended a clinic. It doesn’t certify that you were unfit for work, and how it is treated depends on your employer.'],
+      ['What does medical chit or MC chit mean?', 'Both are informal Malaysian and Singaporean terms for a medical certificate, the doctor’s note that certifies you are unfit for work.'],
+      ['Is a time chit the same as an MC?', 'No. A time chit, or time slip, only shows you attended a clinic. It doesn’t certify that you were unfit for work, and how it is treated depends on your employer.'],
       ['What happens if I use a fake MC?', 'It is a criminal offence. People who buy or use fake MCs have been charged under the Penal Code for cheating and forgery, and can also face dismissal.'],
     ],
     sources: [

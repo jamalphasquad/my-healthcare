@@ -440,7 +440,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Keep feeding
       ['New Straits Times — Rotavirus: govt urged to protect kids with vaccine (Feb 2017)', 'https://www.nst.com.my/amp/news/nation/2017/02/211628/rotavirus-govt-urged-protect-kids-vaccine'],
       ['UK Health Security Agency — Exclusion periods in children’s settings (Sep 2026)', 'https://www.gov.uk/government/publications/health-protection-in-schools-and-other-childcare-facilities/public-health-exclusion-periods-in-children-and-young-peoples-settings'],
     ],
-    related: ['baby-vaccination-schedule-malaysia', 'food-poisoning-gastroenteritis-malaysia', 'fever-in-children-malaysia'],
+    related: ['diarrhoea-cirit-birit-malaysia', 'baby-vaccination-schedule-malaysia', 'food-poisoning-gastroenteritis-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

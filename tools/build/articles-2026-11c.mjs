@@ -241,7 +241,7 @@ ${figure('doctor-consultation', 'A doctor talking with a patient in a consultati
       ['Willingness to accept pneumococcal vaccination among older adults in the Klang Valley (2025)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12530496/'],
       ['US CDC — Pneumococcal vaccine recommendations (Feb 2026)', 'https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html'],
     ],
-    related: ['flu-vaccine-malaysia', 'persistent-cough-malaysia', 'rsv-malaysia'],
+    related: ['umrah-haj-vaccine-meningitis-malaysia', 'flu-vaccine-malaysia', 'persistent-cough-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -369,7 +369,7 @@ ${figure('fresh-vegetables', 'Fresh broccoli, tomatoes, cucumber and red peppers
       ['Cochrane — Probiotics for treating acute infectious diarrhoea (Dec 2020)', 'https://pubmed.ncbi.nlm.nih.gov/33295643/'],
       ['World Health Organization — Five keys to safer food', 'https://www.who.int/activities/promoting-safe-food-handling/five-key-to-safer-food'],
     ],
-    related: ['rotavirus-vaccine-malaysia', 'stomach-pain-gastric-malaysia', 'floods-health-risks-malaysia'],
+    related: ['diarrhoea-cirit-birit-malaysia', 'rotavirus-vaccine-malaysia', 'stomach-pain-gastric-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

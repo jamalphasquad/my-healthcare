@@ -155,7 +155,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       ['CodeBlue — No plans yet for dengue vaccine in national programme (Jul 2025)', 'https://codeblue.galencentre.org/2025/07/no-plans-yet-for-dengue-vaccine-in-national-programme-wolbachia-expansion-in-focus/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['fever-in-children-malaysia', 'dengue-vaccine-qdenga-malaysia', 'clinic-or-emergency-department'],
+    related: ['normal-body-temperature-fever-adults-malaysia', 'fever-in-children-malaysia', 'dengue-vaccine-qdenga-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

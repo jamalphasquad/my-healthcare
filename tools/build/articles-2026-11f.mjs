@@ -219,7 +219,7 @@ ${figure('caring-hands', 'An older person’s hands held gently by another perso
       ['The Star — Take precautions during hot weather, urges Health Ministry (25 Mar 2026)', 'https://www.thestar.com.my/news/nation/2026/03/25/take-precautions-during-hot-weather-urges-health-ministry'],
       ['Raffles Medical Group — Fasting during Ramadan: what an older person needs to know', 'https://www.rafflesmedicalgroup.com/health-resources/health-articles/fasting-during-ramadan-what-an-older-person-needs-to-know/'],
     ],
-    related: ['normal-heart-rate-palpitations-malaysia', 'blood-pressure-cholesterol-malaysia', 'vertigo-dizziness-malaysia'],
+    related: ['seizures-sawan-epilepsy-malaysia', 'normal-heart-rate-palpitations-malaysia', 'blood-pressure-cholesterol-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

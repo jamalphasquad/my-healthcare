@@ -535,7 +535,7 @@ ${figure('kl-twin-towers-dusk', 'Kuala Lumpur skyline and the Petronas Twin Towe
       ['Nottinghamshire Area Prescribing Committee — Acute sinusitis guidance, based on NICE NG79 (2025)', 'https://nottsapc.azurewebsites.net/media/i2jdjgxz/acute-sinusitis.pdf'],
       ['NHS — Anaphylaxis', 'https://www.nhs.uk/conditions/anaphylaxis/'],
     ],
-    related: ['itchy-skin-eczema-hives-malaysia', 'haze-air-quality-klang-valley', 'conjunctivitis-red-eyes-malaysia'],
+    related: ['malay-medical-terms-in-english', 'itchy-skin-eczema-hives-malaysia', 'haze-air-quality-klang-valley'],
   },
 
   /* ------------------------------------------------------------------ */

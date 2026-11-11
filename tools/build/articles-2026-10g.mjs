@@ -97,7 +97,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'The PeKa 
       ['PERKESO — Health Screening Programme (HSP 3.0) leaflet', 'https://www.mma.org.my/web/wp-content/uploads/Risalah-HSP-3.0.pdf'],
       ['Bernama — PERKESO health screening findings (May 2026)', 'https://www.bernama.com/bm/news.php?id=2574936'],
     ],
-    related: ['mysalam-malaysia', 'free-health-screening-malaysia', 'budget-2027-health-malaysia'],
+    related: ['klinik-kesihatan-malaysia', 'mysalam-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -209,7 +209,7 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
     desc: 'The FOMEMA medical examination for foreign workers in Malaysia: who needs it, what is tested, 2026 fees with SST, how to check results online, and how appeals work.',
     excerpt: 'Every foreign worker and domestic helper in Peninsular Malaysia must pass a FOMEMA medical examination, now every year. What it tests, how much it costs in 2026, how employers check results, what “unsuitable” means, and how appeals work.',
     standfirst: 'FOMEMA is the compulsory medical examination for foreign workers and domestic helpers in Peninsular Malaysia and Labuan. Since December 2023 it is needed every year, and it now includes more tests. Here is what employers and workers need to know about the exam, the fees, the results and appeals.',
-    cat: 'guides', catLabel: 'Guides', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: false,
+    cat: 'guides', catLabel: 'Guides', published: PUB, modified: '2026-11-09', author: AUTHOR, news: false, medical: false,
     about: ['FOMEMA', 'Foreign worker medical examination'],
     image: 'doctor-notes', imageAlt: 'A doctor in blue gloves writing notes on a clipboard',
     keyPoints: [
@@ -268,7 +268,8 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tes
 <li>Open <strong>“Medical Result”</strong>.</li>
 <li>Search by worker code or passport number (up to 10 workers at a time).</li>
 </ol>
-<p>The result shows <strong>Suitable</strong> or <strong>Unsuitable</strong>. For an unsuitable result, the “Reason” column explains why, and the employer can print an unsuitable letter. There is no official public search for workers, so be careful of unofficial websites asking for passport numbers.</p>` },
+<p>The result shows <strong>Suitable</strong> or <strong>Unsuitable</strong>. For an unsuitable result, the “Reason” column explains why, and the employer can print an unsuitable letter.</p>
+<p><strong>Workers</strong> can check their status for free on the Immigration Department’s <a href="https://eservices.imi.gov.my/myimms/FomemaStatus?lang=en" target="_blank" rel="noopener">MyIMMs Fomema Status Inquiries</a> page, using a passport number or name and nationality. See our step-by-step guide to the <a href="/articles/fomema-online-result-check/">FOMEMA online result check</a>.</p>` },
       { id: 'appeal', h: 'Unsuitable results and appeals', tocLabel: 'Appeals', html: `<p>If a worker is found <strong>unsuitable</strong>, they can’t continue working in Malaysia. The employer must apply to the Immigration Department for a Check Out Memo and send the worker home.</p>
 <p>Some results can be appealed. FOMEMA emails the employer if a case is appealable:</p>
 <ul>
@@ -296,7 +297,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tes
       ['How much is the FOMEMA fee in 2026?', 'From 25 May 2026, RM226.56 for a male worker and RM237.36 for a female worker, including the exam fee (RM207 or RM217), 8% SST and a RM3 convenience fee.'],
       ['How often is the FOMEMA check-up needed?', 'Every year. Since 16 December 2023, all foreign workers must pass a FOMEMA exam before each permit renewal, as well as within 30 days of arriving in Malaysia.'],
       ['What does FOMEMA test for?', 'A medical history, physical examination, chest X-ray, blood tests for HIV, hepatitis B and C, syphilis, malaria and filariasis, and urine tests for drugs, pregnancy, sugar and protein.'],
-      ['How do I check FOMEMA results online?', 'The employer logs in to the FOMEMA portal, opens “Medical Result” and searches by worker code or passport number. Results usually reach Immigration within 7 working days.'],
+      ['How do I check FOMEMA results online?', 'Employers log in to the FOMEMA portal, open “Medical Result” and search by worker code or passport number. Workers can check their status on the Immigration Department’s free MyIMMs page. Results usually reach Immigration within 7 working days.'],
       ['Can an unsuitable FOMEMA result be appealed?', 'Some can. If FOMEMA says the case is appealable, register the appeal on the portal within 2 weeks of certification. TB confirmed on X-ray, malaria, pregnancy, HIV and hepatitis B can’t be appealed.'],
       ['How long is a FOMEMA result valid?', '180 days.'],
       ['Do international students need FOMEMA?', 'No. International students have a separate medical screening through Education Malaysia Global Services (EMGS) at EMGS panel clinics.'],
@@ -314,7 +315,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tes
       ['CodeBlue — MMA on additional foreign worker medical screening (30 Jan 2024)', 'https://codeblue.galencentre.org/2024/01/additional-foreign-worker-medical-screening-necessary-to-protect-the-population-against-import-of-communicable-diseases-mma/'],
       ['EMGS — Medical screening for international students', 'https://visa.educationmalaysia.gov.my/guidelines/medical-screening'],
     ],
-    related: ['tuberculosis-tb-malaysia', 'hepatitis-b-malaysia', 'typhoid-injection-food-handlers-malaysia'],
+    related: ['fomema-online-result-check', 'tuberculosis-tb-malaysia', 'hepatitis-b-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

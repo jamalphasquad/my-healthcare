@@ -689,7 +689,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most fevers 
       ['CodeBlue — Watch out for dengue warning signs (Feb 2024)', 'https://codeblue.galencentre.org/2024/02/watch-out-for-dengue-warning-signs/'],
       ['bpac NZ — Paracetamol dosing (2018)', 'https://bpac.org.nz/2018/paracetamol.aspx'],
     ],
-    related: ['painkillers-paracetamol-ibuprofen-malaysia', 'dengue-klang-valley-first-three-days', 'hfmd-children-malaysia'],
+    related: ['normal-body-temperature-fever-adults-malaysia', 'painkillers-paracetamol-ibuprofen-malaysia', 'dengue-klang-valley-first-three-days'],
   },
 
   /* ------------------------------------------------------------------ */
