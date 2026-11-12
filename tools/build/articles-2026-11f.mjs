@@ -645,7 +645,7 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'A ra
       ['Cleveland Clinic — Nocturia (Jul 2026)', 'https://my.clevelandclinic.org/health/symptoms/14510-nocturia'],
       ['Prostate Cancer UK — Active surveillance (May 2026)', 'https://prostatecanceruk.org/prostate-information-and-support/treatments/active-surveillance'],
     ],
-    related: ['uti-urinary-tract-infection-malaysia', 'free-health-screening-malaysia', 'blood-test-results-explained-malaysia'],
+    related: ['kencing-berdarah-blood-in-urine-malaysia', 'uti-urinary-tract-infection-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

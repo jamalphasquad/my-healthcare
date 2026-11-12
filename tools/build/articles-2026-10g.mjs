@@ -198,7 +198,7 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
       ['American Diabetes Association — Standards of Care in Diabetes 2026: Diagnosis and classification', 'https://doi.org/10.2337/dc26-S002'],
       ['NHS — Diabetes symptoms', 'https://www.nhs.uk/conditions/diabetes/'],
     ],
-    related: ['gestational-diabetes-bsp-malaysia', 'bmi-calculator-malaysia', 'blood-test-results-explained-malaysia'],
+    related: ['kencing-berbuih-kidney-disease-malaysia', 'gestational-diabetes-bsp-malaysia', 'bmi-calculator-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

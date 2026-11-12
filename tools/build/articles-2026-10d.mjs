@@ -346,7 +346,7 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
       ['NHS — Ibuprofen for children (reviewed Aug 2026)', 'https://www.nhs.uk/medicines/ibuprofen-for-children/'],
       ['Ministry of Health — Home care advice for dengue patients', 'https://www2.moh.gov.my/moh/resources/Borang/Denggi/HOME_CARD_ADVICE_FOR_DENGUE_PATIENTS.pdf'],
     ],
-    related: ['urti-common-cold-selsema-malaysia', 'tuberculosis-tb-malaysia', 'pneumonia-pneumococcal-vaccine-malaysia'],
+    related: ['ubat-batuk-cough-medicine-malaysia', 'urti-common-cold-selsema-malaysia', 'tuberculosis-tb-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

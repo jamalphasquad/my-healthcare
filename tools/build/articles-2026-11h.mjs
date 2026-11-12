@@ -262,7 +262,7 @@ ${figure('medications', 'Assorted medicines on a table', 'Replacing fluids and s
       ['Dorset County Hospital NHS — Sick day rules for people with type 2 diabetes (Mar 2025)', 'https://dchft.nhs.uk/leaflets/sick-day-rules-for-people-with-type-2-diabetes-taking-a-sglt-2-inhibitor/'],
       ['BMC Public Health — Diarrhoea among children under five in Malaysia, NHMS 2016 (2018)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6288967'],
     ],
-    related: ['food-poisoning-gastroenteritis-malaysia', 'rotavirus-vaccine-malaysia', 'stomach-pain-gastric-malaysia'],
+    related: ['vomiting-muntah-malaysia', 'food-poisoning-gastroenteritis-malaysia', 'rotavirus-vaccine-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

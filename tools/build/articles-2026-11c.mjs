@@ -616,7 +616,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Fast
       ['NHS — Chronic kidney disease: diagnosis', 'https://www.nhs.uk/conditions/kidney-disease/diagnosis/'],
       ['NHS — Blood tests', 'https://www.nhs.uk/tests-and-treatments/blood-tests/'],
     ],
-    related: ['anaemia-iron-deficiency-malaysia', 'free-health-screening-malaysia', 'normal-blood-sugar-level-malaysia'],
+    related: ['platelet-count-dengue-malaysia', 'kencing-berbuih-kidney-disease-malaysia', 'anaemia-iron-deficiency-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -847,6 +847,6 @@ ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a 
       ['Asia News Network / The Star — Malaysia faces uphill battle as infections may get harder to cure (May 2025)', 'https://asianews.network/malaysia-faces-uphill-battle-as-infections-may-get-harder-to-cure/'],
       ['Galen Centre — Tackling benign prostate hyperplasia among Malaysian men (Nov 2023)', 'https://ova.galencentre.org/tackling-benign-prostate-hyperplasia-an-unseen-challenge-among-malaysian-men/'],
     ],
-    related: ['enlarged-prostate-psa-test-malaysia', 'kidney-stones-batu-karang-malaysia', 'pap-smear-hpv-test-malaysia'],
+    related: ['kencing-berdarah-blood-in-urine-malaysia', 'enlarged-prostate-psa-test-malaysia', 'kidney-stones-batu-karang-malaysia'],
   },
 ];

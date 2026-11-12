@@ -197,7 +197,7 @@ ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a 
       ['New Straits Times — Bukit Aman records 33 fake MC cases, 10 charged in court since 2022 (Mar 2026)', 'https://www.nst.com.my/news/nation/2026/03/1405049/bukit-aman-records-33-fake-mc-cases-10-charged-court-2022'],
       ['Malay Mail — Nurse among five remanded in Pekan over sale of fake MCs (Jun 2026)', 'https://www.malaymail.com/news/malaysia/2026/06/16/nurse-among-five-remanded-for-four-days-in-pekan-over-sale-of-fake-mcs/223965'],
     ],
-    related: ['clinic-or-emergency-department', 'fomema-medical-check-up', 'peka-b40-malaysia'],
+    related: ['maternity-paternity-leave-cuti-bersalin-malaysia', 'clinic-or-emergency-department', 'fomema-medical-check-up'],
   },
 
   /* ------------------------------------------------------------------ */

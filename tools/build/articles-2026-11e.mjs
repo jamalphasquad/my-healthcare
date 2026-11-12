@@ -105,7 +105,7 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['NHS — Stopped or missed periods (Jun 2026)', 'https://www.nhs.uk/conditions/stopped-or-missed-periods/'],
       ['MyGOV — Talian Kasih 15999 (Mar 2026)', 'https://www.malaysia.gov.my/my/topics/talian-kasih-15999'],
     ],
-    related: ['pregnancy-due-date-calculator-malaysia', 'contraception-malaysia', 'pcos-malaysia'],
+    related: ['maternity-paternity-leave-cuti-bersalin-malaysia', 'pregnancy-due-date-calculator-malaysia', 'contraception-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

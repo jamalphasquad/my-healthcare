@@ -334,7 +334,7 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['NHS — Gestational diabetes', 'https://www.nhs.uk/conditions/gestational-diabetes/'],
       ['US CDC — Gestational diabetes (May 2024)', 'https://www.cdc.gov/diabetes/about/gestational-diabetes.html'],
     ],
-    related: ['normal-blood-sugar-level-malaysia', 'pregnancy-test-early-signs-malaysia', 'pregnancy-due-date-calculator-malaysia'],
+    related: ['maternity-paternity-leave-cuti-bersalin-malaysia', 'normal-blood-sugar-level-malaysia', 'pregnancy-test-early-signs-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -563,7 +563,7 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Most cold
       ['The Star — Does taking antibiotics for a cold help you recover faster? (May 2026)', 'https://www.thestar.com.my/news/true-or-not/2026/05/06/quickcheck-does-taking-antibiotics-for-a-cold-actually-help-you-recover-faster'],
       ['The Star — Cough and cold medicines for children to be limited (Jul 2009)', 'https://www.thestar.com.my/news/nation/2009/07/09/cough-and-cold-medicines-for-children-to-be-limited'],
     ],
-    related: ['influenza-a-malaysia', 'tonsillitis-sore-throat-malaysia', 'persistent-cough-malaysia'],
+    related: ['ubat-batuk-cough-medicine-malaysia', 'influenza-a-malaysia', 'persistent-cough-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

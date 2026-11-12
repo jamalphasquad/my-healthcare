@@ -87,7 +87,7 @@ ${figure('kl-skyline', 'Kuala Lumpur skyline on a clear day', 'On a clear day th
       ['New Straits Times — 73 heat-related illness cases, four deaths (7 Jul 2026)', 'https://www.nst.com.my/amp/news/nation/2026/07/1482825/health-ministry-records-73-heat-related-illness-cases-four-deaths-jan-1'],
       ['Department of Environment — APIMS', 'https://eqms.doe.gov.my/APIMS/main'],
     ],
-    related: ['allergies-resdung-antihistamines-malaysia', 'conjunctivitis-red-eyes-malaysia', 'persistent-cough-malaysia'],
+    related: ['asthma-asma-inhaler-malaysia', 'allergies-resdung-antihistamines-malaysia', 'conjunctivitis-red-eyes-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -155,7 +155,7 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       ['CodeBlue — No plans yet for dengue vaccine in national programme (Jul 2025)', 'https://codeblue.galencentre.org/2025/07/no-plans-yet-for-dengue-vaccine-in-national-programme-wolbachia-expansion-in-focus/'],
       ['World Health Organization — Dengue and severe dengue fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
     ],
-    related: ['normal-body-temperature-fever-adults-malaysia', 'fever-in-children-malaysia', 'dengue-vaccine-qdenga-malaysia'],
+    related: ['platelet-count-dengue-malaysia', 'normal-body-temperature-fever-adults-malaysia', 'fever-in-children-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
