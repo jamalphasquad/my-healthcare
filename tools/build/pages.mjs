@@ -2,32 +2,19 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { SEO } from './seo.mjs';
-import { nearestClinics, kmText } from './clinic-data.mjs';
+import { nearestClinics, kmText, rangeText, summaryHours } from './clinic-data.mjs';
 import { head, header, footer, crumbs, crumbsLd, write, OUT, img, preloadImg, esc, abs, ORG, WEBSITE, SITE, longDate, shortDate } from './lib.mjs';
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const SCHEMA_DAYS = DAYS.map((d) => 'https://schema.org/' + d);
 const hm = (m) => { if (m === 1440) return '23:59'; const h = Math.floor(m / 60), mm = m % 60; return String(h).padStart(2, '0') + ':' + String(mm).padStart(2, '0'); };
-const pretty = (m) => { if (m === 1440 || m === 0) return '12am'; const h = Math.floor(m / 60), mm = m % 60, ap = h < 12 ? 'am' : 'pm', x = h % 12 || 12; return x + (mm ? ':' + String(mm).padStart(2, '0') : '') + ap; };
-export const rangeText = (r) => (!r || !r.length ? 'Closed' : r.length === 1 && r[0][0] === 0 && r[0][1] === 1440 ? 'Open 24 hours' : r.map(([a, b]) => `${pretty(a)} – ${pretty(b)}`).join(', '));
+export { rangeText, summaryHours }; // defined in clinic-data.mjs, which also uses them for clinic titles
 
 function hoursSpec(hours) {
   const out = [];
   if (!hours) return out;
   for (let d = 0; d < 7; d++) for (const [a, b] of hours[d] || []) out.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: SCHEMA_DAYS[d], opens: hm(a), closes: hm(b) });
   return out;
-}
-export function summaryHours(hours) {
-  if (!hours) return 'Hours not confirmed yet – please call';
-  // group consecutive days (Mon..Sun order) with identical ranges
-  const order = [1, 2, 3, 4, 5, 6, 0], short = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const groups = [];
-  for (const d of order) {
-    const t = rangeText(hours[d]);
-    const g = groups[groups.length - 1];
-    if (g && g.t === t) g.days.push(d); else groups.push({ t, days: [d] });
-  }
-  return groups.map((g) => (g.days.length > 1 ? `${short[g.days[0]]}–${short[g.days[g.days.length - 1]]}` : short[g.days[0]]) + ' ' + g.t).join(' · ');
 }
 
 // Health guides linked from clinic and area pages, so articles get links from the directory.
