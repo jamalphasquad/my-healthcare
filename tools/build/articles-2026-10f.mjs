@@ -550,19 +550,19 @@ ${figure('facial-treatment', 'A doctor examining facial skin in a clinic', 'A do
   /* ------------------------------------------------------------------ */
   {
     slug: 'bowel-cancer-screening-malaysia',
-    title: 'Bowel cancer in Malaysia: symptoms, free stool test screening and colonoscopy',
+    title: 'Bowel cancer in Malaysia: symptoms, stool test screening and colonoscopy',
     crumb: 'Bowel cancer screening',
-    desc: 'Bowel (colorectal) cancer is the most common cancer in Malaysian men. Symptoms (kanser usus simptom), risk factors, free iFOBT stool tests from 50 and colonoscopy.',
-    excerpt: 'Bowel cancer is the most common cancer in Malaysian men, and 3 in 4 cases are found late. The symptoms to watch for, who is at risk, the free stool test at government clinics from age 50, and what a colonoscopy involves.',
+    desc: 'Bowel (colorectal) cancer is the most common cancer in Malaysian men. Symptoms (kanser usus simptom), risk factors, iFOBT stool tests from 50 and colonoscopy.',
+    excerpt: 'Bowel cancer is the most common cancer in Malaysian men, and 3 in 4 cases are found late. The symptoms to watch for, who is at risk, the stool test offered at government clinics from age 50, and what a colonoscopy involves.',
     standfirst: 'Bowel cancer, also called colorectal or colon cancer (kanser usus), is now the most common cancer in Malaysian men and the second most common in women. Three in four cases are found only at a late stage, yet a simple home stool test can pick it up early, when it is far more treatable. Here are the symptoms, who should be screened, and how to get tested in Malaysia.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-13', author: AUTHOR, news: false, medical: true,
     about: ['Colorectal cancer', 'Kanser kolorektal'],
     image: 'nurse-stethoscope', imageAlt: 'A doctor holding a stethoscope',
     keyPoints: [
       'Bowel cancer is the most common cancer in Malaysian men and the second most common in women. Cases rose by more than half between 2012–2016 and 2017–2021.',
       'About 3 in 4 cases are diagnosed at stage 3 or 4. Early bowel cancer often causes no symptoms.',
       'Symptoms include blood in the stool, a change in bowel habit, tummy pain or bloating, unexplained weight loss and tiredness from anaemia.',
-      'Adults aged 50 to 75 at average risk should do a stool test (iFOBT), free at government health clinics. A positive result needs a colonoscopy.',
+      'Adults aged 50 to 75 at average risk should do a stool test (iFOBT), offered at government health clinics. A positive result needs a colonoscopy.',
       'If a close relative had bowel cancer, colonoscopy screening usually starts at 40, or earlier.',
     ],
     sections: [
@@ -591,9 +591,9 @@ ${figure('facial-treatment', 'A doctor examining facial skin in a clinic', 'A do
 <li>Smoking, alcohol, being overweight and being inactive</li>
 <li>A diet high in <strong>processed meat</strong> (such as sausages, ham and luncheon meat) and red meat, and low in fruit and vegetables. The WHO’s cancer agency classifies processed meat as a cause of bowel cancer.</li>
 </ul>` },
-      { id: 'screening', h: 'Free bowel cancer screening: the stool test', tocLabel: 'Free screening', html: `<p>Malaysian guidelines recommend that adults aged <strong>50 to 75</strong> at average risk do an <strong>immunochemical faecal occult blood test (iFOBT)</strong>, also called a FIT test. It detects tiny amounts of blood in the stool that you can’t see.</p>
+      { id: 'screening', h: 'Bowel cancer screening: the stool test', tocLabel: 'Screening', html: `<p>Malaysian guidelines recommend that adults aged <strong>50 to 75</strong> at average risk do an <strong>immunochemical faecal occult blood test (iFOBT)</strong>, also called a FIT test. It detects tiny amounts of blood in the stool that you can’t see.</p>
 <ul>
-<li><strong>Where:</strong> it is offered <strong>free at government health clinics (Klinik Kesihatan)</strong>, apart from the registration fee. Ask for it at your next visit. Selangor’s Selangor Saring programme has also included the test. Private clinics and pharmacies offer it for a fee.</li>
+<li><strong>Where:</strong> it is offered at <strong>government health clinics (Klinik Kesihatan)</strong> under the Ministry of Health’s national screening programme, which has supplied test kits to participating clinics since 2014. Ask for it at your next visit, and ask whether there is a charge. Selangor’s Selangor Saring programme has also included the test. The National Cancer Society Malaysia offers it for RM20, and private clinics and pharmacies set their own fees.</li>
 <li><strong>How:</strong> you collect a small stool sample at home with the kit, and return it to the clinic. There are no diet restrictions.</li>
 <li><strong>How often:</strong> the 2017 guidelines recommend yearly testing if negative. Some clinics schedule a repeat every 2 years.</li>
 <li><strong>If positive:</strong> you are referred for a colonoscopy. A positive test doesn’t mean you have cancer. Most positives are due to polyps or other causes, but it must be followed up.</li>
@@ -621,11 +621,11 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
     clinicsMode: 'directory',
     clinicsHeading: 'Where to ask about bowel cancer screening',
     clinicsTocLabel: 'Where to get screened',
-    clinicsIntro: 'Your nearest Klinik Kesihatan offers the free stool test from age 50. Private GP clinics can also arrange a stool test, check symptoms such as bleeding, and refer you for colonoscopy. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
+    clinicsIntro: 'Your nearest Klinik Kesihatan can offer the stool test from age 50. Private GP clinics can also arrange a stool test, check symptoms such as bleeding, and refer you for colonoscopy. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
       ['What are the symptoms of bowel cancer? (Kanser usus simptom)', 'Blood in the stool or bleeding from the bottom, a change in bowel habit lasting weeks, tummy pain or bloating, unexplained weight loss, and tiredness from anaemia. Early bowel cancer often has no symptoms.'],
-      ['Is bowel cancer screening free in Malaysia?', 'Yes. The iFOBT stool test is offered free at government health clinics for adults aged 50 to 75 at average risk, apart from the registration fee. A positive result is followed by a colonoscopy at a government hospital.'],
+      ['How much does bowel cancer screening cost in Malaysia?', 'Government health clinics offer the iFOBT stool test to eligible adults aged 50 to 75 under a national screening programme, so ask your clinic whether there is a charge. The National Cancer Society Malaysia charges RM20, and private clinics set their own fees. A positive result is followed by a colonoscopy.'],
       ['How is the iFOBT stool test done?', 'You collect a small stool sample at home using the kit and return it to the clinic. It detects hidden blood. There are no diet restrictions.'],
       ['At what age should I start bowel cancer screening?', 'At 50 for most people. If a close relative had bowel cancer, colonoscopy usually starts at 40, or 10 years before the age your relative was diagnosed, if they were under 60.'],
       ['Can bowel cancer affect young people?', 'Yes. About 15% of bowel cancers in Malaysia in 2017–2021 were in people under 50. Don’t ignore symptoms such as bleeding because you are young.'],
@@ -636,6 +636,7 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
       ['Ministry of Health — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017), Quick Reference', 'https://mymahtas2.moh.gov.my/files/QR%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
       ['Ministry of Health — Clinical Practice Guidelines: Management of Colorectal Carcinoma (2017)', 'https://mymahtas2.moh.gov.my/files/CPG%20Management%20of%20Colorectal%20%20Carcinoma.pdf'],
       ['Chandran et al. — Overview of the colorectal cancer screening programme in Malaysia (Med J Malaysia, 2020)', 'https://mail.e-mjm.org/2020/v75n3/colorectal-cancer.pdf'],
+      ['National Cancer Society Malaysia — Colorectal cancer screening', 'https://cancer.org.my/get-screened/cancer-screening-clinics/colorectal-cancer-screening/'],
       ['PLOS ONE — Colorectal cancer screening in Malaysian primary care (Dec 2022)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9799312/'],
       ['CodeBlue — Selangor Saring reveals reluctance for follow-ups (27 Aug 2025)', 'https://codeblue.galencentre.org/2025/08/selangor-saring-reveals-poor-state-of-peoples-health-reluctance-for-follow-ups/'],
       ['NHS — Bowel cancer symptoms (Sep 2026)', 'https://www.nhs.uk/conditions/bowel-cancer/symptoms/'],
