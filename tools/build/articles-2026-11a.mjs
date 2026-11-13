@@ -611,7 +611,7 @@ ${figure('stethoscope-desk', 'A stethoscope hanging in a hospital examination ar
       ['Salminen et al. — Five-year follow-up of antibiotic therapy for uncomplicated appendicitis, APPAC trial (JAMA, 2018)', 'https://pubmed.ncbi.nlm.nih.gov/30264120'],
       ['CODA Collaborative — A randomised trial comparing antibiotics with appendectomy for appendicitis (NEJM, 2020)', 'https://doi.org/10.1056/NEJMoa2014320'],
     ],
-    related: ['stomach-pain-gastric-malaysia', 'clinic-or-emergency-department', 'tonsillitis-sore-throat-malaysia'],
+    related: ['sakit-perut-kiri-kanan-abdominal-pain-malaysia', 'stomach-pain-gastric-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -714,6 +714,6 @@ ${figure('medications', 'Blister packs of tablets and capsules', 'Simple painkil
       ['American Academy of Family Physicians — Clinical practice guideline: tonsillectomy in children', 'https://www.aafp.org/pubs/afp/issues/2011/0901/p566.html'],
       ['The Star — Wrong treatment of sore throats is fuelling antimicrobial resistance (Jul 2025)', 'https://www.thestar.com.my/lifestyle/health/2025/07/02/wrong-treatment-of-sore-throats-is-fuelling-antimicrobial-resistance'],
     ],
-    related: ['urti-common-cold-selsema-malaysia', 'influenza-a-malaysia', 'persistent-cough-malaysia'],
+    related: ['ubat-sakit-tekak-sore-throat-malaysia', 'urti-common-cold-selsema-malaysia', 'influenza-a-malaysia'],
   },
 ];

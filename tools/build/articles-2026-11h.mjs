@@ -134,7 +134,7 @@ ${figure('doctor-consultation', 'A doctor speaking with a patient in a clinic', 
       ['Lowyat.NET — MOH on government clinics and walk-in patients (Jan 2026)', 'https://www.lowyat.net/2026/377462/moh-government-clinics-walk-in-patients/'],
       ['Bernama — Klinik Kesihatan appointment rollout (Dec 2022)', 'https://www.bernama.com/en/general/news.php?id=2151725'],
     ],
-    related: ['clinic-or-emergency-department', 'peka-b40-malaysia', 'medical-certificate-mc-malaysia'],
+    related: ['klinik-pergigian-kerajaan-malaysia', 'clinic-or-emergency-department', 'peka-b40-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -268,13 +268,13 @@ ${figure('medications', 'Assorted medicines on a table', 'Replacing fluids and s
   /* ------------------------------------------------------------------ */
   {
     slug: 'fomema-online-result-check',
-    title: 'FOMEMA online result check: how to check status, what each result means and what to do next',
+    title: 'FOMEMA online result check: how to check a medical report by passport number, what each status means and what to do next',
     crumb: 'FOMEMA online result check',
-    desc: 'How to check a FOMEMA result online: the free Immigration status page, the employer portal, what Pending, Suitable and Unsuitable mean, how long it takes, and what to do if nothing shows.',
+    desc: 'How to check a FOMEMA medical report or result online by passport number: the free Immigration status page, the employer portal, what Pending, Suitable and Unsuitable mean, and what to do if nothing shows.',
     excerpt: 'Waiting for a FOMEMA result? Workers and employers can check it online for free. Where to check, what each status means, how long results take, why a result may not appear, and what happens after a Suitable or Unsuitable result.',
-    standfirst: 'There are two official ways to check a FOMEMA result online. Anyone can use the Immigration Department’s free status page with a passport number or name, and employers and agencies can log in to the FOMEMA portal for the full result. Here is how each one works, what the statuses mean, and what to do if a result doesn’t appear.',
-    cat: 'guides', catLabel: 'Guides', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: false,
-    about: ['FOMEMA', 'Foreign worker medical examination', 'MyIMMs'],
+    standfirst: 'There are two official ways to check a FOMEMA medical report or result online, and both are free. Anyone can use the Immigration Department’s free status page with a passport number or name, and employers and agencies can log in to the FOMEMA portal for the full result. Here is how each one works, what the statuses mean, and what to do if a result doesn’t appear.',
+    cat: 'guides', catLabel: 'Guides', published: PUB, modified: '2026-11-13', author: AUTHOR, news: false, medical: false,
+    about: ['FOMEMA', 'Foreign worker medical examination', 'Medical report', 'MyIMMs'],
     image: 'doctor-tablet', imageAlt: 'A doctor in a white coat reading results on a tablet',
     keyPoints: [
       'Workers can check for free on the Immigration Department’s MyIMMs “Fomema Status Inquiries” page, using their passport number or name and nationality.',
@@ -351,6 +351,7 @@ ${figure('doctor-notes', 'A doctor in blue gloves writing notes on a clipboard',
     clinicsIntro: 'Our directory lists clinics that are on the FOMEMA panel, with opening hours and directions. Panels can change, so check the clinic on the official FOMEMA website before you register a worker.',
     clinicLinks: [['/clinics/fomema-clinics/', 'FOMEMA panel clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/gp-clinics/', 'GP clinics']],
     faqs: [
+      ['How do I check my medical report online in Malaysia by passport number?', 'For a foreign worker’s FOMEMA medical examination, open the Immigration Department’s MyIMMs “Fomema Status Inquiries” page, enter the passport number and choose the nationality. It is free and doesn’t need a login.'],
       ['How do I check my FOMEMA result online?', 'Open the Immigration Department’s MyIMMs “Fomema Status Inquiries” page and enter your passport number or name with your nationality. Employers can log in to the FOMEMA portal and open “Medical Result”.'],
       ['Can a worker check their own FOMEMA result?', 'Yes. The MyIMMs page is public and doesn’t need a login. For the full medical report, ask your employer or agency.'],
       ['How long does a FOMEMA result take?', 'Under normal circumstances, the result reaches Immigration within 7 working days of the examination. Cases under FOMEMA Review get a final result within 5 working days after certification.'],

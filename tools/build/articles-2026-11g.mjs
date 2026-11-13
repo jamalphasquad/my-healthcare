@@ -211,7 +211,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Diab
       ['American Academy of Orthopaedic Surgeons — Ulnar nerve entrapment at the elbow', 'https://www.orthoinfo.org/diseases--conditions/ulnar-nerve-entrapment-at-the-elbow'],
       ['CodeBlue — NHMS 2023: over two million adults live with three NCDs (May 2024)', 'https://codeblue.galencentre.org/2024/05/over-two-million-adults-in-malaysia-live-with-three-ncds-nhms-2023/'],
     ],
-    related: ['frozen-shoulder-pain-malaysia', 'slipped-disc-sciatica-malaysia', 'normal-blood-sugar-level-malaysia'],
+    related: ['sakit-tumit-heel-pain-plantar-fasciitis-malaysia', 'frozen-shoulder-pain-malaysia', 'slipped-disc-sciatica-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

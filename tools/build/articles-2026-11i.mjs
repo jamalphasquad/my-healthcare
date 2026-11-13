@@ -129,7 +129,7 @@ ${figure('medications', 'Assorted medicines on a table', 'Read the label: many c
       ['US CDC — Chest cold (acute bronchitis) (Jul 2025)', 'https://www.cdc.gov/acute-bronchitis/about/index.html'],
       ['ScienceDaily — Coloured phlegm and antibiotics, European Respiratory Journal (2011)', 'https://www.sciencedaily.com/releases/2011/03/110324103137.htm'],
     ],
-    related: ['persistent-cough-malaysia', 'urti-common-cold-selsema-malaysia', 'painkillers-paracetamol-ibuprofen-malaysia'],
+    related: ['ubat-sakit-tekak-sore-throat-malaysia', 'persistent-cough-malaysia', 'urti-common-cold-selsema-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

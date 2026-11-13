@@ -357,7 +357,7 @@ ${figure('morning-walk', 'People walking in a park in the morning', 'In Malaysia
       ['RTM — Unregistered medicines linked to kidney disease in Kelantan (May 2024)', 'https://berita.rtm.gov.my/?p=99308'],
       ['NHS — Gallstones (Aug 2025)', 'https://www.nhs.uk/conditions/gallstones/'],
     ],
-    related: ['kencing-berdarah-blood-in-urine-malaysia', 'gout-malaysia', 'uti-urinary-tract-infection-malaysia'],
+    related: ['sakit-pinggang-lower-back-pain-malaysia', 'kencing-berdarah-blood-in-urine-malaysia', 'uti-urinary-tract-infection-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

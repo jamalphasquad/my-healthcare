@@ -488,7 +488,7 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu usual
     desc: 'Stroke and heart attack warning signs (BE FAST), what to do while waiting for 999, the treatment time windows, and which KL hospitals treat stroke and heart attack.',
     excerpt: 'Heart disease is Malaysia’s leading cause of death, and Malaysians have heart attacks younger than people in many countries. How to spot a stroke or heart attack, what to do in the first minutes, and why time matters so much.',
     standfirst: 'Every minute counts in a stroke or heart attack. Treatments that unblock an artery work best in the first few hours, yet many Malaysians reach hospital too late for them. Here is how to recognise the warning signs, what to do while you wait for help, and which hospitals in and around Kuala Lumpur treat stroke and heart attack.',
-    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: '2026-11-13', author: AUTHOR, news: false, medical: true,
     about: ['Stroke', 'Strok'],
     image: 'caring-hands', imageAlt: 'A younger person holding an older woman’s hands',
     keyPoints: [
@@ -496,7 +496,7 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu usual
       'Spot a stroke with BE FAST: Balance, Eyes, Face, Arm, Speech, Time to call 999.',
       'Heart attack signs include chest pain or pressure, pain spreading to the arm, jaw or back, breathlessness and sweating. Women, older people and people with diabetes may have no chest pain.',
       'Call 999, or 112 from a mobile, and note the time symptoms started. Clot-busting treatment for stroke must start within 4.5 hours.',
-      'Don’t give aspirin for a suspected stroke. For a suspected heart attack, take aspirin only if the 999 operator or a doctor tells you to.',
+      'Don’t give aspirin for a suspected stroke. For a suspected heart attack, Malaysia’s guideline advises chewing one 300mg aspirin straight away, unless you already take aspirin or are allergic to it.',
     ],
     sections: [
       { id: 'why', h: 'Why minutes matter', html: `<p><strong>Ischaemic heart disease is Malaysia’s leading cause of death.</strong> It caused 17,421 deaths in 2024, 13% of medically certified deaths, according to the Department of Statistics. Stroke is consistently among the top three causes, and is estimated to affect more than 50,000 Malaysians a year.</p>
@@ -527,7 +527,7 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk', 'High blood pres
 <li><strong>Note the time</strong> symptoms started, or when the person was last seen well. Doctors need this to decide on treatment.</li>
 <li><strong>Keep the person still</strong>, sitting or lying in a comfortable position, and loosen tight clothing.</li>
 <li><strong>For a suspected stroke:</strong> give nothing to eat or drink, as swallowing may be affected. <strong>Don’t give aspirin</strong>. Some strokes are caused by bleeding, which aspirin can make worse, and only a brain scan can tell.</li>
-<li><strong>For a suspected heart attack:</strong> take aspirin only if the 999 operator or a doctor tells you to, and not if you are allergic to it. Use your own heart medicines, such as a GTN spray, as your doctor has advised.</li>
+<li><strong>For a suspected heart attack:</strong> Malaysia’s heart attack guideline advises chewing and swallowing one 300mg aspirin tablet straight away, if you aren’t already taking aspirin regularly and aren’t allergic to it. Use your own heart medicines, such as a GTN spray, as your doctor has advised.</li>
 <li><strong>If the person collapses and isn’t breathing normally,</strong> start hands-only CPR: push hard and fast in the centre of the chest, about twice a second, and keep going until help arrives. Ask someone to find an AED (defibrillator) if one is nearby.</li>
 <li><strong>Gather</strong> the person’s IC and a list of their medicines.</li>
 </ol>
@@ -570,12 +570,13 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk', 'High blood pres
     faqs: [
       ['What are the warning signs of a stroke?', 'Use BE FAST: sudden loss of Balance, blurred or lost vision (Eyes), a drooping Face, weakness in one Arm or leg, slurred Speech. Then it’s Time to call 999. In Malay, the same signs are remembered as PeRMATA.'],
       ['Should I give aspirin to someone having a stroke?', 'No. Some strokes are caused by bleeding in the brain, which aspirin can make worse. Only a brain scan can tell the difference, so give nothing by mouth and call 999.'],
-      ['Should I take aspirin during a heart attack?', 'Only if the 999 operator or a doctor tells you to, and not if you are allergic to aspirin. Call 999 first.'],
+      ['Should I take aspirin during a heart attack?', 'Call 999 first. Malaysia’s heart attack guideline advises chewing one 300mg aspirin tablet straight away, unless you already take aspirin regularly or are allergic to it. Don’t give aspirin for a suspected stroke.'],
       ['How long do you have to treat a stroke?', 'Clot-busting treatment must start within 4.5 hours of symptoms starting. Removing a large clot (thrombectomy) works best within 6 hours, and up to 24 hours in selected patients. The sooner, the better.'],
       ['Which hospitals in KL treat stroke?', 'Hospital Kuala Lumpur, Hospital Sungai Buloh, University Malaya Medical Centre and Hospital Canselor Tuanku Muhriz (UKM) have stroke units and can remove clots. In an emergency, call 999 and go to the nearest emergency department.'],
       ['Can women have a heart attack without chest pain?', 'Yes. Women, older people and people with diabetes are more likely to have breathlessness, nausea, unusual tiredness or back or jaw discomfort instead of classic chest pain.'],
     ],
     sources: [
+      ['Ministry of Health Malaysia — Clinical practice guideline: management of acute STEMI, 3rd edition (2014)', 'https://extranet.who.int/ncdccs/Data/MYS_D1_CPG%20Mx%20of%20Acute%20ST%20Segment%20Elevation%20MI%20STEMI%203rd%20Edition.pdf'],
       ['Department of Statistics Malaysia — Statistics on Causes of Death, Malaysia 2025 (18 Dec 2025)', 'https://www.dosm.gov.my/portal-main/release-content/statistics-on-causes-of-death-malaysia-2025'],
       ['Department of Statistics Malaysia — Statistics on Causes of Death, Malaysia 2024', 'https://www.dosm.gov.my/portal-main/release-content/statistics-on-causes-of-death-malaysia-2024'],
       ['National Heart Association of Malaysia — NCVD Acute Coronary Syndrome Registry Report 2020–2021', 'https://www.acrm.org.my/ncvd/documents/report/ACS%20Report%202020-2021_Final.pdf'],
@@ -593,7 +594,7 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk', 'High blood pres
       ['New Straits Times — IJN enhances heart attack emergency service (25 Apr 2019)', 'https://www.nst.com.my/amp/lifestyle/heal/2019/04/482786/ijn-enhances-heart-attack-emergency-service'],
       ['Institute for Public Health — National Health and Morbidity Survey 2023 fact sheet', 'https://iku.moh.gov.my/images/nhms2023/fact-sheet-nhms-2023.pdf'],
     ],
-    related: ['clinic-or-emergency-department', 'headaches-malaysia', 'check-blood-pressure-at-home'],
+    related: ['sakit-dada-chest-pain-malaysia', 'clinic-or-emergency-department', 'check-blood-pressure-at-home'],
   },
 
   /* ------------------------------------------------------------------ */

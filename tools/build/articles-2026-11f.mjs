@@ -325,7 +325,7 @@ ${figure('caring-hands', 'An older person’s hands held gently by another perso
       ['NHS — Herpes simplex eye infections (Sep 2026)', 'https://www.nhs.uk/conditions/herpes-simplex-eye-infections/'],
       ['Royal Children’s Hospital Melbourne — Herpes simplex gingivostomatitis', 'https://www.rch.org.au/kidsinfo/fact_sheets/Herpes_simplex_gingivostomatitis/'],
     ],
-    related: ['hfmd-children-malaysia', 'anaemia-iron-deficiency-malaysia', 'blood-test-results-explained-malaysia'],
+    related: ['sakit-gigi-toothache-malaysia', 'hfmd-children-malaysia', 'anaemia-iron-deficiency-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

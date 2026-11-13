@@ -428,7 +428,7 @@ ${figure('morning-walk', 'People walking in a park in the morning', 'Losing weig
       ['Sinar Daily — “Gastric” could actually be stomach cancer (2026)', 'https://www.sinardaily.my/article/733571/focus/national/gastric-could-actually-be-stomach-cancer---dr-sou-jing-kimnbsp'],
       ['NHS — Indigestion and heartburn in pregnancy', 'https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/indigestion-and-heartburn/'],
     ],
-    related: ['stomach-pain-gastric-malaysia', 'stroke-heart-attack-kuala-lumpur', 'bmi-calculator-malaysia'],
+    related: ['sakit-dada-chest-pain-malaysia', 'stomach-pain-gastric-malaysia', 'stroke-heart-attack-kuala-lumpur'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -629,7 +629,7 @@ ${figure('yoga-balance', 'A woman holding a yoga balance pose on a rock by the s
       ['Utusan Malaysia — Unlicensed bone-setting can cause paralysis (Mar 2025)', 'https://www.utusan.com.my/gaya/2025/03/guna-khidmat-bone-setting-tidak-bertauliah-boleh-sebabkan-lumpuh/'],
       ['The Star — Offering a second chance to injured workers (Apr 2026)', 'https://www.thestar.com.my/lifestyle/health/health-matters/2026/04/27/offering-a-second-chanceto-injured-workers'],
     ],
-    related: ['frozen-shoulder-pain-malaysia', 'clinic-or-emergency-department', 'medical-certificate-mc-malaysia'],
+    related: ['sakit-pinggang-lower-back-pain-malaysia', 'frozen-shoulder-pain-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
