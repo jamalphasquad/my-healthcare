@@ -693,7 +693,7 @@ ${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'Screeni
       ['NHS — What happens at your cervical screening appointment (Jun 2025)', 'https://www.nhs.uk/tests-and-treatments/cervical-screening/what-happens/'],
       ['US National Cancer Institute — Understanding abnormal HPV and Pap test results', 'https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results'],
     ],
-    related: ['hpv-vaccine-malaysia', 'breast-cancer-screening-malaysia', 'free-health-screening-malaysia'],
+    related: ['tanda-tanda-awal-kanser-cancer-signs-malaysia', 'hpv-vaccine-malaysia', 'breast-cancer-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

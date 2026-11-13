@@ -428,7 +428,7 @@ ${figure('morning-walk', 'People walking in a park in the morning', 'Losing weig
       ['Sinar Daily — “Gastric” could actually be stomach cancer (2026)', 'https://www.sinardaily.my/article/733571/focus/national/gastric-could-actually-be-stomach-cancer---dr-sou-jing-kimnbsp'],
       ['NHS — Indigestion and heartburn in pregnancy', 'https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/indigestion-and-heartburn/'],
     ],
-    related: ['sakit-dada-chest-pain-malaysia', 'stomach-pain-gastric-malaysia', 'stroke-heart-attack-kuala-lumpur'],
+    related: ['sakit-dada-chest-pain-malaysia', 'stomach-pain-gastric-malaysia', 'cara-hilangkan-sedu-hiccups-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

@@ -350,7 +350,7 @@ ${figure('bp-check-desk', 'A blood pressure check at a desk', 'High blood pressu
       ['Cleveland Clinic — Right side chest pain (Jun 2023)', 'https://my.clevelandclinic.org/health/symptoms/25070-right-side-chest-pain'],
       ['HealthyChildren.org (AAP) — Chest pain in children (Oct 2020)', 'https://www.healthychildren.org/English/health-issues/conditions/heart/Pages/Chest-Pain-in-Children.aspx'],
     ],
-    related: ['stroke-heart-attack-kuala-lumpur', 'gerd-acid-reflux-malaysia', 'anxiety-malaysia'],
+    related: ['tanda-sakit-jantung-heart-disease-signs-malaysia', 'stroke-heart-attack-kuala-lumpur', 'gerd-acid-reflux-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

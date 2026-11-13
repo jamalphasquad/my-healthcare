@@ -253,7 +253,7 @@ ${figure('blood-sample', 'A blood sample tube held for testing', 'A blood test f
       ['National Kidney Foundation of Malaysia — FAQs', 'https://nkf.org.my/prevention/education-tools-resources/faqs/'],
       ['National Kidney Foundation (US) — 5 common myths about kidney disease prevention (2018)', 'https://www.kidney.org/news-stories/5-common-myths-about-kidney-disease-prevention'],
     ],
-    related: ['kencing-berdarah-blood-in-urine-malaysia', 'normal-blood-sugar-level-malaysia', 'blood-pressure-cholesterol-malaysia'],
+    related: ['pantang-larang-makanan-pesakit-buah-pinggang-kidney-diet-malaysia', 'kencing-berdarah-blood-in-urine-malaysia', 'normal-blood-sugar-level-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -376,7 +376,7 @@ ${figure('medic-stethoscope', 'A doctor holding a stethoscope', 'A preventer inh
       ['Ministry of Health Malaysia, infosihat — Jerebu', 'https://infosihat.moh.gov.my/isu-semasa/51-jerebu.html'],
       ['The Star — Lung issues among top silent killers (Sep 2026)', 'https://www.thestar.com.my/news/nation/2026/09/15/lung-issues-among-top-silent-killers'],
     ],
-    related: ['haze-air-quality-klang-valley', 'persistent-cough-malaysia', 'allergies-resdung-antihistamines-malaysia'],
+    related: ['haze-air-quality-klang-valley', 'prednisolone-steroid-untuk-apa-malaysia', 'allergies-resdung-antihistamines-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

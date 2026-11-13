@@ -445,7 +445,7 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['Göbel et al. — Peppermint oil in the acute treatment of tension-type headache (Schmerz, 2016)', 'https://pubmed.ncbi.nlm.nih.gov/27106030/'],
       ['Borhani Haghighi et al. — Cutaneous application of menthol 10% for migraine (Int J Clin Pract, 2010)', 'https://pubmed.ncbi.nlm.nih.gov/20456191/'],
     ],
-    related: ['vertigo-dizziness-malaysia', 'stroke-heart-attack-kuala-lumpur', 'anxiety-malaysia'],
+    related: ['sakit-kepala-sebelah-kiri-kanan-headache-malaysia', 'vertigo-dizziness-malaysia', 'stroke-heart-attack-kuala-lumpur'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -644,7 +644,7 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
       ['GOV.UK — Bowel cancer screening: having a colonoscopy (Jun 2025)', 'https://www.gov.uk/government/publications/bowel-cancer-screening-colonoscopy/bowel-cancer-screening-having-a-colonoscopy-fit'],
       ['American Cancer Society — Survival rates for colorectal cancer (Jan 2026)', 'https://www.cancer.org/cancer/types/colon-rectal-cancer/detection-diagnosis-staging/survival-rates.html'],
     ],
-    related: ['piles-buasir-malaysia', 'free-health-screening-malaysia', 'stomach-pain-gastric-malaysia'],
+    related: ['tanda-tanda-awal-kanser-cancer-signs-malaysia', 'piles-buasir-malaysia', 'free-health-screening-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -767,7 +767,7 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['Chaddha et al. — Device and non-device-guided slow breathing to reduce blood pressure (2019)', 'https://pubmed.ncbi.nlm.nih.gov/31331557/'],
       ['American College of Cardiology — SAMSON trial summary (Nov 2020)', 'https://www.acc.org/Latest-in-Cardiology/Articles/2020/11/12/20/28/sun-1028am-SAMSON-aha-2020'],
     ],
-    related: ['normal-heart-rate-palpitations-malaysia', 'low-blood-pressure-darah-rendah-malaysia', 'check-blood-pressure-at-home'],
+    related: ['bacaan-kolesterol-normal-cholesterol-malaysia', 'tanda-sakit-jantung-heart-disease-signs-malaysia', 'check-blood-pressure-at-home'],
   },
 
   /* ------------------------------------------------------------------ */

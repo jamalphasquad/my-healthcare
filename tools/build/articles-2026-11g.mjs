@@ -686,7 +686,7 @@ ${figure('morning-walk', 'A woman walking along a tree-lined path in morning lig
       ['The Bottom Line — REVERT trial summary (Lancet, 2015)', 'https://www.thebottomline.org.uk/summaries/REVERT/'],
       ['Patient.info — Palpitations', 'https://patient.info/heart-health/palpitations-leaflet'],
     ],
-    related: ['blood-pressure-cholesterol-malaysia', 'low-blood-pressure-darah-rendah-malaysia', 'stroke-heart-attack-kuala-lumpur'],
+    related: ['tanda-sakit-jantung-heart-disease-signs-malaysia', 'blood-pressure-cholesterol-malaysia', 'low-blood-pressure-darah-rendah-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

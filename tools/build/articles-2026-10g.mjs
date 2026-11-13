@@ -103,12 +103,12 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'The PeKa 
   /* ------------------------------------------------------------------ */
   {
     slug: 'normal-blood-sugar-level-malaysia',
-    title: 'Normal blood sugar levels and HbA1c: charts, prediabetes and early signs of diabetes',
-    crumb: 'Normal blood sugar levels',
-    desc: 'Normal blood sugar levels in mmol/L, HbA1c normal range, prediabetes and diabetes cut-offs under Malaysian guidelines, targets, low sugar and early signs of diabetes.',
+    title: 'Normal blood sugar levels (bacaan gula normal) and HbA1c: charts, prediabetes and early signs of diabetes',
+    crumb: 'Normal blood sugar (bacaan gula normal)',
+    desc: 'Normal blood sugar levels (bacaan gula normal) in mmol/L, HbA1c normal range, prediabetes and diabetes cut-offs under Malaysian guidelines, targets, low sugar and early signs of diabetes.',
     excerpt: 'What is a normal blood sugar level, and what does your HbA1c result mean? Clear charts using Malaysia’s own guideline cut-offs, the early signs of diabetes (tanda kencing manis), targets if you have diabetes, and when to get tested.',
     standfirst: 'About 1 in 6 Malaysian adults has diabetes, and 2 in 5 of them don’t know it. A simple blood test can tell you whether your sugar is normal, in the prediabetes range, or high enough to be diabetes. Here are the numbers doctors in Malaysia use, and what to do about your result.',
-    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: '2026-11-13', author: AUTHOR, news: false, medical: true,
     about: ['Blood glucose', 'HbA1c', 'Diabetes mellitus', 'Kencing manis'],
     image: 'glucometer', imageAlt: 'A blood glucose meter and test strips used for a fingerprick sugar test',
     keyPoints: [
