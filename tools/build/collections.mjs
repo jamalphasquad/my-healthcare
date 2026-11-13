@@ -31,17 +31,41 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
 </tbody></table></div>
 <p>Hours can change on public holidays and during Ramadan, so call the clinic before you go.</p>`;
 // Questions people search for about clinics in a place, answered from the listings.
-function placeFaqs(label, here, pool) {
+const allDay = (c) => !!c.hours && [0, 1, 2, 3, 4, 5, 6].every((d) => (c.hours[d] || []).some(([a, b]) => a === 0 && b === 1440));
+function placeFaqs(label, here, pool, info = {}) {
   const weekend = pool.filter((c) => weekendDays(c).length);
-  const late = pool.filter((c) => c.hours && latestClose(c.hours) >= 1200).sort((x, y) => latestClose(y.hours) - latestClose(x.hours));
+  // 24-hour clinics would read as "open until midnight", so the latest-closing answer skips them.
+  const late = pool.filter((c) => c.hours && !allDay(c) && latestClose(c.hours) >= 1200).sort((x, y) => latestClose(y.hours) - latestClose(x.hours));
+  const day24 = pool.filter(allDay);
+  // Local guides (areas with AREA_INFO.public) also answer the 24-hour question, pointing to the nearest emergency department.
+  const er = (info.public || []).find((f) => f.emergency);
+  const faq24 = info.public ? [[`Is there a 24-hour clinic in or near ${label}?`, day24.length
+    ? `${list(day24.map((c) => `<a href="/clinics/${c.slug}/">${esc(c.name)}</a>`))} ${day24.length > 1 ? 'are' : 'is'} open 24 hours.${er ? ` For emergencies, ${esc(er.name)} has a 24-hour emergency department.` : ''}`
+    : `None of the clinics we list in or near ${esc(label)} are open 24 hours. See our list of <a href="/clinics/open-24-hours/">24-hour clinics</a>${er ? `, and for emergencies go to ${esc(er.name)}, which has a 24-hour emergency department, or call 999` : ''}.`]] : [];
   return [
     [`Which clinics are in ${label}?`, here.map((c) => `<a href="/clinics/${c.slug}/">${esc(c.name)}</a>${c.addressLine ? `, ${esc(c.addressLine)}` : ''}`).join('; ') + '.'],
     [`Is there a clinic open on weekends in or near ${label}?`, weekend.length
       ? `${list(weekend.map((c) => `${esc(c.name)} (${weekendDays(c).map((d) => DAYS[d]).join(' and ')})`))} ${weekend.length > 1 ? 'have' : 'has'} weekend hours.`
       : `None of the listed clinics in or near ${esc(label)} open at weekends. See our list of <a href="/clinics/open-saturday/">clinics open on Saturday</a>.`],
     ...(late.length ? [[`Which clinic near ${label} is open latest?`, `${esc(late[0].name)} is open until ${time(latestClose(late[0].hours))} on some days. Check the clinic page for each day’s hours.`]] : []),
+    ...faq24,
+    ...(info.faqs || []),
   ];
 }
+
+// Local guide section for areas with researched public facilities: government clinics, dental clinics and hospitals.
+function publicSection(label, info) {
+  if (!info.public?.length) return '';
+  const rows = info.public.map((f) => `<tr><td><strong>${esc(f.name)}</strong>${f.type ? `<br><span style="font-size:14px;color:var(--muted-2)">${esc(f.type)}</span>` : ''}</td><td>${esc(f.address || '')}</td><td>${f.note || ''}</td></tr>`).join('\n');
+  return `<h2 id="public">Klinik Kesihatan, dental clinics and hospitals near ${esc(label)}</h2>
+${info.publicIntro ? `<p>${info.publicIntro}</p>` : ''}<div class="table-wrap"><table><thead><tr><th>Facility</th><th>Address</th><th>Good to know</th></tr></thead><tbody>
+${rows}
+</tbody></table></div>
+<p>Government clinics charge Malaysians RM1 for an outpatient visit. See our guides to <a href="/articles/klinik-kesihatan-malaysia/">Klinik Kesihatan</a>, <a href="/articles/klinik-pergigian-kerajaan-malaysia/">government dental clinics</a> and <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a>. In an emergency, call <a href="tel:999">999</a>.</p>
+`;
+}
+const sourcesNote = (info) => (info.sources?.length ? `<p style="font-size:14px;color:var(--muted-2)">Sources for public facility details: ${info.sources.map(([t, u]) => `<a href="${u}" target="_blank" rel="noopener">${esc(t)}</a>`).join('; ')}.</p>
+` : '');
 
 // --- shared page template --------------------------------------------------------------
 function page(p) {
@@ -305,8 +329,8 @@ ${[...new Set(cs.map(stateName))].map((st) => `<h3>Klinik 24 jam in ${esc(st)}</
     const pool = [...here, ...nearby.filter((r) => r.km <= 6).map((r) => r.c)];
     const svc = [...new Set(here.flatMap((c) => c.services.map((s) => s.name)))];
     const where = `${a.label}${a.locality && a.locality !== a.label ? `, ${a.locality}` : ''}`;
-    const faqs = placeFaqs(a.label, here, pool);
-    const title = placeTitle(a.label, where);
+    const faqs = placeFaqs(a.label, here, pool, info);
+    const title = info.title || placeTitle(a.label, where);
     const p = {
       slug: a.slug, crumb: a.label, name: `Clinics in ${where}`, place: where, geo: a.geo, region: a.region,
       mapQuery: `${a.label}, ${a.locality}, Malaysia`,
@@ -320,11 +344,11 @@ ${[...new Set(cs.map(stateName))].map((st) => `<h3>Klinik 24 jam in ${esc(st)}</
       ].filter(Boolean),
       listHeading: `Clinics in ${esc(a.label)}`,
       body: (info.transit ? `<h2 id="getting-there" style="margin-top:0">Getting there</h2><p>${esc(info.transit)}</p>
-` : '') + hoursTable(here, !info.transit),
+` : '') + hoursTable(here, !info.transit) + publicSection(a.label, info) + sourcesNote(info),
       faqs, nearby, nearbyHeading: `Other clinics near ${esc(a.label)}`,
       clinics: here, checked, where: `in ${esc(a.label)}`, topics,
       title: cut(title, 60),
-      desc: cut(`Clinics in ${where}: ${list(here.map((c) => c.name))}. Opening hours, phone numbers and directions, plus ${plural(nearby.length, 'other clinic')} nearby.${here.length === 1 ? ` Updated ${checked.replace(/^\d+ /, '')}.` : ''}`, 155),
+      desc: info.desc || cut(`Clinics in ${where}: ${list(here.map((c) => c.name))}. Opening hours, phone numbers and directions, plus ${plural(nearby.length, 'other clinic')} nearby.${here.length === 1 ? ` Updated ${checked.replace(/^\d+ /, '')}.` : ''}`, 155),
       links: [['Nearby areas', nearby.map(({ c }) => [`/clinics/${c.areaSlug}/`, c.areaLabel]).filter((l, i, all) => all.findIndex((x) => x[0] === l[0]) === i)], ['Browse by need', serviceLinks], ['Health guides', guideLinks(articles, here.every((c) => c.serviceKeys.includes('aesthetic')))]],
     };
     page(p);
