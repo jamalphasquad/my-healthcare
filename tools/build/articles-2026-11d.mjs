@@ -536,6 +536,7 @@ ${figure('treatment-room', 'A clean, white clinic treatment room with an examina
     clinicsIntro: 'Many GP clinics can confirm a wart, freeze or remove it, and refer you to a dermatologist for stubborn or unusual growths. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states. Call ahead to check they offer cryotherapy.',
     clinicLinks: [['/clinics/near-me/', 'Clinics near me'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/aesthetic-clinics/', 'Aesthetic clinics']],
     faqs: [
+      ['What is ketuat in English?', 'Ketuat means warts: small, rough growths on the skin caused by the human papillomavirus (HPV). A wart on the sole of the foot is called a verruca or plantar wart.'],
       ['What causes ketuat?', 'Warts (ketuat) are caused by the human papillomavirus (HPV), which gets into the skin through small cuts or breaks.'],
       ['Do warts go away on their own?', 'Often, yes. Half of children’s warts disappear within a year and two-thirds within two years. Adults’ warts can take longer.'],
       ['What is the best treatment for warts?', 'Salicylic acid used every day for up to 12 weeks is the best-studied home treatment. Freezing at a clinic is an alternative, and the two can be combined.'],
