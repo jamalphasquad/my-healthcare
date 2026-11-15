@@ -290,7 +290,8 @@ ${[...new Set(cs.map(stateName))].map((st) => `<h3>Klinik 24 jam in ${esc(st)}</
     },
   ];
   // Town pages for places outside Kuala Lumpur with several clinics, e.g. Petaling Jaya.
-  const towns = [...new Set(clinics.map((c) => c.locality))].filter((t) => t !== 'Kuala Lumpur');
+  // A town with an area page of the same name (e.g. Ampang, Kajang) uses the area page instead.
+  const towns = [...new Set(clinics.map((c) => c.locality))].filter((t) => t !== 'Kuala Lumpur' && !areas.some((a) => a.slug === slugify(t)));
   for (const t of towns) {
     const st = clinics.find((c) => c.locality === t).state;
     const stName = st === 'Pulau Pinang' ? 'Penang' : st;
@@ -317,7 +318,7 @@ ${[...new Set(cs.map(stateName))].map((st) => `<h3>Klinik 24 jam in ${esc(st)}</
     .map((n) => ({ n, slug: slugify(n.name), clinics: clinics.filter((c) => c.network?.name === n.name) }))
     .filter((x) => x.clinics.length >= MIN_CLINICS);
   nets.forEach((x) => claim(x.slug, 'network page'));
-  const networkLinks = nets.map((x) => [`/clinics/${x.slug}/`, `${x.n.name} branches`]);
+  const networkLinks = nets.map((x) => [`/clinics/${x.slug}/`, `${x.n.name} ${(x.n.unit || [, "branches"])[1]}`]);
   const areaLinks = areas.map((a) => [a.href, a.label]);
   areas.forEach((a) => claim(a.slug, 'area page'));
 
@@ -380,21 +381,23 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
 
   // ---- network pages
   for (const { n, slug, clinics: cs } of nets) {
+    const [one, many] = n.unit || ['branch', 'branches']; // government clinics are "clinics", chains have "branches"
+    const Many = many[0].toUpperCase() + many.slice(1), One = one[0].toUpperCase() + one.slice(1);
     const p = {
-      slug, crumb: `${n.name} branches`, name: `${n.name} branches`, place: 'Kuala Lumpur',
-      eyebrow: 'Clinic network', h1: `<em>${esc(n.name)}</em> branches`,
-      intro: n.blurb ? n.blurb.replace(/<[^>]+>/g, '') : `All ${n.name} branches we list, with opening hours and directions.`,
-      facts: [plural(cs.length, 'branch', 'branches') + ' listed', `${plural(new Set(cs.map((c) => c.locality)).size, 'town')}`, `${plural(cs.filter((c) => weekendDays(c).length).length, 'branch', 'branches')} open at weekends`],
-      listHeading: `All ${esc(n.name)} branches`,
-      body: `<h2 id="table" style="margin-top:0">Branch hours at a glance</h2>
-<div class="table-wrap"><table><thead><tr><th>Branch</th><th>Area</th><th>Weekdays</th><th>Weekend</th></tr></thead><tbody>
+      slug, crumb: `${n.name} ${many}`, name: `${n.name} ${many}`, place: 'Kuala Lumpur',
+      eyebrow: 'Clinic network', h1: `<em>${esc(n.name)}</em> ${many}`,
+      intro: n.blurb ? n.blurb.replace(/<[^>]+>/g, '') : `All ${n.name} ${many} we list, with opening hours and directions.`,
+      facts: [plural(cs.length, one, many) + ' listed', `${plural(new Set(cs.map((c) => c.locality)).size, 'town')}`, `${plural(cs.filter((c) => weekendDays(c).length).length, one, many)} open at weekends`],
+      listHeading: `All ${esc(n.name)} ${many}`,
+      body: `<h2 id="table" style="margin-top:0">${One} hours at a glance</h2>
+<div class="table-wrap"><table><thead><tr><th>${One}</th><th>Area</th><th>Weekdays</th><th>Weekend</th></tr></thead><tbody>
 ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><td><a href="/clinics/${c.areaSlug}/">${esc(c.areaLabel)}</a></td><td>${esc(dayHours(c, 1))}</td><td>${esc(weekendDays(c).length ? weekendDays(c).map((d) => `${DAYS[d].slice(0, 3)} ${rangeText(c.hours[d])}`).join('; ') : 'Closed')}</td></tr>`).join('\n')}
 </tbody></table></div>${n.url ? `<p><a href="${n.url}" target="_blank" rel="noopener">Visit the ${esc(n.name)} website</a></p>` : ''}`,
-      faqs: [[`How many ${n.name} branches are there?`, `We list ${plural(cs.length, 'branch', 'branches')}: ${list(cs.map((c) => `${esc(c.name)} (${esc(c.areaLabel)})`))}.`]],
+      faqs: [[`How many ${n.name} ${many} are there?`, `We list ${plural(cs.length, one, many)}: ${list(cs.map((c) => `${esc(c.name)} (${esc(c.areaLabel)})`))}.`]],
       clinics: cs, checked, where: `in the ${esc(n.name)} network`, topics,
-      title: cut(`${n.name} Branches: Locations, Hours & Phone`, 60),
-      desc: cut(`All ${cs.length} ${n.name} branches in ${list([...new Set(cs.map((c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state)))])}, with addresses, opening hours, phone numbers and directions for each.`, 155),
-      links: [['Branch areas', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks], ['Health guides', guideLinks(articles, cs.every((c) => c.serviceKeys.includes('aesthetic')))]],
+      title: cut(`${n.name} ${Many}: Locations, Hours & Phone`, 60),
+      desc: cut(`All ${cs.length} ${n.name} ${many} in ${list([...new Set(cs.map((c) => (c.state === 'Pulau Pinang' ? 'Penang' : c.state)))])}, with addresses, opening hours, phone numbers and directions for each.`, 155),
+      links: [[`${One} areas`, [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks], ['Health guides', guideLinks(articles, cs.every((c) => c.serviceKeys.includes('aesthetic')))]],
     };
     page(p);
     out.networks.push({ slug, url: `/clinics/${slug}/`, label: n.name, title: p.name, desc: p.desc, image: cs[0].image, keywords: n.name });

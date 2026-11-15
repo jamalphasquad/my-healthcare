@@ -89,7 +89,7 @@
 <h1 id="hero-h" class="h-hero">Calm, trusted care, <em>close to home.</em></h1>
 <p class="lede" style="max-width:520px">Find a clinic near you in Kuala Lumpur, Selangor and across Malaysia — with opening hours, directions and clear health guidance written for Malaysians.</p>
 <form class="finder" id="finder" role="search" aria-label="Find a clinic" action="/clinics/">
-<div class="finder__field"><span class="finder__label" id="finder-service-label">I need</span><select id="finder-service" name="service" aria-labelledby="finder-service-label" data-dropdown><option value="all">Any service</option><option value="gp">General practice</option><option value="chronic">Chronic disease care</option><option value="womens">Women's health &amp; antenatal</option><option value="screening">Health screening</option><option value="vaccination">Vaccinations</option><option value="minor-surgery">Minor surgery &amp; wound care</option><option value="occupational">Occupational health</option><option value="mental">Mental health counselling</option><option value="aesthetic">Aesthetics &amp; skin</option><option value="weight">Weight management</option></select></div>
+<div class="finder__field"><span class="finder__label" id="finder-service-label">I need</span><select id="finder-service" name="service" aria-labelledby="finder-service-label" data-dropdown><option value="all">Any service</option><option value="gp">General practice</option><option value="chronic">Chronic disease care</option><option value="children">Children &amp; elderly</option><option value="womens">Women's health &amp; antenatal</option><option value="screening">Health screening</option><option value="vaccination">Vaccinations</option><option value="minor-surgery">Minor surgery &amp; wound care</option><option value="circumcision">Circumcision (sunat)</option><option value="occupational">Occupational health</option><option value="mental">Mental health counselling</option><option value="aesthetic">Aesthetics &amp; skin</option><option value="weight">Weight management</option></select></div>
 <div class="finder__field"><span class="finder__label" id="finder-area-label">Near</span><select id="finder-area" name="area" aria-labelledby="finder-area-label" data-dropdown><option value="all">Anywhere</option><option value="kuala-lumpur">Kuala Lumpur</option><option value="selangor">Selangor</option><option value="negeri-sembilan">Negeri Sembilan</option><option value="melaka">Melaka</option><option value="johor">Johor</option><option value="perak">Perak</option><option value="pulau-pinang">Penang</option></select></div>
 <button class="btn btn--sq" type="submit">Find clinics</button>
 </form>
@@ -97,7 +97,7 @@
 </div>
 <div class="hero__media">
 <img src="/assets/img/kl-skyline-960.webp" srcset="/assets/img/kl-skyline-480.webp 480w, /assets/img/kl-skyline-960.webp 960w, /assets/img/kl-skyline-1280.webp 1280w" sizes="(max-width: 960px) 100vw, 560px" alt="Kuala Lumpur skyline with Menara Kuala Lumpur under a blue sky" width="960" height="640" fetchpriority="high" decoding="async">
-<div class="hero__badge"><span class="pulse" aria-hidden="true"></span><span><strong class="js-open-count">44 clinics listed</strong><br><span class="sub">across Kuala Lumpur</span></span></div>
+<div class="hero__badge"><span class="pulse" aria-hidden="true"></span><span><strong class="js-open-count">121 clinics listed</strong><br><span class="sub">across Kuala Lumpur</span></span></div>
 </div>
 </section>
 
@@ -171,14 +171,14 @@
 
 <section id="clinics" class="band" aria-labelledby="cl-h" style="scroll-margin-top:70px">
 <div class="wrap section">
-<div data-directory id="directory" data-src="/assets/cards/all.json?v=a7650b5bd9" data-page-size="12" style="scroll-margin-top:90px">
+<div data-directory id="directory" data-src="/assets/cards/all.json?v=c0ea39319e" data-page-size="12" style="scroll-margin-top:90px">
 <div class="section-head">
 <div class="stack g10"><span class="eyebrow">Clinic directory</span><h2 id="cl-h" class="h-section">Clinics near you</h2></div>
 <div class="dir-tools"><button type="button" class="chip near-btn" data-near-me hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>Near me</button>
 <label class="switch"><input type="checkbox" id="open-now"><span class="switch__track" aria-hidden="true"></span>Open now</label></div>
 </div>
 <p class="near-msg" role="status" hidden></p>
-<label class="search dir-search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search clinics</span><input id="dir-q" type="search" placeholder="Search 44 clinics by name, area, postcode or service" autocomplete="off" enterkeyhint="search"></label>
+<label class="search dir-search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search clinics</span><input id="dir-q" type="search" placeholder="Search 121 clinics by name, area, postcode or service" autocomplete="off" enterkeyhint="search"></label>
 <div class="chips chips-scroll" role="group" aria-label="Filter by state" style="margin-bottom:12px">
 <button type="button" class="chip" data-filter-area="all" aria-pressed="true">All states</button>
 <button type="button" class="chip" data-filter-area="kuala-lumpur" aria-pressed="false">Kuala Lumpur</button>
@@ -193,16 +193,18 @@
 <button type="button" class="chip chip--soft" data-filter-service="all" aria-pressed="true">All services</button>
 <button type="button" class="chip chip--soft" data-filter-service="gp" aria-pressed="false">General practice</button>
 <button type="button" class="chip chip--soft" data-filter-service="chronic" aria-pressed="false">Chronic disease care</button>
+<button type="button" class="chip chip--soft" data-filter-service="children" aria-pressed="false">Children &amp; elderly</button>
 <button type="button" class="chip chip--soft" data-filter-service="womens" aria-pressed="false">Women's health &amp; antenatal</button>
 <button type="button" class="chip chip--soft" data-filter-service="screening" aria-pressed="false">Health screening</button>
 <button type="button" class="chip chip--soft" data-filter-service="vaccination" aria-pressed="false">Vaccinations</button>
 <button type="button" class="chip chip--soft" data-filter-service="minor-surgery" aria-pressed="false">Minor surgery &amp; wound care</button>
+<button type="button" class="chip chip--soft" data-filter-service="circumcision" aria-pressed="false">Circumcision (sunat)</button>
 <button type="button" class="chip chip--soft" data-filter-service="occupational" aria-pressed="false">Occupational health</button>
 <button type="button" class="chip chip--soft" data-filter-service="mental" aria-pressed="false">Mental health counselling</button>
 <button type="button" class="chip chip--soft" data-filter-service="aesthetic" aria-pressed="false">Aesthetics &amp; skin</button>
 <button type="button" class="chip chip--soft" data-filter-service="weight" aria-pressed="false">Weight management</button>
 </div>
-<p class="result-text" aria-live="polite">44 clinics listed &middot; showing 1–12</p>
+<p class="result-text" aria-live="polite">121 clinics listed &middot; showing 1–12</p>
 <div class="clinic-grid">
 <article class="clinic" data-area="kuala-lumpur" data-services="gp" data-q="klinik segara the intermark jalan tun razak kuala lumpur lot 306 level 3 mall 348 50400 general practice weekdays 8 30am 5pm sat mornings" data-geo="3.1616636,101.720355" data-hours='{"0":[],"1":[[510,1020]],"2":[[510,1020]],"3":[[510,1020]],"4":[[510,1020]],"5":[[510,1020]],"6":[[540,750]]}'>
 <a class="clinic__media" href="/clinics/klinik-segara-intermark/" tabindex="-1" aria-hidden="true"><img src="/assets/img/stethoscope-desk-960.webp" srcset="/assets/img/stethoscope-desk-480.webp 480w, /assets/img/stethoscope-desk-960.webp 960w, /assets/img/stethoscope-desk-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 380px" alt="Illustrative photo: a stethoscope on a doctor’s desk" width="960" height="640" loading="lazy" decoding="async"><span class="status">See hours</span></a>
@@ -389,7 +391,7 @@
 <nav class="pager" aria-label="Clinic result pages" hidden></nav>
 <p class="note">Opening status uses Malaysia time (GMT+8) and published hours; please call ahead on public holidays.</p>
 </div>
-<nav class="browse" aria-label="Browse clinics"><div class="browse__group"><span class="browse__h">Browse by need</span><div class="chips"><a class="chip" href="/clinics/near-me/">Clinics near me</a><a class="chip" href="/clinics/open-24-hours/">Open 24 hours</a><a class="chip" href="/clinics/open-late/">Open late</a><a class="chip" href="/clinics/open-saturday/">Open on Saturday</a><a class="chip" href="/clinics/open-sunday/">Open on Sunday</a><a class="chip" href="/clinics/aesthetic-clinics/">Aesthetic clinics</a><a class="chip" href="/clinics/gp-clinics/">GP clinics</a><a class="chip" href="/clinics/peka-b40-clinics/">PeKa B40 clinics</a><a class="chip" href="/clinics/fomema-clinics/">FOMEMA clinics</a><a class="chip" href="/clinics/perkeso-panel-clinics/">PERKESO clinics</a><a class="chip" href="/clinics/petaling-jaya/">Petaling Jaya</a><a class="chip" href="/clinics/melaka/">Melaka</a><a class="chip" href="/clinics/shah-alam/">Shah Alam</a><a class="chip" href="/clinics/batu-caves/">Batu Caves</a><a class="chip" href="/clinics/sepang/">Sepang</a></div></div><div class="browse__group"><span class="browse__h">Clinic networks</span><div class="chips"><a class="chip" href="/clinics/klinik-segara/">Klinik Segara branches</a><a class="chip" href="/clinics/enhanze/">Enhanze branches</a><a class="chip" href="/clinics/careclinics/">CareClinics branches</a></div></div></nav>
+<nav class="browse" aria-label="Browse clinics"><div class="browse__group"><span class="browse__h">Browse by need</span><div class="chips"><a class="chip" href="/clinics/near-me/">Clinics near me</a><a class="chip" href="/clinics/open-24-hours/">Open 24 hours</a><a class="chip" href="/clinics/open-late/">Open late</a><a class="chip" href="/clinics/open-saturday/">Open on Saturday</a><a class="chip" href="/clinics/open-sunday/">Open on Sunday</a><a class="chip" href="/clinics/aesthetic-clinics/">Aesthetic clinics</a><a class="chip" href="/clinics/gp-clinics/">GP clinics</a><a class="chip" href="/clinics/peka-b40-clinics/">PeKa B40 clinics</a><a class="chip" href="/clinics/fomema-clinics/">FOMEMA clinics</a><a class="chip" href="/clinics/perkeso-panel-clinics/">PERKESO clinics</a><a class="chip" href="/clinics/petaling-jaya/">Petaling Jaya</a><a class="chip" href="/clinics/melaka/">Melaka</a><a class="chip" href="/clinics/batu-caves/">Batu Caves</a><a class="chip" href="/clinics/sepang/">Sepang</a></div></div><div class="browse__group"><span class="browse__h">Clinic networks</span><div class="chips"><a class="chip" href="/clinics/klinik-segara/">Klinik Segara branches</a><a class="chip" href="/clinics/enhanze/">Enhanze branches</a><a class="chip" href="/clinics/careclinics/">CareClinics branches</a><a class="chip" href="/clinics/klinik-kesihatan/">Klinik Kesihatan clinics</a><a class="chip" href="/clinics/klinik-mediviron/">Klinik Mediviron branches</a><a class="chip" href="/clinics/qualitas-health/">Qualitas Health branches</a></div></div></nav>
 </div>
 </section>
 
@@ -472,36 +474,38 @@
 <img src="/assets/img/kl-city-park-960.webp" srcset="/assets/img/kl-city-park-480.webp 480w, /assets/img/kl-city-park-960.webp 960w, /assets/img/kl-city-park-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 560px" alt="Green park in Kuala Lumpur with city towers behind" width="960" height="720" loading="lazy" decoding="async">
 </div>
 <div class="stack g16" data-areas>
-<label class="search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search neighbourhoods</span><input type="search" data-area-q placeholder="Search 41 areas — e.g. Cheras, Petaling Jaya" autocomplete="off" aria-controls="area-list"></label>
+<label class="search" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B66" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span class="sr-only">Search neighbourhoods</span><input type="search" data-area-q placeholder="Search 43 areas — e.g. Cheras, Petaling Jaya" autocomplete="off" aria-controls="area-list"></label>
 <ul class="area-list" id="area-list">
+<li data-area="shah alam shah alam selangor"><a href="/clinics/shah-alam/"><span class="name">Clinics in Shah Alam</span><span class="count">17 clinics listed &middot; Shah Alam</span></a></li>
+<li data-area="ampang ampang selangor"><a href="/clinics/ampang/"><span class="name">Clinics in Ampang</span><span class="count">16 clinics listed &middot; Ampang</span></a></li>
+<li data-area="kajang kajang selangor"><a href="/clinics/kajang/"><span class="name">Clinics in Kajang</span><span class="count">15 clinics listed &middot; Kajang</span></a></li>
+<li data-area="puchong puchong selangor"><a href="/clinics/puchong/"><span class="name">Clinics in Puchong</span><span class="count">10 clinics listed &middot; Puchong</span></a></li>
+<li data-area="cyberjaya cyberjaya selangor"><a href="/clinics/cyberjaya/"><span class="name">Clinics in Cyberjaya</span><span class="count">9 clinics listed &middot; Cyberjaya</span></a></li>
+<li data-area="desa sri hartamas kuala lumpur kuala lumpur"><a href="/clinics/desa-sri-hartamas/"><span class="name">Clinics in Desa Sri Hartamas</span><span class="count">7 clinics listed &middot; Kuala Lumpur</span></a></li>
+<li data-area="mont kiara kuala lumpur kuala lumpur"><a href="/clinics/mont-kiara/"><span class="name">Clinics in Mont Kiara</span><span class="count">7 clinics listed &middot; Kuala Lumpur</span></a></li>
 <li data-area="bukit bintang kuala lumpur kuala lumpur"><a href="/clinics/bukit-bintang/"><span class="name">Clinics in Bukit Bintang</span><span class="count">2 clinics listed &middot; Kuala Lumpur</span></a></li>
+<li data-area="bukit jelutong shah alam selangor"><a href="/clinics/bukit-jelutong/"><span class="name">Clinics in Bukit Jelutong</span><span class="count">2 clinics listed &middot; Shah Alam</span></a></li>
 <li data-area="klia sepang selangor"><a href="/clinics/klia/"><span class="name">Clinics in KLIA</span><span class="count">2 clinics listed &middot; Sepang</span></a></li>
-<li data-area="mutiara damansara petaling jaya selangor"><a href="/clinics/mutiara-damansara/"><span class="name">Clinics in Mutiara Damansara</span><span class="count">2 clinics listed &middot; Petaling Jaya</span></a></li>
-<li data-area="ampang ampang selangor"><a href="/clinics/ampang/"><span class="name">Clinics in Ampang</span><span class="count">1 clinic listed &middot; Ampang</span></a></li>
-<li data-area="bachang melaka melaka"><a href="/clinics/bachang/"><span class="name">Clinics in Bachang</span><span class="count">1 clinic listed &middot; Melaka</span></a></li>
-<li data-area="bandar country homes rawang selangor"><a href="/clinics/bandar-country-homes/"><span class="name">Clinics in Bandar Country Homes</span><span class="count">1 clinic listed &middot; Rawang</span></a></li>
-<li data-area="bandar sri permaisuri kuala lumpur kuala lumpur"><a href="/clinics/bandar-sri-permaisuri/"><span class="name">Clinics in Bandar Sri Permaisuri</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
-<li data-area="bandar sri sendayan seremban negeri sembilan"><a href="/clinics/bandar-sri-sendayan/"><span class="name">Clinics in Bandar Sri Sendayan</span><span class="count">1 clinic listed &middot; Seremban</span></a></li>
-<li data-area="banting banting selangor"><a href="/clinics/banting/"><span class="name">Clinics in Banting</span><span class="count">1 clinic listed &middot; Banting</span></a></li>
-<li data-area="batu gajah batu gajah perak"><a href="/clinics/batu-gajah/"><span class="name">Clinics in Batu Gajah</span><span class="count">1 clinic listed &middot; Batu Gajah</span></a></li>
+<li data-area="mutiara damansara petaling jaya selangor" hidden><a href="/clinics/mutiara-damansara/"><span class="name">Clinics in Mutiara Damansara</span><span class="count">2 clinics listed &middot; Petaling Jaya</span></a></li>
+<li data-area="bachang melaka melaka" hidden><a href="/clinics/bachang/"><span class="name">Clinics in Bachang</span><span class="count">1 clinic listed &middot; Melaka</span></a></li>
+<li data-area="bandar country homes rawang selangor" hidden><a href="/clinics/bandar-country-homes/"><span class="name">Clinics in Bandar Country Homes</span><span class="count">1 clinic listed &middot; Rawang</span></a></li>
+<li data-area="bandar sri permaisuri kuala lumpur kuala lumpur" hidden><a href="/clinics/bandar-sri-permaisuri/"><span class="name">Clinics in Bandar Sri Permaisuri</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
+<li data-area="bandar sri sendayan seremban negeri sembilan" hidden><a href="/clinics/bandar-sri-sendayan/"><span class="name">Clinics in Bandar Sri Sendayan</span><span class="count">1 clinic listed &middot; Seremban</span></a></li>
+<li data-area="banting banting selangor" hidden><a href="/clinics/banting/"><span class="name">Clinics in Banting</span><span class="count">1 clinic listed &middot; Banting</span></a></li>
+<li data-area="batu gajah batu gajah perak" hidden><a href="/clinics/batu-gajah/"><span class="name">Clinics in Batu Gajah</span><span class="count">1 clinic listed &middot; Batu Gajah</span></a></li>
 <li data-area="bestari jaya bestari jaya selangor" hidden><a href="/clinics/bestari-jaya/"><span class="name">Clinics in Bestari Jaya</span><span class="count">1 clinic listed &middot; Bestari Jaya</span></a></li>
 <li data-area="bukit beruang melaka melaka" hidden><a href="/clinics/bukit-beruang/"><span class="name">Clinics in Bukit Beruang</span><span class="count">1 clinic listed &middot; Melaka</span></a></li>
-<li data-area="bukit jelutong shah alam selangor" hidden><a href="/clinics/bukit-jelutong/"><span class="name">Clinics in Bukit Jelutong</span><span class="count">1 clinic listed &middot; Shah Alam</span></a></li>
 <li data-area="cheras cheras selangor" hidden><a href="/clinics/cheras/"><span class="name">Clinics in Cheras</span><span class="count">1 clinic listed &middot; Cheras</span></a></li>
-<li data-area="cyberjaya cyberjaya selangor" hidden><a href="/clinics/cyberjaya/"><span class="name">Clinics in Cyberjaya</span><span class="count">1 clinic listed &middot; Cyberjaya</span></a></li>
 <li data-area="damansara heights kuala lumpur kuala lumpur" hidden><a href="/clinics/damansara-heights/"><span class="name">Clinics in Damansara Heights</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
 <li data-area="desa pandan kuala lumpur kuala lumpur" hidden><a href="/clinics/desa-pandan/"><span class="name">Clinics in Desa Pandan</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
-<li data-area="desa sri hartamas kuala lumpur kuala lumpur" hidden><a href="/clinics/desa-sri-hartamas/"><span class="name">Clinics in Desa Sri Hartamas</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
 <li data-area="george town george town pulau pinang" hidden><a href="/clinics/george-town/"><span class="name">Clinics in George Town</span><span class="count">1 clinic listed &middot; George Town</span></a></li>
 <li data-area="jalan gombak kuala lumpur kuala lumpur" hidden><a href="/clinics/jalan-gombak/"><span class="name">Clinics in Jalan Gombak</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
 <li data-area="jalan tun razak kuala lumpur kuala lumpur" hidden><a href="/clinics/jalan-tun-razak/"><span class="name">Clinics in Jalan Tun Razak</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
-<li data-area="kajang kajang selangor" hidden><a href="/clinics/kajang/"><span class="name">Clinics in Kajang</span><span class="count">1 clinic listed &middot; Kajang</span></a></li>
 <li data-area="kl sentral kuala lumpur kuala lumpur" hidden><a href="/clinics/kl-sentral/"><span class="name">Clinics in KL Sentral</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
 <li data-area="klebang chemor perak" hidden><a href="/clinics/klebang/"><span class="name">Clinics in Klebang</span><span class="count">1 clinic listed &middot; Chemor</span></a></li>
 <li data-area="mantin mantin negeri sembilan" hidden><a href="/clinics/mantin/"><span class="name">Clinics in Mantin</span><span class="count">1 clinic listed &middot; Mantin</span></a></li>
 <li data-area="masjid tanah masjid tanah melaka" hidden><a href="/clinics/masjid-tanah/"><span class="name">Clinics in Masjid Tanah</span><span class="count">1 clinic listed &middot; Masjid Tanah</span></a></li>
 <li data-area="mid valley kuala lumpur kuala lumpur" hidden><a href="/clinics/mid-valley/"><span class="name">Clinics in Mid Valley</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
-<li data-area="mont kiara kuala lumpur kuala lumpur" hidden><a href="/clinics/mont-kiara/"><span class="name">Clinics in Mont Kiara</span><span class="count">1 clinic listed &middot; Kuala Lumpur</span></a></li>
 <li data-area="pandamaran port klang selangor" hidden><a href="/clinics/pandamaran/"><span class="name">Clinics in Pandamaran</span><span class="count">1 clinic listed &middot; Port Klang</span></a></li>
 <li data-area="parit raja parit raja johor" hidden><a href="/clinics/parit-raja/"><span class="name">Clinics in Parit Raja</span><span class="count">1 clinic listed &middot; Parit Raja</span></a></li>
 <li data-area="phileo damansara petaling jaya selangor" hidden><a href="/clinics/phileo-damansara/"><span class="name">Clinics in Phileo Damansara</span><span class="count">1 clinic listed &middot; Petaling Jaya</span></a></li>
@@ -519,7 +523,7 @@
 <li data-area="bangsar" hidden><span class="soon"><span class="name">Bangsar</span><span class="count">Coming soon</span></span></li>
 </ul>
 <p class="area-empty" role="status" aria-live="polite"></p>
-<button type="button" class="area-more" data-area-more hidden>Show all 41 areas</button>
+<button type="button" class="area-more" data-area-more hidden>Show all 43 areas</button>
 </div>
 </div>
 </section>

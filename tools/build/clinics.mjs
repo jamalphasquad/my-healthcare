@@ -39,6 +39,7 @@
    }
 */
 import { CARECLINICS } from './careclinics-data.mjs';
+import { RESEARCHED_2026_11 } from './clinics-2026-11.mjs';
 
 export const daily = (a, b) => Object.fromEntries([0, 1, 2, 3, 4, 5, 6].map((d) => [d, [[a, b]]]));
 export const weekdays = (a, b) => Object.fromEntries([0, 1, 2, 3, 4, 5, 6].map((d) => [d, d === 0 || d === 6 ? [] : [[a, b]]]));
@@ -56,6 +57,13 @@ export const NETWORKS = {
     name: 'Klinik Segara',
     blurb: 'Klinik Segara is a group of general practice clinics sharing the Klinik Segara name, with branches across Kuala Lumpur and nearby Petaling Jaya, Subang Jaya, Puchong, Ampang and Cheras. Hours vary by branch, and several are office-hours clinics in commercial buildings, so check the branch page before you go.',
   },
+  // Government clinics. `unit` names the members on the network page ("clinics", not "branches").
+  kkm: {
+    name: 'Klinik Kesihatan', unit: ['clinic', 'clinics'],
+    blurb: 'Klinik Kesihatan are government health clinics run by the Ministry of Health (KKM). Malaysians pay RM1 to see a doctor and RM5 to see a specialist, and people aged 60 and over are treated free as outpatients. Most open on weekdays, and some have extended evening or weekend hours. Read our <a href="/articles/klinik-kesihatan-malaysia/">Klinik Kesihatan guide</a> for fees, services and what to bring.',
+  },
+  mediviron: { name: 'Klinik Mediviron', url: 'https://mediviron.com.my/' },
+  qualitas: { name: 'Qualitas Health', url: 'https://qualitashealth.com.my/' },
   enhanze: {
     name: 'Enhanze',
     url: 'https://enhanzeclinic.com/',
@@ -307,6 +315,7 @@ export const CLINICS = [
     areaServed: ['Bukit Bintang', 'KLCC', 'Kuala Lumpur'],
   },
   ...CARECLINICS,
+  ...RESEARCHED_2026_11,
 ];
 
 // Kuala Lumpur neighbourhoods shown as "coming soon" until they have listings.

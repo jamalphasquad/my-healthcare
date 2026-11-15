@@ -28,7 +28,7 @@ export const guideLinks = (articles, aesthetic, extra = []) => [...extra, ...(ae
   .map((s) => articles.find((a) => a.slug === s)).filter(Boolean).map((a) => [`/articles/${a.slug}/`, a.crumb || a.title]);
 
 // Panels a clinic lists, read from its "Which panels…" FAQ answer.
-export const panels = (c) => ((c.faqs || []).find(([q]) => /^Which panels/.test(q))?.[1] || '').replace(/^The clinic lists /, '').replace(/\. Check with.*$/, '').split(', ').filter(Boolean);
+export const panels = (c) => c.panels || ((c.faqs || []).find(([q]) => /^Which panels/.test(q))?.[1] || '').replace(/^The clinic lists /, '').replace(/\. Check with.*$/, '').split(', ').filter(Boolean);
 // Guides about a scheme, linked from clinics on that panel.
 const PANEL_GUIDES = [['PeKa B40 (ProtectHealth)', 'peka-b40-malaysia'], ['FOMEMA', 'fomema-medical-check-up']];
 const panelGuides = (c) => PANEL_GUIDES.filter(([p]) => panels(c).includes(p)).map(([, s]) => s);
@@ -488,7 +488,7 @@ ${c.about}
 ${c.incomplete ? '<div class="box box--mint"><span class="eyebrow">Listing in progress</span><p style="font-size:16px;line-height:1.6">Some details for this clinic are still being confirmed. Please call ahead, and <a href="/contact/">let us know</a> if anything has changed.</p></div>' : ''}
 ${faqs.length ? `<h2 id="faq">Frequently asked questions</h2>
 <div class="qa">${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${a}</p></details>`).join('')}</div>` : ''}
-<p style="font-size:14px;color:var(--muted-2)">Details last checked ${longDate(SITE.updated)}. Clinic information comes from the clinic's own published details and public listings. Spotted a change? <a href="/contact/">Tell us</a>.</p>
+<p style="font-size:14px;color:var(--muted-2)">Details last checked ${longDate(c.checked || SITE.updated)}. Clinic information comes from the clinic's own published details and public listings. Spotted a change? <a href="/contact/">Tell us</a>.</p>
 </div>
 <aside class="stack g24" aria-label="Map and nearby clinics">
 <div class="stack g12"><h2 style="font-size:26px">Location</h2>
