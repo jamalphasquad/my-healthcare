@@ -3,7 +3,11 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { SEO } from './seo.mjs';
 import { nearestClinics, kmText, rangeText, summaryHours } from './clinic-data.mjs';
-import { head, header, footer, crumbs, crumbsLd, write, OUT, img, preloadImg, esc, abs, ORG, WEBSITE, SITE, longDate, shortDate } from './lib.mjs';
+import { head, header, footer, crumbs, crumbsLd, write, OUT, img, preloadImg, esc, abs, ORG, WEBSITE, SITE, longDate, shortDate, EDITOR, initials, editorPath, editorLd } from './lib.mjs';
+
+// Byline shown on articles: the named editor when one is set, otherwise the article's own author string.
+const byName = (a) => (EDITOR ? EDITOR.name : a.author);
+const byAvatar = () => (EDITOR ? EDITOR.avatar || initials(EDITOR.name) : 'HD');
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const SCHEMA_DAYS = DAYS.map((d) => 'https://schema.org/' + d);
@@ -571,7 +575,7 @@ ${img(featured.image, featured.imageAlt, { sizes: '(max-width: 960px) 100vw, 600
 <span class="eyebrow${featured.cat === 'womens-health' ? ' cat-pink' : ''}">Featured &middot; ${esc(featured.catLabel)}</span>
 <h2>${esc(featured.title)}</h2>
 <p>${esc(featured.excerpt)}</p>
-<div class="byline"><span class="avatar" aria-hidden="true">HD</span><span>${esc(featured.author)} &middot; ${featured.mins} min read &middot; ${shortDate(featured.modified)}</span></div>
+<div class="byline"><span class="avatar" aria-hidden="true">${byAvatar()}</span><span>${esc(byName(featured))} &middot; ${featured.mins} min read &middot; ${shortDate(featured.modified)}</span></div>
 </div>
 </a>
 </section>
@@ -627,7 +631,7 @@ export function articlePage(a, { articles, clinics, topics }) {
       audience: { '@type': 'PeopleAudience', geographicArea: { '@type': 'AdministrativeArea', name: 'Kuala Lumpur, Malaysia' } },
       primaryImageOfPage: abs(`/assets/img/${a.image}-og.jpg`) },
     { '@type': a.news ? 'NewsArticle' : 'Article', '@id': url + '#article', headline: a.title, description: a.desc, image: [abs(`/assets/img/${a.image}-og.jpg`)], datePublished: a.published, dateModified: a.modified, articleSection: a.catLabel, wordCount: a.words,
-      author: { '@type': 'Organization', name: `${SITE.name} Editorial Team`, url: abs('/about/') }, publisher: { '@id': SITE.url + '/#org' }, mainEntityOfPage: url, inLanguage: SITE.lang,
+      author: editorLd(), publisher: { '@id': SITE.url + '/#org' }, mainEntityOfPage: url, inLanguage: SITE.lang,
       ...(a.sources?.length ? { citation: a.sources.map(([t, u]) => ({ '@type': 'CreativeWork', name: t, url: u })) } : {}),
       ...(nearby.length && showClinics ? { mentions: nearby.map((c) => ({ '@id': abs(`/clinics/${c.slug}/#clinic`), '@type': 'MedicalClinic', name: c.name })) } : {}) },
     crumbsLd(items),
@@ -651,7 +655,7 @@ ${crumbs(items)}
 <h1>${esc(a.title)}</h1>
 <p class="standfirst">${a.standfirst}</p>
 <div class="art-meta">
-<div class="who"><span class="avatar" aria-hidden="true">HD</span><span><span>Written by</span><br><strong>${esc(a.author)}</strong></span></div>
+<div class="who"><span class="avatar" aria-hidden="true">${byAvatar()}</span><span><span>${EDITOR ? 'Edited by' : 'Written by'}</span><br><strong>${EDITOR ? `<a href="${editorPath()}" rel="author">${esc(EDITOR.name)}</a>` : esc(a.author)}</strong></span></div>
 <span>Published <time datetime="${a.published}">${longDate(a.published)}</time>${a.modified !== a.published ? ` &middot; Updated <time datetime="${a.modified}">${longDate(a.modified)}</time>` : ''}</span>
 </div>
 </header>
@@ -683,6 +687,7 @@ ${a.faqs?.length ? `<h2 id="faq">Frequently asked questions</h2><div class="qa">
 <div class="sources">
 ${a.sources?.length ? `<strong>Sources</strong><ol>${a.sources.map(([t, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join('')}</ol>` : ''}
 <span>This article is for general awareness and does not replace advice from a registered medical practitioner. In an emergency, call <a href="tel:999">999</a>.</span>
+<span>Spotted an error or something out of date? <a href="/contact/">Tell us</a> and we will check and correct it. Read <a href="/about/#editorial">how we write and update our articles</a>.</span>
 </div>
 </div>
 </div>

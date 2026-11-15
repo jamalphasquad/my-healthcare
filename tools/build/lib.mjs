@@ -16,6 +16,17 @@ export const SITE = {
   googleVerification: '',
   bingVerification: '',
 };
+// The named person responsible for the site's content. Shown as "Edited by" on every article, on the About
+// page and on /authors/<slug>/, and used as the article author in JSON-LD. Keep it true: only a real person
+// who checks the articles before they go live. null falls back to the anonymous "Editorial Team" byline.
+// Shape: { name, slug, role, bio: ['paragraph', ...], sameAs: ['https://www.linkedin.com/in/...'] }
+// avatar overrides the initials shown in the byline circle ("AI" would read as "AI-written").
+export const EDITOR = { name: 'Azura Ismail', slug: 'azura-ismail', role: 'Editor', avatar: 'A', bio: [], sameAs: [] };
+export const initials = (name) => name.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
+export const editorPath = () => (EDITOR ? `/authors/${EDITOR.slug}/` : '/about/');
+export const editorLd = () => (EDITOR
+  ? { '@type': 'Person', '@id': SITE.url + editorPath() + '#person', name: EDITOR.name, jobTitle: EDITOR.role, url: SITE.url + editorPath(), worksFor: { '@id': SITE.url + '/#org' }, ...(EDITOR.sameAs?.length ? { sameAs: EDITOR.sameAs } : {}) }
+  : { '@type': 'Organization', name: `${SITE.name} Editorial Team`, url: SITE.url + '/about/' });
 // Brand as shown in the header and footer: "HealthcareDirectory" + accent ".my"
 const BRAND = 'HealthcareDirectory<span>.my</span>';
 // Set by build.mjs so the footer can link to the areas that have clinics.

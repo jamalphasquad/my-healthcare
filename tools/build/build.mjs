@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import { SITE, LAYOUT, write, img, abs } from './lib.mjs';
+import { SITE, LAYOUT, write, img, abs, EDITOR, editorPath } from './lib.mjs';
 import { home, clinicsIndex, clinicPage, articlesIndex, articlePage, dueDateCalc, bmiCalc } from './pages.mjs';
 import { staticPages } from './static-pages.mjs';
 import { CLINICS as RAW_CLINICS, NETWORKS, SERVICES, COMING_SOON } from './clinics.mjs';
@@ -68,7 +68,7 @@ clinicsIndex(ctx);
 for (const c of CLINICS) clinicPage(c, ctx);
 articlesIndex({ ...ctx, featuredSlug: 'free-health-screening-malaysia' });
 for (const a of ARTICLES) articlePage(a, ctx);
-staticPages(TOPICS);
+staticPages(TOPICS, ARTICLES);
 searchPage(TOPICS);
 const indexed = buildIndex({ ...ctx, collectionPages });
 
@@ -79,6 +79,7 @@ const urls = [
   ...CLINICS.map((c) => [`/clinics/${c.slug}/`, '0.8', 'monthly', c.image]),
   ...ARTICLES.map((a) => [`/articles/${a.slug}/`, '0.7', 'monthly', a.image, a.modified]),
   ['/about/', '0.4', 'yearly'], ['/contact/', '0.4', 'yearly'], ['/privacy/', '0.2', 'yearly'],
+  ...(EDITOR ? [[editorPath(), '0.4', 'monthly']] : []),
 ];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
