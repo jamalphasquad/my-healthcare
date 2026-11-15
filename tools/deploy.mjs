@@ -15,7 +15,7 @@ const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const OUT = path.join(ROOT, '.deploy');
 const PROJECT = 'healthcaredirectory';
 const PUBLIC = [
-  'index.html', '404.html', 'about', 'articles', 'clinics', 'contact', 'privacy', 'search', 'assets',
+  'index.html', '404.html', 'about', 'articles', 'authors', 'clinics', 'contact', 'privacy', 'search', 'assets',
   'favicon.ico', 'favicon.svg', 'favicon-32.png', 'apple-touch-icon.png', 'site.webmanifest',
   'robots.txt', 'sitemap.xml', '_headers', '_routes.json',
 ];
