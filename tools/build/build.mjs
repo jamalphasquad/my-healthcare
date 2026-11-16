@@ -36,7 +36,8 @@ const TOPICS = [['prevention', 'Prevention'], ['heart-diabetes', 'Heart & diabet
 
 for (const c of RAW_CLINICS) if (SEO[c.slug]) [c.seoTitle, c.seoDesc] = SEO[c.slug];
 for (const c of RAW_CLINICS) if (GBP[c.slug]) Object.assign(c, GBP[c.slug]); // match Google Business Profiles
-const CLINICS = RAW_CLINICS.map((c) => normalizeClinic(c, NETWORKS));
+// Confirmed listings first everywhere (stable sort keeps the hand-picked order within each group).
+const CLINICS = RAW_CLINICS.map((c) => normalizeClinic(c, NETWORKS)).sort((a, b) => a.incomplete - b.incomplete);
 const dup = CLINICS.map((c) => c.slug).find((s, i, all) => all.indexOf(s) !== i);
 if (dup) throw new Error('Duplicate clinic slug: ' + dup);
 const AREAS = deriveAreas(CLINICS);
@@ -75,8 +76,8 @@ const indexed = buildIndex({ ...ctx, collectionPages });
 // sitemap + robots
 const urls = [
   ['/', '1.0', 'weekly'], ['/clinics/', '0.9', 'weekly'], ['/articles/', '0.9', 'daily'],
-  ...collectionPages.map((x) => [x.url, '0.8', 'weekly', x.image]),
-  ...CLINICS.map((c) => [`/clinics/${c.slug}/`, '0.8', 'monthly', c.image]),
+  ...collectionPages.filter((x) => !x.noindex).map((x) => [x.url, '0.8', 'weekly', x.image]),
+  ...CLINICS.filter((c) => !c.incomplete).map((c) => [`/clinics/${c.slug}/`, '0.8', 'monthly', c.image]),
   ...ARTICLES.map((a) => [`/articles/${a.slug}/`, '0.7', 'monthly', a.image, a.modified]),
   ['/about/', '0.4', 'yearly'], ['/contact/', '0.4', 'yearly'], ['/privacy/', '0.2', 'yearly'],
   ...(EDITOR ? [[editorPath(), '0.4', 'monthly']] : []),

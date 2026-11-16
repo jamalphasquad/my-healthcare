@@ -61,7 +61,6 @@ export function clinicLd(c) {
     ...(c.hours ? { openingHoursSpecification: hoursSpec(c.hours) } : {}),
     medicalSpecialty: c.specialties || ['PrimaryCare'],
     availableService: c.services.map((s) => ({ '@type': 'MedicalProcedure', name: s.name })).slice(0, 12),
-    isAcceptingNewPatients: true,
     ...(c.network ? { parentOrganization: { '@type': 'MedicalOrganization', name: c.network.name, ...(c.network.url ? { url: c.network.url } : {}) } } : {}),
     ...((c.sameAs?.length || c.website) ? { sameAs: [...new Set([...(c.sameAs || []), ...(c.website ? [c.website] : [])])] } : {}),
     areaServed: c.areaServed.map((n) => ({ '@type': 'Place', name: n })),
@@ -444,6 +443,9 @@ export function clinicPage(c, { clinics, articles, topics, coll }) {
     title: c.seoTitle, desc: c.seoDesc,
     image: c.image, imageAlt: c.imageAlt,
     geo: { region: c.region, place: `${c.areaLabel}, ${c.locality}`, pos: c.geo },
+    // Listings still missing hours, phone or address stay visible to visitors but out of Google's index
+    // (and out of the sitemap) until the details are confirmed.
+    noindex: c.incomplete,
     ld,
   }) + header('clinics') + `
 <div class="wrap" style="padding-top:36px">${crumbs(items)}</div>

@@ -70,6 +70,9 @@ const sourcesNote = (info) => (info.sources?.length ? `<p style="font-size:14px;
 // --- shared page template --------------------------------------------------------------
 function page(p) {
   const url = `/clinics/${p.slug}/`;
+  // A list page with too few confirmed listings is too thin to index (see noindex on clinic pages). Area pages are
+  // built for single-clinic neighbourhoods on purpose (with nearby clinics and local notes), so they need just one.
+  p.noindex = p.clinics.filter((c) => !c.incomplete).length < (p.minConfirmed || MIN_CLINICS);
   const items = [['/', 'Home'], ['/clinics/', 'Clinics'], [url, p.crumb]];
   const ld = {
     '@context': 'https://schema.org',
@@ -86,6 +89,7 @@ function page(p) {
     path: url, title: p.title, desc: p.desc,
     image: p.clinics[0].image, imageAlt: p.clinics[0].imageAlt,
     geo: p.geo ? { region: p.region, place: p.place, pos: p.geo.map((v) => +v.toFixed(5)) } : undefined,
+    noindex: p.noindex,
     ld,
   }) + header('clinics') + `
 <section class="wrap" style="padding-top:40px">
@@ -347,13 +351,13 @@ ${[...new Set(cs.map(stateName))].map((st) => `<h3>Klinik 24 jam in ${esc(st)}</
       body: (info.transit ? `<h2 id="getting-there" style="margin-top:0">Getting there</h2><p>${esc(info.transit)}</p>
 ` : '') + hoursTable(here, !info.transit) + publicSection(a.label, info) + sourcesNote(info),
       faqs, nearby, nearbyHeading: `Other clinics near ${esc(a.label)}`,
-      clinics: here, checked, where: `in ${esc(a.label)}`, topics,
+      clinics: here, minConfirmed: 1, checked, where: `in ${esc(a.label)}`, topics,
       title: cut(title, 60),
       desc: info.desc || cut(`Clinics in ${where}: ${list(here.map((c) => c.name))}. Opening hours, phone numbers and directions, plus ${plural(nearby.length, 'other clinic')} nearby.${here.length === 1 ? ` Updated ${checked.replace(/^\d+ /, '')}.` : ''}`, 155),
       links: [['Nearby areas', nearby.map(({ c }) => [`/clinics/${c.areaSlug}/`, c.areaLabel]).filter((l, i, all) => all.findIndex((x) => x[0] === l[0]) === i)], ['Browse by need', serviceLinks], ['Health guides', guideLinks(articles, here.every((c) => c.serviceKeys.includes('aesthetic')))]],
     };
     page(p);
-    out.areas.push({ slug: a.slug, url: `/clinics/${a.slug}/`, title: p.name, desc: p.desc, image: here[0].image, keywords: [a.label, a.locality, ...here.flatMap((c) => c.areaServed)].join(' ') });
+    out.areas.push({ noindex: p.noindex, slug: a.slug, url: `/clinics/${a.slug}/`, title: p.name, desc: p.desc, image: here[0].image, keywords: [a.label, a.locality, ...here.flatMap((c) => c.areaServed)].join(' ') });
   }
 
   // ---- service pages
@@ -376,7 +380,7 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
       links: [['Browse by area', [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks.filter(([h]) => h !== `/clinics/${s.slug}/`)], ['Health guides', guideLinks(articles, s.slug === 'aesthetic-clinics')]],
     };
     page(p);
-    out.services.push({ slug: s.slug, url: `/clinics/${s.slug}/`, label: s.crumb, title: p.name, desc: p.desc, image: cs[0].image, keywords: s.crumb });
+    out.services.push({ noindex: p.noindex, slug: s.slug, url: `/clinics/${s.slug}/`, label: s.crumb, title: p.name, desc: p.desc, image: cs[0].image, keywords: s.crumb });
   }
 
   // ---- network pages
@@ -400,7 +404,7 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
       links: [[`${One} areas`, [...new Map(cs.map((c) => [c.areaSlug, [`/clinics/${c.areaSlug}/`, c.areaLabel]])).values()]], ['Browse by need', serviceLinks], ['Health guides', guideLinks(articles, cs.every((c) => c.serviceKeys.includes('aesthetic')))]],
     };
     page(p);
-    out.networks.push({ slug, url: `/clinics/${slug}/`, label: n.name, title: p.name, desc: p.desc, image: cs[0].image, keywords: n.name });
+    out.networks.push({ noindex: p.noindex, slug, url: `/clinics/${slug}/`, label: n.name, title: p.name, desc: p.desc, image: cs[0].image, keywords: n.name });
   }
 
   // ---- "near me" page: every clinic, sorted by distance in the browser when the visitor allows it
@@ -432,7 +436,7 @@ ${cs.map((c) => `<tr><td><a href="/clinics/${c.slug}/">${esc(c.name)}</a></td><t
       links: [['Browse by need', serviceLinks.filter(([h]) => h !== '/clinics/near-me/')], ['Browse by area', areaLinks], ['Health guides', guideLinks(articles, false)]],
     };
     page(p);
-    out.services.unshift({ slug: p.slug, url: '/clinics/near-me/', label: p.crumb, title: p.name, desc: p.desc, image: clinics[0].image, keywords: 'near me nearest clinic klinik terdekat berdekatan open now' });
+    out.services.unshift({ noindex: p.noindex, slug: p.slug, url: '/clinics/near-me/', label: p.crumb, title: p.name, desc: p.desc, image: clinics[0].image, keywords: 'near me nearest clinic klinik terdekat berdekatan open now' });
   }
 
   out.serviceLinks = serviceLinks;
