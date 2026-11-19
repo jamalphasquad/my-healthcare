@@ -226,13 +226,13 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most childre
   /* ------------------------------------------------------------------ */
   {
     slug: 'persistent-cough-malaysia',
-    title: 'Cough that won’t go away? Common causes, cough medicine that helps, and when to see a doctor',
-    crumb: 'Cough that won’t go away',
-    desc: 'Why a cough lingers after flu or haze, common causes such as allergies, reflux, TB and blood pressure pills, which cough medicines help, and when to see a doctor.',
+    title: 'Cough that won’t go away and ubat batuk: causes, which cough medicines work, and when to see a doctor',
+    crumb: 'Cough and ubat batuk',
+    desc: 'Why a cough lingers, from flu and haze to reflux, TB and blood pressure pills, which ubat batuk works for dry or chesty coughs, children, codeine rules and red flags.',
     excerpt: 'After the haze and flu season, many Malaysians have a cough that lingers for weeks. What usually causes it, which cough medicines actually help, safe fever medicine for children, and the signs that need a doctor.',
     standfirst: 'A cough after a cold, flu or a spell of haze can last for weeks, and most of the time it clears on its own. But a cough that won’t go away can also be a sign of asthma, reflux, a side effect of a blood pressure pill, or tuberculosis. Here is what usually causes it, what helps, and when to get checked.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
-    about: ['Cough', 'Batuk'],
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-18', author: AUTHOR, news: false, medical: true,
+    about: ['Cough', 'Batuk', 'Cough medicine'],
     image: 'cold-flu', imageAlt: 'Tissues, nasal spray and a notebook on a desk',
     keyPoints: [
       'Most coughs after a cold or flu clear within 3 to 4 weeks. A cough lasting more than 3 weeks is worth getting checked.',
@@ -240,6 +240,7 @@ ${figure('mother-child', 'A mother and daughter sitting together', 'Most childre
       'In Malaysia, a cough lasting more than 2 weeks, especially with fever, night sweats or weight loss, should be checked for tuberculosis.',
       'Cough syrups have little evidence behind them. Honey (not for babies under 1) and warm drinks are reasonable first steps.',
       'Cough and cold medicines should not be used in children under 2 in Malaysia. For fever in children, use paracetamol by weight, and avoid ibuprofen if dengue is possible.',
+      'Codeine cough medicines can only be supplied by a doctor or pharmacist, and aren’t for children under 12. Only buy cough products with a MAL registration number.',
     ],
     sections: [
       { id: 'how-long', h: 'How long is too long for a cough?', tocLabel: 'How long is too long', html: `<div class="table-wrap"><table>
@@ -274,6 +275,16 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
 <p>TB is curable with a course of antibiotics, usually for 6 months, and 85–90% of patients are treated successfully. Diagnosis and treatment at government health facilities are heavily subsidised. Getting tested early also protects your family, because TB spreads through the air.</p>` },
       { id: 'whooping', h: 'Whooping cough in babies', tocLabel: 'Whooping cough', html: `<p>Whooping cough (pertussis) causes long coughing fits, sometimes followed by a “whoop” as the child breathes in, or vomiting. It is most dangerous for <strong>young babies</strong>, who may not whoop at all but stop breathing or turn blue. In 2023, Malaysia recorded 343 cases and 24 deaths by late August, mostly in babies under 5 months old.</p>
 <p>Babies are protected by the vaccines in the National Immunisation Programme, and by vaccinating mothers during pregnancy. The government announced free whooping cough (Tdap) vaccination for pregnant women from 2024. Ask at your antenatal clinic.</p>` },
+      { id: 'types', h: 'Ubat batuk: dry cough or chesty cough?', tocLabel: 'Dry or chesty cough', html: `<div class="table-wrap"><table>
+<thead><tr><th>Type of medicine</th><th>Meant for</th><th>Generic names</th></tr></thead>
+<tbody>
+<tr><td><strong>Cough suppressant</strong></td><td>Dry, tickly cough (batuk kering)</td><td>Dextromethorphan, codeine</td></tr>
+<tr><td><strong>Expectorant</strong></td><td>Chesty cough with phlegm (batuk berkahak)</td><td>Guaifenesin</td></tr>
+<tr><td><strong>Mucolytic</strong> (loosens phlegm)</td><td>Chesty cough with thick phlegm</td><td>Bromhexine, ambroxol, carbocisteine, acetylcysteine</td></tr>
+<tr><td><strong>Sedating antihistamine</strong></td><td>Often added to night-time mixtures</td><td>Chlorpheniramine, diphenhydramine, promethazine</td></tr>
+<tr><td><strong>Decongestant</strong></td><td>Blocked nose</td><td>Pseudoephedrine, phenylephrine</td></tr>
+</tbody></table></div>
+<p>Don’t take a suppressant for a chesty cough, as coughing up phlegm helps clear your chest. Many products combine several of these ingredients, so read the label.</p>` },
       { id: 'medicine', h: 'Which cough medicine works?', tocLabel: 'Cough medicine', html: `<p>Cough medicines are some of the most popular products at any pharmacy, but there is <strong>little good evidence</strong> that over-the-counter cough syrups help. A Cochrane review of 29 trials found no good evidence for or against them. If you want to try one:</p>
 <ul>
 <li><strong>Chesty cough with phlegm (batuk berkahak):</strong> expectorants such as guaifenesin are meant to loosen mucus. UK guidance lists them as an option for adults and children aged 12 and over, but the evidence is limited.</li>
@@ -284,10 +295,53 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
 <ul>
 <li>Cough and cold medicines must carry a warning that they <strong>should not be used in children under 2</strong>.</li>
 <li>Cough mixtures containing codeine and other controlled ingredients can only be supplied by a doctor or pharmacist.</li>
-<li>In 2023, the Ministry of Health cancelled the registration of all cough products containing pholcodine because of a risk of severe allergic reactions during anaesthesia.</li>
 <li>Only buy products with a <strong>MAL registration number</strong>. Unregistered cough syrups sold elsewhere in the region have been contaminated with toxic chemicals.</li>
 </ul>
 <p>Antibiotics don’t help a cough caused by a virus. A doctor will prescribe them only if a bacterial infection is likely.</p>` },
+      { id: 'children-medicine', h: 'Cough medicines for children', tocLabel: 'Children’s cough medicine', html: `<ul>
+<li><strong>Under 2 years:</strong> Malaysia’s drug authority requires liquid cough and cold medicines containing antihistamines, cough suppressants or decongestants to be labelled “Not to be used in children below two years of age”.</li>
+<li><strong>2 to 6 years:</strong> use these only with caution, on the advice of a doctor or pharmacist. The UK advises no cough and cold medicines at all under 6.</li>
+<li><strong>Codeine:</strong> Malaysia’s labelling rules say codeine mustn’t be used for coughs and colds in children under 12, isn’t recommended from 12 to 18 for those with breathing problems, and mustn’t be used by anyone under 18 after tonsil or adenoid removal for sleep apnoea.</li>
+<li><strong>Sedating antihistamines</strong> such as promethazine can cause dangerous breathing problems in young children.</li>
+<li><strong>Mucolytics:</strong> acetylcysteine and carbocisteine shouldn’t be given to children under 2. In France, some babies produced more mucus instead of less.</li>
+<li>Use the measuring device provided, and don’t give two products containing the same ingredient.</li>
+</ul>
+<p>For most children, rest, fluids and honey (from age 1) are enough. See our guides to <a href="/articles/urti-common-cold-selsema-malaysia/">colds (selsema)</a> and <a href="/articles/fever-in-children-malaysia/">fever in children</a>.</p>` },
+      { id: 'codeine', h: 'Codeine cough syrup: Malaysian rules', tocLabel: 'Codeine', html: `<p>Codeine is a controlled medicine under Malaysia’s Poisons Act. Codeine cough products can only be supplied by a <strong>doctor or a pharmacist</strong>. The Ministry of Health has said cough medicines containing scheduled poisons can be sold only for medical purposes.</p>
+<p>Codeine and some other cough syrups have been misused in Malaysia, for example mixed with ketum and fizzy drinks. In 2018, the ministry reported seizing more than 100,000 bottles, and the penalty for illegal sale includes a fine of up to RM3,000, up to a year in prison, or both.</p>
+<p><strong>Codeine can:</strong></p>
+<ul>
+<li>cause marked drowsiness, so don’t drive or drink alcohol</li>
+<li>slow breathing dangerously, especially in children and in people who break it down unusually fast</li>
+<li>pass into breast milk, so Malaysian labelling says not to use it while breastfeeding</li>
+<li>be habit-forming</li>
+</ul>
+<p>The US FDA has limited codeine cough medicines to adults aged 18 and over. Malaysia has also cancelled 14 pholcodine products, after links to severe allergic reactions during general anaesthesia. If you have taken pholcodine in the past, tell your surgical team before an operation.</p>` },
+      { id: 'safety', h: 'Safety tips: combinations, blood pressure and pregnancy', tocLabel: 'Safety', html: `<ul>
+<li><strong>Paracetamol twice:</strong> many cold and flu products already contain paracetamol. Don’t take extra paracetamol on top. See our guide to <a href="/articles/painkillers-paracetamol-ibuprofen-malaysia/">painkillers</a>.</li>
+<li><strong>Decongestants:</strong> pseudoephedrine is in 62 registered combination products in Malaysia. NPRA warns of rare but serious brain blood vessel problems. Avoid it with severe or uncontrolled <a href="/articles/blood-pressure-cholesterol-malaysia/">high blood pressure</a> or kidney disease. Stop and get help for a sudden severe headache, confusion, seizures or vision changes. Check with a pharmacist first if you have heart disease, diabetes, glaucoma, thyroid problems or an enlarged prostate.</li>
+<li><strong>Antidepressants:</strong> dextromethorphan can interact with some antidepressants and cause serotonin syndrome. Ask a pharmacist.</li>
+<li><strong>Drowsiness:</strong> sedating antihistamines and codeine can make you sleepy. Don’t drive or operate machinery.</li>
+<li><strong>Pregnancy:</strong> check with a doctor or pharmacist before taking any cough medicine.</li>
+<li><strong>Breastfeeding:</strong> guaifenesin is probably fine. Avoid codeine, and note that decongestant tablets may reduce milk supply.</li>
+</ul>` },
+      { id: 'mal', h: 'Check that a cough product is registered', tocLabel: 'Check MAL number', html: `<p>Registered medicines in Malaysia carry a <strong>MAL number</strong> (MAL followed by 8 digits and a letter) and a hologram security label. The last letter tells you the type:</p>
+<ul>
+<li><strong>A:</strong> controlled medicine</li>
+<li><strong>X:</strong> over-the-counter medicine</li>
+<li><strong>T:</strong> traditional product, such as herbal cough remedies</li>
+<li><strong>N:</strong> health supplement</li>
+</ul>
+<p>You can check a product by name or registration number on NPRA’s <a href="https://quest3plus.bpfk.gov.my/pmo2/index.php" target="_blank" rel="noopener">QUEST3+ product search</a>. Registration of a traditional product doesn’t mean it has been proven to work.</p>` },
+      { id: 'kahak', h: 'Kahak: does green phlegm mean I need antibiotics?', tocLabel: 'Phlegm colour', html: `<p>No. In a study of more than 3,400 adults with a cough, people with yellow or green phlegm were given antibiotics more often, but the antibiotics didn’t help them recover faster. Most coughs are caused by viruses, which antibiotics don’t treat. For bronchitis, antibiotics shortened the cough by only about half a day, with more side effects.</p>
+<p><strong>See a doctor if you have:</strong></p>
+<ul>
+<li>a cough lasting more than 3 weeks</li>
+<li>blood in your phlegm</li>
+<li>breathlessness, chest pain or wheezing. See our guide to <a href="/articles/asthma-asma-inhaler-malaysia/">asthma</a>.</li>
+<li>a fever lasting more than 5 days</li>
+<li>weight loss, night sweats or a long-lasting cough, which can be signs of <a href="/articles/tuberculosis-tb-malaysia/">tuberculosis</a></li>
+</ul>` },
       { id: 'home', h: 'Home remedies that help', html: `<ul>
 <li><strong>Honey:</strong> a Cochrane review found honey probably eases coughing and helps children sleep. Try 1 to 2 teaspoons in warm water with lemon. <strong>Never give honey to babies under 1</strong>, because of the risk of infant botulism.</li>
 <li><strong>Warm drinks and plenty of fluids</strong> soothe the throat and thin mucus. Don’t give hot drinks to small children.</li>
@@ -329,6 +383,10 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
       ['When should I worry about a cough?', 'See a doctor for a cough lasting more than 3 weeks, or more than 2 weeks with fever, night sweats or weight loss. Get urgent help for coughing up blood, difficulty breathing, chest pain or blue lips.'],
       ['Can I give cough syrup to my baby?', 'No. In Malaysia, cough and cold medicines carry a warning not to use them in children under 2. Honey should not be given to babies under 1. See a doctor if a baby has a cough with fever or breathing difficulty.'],
       ['What fever medicine is safe for children? (Ubat demam budak)', 'Paracetamol, dosed by the child’s weight, from 2 months of age. Ibuprofen can be used from 3 months but should be avoided if dengue is possible. Never give aspirin to children under 16.'],
+      ['Which cough medicine is for batuk berkahak?', 'An expectorant such as guaifenesin, or a mucolytic such as bromhexine or carbocisteine. Avoid cough suppressants for a chesty cough.'],
+      ['Is codeine cough syrup available without a prescription?', 'Codeine is controlled and can only be supplied by a doctor or pharmacist. It isn’t for children under 12 and shouldn’t be used while breastfeeding.'],
+      ['Does green phlegm mean I need antibiotics?', 'No. Green or yellow phlegm is common with viral infections, and antibiotics don’t speed recovery in most cases.'],
+      ['How do I check if a cough medicine is registered?', 'Look for a MAL number and hologram on the pack, then search the product on NPRA’s QUEST3+ website.'],
     ],
     sources: [
       ['NHS — Cough (reviewed Dec 2023)', 'https://www.nhs.uk/conditions/cough/'],
@@ -345,8 +403,28 @@ ${figure('medications', 'Blister packs of tablets', 'Some common blood pressure 
       ['NHS — Paracetamol for children (reviewed Oct 2025)', 'https://www.nhs.uk/medicines/paracetamol-for-children/'],
       ['NHS — Ibuprofen for children (reviewed Aug 2026)', 'https://www.nhs.uk/medicines/ibuprofen-for-children/'],
       ['Ministry of Health — Home care advice for dengue patients', 'https://www2.moh.gov.my/moh/resources/Borang/Denggi/HOME_CARD_ADVICE_FOR_DENGUE_PATIENTS.pdf'],
+      ['Cochrane — Honey for acute cough in children (2018)', 'https://www.cochrane.org/CD007094/ARI_honey-acute-cough-children'],
+      ['Cochrane — Acetylcysteine and carbocysteine for respiratory infections in children (2022)', 'https://www.cochrane.org/CD003124/ARI_acetylcysteine-and-carbocysteine-acute-upper-and-lower-respiratory-tract-infections-children-without-chronic'],
+      ['Cochrane — Heated, humidified air for the common cold (2017)', 'https://www.cochrane.org/CD001728/ARI_heated-humidified-air-common-cold'],
+      ['Cochrane — Antibiotics for acute bronchitis (2017)', 'https://www.cochrane.org/CD000245/ARI_antibiotics-for-acute-bronchitis'],
+      ['NPRA Malaysia — Berita Ubat-Ubatan, Directive 16/2016 on codeine labelling (Dec 2016)', 'https://www.npra.gov.my/images/Publications/Newsletter_Berita_Ubat-ubatan/2016/Berita_Ubat_Ubatan_Dec_vol66_n46.pdf'],
+      ['NPRA Malaysia — Pholcodine: risk of anaphylaxis (Mar 2023)', 'https://npra.gov.my/index.php/my/health-professionals-2/kemaskini-terbaru/449-english/safety-alerts-main/safety-alerts-2023/1527471-pholcodine-risk-of-anaphylaxis-to-neuromuscular-blocking-agents-nmbas.html'],
+      ['NPRA Malaysia — Pseudoephedrine: risk of PRES and RCVS (Sep 2024)', 'https://npra.gov.my/index.php/en/component/content/article/454-english/safety-alerts-main/safety-alerts-2024/1527656-pseudoephedrine-risk-of-posterior-reversible-encephalopathy-syndrome-pres-and-reversible-cerebral-vasoconstriction-syndrome-rcvs.html'],
+      ['NPRA Malaysia — FAQ on traditional and natural products', 'https://www.npra.gov.my/index.php/en/component/sppagebuilder/988-faq-main-thms-and-natural-product.html'],
+      ['Pharmaceutical Services Programme, MOH — Poisons List', 'https://pharmacy.moh.gov.my/sites/default/files/document-upload/poisons-list_1.pdf'],
+      ['Malay Mail — Only medical practitioners, pharmacists allowed to dispense cough medicines (Mar 2018)', 'https://www.malaymail.com/news/malaysia/2018/03/04/only-medical-practitioners-pharmacists-allowed-to-dispense-cough-medicines/1590281'],
+      ['The Star — Cough and cold medicines for children to be limited (Jul 2009)', 'https://www.thestar.com.my/news/nation/2009/07/09/cough-and-cold-medicines-for-children-to-be-limited'],
+      ['NHS — Chest infection (Jun 2023)', 'https://www.nhs.uk/conditions/chest-infection/'],
+      ['NHS — Pseudoephedrine (Sep 2026)', 'https://www.nhs.uk/medicines/pseudoephedrine/'],
+      ['UK MHRA — Over-the-counter cough and cold medicines for children', 'https://www.gov.uk/drug-safety-update/over-the-counter-cough-and-cold-medicines-for-children'],
+      ['UK MHRA — Codeine for cough and cold: restricted use in children (2015)', 'https://www.gov.uk/drug-safety-update/codeine-for-cough-and-cold-restricted-use-in-children'],
+      ['US FDA — Should you give kids medicine for coughs and colds? (2024)', 'https://www.fda.gov/consumers/consumer-updates/should-you-give-kids-medicine-coughs-and-colds'],
+      ['US FDA — Drug safety communication on opioid cough and cold medicines (Jan 2018)', 'https://www.fda.gov/files/drugs/published/Drug-Safety-Communication--Opioid-Cough-and-Cold-Meds.pdf'],
+      ['Breastfeeding Network — Cold remedies and breastfeeding', 'https://www.breastfeedingnetwork.org.uk/cold-remedies/'],
+      ['US CDC — Chest cold (acute bronchitis) (Jul 2025)', 'https://www.cdc.gov/acute-bronchitis/about/index.html'],
+      ['ScienceDaily — Coloured phlegm and antibiotics, European Respiratory Journal (2011)', 'https://www.sciencedaily.com/releases/2011/03/110324103137.htm'],
     ],
-    related: ['ubat-batuk-cough-medicine-malaysia', 'urti-common-cold-selsema-malaysia', 'tuberculosis-tb-malaysia'],
+    related: ['urti-common-cold-selsema-malaysia', 'tuberculosis-tb-malaysia', 'asthma-asma-inhaler-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

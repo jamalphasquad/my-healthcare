@@ -151,7 +151,7 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
 <li>itching around the vagina, or soreness and swelling at the tip of the penis, often from repeated yeast infections</li>
 <li>blurred vision, cuts that heal slowly, and frequent skin or urine infections</li>
 </ul>
-<p>If you have these signs, see a doctor for a blood test rather than waiting. Read more in our guide to <a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">undiagnosed diabetes in young adults</a>.</p>` },
+<p>If you have these signs, see a doctor for a blood test rather than waiting. Many people qualify for a free check. See our guide to <a href="/articles/free-health-screening-malaysia/">free health screening</a>.</p>` },
       { id: 'targets', h: 'Blood sugar targets if you have diabetes', tocLabel: 'Targets with diabetes', html: `<div class="table-wrap"><table>
 <thead><tr><th>Measure</th><th>Target for most adults with type 2 diabetes</th></tr></thead>
 <tbody>

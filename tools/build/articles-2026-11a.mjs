@@ -611,19 +611,19 @@ ${figure('stethoscope-desk', 'A stethoscope hanging in a hospital examination ar
       ['Salminen et al. — Five-year follow-up of antibiotic therapy for uncomplicated appendicitis, APPAC trial (JAMA, 2018)', 'https://pubmed.ncbi.nlm.nih.gov/30264120'],
       ['CODA Collaborative — A randomised trial comparing antibiotics with appendectomy for appendicitis (NEJM, 2020)', 'https://doi.org/10.1056/NEJMoa2014320'],
     ],
-    related: ['sakit-perut-kiri-kanan-abdominal-pain-malaysia', 'stomach-pain-gastric-malaysia', 'clinic-or-emergency-department'],
+    related: ['stomach-pain-gastric-malaysia', 'constipation-sembelit-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
   {
     slug: 'tonsillitis-sore-throat-malaysia',
-    title: 'Tonsillitis and sore throat: swollen tonsils, when you need antibiotics, and what helps',
-    crumb: 'Tonsillitis & sore throat',
-    desc: 'Swollen tonsils (tonsil bengkak) and sore throat: viral or bacterial, when antibiotics are needed, remedies that help, tonsil grades, tonsil stones and danger signs.',
+    title: 'Sore throat and tonsillitis (sakit tekak): what helps, lozenges, when you need antibiotics, and danger signs',
+    crumb: 'Sore throat & tonsillitis',
+    desc: 'Sore throat (sakit tekak) and swollen tonsils: what helps, lozenges and sprays, when antibiotics are needed, tonsil grades, tonsil stones and danger signs.',
     excerpt: 'Most sore throats and swollen tonsils are caused by viruses and get better within a week without antibiotics. How to tell when it might be strep, what actually eases the pain, what tonsil grades and tonsil stones are, and the warning signs that need urgent care.',
     standfirst: 'A sore throat with red, swollen tonsils (tonsil bengkak) is one of the most common reasons people visit a clinic in Malaysia. Most are caused by viruses and clear up on their own within a week, but some need antibiotics and a few need urgent care. Here is how to tell the difference.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
-    about: ['Tonsillitis', 'Pharyngitis', 'Sakit tekak'],
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-18', author: AUTHOR, news: false, medical: true,
+    about: ['Sore throat', 'Tonsillitis', 'Pharyngitis', 'Sakit tekak'],
     image: 'doctor-tablet', imageAlt: 'A doctor in a white coat reading notes on a tablet',
     keyPoints: [
       'Most sore throats and tonsillitis are caused by viruses. Group A strep bacteria cause about 5–15% of sore throats in adults and 20–30% in children.',
@@ -631,10 +631,19 @@ ${figure('stethoscope-desk', 'A stethoscope hanging in a hospital examination ar
       'Paracetamol or ibuprofen, fluids, rest and (for adults) salt-water gargles help most. Medicated lozenges help only a little.',
       'Get urgent help for difficulty breathing, being unable to swallow your saliva, drooling, or swelling on one side of the throat.',
       'Removing the tonsils is only considered for frequent, severe tonsillitis: for example, 7 or more episodes in a year.',
+      'Flurbiprofen lozenges are for ages 12 and over, and no lozenges should be given to children under 4. People taking carbimazole should get urgent advice for any sore throat.',
     ],
     sections: [
       { id: 'what', h: 'What is tonsillitis?', tocLabel: 'What it is', html: `<p>The <strong>tonsils</strong> are two pads of tissue at the back of the throat, one on each side, that help fight infection. <strong>Tonsillitis</strong> is when they become infected and inflamed. It often comes together with a sore throat (pharyngitis), and the two are treated in the same way.</p>
 <p>Symptoms include a sore throat, pain when swallowing, a fever, red and swollen tonsils, sometimes with white patches or pus, tender swollen glands in the neck, bad breath and earache. Children may also have a tummy ache, vomit or refuse to eat. Most cases get better within <strong>3 to 7 days</strong>.</p>` },
+      { id: 'other-causes', h: 'What else causes a sore throat?', tocLabel: 'Other causes', html: `<ul>
+<li><strong>Viruses:</strong> the most common cause, including <a href="/articles/urti-common-cold-selsema-malaysia/">colds (selsema)</a> and <a href="/articles/influenza-a-malaysia/">flu</a></li>
+<li><strong>Bacteria:</strong> mainly group A streptococcus (strep throat), covered below</li>
+<li><strong>Irritation:</strong> smoking or vaping, second-hand smoke, shouting or overusing your voice, dry air and mouth breathing</li>
+<li><strong>Acid reflux</strong>, especially with a sore throat in the morning. See our <a href="/articles/gerd-acid-reflux-malaysia/">GERD guide</a>.</li>
+<li><strong>Allergies and post-nasal drip</strong>. See our <a href="/articles/allergies-resdung-antihistamines-malaysia/">resdung guide</a>.</li>
+<li><strong>Haze:</strong> the Ministry of Health lists sore throat among the effects of haze, and advises staying indoors, drinking plenty of water and wearing a mask outdoors. See our <a href="/articles/haze-air-quality-klang-valley/">haze guide</a>.</li>
+</ul>` },
       { id: 'cause', h: 'Virus or bacteria? Do you need antibiotics?', tocLabel: 'Do you need antibiotics?', html: `<p><strong>Viruses cause most sore throats</strong>, including those from colds and flu. Antibiotics don’t work on viruses. The main bacterial cause is <strong>group A streptococcus (“strep throat”)</strong>, which causes about 20–30% of sore throats in children (most often aged 5 to 15) and 5–15% in adults.</p>
 <p>Doctors use simple scores to judge the chance of strep. The <strong>Centor score</strong> gives one point each for:</p>
 <ul>
@@ -646,21 +655,34 @@ ${figure('stethoscope-desk', 'A stethoscope hanging in a hospital examination ar
 <p>Malaysia’s <em>National Antimicrobial Guideline</em> (2024) advises that adults scoring under 3 don’t need antibiotics, only pain and fever relief. A higher score suggests strep, and the doctor may prescribe penicillin or amoxicillin (or another antibiotic if you are allergic) for 5 to 10 days. Children with confirmed strep are usually given a full 10-day course, which also helps prevent rare complications such as rheumatic fever.</p>
 <div class="box box--pink" role="note"><span class="box__title">Antibiotics are often given when they aren’t needed</span><p style="font-size:16px;line-height:1.6">A study in Malaysian government clinics found strep in fewer than 3 in 100 adults with a sore throat, yet more than 1 in 5 were given antibiotics. Unneeded antibiotics cause side effects and drive antibiotic resistance. If you are prescribed them, finish the course as directed.</p></div>` },
       { id: 'relief', h: 'What helps a sore throat (ubat sakit tekak)', tocLabel: 'What helps', html: `<ul>
-<li><strong>Paracetamol or ibuprofen</strong> for pain and fever. Don’t give aspirin to anyone under 16.</li>
+<li><strong>Paracetamol or ibuprofen</strong> for pain and fever. Paracetamol is the safer first choice if you might have dengue. Don’t give aspirin to anyone under 16. See our <a href="/articles/painkillers-paracetamol-ibuprofen-malaysia/">painkiller guide</a>.</li>
 <li><strong>Drink plenty of fluids</strong>, especially if you have a fever. Cool or warm drinks and soft foods are easier to swallow.</li>
 <li><strong>Rest.</strong></li>
-<li><strong>Salt-water gargles</strong> for adults and older children who can gargle safely: half a teaspoon of salt in a glass of warm water.</li>
-<li><strong>Medicated lozenges and throat sprays</strong> from a pharmacy (with a local anaesthetic, anti-inflammatory or antiseptic) may reduce pain slightly. Ordinary sweets and mouthwashes have no proven benefit.</li>
+<li><strong>Salt-water gargles</strong> for adults and older children who can gargle safely: half a teaspoon of salt in a glass of warm water. Don’t ask young children to gargle.</li>
+<li><strong>Honey</strong> in warm water may soothe the throat. Never give honey to babies under 1.</li>
+<li><strong>Cold drinks, ice lollies and soft, cool foods</strong> can ease the pain. Avoid small hard sweets for young children, as they can cause choking.</li>
+<li><strong>Medicated lozenges and throat sprays</strong> from a pharmacy (with a local anaesthetic, anti-inflammatory or antiseptic) may reduce pain slightly. Ordinary sweets and mouthwashes have no proven benefit. See the table below.</li>
 </ul>
 <p>Most people feel better within a week. See a doctor if symptoms last longer than a week, keep coming back, or you have a weakened immune system.</p>
 ${figure('medications', 'Blister packs of tablets and capsules', 'Simple painkillers relieve most sore throats; antibiotics only help bacterial infections.')}` },
+      { id: 'lozenges', h: 'Lozenges and sprays: are they worth buying?', tocLabel: 'Lozenges and sprays', html: `<p>UK guidance says medicated lozenges containing a local anaesthetic, an anti-inflammatory or an antiseptic may reduce sore throat pain <strong>by a small amount</strong> in adults. There is no evidence that ordinary sweets, plain lozenges or mouthwashes help.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Product type</th><th>Good to know</th></tr></thead>
+<tbody>
+<tr><td><strong>Anti-inflammatory lozenge</strong> (flurbiprofen)</td><td>Ages 12 and over. Up to 5 a day for no more than 3 days. Not for people allergic to aspirin or anti-inflammatories, with a stomach ulcer, or in late pregnancy. Up to half of users notice taste changes, numbness or nausea.</td></tr>
+<tr><td><strong>Antiseptic lozenge</strong> (such as amylmetacresol with dichlorobenzyl alcohol)</td><td>Not for children under 6. See a doctor if you aren’t better after 3 days.</td></tr>
+<tr><td><strong>Anti-inflammatory spray</strong> (benzydamine)</td><td>Dose depends on age and weight. Use with caution if you have asthma.</td></tr>
+<tr><td><strong>Numbing products</strong> (benzocaine, lidocaine)</td><td>Benzocaine shouldn’t be used in children under 2, because of a rare but dangerous blood reaction.</td></tr>
+</tbody></table></div>
+<p><strong>Children:</strong> don’t give any lozenge to a child under 4, because of the choking risk. Ask a pharmacist which products suit your child’s age.</p>` },
       { id: 'danger', h: 'When a sore throat is an emergency', tocLabel: 'Danger signs', html: `<div class="box box--pink" role="note"><span class="box__title">Call 999 or go to an emergency department if</span><p style="font-size:16px;line-height:1.6">you have difficulty breathing or noisy, high-pitched breathing; you can’t swallow, even your own saliva, or are drooling; or your symptoms are getting worse quickly.</p></div>
 <p><strong>See a doctor the same day</strong> if you have severe pain with swelling on one side of the throat or roof of the mouth, difficulty opening your mouth or speaking, or a fever with a rash. These can be signs of <strong>quinsy</strong> (a peritonsillar abscess), a pocket of pus beside the tonsil that needs draining and antibiotics in hospital.</p>
 <p>Other conditions to know about:</p>
 <ul>
 <li><strong>Scarlet fever:</strong> caused by strep, mainly in young children. A rough “sandpaper” rash appears 12 to 48 hours after the sore throat and fever, often with a red “strawberry” tongue. It is treated with antibiotics, and children should stay home until 24 hours after starting them.</li>
 <li><strong>Glandular fever</strong> (caused by the Epstein–Barr virus): mostly in people aged 15 to 24. It causes a severe sore throat, very swollen glands and tiredness that can last weeks. Antibiotics don’t help.</li>
-</ul>` },
+</ul>
+<p><strong>If you take carbimazole</strong> for an overactive thyroid, stop it and get urgent advice for any sore throat, fever or mouth ulcers, as it can rarely affect your white blood cells. See our <a href="/articles/thyroid-hyperthyroidism-hypothyroidism-malaysia/">thyroid guide</a>.</p>` },
       { id: 'grades', h: 'Tonsil grading system: what the grades mean', tocLabel: 'Tonsil grades', html: `<p>Doctors describe tonsil size using the <strong>Brodsky grading scale</strong>, based on how much of the space at the back of the throat the tonsils take up:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Grade</th><th>Tonsil size</th></tr></thead>
@@ -700,6 +722,8 @@ ${figure('medications', 'Blister packs of tablets and capsules', 'Simple painkil
       ['What do the tonsil grades mean?', 'Grades 0 to 4 describe how much of the throat the tonsils fill, from within the tonsil pillars (0) to more than 75% (4). Large tonsils only need treatment if they cause problems.'],
       ['What are tonsil stones?', 'Small hard lumps of trapped debris in the tonsils that cause bad breath. They are harmless and usually managed with gargling and good oral hygiene.'],
       ['When should tonsils be removed?', 'When tonsillitis is frequent and severe, such as 7 or more episodes in a year, 5 a year for 2 years, or 3 a year for 3 years, or for repeated quinsy or breathing problems during sleep.'],
+      ['What is sakit tekak in English?', 'Sore throat. Ubat sakit tekak means sore throat medicine.'],
+      ['Can I give my child lozenges?', 'Not under 4, because of the choking risk. Many medicated lozenges are only for children over 6 or 12. Ask a pharmacist.'],
     ],
     sources: [
       ['Ministry of Health Malaysia — National Antimicrobial Guideline 2024: Otorhinolaryngology infections (adults)', 'https://sites.google.com/moh.gov.my/nag/contents/section-a-adult/a10-otorhinolaryngology-infections'],
@@ -713,7 +737,20 @@ ${figure('medications', 'Blister packs of tablets and capsules', 'Simple painkil
       ['Cleveland Clinic — Tonsil stones (Jan 2024)', 'https://my.clevelandclinic.org/health/diseases/21505-tonsil-stones'],
       ['American Academy of Family Physicians — Clinical practice guideline: tonsillectomy in children', 'https://www.aafp.org/pubs/afp/issues/2011/0901/p566.html'],
       ['The Star — Wrong treatment of sore throats is fuelling antimicrobial resistance (Jul 2025)', 'https://www.thestar.com.my/lifestyle/health/2025/07/02/wrong-treatment-of-sore-throats-is-fuelling-antimicrobial-resistance'],
+      ['NHS — Side effects of carbimazole', 'https://www.nhs.uk/medicines/carbimazole/side-effects-of-carbimazole/'],
+      ['NHS — HIV symptoms', 'https://www.nhs.uk/conditions/hiv-and-aids/symptoms/'],
+      ['US CDC — Sore throat basics (Apr 2024)', 'https://www.cdc.gov/sore-throat/about/index.html'],
+      ['American Family Physician — Corticosteroids for sore throat: BMJ guideline summary (2018)', 'https://www.aafp.org/pubs/afp/issues/2018/0615/p821.html'],
+      ['Ministry of Health Malaysia — National Antimicrobial Guideline, 4th edition: acute pharyngitis (2024)', 'https://sites.google.com/moh.gov.my/nag/contents/section-c-clinical-pathways-in-primary-care/c3-acute-pharyngitis'],
+      ['Muthanna et al — Sore throat management in Malaysian primary care, Malaysian Journal of Medical Sciences (2022)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9438850/'],
+      ['Ministry of Health Malaysia — Jerebu leaflet', 'https://jknselangor.moh.gov.my/hselayang/images/pengumuman/JerebuBM.pdf'],
+      ['electronic Medicines Compendium — Flurbiprofen 8.75mg lozenges (2025)', 'https://www.medicines.org.uk/emc/product/100409'],
+      ['electronic Medicines Compendium — Benzydamine 0.15% oromucosal spray (2026)', 'https://www.medicines.org.uk/emc/product/102676'],
+      ['electronic Medicines Compendium — Amylmetacresol and dichlorobenzyl alcohol lozenges (2021)', 'https://www.medicines.org.uk/emc/product/5606'],
+      ['American Academy of Family Physicians — FDA action on benzocaine for children (May 2018)', 'https://www.aafp.org/about/news/20180530fdabenzocaine'],
+      ['Cleveland Clinic — Sore throat in the morning (Dec 2024)', 'https://health.clevelandclinic.org/sore-throat-in-the-morning'],
+      ['Ministry of Health Malaysia — Clinical practice guideline: management of dengue infection in adults (2015)', 'https://jknjohor.moh.gov.my/jknj/wp-content/uploads/2023/02/CPG-Dengue-Adult.pdf'],
     ],
-    related: ['ubat-sakit-tekak-sore-throat-malaysia', 'urti-common-cold-selsema-malaysia', 'influenza-a-malaysia'],
+    related: ['urti-common-cold-selsema-malaysia', 'persistent-cough-malaysia', 'influenza-a-malaysia'],
   },
 ];

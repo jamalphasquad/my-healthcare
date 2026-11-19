@@ -25,7 +25,7 @@ export const OCT_2026_B = [
     ],
     sections: [
       { id: 'why', h: 'Why get screened if you feel fine?', tocLabel: 'Why get screened', html: `<p>High blood pressure, diabetes and high cholesterol usually cause no symptoms for years. By the time they do, they may already have damaged the heart, kidneys or eyes. Screening finds them early, when they are easier to treat.</p>
-<p>Recent Malaysian figures show how common hidden problems are. Among PERKESO contributors screened between 2023 and 2025, mostly aged 40–59, <strong>59.2% were overweight or obese</strong>, about 19% had diabetes and 17.45% had high blood pressure. In PeKa B40’s 2025 screening, <strong>44.37% of participants</strong> had diabetes, high blood pressure or high cholesterol.</p>
+<p>Recent Malaysian figures show how common hidden problems are. Among PERKESO contributors screened between 2023 and 2025, mostly aged 40–59, <strong>59.2% were overweight or obese</strong>, about 19% had diabetes and 17.45% had high blood pressure. In PeKa B40’s 2025 screening, <strong>44.37% of participants</strong> had diabetes, high blood pressure or high cholesterol. And in October 2026 the Health Minister told Parliament that <strong>more than 80% of adults aged 18 to 29</strong> with diabetes or high blood pressure don’t know they have it.</p>
 ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Blood sugar, blood pressure and cholesterol checks are part of every free screening programme below.')}` },
       { id: 'at-a-glance', h: 'Free screening programmes at a glance', tocLabel: 'Programmes at a glance', html: `<div class="table-wrap"><table>
 <thead><tr><th>Programme</th><th>Who it is for</th><th>How to book</th></tr></thead>
@@ -92,6 +92,7 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
       ['How do I register for Selangor Saring?', 'Fill in the screening form in the SELangkah app and choose a location and date. Sessions run across Selangor until December 2026, mostly at weekends.'],
     ],
     sources: [
+      ['Healthcare Asia — More than 80% of young Malaysians with diabetes and hypertension unaware (7 Oct 2026)', 'https://www.healthcareasia.org/2026/more-than-80-of-young-malaysians-with-diabetes-and-hypertension-are-unaware-of-the-condition/'],
       ['PERKESO SEHATi — HSP 2026 parameters', 'https://help.sehati.my/749948-HSP-2026-Parameters'],
       ['PERKESO SEHATi — Eligibility for the Health Screening Programme', 'https://help.sehati.my/183610-Why-is-the-patient-not-eligible-for-PERKESOs-Health-Screening-Program-HSP-30'],
       ['PERKESO SEHATi — Types of health screening offered to eligible workers', 'https://help.sehati.my/831268-Types-of-health-screening-offered-to-eligible-worker'],

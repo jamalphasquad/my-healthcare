@@ -123,7 +123,7 @@ function FAQS() {
     ['What number do I call in a medical emergency in Malaysia?', 'Call <a href="tel:999">999</a> from any phone. From a mobile phone, <a href="tel:112">112</a> also connects you to emergency services.'],
     ['How do I find a clinic that is open now in Kuala Lumpur?', 'Use the clinic directory above. Each listing shows opening hours in Malaysia time, and the “Open now” switch shows clinics open at this moment. Hours can differ on public holidays, so please call ahead.'],
     ['Do I need a referral to see a specialist?', 'Private specialist centres in Kuala Lumpur usually accept appointments without a referral, although some insurers ask for a GP letter. Government hospitals generally require a referral for specialist clinics.'],
-    ['Can I get free health screening in Kuala Lumpur?', 'Yes, if you are eligible. PERKESO contributors aged 40–59 can book free screening through the SEHATi app, PeKa B40 covers eligible lower-income Malaysians aged 40 and over, and LPPKN offers free or subsidised mammograms for women aged 40–70. See our <a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">screening guide</a>.'],
+    ['Can I get free health screening in Kuala Lumpur?', 'Yes, if you are eligible. PERKESO contributors aged 40–59 can book free screening through the SEHATi app, PeKa B40 covers eligible lower-income Malaysians aged 40 and over, and LPPKN offers free or subsidised mammograms for women aged 40–70. See our <a href="/articles/free-health-screening-malaysia/">screening guide</a>.'],
     ['How do I get my clinic listed?', 'Listing is free. <a href="/contact/#list">Send us</a> your clinic details and registration information, and we will check them before publishing.'],
   ];
 }

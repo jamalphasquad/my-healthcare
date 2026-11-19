@@ -563,7 +563,7 @@ ${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Most cold
       ['The Star — Does taking antibiotics for a cold help you recover faster? (May 2026)', 'https://www.thestar.com.my/news/true-or-not/2026/05/06/quickcheck-does-taking-antibiotics-for-a-cold-actually-help-you-recover-faster'],
       ['The Star — Cough and cold medicines for children to be limited (Jul 2009)', 'https://www.thestar.com.my/news/nation/2009/07/09/cough-and-cold-medicines-for-children-to-be-limited'],
     ],
-    related: ['ubat-batuk-cough-medicine-malaysia', 'influenza-a-malaysia', 'persistent-cough-malaysia'],
+    related: ['persistent-cough-malaysia', 'tonsillitis-sore-throat-malaysia', 'influenza-a-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */

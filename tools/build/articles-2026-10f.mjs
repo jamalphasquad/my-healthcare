@@ -72,7 +72,7 @@ ${figure('mental-health', 'Letter tiles spelling “mental health” next to a s
 <li><strong>Talian HEAL 15555:</strong> the Ministry of Health’s free psychosocial support line, staffed by counsellors, 8am to midnight every day.</li>
 </ul>
 <div class="box box--pink" role="note"><span class="box__title">If you are in crisis</span><p style="font-size:16px;line-height:1.6">If you are thinking of harming yourself or ending your life, call <a href="tel:999">999</a> or go to the nearest emergency department. You can also call <strong>Befrienders KL</strong> on <a href="tel:+60376272929">03-7627 2929</a>, free and confidential, 24 hours a day, or <strong>Talian Kasih</strong> on <a href="tel:15999">15999</a>.</p></div>
-<p>More helplines are listed in our <a href="/articles/world-mental-health-day-2026-malaysia/">mental health helplines guide</a>.</p>` },
+<p><strong>Talian Kasih</strong> on <a href="tel:15999">15999</a> (or WhatsApp 019-261 5999) is also open 24 hours.</p>` },
       { id: 'exam-stress', h: 'Exam stress and SPM', tocLabel: 'Exam stress', html: `<p>More than 420,000 students sit the SPM written papers from <strong>23 November to 17 December 2026</strong>. Some stress can help concentration, but too much gets in the way.</p>
 <p><strong>For students:</strong></p>
 <ul>
@@ -113,7 +113,7 @@ ${figure('mental-health', 'Letter tiles spelling “mental health” next to a s
       ['Bernama — MENTARI community mental health centres (2024)', 'https://www.bernama.com/en/news.php?id=2322914'],
       ['Befrienders Kuala Lumpur', 'https://www.befrienders.org.my/'],
     ],
-    related: ['world-mental-health-day-2026-malaysia', 'normal-heart-rate-palpitations-malaysia', 'clinic-or-emergency-department'],
+    related: ['thyroid-hyperthyroidism-hypothyroidism-malaysia', 'normal-heart-rate-palpitations-malaysia', 'clinic-or-emergency-department'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -221,13 +221,13 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'A la
   /* ------------------------------------------------------------------ */
   {
     slug: 'stomach-pain-gastric-malaysia',
-    title: 'Stomach pain and “gastric”: what the location can mean, and when it’s an emergency',
-    crumb: 'Stomach pain and gastric',
-    desc: 'What stomach pain on the left, right or upper middle can mean, what “gastric” really is, H. pylori, pharmacy medicines, foods, children with vomiting, and red flags.',
+    title: 'Stomach pain (sakit perut) and “gastric”: pain on the left or right side, causes, and when it’s an emergency',
+    crumb: 'Stomach pain (sakit perut)',
+    desc: 'Sakit perut sebelah kiri or kanan: what stomach pain in each area can mean, what “gastric” really is, H. pylori, medicines, causes in women and children, and red flags.',
     excerpt: 'Most stomach aches are harmless, but some need urgent care. What pain in different parts of the tummy can mean, what Malaysians call “gastric”, H. pylori, which medicines help, and the warning signs in adults and children.',
     standfirst: 'Stomach pain is one of the most common reasons people visit a clinic, and “gastric” one of the most common explanations Malaysians give for it. Most tummy aches are caused by indigestion, a stomach bug or constipation and settle on their own. But some, such as appendicitis or an ectopic pregnancy, need urgent care. Here is what the location of the pain can suggest, how to treat indigestion, and the warning signs to know.',
-    cat: 'guides', catLabel: 'Guides', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
-    about: ['Abdominal pain', 'Sakit perut'],
+    cat: 'guides', catLabel: 'Guides', published: PUB, modified: '2026-11-18', author: AUTHOR, news: false, medical: true,
+    about: ['Abdominal pain', 'Sakit perut', 'Gastritis'],
     image: 'doctor-consultation', imageAlt: 'A doctor talking with a patient across a desk',
     keyPoints: [
       'What Malaysians call “gastric” is usually indigestion (dyspepsia) or gastritis: burning or gnawing pain in the upper middle tummy, bloating, early fullness and nausea.',
@@ -235,6 +235,7 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'A la
       'Pain that starts around the belly button and moves to the lower right may be appendicitis. One-sided lower pain in a woman who could be pregnant needs urgent assessment.',
       'Antacids and alginates help occasional indigestion. Don’t take pharmacy omeprazole for more than 2 weeks without seeing a doctor.',
       'Call 999 for sudden severe pain, vomiting blood, black stools, or pain with chest pain or breathlessness.',
+      'In Western countries diverticulitis is usually on the left, but in Asian studies it is often on the right, so it can be mistaken for appendicitis.',
     ],
     sections: [
       { id: 'gastric', h: 'What is “gastric”? (Apa itu gastrik?)', tocLabel: 'What “gastric” is', html: `<p>In Malaysia, “gastric” (gastrik) is used for several stomach problems that cause similar symptoms:</p>
@@ -252,20 +253,40 @@ ${figure('blood-sample', 'A blood sample tube being prepared for testing', 'A la
 <li><strong>Triggers:</strong> large, fatty or spicy meals, coffee, chocolate, being overweight, pregnancy and stress can bring on symptoms. The NHS notes that spicy food and stress don’t cause ulcers, but can make symptoms worse.</li>
 </ul>
 <p>Skipping meals is often blamed for gastric. Studies have found links between irregular meals and indigestion, but haven’t shown that it is a cause.</p>` },
-      { id: 'location', h: 'What the location of the pain can mean', tocLabel: 'Pain by location', html: `<p>The location of pain gives clues, but it isn’t a diagnosis. Many conditions can cause pain in more than one place.</p>
-<div class="table-wrap"><table>
-<thead><tr><th>Where it hurts</th><th>Possible causes</th></tr></thead>
+      { id: 'location', h: 'Sakit perut by location: what pain in each area can mean', tocLabel: 'Pain by location', html: `<div class="table-wrap"><table>
+<thead><tr><th>Where</th><th>Common causes</th><th>Less common but serious</th></tr></thead>
 <tbody>
-<tr><td>Upper middle (atas tengah)</td><td>Indigestion, gastritis, ulcer, acid reflux. Less often, pancreatitis (severe pain spreading to the back) or a heart attack</td></tr>
-<tr><td>Upper right</td><td>Gallstones (severe pain under the right ribs, lasting up to several hours), liver problems</td></tr>
-<tr><td>Upper left</td><td>Gastritis, ulcer, pancreas or spleen problems</td></tr>
-<tr><td>Around the belly button, moving to the lower right</td><td>Appendicitis</td></tr>
-<tr><td>Lower left (sebelah kiri)</td><td>Constipation, trapped wind, diverticulitis (more common in older adults), kidney stones</td></tr>
-<tr><td>Side or back, spreading to the groin</td><td>Kidney stones, kidney infection</td></tr>
-<tr><td>Lower tummy, all over</td><td>Stomach bug, irritable bowel syndrome (IBS), urine infection</td></tr>
+<tr><td><strong>Upper right</strong> (kanan atas)</td><td>Gallstones, gallbladder inflammation, hepatitis</td><td>Bile duct blockage, liver or bile duct cancer</td></tr>
+<tr><td><strong>Upper middle</strong> (ulu hati)</td><td>Gastritis, stomach ulcer, <a href="/articles/gerd-acid-reflux-malaysia/">reflux</a></td><td>Pancreatitis, heart attack, stomach cancer</td></tr>
+<tr><td><strong>Upper left</strong> (kiri atas)</td><td>Gastritis, trapped wind</td><td>Pancreatitis, enlarged or ruptured spleen</td></tr>
+<tr><td><strong>Around the belly button</strong></td><td>Gastroenteritis, early <a href="/articles/appendicitis-malaysia/">appendicitis</a></td><td>Bowel obstruction</td></tr>
+<tr><td><strong>Lower right</strong> (kanan bawah)</td><td>Appendicitis, constipation, in Asians right-sided diverticulitis</td><td>Ovarian cyst, ectopic pregnancy, hernia</td></tr>
+<tr><td><strong>Lower left</strong> (kiri bawah)</td><td><a href="/articles/constipation-sembelit-malaysia/">Constipation</a>, trapped wind, IBS, diverticulitis</td><td>Ovarian cyst, ectopic pregnancy, hernia</td></tr>
+<tr><td><strong>Lower middle</strong></td><td>Bladder infection, <a href="/articles/period-pain-senggugut-malaysia/">period pain</a></td><td>Pelvic infection, bladder stones</td></tr>
+<tr><td><strong>Side or back</strong></td><td><a href="/articles/kidney-stones-batu-karang-malaysia/">Kidney stones</a>, kidney infection</td><td>Aortic aneurysm in older people</td></tr>
 </tbody></table></div>
-<p><strong>In women</strong>, lower tummy pain on one side can also be caused by period pain, ovulation pain, an ovarian cyst, endometriosis, pelvic infection, or an <strong>ectopic pregnancy</strong>. If there is any chance you could be pregnant, one-sided pain, especially with bleeding, dizziness or shoulder-tip pain, needs urgent assessment. See our <a href="/articles/pregnancy-due-date-calculator-malaysia/#ectopic">pregnancy guide</a>.</p>
+<p>Pain can move, and different people feel the same problem in different places. Use this table as a guide only. See our guides to <a href="/articles/sakit-pinggang-lower-back-pain-malaysia/">pain in the side and lower back</a> and <a href="/articles/sakit-dada-chest-pain-malaysia/">chest pain</a>.</p>
 <div class="box box--pink" role="note"><span class="box__title">Is it gastric or your heart?</span><p style="font-size:16px;line-height:1.6">A heart attack can feel like indigestion: a burning or heavy feeling in the upper tummy or chest, with sweating, nausea, breathlessness, or pain spreading to the arm, neck or jaw. If you have these symptoms, especially with diabetes, high blood pressure or if you smoke, call 999. See our <a href="/articles/stroke-heart-attack-kuala-lumpur/">heart attack guide</a>.</p></div>` },
+      { id: 'right', h: 'Sakit perut sebelah kanan: right-sided pain', tocLabel: 'Right side', html: `<ul>
+<li><strong>Gallstones:</strong> pain in the middle of the tummy or under the right ribs, lasting more than 30 minutes and sometimes several hours, often with feeling sick, and sometimes spreading to the right shoulder blade. Get urgent help if it lasts more than 30 minutes, and call <a href="tel:999">999</a> if you also have a fever or shivering, yellow skin or eyes, or pain spreading to your back with vomiting.</li>
+<li><strong>Appendicitis:</strong> pain usually starts around the belly button and moves to the lower right within a few hours. It gets worse when you move, cough or press on it, often with a fever, poor appetite or vomiting. In pregnancy, young children and older people, the pain may be milder or in a different place.</li>
+<li><strong>Diverticulitis on the right:</strong> in Western countries more than 90% of diverticular disease is on the left. In Asian studies it is often on the right. In one Singapore study, 73% of uncomplicated diverticulitis was right-sided, mostly in people around 50. It can feel like appendicitis, with constant pain, fever and sometimes blood or mucus in the stool.</li>
+<li><strong>Kidney stone or infection</strong> on the right side, often with pain spreading to the groin, urine symptoms or fever.</li>
+</ul>` },
+      { id: 'left', h: 'Sakit perut sebelah kiri: left-sided pain', tocLabel: 'Left side', html: `<ul>
+<li><strong>Constipation and trapped wind</strong> are very common causes of lower left pain, often with bloating and relief after opening your bowels.</li>
+<li><strong>Irritable bowel syndrome</strong> causes cramping pain, bloating and changes in bowel habit that come and go.</li>
+<li><strong>Diverticulitis</strong> in Western patterns is usually lower left, with constant severe pain, fever and sometimes blood in the stool.</li>
+<li><strong>Pancreatitis:</strong> sudden severe pain in the upper tummy that spreads to the sides and back, is worse after eating or lying down, and eases when you lean forward. It is usually caused by gallstones or heavy drinking, and is an emergency.</li>
+<li><strong>Spleen:</strong> pain under the left ribs, sometimes felt in the left shoulder. A ruptured spleen after an injury is an emergency.</li>
+<li><strong>Kidney stone or infection</strong> on the left side.</li>
+</ul>
+${figure('doctor-tablet', 'A doctor reading notes on a tablet', 'Where the pain is, how it started and what else you feel all help a doctor narrow down the cause.')}` },
+      { id: 'women', h: 'Causes in women', tocLabel: 'Women', html: `<ul>
+<li><strong>Ectopic pregnancy:</strong> usually between 4 and 12 weeks of pregnancy, with one-sided lower tummy pain, vaginal bleeding, and pain at the tip of the shoulder, which can be a sign of internal bleeding. Sudden sharp pain with dizziness or fainting is an emergency. Take a <a href="/articles/pregnancy-test-early-signs-malaysia/">pregnancy test</a> if there is any chance you are pregnant.</li>
+<li><strong><a href="/articles/bartholin-cyst-ovarian-cyst-fibroids-malaysia/">Ovarian cysts</a>:</strong> a cyst that bursts or twists causes sudden, severe, sharp pain on one side of the pelvis. Get urgent help.</li>
+<li><strong>Endometriosis, period pain and pelvic infection</strong> cause lower tummy pain, often on both sides.</li>
+</ul>` },
       { id: 'treatment', h: 'How to ease gastric and indigestion', tocLabel: 'Treatment', html: `<p><strong>Pharmacy medicines (ubat gastrik di farmasi):</strong></p>
 <ul>
 <li><strong>Antacids and alginates</strong> neutralise acid or form a protective layer. They work quickly for occasional symptoms. Take them with or after food, and don’t rely on them long term.</li>
@@ -287,6 +308,13 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
 <li>Give small, frequent sips of water or oral rehydration salts (ORS). Avoid fruit juice and fizzy drinks.</li>
 <li>Watch for fewer wet nappies, dark urine, a dry mouth, or a child who is unusually sleepy.</li>
 </ul>
+<p>Other causes to know about:</p>
+<ul>
+<li><strong>Mesenteric adenitis:</strong> swollen glands in the tummy after a virus, causing lower right pain and fever. It can look like appendicitis, and settles within 1 to 4 weeks.</li>
+<li><strong>Appendicitis</strong> can occur at any age. Young children may not describe it clearly.</li>
+<li><strong>Intussusception:</strong> the most common cause of a blocked bowel between about 6 months and 3 years. Episodes of severe pain last 15 to 20 minutes, the child seems well in between, and there may be vomiting and dark red, jelly-like stools. This is an emergency.</li>
+<li><strong>Testicular torsion:</strong> boys, especially aged 12 to 18, may feel the pain of a twisted testicle in the tummy. Almost all testicles can be saved within 4 to 6 hours, so go to an emergency department straight away for sudden testicle or groin pain.</li>
+</ul>
 <p>In Malaysia, remember <strong>dengue</strong>: severe tummy pain and persistent vomiting are dengue warning signs, often appearing as the fever comes down. See our <a href="/articles/dengue-klang-valley-first-three-days/">dengue guide</a>.</p>
 <div class="box box--pink" role="note"><span class="box__title">Get urgent care for a child with</span><ul>
 <li>Green, yellow-green or bloody vomit</li>
@@ -295,8 +323,19 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
 <li>Drowsiness, not responding normally, or a stiff neck</li>
 <li>Signs of dehydration, or vomiting for more than 2 days</li>
 </ul></div>` },
+      { id: 'doctor', h: 'What to tell the doctor', tocLabel: 'Telling the doctor', html: `<ul>
+<li>where the pain is, and whether it has moved or spreads anywhere</li>
+<li>what it feels like: sharp, cramping, burning, constant or coming in waves</li>
+<li>whether it started suddenly or gradually, and how bad it is</li>
+<li>what makes it better or worse, such as eating, moving or lying down</li>
+<li>other symptoms: vomiting, diarrhoea or constipation, fever, yellow eyes, black stools, blood in the urine, weight loss</li>
+<li>your medicines, including steroids and blood thinners, and alcohol use</li>
+<li>whether you could be pregnant</li>
+</ul>
+<p><strong>Painkillers:</strong> hospital studies have found that giving strong painkillers while doctors assess tummy pain doesn’t lead to missed diagnoses. Don’t let painkillers delay you getting checked, and avoid anti-inflammatory painkillers if the pain could be from your stomach or if you might have dengue.</p>` },
       { id: 'red-flags', h: 'When stomach pain is an emergency', tocLabel: 'Warning signs', html: `<div class="box box--pink" role="note"><span class="box__title">Call 999 or go to an emergency department for</span><ul>
 <li>Sudden, severe stomach pain, or pain that suddenly gets much worse</li>
+<li>Pain with yellow skin or eyes, or fever and shivering</li>
 <li>Vomiting blood, or vomit that looks like coffee grounds</li>
 <li>Black, sticky stools, or heavy bleeding from the bottom</li>
 <li>A hard, swollen tummy that is very painful to touch</li>
@@ -304,7 +343,8 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
 <li>Stomach pain with chest pain or difficulty breathing</li>
 <li>Stomach pain during pregnancy</li>
 </ul></div>
-<p><strong>See a doctor soon</strong> if you have indigestion with unexplained weight loss, difficulty swallowing, persistent vomiting, anaemia, or a family history of stomach cancer, or if new indigestion starts in middle age. Your doctor may arrange an endoscopy, a camera test to look inside the stomach.</p>` },
+<p><strong>See a doctor soon</strong> if you have indigestion with unexplained weight loss, difficulty swallowing, persistent vomiting, anaemia, or a family history of stomach cancer, or if new indigestion starts in middle age. Your doctor may arrange an endoscopy, a camera test to look inside the stomach.</p>
+<p>Older people, and those taking steroids or immune-suppressing medicines, can have serious problems with milder pain, so get checked early. See our guide on <a href="/articles/clinic-or-emergency-department/">clinic or emergency department</a>.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get stomach pain checked',
@@ -318,6 +358,9 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
       ['What should I eat if I have gastric?', 'There is no single gastric diet. Eat smaller meals, avoid eating late at night, and avoid foods that trigger your own symptoms, such as spicy, fatty or fried food, coffee or alcohol.'],
       ['My child has stomach pain and is vomiting. What should I do?', 'Most cases are a stomach bug. Give small sips of oral rehydration salts and watch for dehydration. Get urgent care for green or bloody vomit, pain moving to the lower right, severe or worsening pain, or a drowsy child.'],
       ['Can gastric pain be a heart attack?', 'Yes, sometimes. A heart attack can feel like indigestion, with burning in the upper tummy or chest. Call 999 if it comes with sweating, breathlessness, or pain spreading to the arm, neck or jaw.'],
+      ['What causes sakit perut sebelah kanan bawah?', 'Appendicitis is the most important cause to rule out. Constipation, right-sided diverticulitis (common in Asians), and in women ovarian cysts or ectopic pregnancy are also possible.'],
+      ['What causes pain under the right ribs?', 'Often the gallbladder, especially after a fatty meal, or the liver. Get urgent help if it lasts more than 30 minutes or comes with fever or yellow eyes.'],
+      ['Should I take painkillers before seeing a doctor?', 'Painkillers don’t usually hide the cause, but don’t let them delay you getting checked. Avoid anti-inflammatory painkillers if the pain could be from your stomach or if you might have dengue.'],
     ],
     sources: [
       ['Goh KL et al. — Malaysian consensus on Helicobacter pylori infection (JGH Open, 2023)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10134769/'],
@@ -337,20 +380,35 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
       ['American Academy of Pediatrics — Abdominal pain in children', 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/Abdominal-Pain-in-Children.aspx'],
       ['World Health Organization — Dengue and severe dengue (Aug 2025)', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
       ['Malaysia National Cancer Registry Report 2017–2021 (summary)', 'https://nci.moh.gov.my/images/pdf/SUMMARY-OF-MALAYSIA-NATIONAL-CANCER-REGISTRY-REPORT-2017-2021.pdf'],
+      ['NHS — Stomach ache (Oct 2026)', 'https://www.nhs.uk/symptoms/stomach-ache/'],
+      ['MSD Manual Professional Version — Acute abdominal pain (Jul 2024)', 'https://www.msdmanuals.com/professional/gastrointestinal-disorders/acute-abdomen-and-surgical-gastroenterology/acute-abdominal-pain'],
+      ['NHS — Gallstones symptoms (Aug 2025)', 'https://www.nhs.uk/conditions/gallstones/symptoms/'],
+      ['NHS — Acute pancreatitis symptoms (Mar 2026)', 'https://www.nhs.uk/conditions/acute-pancreatitis/symptoms/'],
+      ['NHS — Diverticular disease and diverticulitis (Sep 2023)', 'https://www.nhs.uk/conditions/diverticular-disease-and-diverticulitis/'],
+      ['Turner et al — Diverticular disease in Asia, Annals of Coloproctology (2021)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8391037/'],
+      ['NHS — Kidney infection (Feb 2025)', 'https://www.nhs.uk/conditions/kidney-infection/'],
+      ['NHS — Heart attack symptoms (Mar 2026)', 'https://www.nhs.uk/conditions/heart-attack/symptoms/'],
+      ['NHS — Ectopic pregnancy symptoms (2022)', 'https://www.nhs.uk/conditions/ectopic-pregnancy/symptoms/'],
+      ['NHS — Ovarian cyst (Jun 2023)', 'https://www.nhs.uk/conditions/ovarian-cyst/'],
+      ['Royal Children’s Hospital Melbourne — Abdominal pain (Kids Health Info)', 'https://www.rch.org.au/kidsinfo/fact_sheets/Abdominal_pain/'],
+      ['Cleveland Clinic — Mesenteric lymphadenitis (2022)', 'https://my.clevelandclinic.org/health/diseases/23949-mesenteric-lymphadenitis'],
+      ['MSD Manual Consumer Version — Intussusception (Jul 2025)', 'https://www.msdmanuals.com/home/children-s-health-issues/gastrointestinal-disorders-in-children/intussusception'],
+      ['Cleveland Clinic — Testicular torsion (Jun 2026)', 'https://my.clevelandclinic.org/health/diseases/15160-testicular-torsion'],
+      ['Cochrane — Analgesia in patients with acute abdominal pain (2022)', 'https://www.cochrane.org/CD005660/EMERG_analgesia-patients-acute-abdominal-pain'],
     ],
-    related: ['sakit-perut-kiri-kanan-abdominal-pain-malaysia', 'diarrhoea-cirit-birit-malaysia', 'gerd-acid-reflux-malaysia'],
+    related: ['appendicitis-malaysia', 'diarrhoea-cirit-birit-malaysia', 'gerd-acid-reflux-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
   {
     slug: 'headaches-malaysia',
-    title: 'Headaches: common types, why they keep coming back, and warning signs',
-    crumb: 'Headaches',
-    desc: 'Tension headaches, migraine and cluster headaches, pain at the back of the head, why headaches keep coming back, painkillers, koyok and balms, and red flags.',
+    title: 'Headaches (sakit kepala): types, pain on the right, left or back of the head, relief and warning signs',
+    crumb: 'Headaches (sakit kepala)',
+    desc: 'Headache types and what sakit kepala sebelah kanan, kiri or belakang can mean, why headaches keep coming back, painkillers, koyok, dengue caution and red flags.',
     excerpt: 'Most headaches are tension headaches or migraine, and are not dangerous. How to tell the types apart, why frequent painkillers can make headaches worse, whether koyok and balms work, and the warning signs that need urgent care.',
     standfirst: 'Almost everyone gets headaches, and about 4 in 10 people worldwide have a headache disorder. Most are tension headaches or migraine, which are uncomfortable but not dangerous. Here is how to tell the common types apart, why headaches can keep coming back, what helps, and the rare warning signs that need a doctor straight away.',
-    cat: 'guides', catLabel: 'Guides', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
-    about: ['Headache', 'Sakit kepala'],
+    cat: 'guides', catLabel: 'Guides', published: PUB, modified: '2026-11-18', author: AUTHOR, news: false, medical: true,
+    about: ['Headache', 'Migraine', 'Sakit kepala'],
     image: 'medications', imageAlt: 'Blister packs of tablets',
     keyPoints: [
       'Tension headaches feel like a tight band around the head, on both sides. Migraine is usually a throbbing pain, often one-sided, with nausea and sensitivity to light and sound.',
@@ -358,6 +416,7 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
       'Stress, poor sleep, skipped meals, dehydration, posture, screen time and alcohol are common triggers. A headache diary helps find yours.',
       'Menthol or peppermint balms have some evidence for tension headaches. Cluster headaches need specific treatment from a doctor.',
       'Call 999 for a sudden, extremely severe headache, or a headache with weakness, confusion, slurred speech, a stiff neck and fever, or after a head injury.',
+      'Where a headache sits gives clues: one side suggests migraine, both sides or the back of the head suggests a tension-type headache, and severe pain around one eye suggests cluster headache.',
     ],
     sections: [
       { id: 'types', h: 'Common types of headache', tocLabel: 'Types of headache', html: `<div class="table-wrap"><table>
@@ -370,7 +429,29 @@ ${figure('medications', 'Blister packs of tablets', 'Don’t take pharmacy acid-
 </tbody></table></div>
 <p>A community study in Malaysia found that about <strong>1 in 4 adults</strong> had tension-type headaches and about <strong>1 in 11</strong> had migraine in a year, more often women.</p>
 <p><strong>“Sinus headache” is often migraine.</strong> In one study, most people who believed they had sinus headaches actually met the criteria for migraine. A true sinus infection usually comes with a blocked nose, thick discharge and fever.</p>` },
-      { id: 'back-of-head', h: 'Pain at the back of the head and neck', tocLabel: 'Back of the head', html: `<p>Headaches at the back of the head, near the neck, are usually caused by:</p>
+      { id: 'by-location', h: 'Sakit kepala sebelah kanan, kiri or belakang: headache by location', tocLabel: 'By location', html: `<div class="table-wrap"><table>
+<thead><tr><th>Where</th><th>Common causes</th><th>Clues</th></tr></thead>
+<tbody>
+<tr><td><strong>One side</strong> (sebelah kanan atau kiri)</td><td>Migraine, hormonal headaches</td><td>Throbbing, worse with movement, nausea, light and noise sensitivity</td></tr>
+<tr><td><strong>Around or behind one eye</strong></td><td>Cluster headache</td><td>Very severe, red watering eye, drooping lid, runny nose on the same side</td></tr>
+<tr><td><strong>Both sides, like a tight band</strong></td><td>Tension-type headache</td><td>Pressing or tightening, can include the forehead, temples and neck</td></tr>
+<tr><td><strong>Back of the head</strong> (bahagian belakang)</td><td>Tension-type, neck-related (cervicogenic) headache, occipital neuralgia</td><td>Worse with neck movement, or sharp electric-shock pain at the base of the skull</td></tr>
+<tr><td><strong>Forehead, cheeks, bridge of the nose</strong> (depan)</td><td>Sinusitis, tension-type, eye strain</td><td>Blocked nose, green or yellow mucus, tenderness over the cheeks</td></tr>
+<tr><td><strong>Temples</strong>, in people over 50</td><td>Giant cell (temporal) arteritis</td><td>New headache, tender scalp, jaw pain when chewing, vision changes</td></tr>
+<tr><td><strong>Face, jaw or teeth on one side</strong></td><td>Trigeminal neuralgia</td><td>Brief electric-shock attacks triggered by touch, eating or wind</td></tr>
+<tr><td><strong>Anywhere</strong></td><td>Dehydration, missed meals, caffeine withdrawal, a fever</td><td>Often eases with fluids, food and rest</td></tr>
+</tbody></table></div>
+<p>A headache can move or change, so use this table as a guide only, not a diagnosis.</p>` },
+      { id: 'one-side', h: 'One-sided headaches (sebelah kanan atau kiri)', tocLabel: 'One side', html: `<p><strong>Migraine</strong> is the most common cause of a one-sided headache. About 9 in 100 Malaysians have migraine. Typical features:</p>
+<ul>
+<li>a throbbing pain, often on one side, that gets worse with movement</li>
+<li>nausea or vomiting, and sensitivity to light and sound</li>
+<li>attacks lasting 4 hours to 3 days</li>
+<li>in about 1 in 10, an aura before the headache, such as zigzag lights, numbness or difficulty speaking, lasting up to an hour</li>
+</ul>
+<p><strong>Cluster headache</strong> is rarer but extremely painful: always on one side, around or above the eye or at the temple, lasting 15 minutes to 3 hours, up to several times a day, often with restlessness. It is more common in men in their 30s and 40s. Ordinary painkillers don’t work, so see a doctor.</p>
+<p><strong>Trigeminal neuralgia</strong> causes sudden electric-shock pain on one side of the face or jaw, lasting seconds, often triggered by eating, brushing teeth, touching the face or air-conditioning. It usually starts after age 50.</p>` },
+      { id: 'back-of-head', h: 'Pain at the back of the head and neck (sakit kepala bahagian belakang)', tocLabel: 'Back of the head', html: `<p>Headaches at the back of the head, near the neck, are usually caused by:</p>
 <ul>
 <li><strong>Tension-type headache</strong>, often with tight neck and shoulder muscles from stress or long hours at a desk or phone.</li>
 <li><strong>Neck problems (cervicogenic headache):</strong> pain that starts in the neck, often with stiffness and pain when moving the neck.</li>
@@ -391,8 +472,9 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
 <p>In the Malaysian study, more than half of people with migraine or tension headaches said sun exposure brought them on.</p>
 <div class="box box--mint" role="note"><span class="box__title">Too many painkillers can cause headaches</span><p style="font-size:16px;line-height:1.6">Taking simple painkillers on 15 or more days a month, or combination painkillers or triptans on 10 or more days a month, can cause <strong>medication-overuse headache</strong>, the most common cause of daily headaches. Try to keep painkillers to no more than 2 or 3 days a week. If you are already taking them most days, see a doctor. Stopping, with support, usually brings improvement.</p></div>
 <p><strong>Keep a headache diary.</strong> Note when headaches happen, how bad they are, what you were doing, what you ate, how you slept, and what medicine you took. Patterns often appear within a few weeks.</p>` },
-      { id: 'relief', h: 'How to get rid of a headache', tocLabel: 'Relief', html: `<ul>
-<li><strong>Simple painkillers:</strong> paracetamol, ibuprofen or aspirin work for most tension headaches. Take them early in a migraine attack. Don’t give aspirin to anyone under 16. In pregnancy, paracetamol is the usual first choice.</li>
+      { id: 'relief', h: 'How to get rid of a headache (cara hilangkan sakit kepala)', tocLabel: 'Relief', html: `<ul>
+<li><strong>Simple painkillers:</strong> paracetamol, ibuprofen or aspirin work for most tension headaches. Take them early in a migraine attack. Don’t give aspirin to anyone under 16. In pregnancy, paracetamol is the usual first choice. See our <a href="/articles/painkillers-paracetamol-ibuprofen-malaysia/">painkiller guide</a> for doses.</li>
+<li><strong>Dengue caution:</strong> a severe headache and pain behind the eyes can be dengue. If you have a fever and could have dengue, take paracetamol only and avoid ibuprofen and aspirin.</li>
 <li><strong>Rest, water and food:</strong> drink water, eat if you’ve skipped a meal, and rest in a quiet, dark room during a migraine.</li>
 <li><strong>Relax your neck and shoulders:</strong> gentle stretches, a warm shower or a warm pack.</li>
 <li><strong>Koyok, menthol and peppermint balms:</strong> small studies have found that 10% peppermint oil or menthol applied to the forehead and temples eased tension headaches and migraine better than a placebo. Many patches also contain methyl salicylate, which is similar to aspirin, so avoid them if you are allergic to aspirin, take blood thinners, or on broken skin, and check the label before using them on children.</li>
@@ -431,6 +513,9 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['What are the symptoms of migraine? (Simptom migrain)', 'A moderate to severe, throbbing headache, often on one side, lasting 4 hours to 3 days, with nausea or vomiting and sensitivity to light and sound. Some people see flashing lights or zigzags (aura) beforehand.'],
       ['What is a cluster headache?', 'A very severe, one-sided headache around the eye, lasting 15 minutes to 3 hours, with a red, watery eye or runny nose on the same side. Attacks come in clusters over weeks or months, and are much more common in men. Ordinary painkillers don’t help, so see a doctor.'],
       ['When is a headache dangerous?', 'Call 999 for a sudden, extremely severe headache, or a headache with weakness, confusion, slurred speech, a stiff neck and fever, a seizure, or after a head injury. See a doctor urgently for a new or worsening headache.'],
+      ['What does sakit kepala sebelah kanan mean?', 'A headache on the right side. It is often a migraine, and less often a cluster headache or a neck-related headache. The same causes apply to the left side.'],
+      ['Is a one-sided headache serious?', 'Usually not. Migraine is the most common cause. See a doctor urgently if it is sudden and severe, or comes with weakness, confusion or vision loss.'],
+      ['Can high blood pressure cause headaches?', 'Rarely, unless it is very high. Most people with high blood pressure have no symptoms, so check it with a monitor.'],
     ],
     sources: [
       ['World Health Organization — Headache disorders fact sheet (Oct 2025)', 'https://www.who.int/news-room/fact-sheets/detail/headache-disorders'],
@@ -444,8 +529,23 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
       ['Schreiber et al. — Prevalence of migraine in patients with a history of self-reported sinus headache (Arch Intern Med, 2004)', 'https://pubmed.ncbi.nlm.nih.gov/15364670/'],
       ['Göbel et al. — Peppermint oil in the acute treatment of tension-type headache (Schmerz, 2016)', 'https://pubmed.ncbi.nlm.nih.gov/27106030/'],
       ['Borhani Haghighi et al. — Cutaneous application of menthol 10% for migraine (Int J Clin Pract, 2010)', 'https://pubmed.ncbi.nlm.nih.gov/20456191/'],
+      ['Malaysian Society of Neurosciences — Consensus guidelines on the management of headache (2021)', 'https://neuro.org.my/assets/guideline/Consensus%20guidelines%20on%20the%20management%20of%20headache%202021.pdf'],
+      ['Cleveland Clinic — What your headache location means (May 2023)', 'https://health.clevelandclinic.org/why-you-get-headaches-and-where'],
+      ['Cleveland Clinic — Cervicogenic headache (Jul 2024)', 'https://my.clevelandclinic.org/health/diseases/cervicogenic-headache'],
+      ['Cleveland Clinic — Occipital neuralgia (May 2022)', 'https://my.clevelandclinic.org/health/diseases/23072-occipital-neuralgia'],
+      ['NHS — Trigeminal neuralgia (Jan 2023)', 'https://www.nhs.uk/conditions/trigeminal-neuralgia/'],
+      ['NHS — Giant cell arteritis (Aug 2023)', 'https://www.nhs.uk/conditions/giant-cell-arteritis/'],
+      ['MSD Manual Consumer Version — Giant cell arteritis (Dec 2024)', 'https://www.msdmanuals.com/home/bone-joint-and-muscle-disorders/vasculitic-disorders/giant-cell-arteritis'],
+      ['NHS — Sinusitis (Jan 2024)', 'https://www.nhs.uk/conditions/sinusitis-sinus-infection/'],
+      ['NHS — High blood pressure (Jul 2024)', 'https://www.nhs.uk/conditions/high-blood-pressure/'],
+      ['The Migraine Trust — Medication overuse headache', 'https://migrainetrust.org/understand-migraine/types-of-migraine/medication-overuse-headache/'],
+      ['Headache Australia — Withdrawal headache (May 2021)', 'https://headacheaustralia.org.au/headachetypes/withdrawal-headache/'],
+      ['NHS — How and when to take paracetamol for adults (Mar 2026)', 'https://www.nhs.uk/medicines/paracetamol-for-adults/how-and-when-to-take-paracetamol-for-adults/'],
+      ['NHS — How and when to take ibuprofen (Aug 2025)', 'https://www.nhs.uk/medicines/ibuprofen-for-adults/how-and-when-to-take-ibuprofen/'],
+      ['WHO — Dengue and severe dengue (Aug 2025)', 'https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue'],
+      ['National Migraine Centre — Migraine in children and adolescents', 'https://www.nationalmigrainecentre.org.uk/understanding-migraine/factsheets-and-resources/migraine-in-children-and-adolescents/'],
     ],
-    related: ['sakit-kepala-sebelah-kiri-kanan-headache-malaysia', 'vertigo-dizziness-malaysia', 'stroke-heart-attack-kuala-lumpur'],
+    related: ['painkillers-paracetamol-ibuprofen-malaysia', 'vertigo-dizziness-malaysia', 'stroke-heart-attack-kuala-lumpur'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -651,13 +751,13 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
   /* ------------------------------------------------------------------ */
   {
     slug: 'blood-pressure-cholesterol-malaysia',
-    title: 'High blood pressure and cholesterol: signs, normal levels (tekanan darah normal), and how to lower them',
+    title: 'High blood pressure and cholesterol: normal levels (tekanan darah and bacaan kolesterol normal), and how to lower them',
     crumb: 'Blood pressure and cholesterol',
-    desc: 'Signs and causes of high blood pressure (darah tinggi), normal BP and cholesterol levels, why “lower it in 5 minutes” is a myth, and what medicines do.',
+    desc: 'Signs and causes of high blood pressure, normal BP and cholesterol readings in Malaysia, LDL targets by risk, fasting, why “lower it in 5 minutes” is a myth, and statins.',
     excerpt: 'Nearly 1 in 3 Malaysian adults has high blood pressure, and 1 in 3 has high cholesterol, often without knowing. Normal levels, causes, what really lowers them and how fast, and what to know about blood pressure and cholesterol medicines.',
     standfirst: 'High blood pressure (darah tinggi) and high cholesterol rarely cause symptoms, yet together they are the main reasons Malaysians have heart attacks and strokes. Here are the normal levels, what causes them to rise, what really brings them down, and what to expect from medicines.',
-    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
-    about: ['Hypertension', 'Darah tinggi'],
+    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: '2026-11-18', author: AUTHOR, news: false, medical: true,
+    about: ['Hypertension', 'Darah tinggi', 'Cholesterol'],
     image: 'bp-check-desk', imageAlt: 'A blood pressure monitor on a desk',
     keyPoints: [
       '29.2% of Malaysian adults have high blood pressure and 33.3% have high cholesterol, according to NHMS 2023. Many don’t know.',
@@ -665,6 +765,7 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
       'There is no safe way to lower blood pressure in 5 minutes. Very high blood pressure with chest pain, breathlessness, weakness or vision changes is an emergency: call 999.',
       'Cutting salt to less than 1 teaspoon a day, losing weight, exercise and less alcohol can lower blood pressure by several points each.',
       'Statins lower LDL cholesterol by about 20–55%. True statin side effects are less common than many people think.',
+      'There is no single normal LDL: your target depends on your overall heart risk. You usually don’t need to fast for a cholesterol test.',
     ],
     sections: [
       { id: 'malaysia', h: 'How common are they in Malaysia?', tocLabel: 'In Malaysia', html: `<p>According to the National Health and Morbidity Survey (NHMS) 2023:</p>
@@ -673,7 +774,7 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
 <li><strong>33.3%</strong> have high cholesterol, and <strong>about half</strong> of them don’t know.</li>
 <li>More than 60% of adults aged 18 to 39 with diabetes, high blood pressure or high cholesterol were unaware of it.</li>
 </ul>
-<p>Ischaemic heart disease, which both conditions lead to, is Malaysia’s leading cause of death. See our article on <a href="/articles/undiagnosed-diabetes-high-blood-pressure-young-adults/">undiagnosed conditions in young adults</a>.</p>` },
+<p>Ischaemic heart disease, which both conditions lead to, is Malaysia’s leading cause of death. Screening finds both early. See our guide to <a href="/articles/free-health-screening-malaysia/">free health screening</a>.</p>` },
       { id: 'bp-levels', h: 'Normal blood pressure levels (tekanan darah normal)', tocLabel: 'Blood pressure levels', html: `<p>Blood pressure is written as two numbers: the top (systolic) is the pressure when the heart beats, and the bottom (diastolic) is the pressure between beats. Malaysia’s hypertension guidelines classify it as:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Reading (mmHg)</th><th>Category</th></tr></thead>
@@ -716,29 +817,62 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
 <li><strong>Beta blockers</strong>: tiredness and cold hands and feet.</li>
 </ul>
 <p>Most people need treatment for life. <strong>Don’t stop your medicine</strong> when your readings become normal, because that usually means the medicine is working. Talk to your doctor about any side effects instead.</p>` },
-      { id: 'cholesterol-levels', h: 'Normal cholesterol levels (kadar kolesterol normal)', tocLabel: 'Cholesterol levels', html: `<p>A cholesterol test measures several fats in the blood. You usually don’t need to fast. Malaysian guidelines use these levels to flag a problem:</p>
+      { id: 'cholesterol-levels', h: 'Normal cholesterol levels (bacaan kolesterol normal)', tocLabel: 'Cholesterol levels', html: `<p>These are the levels Malaysia’s dyslipidaemia guideline flags as abnormal:</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Test</th><th>Flag level (mmol/L)</th></tr></thead>
+<thead><tr><th>Test</th><th>Flagged as abnormal</th><th>In mg/dL</th></tr></thead>
 <tbody>
-<tr><td>Total cholesterol</td><td>Above 5.2 is high</td></tr>
-<tr><td>LDL (“bad”) cholesterol</td><td>Target depends on your heart risk (see below)</td></tr>
-<tr><td>HDL (“good”) cholesterol</td><td>Below 1.0 in men or 1.2 in women is low</td></tr>
-<tr><td>Triglycerides</td><td>Above 1.7 is high</td></tr>
+<tr><td><strong>Total cholesterol</strong></td><td>Above 5.2 mmol/L</td><td>Above about 200</td></tr>
+<tr><td><strong>HDL (“good”) cholesterol</strong></td><td>Below 1.0 (men) or 1.2 (women)</td><td>Below about 39 or 46</td></tr>
+<tr><td><strong>Triglycerides</strong></td><td>Above 1.7 mmol/L</td><td>Above about 150</td></tr>
+<tr><td><strong>LDL (“bad”) cholesterol</strong></td><td>Depends on your risk (see below)</td><td>Optimal is below about 100</td></tr>
 </tbody></table></div>
-<p><strong>LDL targets depend on your risk.</strong> The higher your risk of a heart attack or stroke, the lower your LDL should be. For people at very high risk, such as after a heart attack or stroke, Malaysia’s 2023 guidelines aim for <strong>1.4 mmol/L or lower</strong> and a reduction of more than half. Your doctor will work out your risk using your age, blood pressure, smoking, diabetes and family history.</p>` },
-      { id: 'lower-cholesterol', h: 'How to lower cholesterol', tocLabel: 'Lowering cholesterol', html: `<ul>
-<li>Cut down on <strong>saturated fat</strong> (fatty meat, coconut milk and ghee-heavy dishes, butter) and avoid trans fats in fried snacks and baked goods.</li>
-<li>Eat more fibre: oats, whole grains, beans, fruit and vegetables. About 3 g of oat beta-glucan a day lowers LDL slightly.</li>
-<li>Choose fewer refined carbohydrates, such as large servings of white rice and sweet drinks.</li>
-<li>Exercise regularly, lose weight if you are overweight, and stop smoking.</li>
-</ul>
-<p><strong>How fast?</strong> Diet changes take weeks to months. Statins usually reach their full effect within about a month, and doctors recheck cholesterol 1 to 3 months after starting.</p>
-<p><strong>Statins</strong> are the main cholesterol medicine. They lower LDL by about 20 to 55%, depending on the type and dose, and reduce heart attacks and strokes. Other medicines, such as ezetimibe, can be added.</p>` },
-      { id: 'statin-side-effects', h: 'Side effects of cholesterol medicine (kesan sampingan ubat kolesterol)', tocLabel: 'Statin side effects', html: `<p>Statins are among the most studied medicines in the world, and serious side effects are rare:</p>
 <ul>
-<li><strong>Muscle aches:</strong> many people report them, but in trials they happen only slightly more often than with a dummy pill. In one study, people who had stopped statins because of side effects felt almost the same symptoms when taking a placebo. Serious muscle damage is rare. Most people who can’t tolerate one statin do fine on another.</li>
-<li><strong>Liver:</strong> a mild rise in liver tests happens in under 3% of people. Liver failure is extremely rare.</li>
-<li><strong>Diabetes:</strong> statins slightly increase the chance of developing diabetes, mainly in people already at risk, but the heart benefits are far greater.</li>
+<li>The guideline describes an LDL of 1.3 to 1.8 mmol/L as physiologically normal, and below 2.6 as optimal for adults.</li>
+<li><strong>Non-HDL cholesterol</strong> (total cholesterol minus HDL) is a useful extra measure, especially if you have diabetes or high triglycerides. Its target is your LDL target plus 0.8.</li>
+<li>To convert cholesterol from mmol/L to mg/dL, multiply by about 38.7. For triglycerides, multiply by about 88.6.</li>
+</ul>
+<p>See also our guide to <a href="/articles/blood-test-results-explained-malaysia/">blood test results</a>.</p>` },
+      { id: 'ldl-targets', h: 'Your LDL target depends on your risk', tocLabel: 'LDL targets', html: `<p>Doctors first decide your risk of a heart attack or stroke. If you already have heart disease, diabetes or kidney disease, you are automatically at high or very high risk. Otherwise, your doctor uses a score based on your age, sex, blood pressure, cholesterol, diabetes and smoking to estimate your 10-year risk.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Risk</th><th>LDL target (2017 guideline)</th><th>2023 update</th></tr></thead>
+<tbody>
+<tr><td>Low (under 10% in 10 years)</td><td>Below 3.0 mmol/L</td><td>Below 3.0 mmol/L</td></tr>
+<tr><td>Intermediate (10 to 20%)</td><td>Below 3.0 mmol/L</td><td>Reported as below 2.6 mmol/L</td></tr>
+<tr><td>High (over 20%, diabetes, kidney disease)</td><td>2.6 mmol/L, or a 50% reduction</td><td>1.8 mmol/L or less, and at least a 50% reduction</td></tr>
+<tr><td>Very high (heart attack, stroke, narrowed arteries)</td><td>Below 1.8 mmol/L, or a 50% reduction</td><td>1.4 mmol/L or less, and at least a 50% reduction</td></tr>
+</tbody></table></div>
+<p>An LDL above 4.9 mmol/L on its own puts you at high risk. The 2023 targets come from published summaries of the update, so your doctor may use slightly different figures. See our guide to <a href="/articles/tanda-sakit-jantung-heart-disease-signs-malaysia/">signs of heart disease</a>.</p>
+${figure('blood-sample', 'A blood sample tube held for testing', 'A non-fasting blood test is fine for most cholesterol checks.')}` },
+      { id: 'cholesterol-testing', h: 'Cholesterol tests: who, when and do I need to fast?', tocLabel: 'Cholesterol tests', html: `<ul>
+<li><strong>Who:</strong> all adults over 30 should have a full lipid profile. Start from age 18 if you have a family history of early heart disease, diabetes, obesity around the waist or a known inherited cholesterol problem.</li>
+<li><strong>Fasting:</strong> usually not needed. Results differ by only about 0.2 mmol/L. You may be asked to fast if your triglycerides were very high, or if you are having other tests that need fasting.</li>
+<li><strong>How often:</strong> typically every few years if normal. If you start or change treatment, your doctor will recheck in 1 to 3 months, then every 6 to 12 months.</li>
+</ul>
+<p><strong>In Malaysia:</strong> the 2023 National Health and Morbidity Survey found high cholesterol in a third of adults, about 7.5 million people, and about half didn’t know it. Free screening is available through some schemes. See our guide to <a href="/articles/free-health-screening-malaysia/">free health screening</a>.</p>
+<p><strong>Inherited high cholesterol</strong> (familial hypercholesterolaemia) affects about 1 in 100 Malaysians. Suspect it if your LDL is very high, a parent or sibling had heart disease before 55 (men) or 65 (women), or you have fatty lumps on the tendons of your fingers or heels. Family members should be tested too.</p>` },
+      { id: 'lower-cholesterol', h: 'How to lower cholesterol', tocLabel: 'Lowering cholesterol', html: `<ul>
+<li><strong>Cut saturated fat</strong> to less than 10% of your energy. Santan, coconut oil and palm oil are high in saturated fat, as are fatty meat and fried food. A review of 16 trials found coconut oil raised LDL compared with other vegetable oils.</li>
+<li><strong>Avoid trans fats</strong>, found in some biscuits, pastries and fried snacks.</li>
+<li><strong>Eat more fibre</strong>: aim for 20 to 30g a day, from vegetables, fruit, beans and whole grains. Oats with 3g of beta-glucan a day lower LDL by about 0.25 mmol/L. Juicing removes fibre, so eat whole fruit.</li>
+<li><strong>Reduce refined carbohydrates</strong> such as white rice and sugary drinks, especially if your triglycerides are high.</li>
+<li><strong>Exercise:</strong> regular aerobic exercise raises HDL and lowers triglycerides.</li>
+<li><strong>Lose weight</strong> if you are overweight. Even 5 to 10% helps. See our <a href="/articles/bmi-calculator-malaysia/">BMI calculator</a>.</li>
+<li><strong>Stop smoking</strong>, which raises HDL.</li>
+</ul>
+<p><strong>Eggs:</strong> cholesterol in food has only a weak effect on blood cholesterol for most people. The American Heart Association says one egg a day is reasonable as part of a healthy diet.</p>
+<p><strong>How fast?</strong> Diet changes take weeks to months. Statins usually reach their full effect within about a month, and doctors recheck cholesterol 1 to 3 months after starting.</p>` },
+      { id: 'statin-side-effects', h: 'Cholesterol medicines and side effects (kesan sampingan ubat kolesterol)', tocLabel: 'Statins and side effects', html: `<p><strong>Statins</strong> lower LDL by about 21 to 55%, depending on the type and dose. Common generic statins include atorvastatin, rosuvastatin, simvastatin and pravastatin. Other options, such as ezetimibe or injections (PCSK9 inhibitors), may be added if targets aren’t reached.</p>
+<ul>
+<li><strong>Muscle aches:</strong> in blinded trials, muscle aches were almost as common on placebo (26.6%) as on statins (27.1%), and more than 90% of reported muscle symptoms weren’t caused by the statin. If you do get symptoms, most people can take a different statin.</li>
+<li><strong>Liver:</strong> a mild rise in liver tests happens in fewer than 3 in 100 people. Serious liver problems are very rare.</li>
+<li><strong>Diabetes:</strong> statins slightly increase the chance of developing diabetes, but the benefit for the heart is much greater.</li>
+<li><strong>Pregnancy:</strong> stop statins before trying for a baby, and don’t take them while pregnant or breastfeeding.</li>
+<li><strong>Grapefruit</strong> can interact with some statins.</li>
+</ul>
+<p><strong>Supplements:</strong></p>
+<ul>
+<li><strong>Red yeast rice</strong> contains monacolin K, which is the same as the statin lovastatin. In Malaysia, these products must be registered, are limited to 10mg of monacolin K a day, and must carry warnings. Don’t take them with a prescribed statin, and check for a MAL number.</li>
+<li><strong>Fish oil</strong> at high doses lowers triglycerides, but doesn’t replace statins for LDL.</li>
 </ul>
 <p>Don’t stop a statin on your own. If you have side effects, talk to your doctor about changing the dose or type.</p>
 ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls', 'More vegetables, fruit, oats and beans, and less saturated fat, help lower cholesterol.')}` },
@@ -755,6 +889,10 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['What are the side effects of cholesterol medicine? (Kesan ubat kolesterol)', 'Statins can cause muscle aches in some people, mild liver test changes and a slightly higher diabetes risk, but serious side effects are rare. Talk to your doctor rather than stopping it yourself.'],
       ['Can I stop my blood pressure medicine when my readings are normal?', 'No. Normal readings usually mean the medicine is working. Most people need it long term. Talk to your doctor before changing anything.'],
       ['How fast can I lower my cholesterol? (Menurunkan kolesterol dengan cepat)', 'Statins reach their full effect in about a month. Diet changes take weeks to months. Your doctor will usually recheck cholesterol 1 to 3 months after a change.'],
+      ['What is a normal LDL level?', 'An LDL below 2.6 mmol/L is optimal for most adults. People at low or intermediate risk aim for below 3.0, and people at high or very high risk aim much lower, down to 1.4 mmol/L.'],
+      ['Do I need to fast for a cholesterol test?', 'Usually not. Your doctor may ask you to fast if your triglycerides were very high before, or for other tests.'],
+      ['Are eggs bad for cholesterol?', 'For most people, eating eggs has only a small effect on blood cholesterol. About one egg a day is reasonable as part of a healthy diet.'],
+      ['Is red yeast rice safe?', 'It contains the same substance as a statin. Use only registered products with a MAL number, and don’t take it with a prescribed statin.'],
     ],
     sources: [
       ['Ministry of Health — Clinical Practice Guidelines: Management of Hypertension, 5th edition (2018)', 'https://mymahtas2.moh.gov.my/files/CPG%20Maagement%20of%20Hypertension%20CPG%202018%20V3.8%20FA.pdf'],
@@ -767,8 +905,18 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
       ['NHS — Side effects of ramipril (Mar 2026)', 'https://www.nhs.uk/medicines/ramipril/side-effects-of-ramipril/'],
       ['Chaddha et al. — Device and non-device-guided slow breathing to reduce blood pressure (2019)', 'https://pubmed.ncbi.nlm.nih.gov/31331557/'],
       ['American College of Cardiology — SAMSON trial summary (Nov 2020)', 'https://www.acc.org/Latest-in-Cardiology/Articles/2020/11/12/20/28/sun-1028am-SAMSON-aha-2020'],
+      ['Rosman et al — Risk factor assessments and lipid management in hospitalised patients in Malaysia, Malaysian Journal of Medical Sciences (2025)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13132105/'],
+      ['NHS — Cholesterol levels (Mar 2026)', 'https://www.nhs.uk/conditions/high-cholesterol/cholesterol-levels/'],
+      ['NHS — Statins (May 2026)', 'https://www.nhs.uk/medicines/statins/'],
+      ['The Star — Over half a million Malaysians live with non-communicable diseases (May 2024)', 'https://thestar.com.my/news/nation/2024/05/16/over-half-a-million-malaysians-live-with-non-communicable-diseases-according-to-survey'],
+      ['CodeBlue — Over two million adults in Malaysia live with three NCDs: NHMS 2023 (May 2024)', 'https://codeblue.galencentre.org/2024/05/over-two-million-adults-in-malaysia-live-with-three-ncds-nhms-2023/'],
+      ['Chua et al — Familial hypercholesterolaemia in the Malaysian community, Journal of Atherosclerosis and Thrombosis (2021)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8560842'],
+      ['Cholesterol Treatment Trialists’ Collaboration — Effect of statin therapy on muscle symptoms, The Lancet (2022)', 'https://ora.ox.ac.uk/objects/uuid:fda95810-d9a8-43bc-9d87-b63dacc54d95'],
+      ['News-Medical — Coconut oil increases bad cholesterol (Jan 2020)', 'https://www.news-medical.net/news/20200121/Coconut-oil-increases-bad-cholesterol.aspx'],
+      ['EurekAlert (American Heart Association) — Dietary cholesterol and eggs (Dec 2019)', 'https://www.eurekalert.org/news-releases/714061'],
+      ['Bernama — NPRA on red yeast rice products (Apr 2024)', 'https://www.bernama.com/en/general/news.php?id=2284902'],
     ],
-    related: ['bacaan-kolesterol-normal-cholesterol-malaysia', 'tanda-sakit-jantung-heart-disease-signs-malaysia', 'check-blood-pressure-at-home'],
+    related: ['tanda-sakit-jantung-heart-disease-signs-malaysia', 'check-blood-pressure-at-home', 'blood-test-results-explained-malaysia'],
   },
 
   /* ------------------------------------------------------------------ */
