@@ -727,7 +727,7 @@ export const RESEARCHED_2026_11 = [
   "areaLabel": "Ampang",
   "locality": "Ampang",
   "state": "Selangor",
-  "street": "No. 27, Jalan AWF 1, Ampang Waterfront",
+  "street": "No. 26, Jalan AWF 1, Ampang Waterfront",
   "postcode": "68000",
   "phone": "03-9078 3030",
   "phoneIntl": "+60390783030",
