@@ -733,11 +733,56 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60390783030",
   "whatsapp": "012-996 9475",
   "website": "https://kliniksalam.com/our-branches/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
   "geo": [
    3.146114,
    101.769608
   ],
+  "hours": {
+   "0": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "1": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "2": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "3": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "4": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "5": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "6": [
+    [
+     420,
+     1380
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by kliniksalam.com, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -746,9 +791,12 @@ export const RESEARCHED_2026_11 = [
     "name": "General practice"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open 7 days",
+   "Open late"
+  ],
   "cardSpec": "General practice",
-  "intro": "A general practice clinic in Ampang.",
+  "intro": "A general practice clinic in Ampang, open seven days a week.",
   "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik As-Salam Ampang is a private general practice clinic in Ampang.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://kliniksalam.com/our-branches/\" target=\"_blank\" rel=\"noopener\">kliniksalam.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Ampang"
@@ -3050,9 +3098,11 @@ export const RESEARCHED_2026_11 = [
   "areaLabel": "Cyberjaya",
   "locality": "Cyberjaya",
   "state": "Selangor",
-  "street": "c/o Asrama Jururawat Hospital Cyberjaya, Persiaran Multimedia, Cyber 11",
+  "street": "Kompleks Kesihatan Cyberjaya, Blok I, MKN Embassy Techzone, Jalan Teknokrat 2, Cyber 4",
   "postcode": "63000",
-  "checked": "2026-11-15",
+  "phone": "03-8311 9300",
+  "phoneIntl": "+60383119300",
+  "checked": "2026-11-21",
   "serviceKeys": [
    "gp"
   ],
@@ -3066,7 +3116,7 @@ export const RESEARCHED_2026_11 = [
   ],
   "cardSpec": "Government clinic",
   "intro": "A Ministry of Health government clinic in Cyberjaya. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Cyberjaya is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/ms/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://thesun.my/malaysia-news/cyberjaya-hospital-to-fully-operate-as-public-hospital-kj-af9968561/\" target=\"_blank\" rel=\"noopener\">thesun.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/bahagian/khidmat-kesihatan/klinik-extended-hours\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Cyberjaya is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-sepang\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/ms/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://thesun.my/malaysia-news/cyberjaya-hospital-to-fully-operate-as-public-hospital-kj-af9968561/\" target=\"_blank\" rel=\"noopener\">thesun.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Cyberjaya"
   ]
@@ -4574,11 +4624,66 @@ export const RESEARCHED_2026_11 = [
   "phone": "012-997 4882",
   "phoneIntl": "+60129974882",
   "website": "https://www.morinohana-clinic.com/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
   "geo": [
    3.166843,
    101.65297
   ],
+  "hours": {
+   "0": [
+    [
+     570,
+     810
+    ],
+    [
+     870,
+     1110
+    ]
+   ],
+   "1": [
+    [
+     570,
+     810
+    ],
+    [
+     870,
+     1110
+    ]
+   ],
+   "2": [
+    [
+     570,
+     810
+    ],
+    [
+     870,
+     1110
+    ]
+   ],
+   "3": [
+    [
+     570,
+     810
+    ],
+    [
+     870,
+     1110
+    ]
+   ],
+   "4": [
+    [
+     570,
+     810
+    ],
+    [
+     870,
+     1110
+    ]
+   ],
+   "5": [],
+   "6": []
+  },
+  "hoursNote": "Hours as published by morinohana-clinic.com, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp",
    "children",
@@ -4622,10 +4727,12 @@ export const RESEARCHED_2026_11 = [
     "name": "Japanese medical interpreter"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open Sunday"
+  ],
   "cardSpec": "General practice",
   "intro": "A general practice clinic in Mont Kiara.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Morinohana Family Clinic is a private general practice clinic in Mont Kiara.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.morinohana-clinic.com/\" target=\"_blank\" rel=\"noopener\">morinohana-clinic.com</a>, <a href=\"https://www.google.com/maps/search/Morinohana+Family+Clinic+Mont+Kiara\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Morinohana Family Clinic is a private general practice clinic in Mont Kiara.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.morinohana-clinic.com/post/【11月の診療日のご案内】\" target=\"_blank\" rel=\"noopener\">morinohana-clinic.com</a>, <a href=\"https://www.google.com/maps/search/Morinohana+Family+Clinic+Mont+Kiara\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Mont Kiara",
    "Kuala Lumpur"
@@ -5478,11 +5585,56 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60390783030",
   "whatsapp": "017-801 9969",
   "website": "https://kliniksalam.com/our-branches/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
   "geo": [
    2.978249,
    101.772544
   ],
+  "hours": {
+   "0": [
+    [
+     420,
+     1440
+    ]
+   ],
+   "1": [
+    [
+     420,
+     1440
+    ]
+   ],
+   "2": [
+    [
+     420,
+     1440
+    ]
+   ],
+   "3": [
+    [
+     420,
+     1440
+    ]
+   ],
+   "4": [
+    [
+     420,
+     1440
+    ]
+   ],
+   "5": [
+    [
+     420,
+     1440
+    ]
+   ],
+   "6": [
+    [
+     420,
+     1440
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by kliniksalam.com, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -5491,10 +5643,13 @@ export const RESEARCHED_2026_11 = [
     "name": "General practice"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open 7 days",
+   "Open late"
+  ],
   "cardSpec": "General practice",
-  "intro": "A general practice clinic in Kajang.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik As-Salam Kajang is a private general practice clinic in Kajang.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://kliniksalam.com/our-branches/\" target=\"_blank\" rel=\"noopener\">kliniksalam.com</a>, <a href=\"https://goo.gl/maps/VXHbrRS7iQaRcU6b9\" target=\"_blank\" rel=\"noopener\">goo.gl</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A general practice clinic in Kajang, open seven days a week.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik As-Salam Kajang is a private general practice clinic in Kajang.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://kliniksalam.com/bm/lokasi/klinik-as-salam-kajang/\" target=\"_blank\" rel=\"noopener\">kliniksalam.com</a>, <a href=\"https://goo.gl/maps/VXHbrRS7iQaRcU6b9\" target=\"_blank\" rel=\"noopener\">goo.gl</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Kajang"
   ]
@@ -5591,11 +5746,56 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60390783030",
   "whatsapp": "017-262 0969",
   "website": "https://kliniksalam.com/our-branches/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
   "geo": [
    2.976514,
    101.794516
   ],
+  "hours": {
+   "0": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "1": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "2": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "3": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "4": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "5": [
+    [
+     420,
+     1380
+    ]
+   ],
+   "6": [
+    [
+     420,
+     1380
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by kliniksalam.com, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -5604,10 +5804,13 @@ export const RESEARCHED_2026_11 = [
     "name": "General practice"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open 7 days",
+   "Open late"
+  ],
   "cardSpec": "General practice",
-  "intro": "A general practice clinic in Kajang.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik As-Salam Kajang Utama is a private general practice clinic in Kajang.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://kliniksalam.com/our-branches/\" target=\"_blank\" rel=\"noopener\">kliniksalam.com</a>, <a href=\"https://maps.app.goo.gl/JuP8hpBUcELadMeL9\" target=\"_blank\" rel=\"noopener\">maps.app.goo.gl</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A general practice clinic in Kajang, open seven days a week.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik As-Salam Kajang Utama is a private general practice clinic in Kajang.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://kliniksalam.com/bm/lokasi/klinik-as-salam-kajang-utama/\" target=\"_blank\" rel=\"noopener\">kliniksalam.com</a>, <a href=\"https://maps.app.goo.gl/JuP8hpBUcELadMeL9\" target=\"_blank\" rel=\"noopener\">maps.app.goo.gl</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Kajang"
   ]
@@ -6939,7 +7142,52 @@ export const RESEARCHED_2026_11 = [
   "phone": "018-578 8875",
   "phoneIntl": "+60185788875",
   "website": "http://www.klinikklebang.com/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
+  "hours": {
+   "0": [
+    [
+     540,
+     1320
+    ]
+   ],
+   "1": [
+    [
+     540,
+     1320
+    ]
+   ],
+   "2": [
+    [
+     540,
+     1320
+    ]
+   ],
+   "3": [
+    [
+     540,
+     1320
+    ]
+   ],
+   "4": [
+    [
+     540,
+     1320
+    ]
+   ],
+   "5": [
+    [
+     540,
+     1320
+    ]
+   ],
+   "6": [
+    [
+     540,
+     1320
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by klinikklebang.com, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp",
    "womens",
@@ -6976,9 +7224,12 @@ export const RESEARCHED_2026_11 = [
     "name": "Ultrasound"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open 7 days",
+   "Open late"
+  ],
   "cardSpec": "General practice",
-  "intro": "A general practice clinic in Melaka.",
+  "intro": "A general practice clinic in Melaka, open seven days a week.",
   "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Klebang is a private general practice clinic in Melaka.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"http://www.klinikklebang.com/\" target=\"_blank\" rel=\"noopener\">klinikklebang.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
@@ -8680,11 +8931,56 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60377722099",
   "whatsapp": "012-567 6735",
   "website": "https://www.pjpolyclinic.com/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
   "geo": [
    3.086111,
    101.646299
   ],
+  "hours": {
+   "0": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "1": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "2": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "3": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "4": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "5": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "6": [
+    [
+     0,
+     1440
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by pjpolyclinic.com, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp",
    "screening",
@@ -8723,13 +9019,15 @@ export const RESEARCHED_2026_11 = [
     "name": "Minor surgery"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open 24 hours"
+  ],
   "cardSpec": "General practice",
   "panels": [
    "FOMEMA"
   ],
-  "intro": "A general practice clinic in Petaling Jaya.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>PJ Polyclinic (Old Town) is a private general practice clinic in Petaling Jaya.</p><h2 id=\"panels\">Panels</h2><p>The clinic is listed on these panels: <strong>FOMEMA</strong>. Panel arrangements change, so check with the clinic before your visit.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.pjpolyclinic.com/\" target=\"_blank\" rel=\"noopener\">pjpolyclinic.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A general practice clinic in Petaling Jaya, open 24 hours.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>PJ Polyclinic (Old Town) is a private general practice clinic in Petaling Jaya.</p><h2 id=\"panels\">Panels</h2><p>The clinic is listed on these panels: <strong>FOMEMA</strong>. Panel arrangements change, so check with the clinic before your visit.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.pjpolyclinic.com/locations/old-town-petaling-jaya/\" target=\"_blank\" rel=\"noopener\">pjpolyclinic.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Petaling Jaya"
   ]
@@ -8990,7 +9288,7 @@ export const RESEARCHED_2026_11 = [
   ],
   "cardSpec": "Government clinic",
   "intro": "A Ministry of Health government clinic in Puchong. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Puchong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://qmed.asia/kppuchong/queuemed\" target=\"_blank\" rel=\"noopener\">qmed.asia</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Puchong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Puchong"
   ]
@@ -11379,11 +11677,46 @@ export const RESEARCHED_2026_11 = [
   "postcode": "40000",
   "phone": "03-5518 6531",
   "phoneIntl": "+60355186531",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
   "geo": [
    3.072293,
    101.490937
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Hours as published by jknselangor.moh.gov.my, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -11426,8 +11759,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Shah Alam. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Seksyen 7 Shah Alam is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/carian-fasiliti/klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Shah Alam, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Seksyen 7 Shah Alam is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/bahagian/khidmat-kesihatan/klinik-extended-hours\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ]
@@ -11443,11 +11776,51 @@ export const RESEARCHED_2026_11 = [
   "postcode": "40300",
   "phone": "03-5541 3570",
   "phoneIntl": "+60355413570",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
   "geo": [
    3.049774,
    101.532915
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     1260
+    ]
+   ],
+   "2": [
+    [
+     480,
+     1260
+    ]
+   ],
+   "3": [
+    [
+     480,
+     1260
+    ]
+   ],
+   "4": [
+    [
+     480,
+     1260
+    ]
+   ],
+   "5": [
+    [
+     480,
+     1260
+    ]
+   ],
+   "6": [
+    [
+     540,
+     780
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by jknselangor.moh.gov.my, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -11487,11 +11860,13 @@ export const RESEARCHED_2026_11 = [
    }
   ],
   "tags": [
-   "Government clinic"
+   "Government clinic",
+   "Open Saturday",
+   "Open late"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Shah Alam. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Seksyen 19 Shah Alam is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/carian-fasiliti/klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Shah Alam, open on weekdays and Saturdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Seksyen 19 Shah Alam is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/bahagian/khidmat-kesihatan/klinik-extended-hours\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ]
@@ -11569,9 +11944,9 @@ export const RESEARCHED_2026_11 = [
   "state": "Selangor",
   "street": "Seksyen 32",
   "postcode": "40460",
-  "phone": "03-5161 1685",
-  "phoneIntl": "+60351611685",
-  "checked": "2026-11-15",
+  "phone": "03-5167 9158",
+  "phoneIntl": "+60351679158",
+  "checked": "2026-11-21",
   "geo": [
    3.003461,
    101.505251
@@ -11619,7 +11994,7 @@ export const RESEARCHED_2026_11 = [
   ],
   "cardSpec": "Government clinic",
   "intro": "A Ministry of Health government clinic in Shah Alam. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bukit Naga is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/carian-fasiliti/klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a>, <a href=\"https://qmed.asia/kkbn\" target=\"_blank\" rel=\"noopener\">qmed.asia</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bukit Naga is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-klang\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ]
@@ -11633,9 +12008,9 @@ export const RESEARCHED_2026_11 = [
   "state": "Selangor",
   "street": "Jalan Merbau, Kampung Melayu Subang",
   "postcode": "40152",
-  "phone": "03-7847 2461",
-  "phoneIntl": "+60378472461",
-  "checked": "2026-11-15",
+  "phone": "03-7803 5534",
+  "phoneIntl": "+60378035534",
+  "checked": "2026-11-21",
   "geo": [
    3.151623,
    101.533317
@@ -11683,7 +12058,7 @@ export const RESEARCHED_2026_11 = [
   ],
   "cardSpec": "Government clinic",
   "intro": "A Ministry of Health government clinic in Shah Alam. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Kampung Melayu Subang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/carian-fasiliti/klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Kampung Melayu Subang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ]
@@ -12527,7 +12902,52 @@ export const RESEARCHED_2026_11 = [
   "phone": "03-5542 5286",
   "phoneIntl": "+60355425286",
   "website": "https://qualitashealth.com.my/clinic/qualitas-klinik-ng-dan-lee-shah-alam/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
+  "hours": {
+   "0": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "1": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "2": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "3": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "4": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "5": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "6": [
+    [
+     0,
+     1440
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by qualitashealth.com.my, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -12539,10 +12959,12 @@ export const RESEARCHED_2026_11 = [
     "name": "X-ray"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open 24 hours"
+  ],
   "cardSpec": "General practice",
-  "intro": "A general practice clinic in Shah Alam.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Qualitas Klinik Ng Dan Lee Shah Alam is a private general practice clinic in Shah Alam.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://qualitashealth.com.my/clinic/qualitas-klinik-ng-dan-lee-shah-alam/\" target=\"_blank\" rel=\"noopener\">qualitashealth.com.my</a>, <a href=\"https://www.doctoroncall.com.my/find-doctor/shah-alam/clinic/klinik-ng-dan-lee--shah-alam\" target=\"_blank\" rel=\"noopener\">doctoroncall.com.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A general practice clinic in Shah Alam, open 24 hours.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Qualitas Klinik Ng Dan Lee Shah Alam is a private general practice clinic in Shah Alam.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://qualitashealth.com.my/clinic/qualitas-klinik-ng-dan-lee-shah-alam/\" target=\"_blank\" rel=\"noopener\">qualitashealth.com.my</a>, <a href=\"https://www.greateasternlife.com/content/dam/corp-site/my/malaysia/gelm-ops-hsd/1026/gelm-hsd-cs-tgj-24hrs-clinic-listing-24Oct2026.pdf\" target=\"_blank\" rel=\"noopener\">greateasternlife.com</a>, <a href=\"https://www.doctoroncall.com.my/find-doctor/shah-alam/clinic/klinik-ng-dan-lee--shah-alam\" target=\"_blank\" rel=\"noopener\">doctoroncall.com.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ]
@@ -12559,7 +12981,52 @@ export const RESEARCHED_2026_11 = [
   "phone": "03-5510 3840",
   "phoneIntl": "+60355103840",
   "website": "https://qualitashealth.com.my/clinic/qualitas-health-klinik-anis-shah-alam/",
-  "checked": "2026-11-15",
+  "checked": "2026-11-21",
+  "hours": {
+   "0": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "1": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "2": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "3": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "4": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "5": [
+    [
+     0,
+     1440
+    ]
+   ],
+   "6": [
+    [
+     0,
+     1440
+    ]
+   ]
+  },
+  "hoursNote": "Hours as published by qualitashealth.com.my, checked 21 November 2026. Please call ahead on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -12574,10 +13041,12 @@ export const RESEARCHED_2026_11 = [
     "name": "Ultrasound"
    }
   ],
-  "tags": [],
+  "tags": [
+   "Open 24 hours"
+  ],
   "cardSpec": "General practice",
-  "intro": "A general practice clinic in Shah Alam.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Qualitas Health Klinik Anis Shah Alam is a private general practice clinic in Shah Alam.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://qualitashealth.com.my/clinic/qualitas-health-klinik-anis-shah-alam/\" target=\"_blank\" rel=\"noopener\">qualitashealth.com.my</a>, <a href=\"https://www.doctoroncall.com.my/find-doctor/shah-alam/clinic/klinik-anis--shah-alam\" target=\"_blank\" rel=\"noopener\">doctoroncall.com.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A general practice clinic in Shah Alam, open 24 hours.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Qualitas Health Klinik Anis Shah Alam is a private general practice clinic in Shah Alam.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://qualitashealth.com.my/clinic/qualitas-health-klinik-anis-shah-alam/\" target=\"_blank\" rel=\"noopener\">qualitashealth.com.my</a>, <a href=\"https://www.greateasternlife.com/content/dam/corp-site/my/malaysia/gelm-ops-hsd/1026/gelm-hsd-cs-tgj-24hrs-clinic-listing-24Oct2026.pdf\" target=\"_blank\" rel=\"noopener\">greateasternlife.com</a>, <a href=\"https://www.doctoroncall.com.my/find-doctor/shah-alam/clinic/klinik-anis--shah-alam\" target=\"_blank\" rel=\"noopener\">doctoroncall.com.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ],
