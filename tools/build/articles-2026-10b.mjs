@@ -12,21 +12,21 @@ export const OCT_2026_B = [
     title: 'Free health screening in Malaysia 2026: PERKESO, PeKa B40, Selangor Saring and more',
     crumb: 'Free health screening in Malaysia',
     desc: 'PERKESO HSP, PeKa B40, Selangor Saring and free checks at Klinik Kesihatan: who qualifies, what is tested, how to book, and what Budget 2027 changes.',
-    excerpt: 'Several free health screening programmes run in Malaysia in 2026. Who qualifies for each, what they test, how to book, and which checks you need at your age.',
-    standfirst: 'Many Malaysians qualify for a free health check without knowing it. Here is who each programme is for, what it tests, how to book, and which screenings guidelines recommend at your age.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'Malaysia has several free health screening programmes in 2026, each with its own rules on who qualifies, what is tested and how to book. Guidelines also set which checks you need at your age.',
+    standfirst: 'Many Malaysians qualify for a free health check without knowing it. Workers aged 40 to 59 can get one through PERKESO, STR recipients aged 40 and over through PeKa B40, and anyone can get basic checks at a government clinic. Each programme has its own booking route, and Ministry of Health guidelines set which tests you need at your age.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-22', author: AUTHOR, news: true, medical: true,
     image: 'blood-sample', imageAlt: 'A blood sample tube being prepared for testing',
     keyPoints: [
-      'PERKESO’s Health Screening Programme (HSP 2026) is free, once only, for Malaysian workers aged 40–59 who meet the contribution rules. Check and book in the SEHATi app.',
-      'PeKa B40 is free for Sumbangan Tunai Rahmah (STR) recipients aged 40 and above, and their spouses. No registration is needed.',
-      'Government health clinics (Klinik Kesihatan) offer free basic checks for blood pressure, blood sugar, cholesterol, BMI and mental health.',
-      'Selangor Saring runs free community screening days across the state until December. Register in the SELangkah app.',
+      'PERKESO’s Health Screening Programme (HSP 2026) is a free, one-time check for Malaysian workers aged 40–59 who meet the contribution rules. You check and book in the SEHATi app.',
+      'PeKa B40 is free for Sumbangan Tunai Rahmah (STR) recipients aged 40 and above, and their spouses, with no registration needed.',
+      'Government health clinics (Klinik Kesihatan) check blood pressure, blood sugar, cholesterol, BMI and mental health for free.',
+      'Selangor Saring holds free community screening days across the state until December. You register in the SELangkah app.',
       'Budget 2027 keeps PeKa B40 going and adds PERKESO screening vouchers for commercial vehicle drivers.',
     ],
     sections: [
       { id: 'why', h: 'Why get screened if you feel fine?', tocLabel: 'Why get screened', html: `<p>High blood pressure, diabetes and high cholesterol usually cause no symptoms for years. By the time they do, they may already have damaged the heart, kidneys or eyes. Screening finds them early, when they are easier to treat.</p>
-<p>Recent Malaysian figures show how common hidden problems are. Among PERKESO contributors screened between 2023 and 2025, mostly aged 40–59, <strong>59.2% were overweight or obese</strong>, about 19% had diabetes and 17.45% had high blood pressure. In PeKa B40’s 2025 screening, <strong>44.37% of participants</strong> had diabetes, high blood pressure or high cholesterol. And in October 2026 the Health Minister told Parliament that <strong>more than 80% of adults aged 18 to 29</strong> with diabetes or high blood pressure don’t know they have it.</p>
-${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Blood sugar, blood pressure and cholesterol checks are part of every free screening programme below.')}` },
+<p>Among PERKESO contributors screened between 2023 and 2025, most of them aged 40–59, 59.2% were overweight or obese, about 19% had diabetes and 17.45% had high blood pressure. In PeKa B40’s 2025 screening, 44.37% of participants had diabetes, high blood pressure or high cholesterol. In October 2026 the Health Minister told Parliament that more than 80% of adults aged 18 to 29 with diabetes or high blood pressure don’t know they have it.</p>
+${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Every free screening programme below checks blood sugar, blood pressure and cholesterol.')}` },
       { id: 'at-a-glance', h: 'Free screening programmes at a glance', tocLabel: 'Programmes at a glance', html: `<div class="table-wrap"><table>
 <thead><tr><th>Programme</th><th>Who it is for</th><th>How to book</th></tr></thead>
 <tbody>
@@ -35,33 +35,28 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
 <tr><td>Klinik Kesihatan (NHSI)</td><td>Everyone; free basic checks</td><td>Walk in, or book through MySejahtera</td></tr>
 <tr><td>Selangor Saring</td><td>Selangor residents</td><td>SELangkah app; sessions until December</td></tr>
 </tbody></table></div>
-<p>Rules can change during the year, so check the official app or website for each programme before you go.</p>` },
-      { id: 'perkeso', h: 'PERKESO Health Screening Programme (HSP 2026)', tocLabel: 'PERKESO HSP 2026', html: `<p>PERKESO (SOCSO) offers a free health screening to working Malaysians. The current edition, listed as HSP 2026 in PERKESO’s SEHATi help pages, continues the HSP 3.0 programme that began in 2023.</p>
-<p><strong>Who qualifies:</strong></p>
-<ul>
-<li>Malaysian citizens aged <strong>40 to 59</strong></li>
-<li>At least one month of Invalidity Scheme (Skim Keilatan) contributions in the current year, and at least 12 months of contributions in total</li>
-<li>You have <strong>not had an HSP screening before</strong>. It is a one-time benefit, not a yearly one.</li>
-</ul>
-<p><strong>What is tested in 2026:</strong> a physical examination and family history, full blood count, HbA1c (average blood sugar), a fasting cholesterol profile, a urine test and a mental health screening, followed by a review of your results with a doctor. Women are also offered a Pap smear and a mammogram. For a small extra charge you can add blood group, liver and kidney tests.</p>
-<p><strong>How to book:</strong> download the <strong>SEHATi</strong> app, check your eligibility and choose a panel clinic. The clinic will confirm your eligibility with your IC number. If you are not eligible, SEHATi also lists paid screening packages for PERKESO contributors.</p>
+<p>The rules can change during the year, so check each programme’s official app or website before you go.</p>` },
+      { id: 'perkeso', h: 'PERKESO Health Screening Programme (HSP 2026)', tocLabel: 'PERKESO HSP 2026', html: `<p>PERKESO (SOCSO) offers working Malaysians a free health screening. PERKESO’s SEHATi help pages list the current edition as HSP 2026, a continuation of the HSP 3.0 programme that began in 2023.</p>
+<p>To qualify, you need to be a Malaysian citizen aged 40 to 59, with at least one month of Invalidity Scheme (Skim Keilatan) contributions in the current year and at least 12 months of contributions in total. You also must not have had an HSP screening before, because it is a one-time benefit, not a yearly one.</p>
+<p>In 2026 the screening includes a physical examination and family history, a full blood count, HbA1c (average blood sugar), a fasting cholesterol profile, a urine test and a mental health screening, and then a doctor goes through your results with you. Women are also offered a Pap smear and a mammogram. Blood group, liver and kidney tests can be added for a small extra charge.</p>
+<p>To book, download the SEHATi app, check your eligibility and choose a panel clinic, which will confirm your eligibility with your IC number. If you don’t qualify, SEHATi also lists paid screening packages for PERKESO contributors.</p>
 <p>PERKESO has not published a closing date for 2026, so check the SEHATi app for the latest details.</p>` },
-      { id: 'peka-b40', h: 'PeKa B40 (for STR recipients aged 40+)', tocLabel: 'PeKa B40', html: `<p>PeKa B40 is a government scheme run by ProtectHealth for lower-income Malaysians. You qualify if you are a Malaysian aged <strong>40 or above</strong> and receive <strong>Sumbangan Tunai Rahmah (STR)</strong>, or are the spouse of a recipient. Eligibility is automatic, so there is nothing to register. See our <a href="/articles/peka-b40-malaysia/">PeKa B40 guide</a> for how to check and the full list of benefits.</p>
-<p>The free screening covers your health history and risk factors, a physical examination, blood and urine tests, a mental health screening, and a breast examination for women or a prostate examination for men at risk. It is done at private GP clinics registered with PeKa B40. You can check your eligibility with your IC number on the PeKa B40 website.</p>
-<p>Since 2019 the scheme has served more than 1.9 million people. Budget 2027 allocates RM80 million to continue it.</p>` },
-      { id: 'klinik-kesihatan', h: 'Free checks at government health clinics', tocLabel: 'Klinik Kesihatan', html: `<p>Under the National Health Screening Initiative (NHSI), government health clinics and PeKa B40 clinics offer free basic screening for <strong>blood sugar, blood pressure, BMI, cholesterol and mental health</strong>. If a result is abnormal, you are referred for confirmatory tests and follow-up.</p>
-<p>You can walk in to your nearest Klinik Kesihatan or book an appointment through the <strong>MySejahtera</strong> app. Government clinics also run other free or low-cost screenings, such as cervical screening and mammogram referrals for women. See our guide to <a href="/articles/breast-cancer-screening-malaysia/">breast cancer screening and free mammograms</a>.</p>` },
-      { id: 'selangor-saring', h: 'Selangor Saring 2026', html: `<p>Selangor Saring is the Selangor state government’s free health screening programme, run with Selcare since 2022. In 2026 it has RM2.5 million in funding and runs <strong>from January to December</strong>, mostly at weekends, across the state’s 56 constituencies.</p>
-<p>Depending on your risk, tests at the screening days can include heart, blood pressure, diabetes and kidney checks, screening for breast, cervical, colorectal and prostate cancer, and eye, dental and hearing checks.</p>
-<p><strong>How to register:</strong> fill in the screening form in the <strong>SELangkah</strong> app, then choose a location and date. Some sessions accept walk-ins, but booking first is safer. The Selcare helpline is 1-800-22-6600.</p>` },
-      { id: 'budget-2027', h: 'What Budget 2027 changes', html: `<p>Budget 2027, tabled on 9 October 2026, includes several screening measures:</p>
+      { id: 'peka-b40', h: 'PeKa B40 (for STR recipients aged 40+)', tocLabel: 'PeKa B40', html: `<p>PeKa B40 is a government scheme run by ProtectHealth for lower-income Malaysians. You qualify if you are a Malaysian aged 40 or above who receives Sumbangan Tunai Rahmah (STR), or the spouse of a recipient. Eligibility is automatic, so there is nothing to register for. Our <a href="/articles/peka-b40-malaysia/">PeKa B40 guide</a> explains how to check and lists all the benefits.</p>
+<p>The free screening covers your health history and risk factors, a physical examination, blood and urine tests and a mental health screening. Women also get a breast examination, and men at risk a prostate examination. It is done at private GP clinics registered with PeKa B40, and you can check your eligibility with your IC number on the PeKa B40 website.</p>
+<p>The scheme has served more than 1.9 million people since 2019, and Budget 2027 allocates RM80 million to keep it going.</p>` },
+      { id: 'klinik-kesihatan', h: 'Free checks at government health clinics', tocLabel: 'Klinik Kesihatan', html: `<p>Under the National Health Screening Initiative (NHSI), government health clinics and PeKa B40 clinics check blood sugar, blood pressure, BMI, cholesterol and mental health for free. If a result is abnormal, you are referred for further tests to confirm it and for follow-up.</p>
+<p>You can walk in to your nearest Klinik Kesihatan or book through the MySejahtera app. Government clinics also offer other free or low-cost screening for women, such as cervical screening and referral for a mammogram. See our guide to <a href="/articles/breast-cancer-screening-malaysia/">breast cancer screening and free mammograms</a>.</p>` },
+      { id: 'selangor-saring', h: 'Selangor Saring 2026', html: `<p>Selangor Saring is the Selangor state government’s free health screening programme, run with Selcare since 2022. In 2026 it has RM2.5 million in funding and holds screening days from January to December, mostly at weekends, across the state’s 56 constituencies.</p>
+<p>Depending on your risk, the tests can include heart, blood pressure, diabetes and kidney checks, screening for breast, cervical, colorectal and prostate cancer, and eye, dental and hearing checks.</p>
+<p>To register, fill in the screening form in the SELangkah app, then choose a location and date. Some sessions take walk-ins, but it is safer to book. The Selcare helpline is 1-800-22-6600.</p>` },
+      { id: 'budget-2027', h: 'What Budget 2027 changes', html: `<p>Budget 2027, tabled on 9 October 2026, includes these screening measures:</p>
 <ul>
-<li><strong>PeKa B40 continues</strong>, with RM80 million for free screening and treatment support for STR recipients and their spouses aged 40+.</li>
-<li><strong>Screening vouchers for commercial vehicle drivers</strong>, worth up to RM30, through PERKESO.</li>
-<li><strong>Free <a href="/articles/thalassaemia-screening-malaysia/">thalassaemia screening</a></strong> at MOH facilities extended to the husbands and children of families who carry the gene.</li>
+<li>RM80 million to continue PeKa B40, for free screening and treatment support for STR recipients and their spouses aged 40+.</li>
+<li>Screening vouchers worth up to RM30 for commercial vehicle drivers, through PERKESO.</li>
+<li>Free <a href="/articles/thalassaemia-screening-malaysia/">thalassaemia screening</a> at MOH facilities, extended to the husbands and children of families who carry the gene.</li>
 <li>Screening and mobile clinics run by university teaching hospitals for rural and lower-income communities.</li>
 </ul>` },
-      { id: 'by-age', h: 'Which screenings you need at your age', tocLabel: 'Screenings by age', html: `<p>Malaysia’s Ministry of Health Clinical Practice Guidelines recommend these checks for adults at average risk. Your doctor may advise earlier or more frequent tests if you have risk factors or a family history.</p>
+      { id: 'by-age', h: 'Which screenings you need at your age', tocLabel: 'Screenings by age', html: `<p>Malaysia’s Ministry of Health Clinical Practice Guidelines recommend these checks for adults at average risk. If you have risk factors or a family history, your doctor may suggest starting earlier or testing more often.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Check</th><th>Who and how often</th></tr></thead>
 <tbody>
@@ -72,12 +67,9 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
 <tr><td>Breast (mammogram)</td><td>Every 2 years for women aged 50–74. Earlier for women at high risk</td></tr>
 <tr><td><a href="/articles/bowel-cancer-screening-malaysia/">Bowel (colorectal)</a></td><td>Ages 50–75: a stool test (iFOBT) every year, with colonoscopy if positive</td></tr>
 </tbody></table></div>` },
-      { id: 'prepare', h: 'How to prepare, and what to do with your results', tocLabel: 'Preparing and results', html: `<ul>
-<li><strong>Ask whether you need to fast.</strong> If your tests include a fasting blood test, you will usually be asked not to eat for 8 to 10 hours beforehand. Plain water is fine.</li>
-<li><strong>Bring</strong> your MyKad, a list of any medicines you take, and any previous results.</li>
-<li><strong>Don’t skip the results review.</strong> A screening only helps if abnormal results are followed up. If a result is borderline or high, ask what the next step is and when to repeat the test.</li>
-</ul>
-<div class="box box--pink" role="note"><span class="box__title">Screening is not for symptoms</span><p style="font-size:16px;line-height:1.6">If you already have symptoms, such as chest pain, unexplained weight loss, a breast lump or blood in your stool, see a doctor now rather than waiting for a screening day. For chest pain or difficulty breathing, call 999.</p></div>` },
+      { id: 'prepare', h: 'How to prepare, and what to do with your results', tocLabel: 'Preparing and results', html: `<p>Ask whether you need to fast. A fasting blood test usually means not eating for 8 to 10 hours beforehand, though plain water is fine. Bring your MyKad, a list of the medicines you take and any previous results.</p>
+<p>Go back for the results review. Screening only helps if abnormal results are followed up, so if a result is borderline or high, ask what happens next and when to repeat the test.</p>
+<div class="box box--pink" role="note"><span class="box__title">Screening is not for symptoms</span><p style="font-size:16px;line-height:1.6">If you already have symptoms, such as chest pain, unexplained weight loss, a breast lump or blood in your stool, see a doctor now instead of waiting for a screening day. For chest pain or difficulty breathing, call 999.</p></div>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get a health check',
@@ -85,10 +77,10 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Bloo
     clinicsIntro: 'If you don’t qualify for a free programme, most GP clinics offer health screening and can explain your results. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, including clinics open at weekends and around the clock.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-sunday/', 'Clinics open on Sunday'], ['/clinics/open-24-hours/', '24-hour clinics']],
     faqs: [
-      ['Who is eligible for the free PERKESO health screening in 2026?', 'Malaysian citizens aged 40 to 59 with at least one month of Invalidity Scheme contributions this year, at least 12 months in total, and no previous HSP screening. Check your eligibility in the SEHATi app.'],
-      ['Can I do the PERKESO health screening every year?', 'No. The HSP is a one-time benefit. If you have already had an HSP screening, PERKESO contributors can book paid packages through the SEHATi app instead.'],
-      ['How do I know if I qualify for PeKa B40?', 'If you are a Malaysian aged 40 or above and receive Sumbangan Tunai Rahmah (STR), or are the spouse of a recipient, you qualify automatically. You can check with your IC number on the PeKa B40 website.'],
-      ['Is health screening free at Klinik Kesihatan?', 'Yes, basic screening for blood pressure, blood sugar, cholesterol, BMI and mental health is free at government health clinics under the National Health Screening Initiative. You can book through MySejahtera.'],
+      ['Who is eligible for the free PERKESO health screening in 2026?', 'Malaysian citizens aged 40 to 59 with at least one month of Invalidity Scheme contributions this year, at least 12 months in total, and no previous HSP screening. You can check in the SEHATi app.'],
+      ['Can I do the PERKESO health screening every year?', 'No. The HSP is a one-time benefit. If you have already had one, PERKESO contributors can book a paid package through the SEHATi app instead.'],
+      ['How do I know if I qualify for PeKa B40?', 'You qualify automatically if you are a Malaysian aged 40 or above who receives Sumbangan Tunai Rahmah (STR), or the spouse of a recipient. You can check with your IC number on the PeKa B40 website.'],
+      ['Is health screening free at Klinik Kesihatan?', 'Yes. Under the National Health Screening Initiative, government health clinics check blood pressure, blood sugar, cholesterol, BMI and mental health for free. You can book through MySejahtera.'],
       ['How do I register for Selangor Saring?', 'Fill in the screening form in the SELangkah app and choose a location and date. Sessions run across Selangor until December 2026, mostly at weekends.'],
     ],
     sources: [
@@ -217,59 +209,57 @@ ${figure('aedes-mosquito', 'A close-up of an Aedes mosquito on skin', 'Dengue is
     title: 'HPV vaccine in Malaysia 2026: the school programme, catch-up options and adults',
     crumb: 'HPV vaccine in Malaysia',
     desc: 'Year 6 girls now get one free HPV dose at school. Catch-up options, vaccines for boys and adults, typical cost, side effects and cervical screening.',
-    excerpt: 'From 2026, Year 6 girls get a single free HPV dose at school. What changed, how to catch up if you missed it, options for boys and adults, and why screening still matters.',
-    standfirst: 'The HPV vaccine prevents most cervical cancers, and Malaysia’s school programme changed in 2026. Here is who gets it free, what to do if your child missed it, options for boys and adults, and why screening still matters after vaccination.',
-    cat: 'womens-health', catLabel: "Women's health", published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'From 2026, Year 6 girls get a single free HPV dose at school. Girls who missed it can catch up at a government clinic, boys and adults can be vaccinated privately, and vaccinated women still need screening.',
+    standfirst: 'The HPV vaccine prevents most cervical cancers, and Malaysia changed its school programme in 2026: girls now get one free dose in Year 6. Girls who missed it can still catch up at a government clinic, boys and adults can pay for it privately, and women who have been vaccinated still need cervical screening.',
+    cat: 'womens-health', catLabel: "Women's health", published: PUB, modified: '2026-11-22', author: AUTHOR, news: true, medical: true,
     about: ['Human papillomavirus infection', 'Jangkitan HPV'],
     image: 'mother-child', imageAlt: 'A mother and daughter sitting together',
     keyPoints: [
-      'From 2026, girls get the HPV vaccine free in Year 6 (age 12) at school, instead of Form 1. The programme now gives a single dose.',
-      'Budget 2027 upgrades the school vaccine from the bivalent (2-type) vaccine to the nonavalent (9-type) vaccine.',
-      'Girls who missed the school programme can book at government clinics through MySejahtera.',
-      'Boys and adult women are not covered by the national programme, but can be vaccinated privately or through subsidised NGO programmes.',
-      'Vaccinated women still need cervical screening: an HPV test every 5 years from age 30.',
+      'From 2026, girls get the free HPV vaccine at school in Year 6 (age 12) instead of Form 1, and the programme now gives a single dose.',
+      'Budget 2027 replaces the bivalent (2-type) school vaccine with the nonavalent (9-type) vaccine.',
+      'Girls who missed the school programme can book a dose at a government clinic through MySejahtera.',
+      'The national programme doesn’t cover boys or adult women. They can be vaccinated at private clinics or through subsidised NGO programmes.',
+      'Women who have been vaccinated still need cervical screening, with an HPV test every 5 years from age 30.',
     ],
     sections: [
-      { id: 'why', h: 'Why the HPV vaccine matters', tocLabel: 'Why it matters', html: `<p>Human papillomavirus (HPV) is a very common virus spread through sexual contact. Most infections clear on their own, but long-lasting infection with high-risk types can cause cervical cancer, as well as some cancers of the throat, anus and genitals.</p>
-<p>Cervical cancer is one of the most common cancers in Malaysian women. WHO’s cancer agency estimates <strong>1,968 new cases and 964 deaths</strong> a year, making it the third most common cancer in women. The National Cancer Registry, which counts recorded cases, ranks it sixth and found that <strong>47% of cases were diagnosed at stage 3 or 4</strong>, when treatment is harder.</p>
-<p>Malaysia aims for 90% of girls to be vaccinated by age 15 by 2030, as part of its plan to eliminate cervical cancer.</p>
-${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'The vaccine works best when given before any exposure to HPV, which is why it is offered at age 12.')}` },
-      { id: 'school', h: 'The school programme: what changed in 2026', tocLabel: 'The school programme', html: `<ul>
-<li><strong>Earlier:</strong> from 2026, the free vaccine is given to girls in <strong>Year 6 (age 12)</strong> instead of Form 1 (age 13). The Ministry of Health says this gives protection earlier, in line with WHO advice, and means fewer girls are missed when they change school.</li>
-<li><strong>One dose:</strong> Malaysia moved from three doses (2010) to two (2015) to a <strong>single dose</strong>. WHO’s vaccine experts confirmed in October 2026 that one dose is the most efficient approach for girls aged 9 to 14.</li>
-<li><strong>A broader vaccine from 2027:</strong> schools currently use a bivalent vaccine, which protects against HPV types 16 and 18, the cause of most cervical cancers. Budget 2027 upgrades this to a <strong>nonavalent (9-type) vaccine</strong> for about 230,000 Year 6 girls.</li>
-</ul>
-<p>Parents or guardians must give <strong>written consent</strong>. Schools send home the consent form and an information leaflet about a week before vaccination day.</p>` },
-      { id: 'missed', h: 'If your daughter missed it', tocLabel: 'Missed the school dose', html: `<p>Between 2020 and 2024, a global vaccine shortage meant many Malaysian girls missed their school dose. First-dose coverage fell from over 95% to about 35% in 2024. The Ministry ran a catch-up programme for these cohorts in schools in 2024 and early 2025.</p>
-<p>Girls who missed the school programme, including those in private schools or home-schooled, can <strong>book at a government health clinic through MySejahtera</strong>.</p>
-<p>The National Cancer Society Malaysia (NCSM) also runs a subsidised programme in 2026 for <strong>boys and girls aged 9 to 14</strong>, at RM290 per dose at partner clinics.</p>` },
-      { id: 'boys-adults', h: 'HPV vaccine for boys and adults', tocLabel: 'Boys and adults', html: `<p>The national programme covers girls only. Boys and adults can be vaccinated at private clinics and hospitals. HPV vaccination helps protect men against genital warts and some cancers, and reduces spread of the virus.</p>
-<p>How many doses you need depends on your age and the vaccine used. Under the product label of the nonavalent vaccine, people aged 9 to 14 usually need two doses, and people aged 15 and over usually need three doses over six months. People with weakened immune systems may need more doses. Your doctor will advise on the right schedule.</p>
-<p>WHO advises that catch-up vaccination should prioritise young women up to age 25, then up to 30, followed by boys aged 9 to 14. Vaccination works best before any exposure to HPV, so the benefit for older adults is usually smaller.</p>` },
-      { id: 'cost', h: 'How much does it cost?', tocLabel: 'Cost', html: `<p>The school programme is free. At private clinics, news reports in 2026 said the HPV vaccine typically costs <strong>around RM500</strong>, depending on the vaccine and clinic, compared with RM290 per dose through NCSM’s subsidised programme for ages 9 to 14. Ask for the total cost of the full course before you start.</p>
-<p>Vaccination costs for yourself, your spouse and your children can be claimed under the medical expenses tax relief for vaccinations.</p>` },
-      { id: 'screening', h: 'Vaccinated? You still need screening', tocLabel: 'Screening still matters', html: `<p>The vaccine does not protect against every high-risk HPV type, and it does not clear an existing infection. Women should still be screened:</p>
+      { id: 'why', h: 'Why the HPV vaccine matters', tocLabel: 'Why it matters', html: `<p>Human papillomavirus (HPV) is a very common virus spread through sexual contact. Most infections clear on their own. An infection with a high-risk type that lasts for years can cause cervical cancer, and some cancers of the throat, anus and genitals.</p>
+<p>Cervical cancer is one of the most common cancers in Malaysian women. WHO’s cancer agency estimates 1,968 new cases and 964 deaths a year, which makes it the third most common cancer in women. The National Cancer Registry counts only recorded cases and ranks it sixth. It also found that 47% of cases were diagnosed at stage 3 or 4, when treatment is harder.</p>
+<p>As part of its plan to eliminate cervical cancer, Malaysia aims to have 90% of girls vaccinated by age 15 by 2030.</p>
+${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'The vaccine works best before any exposure to HPV, which is why it is offered at age 12.')}` },
+      { id: 'school', h: 'The school programme: what changed in 2026', tocLabel: 'The school programme', html: `<p>From 2026, the free vaccine is given to girls in Year 6 (age 12) rather than Form 1 (age 13). The Ministry of Health says the earlier date protects girls sooner, in line with WHO advice, and fewer girls are missed when they change school.</p>
+<p>The programme now gives a single dose. Malaysia started with three doses in 2010 and moved to two in 2015. In October 2026, WHO’s vaccine experts confirmed that one dose is the most efficient approach for girls aged 9 to 14.</p>
+<p>Schools currently use a bivalent vaccine, which protects against HPV types 16 and 18, the cause of most cervical cancers. Budget 2027 switches the school programme to a nonavalent (9-type) vaccine from 2027, for about 230,000 Year 6 girls.</p>
+<p>Parents or guardians must give written consent. The school sends home a consent form and an information leaflet about a week before vaccination day.</p>` },
+      { id: 'missed', h: 'If your daughter missed it', tocLabel: 'Missed the school dose', html: `<p>A global vaccine shortage between 2020 and 2024 meant many Malaysian girls missed their school dose, and first-dose coverage fell from over 95% to about 35% in 2024. The Ministry ran a catch-up programme in schools for these girls in 2024 and early 2025.</p>
+<p>Any girl who missed the school programme, including girls in private schools and girls who are home-schooled, can book at a government health clinic through MySejahtera.</p>
+<p>In 2026 the National Cancer Society Malaysia (NCSM) also runs a subsidised programme for boys and girls aged 9 to 14, at RM290 per dose at partner clinics.</p>` },
+      { id: 'boys-adults', h: 'HPV vaccine for boys and adults', tocLabel: 'Boys and adults', html: `<p>The national programme covers girls only, so boys and adults are vaccinated at private clinics and hospitals. In men, the vaccine helps protect against genital warts and some cancers, and it reduces the spread of the virus.</p>
+<p>The number of doses depends on your age and the vaccine. Under the nonavalent vaccine’s product label, people aged 9 to 14 usually need two doses, and people aged 15 and over usually need three over six months. People with weakened immune systems may need more. Your doctor will tell you which schedule to follow.</p>
+<p>WHO advises that catch-up vaccination should go first to young women up to age 25, then up to 30, and then to boys aged 9 to 14. The vaccine works best before any exposure to HPV, so older adults usually benefit less.</p>` },
+      { id: 'cost', h: 'How much does it cost?', tocLabel: 'Cost', html: `<p>The school programme is free. News reports in 2026 put the price at private clinics at around RM500, depending on the vaccine and the clinic. NCSM’s subsidised programme for ages 9 to 14 charges RM290 per dose. Ask for the total cost of the full course before you start.</p>
+<p>You can claim vaccinations for yourself, your spouse and your children under the medical expenses tax relief for vaccinations.</p>` },
+      { id: 'screening', h: 'Vaccinated? You still need screening', tocLabel: 'Screening still matters', html: `<p>The vaccine doesn’t protect against every high-risk HPV type, and it doesn’t clear an infection you already have, so women should still be screened:</p>
 <ul>
-<li><strong>Aged 30 to 49:</strong> an HPV test, repeated every 5 years if negative. You can often take the sample yourself.</li>
-<li><strong>Aged 21 to 29 and 50 to 65:</strong> a Pap smear.</li>
+<li>Aged 30 to 49: an HPV test, repeated every 5 years if negative. You can often take the sample yourself.</li>
+<li>Aged 21 to 29 and 50 to 65: a Pap smear.</li>
 </ul>
-<p>See our guide to the <a href="/articles/pap-smear-hpv-test-malaysia/">Pap smear and HPV test</a> for what happens and what your results mean.</p>
-<p>Free options include government health clinics, the Ministry of Health’s ROSE programme at government hospitals, and free HPV tests for eligible women aged 30 to 65 at LPPKN’s Klinik Nur Sejahtera. About 65% of women in the ROSE programme had not been screened in the previous three years.</p>
+<p>Our guide to the <a href="/articles/pap-smear-hpv-test-malaysia/">Pap smear and HPV test</a> explains what happens and what the results mean.</p>
+<p>Government health clinics screen for free. So does the Ministry of Health’s ROSE programme at government hospitals, and LPPKN’s Klinik Nur Sejahtera gives free HPV tests to eligible women aged 30 to 65. About 65% of women in the ROSE programme had not been screened in the previous three years.</p>
 <div class="box box--pink" role="note"><span class="box__title">See a doctor if you notice</span><ul><li>Bleeding between periods, after sex or after menopause</li><li>Unusual vaginal discharge</li><li>Pelvic pain or pain during sex</li></ul></div>` },
-      { id: 'side-effects', h: 'Side effects and safety', html: `<p>The HPV vaccine has been used worldwide for more than 15 years and has a strong safety record. Common side effects are redness, swelling or pain at the injection site. Less common are mild fever, headache or joint pain.</p>
-<p>Some young people faint after any injection, so you will be asked to sit for about 15 minutes afterwards. Severe allergic reactions are very rare. The vaccine is not recommended during pregnancy as a precaution. If you become pregnant partway through a course, the remaining doses are given after delivery.</p>` },
+      { id: 'side-effects', h: 'Side effects and safety', html: `<p>The HPV vaccine has been used worldwide for more than 15 years and has a strong safety record. The usual side effects are redness, swelling or pain where the needle went in. Mild fever, headache or joint pain are less common.</p>
+<p>Some young people faint after any injection, so you will be asked to stay seated for about 15 minutes afterwards. Severe allergic reactions are very rare. As a precaution, the vaccine isn’t recommended during pregnancy. If you become pregnant partway through a course, the remaining doses are given after the baby is born.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get an HPV vaccine or screening',
     clinicsTocLabel: 'Where to go',
-    clinicsIntro: 'Girls covered by the national programme are vaccinated at school or at a government clinic. For boys, adults or private vaccination, most GP clinics can advise on the HPV vaccine and cervical screening. Call ahead to check they have the vaccine in stock. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
+    clinicsIntro: 'Girls covered by the national programme are vaccinated at school or at a government clinic. Boys, adults and anyone paying privately can ask at most GP clinics, which can also arrange cervical screening. Call ahead to check the clinic has the vaccine in stock. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-sunday/', 'Clinics open on Sunday']],
     faqs: [
-      ['Is the HPV vaccine free in Malaysia?', 'Yes, for girls through the school programme, which from 2026 vaccinates girls in Year 6. Girls who missed it can book at a government clinic through MySejahtera. Boys and adults pay at private clinics, or can use subsidised NGO programmes.'],
-      ['How many doses of HPV vaccine do Malaysian schoolgirls get?', 'One. The national programme moved to a single-dose schedule, which WHO says is effective for girls aged 9 to 14.'],
-      ['Can adults get the HPV vaccine in Malaysia?', 'Yes, at private clinics and hospitals. Adults aged 15 and over usually need three doses. Ask your doctor whether vaccination is likely to benefit you.'],
+      ['Is the HPV vaccine free in Malaysia?', 'Yes, for girls, through the school programme, which from 2026 vaccinates girls in Year 6. Girls who missed it can book at a government clinic through MySejahtera. Boys and adults pay at private clinics or use subsidised NGO programmes.'],
+      ['How many doses of HPV vaccine do Malaysian schoolgirls get?', 'One. The national programme moved to a single dose, which WHO says is effective for girls aged 9 to 14.'],
+      ['Can adults get the HPV vaccine in Malaysia?', 'Yes, at private clinics and hospitals. People aged 15 and over usually need three doses. Ask your doctor whether the vaccine is likely to help you.'],
       ['Can boys get the HPV vaccine in Malaysia?', 'Yes, privately. The national programme covers girls only, but in 2026 the National Cancer Society Malaysia offered subsidised vaccination for boys and girls aged 9 to 14.'],
-      ['Do I still need a Pap smear or HPV test if I had the vaccine?', 'Yes. The vaccine does not cover every cancer-causing HPV type. Women aged 30 to 49 should have an HPV test every 5 years, and Pap smears are used at ages 21 to 29 and 50 to 65.'],
+      ['Do I still need a Pap smear or HPV test if I had the vaccine?', 'Yes. The vaccine doesn’t cover every HPV type that causes cancer. Women aged 30 to 49 should have an HPV test every 5 years, and Pap smears are used at ages 21 to 29 and 50 to 65.'],
     ],
     sources: [
       ['The Star — Year Six HPV shots to bolster fight against cancer (11 Jan 2026)', 'https://www.thestar.com.my/news/nation/2026/01/11/year-six-hpv-shots-to-bolster-fight-against-cancer'],

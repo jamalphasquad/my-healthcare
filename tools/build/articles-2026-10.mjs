@@ -103,24 +103,24 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
     title: 'Weight-loss injections in Malaysia: what Ozempic, Wegovy and Mounjaro can and can’t do',
     crumb: 'Weight-loss injections in Malaysia',
     desc: 'Which weight-loss injections are registered in Malaysia, who they are for, side effects, and why buying pens online is risky. Updated October 2026.',
-    excerpt: 'Which injections are actually registered for weight loss in Malaysia, who they’re meant for, the side effects, and why “slimming pens” sold online are risky.',
-    standfirst: 'Weight-loss injections are among the most searched health topics in Malaysia. Here is what is registered, who these medicines are meant for, what to expect, and how to stay safe.',
-    cat: 'weight', catLabel: 'Weight & metabolism', published: PUB, modified: '2026-10-28', author: AUTHOR, news: true, medical: true,
+    excerpt: 'Only some of these injections are registered for weight loss in Malaysia, and they are meant for people with obesity or weight-related conditions. Side effects are common, and “slimming pens” sold online can be fake.',
+    standfirst: 'Weight-loss injections are among the most searched health topics in Malaysia. Only some are registered for weight loss here, they are prescription medicines meant for people with obesity, and most people regain weight after stopping. Pens sold online or in salons may be fake.',
+    cat: 'weight', catLabel: 'Weight & metabolism', published: PUB, modified: '2026-11-22', author: AUTHOR, news: true, medical: true,
     about: ['Obesity', 'Obesiti'],
     image: 'waist-measurement', imageAlt: 'A man measuring his waist with a tape measure',
     keyPoints: [
-      'These medicines (GLP-1 medicines such as semaglutide, liraglutide and tirzepatide) are prescription-only in Malaysia. Only a registered doctor can prescribe them.',
+      'These are GLP-1 medicines, such as semaglutide, liraglutide and tirzepatide, and they are prescription-only in Malaysia. Only a registered doctor can prescribe them.',
       'Wegovy, Saxenda and Mounjaro are registered for weight management. Ozempic is registered for type 2 diabetes, not weight loss.',
       'They are meant for adults with a BMI of 30 or more, or 27 or more with a weight-related condition, alongside diet and exercise.',
       'Mounjaro (tirzepatide) works on two gut hormones, GIP and GLP-1, and led to more weight loss than semaglutide in a head-to-head trial.',
-      'There is no Mounjaro pill. Weight-loss pills approved in the US are not registered in Malaysia.',
+      'There is no Mounjaro pill, and the weight-loss pills approved in the US are not registered in Malaysia.',
       'Stomach side effects are common, and most people regain weight after stopping.',
-      'Never buy “slimming pens” online or from salons. MOH has raided sellers and removed hundreds of listings in 2026.',
+      'Never buy “slimming pens” online or from salons. In 2026 MOH raided sellers and removed hundreds of listings.',
     ],
     sections: [
-      { id: 'what', h: 'What these injections are', html: `<p>The injections people search for, such as Ozempic, Wegovy and Mounjaro, belong to a group of medicines that copy gut hormones called GLP-1 (and, for tirzepatide, also GIP). They make you feel full sooner, slow down how quickly the stomach empties, and help control blood sugar. Most are injected once a week with a pre-filled pen.</p>
-<p>In Malaysia they are <strong>Group B poisons under the Poisons Act 1952</strong>. That means they can only be supplied by a registered doctor, or by a pharmacist with a doctor’s prescription. Selling them any other way is an offence.</p>` },
-      { id: 'registered', h: 'Which ones are registered in Malaysia?', tocLabel: 'Which are registered', html: `<p>Every medicine sold legally in Malaysia carries a registration number starting with <strong>MAL</strong>, listed by the National Pharmaceutical Regulatory Agency (NPRA). As of October 2026, the register shows:</p>
+      { id: 'what', h: 'What these injections are', html: `<p>Ozempic, Wegovy and Mounjaro belong to a group of medicines that copy a gut hormone called GLP-1. Tirzepatide, the medicine in Mounjaro, also copies a second one, GIP. They make you feel full sooner, slow down how fast the stomach empties and help control blood sugar. Most are injected once a week with a pre-filled pen.</p>
+<p>In Malaysia they are Group B poisons under the Poisons Act 1952. Only a registered doctor can supply them, or a pharmacist with a doctor’s prescription, and selling them any other way is an offence.</p>` },
+      { id: 'registered', h: 'Which ones are registered in Malaysia?', tocLabel: 'Which are registered', html: `<p>Every medicine sold legally in Malaysia has a registration number starting with <strong>MAL</strong>, listed by the National Pharmaceutical Regulatory Agency (NPRA). In October 2026 the register showed:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Medicine (active ingredient)</th><th>Registered in Malaysia for</th></tr></thead>
 <tbody>
@@ -131,17 +131,17 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
 <tr><td>Generic liraglutide</td><td>Weight management (first generic registered in October 2026)</td></tr>
 <tr><td>Zepbound (tirzepatide)</td><td>Not registered in Malaysia</td></tr>
 </tbody></table></div>
-<p>Registration can change, so you can always check a product yourself on the NPRA’s <a href="https://quest3plus.bpfk.gov.my/pmo2/index.php" target="_blank" rel="noopener">QUEST3+ product search</a>.</p>` },
-      { id: 'who', h: 'Who are they for?', html: `<p>More than half of Malaysian adults (54.4%) are overweight or obese, according to the National Health and Morbidity Survey 2023. But these medicines are not meant for losing a few kilos before a holiday. The registered labels allow them for adults with:</p>
-<ul><li>a body mass index (BMI) of <strong>30 or more</strong>, or</li><li>a BMI of <strong>27 or more</strong> with at least one weight-related condition, such as prediabetes or type 2 diabetes, high blood pressure, high cholesterol, sleep apnoea or heart disease.</li></ul>
-<p>Malaysia’s Clinical Practice Guidelines on obesity (2023) use lower BMI cut-offs for Asians when defining obesity (27.5 and above). They recommend medicines only <strong>alongside</strong> diet, physical activity and behaviour change, under a doctor’s supervision.</p>
+<p>Registrations change, and you can check any product yourself on the NPRA’s <a href="https://quest3plus.bpfk.gov.my/pmo2/index.php" target="_blank" rel="noopener">QUEST3+ product search</a>.</p>` },
+      { id: 'who', h: 'Who are they for?', html: `<p>According to the National Health and Morbidity Survey 2023, 54.4% of Malaysian adults are overweight or obese. These medicines aren’t meant for losing a few kilos before a holiday, and the registered labels allow them only for adults with:</p>
+<ul><li>a body mass index (BMI) of 30 or more, or</li><li>a BMI of 27 or more with at least one weight-related condition, such as prediabetes or type 2 diabetes, high blood pressure, high cholesterol, sleep apnoea or heart disease.</li></ul>
+<p>Malaysia’s Clinical Practice Guidelines on obesity (2023) define obesity in Asians at a lower BMI, 27.5 and above. They recommend medicines only alongside diet, physical activity and behaviour change, with a doctor supervising.</p>
 ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consultation', 'A doctor will check your weight history, other conditions and medicines before suggesting any treatment.')}` },
-      { id: 'results', h: 'How much weight do people lose?', tocLabel: 'Expected results', html: `<p>In the main clinical trials, adults taking semaglutide 2.4 mg lost about 15% of their body weight on average over 68 weeks, compared with about 2% on placebo. In the tirzepatide trial, average weight loss at the highest dose was about 21% over 72 weeks. Results vary a lot between people, and they depend on staying on treatment and keeping up healthy habits.</p>
-<p>The weight tends to come back after stopping. In one study, people regained about two-thirds of the weight they had lost within a year of stopping semaglutide. In a tirzepatide study, people switched to placebo regained about 15% of their body weight over the following year, while those who continued kept losing weight. Many doctors therefore treat obesity as a long-term condition, like high blood pressure.</p>` },
-      { id: 'mounjaro', h: 'Mounjaro: what it is used for and how it works', tocLabel: 'About Mounjaro', html: `<p><strong>What it’s used for:</strong> in Malaysia, Mounjaro (tirzepatide) is registered for adults with <strong>type 2 diabetes</strong>, and for <strong>weight management</strong> in adults with a BMI of 30 or more, or 27 to 30 with at least one weight-related condition such as high blood pressure, high cholesterol, sleep apnoea, heart disease, prediabetes or type 2 diabetes.</p>
-<p><strong>How it works:</strong> most medicines in this group copy one gut hormone, GLP-1. Tirzepatide acts on two: <strong>GIP and GLP-1</strong>. Together they reduce appetite, help you feel full sooner, and improve blood sugar control.</p>
-<p><strong>How it’s taken:</strong> one injection under the skin, <strong>once a week</strong>. Treatment starts at 2.5 mg and is increased in steps every 4 weeks or more, to a usual maintenance dose of 5, 10 or 15 mg. The slow increase helps limit stomach side effects.</p>
-<p><strong>Results:</strong> in the main weight-loss trial, adults on the highest dose lost about 21% of their body weight over 72 weeks, against about 3% on placebo. In a 2025 head-to-head trial, people on tirzepatide lost 20.2% of their weight, compared with 13.7% on semaglutide.</p>` },
+      { id: 'results', h: 'How much weight do people lose?', tocLabel: 'Expected results', html: `<p>In the main clinical trials, adults taking semaglutide 2.4 mg lost about 15% of their body weight on average over 68 weeks, against about 2% on placebo. In the tirzepatide trial, people on the highest dose lost about 21% on average over 72 weeks. Results vary a lot from person to person, and they depend on staying on treatment and keeping up healthy habits.</p>
+<p>Weight tends to come back after stopping. In one study, people regained about two-thirds of the weight they had lost within a year of stopping semaglutide. In a tirzepatide study, people switched to placebo regained about 15% of their body weight over the following year, while those who stayed on it kept losing weight. For this reason many doctors treat obesity as a long-term condition, like high blood pressure.</p>` },
+      { id: 'mounjaro', h: 'Mounjaro: what it is used for and how it works', tocLabel: 'About Mounjaro', html: `<p>In Malaysia, Mounjaro (tirzepatide) is registered for adults with type 2 diabetes. It is also registered for weight management in adults with a BMI of 30 or more, or 27 to 30 with at least one weight-related condition such as high blood pressure, high cholesterol, sleep apnoea, heart disease, prediabetes or type 2 diabetes.</p>
+<p>Most medicines in this group copy one gut hormone, GLP-1. Tirzepatide acts on two, GIP and GLP-1, which together reduce appetite, make you feel full sooner and improve blood sugar control.</p>
+<p>It is one injection under the skin once a week. Treatment starts at 2.5 mg and goes up in steps every 4 weeks or more, to a usual maintenance dose of 5, 10 or 15 mg. Raising the dose slowly helps limit stomach side effects.</p>
+<p>In the main weight-loss trial, adults on the highest dose lost about 21% of their body weight over 72 weeks, against about 3% on placebo. In a 2025 trial that compared the two directly, people on tirzepatide lost 20.2% of their weight and people on semaglutide lost 13.7%.</p>` },
       { id: 'compare', h: 'Mounjaro vs Wegovy vs Saxenda', tocLabel: 'Mounjaro vs Saxenda', html: `<div class="table-wrap"><table>
 <thead><tr><th></th><th>Mounjaro</th><th>Wegovy</th><th>Saxenda</th></tr></thead>
 <tbody>
@@ -151,51 +151,51 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
 <tr><td>Average weight loss in main trial</td><td>About 21% over 72 weeks (highest dose)</td><td>About 15% over 68 weeks</td><td>8.4 kg vs 2.8 kg on placebo over 56 weeks</td></tr>
 <tr><td>Teenagers</td><td>Adults only</td><td>Check with your doctor</td><td>Registered from age 12 (over 60 kg)</td></tr>
 </tbody></table></div>
-<p><strong>Saxenda vs Mounjaro:</strong> Saxenda is an older, daily injection with smaller average weight loss. Mounjaro is weekly and led to more weight loss in trials. But “best” depends on you: your other conditions, how you tolerate side effects, availability and cost. A generic liraglutide was registered in Malaysia in October 2026, which may make that option more affordable. The Saxenda label advises stopping if you haven’t lost at least 5% of your weight after 12 weeks on the full dose.</p>` },
-      { id: 'pill', h: 'Is there a Mounjaro pill?', tocLabel: 'Is there a pill?', html: `<p><strong>No.</strong> Mounjaro is only available as an injection, in pens and vials. There is no tablet form of tirzepatide.</p>
-<p>Weight-loss pills in this group do exist elsewhere, but <strong>none is registered in Malaysia</strong>:</p>
+<p>Saxenda is an older, daily injection with smaller average weight loss. Mounjaro is weekly and led to more weight loss in trials. Which suits you depends on your other conditions, how well you tolerate side effects, availability and cost. A generic liraglutide was registered in Malaysia in October 2026, which may bring the price of that option down. The Saxenda label advises stopping if you haven’t lost at least 5% of your weight after 12 weeks on the full dose.</p>` },
+      { id: 'pill', h: 'Is there a Mounjaro pill?', tocLabel: 'Is there a pill?', html: `<p>No. Mounjaro comes only as an injection, in pens and vials, and there is no tablet form of tirzepatide.</p>
+<p>Weight-loss pills in this group do exist in other countries, but none is registered in Malaysia:</p>
 <ul>
-<li><strong>Orforglipron</strong>, a once-daily GLP-1 pill, was approved in the US in April 2026 for weight management. It is a different medicine from Mounjaro.</li>
-<li>A <strong>25 mg semaglutide pill</strong> (oral Wegovy) was approved in the US in December 2025.</li>
-<li>In Malaysia, oral semaglutide tablets are registered only for <strong>type 2 diabetes</strong>, at lower doses.</li>
+<li>Orforglipron, a once-daily GLP-1 pill, was approved in the US in April 2026 for weight management. It is a different medicine from Mounjaro.</li>
+<li>A 25 mg semaglutide pill (oral Wegovy) was approved in the US in December 2025.</li>
+<li>In Malaysia, oral semaglutide tablets are registered only for type 2 diabetes, at lower doses.</li>
 </ul>
-<p>Any “Mounjaro pill” or “tirzepatide tablet” sold online is not a registered product. Don’t take it.</p>` },
-      { id: 'side-effects', h: 'Side effects and safety', html: `<p>Stomach and gut side effects are the most common, especially when starting or increasing the dose. In the semaglutide weight-management trials:</p>
+<p>Any “Mounjaro pill” or “tirzepatide tablet” sold online is not a registered product, so don’t take it.</p>` },
+      { id: 'side-effects', h: 'Side effects and safety', html: `<p>Stomach and gut side effects are the most common, especially when you start or when the dose goes up. In the semaglutide weight-management trials:</p>
 <ul><li>Nausea: 44% (vs 16% on placebo)</li><li>Diarrhoea: 30%</li><li>Vomiting: 25%</li><li>Constipation: 24%</li></ul>
-<p>Less common but important risks include inflammation of the pancreas (pancreatitis), gallstones, hair loss and loss of muscle along with fat. They are <strong>not for use in pregnancy</strong>, and the product information advises stopping them before a planned pregnancy. The US labels advise people with a personal or family history of a rare thyroid cancer (medullary thyroid carcinoma) not to use semaglutide or tirzepatide.</p>
-<p><strong>Side effects of Mounjaro:</strong> according to its Malaysian product information, nausea and diarrhoea are very common. Vomiting, constipation, indigestion, stomach pain, bloating, reduced appetite, tiredness, dizziness, hair loss and injection-site reactions are common. Also important:</p>
+<p>Rarer but serious risks include inflammation of the pancreas (pancreatitis), gallstones, hair loss and losing muscle along with fat. These medicines are not for use in pregnancy, and the product information advises stopping them before a planned pregnancy. The US labels say people with a personal or family history of a rare thyroid cancer, medullary thyroid carcinoma, should not use semaglutide or tirzepatide.</p>
+<p>Mounjaro’s Malaysian product information lists nausea and diarrhoea as very common. Vomiting, constipation, indigestion, stomach pain, bloating, reduced appetite, tiredness, dizziness, hair loss and reactions where you inject are common. Other things to know:</p>
 <ul>
-<li><strong>Low blood sugar</strong> is more likely if you also take insulin or a sulphonylurea for diabetes. Your doctor may lower those doses.</li>
-<li><strong>Dehydration</strong> from vomiting or diarrhoea can harm the kidneys. Drink enough fluids.</li>
-<li><strong>Before surgery or sedation</strong>, tell the doctor you take it, as there is a risk of inhaling stomach contents under anaesthesia.</li>
-<li><strong>Contraception:</strong> use effective contraception during treatment, and stop at least a month before a planned pregnancy. Tirzepatide can lower levels of the contraceptive pill. The US label advises adding a barrier method for 4 weeks after starting and after each dose increase, so ask your doctor.</li>
+<li>Low blood sugar is more likely if you also take insulin or a sulphonylurea for diabetes, and your doctor may lower those doses.</li>
+<li>Dehydration from vomiting or diarrhoea can harm the kidneys, so drink enough fluids.</li>
+<li>Tell the doctor you take it before any surgery or sedation, because there is a risk of breathing in stomach contents under anaesthesia.</li>
+<li>Use effective contraception during treatment, and stop at least a month before a planned pregnancy. Tirzepatide can lower the level of the contraceptive pill in your blood. The US label advises adding a barrier method for 4 weeks after starting and after each dose increase, so ask your doctor.</li>
 </ul>
 <div class="box box--pink" role="note"><span class="box__title">See a doctor urgently if you have</span><ul><li>Severe, persistent stomach pain, sometimes spreading to the back</li><li>Repeated vomiting and signs of dehydration</li><li>Yellowing of the skin or eyes</li></ul></div>` },
-      { id: 'online', h: 'Why “slimming pens” sold online are risky', tocLabel: 'The risk of buying online', html: `<p>In August 2026, the Ministry of Health warned the public about “pen kurus” sold online and claiming to contain <strong>retatrutide</strong>, an experimental medicine that is not approved anywhere in the world. Between January and July 2026, its Pharmacy Enforcement Division carried out <strong>30 raids</strong> on weight-loss products, 17 of them involving online sales, and seized goods worth RM477,142. It also took down 209 e-commerce listings. In April 2026, customs officers at KLIA seized more than 12,000 units of unregistered injections believed to contain tirzepatide, labelled “Tirzide”.</p>
-<p>Pens bought outside a clinic or pharmacy may be fake, unregistered, wrongly stored or the wrong dose. To protect yourself:</p>
+      { id: 'online', h: 'Why “slimming pens” sold online are risky', tocLabel: 'The risk of buying online', html: `<p>In August 2026, the Ministry of Health warned the public about “pen kurus” sold online that claim to contain retatrutide, an experimental medicine not approved anywhere in the world. Between January and July 2026, its Pharmacy Enforcement Division carried out 30 raids on weight-loss products, 17 of them involving online sales, and seized goods worth RM477,142. It also took down 209 e-commerce listings. In April 2026, customs officers at KLIA seized more than 12,000 units of unregistered injections labelled “Tirzide” and believed to contain tirzepatide.</p>
+<p>A pen bought outside a clinic or pharmacy may be fake, unregistered, badly stored or the wrong dose. To protect yourself:</p>
 <ul>
-<li>Only get these medicines through a doctor who has assessed you.</li>
+<li>Get these medicines only through a doctor who has assessed you.</li>
 <li>Check the box has a <strong>MAL registration number</strong>, and look it up on NPRA’s product search.</li>
 <li>Check the hologram security label (FarmaTag) with the FarmaChecker feature in the MyUBAT app.</li>
-<li>Avoid sellers on social media, e-commerce sites and in beauty salons.</li>
+<li>Don’t buy from sellers on social media, e-commerce sites or in beauty salons.</li>
 </ul>` },
-      { id: 'consultation', h: 'What to expect when you see a doctor', html: `<p>A doctor will usually ask about your weight history, eating habits, activity, sleep and other medicines. They will measure your weight, waist and blood pressure, and may arrange blood tests for blood sugar, cholesterol, and liver and kidney function. If a medicine is suitable, it is started at a low dose and increased slowly, with follow-up visits to check side effects and progress.</p>
-<p>A good weight-management plan also covers food, movement and sleep, and agrees what success looks like for you. For some people with a very high BMI, the doctor may discuss bariatric surgery.</p>` },
+      { id: 'consultation', h: 'What to expect when you see a doctor', html: `<p>A doctor will usually ask about your weight history, eating habits, activity, sleep and other medicines. They will measure your weight, waist and blood pressure, and may order blood tests for blood sugar, cholesterol, and liver and kidney function. If a medicine suits you, it starts at a low dose and goes up slowly, with follow-up visits to check side effects and progress.</p>
+<p>A weight-management plan should also cover food, movement and sleep, and set out what success looks like for you. For some people with a very high BMI, the doctor may discuss bariatric surgery.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to talk to a doctor about your weight',
     clinicsTocLabel: 'Where to see a doctor',
-    clinicsIntro: 'Any registered GP can assess your weight and health, check for related conditions such as diabetes and high blood pressure, and discuss whether treatment is suitable. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, with opening hours and directions.',
+    clinicsIntro: 'Any registered GP can assess your weight and health, check for related conditions such as diabetes and high blood pressure, and discuss whether treatment would suit you. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, with opening hours and directions.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
       ['Is Ozempic approved for weight loss in Malaysia?', 'No. In Malaysia, Ozempic is registered for type 2 diabetes. Wegovy, which contains a higher dose of the same medicine (semaglutide), is the version registered for weight management.'],
-      ['Is Mounjaro available for weight loss in Malaysia?', 'Mounjaro (tirzepatide) is registered in Malaysia, and its current product information includes weight management as well as type 2 diabetes. It is prescription-only, so a doctor must assess you first.'],
-      ['Can I buy weight-loss injections online in Malaysia?', 'You should not. These medicines are Group B poisons that need a prescription, and the Ministry of Health has raided sellers and removed online listings in 2026. Pens sold online may be fake or unregistered.'],
+      ['Is Mounjaro available for weight loss in Malaysia?', 'Yes. Mounjaro (tirzepatide) is registered in Malaysia, and its current product information covers weight management as well as type 2 diabetes. It is prescription-only, so a doctor must assess you first.'],
+      ['Can I buy weight-loss injections online in Malaysia?', 'You shouldn’t. These medicines are Group B poisons that need a prescription, and in 2026 the Ministry of Health raided sellers and removed online listings. Pens sold online may be fake or unregistered.'],
       ['What is Mounjaro used for?', 'In Malaysia, Mounjaro (tirzepatide) is registered for adults with type 2 diabetes, and for weight management in adults with a BMI of 30 or more, or 27 or more with a weight-related condition. It is a once-weekly injection that needs a prescription.'],
-      ['Is there a Mounjaro pill?', 'No. Mounjaro is only available as an injection. Weight-loss pills such as orforglipron and oral semaglutide 25 mg are approved in the US but are not registered in Malaysia, so any “Mounjaro pill” sold online is not genuine.'],
+      ['Is there a Mounjaro pill?', 'No. Mounjaro comes only as an injection. Weight-loss pills such as orforglipron and oral semaglutide 25 mg are approved in the US but not registered in Malaysia, so any “Mounjaro pill” sold online is not genuine.'],
       ['Saxenda vs Mounjaro: which is better?', 'Mounjaro is a weekly injection that led to more weight loss in trials (about 21% vs about 8%). Saxenda is a daily injection and is also registered for some teenagers. The right choice depends on your health, side effects and cost, so discuss it with your doctor.'],
-      ['What are the side effects of Mounjaro?', 'The most common are nausea, diarrhoea, vomiting, constipation, indigestion and reduced appetite, especially when starting or increasing the dose. Less common but serious risks include pancreatitis, gallbladder problems and dehydration affecting the kidneys.'],
-      ['Will I regain weight if I stop the injections?', 'Many people do. Studies show a large part of the weight lost often returns within a year of stopping, which is why doctors pair medicines with long-term lifestyle changes.'],
+      ['What are the side effects of Mounjaro?', 'The most common are nausea, diarrhoea, vomiting, constipation, indigestion and reduced appetite, especially when you start or when the dose goes up. Rarer but serious risks include pancreatitis, gallbladder problems and dehydration that affects the kidneys.'],
+      ['Will I regain weight if I stop the injections?', 'Many people do. In studies, much of the weight lost often came back within a year of stopping, which is why doctors pair these medicines with long-term changes to diet and activity.'],
     ],
     sources: [
       ['NPRA — QUEST3+ product registration search', 'https://quest3plus.bpfk.gov.my/pmo2/index.php'],
