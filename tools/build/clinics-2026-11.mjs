@@ -126,11 +126,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "55100",
   "phone": "03-9284 7881",
   "phoneIntl": "+60392847881",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
   "geo": [
    3.145744,
    101.750635
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -168,8 +223,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Ampang. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Taman Nirwana is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Ampang, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Taman Nirwana is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Ampang"
   ]
@@ -232,11 +287,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "68000",
   "phone": "03-4105 6640",
   "phoneIntl": "+60341056640",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
   "geo": [
    3.201265,
    101.762126
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -274,8 +384,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Ampang. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Hulu Kelang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-gombak\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Ampang, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Hulu Kelang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-gombak\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Ampang"
   ]
@@ -1631,7 +1741,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "43200",
   "phone": "03-9075 8046",
   "phoneIntl": "+60390758046",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -1644,8 +1809,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Cheras. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Batu 9 Cheras is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Cheras, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Batu 9 Cheras is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Cheras"
   ],
@@ -1665,7 +1830,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "43200",
   "phone": "03-9081 0142",
   "phoneIntl": "+60390810142",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -1678,8 +1898,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Cheras. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bandar Tun Hussein Onn is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Cheras, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bandar Tun Hussein Onn is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Cheras"
   ],
@@ -1699,7 +1919,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "43300",
   "phone": "03-8961 2040",
   "phoneIntl": "+60389612040",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -1712,8 +1987,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Cheras. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Balakong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Cheras, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Balakong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Cheras"
   ],
@@ -3102,7 +3377,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "63000",
   "phone": "03-8311 9300",
   "phoneIntl": "+60383119300",
-  "checked": "2026-11-21",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -3115,8 +3445,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Cyberjaya. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Cyberjaya is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-sepang\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/ms/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://thesun.my/malaysia-news/cyberjaya-hospital-to-fully-operate-as-public-hospital-kj-af9968561/\" target=\"_blank\" rel=\"noopener\">thesun.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Cyberjaya, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Cyberjaya is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-sepang\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://thesun.my/malaysia-news/cyberjaya-hospital-to-fully-operate-as-public-hospital-kj-af9968561/\" target=\"_blank\" rel=\"noopener\">thesun.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Cyberjaya"
   ]
@@ -4901,7 +5231,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "43000",
   "phone": "03-8733 6775",
   "phoneIntl": "+60387336775",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -4914,8 +5299,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Kajang. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Sungai Chua is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Kajang, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Sungai Chua is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Kajang"
   ]
@@ -4931,7 +5316,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "43000",
   "phone": "03-8733 6312",
   "phoneIntl": "+60387336312",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -4944,8 +5384,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Kajang. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Sungai Sekamat is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Kajang, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Sungai Sekamat is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Kajang"
   ]
@@ -4961,7 +5401,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "43000",
   "phone": "03-8925 8518",
   "phoneIntl": "+60389258518",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -4974,8 +5469,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Kajang. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bandar Seri Putra is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Kajang, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bandar Seri Putra is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-hulu-langat\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Kajang"
   ],
@@ -5952,7 +6447,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75460",
   "phone": "06-268 0333",
   "phoneIntl": "+6062680333",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -5965,8 +6515,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Ayer Molek is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Ayer Molek is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ]
@@ -5982,7 +6532,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75260",
   "phone": "06-351 2464",
   "phoneIntl": "+6063512464",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -5995,8 +6600,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bukit Rambai is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bukit Rambai is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ],
@@ -6016,7 +6621,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75260",
   "phone": "06-312 3333",
   "phoneIntl": "+6063123333",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -6029,8 +6689,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Cheng is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Cheng is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ]
@@ -6046,7 +6706,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75200",
   "phone": "06-315 4144",
   "phoneIntl": "+6063154144",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -6059,8 +6774,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Klebang Besar is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Klebang Besar is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ],
@@ -6080,7 +6795,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75000",
   "phone": "06-282 4452",
   "phoneIntl": "+6062824452",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -6093,8 +6863,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Jalan Gereja is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Jalan Gereja is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ],
@@ -6148,7 +6918,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75200",
   "phone": "06-336 0170",
   "phoneIntl": "+6063360170",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -6161,8 +6986,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Tengkera is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Tengkera is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ]
@@ -6178,7 +7003,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75050",
   "phone": "06-286 7333",
   "phoneIntl": "+6062867333",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp",
    "womens",
@@ -6213,8 +7093,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Ujong Pasir is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a>, <a href=\"https://www.facebook.com/people/Klinik-Kesihatan-Ujong-Pasir/100085375695831/\" target=\"_blank\" rel=\"noopener\">facebook.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Ujong Pasir is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a>, <a href=\"https://www.facebook.com/people/Klinik-Kesihatan-Ujong-Pasir/100085375695831/\" target=\"_blank\" rel=\"noopener\">facebook.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ],
@@ -6264,7 +7144,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "75350",
   "phone": "06-270 6200",
   "phoneIntl": "+6062706200",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -6277,8 +7212,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Melaka. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Batu Berendam is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Melaka, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Batu Berendam is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknmelaka.moh.gov.my/xs/page.php?s=lokasi-klinik-kesihatan\" target=\"_blank\" rel=\"noopener\">jknmelaka.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Melaka"
   ],
@@ -9243,11 +10178,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "47100",
   "phone": "03-8061 1814",
   "phoneIntl": "+60380611814",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
   "geo": [
    2.994085,
    101.619701
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -9287,8 +10277,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Puchong. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Puchong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Puchong, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Puchong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Puchong"
   ]
@@ -9304,11 +10294,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "47100",
   "phone": "03-8062 3984",
   "phoneIntl": "+60380623984",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
   "geo": [
    3.020944,
    101.592607
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -9348,8 +10393,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Puchong. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Batu 13 Puchong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Puchong, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Batu 13 Puchong is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Puchong"
   ]
@@ -9974,11 +11019,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "70300",
   "phone": "06-603 3700",
   "phoneIntl": "+6066033700",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
   "geo": [
    2.6849788,
    101.9164471
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -9991,8 +11091,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Seremban. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Seremban 2 is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/negeri-sembilan\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Seremban, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Seremban 2 is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Seremban"
   ]
@@ -10008,11 +11108,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "70450",
   "phone": "06-676 6000",
   "phoneIntl": "+6066766000",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
   "geo": [
    2.6918304,
    101.9881109
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -10025,8 +11180,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Seremban. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Senawang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/negeri-sembilan\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Seremban, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Senawang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Seremban"
   ]
@@ -10042,7 +11197,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "70400",
   "phone": "06-678 8986",
   "phoneIntl": "+6066788986",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -10055,8 +11265,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Seremban. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Ampangan is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/negeri-sembilan\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Seremban, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Ampangan is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Seremban"
   ],
@@ -10076,7 +11286,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "70400",
   "phone": "06-761 3075",
   "phoneIntl": "+6067613075",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -10089,8 +11354,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Seremban. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Sikamat is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/negeri-sembilan\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Seremban, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Sikamat is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknns.moh.gov.my/jkn_n9/index.php?option=com_content&view=article&id=56&Itemid=176\" target=\"_blank\" rel=\"noopener\">jknns.moh.gov.my</a>, <a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR66eyX_uwZf2UOo_fdc56Gn2agKDx-ltAzRZBb8xY3B45Ij9wrOmlALgYpVt6zhQ/pub?gid=1737077480&single=true&output=csv\" target=\"_blank\" rel=\"noopener\">docs.google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Seremban"
   ],
@@ -10110,7 +11375,62 @@ export const RESEARCHED_2026_11 = [
   "postcode": "70400",
   "phone": "06-764 5561",
   "phoneIntl": "+6067645561",
-  "checked": "2026-11-15",
+  "checked": "2026-11-22",
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp"
   ],
@@ -10123,8 +11443,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Seremban. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Desa Rhu is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/negeri-sembilan\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Seremban, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Desa Rhu is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Seremban"
   ],
@@ -11946,11 +13266,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "40460",
   "phone": "03-5167 9158",
   "phoneIntl": "+60351679158",
-  "checked": "2026-11-21",
+  "checked": "2026-11-22",
   "geo": [
    3.003461,
    101.505251
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -11993,8 +13368,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Shah Alam. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bukit Naga is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-klang\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Shah Alam, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Bukit Naga is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-klang\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ]
@@ -12010,11 +13385,66 @@ export const RESEARCHED_2026_11 = [
   "postcode": "40152",
   "phone": "03-7803 5534",
   "phoneIntl": "+60378035534",
-  "checked": "2026-11-21",
+  "checked": "2026-11-22",
   "geo": [
    3.151623,
    101.533317
   ],
+  "hours": {
+   "0": [],
+   "1": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "2": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "3": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "4": [
+    [
+     480,
+     780
+    ],
+    [
+     840,
+     1020
+    ]
+   ],
+   "5": [
+    [
+     480,
+     735
+    ],
+    [
+     885,
+     1020
+    ]
+   ],
+   "6": []
+  },
+  "hoursNote": "Standard Klinik Kesihatan hours for this state under the Ministry of Health’s Polisi Operasi Klinik Kesihatan 2024, checked 22 November 2026. Only emergencies are seen during the lunch break, and registration closes 30 minutes before closing. Please call ahead, especially on public holidays.",
   "serviceKeys": [
    "gp",
    "chronic",
@@ -12057,8 +13487,8 @@ export const RESEARCHED_2026_11 = [
    "Government clinic"
   ],
   "cardSpec": "Government clinic",
-  "intro": "A Ministry of Health government clinic in Shah Alam. Malaysians pay RM1 to see a doctor.",
-  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Kampung Melayu Subang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.moh.gov.my/fasiliti-kesihatan/klinik-kesihatan/selangor\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
+  "intro": "A Ministry of Health government clinic in Shah Alam, open on weekdays. Malaysians pay RM1 to see a doctor.",
+  "about": "<h2 id=\"about\">About this clinic</h2><p>Klinik Kesihatan Kampung Melayu Subang is a government health clinic run by the Ministry of Health (KKM). See our <a href=\"/articles/klinik-kesihatan-malaysia/\">Klinik Kesihatan guide</a> for fees, services and what to bring.</p><p style=\"font-size:14px;color:var(--muted)\">Listing details checked against <a href=\"https://www.moh.gov.my/images/04-penerbitan/garis-panduan-kkm/POLISI%20OPERASI%20KLINIK%20KESIHATAN%202024.pdf\" target=\"_blank\" rel=\"noopener\">moh.gov.my</a>, <a href=\"https://jknselangor.moh.gov.my/index.php/klinik-kesihatan-daerah-petaling\" target=\"_blank\" rel=\"noopener\">jknselangor.moh.gov.my</a>, <a href=\"https://www.google.com/maps/d/kml?mid=1K6HNnzgFcKpxDFE5KbDPazWt0phQ0UI&forcekml=1\" target=\"_blank\" rel=\"noopener\">google.com</a> in November 2026. If something has changed, <a href=\"/contact/\">let us know</a>.</p>",
   "areaServed": [
    "Shah Alam"
   ]
