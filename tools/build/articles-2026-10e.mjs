@@ -190,7 +190,7 @@ ${figure('vaccination', 'A vaccine injection being given in the upper arm', 'Bab
 <li>Has signs of an allergic reaction: swelling of the face or lips, difficulty breathing, or a widespread rash. Call 999.</li>
 </ul></div>
 <p>A fit caused by fever (a febrile seizure) is frightening, but usually stops on its own and doesn’t cause lasting harm. Always get your child checked afterwards.</p>` },
-      { id: 'where', h: 'Where to get vaccines, and what they cost', tocLabel: 'Where and cost', html: `<ul>
+      { id: 'where-to-go', h: 'Where to get vaccines, and what they cost', tocLabel: 'Where and cost', html: `<ul>
 <li><strong>Government health clinics (Klinik Kesihatan):</strong> all National Immunisation Programme vaccines are free for Malaysian children. Non-citizens pay a fee.</li>
 <li><strong>Private clinics:</strong> can give the same vaccines for a fee, and often offer optional extras.</li>
 <li><strong>Records:</strong> keep your child’s health record book safe, as it is needed for primary school registration. For babies born from July 2022, vaccination records also appear in MySejahtera.</li>

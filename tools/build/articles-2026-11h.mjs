@@ -284,7 +284,7 @@ ${figure('medications', 'Assorted medicines on a table', 'Replacing fluids and s
       'A result is valid at Immigration for 180 days. Some Unsuitable results can be appealed, but only if FOMEMA emails to say the case is eligible.',
     ],
     sections: [
-      { id: 'where', h: 'Where to check a FOMEMA result', tocLabel: 'Where to check', html: `<div class="table-wrap"><table>
+      { id: 'where-to-go', h: 'Where to check a FOMEMA result', tocLabel: 'Where to check', html: `<div class="table-wrap"><table>
 <thead><tr><th>Where</th><th>Who can use it</th><th>What you need</th></tr></thead>
 <tbody>
 <tr><td><a href="https://eservices.imi.gov.my/myimms/FomemaStatus?lang=en" target="_blank" rel="noopener"><strong>MyIMMs: Fomema Status Inquiries</strong></a></td><td>Anyone, including workers. No login needed.</td><td>Passport number and nationality, or name and nationality</td></tr>
@@ -694,7 +694,7 @@ ${figure('caring-hands', 'A person holding someone’s hands in reassurance', 'S
 </ul>
 <p>Keep it with your passport and carry it on your trip. Saudi rules differ in how they describe checks for each country, and the WHO advises pilgrims to carry proof. Ask your agency how they will check it. If your earlier vaccine is still within its valid period, you don’t need another dose, as long as your certificate shows this.</p>
 ${figure('vaccination', 'A healthcare worker giving an injection in the upper arm', 'Have the meningitis vaccine at least two weeks before you travel, and keep the certificate with your passport.')}` },
-      { id: 'where', h: 'Where to get the vaccine in Malaysia', tocLabel: 'Where to get it', html: `<ul>
+      { id: 'where-to-go', h: 'Where to get the vaccine in Malaysia', tocLabel: 'Where to get it', html: `<ul>
 <li><strong>Umrah:</strong> the Ministry of Health said in 2024 that Umrah pilgrims should get the vaccine at private healthcare facilities. Many private GP clinics offer it, but stock varies, so <strong>call first</strong> and ask for the vaccine type and whether a certificate is included.</li>
 <li><strong>Haj:</strong> vaccination is available at government facilities or privately. In the 2025 season, the COVID-19 vaccine was free at selected clinics, and the flu vaccine was free at selected government facilities for pilgrims aged 60 and over with a chronic illness. Check the current arrangements with Tabung Haji.</li>
 </ul>

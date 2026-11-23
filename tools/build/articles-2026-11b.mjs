@@ -409,7 +409,7 @@ ${figure('doctor-notes', 'A doctor in blue gloves writing notes on a clipboard',
 <li>Throat and rectal infections are common and usually cause no symptoms, so tell the doctor what kind of sex you have had, so they can test the right places.</li>
 <li>Gonorrhoea is becoming <strong>resistant to antibiotics</strong>, including in Southeast Asia. Don’t take leftover antibiotics or buy them without a prescription: see a doctor and go back for a test of cure if advised.</li>
 </ul>` },
-      { id: 'where', h: 'Where to get a confidential STI test in Malaysia', tocLabel: 'Where to get tested', html: `<ul>
+      { id: 'where-to-go', h: 'Where to get a confidential STI test in Malaysia', tocLabel: 'Where to get tested', html: `<ul>
 <li><strong>Government health clinics (Klinik Kesihatan):</strong> outpatient fees for Malaysians are very low. Many clinics test for syphilis and HIV, and some offer free HIV PrEP.</li>
 <li><strong>Private GP clinics:</strong> you can usually be seen quickly, including in the evening. Ask for an “STI screen” and say which infections you want tested.</li>
 <li><strong>Community and NGO clinics</strong> offer testing and support in some cities, and HIV self-test kits are sold at pharmacies.</li>

@@ -49,6 +49,11 @@ const fill = (html) => html
   .replace('{{calc:due-date}}', () => dueDateCalc('article-due'))
   .replace('{{calc:bmi}}', () => bmiCalc('article-bmi'));
 for (const a of ARTICLES) {
+  // Section ids become in-page anchors, so they must not repeat or reuse the ids the page
+  // template already has (clinics block, FAQ, related articles, header search and nav).
+  const ids = [...a.sections.map((s) => s.id), 'where', 'faq', 'rel-h', 'main', 'nav-links', 'search-modal', 'hs-list', 'hs-q', 'ms-list', 'ms-q'];
+  const clash = ids.find((id, i) => ids.indexOf(id) !== i);
+  if (clash) throw new Error(`Duplicate section id "${clash}" in article ${a.slug}`);
   for (const s of a.sections) s.html = fill(s.html);
   const text = [a.standfirst, ...(a.keyPoints || []), ...a.sections.map((s) => s.h + ' ' + s.html), ...(a.faqs || []).flat()].join(' ').replace(/<[^>]+>/g, ' ');
   a.words = text.split(/\s+/).filter(Boolean).length;

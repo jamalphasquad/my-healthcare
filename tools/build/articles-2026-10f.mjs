@@ -65,7 +65,7 @@ ${figure('mental-health', 'Letter tiles spelling “mental health” next to a s
 <li><strong>Sedatives</strong> such as benzodiazepines are generally only used briefly in a crisis, because they can cause dependence.</li>
 </ul>
 <p>Most people with anxiety improve with treatment. The sooner you get help, the easier it usually is.</p>` },
-      { id: 'where', h: 'Where to get help in Malaysia', tocLabel: 'Where to get help', html: `<ul>
+      { id: 'where-to-go', h: 'Where to get help in Malaysia', tocLabel: 'Where to get help', html: `<ul>
 <li><strong>A GP or Klinik Kesihatan:</strong> a good first step. Government health clinics charge Malaysians a small fee and can screen for anxiety and depression, start treatment and refer you to a psychiatrist or psychologist.</li>
 <li><strong>MENTARI community mental health centres:</strong> run by the Ministry of Health in many districts.</li>
 <li><strong>Private psychologists, counsellors and psychiatrists:</strong> available in most cities, usually by appointment.</li>

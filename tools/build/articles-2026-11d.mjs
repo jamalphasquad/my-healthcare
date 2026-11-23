@@ -91,7 +91,7 @@ export const NOV_2026_D = [
 <li><strong>“You don’t need contraception after 40.”</strong> You can still get pregnant until menopause, so contraception is still needed.</li>
 <li><strong>“The morning-after pill is an abortion pill.”</strong> No. It prevents or delays ovulation and doesn’t end a pregnancy.</li>
 </ul>` },
-      { id: 'where', h: 'Where to get contraception in Malaysia', tocLabel: 'Where to get it', html: `<ul>
+      { id: 'where-to-go', h: 'Where to get contraception in Malaysia', tocLabel: 'Where to get it', html: `<ul>
 <li><strong>LPPKN (Klinik Nur Sejahtera):</strong> family planning counselling, pills, injections, implants and coils. Fees are low: for example, RM5 registration and RM10 consultation, with pills from RM5, the injection RM36, and implant insertion RM500, according to LPPKN’s fee list updated in June 2026. LPPKN also gives free contraceptives to eligible B40 women.</li>
 <li><strong>Klinik Kesihatan:</strong> government health clinics offer the pill, injection, coil and implant.</li>
 <li><strong>Private GP and women’s clinics:</strong> you can usually be seen quickly, including for implant and coil fitting. Call ahead to check which methods they offer.</li>
