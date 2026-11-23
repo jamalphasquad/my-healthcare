@@ -207,27 +207,23 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
     title: 'FOMEMA medical check-up: tests, fees, results and appeals explained',
     crumb: 'FOMEMA check-up',
     desc: 'The FOMEMA medical examination for foreign workers in Malaysia: who needs it, what is tested, 2026 fees with SST, how to check results online, and how appeals work.',
-    excerpt: 'Every foreign worker and domestic helper in Peninsular Malaysia must pass a FOMEMA medical examination, now every year. What it tests, how much it costs in 2026, how employers check results, what “unsuitable” means, and how appeals work.',
-    standfirst: 'FOMEMA is the compulsory medical examination for foreign workers and domestic helpers in Peninsular Malaysia and Labuan. Since December 2023 it is needed every year, and it now includes more tests. Here is what employers and workers need to know about the exam, the fees, the results and appeals.',
-    cat: 'guides', catLabel: 'Guides', published: PUB, modified: '2026-11-09', author: AUTHOR, news: false, medical: false,
+    excerpt: 'Every foreign worker and domestic helper in Peninsular Malaysia must pass a FOMEMA medical examination, now every year. The exam covers blood, urine and a chest X-ray, the 2026 fee includes SST, and some unsuitable results can be appealed.',
+    standfirst: 'FOMEMA is the compulsory medical examination for foreign workers and domestic helpers in Peninsular Malaysia and Labuan. Since December 2023 it has been needed every year and includes more tests. The employer registers the worker and pays, the results go straight to Immigration, and some unsuitable results can be appealed.',
+    cat: 'guides', catLabel: 'Guides', published: PUB, modified: '2026-11-23', author: AUTHOR, news: false, medical: false,
     about: ['FOMEMA', 'Foreign worker medical examination'],
     image: 'doctor-notes', imageAlt: 'A doctor in blue gloves writing notes on a clipboard',
     keyPoints: [
-      'FOMEMA examines blue-collar foreign workers (PLKS permit holders) and foreign domestic helpers. Expatriates and international students use different systems.',
+      'FOMEMA examines blue-collar foreign workers (PLKS permit holders) and foreign domestic helpers. Expatriates and international students go through different systems.',
       'Since 16 December 2023, every foreign worker must pass the exam every year, before each permit renewal.',
-      'The exam includes a medical history, physical examination, chest X-ray, blood tests (including HIV, hepatitis B and C, syphilis and malaria) and urine tests for drugs and pregnancy.',
-      'From 25 May 2026 the fee is RM226.56 for men and RM237.36 for women, including 8% SST and a RM3 convenience fee. The employer registers and pays.',
-      'Results go to Immigration within about 7 working days. Employers check them on the FOMEMA portal. Some unsuitable results can be appealed within 2 weeks.',
+      'The exam includes a medical history, a physical examination, a chest X-ray, blood tests (including HIV, hepatitis B and C, syphilis and malaria) and urine tests for drugs and pregnancy.',
+      'From 25 May 2026 the fee is RM226.56 for men and RM237.36 for women, including 8% SST and a RM3 convenience fee. The employer registers the worker and pays.',
+      'Results reach Immigration within about 7 working days, and employers check them on the FOMEMA portal. Some unsuitable results can be appealed within 2 weeks.',
     ],
     sections: [
-      { id: 'what', h: 'What is FOMEMA?', tocLabel: 'What FOMEMA is', html: `<p><strong>FOMEMA</strong> is the company appointed by the Government in 1997 to run the compulsory health screening of legal foreign workers, under the supervision of the Ministry of Health. The aim is to make sure workers are fit to work and to stop infectious diseases, such as tuberculosis, from spreading.</p>
-<p>FOMEMA covers <strong>Peninsular Malaysia and Labuan</strong>, through about 3,100 panel clinics and 140 laboratories. Foreign worker applications in Sabah and Sarawak are handled under those states’ own arrangements, so check with the state Immigration office there.</p>
-<p>Its official website is now <a href="https://fomema2u.com.my/" target="_blank" rel="noopener">fomema2u.com.my</a>, and employers use the <a href="https://portal.fomema.my/" target="_blank" rel="noopener">FOMEMA portal</a> to register workers and see results.</p>` },
-      { id: 'who', h: 'Who needs a FOMEMA check-up, and when', tocLabel: 'Who needs it', html: `<ul>
-<li><strong>Foreign workers</strong> on a Temporary Employment Visit Pass (PLKS), in sectors such as manufacturing, construction, plantations, agriculture and services.</li>
-<li><strong>Foreign domestic helpers.</strong></li>
-<li><strong>Not</strong> expatriates on employment passes, and <strong>not</strong> international students, who have a separate medical screening through Education Malaysia Global Services (EMGS).</li>
-</ul>
+      { id: 'what', h: 'What is FOMEMA?', tocLabel: 'What FOMEMA is', html: `<p>FOMEMA is the company the Government appointed in 1997 to run the compulsory health screening of legal foreign workers, under the supervision of the Ministry of Health. The screening checks that workers are fit to work and stops infectious diseases such as tuberculosis from spreading.</p>
+<p>FOMEMA covers Peninsular Malaysia and Labuan, through about 3,100 panel clinics and 140 laboratories. Sabah and Sarawak handle foreign worker applications under their own arrangements, so check with the state Immigration office there.</p>
+<p>Its official website is now <a href="https://fomema2u.com.my/" target="_blank" rel="noopener">fomema2u.com.my</a>, and employers register workers and see results on the <a href="https://portal.fomema.my/" target="_blank" rel="noopener">FOMEMA portal</a>.</p>` },
+      { id: 'who', h: 'Who needs a FOMEMA check-up, and when', tocLabel: 'Who needs it', html: `<p>FOMEMA examines foreign workers on a Temporary Employment Visit Pass (PLKS), in sectors such as manufacturing, construction, plantations, agriculture and services, and foreign domestic helpers. Expatriates on employment passes don’t need it, and nor do international students, who have a separate medical screening through Education Malaysia Global Services (EMGS).</p>
 <div class="table-wrap"><table>
 <thead><tr><th>When</th><th>What is needed</th></tr></thead>
 <tbody>
@@ -235,16 +231,16 @@ ${figure('healthy-salad', 'A colourful bowl of fresh salad with vegetables', 'Sm
 <tr><td>After arrival</td><td>The employer registers the worker with FOMEMA promptly (FOMEMA asks within 72 hours), and the exam must be done within 30 days</td></tr>
 <tr><td>Every year</td><td>A FOMEMA exam before each permit renewal. Employers can register up to 3 months before the permit expires</td></tr>
 </tbody></table></div>
-<p>Before December 2023, workers were examined yearly for the first 3 years and then every other year. Since <strong>16 December 2023</strong>, the exam is needed <strong>every year</strong> for all foreign workers. Since 7 September 2026, employers must also confirm the worker’s accommodation address before registration can go ahead.</p>` },
-      { id: 'tests', h: 'What the FOMEMA medical examination tests', tocLabel: 'What is tested', html: `<ul>
-<li><strong>Medical history and physical examination</strong> by a FOMEMA panel doctor, including blood pressure.</li>
-<li><strong>Chest X-ray</strong>, mainly to look for tuberculosis (TB).</li>
-<li><strong>Blood tests</strong> for HIV, hepatitis B, syphilis and malaria, and blood group. <strong>Hepatitis C</strong> and <strong>filariasis</strong> were added in December 2023.</li>
-<li><strong>Urine tests</strong> for drugs (including opiates and cannabis, with <strong>methamphetamine</strong> added in December 2023), pregnancy in women, and sugar and protein.</li>
+<p>Before December 2023, workers were examined every year for their first 3 years and every other year after that. Since 16 December 2023, all foreign workers need the exam every year. Since 7 September 2026, employers also have to confirm the worker’s accommodation address before registration can go ahead.</p>` },
+      { id: 'tests', h: 'What the FOMEMA medical examination tests', tocLabel: 'What is tested', html: `<p>A FOMEMA panel doctor takes a medical history and does a physical examination, including blood pressure. The worker also has:</p>
+<ul>
+<li>a chest X-ray, mainly to look for tuberculosis (TB)</li>
+<li>blood tests for HIV, hepatitis B, syphilis and malaria, and blood group. Hepatitis C and filariasis were added in December 2023.</li>
+<li>urine tests for drugs (including opiates and cannabis, with methamphetamine added in December 2023), pregnancy in women, and sugar and protein</li>
 </ul>
-<p>Conditions that can make a worker <strong>unsuitable</strong> include infectious diseases such as TB (including old TB that could become active again), hepatitis B and C, HIV, syphilis, malaria, filariasis and leprosy, as well as cancer, epilepsy, serious psychiatric illness, drug use and pregnancy. Chronic conditions such as high blood pressure, diabetes, heart disease, asthma and kidney disease may also lead to an unsuitable result, or to a monitoring programme.</p>
-<p>According to FOMEMA figures cited by the Malaysian Medical Association, in 2023 the screening detected more than 6,400 cases of TB and more than 3,300 cases of hepatitis B among foreign workers, which is why the checks matter for public health. See our guide to <a href="/articles/hepatitis-b-malaysia/">hepatitis B</a> and <a href="/articles/tuberculosis-tb-malaysia/">tuberculosis (TB)</a>.</p>
-${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tests in the FOMEMA exam include HIV, hepatitis B and C, syphilis and malaria.')}` },
+<p>A worker can be found unsuitable because of an infectious disease such as TB (including old TB that could become active again), hepatitis B or C, HIV, syphilis, malaria, filariasis or leprosy. Cancer, epilepsy, serious psychiatric illness, drug use and pregnancy also count. Chronic conditions such as high blood pressure, diabetes, heart disease, asthma and kidney disease may lead to an unsuitable result, or to a monitoring programme.</p>
+<p>FOMEMA figures cited by the Malaysian Medical Association show that in 2023 the screening found more than 6,400 cases of TB and more than 3,300 cases of hepatitis B among foreign workers. See our guides to <a href="/articles/hepatitis-b-malaysia/">hepatitis B</a> and <a href="/articles/tuberculosis-tb-malaysia/">tuberculosis (TB)</a>.</p>
+${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'The FOMEMA blood tests include HIV, hepatitis B and C, syphilis and malaria.')}` },
       { id: 'fees', h: 'FOMEMA fees in 2026', tocLabel: 'Fees', html: `<div class="table-wrap"><table>
 <thead><tr><th></th><th>Male worker</th><th>Female worker</th></tr></thead>
 <tbody>
@@ -253,54 +249,54 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Blood tes
 <tr><td>Convenience fee</td><td>RM3.00</td><td>RM3.00</td></tr>
 <tr><td><strong>Total</strong></td><td><strong>RM226.56</strong></td><td><strong>RM237.36</strong></td></tr>
 </tbody></table></div>
-<p>The fees went up from RM190 (male) and RM207 (female) on 16 December 2023, when the new tests were added, and SST was added from <strong>25 May 2026</strong>. If a registration is cancelled, RM29.16 (RM27 plus SST) is kept and the rest refunded. These fees apply in Peninsular Malaysia and Labuan.</p>
+<p>The fees rose from RM190 (male) and RM207 (female) on 16 December 2023, when the new tests were added, and SST was added from 25 May 2026. If a registration is cancelled, FOMEMA keeps RM29.16 (RM27 plus SST) and refunds the rest. These fees apply in Peninsular Malaysia and Labuan.</p>
 <p>The employer registers the worker and pays the fee through the FOMEMA portal.</p>` },
       { id: 'process', h: 'Step by step: from registration to results', tocLabel: 'Step by step', html: `<ol>
-<li><strong>Register and pay:</strong> the employer, or a registered agency, registers the worker on the FOMEMA portal and pays the fee.</li>
-<li><strong>Choose a clinic:</strong> the employer picks a FOMEMA panel clinic. Find one on the <a href="https://fomema2u.com.my/" target="_blank" rel="noopener">FOMEMA website</a> under “Find Your Nearest Clinic”, or in our directory below.</li>
-<li><strong>Attend the exam:</strong> the worker brings their passport and registration details. The clinic does the examination and takes blood and urine samples. The chest X-ray is done at a FOMEMA-registered X-ray facility, which may be at the same clinic.</li>
-<li><strong>Certification:</strong> the results are reviewed and sent electronically to the Immigration Department, usually within <strong>7 working days</strong>.</li>
+<li>The employer, or a registered agency, registers the worker on the FOMEMA portal and pays the fee.</li>
+<li>The employer picks a FOMEMA panel clinic, either on the <a href="https://fomema2u.com.my/" target="_blank" rel="noopener">FOMEMA website</a> under “Find Your Nearest Clinic” or in our directory below.</li>
+<li>The worker goes to the clinic with their passport and registration details. The clinic examines them and takes blood and urine samples. The chest X-ray is done at a FOMEMA-registered X-ray facility, which may be at the same clinic.</li>
+<li>The results are reviewed and sent electronically to the Immigration Department, usually within 7 working days.</li>
 </ol>
-<p>A FOMEMA result is valid for <strong>180 days</strong>.</p>` },
-      { id: 'results', h: 'How to check FOMEMA results online', tocLabel: 'Check results', html: `<p>Results are checked by the <strong>employer</strong>:</p>
+<p>A FOMEMA result is valid for 180 days.</p>` },
+      { id: 'results', h: 'How to check FOMEMA results online', tocLabel: 'Check results', html: `<p>The employer checks the results:</p>
 <ol>
 <li>Log in to the <a href="https://portal.fomema.my/" target="_blank" rel="noopener">FOMEMA portal</a>.</li>
-<li>Open <strong>“Medical Result”</strong>.</li>
+<li>Open “Medical Result”.</li>
 <li>Search by worker code or passport number (up to 10 workers at a time).</li>
 </ol>
-<p>The result shows <strong>Suitable</strong> or <strong>Unsuitable</strong>. For an unsuitable result, the “Reason” column explains why, and the employer can print an unsuitable letter.</p>
-<p><strong>Workers</strong> can check their status for free on the Immigration Department’s <a href="https://eservices.imi.gov.my/myimms/FomemaStatus?lang=en" target="_blank" rel="noopener">MyIMMs Fomema Status Inquiries</a> page, using a passport number or name and nationality. See our step-by-step guide to the <a href="/articles/fomema-online-result-check/">FOMEMA online result check</a>.</p>` },
-      { id: 'appeal', h: 'Unsuitable results and appeals', tocLabel: 'Appeals', html: `<p>If a worker is found <strong>unsuitable</strong>, they can’t continue working in Malaysia. The employer must apply to the Immigration Department for a Check Out Memo and send the worker home.</p>
-<p>Some results can be appealed. FOMEMA emails the employer if a case is appealable:</p>
+<p>The result shows Suitable or Unsuitable. For an unsuitable result, the “Reason” column gives the reason, and the employer can print an unsuitable letter.</p>
+<p>Workers can check their own status for free on the Immigration Department’s <a href="https://eservices.imi.gov.my/myimms/FomemaStatus?lang=en" target="_blank" rel="noopener">MyIMMs Fomema Status Inquiries</a> page, using a passport number, or a name and nationality. Our <a href="/articles/fomema-online-result-check/">FOMEMA online result check</a> guide goes through it step by step.</p>` },
+      { id: 'appeal', h: 'Unsuitable results and appeals', tocLabel: 'Appeals', html: `<p>A worker found unsuitable can’t keep working in Malaysia. The employer must apply to the Immigration Department for a Check Out Memo and send the worker home.</p>
+<p>Some results can be appealed, and FOMEMA emails the employer if a case is appealable:</p>
 <ul>
-<li>Register the appeal on the FOMEMA portal <strong>within 2 weeks</strong> of certification, and submit any extra test results within 4 weeks, or the case is closed.</li>
-<li>An appeal committee meets weekly. The process takes about 30 days from payment.</li>
-<li>Some chronic conditions, such as diabetes or high blood pressure, can be cleared under a <strong>6-month monitoring programme</strong>. Workers who decline monitoring or miss the final check must be repatriated.</li>
-<li>Since <strong>20 July 2026</strong>, syphilis can be appealed, with treatment and a 6-month monitoring programme.</li>
+<li>Register the appeal on the FOMEMA portal within 2 weeks of certification, and submit any extra test results within 4 weeks, or the case is closed.</li>
+<li>An appeal committee meets weekly, and the process takes about 30 days from payment.</li>
+<li>Some chronic conditions, such as diabetes or high blood pressure, can be cleared under a 6-month monitoring programme. Workers who decline monitoring or miss the final check must be repatriated.</li>
+<li>Since 20 July 2026, syphilis can be appealed, with treatment and a 6-month monitoring programme.</li>
 </ul>
-<p><strong>Not appealable:</strong> TB confirmed on chest X-ray, malaria, pregnancy, HIV and hepatitis B. A mismatched blood group needs a new registration rather than an appeal.</p>` },
+<p>TB confirmed on chest X-ray, malaria, pregnancy, HIV and hepatitis B can’t be appealed. A blood group that doesn’t match needs a new registration, not an appeal.</p>` },
       { id: 'tips', h: 'Tips for employers and workers', tocLabel: 'Tips', html: `<ul>
-<li>Register early: up to 3 months before the permit expires, so there is time for an appeal if needed.</li>
+<li>Register early, up to 3 months before the permit expires, so there is time for an appeal if needed.</li>
 <li>Make sure the worker’s passport details match the registration exactly.</li>
 <li>Tell the doctor about any medicines the worker takes, and bring records of known conditions such as diabetes or high blood pressure.</li>
-<li>Workers with a long cough, fever, night sweats or weight loss should see a doctor before the exam, as TB is treatable.</li>
-<li>Only use the official FOMEMA website and portal, and never pay anyone who offers to “guarantee” a result.</li>
+<li>Workers with a long-lasting cough, fever, night sweats or weight loss should see a doctor before the exam, because TB is treatable.</li>
+<li>Use only the official FOMEMA website and portal, and never pay anyone who offers to “guarantee” a result.</li>
 </ul>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Find a FOMEMA panel clinic',
     clinicsTocLabel: 'FOMEMA clinics',
-    clinicsIntro: 'Our directory lists clinics that are on the FOMEMA panel, including clinics with FOMEMA X-ray facilities, with opening hours and directions. Panels can change, so check the clinic on the official FOMEMA website before you register.',
+    clinicsIntro: 'Our directory lists clinics on the FOMEMA panel, including clinics with FOMEMA X-ray facilities, with opening hours and directions. Panels change, so check the clinic on the official FOMEMA website before you register.',
     clinicLinks: [['/clinics/fomema-clinics/', 'FOMEMA panel clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/gp-clinics/', 'GP clinics']],
     faqs: [
-      ['What is FOMEMA?', 'FOMEMA is the company appointed by the Government to run the compulsory medical examination of foreign workers and domestic helpers in Peninsular Malaysia and Labuan, under the supervision of the Ministry of Health.'],
-      ['How much is the FOMEMA fee in 2026?', 'From 25 May 2026, RM226.56 for a male worker and RM237.36 for a female worker, including the exam fee (RM207 or RM217), 8% SST and a RM3 convenience fee.'],
+      ['What is FOMEMA?', 'FOMEMA is the company the Government appointed to run the compulsory medical examination of foreign workers and domestic helpers in Peninsular Malaysia and Labuan, under the supervision of the Ministry of Health.'],
+      ['How much is the FOMEMA fee in 2026?', 'From 25 May 2026, RM226.56 for a male worker and RM237.36 for a female worker. That includes the exam fee (RM207 or RM217), 8% SST and a RM3 convenience fee.'],
       ['How often is the FOMEMA check-up needed?', 'Every year. Since 16 December 2023, all foreign workers must pass a FOMEMA exam before each permit renewal, as well as within 30 days of arriving in Malaysia.'],
-      ['What does FOMEMA test for?', 'A medical history, physical examination, chest X-ray, blood tests for HIV, hepatitis B and C, syphilis, malaria and filariasis, and urine tests for drugs, pregnancy, sugar and protein.'],
-      ['How do I check FOMEMA results online?', 'Employers log in to the FOMEMA portal, open “Medical Result” and search by worker code or passport number. Workers can check their status on the Immigration Department’s free MyIMMs page. Results usually reach Immigration within 7 working days.'],
+      ['What does FOMEMA test for?', 'A medical history, a physical examination, a chest X-ray, blood tests for HIV, hepatitis B and C, syphilis, malaria and filariasis, and urine tests for drugs, pregnancy, sugar and protein.'],
+      ['How do I check FOMEMA results online?', 'Employers log in to the FOMEMA portal, open “Medical Result” and search by worker code or passport number. Workers can check their status free on the Immigration Department’s MyIMMs page. Results usually reach Immigration within 7 working days.'],
       ['Can an unsuitable FOMEMA result be appealed?', 'Some can. If FOMEMA says the case is appealable, register the appeal on the portal within 2 weeks of certification. TB confirmed on X-ray, malaria, pregnancy, HIV and hepatitis B can’t be appealed.'],
       ['How long is a FOMEMA result valid?', '180 days.'],
-      ['Do international students need FOMEMA?', 'No. International students have a separate medical screening through Education Malaysia Global Services (EMGS) at EMGS panel clinics.'],
+      ['Do international students need FOMEMA?', 'No. International students have a separate medical screening at EMGS panel clinics, through Education Malaysia Global Services (EMGS).'],
     ],
     sources: [
       ['FOMEMA — Foreign worker’s medical examination FAQ', 'https://fomema2u.com.my/employer-agency/frequent-asked-questions-and-forms/foreign-workers-medical-examination/'],

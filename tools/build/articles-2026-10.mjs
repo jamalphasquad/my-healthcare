@@ -226,70 +226,64 @@ ${figure('doctor-notes', 'A doctor writing notes on a clipboard during a consult
     title: 'Flu vaccine in Malaysia: who should get it, when, and how to get a free shot',
     crumb: 'Flu vaccine in Malaysia',
     desc: 'Who should get a flu vaccine in Malaysia, the best time, typical private clinic costs, free shots for seniors through MySejahtera, and side effects.',
-    excerpt: 'Flu circulates all year in Malaysia. Who should get vaccinated, how long the vaccine lasts, the best timing, free shots for seniors, typical costs and what to expect.',
-    standfirst: 'Flu spreads all year round in Malaysia, with surges that close classrooms and fill clinics. A yearly vaccine is the simplest protection. Here is who needs it, when to get it, and how to get one free if you are eligible.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-10-28', author: AUTHOR, news: true, medical: true,
+    excerpt: 'Flu circulates all year in Malaysia, and a yearly vaccine is the simplest protection. Older adults, pregnant women, young children and people with long-term illness benefit most, and many seniors can get it free.',
+    standfirst: 'Flu spreads all year round in Malaysia, with surges that close classrooms and fill clinics. A yearly vaccine is the simplest protection. It matters most for older adults, pregnant women, young children and people with long-term illness, and many people aged 50 and over can now get it free through MySejahtera.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-23', author: AUTHOR, news: true, medical: true,
     about: ['Influenza', 'Selesema'],
     image: 'vaccination', imageAlt: 'A doctor giving a vaccine injection in the upper arm',
     keyPoints: [
       'Flu circulates all year in Malaysia. The Ministry of Health advises a yearly vaccine, ideally in March or September.',
-      'It is especially important for adults aged 60+, pregnant women, young children and anyone with a long-term illness.',
-      'From 2026, free flu shots were reported to cover everyone aged 60+ and those aged 50–59 with a chronic illness. Book through MySejahtera.',
-      'At private clinics, a flu shot is commonly advertised at roughly RM50–RM150.',
-      'Side effects are usually mild, such as a sore arm or low fever for a day or two.',
+      'It matters most for adults aged 60+, pregnant women, young children and anyone with a long-term illness.',
+      'News reports said that from 2026 free flu shots cover everyone aged 60+ and people aged 50–59 with a chronic illness. You book through MySejahtera.',
+      'Private clinics commonly advertise a flu shot at roughly RM50–RM150.',
+      'Side effects are usually mild, such as a sore arm or a low fever for a day or two.',
       'Protection starts about two weeks after the injection and fades over the following months, so you need a new vaccine every year.',
     ],
     sections: [
-      { id: 'why', h: 'Why get a flu vaccine?', html: `<p>Influenza is not just a bad cold. It can cause high fever, body aches and exhaustion that last a week or more. In older people, young children, pregnant women and people with heart, lung or kidney disease, it can lead to pneumonia and hospital stays.</p>
-<p>Flu circulates <strong>all year round</strong> in Malaysia, with surges. In late 2025, a wave of flu clusters swept through schools. By the end of October that year, flu-like illness still made up about 8% of clinic consultations, and severe respiratory infections about 10% of related hospital admissions. In September 2026, an influenza A cluster sickened dozens of students at a boarding school in Ipoh. Read more about <a href="/articles/influenza-a-malaysia/">influenza A symptoms, how long it lasts and treatment</a>.</p>
-${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu symptoms usually come on suddenly: fever, chills, aches, cough and tiredness.')}` },
+      { id: 'why', h: 'Why get a flu vaccine?', html: `<p>Influenza is more than a bad cold. It can bring a high fever, body aches and exhaustion that last a week or longer. In older people, young children, pregnant women and people with heart, lung or kidney disease, it can lead to pneumonia and a hospital stay.</p>
+<p>Flu circulates all year round in Malaysia, with surges. In late 2025 a wave of flu clusters went through schools, and at the end of October that year flu-like illness still made up about 8% of clinic consultations, with severe respiratory infections about 10% of related hospital admissions. In September 2026, an influenza A cluster made dozens of students ill at a boarding school in Ipoh. Read more about <a href="/articles/influenza-a-malaysia/">influenza A symptoms, how long it lasts and treatment</a>.</p>
+${figure('cold-flu', 'Tissues, nasal spray and a notebook on a desk', 'Flu usually comes on suddenly, with fever, chills, aches, a cough and tiredness.')}` },
       { id: 'who', h: 'Who should get vaccinated', html: `<p>The Ministry of Health encourages a yearly flu vaccine, especially for:</p>
 <ul>
-<li><strong>Adults aged 60 and over</strong>, particularly those with long-term heart, lung, kidney, liver or nerve conditions, or diabetes.</li>
-<li><strong>Pregnant women</strong>, in any trimester. A vaccine in the third trimester also passes protection to the baby for the first months of life, according to Malaysia’s maternal immunisation guidelines.</li>
-<li><strong>Children aged 6 months and older</strong>. Children under 9 having their first flu vaccine may need two doses a month apart, so ask your doctor.</li>
-<li><strong>Anyone with a chronic illness</strong>, a weakened immune system, or who lives with someone at high risk.</li>
-<li><strong>Healthcare and aged-care workers</strong>, and <strong>travellers and pilgrims</strong>.</li>
+<li>adults aged 60 and over, particularly those with long-term heart, lung, kidney, liver or nerve conditions, or diabetes</li>
+<li>pregnant women, in any trimester. Malaysia’s maternal immunisation guidelines say a vaccine in the third trimester also protects the baby for the first months of life.</li>
+<li>children aged 6 months and older. Children under 9 having their first flu vaccine may need two doses a month apart, so ask your doctor.</li>
+<li>anyone with a chronic illness or a weakened immune system, or who lives with someone at high risk</li>
+<li>healthcare and aged-care workers, travellers and pilgrims</li>
 </ul>` },
-      { id: 'free', h: 'Free flu vaccines for seniors', html: `<p>In 2025, the government offered free flu vaccines to people aged 60 and over with at least one chronic illness, at 649 selected government health clinics, booked through <strong>MySejahtera</strong>.</p>
-<p>In May 2026, news reports said the programme had widened. It now covers <strong>everyone aged 60 and over</strong>, and <strong>people aged 50–59 with at least one chronic condition</strong> such as diabetes, obesity, high blood pressure, high cholesterol, cancer, or heart, lung or kidney disease. You book a slot in MySejahtera at a Klinik Kesihatan, and walk-ins are accepted while stock lasts.</p>
+      { id: 'free', h: 'Free flu vaccines for seniors', html: `<p>In 2025, the government offered free flu vaccines to people aged 60 and over with at least one chronic illness, at 649 selected government health clinics, booked through MySejahtera.</p>
+<p>In May 2026, news reports said the programme had widened to everyone aged 60 and over, and to people aged 50–59 with at least one chronic condition such as diabetes, obesity, high blood pressure, high cholesterol, cancer, or heart, lung or kidney disease. You book a slot at a Klinik Kesihatan in MySejahtera, and walk-ins are accepted while stock lasts.</p>
 <p>Supply and dates can change during the year, so check MySejahtera or ask your nearest Klinik Kesihatan before you go.</p>` },
-      { id: 'how-long', h: 'What the vaccine protects against, and how long it lasts', tocLabel: 'How long it lasts', html: `<p><strong>What it’s for:</strong> the flu vaccine protects against influenza, the virus that causes flu, not against colds or other coughs. Each year’s vaccine covers the strains expected to circulate: two influenza A strains (H1N1 and H3N2) and one influenza B strain. It lowers your chance of catching flu and, more importantly, of becoming seriously ill, needing hospital care or passing it on to vulnerable family members.</p>
-<p><strong>How long it lasts:</strong></p>
+      { id: 'how-long', h: 'What the vaccine protects against, and how long it lasts', tocLabel: 'How long it lasts', html: `<p>The flu vaccine protects against influenza, the virus that causes flu. It doesn’t prevent colds or other coughs. Each year’s vaccine covers the strains expected to circulate: two influenza A strains (H1N1 and H3N2) and one influenza B strain. It lowers your chance of catching flu and, more importantly, of becoming seriously ill, needing hospital care or passing it on to vulnerable family members.</p>
+<p>Protection starts about two weeks after the injection. It is strongest in the first few months and then fades, which is why one dose a year is recommended. The virus also changes, and the vaccine is updated every year to match, so last year’s vaccine may not cover this year’s strains.</p>
+<p>How well it works varies from year to year, depending on how closely the vaccine matches the strains going around. If you still catch flu, the illness is usually milder.</p>
+<p>Children can be vaccinated from 6 months of age. Children under 9 having a flu vaccine for the first time usually need two doses at least four weeks apart, then one dose a year after that. Flu spreads quickly in schools and kindergartens, so vaccinating children also helps protect grandparents and babies at home.</p>` },
+      { id: 'timing', h: 'When is the best time?', html: `<p>Because flu circulates all year here, any time is better than not at all. The Ministry of Health suggests March or September, ahead of the seasonal peaks. Protection takes about two weeks to build after the injection.</p>
 <ul>
-<li>Protection starts about <strong>two weeks</strong> after the injection.</li>
-<li>It is strongest in the first few months and <strong>fades over time</strong>, which is why one dose a year is recommended.</li>
-<li>The flu virus also changes, and the vaccine is updated every year to match. Last year’s vaccine may not match this year’s strains.</li>
-</ul>
-<p>How well it works varies from year to year, depending on how closely the vaccine matches the circulating strains. Even when you still catch flu, the illness is usually milder.</p>
-<p><strong>For children:</strong> children can be vaccinated from <strong>6 months</strong> of age. Children under 9 having a flu vaccine for the first time usually need <strong>two doses at least four weeks apart</strong>, then one dose a year after that. Flu spreads quickly in schools and kindergartens, so vaccinating children also helps protect grandparents and babies at home.</p>` },
-      { id: 'timing', h: 'When is the best time?', html: `<p>Because flu circulates all year here, any time is better than not at all. The Ministry of Health suggests <strong>March or September</strong>, ahead of the seasonal peaks.</p>
-<ul>
-<li>It takes about <strong>two weeks</strong> after the injection to build protection.</li>
-<li>If you are <strong>travelling to the northern hemisphere</strong> for the year-end holidays (Japan, Korea, China, Europe), where flu season runs roughly from November to January, get vaccinated at least two weeks before you fly.</li>
-<li><strong>Haj and Umrah pilgrims</strong> should be vaccinated at least two weeks before arriving in Saudi Arabia. Check the current year’s requirements, as older pilgrims and high-risk groups have been required to have a flu vaccine.</li>
+<li>If you are travelling to the northern hemisphere for the year-end holidays (Japan, Korea, China, Europe), where flu season runs roughly from November to January, get vaccinated at least two weeks before you fly.</li>
+<li>Haj and Umrah pilgrims should be vaccinated at least two weeks before arriving in Saudi Arabia. Check the current year’s requirements, because older pilgrims and high-risk groups have been required to have a flu vaccine.</li>
 </ul>` },
-      { id: 'cost', h: 'How much does it cost?', html: `<p>At private clinics and hospitals in Malaysia, a flu vaccine is commonly <strong>advertised at roughly RM50 to RM150</strong> per dose, depending on the vaccine and whether a consultation is included. Ask the clinic for the full price before your appointment.</p>
-<p><strong>Tax relief:</strong> vaccination costs for yourself, your spouse and your children can be claimed under the medical expenses tax relief, up to RM1,000 for vaccinations. From the 2026 year of assessment, this covers all vaccines registered with the NPRA, so keep your receipt.</p>` },
-      { id: 'strains', h: 'Which vaccine will I get?', html: `<p>Flu viruses change every year, so the vaccine is updated every year to match the strains the World Health Organization expects to circulate. Since one influenza B strain (B/Yamagata) has not been detected anywhere since 2020, WHO now recommends <strong>three-strain (trivalent)</strong> vaccines. Malaysia has both trivalent and four-strain (quadrivalent) vaccines registered. Either protects against the strains currently circulating, and you do not need to choose a particular brand.</p>` },
-      { id: 'side-effects', h: 'Side effects and who should not have it', tocLabel: 'Side effects', html: `<p>Most people have no problems or mild, short-lived effects:</p>
+      { id: 'cost', h: 'How much does it cost?', html: `<p>Private clinics and hospitals in Malaysia commonly advertise a flu vaccine at roughly RM50 to RM150 per dose, depending on the vaccine and whether a consultation is included. Ask the clinic for the full price before your appointment.</p>
+<p>You can claim vaccination costs for yourself, your spouse and your children under the medical expenses tax relief, up to RM1,000 for vaccinations. From the 2026 year of assessment this covers all vaccines registered with the NPRA, so keep your receipt.</p>` },
+      { id: 'strains', h: 'Which vaccine will I get?', html: `<p>Flu viruses change every year, so the vaccine is updated every year to match the strains the World Health Organization expects to circulate. One influenza B strain (B/Yamagata) has not been detected anywhere since 2020, so WHO now recommends three-strain (trivalent) vaccines. Malaysia has both trivalent and four-strain (quadrivalent) vaccines registered. Either one protects against the strains currently circulating, and you don’t need to ask for a particular brand.</p>` },
+      { id: 'side-effects', h: 'Side effects and who should not have it', tocLabel: 'Side effects', html: `<p>Most people have no problems, or mild effects that pass quickly:</p>
 <ul><li>A sore, red or swollen arm (very common)</li><li>Low fever, headache, muscle aches or tiredness for a day or two</li></ul>
-<p>Serious reactions are rare. The flu vaccine <strong>cannot give you flu</strong>, because the injected vaccine contains no live virus. It can be given on the same day as a COVID-19 vaccine.</p>
-<p>Do not have the vaccine if you have had a severe allergic reaction to a previous flu vaccine, and tell your doctor about any serious allergies. Babies under 6 months cannot be vaccinated. People with an egg allergy can usually still be vaccinated, so check with your doctor. If you have a high fever on the day, it is usually best to wait until you recover.</p>` },
+<p>Serious reactions are rare. The injected vaccine contains no live virus, so it can’t give you flu. It can be given on the same day as a COVID-19 vaccine.</p>
+<p>Don’t have the vaccine if you have had a severe allergic reaction to a previous flu vaccine, and tell your doctor about any serious allergies. Babies under 6 months can’t be vaccinated. People with an egg allergy can usually still have it, so check with your doctor. If you have a high fever on the day, it is usually best to wait until you recover.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get a flu vaccine in Kuala Lumpur',
     clinicsTocLabel: 'Where to get vaccinated',
-    clinicsIntro: 'If you are eligible for a free vaccine, book through MySejahtera at a government Klinik Kesihatan. Otherwise, most private GP clinics can give flu vaccines. Call ahead to check they have stock. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, including those open in the evening and at weekends.',
+    clinicsIntro: 'If you are eligible for a free vaccine, book through MySejahtera at a government Klinik Kesihatan. Otherwise, most private GP clinics give flu vaccines, but call ahead to check they have stock. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, including those open in the evening and at weekends.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-sunday/', 'Clinics open on Sunday'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
-      ['Is the flu vaccine free in Malaysia?', 'It can be if you are eligible. In 2026, free flu vaccines were reported to cover everyone aged 60 and over and people aged 50–59 with a chronic illness, booked through MySejahtera at government health clinics. Others can pay for a vaccine at a private clinic.'],
-      ['How much is a flu vaccine at a private clinic in Malaysia?', 'Private clinics and hospitals commonly advertise flu vaccines at roughly RM50 to RM150 per dose. Prices vary, so ask before your appointment. Vaccination costs can be claimed under the medical expenses tax relief.'],
+      ['Is the flu vaccine free in Malaysia?', 'It can be if you are eligible. In 2026, news reports said free flu vaccines cover everyone aged 60 and over and people aged 50–59 with a chronic illness, booked through MySejahtera at government health clinics. Anyone else can pay for one at a private clinic.'],
+      ['How much is a flu vaccine at a private clinic in Malaysia?', 'Private clinics and hospitals commonly advertise flu vaccines at roughly RM50 to RM150 per dose. Prices vary, so ask before your appointment. You can claim the cost under the medical expenses tax relief.'],
       ['When is the best time to get a flu vaccine in Malaysia?', 'The Ministry of Health suggests March or September. Flu circulates all year, so if you missed those months, get vaccinated now, and at least two weeks before any trip.'],
       ['Can I get the flu vaccine and a COVID-19 vaccine together?', 'Yes. They can be given on the same day, usually in different arms.'],
-      ['Can I get flu from the flu vaccine?', 'No. The injected flu vaccine does not contain live virus. A sore arm or mild fever for a day or two is a normal response.'],
+      ['Can I get flu from the flu vaccine?', 'No. The injected flu vaccine contains no live virus. A sore arm or a mild fever for a day or two is a normal response.'],
       ['How long does the flu vaccine last? (Vaksin influenza tahan berapa lama?)', 'Protection starts about two weeks after the injection and fades over the following months. Because protection wanes and flu strains change, you need a new vaccine every year.'],
-      ['What is the flu vaccine for? (Vaksin influenza untuk apa?)', 'It protects against influenza, the virus that causes flu, including two influenza A strains and one influenza B strain. It lowers the risk of catching flu and of serious illness, but does not prevent colds.'],
+      ['What is the flu vaccine for? (Vaksin influenza untuk apa?)', 'It protects against influenza, the virus that causes flu, including two influenza A strains and one influenza B strain. It lowers the risk of catching flu and of serious illness, but it doesn’t prevent colds.'],
       ['Can children get the flu vaccine? (Vaksin influenza untuk kanak-kanak)', 'Yes, from 6 months of age. Children under 9 having their first flu vaccine usually need two doses at least four weeks apart, then one dose every year.'],
     ],
     sources: [
