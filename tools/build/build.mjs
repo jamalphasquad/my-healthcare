@@ -60,6 +60,15 @@ for (const a of ARTICLES) {
   a.mins = Math.max(3, Math.round(a.words / 200));
 }
 for (const a of ARTICLES) if (SEO[a.slug]) [a.seoTitle, a.desc] = SEO[a.slug];
+// Articles kept live for readers but out of Google's index (and the sitemap): off-topic for a clinic
+// directory, or medicine/diet advice without clinical review. Reviewed 24 Nov 2026.
+const NOINDEX = new Set([
+  'maternity-paternity-leave-cuti-bersalin-malaysia', 'malay-medical-terms-in-english', 'cara-hilangkan-sedu-hiccups-malaysia',
+  'pantang-larang-makanan-pesakit-buah-pinggang-kidney-diet-malaysia', 'prednisolone-steroid-untuk-apa-malaysia',
+  'painkillers-paracetamol-ibuprofen-malaysia', 'haze-air-quality-klang-valley',
+]);
+for (const s of NOINDEX) if (!ARTICLES.some((a) => a.slug === s)) throw new Error('NOINDEX lists an unknown article: ' + s);
+for (const a of ARTICLES) a.noindex = NOINDEX.has(a.slug);
 
 // Only offer service filters that at least one clinic provides.
 const services = SERVICES.filter(([k]) => CLINICS.some((c) => c.serviceKeys.includes(k)));
@@ -83,7 +92,7 @@ const urls = [
   ['/', '1.0', 'weekly'], ['/clinics/', '0.9', 'weekly'], ['/articles/', '0.9', 'daily'],
   ...collectionPages.filter((x) => !x.noindex).map((x) => [x.url, '0.8', 'weekly', x.image]),
   ...CLINICS.filter((c) => !c.incomplete).map((c) => [`/clinics/${c.slug}/`, '0.8', 'monthly', c.image]),
-  ...ARTICLES.map((a) => [`/articles/${a.slug}/`, '0.7', 'monthly', a.image, a.modified]),
+  ...ARTICLES.filter((a) => !a.noindex).map((a) => [`/articles/${a.slug}/`, '0.7', 'monthly', a.image, a.modified]),
   ['/about/', '0.4', 'yearly'], ['/contact/', '0.4', 'yearly'], ['/privacy/', '0.2', 'yearly'],
   ...(EDITOR ? [[editorPath(), '0.4', 'monthly']] : []),
 ];

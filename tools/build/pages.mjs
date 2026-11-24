@@ -643,7 +643,7 @@ export function articlePage(a, { articles, clinics, topics }) {
     ORG, WEBSITE,
   ];
   const html = head({
-    path: `/articles/${a.slug}/`, title: a.seoTitle || `${a.title} | ${SITE.name}`, desc: a.desc,
+    path: `/articles/${a.slug}/`, title: a.seoTitle || `${a.title} | ${SITE.name}`, desc: a.desc, noindex: a.noindex,
     ogTitle: a.title, ogDesc: a.excerpt, ogType: 'article', image: a.image, imageAlt: a.imageAlt,
     article: { published: a.published, modified: a.modified, section: a.catLabel },
     geo: guideClinic ? { region: guideClinic.region, place: `${guideClinic.areaLabel}, ${guideClinic.locality}`, pos: guideClinic.geo } : undefined,
