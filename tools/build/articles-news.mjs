@@ -165,9 +165,9 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
     crumb: 'Breast cancer screening',
     seoTitle: 'Breast Cancer Screening in Malaysia: When to Start & Free Mammograms (2026)',
     desc: 'Half of breast cancers in Malaysia are found at a late stage. Self-checks, clinical exams and mammograms explained, plus free and subsidised mammograms for women in Selangor and KL.',
-    excerpt: 'Half of breast cancers in Malaysia are found late. A gentle walkthrough of self-checks, clinical exams and mammograms, and how to get one free or subsidised.',
-    standfirst: 'More than half of breast cancers in Malaysia are now found at stage 3 or 4. This Pink October, here is a calm guide to knowing your normal, when to have a mammogram, and how to get one free or subsidised.',
-    cat: 'womens-health', catLabel: "Women's health", mins: 7, published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'Half of breast cancers in Malaysia are found late. Knowing your normal, a clinical exam and a mammogram at the right age all help, and many women can get a mammogram free or subsidised.',
+    standfirst: 'More than half of breast cancers in Malaysia are now found at stage 3 or 4. Knowing how your breasts normally look and feel, and having a mammogram at the right age, helps find cancer earlier, and many women can get a mammogram free or subsidised.',
+    cat: 'womens-health', catLabel: "Women's health", mins: 7, published: PUB, modified: '2026-11-24', author: AUTHOR, news: true, medical: true,
     about: ['Breast cancer', 'Kanser payudara'],
     image: 'pink-ribbon', imageAlt: 'A pink ribbon, the symbol of breast cancer awareness',
     keyPoints: [
@@ -177,31 +177,31 @@ ${figure('blood-sample', 'A gloved hand holding a blood sample tube', 'Your doct
       'PERKESO’s 2026 screening for contributors aged 40–59 includes a mammogram for women.',
     ],
     sections: [
-      { id: 'why', h: 'Why early detection matters in Malaysia', html: `<p>Breast cancer is the most common cancer among Malaysian women. The Malaysia National Cancer Registry recorded 29,534 cases between 2017 and 2021, about a third of all cancers in women. Worryingly, <strong>50.5% were found at stage 3 or 4</strong>, up from 47.9% in 2012–2016.</p>
-<p>The National Cancer Society Malaysia (NCSM) estimates that fewer than 30% of eligible women have regular mammograms, and about half of breast cancers here are diagnosed before age 50. Cancers found early are far easier to treat, which is why Pink October focuses on screening.</p>` },
-      { id: 'normal', h: 'Know your normal', html: `<p>“Breast awareness” simply means knowing how your breasts usually look and feel, so you notice changes. Many women check once a month, a few days after their period ends. See a doctor if you notice:</p>
-<ul><li>A new lump or thickening in the breast or armpit</li><li>A change in size or shape</li><li>Dimpling or puckering of the skin</li><li>A nipple that turns inwards, or discharge (especially if bloody)</li><li>A rash or redness around the nipple</li><li>Pain in one area that does not go away</li></ul>
-<p>Most lumps are not cancer. But only a doctor can tell, so it is always worth getting checked.</p>` },
-      { id: 'mammogram', h: 'Clinical exams and mammograms: who and how often', html: `<p>A <strong>clinical breast examination</strong> is a check by a doctor or trained nurse, and is a good starting point at any age. A <strong>mammogram</strong> is a low-dose X-ray that can find cancers too small to feel.</p>
-<p>According to NCSM, the Ministry of Health’s 2022 recommendation is a mammogram every two years for women aged 50 to 74, and a discussion with a doctor about personal risk for women aged 40 to 49. If you have a strong family history of breast or ovarian cancer, talk to your doctor about starting earlier.</p>
+      { id: 'why', h: 'Why early detection matters in Malaysia', html: `<p>Breast cancer is the most common cancer among Malaysian women. The Malaysia National Cancer Registry recorded 29,534 cases between 2017 and 2021, about a third of all cancers in women, and 50.5% were found at stage 3 or 4, up from 47.9% in 2012–2016.</p>
+<p>The National Cancer Society Malaysia (NCSM) estimates that fewer than 30% of eligible women have regular mammograms, and about half of breast cancers here are diagnosed before age 50. Cancers found early are far easier to treat, which is why Pink October each year focuses on screening.</p>` },
+      { id: 'normal', h: 'Know your normal', html: `<p>Breast awareness means knowing how your breasts usually look and feel, so you notice changes. Many women check once a month, a few days after their period ends. See a doctor if you notice:</p>
+<ul><li>A new lump or thickening in the breast or armpit</li><li>A change in size or shape</li><li>Dimpling or puckering of the skin</li><li>A nipple that turns inwards, or discharge (especially if bloody)</li><li>A rash or redness around the nipple</li><li>Pain in one area that doesn’t go away</li></ul>
+<p>Most lumps are not cancer, but only a doctor can tell, so get any new lump checked.</p>` },
+      { id: 'mammogram', h: 'Clinical exams and mammograms: who and how often', html: `<p>A clinical breast examination is a check by a doctor or trained nurse, and a good starting point at any age. A mammogram is a low-dose X-ray that can find cancers too small to feel.</p>
+<p>According to NCSM, the Ministry of Health’s 2022 recommendation is a mammogram every two years for women aged 50 to 74, and a talk with a doctor about personal risk for women aged 40 to 49. If you have a strong family history of breast or ovarian cancer, ask your doctor about starting earlier.</p>
 ${figure('mammogram-machine', 'A mammography machine in a clinic room', 'A mammogram takes about 20 minutes. The squeeze is brief and usually more uncomfortable than painful.')}` },
       { id: 'free', h: 'Free and subsidised mammograms', html: `<div class="table-wrap"><table>
 <thead><tr><th>Programme</th><th>Who it is for</th><th>How to apply</th></tr></thead>
 <tbody>
-<tr><td><strong>LPPKN mammogram programme</strong></td><td>Women aged 40–70. Free for household income of RM10,000 or less, RM50 subsidy above that. Women aged 35–39 with a family history may qualify with a doctor’s referral.</td><td>Apply at <a href="https://mamogram.lppkn.gov.my/" target="_blank" rel="noopener">mamogram.lppkn.gov.my</a> or through Klinik Nur Sejahtera</td></tr>
-<tr><td><strong>PERKESO health screening 2026</strong></td><td>Active PERKESO (SOCSO) contributors aged 40–59. Includes a mammogram and Pap smear for women.</td><td>Book through the SEHATi app</td></tr>
-<tr><td><strong>Selangor Saring</strong></td><td>Selangor’s free state screening programme, which includes mammograms.</td><td>Register through the SELangkah app</td></tr>
+<tr><td>LPPKN mammogram programme</td><td>Women aged 40–70. Free for household income of RM10,000 or less, RM50 subsidy above that. Women aged 35–39 with a family history may qualify with a doctor’s referral.</td><td>Apply at <a href="https://mamogram.lppkn.gov.my/" target="_blank" rel="noopener">mamogram.lppkn.gov.my</a> or through Klinik Nur Sejahtera</td></tr>
+<tr><td>PERKESO health screening 2026</td><td>Active PERKESO (SOCSO) contributors aged 40–59. Includes a mammogram and Pap smear for women.</td><td>Book through the SEHATi app</td></tr>
+<tr><td>Selangor Saring</td><td>Selangor’s free state screening programme, which includes mammograms.</td><td>Register through the SELangkah app</td></tr>
 </tbody></table></div>
 <p>Several private hospitals in the Klang Valley also run Pink October mammogram promotions until the end of October or November. Eligibility and availability change, so check the latest details before booking.</p>` },
-      { id: 'what-happens', h: 'What happens at a mammogram', html: `<p>You will undress from the waist up and stand in front of the machine. Each breast is gently pressed between two plates for a few seconds while the X-ray is taken. Avoid deodorant or talcum powder on the day, as it can show up on the image. Results usually go to the doctor who referred you, who will explain them and arrange any follow-up.</p>` },
+      { id: 'what-happens', h: 'What happens at a mammogram', html: `<p>You undress from the waist up and stand in front of the machine. Each breast is pressed between two plates for a few seconds while the X-ray is taken. Don’t use deodorant or talcum powder on the day, because it can show up on the image. The results usually go to the doctor who referred you, who will explain them and arrange any follow-up.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsIntro: "A GP can do a clinical breast examination, answer questions about your risk and refer you for a mammogram. Our directory lists GP clinics across Kuala Lumpur and nearby Selangor, with opening hours and directions.",
     clinicLinks: [["/clinics/gp-clinics/", "GP clinics"], ["/clinics/open-saturday/", "Clinics open on Saturday"]],
     faqs: [
-      ['At what age should I start having mammograms in Malaysia?', 'NCSM reports that the Ministry of Health recommends a mammogram every two years from 50 to 74, with women aged 40–49 discussing their own risk with a doctor. Women with a strong family history may start earlier.'],
-      ['Can I get a free mammogram in Selangor or Kuala Lumpur?', 'Yes, if you are eligible. LPPKN offers free mammograms for women aged 40–70 with household income of RM10,000 or less, PERKESO screening includes mammograms for contributors aged 40–59, and Selangor Saring offers free screening for Selangor residents.'],
-      ['Does a lump always mean cancer?', 'No. Most breast lumps are not cancer, but every new lump should be checked by a doctor.'],
+      ['At what age should I start having mammograms in Malaysia?', 'NCSM reports that the Ministry of Health recommends a mammogram every two years from 50 to 74, and that women aged 40–49 discuss their own risk with a doctor. Women with a strong family history may start earlier.'],
+      ['Can I get a free mammogram in Selangor or Kuala Lumpur?', 'Yes, if you are eligible. LPPKN offers free mammograms to women aged 40–70 with a household income of RM10,000 or less, PERKESO screening includes a mammogram for contributors aged 40–59, and Selangor Saring offers free screening to Selangor residents.'],
+      ['Does a lump always mean cancer?', 'No. Most breast lumps are not cancer, but a doctor should check every new lump.'],
     ],
     sources: [
       ['National Cancer Society Malaysia — Late-stage breast cancer diagnoses on the rise (17 Feb 2025)', 'https://cancermatters.cancer.org.my/2025/02/17/late-stage-breast-cancer-diagnoses-on-the-rise-in-malaysia-despite-overall-decline/'],

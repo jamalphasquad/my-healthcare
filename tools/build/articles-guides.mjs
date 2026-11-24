@@ -65,13 +65,13 @@ ${figure('bp-check-desk', 'A home blood pressure monitor next to an open noteboo
     crumb: 'Clinic or emergency department?',
     seoTitle: 'Clinic or Emergency Department? When to Call 999 in Malaysia',
     desc: 'When to call 999, when to go to a hospital emergency department, and when a GP clinic is the right choice. A calm, practical guide for families in Kuala Lumpur and the Klang Valley.',
-    excerpt: 'When to call 999, when to head to the emergency department, and when your neighbourhood GP is the better choice.',
-    standfirst: 'When someone is unwell, it is not always obvious where to go. This simple guide helps you choose between calling 999, going to a hospital emergency department, and seeing a GP.',
-    cat: 'guides', catLabel: 'Guides', mins: 5, published: PUB, modified: PUB, author: AUTHOR, medical: true,
+    excerpt: 'Call 999 for life-threatening emergencies and go to an emergency department for urgent problems that can’t wait. For most fevers, coughs and minor injuries, your neighbourhood GP is the better choice.',
+    standfirst: 'When someone is unwell, it isn’t always obvious where to go. Life-threatening emergencies need 999, urgent problems that can’t wait need a hospital emergency department, and most everyday illnesses are best seen by a GP.',
+    cat: 'guides', catLabel: 'Guides', mins: 5, published: PUB, modified: '2026-11-24', author: AUTHOR, medical: true,
     image: 'treatment-room', imageAlt: 'A clean, empty clinic treatment room with an examination bed',
     keyPoints: [
       'Call 999 (or 112 from a mobile) for life-threatening emergencies.',
-      'Go to an emergency department for urgent problems that cannot wait, such as dengue warning signs.',
+      'Go to an emergency department for urgent problems that can’t wait, such as dengue warning signs.',
       'For most fevers, coughs, minor injuries and ongoing conditions, a GP clinic is faster and better suited.',
     ],
     sections: [
@@ -80,7 +80,7 @@ ${figure('bp-check-desk', 'A home blood pressure monitor next to an open noteboo
 <li>Signs of stroke: face drooping, arm weakness, slurred speech. Note the time symptoms started.</li>
 <li>Severe difficulty breathing, or blue lips</li>
 <li>Unconsciousness, a seizure, or sudden confusion</li>
-<li>Heavy bleeding that will not stop</li>
+<li>Heavy bleeding that won’t stop</li>
 <li>A severe allergic reaction with swelling of the face or throat</li>
 <li>Serious injury, such as after a road accident or a fall from height</li>
 </ul></div>
@@ -90,10 +90,10 @@ ${figure('bp-check-desk', 'A home blood pressure monitor next to an open noteboo
 <li>A fever of 38°C or higher in a baby under three months old</li>
 <li>Severe abdominal pain</li>
 <li>Suspected broken bones, deep cuts or burns</li>
-<li>Dehydration in a child who is not passing urine</li>
+<li>Dehydration in a child who isn’t passing urine</li>
 <li>Heavy bleeding or severe pain in pregnancy</li>
 </ul>
-<p>Malaysian emergency departments use a <strong>triage colour system</strong> (red, yellow, green). The most urgent patients are seen first, so less urgent cases may wait longer. That is one reason a GP is often quicker for non-urgent problems.</p>` },
+<p>Malaysian emergency departments sort patients with a colour system (red, yellow, green), called triage. The most urgent patients are seen first, so less urgent cases may wait longer, which is one reason a GP is often quicker for problems that aren’t urgent.</p>` },
       { id: 'gp', h: 'See a GP for', html: `<ul>
 <li>Most fevers, coughs, colds and sore throats</li>
 <li>A fever lasting more than two days (for a dengue blood test)</li>
@@ -104,11 +104,11 @@ ${figure('bp-check-desk', 'A home blood pressure monitor next to an open noteboo
 <li>Mental health concerns, when there is no immediate danger</li>
 </ul>
 ${figure('doctor-consultation', 'A doctor talking with a patient across a desk', 'A GP can treat most everyday illnesses and refer you to a hospital if needed.')}` },
-      { id: 'which-clinic', h: 'Klinik kesihatan or private GP?', html: `<p>Government health clinics (<em>klinik kesihatan</em>) offer low-cost care, especially for long-term conditions, antenatal care and child vaccinations, but they usually keep office hours. Private GP clinics often open into the evening and on weekends, which helps when illness strikes after work. Many accept company panels or insurance, so bring your panel card.</p>` },
+      { id: 'which-clinic', h: 'Klinik kesihatan or private GP?', html: `<p>Government health clinics (<em>klinik kesihatan</em>) charge little, especially for long-term conditions, antenatal care and child vaccinations, but they usually keep office hours. Private GP clinics often stay open into the evening and at weekends, which helps if you fall ill after work. Many accept company panels or insurance, so bring your panel card.</p>` },
       { id: 'bring', h: 'What to bring', html: `<ul><li>MyKad, MyKid or passport</li><li>A list of medicines you take (or the boxes)</li><li>Panel or insurance card</li><li>For children: their health record book</li><li>For pregnancy: your antenatal record book</li></ul>` },
     ],
     clinicsMode: 'directory',
-    clinicsIntro: "Need a GP today? Our directory shows opening hours in Malaysia time, including clinics open late and at weekends.",
+    clinicsIntro: "If you need a GP today, our directory shows opening hours in Malaysia time, including clinics open late and at weekends.",
     clinicLinks: [["/clinics/open-late/", "Clinics open late"], ["/clinics/open-saturday/", "Clinics open on Saturday"], ["/clinics/open-sunday/", "Clinics open on Sunday"], ["/clinics/gp-clinics/", "GP clinics"]],
     faqs: [
       ['What is the emergency number in Malaysia?', 'Dial 999 from any phone. From a mobile phone you can also dial 112.'],

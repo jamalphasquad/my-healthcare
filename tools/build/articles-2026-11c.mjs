@@ -378,17 +378,17 @@ ${figure('fresh-vegetables', 'Fresh broccoli, tomatoes, cucumber and red peppers
     title: 'Kurap, panau and other fungal skin infections: how to recognise and treat them',
     crumb: 'Kurap and panau',
     desc: 'Kurap (ringworm), panau, athlete’s foot, jock itch and scalp ringworm: how they look, how they spread, antifungal creams that work, and why steroid creams make kurap worse.',
-    excerpt: 'Malaysia’s heat and humidity make fungal skin infections very common. How to recognise kurap (ringworm), panau, athlete’s foot, jock itch and scalp ringworm, how long to use antifungal cream, why steroid creams make it worse, and when you need a doctor.',
-    standfirst: 'Fungal skin infections thrive in hot, humid weather and sweaty skin, so they are among the most common skin problems in Malaysia. Most clear with the right cream used for long enough. The commonest mistake is using a steroid cream, which can make kurap spread and harder to treat.',
-    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    excerpt: 'Malaysia’s heat and humidity make fungal skin infections very common. Kurap, panau, athlete’s foot, jock itch and scalp ringworm each look different, most clear with an antifungal cream used for long enough, and steroid creams make kurap worse.',
+    standfirst: 'Fungal skin infections thrive in hot, humid weather and on sweaty skin, so they are among the most common skin problems in Malaysia. Most clear with the right cream if you use it for long enough. The most common mistake is using a steroid cream, which can make kurap spread and harder to treat.',
+    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: '2026-11-24', author: AUTHOR, news: false, medical: true,
     about: ['Tinea', 'Kurap', 'Pityriasis versicolor'],
     image: 'doctor-tablet', imageAlt: 'A doctor in a white coat reading notes on a tablet',
     keyPoints: [
       'Kurap (ringworm, or tinea) is caused by fungi, not worms. It usually looks like an itchy, red or dark ring with a scaly, raised edge and a clearer centre.',
-      'Panau (pityriasis versicolor) causes pale, pink or brown scaly patches on the chest, back, neck and arms. It is caused by a yeast that lives on everyone’s skin and isn’t contagious.',
+      'Panau (pityriasis versicolor) causes pale, pink or brown scaly patches on the chest, back, neck and arms. A yeast that lives on everyone’s skin causes it, and it isn’t contagious.',
       'Antifungal creams such as clotrimazole, miconazole or terbinafine work for most body, groin and foot infections. Keep using them for 1 to 2 weeks after the rash has gone.',
-      'Steroid creams and steroid-antifungal combination creams can make kurap spread. A treatment-resistant fungus linked to steroid cream misuse has now been found in Malaysia.',
-      'Scalp and nail infections, and rashes that don’t clear in 2 weeks, need a doctor, as they often need antifungal tablets.',
+      'Steroid creams, including steroid-antifungal combination creams, can make kurap spread. A treatment-resistant fungus linked to steroid cream misuse has now been found in Malaysia.',
+      'Scalp and nail infections, and rashes that don’t clear in 2 weeks, need a doctor, because they often need antifungal tablets.',
     ],
     sections: [
       { id: 'types', h: 'Types of fungal skin infection', tocLabel: 'Types', html: `<div class="table-wrap"><table>
@@ -402,55 +402,56 @@ ${figure('fresh-vegetables', 'Fresh broccoli, tomatoes, cucumber and red peppers
 <tr><td><em>Panau</em> (pityriasis versicolor)</td><td>Chest, back, neck, upper arms</td><td>Pale, pink or light brown patches with fine scale, more noticeable after sun</td></tr>
 <tr><td>Candida (yeast) intertrigo</td><td>Skin folds: groin, under the breasts, armpits</td><td>Moist, red, raw skin with small spots at the edges</td></tr>
 </tbody></table></div>
-<p><strong><em>Kayap</em> isn’t a fungal infection.</strong> It is shingles, caused by the chickenpox virus, and needs different treatment. See our guide to <a href="/articles/shingles-kayap-malaysia/">shingles (kayap)</a>.</p>` },
+<p><em>Kayap</em> is a different condition: it is shingles, caused by the chickenpox virus, and needs different treatment. See our guide to <a href="/articles/shingles-kayap-malaysia/">shingles (kayap)</a>.</p>` },
       { id: 'spread', h: 'How kurap spreads', tocLabel: 'How it spreads', html: `<p>Kurap is caused by fungi called dermatophytes, which live on skin, hair and nails. It spreads through:</p>
 <ul>
 <li>skin contact with an infected person, for example in contact sports</li>
 <li>sharing towels, clothes, bedding, shoes or socks</li>
 <li>damp floors in gyms, changing rooms and shared bathrooms</li>
-<li><strong>pets</strong>, especially cats and kittens. A Hospital Melaka study found that a fungus caught from cats caused more than half of scalp ringworm cases. Take a pet with scaly or hairless patches to the vet (<em>kurap kucing</em> can pass to people).</li>
+<li>pets, especially cats and kittens. A Hospital Melaka study found that a fungus caught from cats caused more than half of scalp ringworm cases. <em>Kurap kucing</em> can pass to people, so take a pet with scaly or hairless patches to the vet.</li>
 </ul>
-<p>Heat, sweat, tight clothes and shoes, diabetes and a weak immune system all make infection more likely. It usually appears 1 to 3 weeks after contact.</p>
-<p><strong>Panau is different.</strong> It is caused by an overgrowth of <em>Malassezia</em>, a yeast that normally lives on everyone’s skin. It flares in heat and sweat and isn’t passed from person to person in the usual way.</p>` },
-      { id: 'treatment', h: 'Treatment for kurap (ubat kurap)', tocLabel: 'Treating kurap', html: `<p>For kurap on the body, groin or feet, a pharmacist can recommend an <strong>antifungal cream</strong> such as clotrimazole, miconazole or terbinafine:</p>
+<p>Heat, sweat, tight clothes and shoes, diabetes and a weak immune system all make infection more likely. The rash usually appears 1 to 3 weeks after contact.</p>
+<p>Panau has a different cause: an overgrowth of <em>Malassezia</em>, a yeast that normally lives on everyone’s skin. It flares in heat and sweat and isn’t passed from person to person in the usual way.</p>` },
+      { id: 'treatment', h: 'Treatment for kurap (ubat kurap)', tocLabel: 'Treating kurap', html: `<p>For kurap on the body, groin or feet, a pharmacist can recommend an antifungal cream such as clotrimazole, miconazole or terbinafine:</p>
 <ul>
-<li>Wash and dry the area well, then apply the cream thinly to the rash and about 2 cm of normal skin around it, usually once or twice a day.</li>
-<li><strong>Keep using it for 1 to 2 weeks after the rash has gone.</strong> Stopping as soon as it looks better is a common reason it comes back.</li>
-<li>Most rashes improve within 2 weeks. Treatment can take up to 4 weeks.</li>
-<li>Treat athlete’s foot at the same time as jock itch, as the fungus spreads from the feet to the groin, often via a towel or underwear.</li>
+<li>Wash and dry the area well, then apply the cream thinly to the rash and to about 2 cm of normal skin around it, usually once or twice a day.</li>
+<li>Keep using it for 1 to 2 weeks after the rash has gone. Stopping as soon as it looks better is a common reason it comes back.</li>
+<li>Most rashes improve within 2 weeks, though treatment can take up to 4 weeks.</li>
+<li>Treat athlete’s foot at the same time as jock itch, because the fungus spreads from the feet to the groin, often on a towel or underwear.</li>
 </ul>
-<p><strong>Antifungal tablets</strong>, prescribed by a doctor, are needed for scalp ringworm (creams can’t reach the hair roots), most nail infections, widespread rashes, and infections that haven’t cleared with cream. Scalp ringworm usually needs at least 4 weeks of tablets, and nail infections up to 6 months.</p>` },
-      { id: 'steroids', h: 'Why steroid creams make kurap worse', tocLabel: 'Steroid creams', html: `<p>Steroid creams calm itching and redness, so kurap can seem better at first. But they weaken the skin’s defences and let the fungus spread underneath, leaving a larger, less typical rash that is harder to recognise and treat. Doctors call this <strong>tinea incognito</strong>.</p>
+<p>Some infections need antifungal tablets from a doctor: scalp ringworm (creams can’t reach the hair roots), most nail infections, widespread rashes, and infections that haven’t cleared with cream. Scalp ringworm usually needs at least 4 weeks of tablets, and nail infections up to 6 months.</p>` },
+      { id: 'steroids', h: 'Why steroid creams make kurap worse', tocLabel: 'Steroid creams', html: `<p>Steroid creams calm itching and redness, so kurap can seem better at first. They also weaken the skin’s defences and let the fungus spread underneath, leaving a larger, less typical rash that is harder to recognise and treat. Doctors call this <strong>tinea incognito</strong>.</p>
 <ul>
-<li><strong>Combination creams</strong> containing both an antifungal and a steroid are sold over the counter in Malaysia. Reviews have found they don’t cure the fungus any better than an antifungal alone, so use them only if a doctor advises.</li>
-<li>In 2025, researchers at Universiti Malaya reported <strong>Malaysia’s first confirmed cases of <em>Trichophyton indotineae</em></strong>, a fungus behind an epidemic of widespread, treatment-resistant ringworm in South Asia that has been linked to steroid cream misuse. Some of the Malaysian patients had not travelled abroad and had used steroid creams, and some responded poorly to standard treatment.</li>
-<li><strong>Check that creams and traditional remedies are registered</strong> with the National Pharmaceutical Regulatory Agency (NPRA). Registered products carry a <strong>MAL number</strong>. The Ministry of Health has repeatedly warned about unregistered products found to contain hidden steroids.</li>
+<li>Combination creams that contain both an antifungal and a steroid are sold over the counter in Malaysia. Reviews have found they cure the fungus no better than an antifungal alone, so use them only if a doctor advises it.</li>
+<li>In 2025, researchers at Universiti Malaya reported Malaysia’s first confirmed cases of <em>Trichophyton indotineae</em>, the fungus behind an epidemic of widespread, treatment-resistant ringworm in South Asia that has been linked to steroid cream misuse. Some of the Malaysian patients had not travelled abroad and had used steroid creams, and some responded poorly to standard treatment.</li>
+<li>Check that creams and traditional remedies are registered with the National Pharmaceutical Regulatory Agency (NPRA): registered products carry a MAL number. The Ministry of Health has repeatedly warned about unregistered products found to contain hidden steroids.</li>
 </ul>
-<p>If you are unsure whether a rash is fungal, see a doctor before using a steroid cream. Our guide to <a href="/articles/itchy-skin-eczema-hives-malaysia/">itchy skin</a> explains the safe use of steroid creams for eczema.</p>` },
+<p>If you are unsure whether a rash is fungal, see a doctor before using a steroid cream. Our guide to <a href="/articles/itchy-skin-eczema-hives-malaysia/">itchy skin</a> explains how to use steroid creams safely for eczema.</p>` },
       { id: 'panau', h: 'Treating panau', tocLabel: 'Treating panau', html: `<ul>
-<li>Use an antifungal <strong>shampoo or wash</strong> containing <strong>ketoconazole or selenium sulfide</strong> on the affected skin. Leave it on for 5 to 15 minutes, then rinse. A common routine is daily for a week, then once a week for a month. Antifungal creams work for small areas.</li>
-<li><strong>The colour takes weeks to months to return</strong> after the yeast has gone, especially pale patches. That doesn’t mean the treatment failed. Sun exposure makes the patches more noticeable.</li>
-<li>Panau often comes back in hot weather. Using the wash once or twice a month can help prevent it.</li>
+<li>Use an antifungal shampoo or wash containing ketoconazole or selenium sulfide on the affected skin. Leave it on for 5 to 15 minutes, then rinse. A common routine is daily for a week, then once a week for a month. Antifungal creams work for small areas.</li>
+<li>Skin colour takes weeks to months to return after the yeast has gone, especially in pale patches, so this doesn’t mean the treatment failed. Sun exposure makes the patches more noticeable.</li>
+<li>Panau often comes back in hot weather, and using the wash once or twice a month can help prevent it.</li>
 <li>See a doctor if it is widespread or keeps coming back. Antifungal tablets are sometimes used.</li>
 </ul>` },
       { id: 'prevention', h: 'Preventing fungal infections', tocLabel: 'Prevention', html: `<ul>
-<li><strong>Dry your skin thoroughly</strong> after bathing, especially between the toes, in the groin and in skin folds.</li>
-<li>Change out of sweaty clothes and socks promptly, and wear loose cotton clothing and socks.</li>
-<li>Don’t share towels, clothes, shoes, combs or hats. Use your own towel for your feet.</li>
+<li>Dry your skin thoroughly after bathing, especially between the toes, in the groin and in skin folds.</li>
+<li>Change out of sweaty clothes and socks soon, and wear loose cotton clothing and socks.</li>
+<li>Don’t share towels, clothes, shoes, combs or hats, and use your own towel for your feet.</li>
 <li>Wear slippers in shared showers, gyms and changing rooms.</li>
 <li>Wash gym clothes and towels after each use.</li>
 <li>Check pets for patchy hair loss, and wash your hands after handling them.</li>
 </ul>
 ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exercise ball', 'Damp gym floors and sweaty clothes are a common source of kurap and athlete’s foot.')}` },
-      { id: 'doctor', h: 'When to see a doctor', tocLabel: 'When to see a doctor', html: `<ul>
-<li>the rash hasn’t improved after <strong>2 weeks</strong> of antifungal cream, or keeps coming back</li>
-<li>it is on the <strong>scalp</strong>, or affects the <strong>nails</strong></li>
+      { id: 'doctor', h: 'When to see a doctor', tocLabel: 'When to see a doctor', html: `<p>See a doctor if:</p>
+<ul>
+<li>the rash hasn’t improved after 2 weeks of antifungal cream, or keeps coming back</li>
+<li>it is on the scalp or affects the nails</li>
 <li>it is widespread, or you have used a steroid cream on it</li>
-<li>you have <strong>diabetes</strong> or a weak immune system</li>
+<li>you have diabetes or a weak immune system</li>
 <li>the skin becomes hot, swollen and painful, or you have a fever, which can mean a bacterial infection</li>
 <li>you aren’t sure it is fungal. Eczema, psoriasis and other rashes can look like ringworm. See our guide to <a href="/articles/psoriasis-malaysia/">psoriasis</a>.</li>
 </ul>
-<p>A doctor can often tell by looking, and may gently scrape some scale to test for fungus. For an intensely itchy rash that is worse at night and affects others at home, see our guide to <a href="/articles/scabies-kudis-buta-malaysia/">scabies (kudis buta)</a>.</p>` },
+<p>A doctor can often tell by looking, and may gently scrape off some scale to test for fungus. For an intensely itchy rash that is worse at night and affects others at home, see our guide to <a href="/articles/scabies-kudis-buta-malaysia/">scabies (kudis buta)</a>.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get a skin rash checked',
@@ -458,12 +459,12 @@ ${figure('physio-weights', 'A pair of small blue dumbbells, trainers and an exer
     clinicsIntro: 'A GP can confirm a fungal infection, prescribe antifungal tablets for scalp, nail or stubborn infections, and refer you to a dermatologist if needed. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, including clinics open in the evening and at weekends.',
     clinicLinks: [['/clinics/near-me/', 'Clinics near me'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
-      ['What is kurap in English?', 'Kurap is ringworm, a fungal skin infection also called tinea. Despite the name, it isn’t caused by a worm.'],
+      ['What is kurap in English?', 'Kurap is ringworm, a fungal skin infection also called tinea. Despite the name, no worm is involved.'],
       ['How long does kurap take to go away?', 'Most cases improve within 2 weeks of using an antifungal cream. Keep using it for 1 to 2 weeks after the rash has gone, which can mean up to 4 weeks in total.'],
-      ['Can I use a steroid cream on kurap?', 'No, unless a doctor advises it. Steroid creams can make kurap spread and harder to treat, and have been linked to treatment-resistant ringworm.'],
+      ['Can I use a steroid cream on kurap?', 'No, unless a doctor advises it. Steroid creams can make kurap spread and harder to treat, and they have been linked to treatment-resistant ringworm.'],
       ['Is panau contagious?', 'No. Panau is caused by a yeast that normally lives on everyone’s skin. It flares in heat and sweat, but isn’t passed between people in the usual way.'],
-      ['Why are my panau patches still white after treatment?', 'Skin colour takes weeks to months to return after the yeast has been treated. It doesn’t mean the treatment failed.'],
-      ['Can I get kurap from my cat?', 'Yes. Cats and kittens can carry a fungus that causes ringworm in people, especially scalp ringworm in children. Take the pet to a vet and see a doctor for the rash.'],
+      ['Why are my panau patches still white after treatment?', 'Skin colour takes weeks to months to return after the yeast has been treated, so it doesn’t mean the treatment failed.'],
+      ['Can I get kurap from my cat?', 'Yes. Cats and kittens can carry a fungus that causes ringworm in people, especially scalp ringworm in children. Take the pet to a vet and see a doctor about the rash.'],
       ['When does kurap need tablets?', 'For scalp and nail infections, widespread rashes, and infections that haven’t cleared with cream. A doctor can prescribe antifungal tablets.'],
       ['Is kayap a fungal infection?', 'No. Kayap is shingles, caused by the chickenpox virus. It needs antiviral treatment, not antifungal cream.'],
     ],
