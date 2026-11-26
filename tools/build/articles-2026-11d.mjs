@@ -458,93 +458,91 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Boil
     title: 'Warts (ketuat): types, treatment at home and at a clinic, and when to see a doctor',
     crumb: 'Warts (ketuat)',
     desc: 'Warts (ketuat): common warts, verrucas (plantar warts), flat and genital warts, how they spread, salicylic acid and freezing treatment, and when to see a doctor.',
-    excerpt: 'Warts are harmless growths caused by a virus, and many disappear on their own. The different types, how they spread, home treatments that work if you stick with them, freezing and other clinic treatments, and the warts you should never treat yourself.',
-    standfirst: 'Warts (ketuat, also called kutil) are small, rough growths on the skin caused by the human papillomavirus (HPV). They are very common, especially in children, and are harmless. Many go away by themselves, but treatment can speed things up. Warts on the face or genitals, and anything that bleeds or changes, need a doctor.',
-    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    excerpt: 'Warts are harmless growths caused by a virus, and many clear up by themselves. This guide covers the types, how they spread, home treatment that works if you keep at it, freezing at a clinic, and the warts you should leave to a doctor.',
+    standfirst: 'Warts (ketuat, also called kutil) are small, rough growths caused by the human papillomavirus (HPV). They are very common, especially in children, and harmless. Many disappear without treatment, though treatment can make them go sooner. Warts on the face or genitals, and any growth that bleeds or changes, need a doctor.',
+    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: '2026-11-26', author: AUTHOR, news: false, medical: true,
     about: ['Warts', 'Ketuat', 'Plantar wart'],
     image: 'aesthetic-treatment-room', imageAlt: 'A treatment chair in a medical aesthetics room',
     keyPoints: [
-      'Warts are caused by HPV entering through small breaks in the skin. They spread by touch and on wet surfaces such as shower floors, but aren’t very contagious.',
-      'Half of children’s warts go away within a year and two-thirds within two years without treatment.',
-      'Salicylic acid from a pharmacy works if used daily for up to 3 months. Freezing (cryotherapy) at a clinic is another option.',
-      'Don’t treat warts on the face or genitals yourself, and check with a doctor first if you have diabetes or poor circulation.',
-      'See a doctor if a growth bleeds, changes, hurts or you aren’t sure it is a wart.',
+      'HPV causes warts by getting in through small breaks in the skin. They spread by touch and on wet surfaces such as shower floors, but they aren’t very contagious.',
+      'Without treatment, half of children’s warts clear within a year and two-thirds within two years.',
+      'Salicylic acid from a pharmacy works if you use it every day for up to 3 months. A clinic can also freeze the wart (cryotherapy).',
+      'Don’t treat warts on your face or genitals yourself. If you have diabetes or poor circulation, ask a doctor before using any wart treatment.',
+      'See a doctor if a growth bleeds, changes or hurts, or if you aren’t sure it is a wart.',
     ],
     sections: [
       { id: 'types', h: 'Types of warts', tocLabel: 'Types', html: `<div class="table-wrap"><table>
 <thead><tr><th>Type</th><th>Where</th><th>What it looks like</th></tr></thead>
 <tbody>
-<tr><td>Common wart</td><td>Fingers, hands, knees, elbows</td><td>Firm, rough, raised bump, often with tiny black dots (clotted blood vessels)</td></tr>
-<tr><td>Plantar wart (verruca)</td><td>Soles of the feet</td><td>Flat, hard patch pushed into the skin by walking, often painful, with black dots</td></tr>
-<tr><td>Flat (plane) wart</td><td>Face, backs of hands, legs</td><td>Small, smooth, slightly raised, often in groups. Shaving can spread them</td></tr>
-<tr><td>Filiform wart</td><td>Face, around the mouth and nose</td><td>Thin, finger-like growth</td></tr>
-<tr><td>Periungual wart</td><td>Around the fingernails and toenails</td><td>Rough growths that can affect nail growth</td></tr>
-<tr><td>Genital warts</td><td>Genitals and anus</td><td>Small, soft lumps. Caused by different HPV types, mostly passed on through sex</td></tr>
+<tr><td>Common wart</td><td>Fingers, hands, knees, elbows</td><td>A firm, rough, raised bump, often with tiny black dots (clotted blood vessels)</td></tr>
+<tr><td>Plantar wart (verruca)</td><td>Soles of the feet</td><td>A flat, hard patch that walking pushes into the skin. Often painful, with black dots</td></tr>
+<tr><td>Flat (plane) wart</td><td>Face, backs of hands, legs</td><td>Small, smooth and slightly raised, often in groups. Shaving can spread them</td></tr>
+<tr><td>Filiform wart</td><td>Face, around the mouth and nose</td><td>A thin growth shaped like a finger</td></tr>
+<tr><td>Periungual wart</td><td>Around the fingernails and toenails</td><td>Rough growths that can disturb how the nail grows</td></tr>
+<tr><td>Genital warts</td><td>Genitals and anus</td><td>Small, soft lumps, caused by different HPV types and mostly passed on through sex</td></tr>
 </tbody></table></div>
-<p><strong>Plantar wart or corn?</strong> Plantar warts are sometimes called <em>mata ikan</em> because of their black dots. Corns and calluses are thickened skin from pressure or rubbing, often from tight shoes, and aren’t caused by a virus. If the hard skin is gently pared down, a wart shows tiny black dots while a corn doesn’t.</p>` },
-      { id: 'spread', h: 'How warts spread', tocLabel: 'How they spread', html: `<ul>
-<li>by direct skin contact, or by touching surfaces such as towels, shoes, and wet floors around pools and showers</li>
-<li>from one part of your own body to another, for example by picking, biting nails or shaving over warts</li>
+<p>People sometimes call a plantar wart <em>mata ikan</em> because of its black dots, and it is easy to mix up with a corn. Corns and calluses are thickened skin caused by pressure or rubbing, often from tight shoes, and no virus is involved. If the hard skin is gently pared down, a wart shows tiny black dots and a corn doesn’t.</p>` },
+      { id: 'spread', h: 'How warts spread', tocLabel: 'How they spread', html: `<p>Warts pass from person to person, and around your own body, in a few ways:</p>
+<ul>
+<li>by direct skin contact, or through shared things such as towels and shoes, and wet floors around pools and showers</li>
+<li>from one part of your body to another, for example when you pick at a wart, bite your nails or shave over warts</li>
 <li>more easily when the skin is wet, soft or damaged</li>
 </ul>
-<p>A wart can take weeks to months to appear after contact. Children and teenagers get them most, as do people with eczema or a weak immune system.</p>
-<p><strong>Genital warts</strong> are a sexually transmitted infection, usually caused by HPV types 6 and 11. They spread through skin-to-skin contact during sex, even when no warts are visible, but not through towels or toilet seats. They need a doctor. See our guide to <a href="/articles/syphilis-sti-testing-malaysia/">STI testing</a>.</p>` },
-      { id: 'home', h: 'Treating warts at home (ubat ketuat)', tocLabel: 'Home treatment', html: `<p>Treatment isn’t essential, as many warts go away on their own: half of children’s warts within a year, and two-thirds within two years. If a wart is painful, spreading or bothering you, these options from a pharmacy can help:</p>
-<p><strong>Salicylic acid</strong> (gel, paint or plaster) is the best-studied home treatment. In a Cochrane review it worked better than a dummy treatment.</p>
+<p>After contact, a wart can take weeks or months to appear. Children and teenagers get them most, and so do people with eczema or a weak immune system.</p>
+<p>Genital warts are a sexually transmitted infection, usually caused by HPV types 6 and 11. They spread through skin contact during sex, even when no warts can be seen, but not through towels or toilet seats. They need a doctor. See our guide to <a href="/articles/syphilis-sti-testing-malaysia/">STI testing</a>.</p>` },
+      { id: 'home', h: 'Treating warts at home (ubat ketuat)', tocLabel: 'Home treatment', html: `<p>You don’t have to treat a wart. Many go away on their own: half of children’s warts within a year, and two-thirds within two years. If a wart hurts, is spreading or bothers you, a pharmacy has treatments that can help.</p>
+<p>Salicylic acid, sold as a gel, paint or plaster, is the home treatment with the most research behind it. In a Cochrane review it worked better than a dummy treatment. To use it:</p>
 <ol>
 <li>Soak the wart in warm water for a few minutes, then dry it.</li>
-<li>Gently rub away the dead surface skin with a pumice stone or emery board. Use it only for the wart, and don’t share it.</li>
-<li>Apply the treatment <strong>only to the wart</strong>, protecting the skin around it, once a day.</li>
-<li>Keep going for <strong>up to 12 weeks</strong>. Stopping early is the commonest reason it fails. Take a few days off if the skin becomes sore.</li>
+<li>Gently rub off the dead surface skin with a pumice stone or emery board. Keep that stone or board for the wart only, and don’t share it.</li>
+<li>Once a day, put the treatment on the wart and nowhere else, protecting the skin around it.</li>
+<li>Carry on for up to 12 weeks. Stopping too early is the most common reason it fails. If the skin gets sore, take a few days off.</li>
 </ol>
-<p><strong>Freezing sprays</strong> sold in pharmacies are weaker than clinic freezing and aren’t suitable for young children.</p>
-<p><strong>Don’t use home treatments</strong>:</p>
-<ul>
-<li>on the <strong>face</strong>, genitals or broken skin</li>
-<li>if you have <strong>diabetes</strong>, poor circulation or numbness in your feet, without a doctor’s advice</li>
-</ul>
-<p><strong>Never cut, burn or dig out a wart yourself.</strong> Be careful with “wart remover” products sold online. Check that the product is registered with the National Pharmaceutical Regulatory Agency (NPRA), and stop if it causes pain, bleeding or blistering.</p>` },
+<p>Pharmacy freezing sprays are weaker than freezing at a clinic, and they aren’t suitable for young children.</p>
+<p>Don’t use home treatments on your face, your genitals or broken skin. If you have diabetes, poor circulation or numb feet, get a doctor’s advice first.</p>
+<p>Never cut, burn or dig out a wart yourself. Take care with “wart remover” products sold online: check that the product is registered with the National Pharmaceutical Regulatory Agency (NPRA), and stop using it if it causes pain, bleeding or blisters.</p>` },
       { id: 'clinic', h: 'Clinic treatments', tocLabel: 'Clinic treatment', html: `<div class="table-wrap"><table>
 <thead><tr><th>Treatment</th><th>What it involves</th></tr></thead>
 <tbody>
-<tr><td>Cryotherapy (freezing)</td><td>Liquid nitrogen is applied to freeze the wart. It stings and usually blisters, then the wart falls off within a week or so. Several sessions, 2 to 4 weeks apart, are often needed. Not usually used in young children</td></tr>
-<tr><td>Curettage and cautery</td><td>The wart is scraped away under local anaesthetic and the base sealed with heat. Can leave a scar</td></tr>
-<tr><td>Laser</td><td>For stubborn warts that haven’t responded to other treatment</td></tr>
-<tr><td>Prescription creams and immunotherapy</td><td>Medicines that irritate the wart or stimulate the immune system to clear it, mainly for stubborn or genital warts</td></tr>
+<tr><td>Cryotherapy (freezing)</td><td>The doctor freezes the wart with liquid nitrogen. It stings and usually blisters, and the wart falls off within a week or so. You often need several sessions, 2 to 4 weeks apart. It isn’t usually used for young children</td></tr>
+<tr><td>Curettage and cautery</td><td>The wart is scraped off under local anaesthetic and the base is sealed with heat. It can leave a scar</td></tr>
+<tr><td>Laser</td><td>Used for stubborn warts that other treatments haven’t cleared</td></tr>
+<tr><td>Prescription creams and immunotherapy</td><td>Medicines that irritate the wart or prompt the immune system to clear it, mainly for stubborn or genital warts</td></tr>
 </tbody></table></div>
-<p>Freezing combined with salicylic acid may work better than salicylic acid alone. All treatments can leave small marks or pale or dark patches, and warts can come back. Freezing near the nails can damage the nail.</p>
-<p><strong>Genital warts</strong> are treated by a doctor with prescription creams, freezing or other procedures. Don’t use pharmacy wart products on them.</p>
+<p>Freezing plus salicylic acid may work better than salicylic acid on its own. Any treatment can leave small marks or pale or dark patches, and warts can come back. Freezing close to a nail can damage it.</p>
+<p>A doctor treats genital warts with prescription creams, freezing or other procedures. Pharmacy wart products shouldn’t be used on them.</p>
 ${figure('treatment-room', 'A clean, white clinic treatment room with an examination couch', 'GP clinics and dermatologists can freeze or remove stubborn warts.')}` },
-      { id: 'doctor', h: 'When to see a doctor', tocLabel: 'When to see a doctor', html: `<ul>
-<li>the growth <strong>bleeds, changes</strong> in size, shape or colour, itches or hurts</li>
-<li>you aren’t sure it is a wart. Some skin cancers and other growths, such as seborrhoeic keratoses, can look similar.</li>
-<li>it is on your face or genitals, or you have many warts</li>
-<li>it keeps coming back or spreading, or home treatment hasn’t worked after 12 weeks</li>
+      { id: 'doctor', h: 'When to see a doctor', tocLabel: 'When to see a doctor', html: `<p>See a doctor if:</p>
+<ul>
+<li>the growth bleeds, changes in size, shape or colour, itches or hurts</li>
+<li>you aren’t sure it is a wart, since some skin cancers and other growths, such as seborrhoeic keratoses, can look similar</li>
+<li>it is on your face or genitals, or you have a lot of warts</li>
+<li>it keeps coming back or spreading, or 12 weeks of home treatment hasn’t worked</li>
 <li>you have diabetes, poor circulation or a weak immune system</li>
 </ul>` },
       { id: 'prevention', h: 'Preventing warts', tocLabel: 'Prevention', html: `<ul>
 <li>Don’t pick, scratch or bite warts, and don’t shave over them.</li>
 <li>Don’t share towels, shoes or socks.</li>
-<li>Wear flip-flops in shared showers and around pools, and cover verrucas with a waterproof plaster when swimming.</li>
-<li>Keep your feet dry and change socks daily.</li>
-<li>Vaccines covering HPV types 6 and 11 protect against most genital warts, and the HPV vaccine also prevents cervical and other cancers. Ask your doctor which vaccine you are being offered. See our guide to the <a href="/articles/hpv-vaccine-malaysia/">HPV vaccine</a>.</li>
+<li>Wear flip-flops in shared showers and around pools, and cover a verruca with a waterproof plaster when you swim.</li>
+<li>Keep your feet dry and change your socks every day.</li>
+<li>Vaccines that cover HPV types 6 and 11 protect against most genital warts, and the HPV vaccine also prevents cervical and other cancers. Ask your doctor which vaccine you are being offered, and see our guide to the <a href="/articles/hpv-vaccine-malaysia/">HPV vaccine</a>.</li>
 </ul>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get warts treated',
     clinicsTocLabel: 'Find a clinic',
-    clinicsIntro: 'Many GP clinics can confirm a wart, freeze or remove it, and refer you to a dermatologist for stubborn or unusual growths. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states. Call ahead to check they offer cryotherapy.',
+    clinicsIntro: 'Many GP clinics can confirm that a growth is a wart, freeze or remove it, and refer you to a dermatologist if it is stubborn or unusual. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states. Call ahead to check that the clinic offers cryotherapy.',
     clinicLinks: [['/clinics/near-me/', 'Clinics near me'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/aesthetic-clinics/', 'Aesthetic clinics']],
     faqs: [
-      ['What is ketuat in English?', 'Ketuat means warts: small, rough growths on the skin caused by the human papillomavirus (HPV). A wart on the sole of the foot is called a verruca or plantar wart.'],
-      ['What causes ketuat?', 'Warts (ketuat) are caused by the human papillomavirus (HPV), which gets into the skin through small cuts or breaks.'],
-      ['Do warts go away on their own?', 'Often, yes. Half of children’s warts disappear within a year and two-thirds within two years. Adults’ warts can take longer.'],
-      ['What is the best treatment for warts?', 'Salicylic acid used every day for up to 12 weeks is the best-studied home treatment. Freezing at a clinic is an alternative, and the two can be combined.'],
-      ['Are warts contagious?', 'Mildly. They spread by touch and on wet surfaces such as shower floors, and you can spread them on your own body by picking or shaving.'],
-      ['What is the difference between a corn and a plantar wart?', 'A corn is thickened skin from pressure. A plantar wart is caused by a virus and shows tiny black dots when the hard skin is pared down.'],
-      ['Can I remove a wart myself?', 'You can treat common warts and verrucas with pharmacy products, but never cut or burn them, and don’t treat warts on the face or genitals yourself.'],
-      ['Does freezing warts hurt?', 'It stings during the treatment and usually blisters afterwards. Several sessions may be needed.'],
-      ['Are genital warts the same as ordinary warts?', 'No. They are caused by different HPV types, are usually sexually transmitted, and need a doctor’s treatment.'],
+      ['What is ketuat in English?', 'Ketuat means warts, the small, rough skin growths caused by the human papillomavirus (HPV). A wart on the sole of the foot is called a verruca or plantar wart.'],
+      ['What causes ketuat?', 'The human papillomavirus (HPV), which gets into the skin through small cuts or breaks.'],
+      ['Do warts go away on their own?', 'Often, yes. Half of children’s warts disappear within a year and two-thirds within two years. In adults they can take longer.'],
+      ['What is the best treatment for warts?', 'The home treatment with the most evidence is salicylic acid, used every day for up to 12 weeks. A clinic can freeze the wart instead, and the two can be used together.'],
+      ['Are warts contagious?', 'Mildly. They spread by touch and on wet surfaces such as shower floors, and you can move them around your own body by picking or shaving.'],
+      ['What is the difference between a corn and a plantar wart?', 'A corn is skin thickened by pressure. A plantar wart is caused by a virus, and it shows tiny black dots when the hard skin is pared down.'],
+      ['Can I remove a wart myself?', 'You can treat common warts and verrucas with pharmacy products. Never cut or burn a wart, and leave warts on the face or genitals to a doctor.'],
+      ['Does freezing warts hurt?', 'It stings while it is done and usually blisters afterwards. You may need several sessions.'],
+      ['Are genital warts the same as ordinary warts?', 'No. Different HPV types cause them, they are usually sexually transmitted, and a doctor needs to treat them.'],
     ],
     sources: [
       ['Primary Care Dermatology Society — Warts patient information (Jan 2025)', 'https://www.pcds.org.uk/patient-info-leaflets/warts'],

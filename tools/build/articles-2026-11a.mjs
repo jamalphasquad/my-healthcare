@@ -197,70 +197,64 @@ ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a 
     title: 'Typhoid injection for food handlers in Malaysia: the rules, where to get it and how often',
     crumb: 'Typhoid injection',
     desc: 'Suntikan typhoid for food handlers: who needs it under the Food Hygiene Regulations 2009, fines, how often to repeat it, where to get it, and side effects.',
-    excerpt: 'Anyone who prepares or serves food in Malaysia must be vaccinated against typhoid and attend a food handler course. Who counts as a food handler, the penalties, how often the injection is repeated, where to get it, and what to expect.',
-    standfirst: 'If you cook, serve or handle food for a business in Malaysia, from a restaurant or stall to a factory or caterer, the law requires you to have a typhoid injection (suntikan typhoid) and a food handler training certificate. Here is what the rules say, how often you need the jab, and where to get it.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    excerpt: 'Anyone who prepares or serves food in Malaysia must be vaccinated against typhoid and go on a food handler course. This guide covers who counts as a food handler, the penalties, how often to repeat the injection, where to get it and what to expect.',
+    standfirst: 'If you cook, serve or handle food for a business in Malaysia, whether a restaurant, a stall, a factory or a caterer, the law says you need a typhoid injection (suntikan typhoid) and a food handler training certificate. This guide explains the rules, how often the jab is repeated, and where to get it.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-26', author: AUTHOR, news: false, medical: true,
     about: ['Typhoid vaccine', 'Suntikan anti-tifoid', 'Food handler'],
     image: 'vaccination', imageAlt: 'A vaccine injection being given in a person’s upper arm',
     keyPoints: [
-      'Under the Food Hygiene Regulations 2009, every food handler must be medically examined and vaccinated, which in practice means the anti-typhoid injection, and must hold a food handler training certificate.',
-      'Owners must not employ food handlers who aren’t trained and vaccinated, and must keep the records for inspection. Penalties go up to RM10,000 or 2 years in jail.',
-      'Food handlers are usually asked to repeat the injection every 3 years. Some councils and clinics advise every 2 years, so check your local council’s rule.',
-      'Private GP clinics give the typhoid injection, and some city councils run their own injection units. Bring your MyKad or passport.',
-      'The injection is safe for most people. Side effects are usually a sore arm, mild fever or headache for a day or two.',
+      'The Food Hygiene Regulations 2009 require every food handler to be medically examined and vaccinated, which in practice means the anti-typhoid injection, and to hold a food handler training certificate.',
+      'Owners must not employ food handlers who haven’t been trained and vaccinated, and must keep the records for inspection. The penalty can be up to RM10,000 or 2 years in jail.',
+      'Food handlers are usually asked to repeat the injection every 3 years. Some councils and clinics say every 2 years, so check your local council’s rule.',
+      'Private GP clinics give the typhoid injection, and some city councils have their own injection units. Bring your MyKad or passport.',
+      'The injection is safe for most people. The usual side effects are a sore arm, a mild fever or a headache for a day or two.',
     ],
     sections: [
-      { id: 'law', h: 'Do food handlers need a typhoid injection? What the law says', tocLabel: 'What the law says', html: `<p>Yes. The <strong>Food Hygiene Regulations 2009</strong>, made under the Food Act 1983, set three requirements:</p>
+      { id: 'law', h: 'Do food handlers need a typhoid injection? What the law says', tocLabel: 'What the law says', html: `<p>Yes. The Food Hygiene Regulations 2009, made under the Food Act 1983, set out three requirements.</p>
 <ul>
-<li><strong>Training (regulation 30):</strong> every food handler must attend a food handler training course and hold a Certificate of Food Handlers Training from a training institution recognised by the Ministry of Health.</li>
-<li><strong>Medical examination and vaccination (regulation 31):</strong> every food handler must be medically examined and vaccinated by a registered doctor. The Ministry of Health and local councils apply this as the <strong>anti-typhoid injection</strong>.</li>
-<li><strong>Employers (regulation 11):</strong> the owner of food premises must not employ a food handler who hasn’t been trained and vaccinated, and must keep training and vaccination records for inspection.</li>
+<li>Training, under regulation 30. Every food handler must attend a food handler training course and hold a Certificate of Food Handlers Training from a training institution the Ministry of Health recognises.</li>
+<li>A medical examination and vaccination, under regulation 31. A registered doctor must examine and vaccinate every food handler. The Ministry of Health and local councils apply this as the anti-typhoid injection.</li>
+<li>Duties for employers, under regulation 11. The owner of food premises must not employ a food handler who hasn’t been trained and vaccinated, and must keep the training and vaccination records for inspection.</li>
 </ul>
-<p>Each of these offences carries a penalty of up to <strong>RM10,000, up to 2 years in jail, or both</strong>, and can be settled with a compound. Food handlers who are ill with, or carry, an infection that can spread through food must report it and stop handling food until a doctor certifies them fit.</p>` },
-      { id: 'who', h: 'Who counts as a food handler?', tocLabel: 'Who needs it', html: `<p>Under the regulations, a food handler is anyone who prepares or serves food, or touches food, food equipment or surfaces that food touches, in food premises. That includes:</p>
+<p>Each of these offences can bring a fine of up to RM10,000, up to 2 years in jail, or both, and can be settled with a compound. A food handler who is ill with, or carries, an infection that can spread through food must report it and stop handling food until a doctor certifies them fit.</p>` },
+      { id: 'who', h: 'Who counts as a food handler?', tocLabel: 'Who needs it', html: `<p>The regulations define a food handler as anyone in food premises who prepares or serves food, or who touches food, food equipment or surfaces that food touches. That includes:</p>
 <ul>
 <li>cooks, kitchen helpers and dishwashers in restaurants, cafés and canteens</li>
-<li>hawkers, stall and food truck operators</li>
+<li>hawkers, and people who run stalls and food trucks</li>
 <li>waiters and staff who serve or pack food</li>
 <li>workers in food factories, bakeries and catering businesses</li>
 </ul>
-<p>Local councils check typhoid and training records when you apply for or renew a food business licence, and health inspectors check them during inspections. In January to April 2026, for example, Penang health officers inspected more than 4,000 food premises and found workers without typhoid vaccination at seven of them.</p>` },
-      { id: 'how-often', h: 'How often do you need the typhoid injection?', tocLabel: 'How often', html: `<p>The injectable typhoid vaccine protects for about <strong>3 years</strong>, so food handlers are usually asked to repeat it <strong>every 3 years</strong>. This is the interval the Ministry of Health has stated and many councils use. Some clinics and councils ask for a booster every 2 years, which matches international travel advice, so check what your local council requires when you renew your licence.</p>
-<p>Keep your <strong>typhoid injection card</strong> or record safe: you will need to show it to your employer and inspectors, and it tells you when the next dose is due.</p>` },
-      { id: 'where-to-go', h: 'Where to get a typhoid injection', tocLabel: 'Where to get it', html: `<ul>
-<li><strong>Private GP clinics:</strong> the most common option. Many give the injection on a walk-in basis and issue a card. It is worth calling ahead to check they have the vaccine in stock.</li>
-<li><strong>City council injection units:</strong> some councils run their own service for food handlers, such as Kuala Lumpur City Hall’s (DBKL) injection unit and Johor Bahru City Council’s clinic. Check your council’s website for opening times and payment methods.</li>
-<li><strong>Government health clinics:</strong> availability varies, so call your nearest Klinik Kesihatan before going.</li>
-</ul>
-<p><strong>What to bring:</strong> your MyKad, or passport for foreign workers, and your food handler training certificate if you have one. Some councils also ask for a photo and your premises details.</p>
-<p><strong>Cost:</strong> prices vary between clinics and councils, so ask when you call.</p>
+<p>Local councils check typhoid and training records when you apply for or renew a food business licence, and health inspectors check them on their visits. Between January and April 2026, for example, Penang health officers inspected more than 4,000 food premises and found workers without typhoid vaccination at seven of them.</p>` },
+      { id: 'how-often', h: 'How often do you need the typhoid injection?', tocLabel: 'How often', html: `<p>The injectable typhoid vaccine protects for about 3 years, so food handlers are usually asked to repeat it every 3 years. The Ministry of Health has given that interval, and many councils use it. Some clinics and councils ask for a booster every 2 years, in line with international travel advice, so when you renew your licence, check what your local council requires.</p>
+<p>Keep your typhoid injection card or record somewhere safe. Your employer and inspectors will ask to see it, and it shows when your next dose is due.</p>` },
+      { id: 'where-to-go', h: 'Where to get a typhoid injection', tocLabel: 'Where to get it', html: `<p>Most food handlers go to a private GP clinic. Many give the injection without an appointment and issue a card, but call first to make sure they have the vaccine in stock.</p>
+<p>Some city councils run their own service for food handlers, such as Kuala Lumpur City Hall’s (DBKL) injection unit and Johor Bahru City Council’s clinic. Your council’s website will have opening times and payment methods.</p>
+<p>Government health clinics may or may not offer it, so phone your nearest Klinik Kesihatan before you go.</p>
+<p>Bring your MyKad (or your passport, if you are a foreign worker) and your food handler training certificate if you already have one. Some councils also ask for a photo and details of your premises. Prices differ between clinics and councils, so ask about the cost when you call.</p>
 ${figure('fresh-vegetables', 'Fresh broccoli, tomatoes, cucumber and red peppers on a wooden board', 'Typhoid spreads through food and water contaminated by an infected person, which is why food handlers are vaccinated.')}` },
-      { id: 'training', h: 'The food handler course (kursus pengendali makanan)', tocLabel: 'Food handler course', html: `<p>The vaccination goes together with food handler training. The course is run by training schools recognised by the Ministry of Health, covers food hygiene, personal hygiene and food-borne diseases, and usually takes a few hours. Some recognised providers also run it online. Once you pass, you receive a certificate to show your employer and the local council.</p>
-<p>Ask your employer or local council which recognised training providers they accept.</p>` },
-      { id: 'vaccine', h: 'About the typhoid vaccine: safety and side effects', tocLabel: 'Side effects', html: `<p>The typhoid injection used for food handlers is a single dose given in the upper arm. It can be given from age 2.</p>
-<ul>
-<li><strong>Common side effects:</strong> pain, redness or swelling where the injection was given, mild fever, headache or feeling unwell for a day or two.</li>
-<li><strong>Talk to the doctor first if you</strong> have had an allergic reaction to a vaccine before, are pregnant, or have a weakened immune system. If you are moderately or severely unwell on the day, the injection may be delayed.</li>
-<li>The vaccine is not 100% effective, so good hand-washing and food hygiene still matter.</li>
-</ul>
-<p>Newer typhoid conjugate vaccines, used in some countries from 6 months of age, give longer protection. Ask your doctor what is available.</p>` },
-      { id: 'typhoid', h: 'What is typhoid?', tocLabel: 'About typhoid', html: `<p>Typhoid fever is caused by the bacterium <em>Salmonella</em> Typhi, which only lives in humans. It spreads through food or water contaminated with the faeces of an infected person. Some people who recover keep carrying the bacteria and can pass it on through food they handle without feeling ill, which is why food handlers are screened and vaccinated.</p>
-<p>Symptoms include a <strong>prolonged high fever</strong>, tiredness, headache, stomach pain, constipation or diarrhoea, and sometimes a rash. Typhoid needs antibiotics, and drug resistance is increasingly common. In Malaysia it is a notifiable disease. Cases are relatively uncommon, but outbreaks have been traced to infected food handlers, such as one in Sabah in 2019 linked to a restaurant worker.</p>
-<p>See a doctor if you have a fever lasting more than 3 days, especially after eating from places with poor hygiene or travelling to areas where typhoid is common. For other causes of fever and food-borne illness, see our guides to <a href="/articles/dengue-klang-valley-first-three-days/">dengue</a> and <a href="/articles/stomach-pain-gastric-malaysia/">stomach pain</a>.</p>` },
+      { id: 'training', h: 'The food handler course (kursus pengendali makanan)', tocLabel: 'Food handler course', html: `<p>Food handlers need the training as well as the vaccination. Training schools recognised by the Ministry of Health run the course, which covers food hygiene, personal hygiene and food-borne diseases and usually takes a few hours. Some recognised providers also run it online. When you pass, you get a certificate to show your employer and the local council.</p>
+<p>Ask your employer or local council which training providers they accept.</p>` },
+      { id: 'vaccine', h: 'About the typhoid vaccine: safety and side effects', tocLabel: 'Side effects', html: `<p>Food handlers get the typhoid injection as a single dose in the upper arm. It can be given from age 2.</p>
+<p>The common side effects are pain, redness or swelling where the needle went in, and sometimes a mild fever, a headache or feeling unwell for a day or two.</p>
+<p>Talk to the doctor first if you have had an allergic reaction to a vaccine before, if you are pregnant, or if your immune system is weak. If you are moderately or severely unwell on the day, the doctor may put the injection off.</p>
+<p>The vaccine is not 100% effective, so hand-washing and food hygiene still matter. Newer typhoid conjugate vaccines, used in some countries from 6 months of age, protect for longer. Ask your doctor what is available.</p>` },
+      { id: 'typhoid', h: 'What is typhoid?', tocLabel: 'About typhoid', html: `<p>Typhoid fever is caused by the bacterium <em>Salmonella</em> Typhi, which lives only in humans. It spreads through food or water contaminated with the faeces of an infected person. Some people go on carrying the bacteria after they recover and can pass it on through the food they handle without feeling ill themselves. That is why food handlers are screened and vaccinated.</p>
+<p>The symptoms include a high fever that goes on for days, tiredness, headache, stomach pain, constipation or diarrhoea, and sometimes a rash. Typhoid has to be treated with antibiotics, and resistance to them is becoming more common. In Malaysia, typhoid is a notifiable disease. Cases are fairly uncommon, but outbreaks have been traced to infected food handlers, including one in Sabah in 2019 linked to a restaurant worker.</p>
+<p>See a doctor if a fever lasts more than 3 days, especially after eating somewhere with poor hygiene or travelling to an area where typhoid is common. For other causes of fever and food-borne illness, see our guides to <a href="/articles/dengue-klang-valley-first-three-days/">dengue</a> and <a href="/articles/stomach-pain-gastric-malaysia/">stomach pain</a>.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Find a clinic for your typhoid injection',
     clinicsTocLabel: 'Find a clinic',
-    clinicsIntro: 'Many GP clinics give the typhoid injection to food handlers. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, including clinics that list vaccinations among their services and clinics open at weekends. Call ahead to check the vaccine is in stock.',
+    clinicsIntro: 'Many GP clinics give food handlers the typhoid injection. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, including clinics that list vaccinations among their services and clinics open at weekends. Call ahead to check that the vaccine is in stock.',
     clinicLinks: [['/clinics/near-me/', 'Clinics near me'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday']],
     faqs: [
-      ['Is the typhoid injection compulsory for food handlers in Malaysia?', 'Yes. The Food Hygiene Regulations 2009 require food handlers to be medically examined and vaccinated, which is applied as the anti-typhoid injection, and to attend food handler training.'],
-      ['How often do food handlers need a typhoid injection?', 'Usually every 3 years, as the injectable vaccine protects for about 3 years. Some councils and clinics ask for every 2 years, so check with your local council.'],
-      ['What is the fine for not having a typhoid injection?', 'Food handlers who aren’t vaccinated, and owners who employ them, can be fined up to RM10,000, jailed for up to 2 years, or both. Offences can be compounded.'],
-      ['Where can I get a typhoid injection?', 'At private GP clinics, and at council injection units in some cities, such as DBKL in Kuala Lumpur and MBJB in Johor Bahru. Availability at government health clinics varies, so call ahead.'],
-      ['Can foreign workers get the typhoid injection?', 'Yes. Clinics give it to foreign food handlers too. Bring your passport.'],
-      ['What are the side effects of the typhoid injection?', 'Usually a sore arm, redness or swelling, and sometimes mild fever or headache for a day or two. Tell the doctor if you are pregnant, have a weak immune system or have had a vaccine allergy.'],
-      ['Who counts as a food handler?', 'Anyone who prepares, serves or touches food, food equipment or food-contact surfaces in food premises, including cooks, kitchen helpers, waiters, hawkers and food factory workers.'],
+      ['Is the typhoid injection compulsory for food handlers in Malaysia?', 'Yes. The Food Hygiene Regulations 2009 require food handlers to be medically examined and vaccinated, which is applied as the anti-typhoid injection, and to go on a food handler training course.'],
+      ['How often do food handlers need a typhoid injection?', 'Usually every 3 years, because the injectable vaccine protects for about 3 years. Some councils and clinics ask for it every 2 years, so check with your local council.'],
+      ['What is the fine for not having a typhoid injection?', 'Food handlers who aren’t vaccinated, and owners who employ them, can be fined up to RM10,000, jailed for up to 2 years, or both. Offences can be settled with a compound.'],
+      ['Where can I get a typhoid injection?', 'At private GP clinics, and in some cities at council injection units such as DBKL in Kuala Lumpur and MBJB in Johor Bahru. Not every government health clinic offers it, so call ahead.'],
+      ['Can foreign workers get the typhoid injection?', 'Yes. Clinics give it to foreign food handlers as well. Bring your passport.'],
+      ['What are the side effects of the typhoid injection?', 'Usually a sore, red or swollen arm, and sometimes a mild fever or headache for a day or two. Tell the doctor if you are pregnant, have a weak immune system or have reacted to a vaccine before.'],
+      ['Who counts as a food handler?', 'Anyone in food premises who prepares, serves or touches food, food equipment or food-contact surfaces. That includes cooks, kitchen helpers, waiters, hawkers and food factory workers.'],
     ],
     sources: [
       ['Food Hygiene Regulations 2009, P.U.(A) 95/2009 (Food Act 1983)', 'https://faolex.fao.org/docs/pdf/mal91581.pdf'],

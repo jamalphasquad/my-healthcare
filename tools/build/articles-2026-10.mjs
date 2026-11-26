@@ -12,52 +12,53 @@ export const OCT_2026 = [
     title: 'Skin boosters in Malaysia: Profhilo, Rejuran, Juvelook and exosomes explained',
     crumb: 'Skin boosters in Malaysia',
     desc: 'What skin boosters like Profhilo, Rejuran and Juvelook are, how many sessions you need, risks, typical costs and how to check a clinic is legal.',
-    excerpt: 'What Profhilo, Rejuran, Juvelook and other skin boosters actually do, how many sessions they take, the risks, and how to check a clinic and product are legal.',
-    standfirst: 'Skin boosters are one of the most searched aesthetic treatments in Malaysia. Here is what each type does, what the evidence says, what it costs, and how to make sure the doctor, clinic and product are all legal.',
-    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'What Profhilo, Rejuran, Juvelook and other skin boosters do, how many sessions they take, the risks, and how to check that the clinic and product are legal.',
+    standfirst: 'Skin boosters are among the most searched aesthetic treatments in Malaysia. This guide covers what each type does, how good the evidence is, what it costs, and how to check that the doctor, clinic and product are legal.',
+    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: '2026-11-26', author: AUTHOR, news: true, medical: true,
     image: 'facial-treatment', imageAlt: 'A facial skin treatment being carried out in a clinic',
     keyPoints: [
       '“Skin booster” covers several different injectables: hyaluronic acid (such as Profhilo), polynucleotides (such as Rejuran) and collagen stimulators (such as Juvelook and Sculptra).',
-      'These products are regulated as medical devices. Check that a product is on the Medical Device Authority (MDA) register.',
-      'Only a registered doctor with a Letter of Credentialing and Privileging (LCP) may inject them, at an MOH-registered clinic.',
-      'No exosome product appears on the MDA register, and cosmetics in Malaysia are for use on the skin only, not injection.',
-      'Never have injections at homes, hotels or beauty salons. MOH calls this “checking the 3Ps”: procedure, practitioner and premises.',
+      'These products are regulated as medical devices, so check that yours is on the Medical Device Authority (MDA) register.',
+      'Only a registered doctor with a Letter of Credentialing and Privileging (LCP) may inject them, and only at an MOH-registered clinic.',
+      'No exosome product appears on the MDA register. Cosmetics in Malaysia are for use on the skin and may not be injected.',
+      'Never have injections at a home, hotel or beauty salon. MOH asks people to “check the 3Ps”: procedure, practitioner and premises.',
     ],
     sections: [
-      { id: 'what', h: 'What are skin boosters?', html: `<p>“Skin booster” is a marketing term rather than a medical one. It usually means small amounts of an injectable placed just under the skin to improve hydration, texture, fine lines or firmness, rather than to add volume the way a lip or cheek filler does. The main types work quite differently:</p>
+      { id: 'what', h: 'What are skin boosters?', html: `<p>“Skin booster” is a marketing name, not a medical category. It usually means a small amount of an injectable placed just under the skin to improve hydration, texture, fine lines or firmness. A lip or cheek filler adds volume; a skin booster is meant to change the quality of the skin itself. The main types work in quite different ways:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Type</th><th>Examples</th><th>How it works</th></tr></thead>
 <tbody>
-<tr><td>Hyaluronic acid (HA)</td><td>Profhilo, Restylane Skinboosters, NCTF 135 HA</td><td>Hyaluronic acid holds water in the skin, improving hydration and smoothness</td></tr>
-<tr><td>Polynucleotides (PN)</td><td>Rejuran</td><td>DNA fragments said to support skin repair; mostly studied in Korea</td></tr>
-<tr><td>Collagen stimulators</td><td>Juvelook (PDLLA), Sculptra (PLLA)</td><td>Microparticles trigger the skin to build collagen gradually over months</td></tr>
-<tr><td>Exosomes</td><td>Various “exosome” serums</td><td>Not registered as an injectable; see below</td></tr>
+<tr><td>Hyaluronic acid (HA)</td><td>Profhilo, Restylane Skinboosters, NCTF 135 HA</td><td>Hyaluronic acid holds water in the skin, which makes it more hydrated and smoother</td></tr>
+<tr><td>Polynucleotides (PN)</td><td>Rejuran</td><td>DNA fragments said to support skin repair, studied mostly in Korea</td></tr>
+<tr><td>Collagen stimulators</td><td>Juvelook (PDLLA), Sculptra (PLLA)</td><td>Microparticles prompt the skin to build collagen slowly over several months</td></tr>
+<tr><td>Exosomes</td><td>Various “exosome” serums</td><td>Not registered as an injectable (see below)</td></tr>
 </tbody></table></div>
 ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment bed', 'Injectable treatments should only take place in an MOH-registered clinic.')}` },
-      { id: 'sessions', h: 'How many sessions, and how long do results last?', tocLabel: 'Sessions and results', html: `<ul>
-<li><strong>Hyaluronic acid boosters:</strong> in one study of Profhilo, women had two treatments four weeks apart, and improvement was still measurable at 16 weeks.</li>
-<li><strong>Polynucleotides:</strong> a 2024 review found most studies used three to four sessions about two weeks apart. The authors noted the evidence is still limited and of low-to-moderate quality.</li>
-<li><strong>Collagen stimulators:</strong> results build slowly. In the US trial for Sculptra, people had up to four sessions, and many still showed improvement two years later.</li>
-</ul>
-<p>Results vary between people, and most treatments need top-up sessions to maintain them. Be cautious of any promise of a fixed result or a fixed number of months.</p>` },
-      { id: 'legal', h: 'Is it legal? What Malaysian rules say', tocLabel: 'What the rules say', html: `<p>Skin booster injectables are regulated in Malaysia as <strong>medical devices</strong>. Products sold here must be registered with the Medical Device Authority (MDA). As of October 2026, the MDA register lists products including Profhilo, Rejuran, Sculptra, Restylane Skinboosters and NCTF 135 HA. You can search it yourself on the <a href="https://mdar.mda.gov.my/frontend/web/index.php?r=carian" target="_blank" rel="noopener">MDA medical device register</a>.</p>
-<p>The Ministry of Health lists filler injections as a minimally invasive aesthetic procedure. They may only be done by a <strong>registered doctor holding a Letter of Credentialing and Privileging (LCP)</strong>, in premises registered under the Private Healthcare Facilities and Services Act 1998.</p>
-<p><strong>A note on exosomes:</strong> searching the MDA register for “exosome” returns no products. In Malaysia, cosmetics are legally for use on the outside of the body, so a cosmetic exosome serum is not approved for injection. Doctors have reported cases of skin damage and scarring after exosome products meant for the skin were injected.</p>` },
-      { id: 'check', h: 'How to check the doctor, clinic and product (the 3Ps)', tocLabel: 'Check the 3Ps', html: `<p>The Ministry of Health urges the public to “check the 3Ps” before any aesthetic procedure:</p>
-<ol>
-<li><strong>Practitioner:</strong> look the doctor up on the Malaysian Medical Council’s <a href="https://merits.mmc.gov.my/search" target="_blank" rel="noopener">MeRITS register</a>, and check MOH’s <a href="https://hq.moh.gov.my/medicalprac/statistik-cawangan-perundangan-perubatan/" target="_blank" rel="noopener">national registry of doctors with an LCP</a>.</li>
-<li><strong>Premises:</strong> the clinic should be registered with MOH. MOH publishes its list of registered private clinics, including those offering aesthetic services.</li>
-<li><strong>Procedure and product:</strong> ask for the product’s name and check it on the MDA register. Make sure the procedure is one MOH allows. Breast and buttock fillers, for example, are illegal in Malaysia.</li>
-</ol>
-<div class="box box--pink" role="note"><span class="box__title">Avoid injections at homes, hotels or salons</span><p style="font-size:16px;line-height:1.6">In September 2026, raids in Shah Alam, Pandan Perdana and Kepong found unlicensed “therapists” offering aesthetic treatments in rented homes, promoted on TikTok and Instagram. Cheaper prices from unlicensed operators often mean unregistered products and no one to treat complications.</p></div>` },
-      { id: 'risks', h: 'Side effects and risks', html: `<p>Common, usually short-lived effects include bruising, redness, swelling, tenderness and small bumps at the injection points, which typically settle within days to a week.</p>
-<p>Less common but important risks:</p>
+      { id: 'sessions', h: 'How many sessions, and how long do results last?', tocLabel: 'Sessions and results', html: `<p>The answer depends on the type.</p>
 <ul>
-<li><strong>Lumps and nodules</strong>, particularly with collagen stimulators. In the Sculptra trial, 17% of patients developed nodules or bumps, sometimes appearing months later. Unlike hyaluronic acid, these cannot be dissolved with an enzyme.</li>
-<li><strong>Injection into a blood vessel</strong>. This is rare but serious, and can cause skin damage, vision loss or stroke. It is the main reason injections should only be done by trained doctors who can recognise and treat it immediately.</li>
-<li><strong>Infection and allergic reactions.</strong></li>
+<li>For hyaluronic acid, one study of Profhilo gave women two treatments four weeks apart, and the improvement could still be measured at 16 weeks.</li>
+<li>For polynucleotides, a 2024 review found most studies used three to four sessions about two weeks apart. The authors said the evidence is still limited and of low-to-moderate quality.</li>
+<li>Collagen stimulators build results slowly. In the US trial for Sculptra, people had up to four sessions, and many were still improved two years later.</li>
 </ul>
-<p>Seek urgent medical care for severe or increasing pain, skin that turns pale, blue or dusky, or any change in your vision after an injection.</p>` },
+<p>Results differ from person to person, and most people need top-up sessions to keep them. Be cautious of anyone who promises a fixed result or a fixed number of months.</p>` },
+      { id: 'legal', h: 'Is it legal? What Malaysian rules say', tocLabel: 'What the rules say', html: `<p>In Malaysia, skin booster injectables are regulated as medical devices, and products sold here must be registered with the Medical Device Authority (MDA). As of October 2026, the MDA register lists Profhilo, Rejuran, Sculptra, Restylane Skinboosters and NCTF 135 HA, among others. You can search it yourself on the <a href="https://mdar.mda.gov.my/frontend/web/index.php?r=carian" target="_blank" rel="noopener">MDA medical device register</a>.</p>
+<p>The Ministry of Health classes filler injections as a minimally invasive aesthetic procedure. Only a registered doctor holding a Letter of Credentialing and Privileging (LCP) may do them, and only in premises registered under the Private Healthcare Facilities and Services Act 1998.</p>
+<p>Exosomes are a different story. A search of the MDA register for “exosome” returns no products. Cosmetics in Malaysia are legally for use on the outside of the body, so a cosmetic exosome serum is not approved for injection. Doctors have reported skin damage and scarring in people who had skin-care exosome products injected.</p>` },
+      { id: 'check', h: 'How to check the doctor, clinic and product (the 3Ps)', tocLabel: 'Check the 3Ps', html: `<p>Before any aesthetic procedure, the Ministry of Health asks the public to “check the 3Ps”:</p>
+<ol>
+<li>Practitioner. Look the doctor up on the Malaysian Medical Council’s <a href="https://merits.mmc.gov.my/search" target="_blank" rel="noopener">MeRITS register</a>, then check MOH’s <a href="https://hq.moh.gov.my/medicalprac/statistik-cawangan-perundangan-perubatan/" target="_blank" rel="noopener">national registry of doctors with an LCP</a>.</li>
+<li>Premises. The clinic should be registered with MOH, which publishes a list of registered private clinics, including those that offer aesthetic services.</li>
+<li>Procedure and product. Ask for the name of the product and look it up on the MDA register. Check too that MOH allows the procedure: breast and buttock fillers, for example, are illegal in Malaysia.</li>
+</ol>
+<div class="box box--pink" role="note"><span class="box__title">Avoid injections at homes, hotels or salons</span><p style="font-size:16px;line-height:1.6">In September 2026, raids in Shah Alam, Pandan Perdana and Kepong found unlicensed “therapists” selling aesthetic treatments from rented homes and advertising them on TikTok and Instagram. A cheap price from an unlicensed operator often means an unregistered product, and nobody to treat you if something goes wrong.</p></div>` },
+      { id: 'risks', h: 'Side effects and risks', html: `<p>Most side effects are minor and pass quickly: bruising, redness, swelling, tenderness and small bumps where the needle went in. These usually settle within a few days to a week.</p>
+<p>The less common risks are the ones to ask about:</p>
+<ul>
+<li>Lumps and nodules, especially with collagen stimulators. In the Sculptra trial, 17% of patients developed nodules or bumps, sometimes months after treatment. Hyaluronic acid can be dissolved with an enzyme, but these lumps cannot.</li>
+<li>Injection into a blood vessel. It is rare but serious, and can cause skin damage, vision loss or stroke. This is the main reason injections belong with trained doctors, who can spot it and treat it straight away.</li>
+<li>Infection and allergic reactions.</li>
+</ul>
+<p>Get urgent medical care if, after an injection, the pain is severe or getting worse, the skin turns pale, blue or dusky, or your vision changes in any way.</p>` },
       { id: 'consultation', h: 'Questions to ask at your consultation', tocLabel: 'Questions to ask', html: `<ul>
 <li>Which product will you use, and is it registered with the MDA?</li>
 <li>Do you hold an LCP for this procedure?</li>
@@ -65,20 +66,20 @@ ${figure('aesthetic-suite', 'A clean aesthetic treatment room with a treatment b
 <li>What are the risks for me, and what happens if there is a complication?</li>
 <li>What is the total cost, including follow-up sessions?</li>
 </ul>
-<p>A careful doctor will review your medical history, medicines and allergies, explain alternatives, and give you time to decide. Be wary of pressure to book on the spot.</p>` },
-      { id: 'cost', h: 'How much do skin boosters cost?', tocLabel: 'Typical costs', html: `<p>Prices depend on the product, the amount used and the number of sessions. In October 2026, clinic adverts in Malaysia commonly listed skin booster treatments from <strong>around RM500 to over RM3,000 per session</strong>. Ask for a written quote that includes all planned sessions. A much lower price can be a warning sign of unregistered products or an unlicensed provider.</p>` },
+<p>A careful doctor will go through your medical history, medicines and allergies, explain the alternatives, and let you take time to decide. Be wary of anyone who pushes you to book on the spot.</p>` },
+      { id: 'cost', h: 'How much do skin boosters cost?', tocLabel: 'Typical costs', html: `<p>The price depends on the product, how much is used and how many sessions you need. In October 2026, Malaysian clinic adverts commonly listed skin booster treatments from around RM500 to over RM3,000 per session. Ask for a written quote that covers every planned session. A much lower price can be a sign of an unregistered product or an unlicensed provider.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Finding an aesthetic clinic in Kuala Lumpur',
     clinicsTocLabel: 'Finding a clinic',
-    clinicsIntro: 'Our directory lists doctor-led aesthetic clinics in Kuala Lumpur and Petaling Jaya, with addresses, opening hours and directions. Whichever clinic you choose, check the 3Ps above before booking any injectable treatment.',
+    clinicsIntro: 'Our directory lists doctor-led aesthetic clinics in Kuala Lumpur and Petaling Jaya, with addresses, opening hours and directions. Whichever clinic you pick, check the 3Ps above before you book an injectable treatment.',
     clinicLinks: [['/clinics/aesthetic-clinics/', 'Aesthetic clinics'], ['/clinics/bukit-bintang/', 'Clinics in Bukit Bintang'], ['/clinics/petaling-jaya/', 'Clinics in Petaling Jaya']],
     faqs: [
-      ['Are skin boosters safe?', 'When a registered product is injected by a trained, LCP-holding doctor in a registered clinic, side effects are usually mild and short-lived, such as bruising and swelling. Serious complications are rare but possible, which is why the doctor and clinic matter.'],
-      ['Is exosome injection approved in Malaysia?', 'No exosome product appears on the Medical Device Authority register, and cosmetics in Malaysia are legally for use on the skin, not injection. Ask your doctor exactly what product they plan to use and check its registration.'],
-      ['How long do skin boosters last?', 'It depends on the type. Hyaluronic acid boosters are usually repeated every few months, while collagen stimulators work gradually and can last longer. Most people need top-up sessions.'],
-      ['Can a beautician do skin booster injections in Malaysia?', 'No. Filler injections are a medical procedure in Malaysia. They may only be done by a registered doctor with a Letter of Credentialing and Privileging (LCP), in an MOH-registered clinic.'],
-      ['How much is a skin booster in Malaysia?', 'In October 2026, clinic adverts commonly listed skin boosters from around RM500 to over RM3,000 per session, depending on the product and number of sessions. Ask for a written quote.'],
+      ['Are skin boosters safe?', 'With a registered product, injected by a trained doctor who holds an LCP, in a registered clinic, side effects are usually mild and brief, such as bruising and swelling. Serious complications are rare but can happen, so the choice of doctor and clinic matters.'],
+      ['Is exosome injection approved in Malaysia?', 'No. No exosome product appears on the Medical Device Authority register, and cosmetics in Malaysia are legally for use on the skin, not for injection. Ask your doctor which product they plan to use and check its registration yourself.'],
+      ['How long do skin boosters last?', 'It depends on the type. Hyaluronic acid boosters are usually repeated every few months. Collagen stimulators work slowly and can last longer. Most people need top-up sessions.'],
+      ['Can a beautician do skin booster injections in Malaysia?', 'No. Filler injections are a medical procedure in Malaysia, and only a registered doctor with a Letter of Credentialing and Privileging (LCP) may do them, in an MOH-registered clinic.'],
+      ['How much is a skin booster in Malaysia?', 'In October 2026, clinic adverts commonly listed skin boosters at around RM500 to over RM3,000 per session, depending on the product and the number of sessions. Ask for a written quote.'],
     ],
     sources: [
       ['Medical Device Authority — Malaysia Medical Device Register', 'https://mdar.mda.gov.my/frontend/web/index.php?r=carian'],
