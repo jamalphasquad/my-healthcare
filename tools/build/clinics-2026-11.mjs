@@ -1398,6 +1398,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "03-9130 0196",
   "phoneIntl": "+60391300196",
   "checked": "2026-11-15",
+  "geo": [
+   3.106658,
+   101.726877
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -1504,6 +1508,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "03-4294 6114",
   "phoneIntl": "+60342946114",
   "checked": "2026-11-15",
+  "geo": [
+   3.106069,
+   101.748426
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -2010,6 +2018,10 @@ export const RESEARCHED_2026_11 = [
   "whatsapp": "012-565 1280",
   "website": "https://www.kliniklenseng.my/",
   "checked": "2026-11-15",
+  "geo": [
+   3.076156,
+   101.742655
+  ],
   "hours": {
    "0": [
     [
@@ -2120,6 +2132,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60392010033",
   "website": "https://klsihat.com/",
   "checked": "2026-11-15",
+  "geo": [
+   3.118286,
+   101.727541
+  ],
   "hours": {
    "0": [
     [
@@ -2437,6 +2453,10 @@ export const RESEARCHED_2026_11 = [
   "whatsapp": "011-6253 0334",
   "website": "https://klinikazurose.com/",
   "checked": "2026-11-15",
+  "geo": [
+   3.067664,
+   101.74263
+  ],
   "hours": {
    "0": [
     [
@@ -2641,6 +2661,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60185783360",
   "website": "https://klinikmedic360.com/locations/",
   "checked": "2026-11-15",
+  "geo": [
+   3.082408,
+   101.735254
+  ],
   "hours": {
    "0": [
     [
@@ -2740,6 +2764,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60391314127",
   "website": "https://careclinics.com.my/locations/",
   "checked": "2026-11-15",
+  "geo": [
+   3.100247,
+   101.742339
+  ],
   "hours": {
    "0": [
     [
@@ -2898,6 +2926,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60189173360",
   "website": "https://klinikmedic360.com/locations/",
   "checked": "2026-11-15",
+  "geo": [
+   3.054657,
+   101.788375
+  ],
   "hours": {
    "0": [
     [
@@ -3101,6 +3133,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60104538388",
   "website": "https://www.mygpclinics.com/bandar-mahkota-cheras-clinic",
   "checked": "2026-11-15",
+  "geo": [
+   3.053994,
+   101.786751
+  ],
   "hours": {
    "0": [
     [
@@ -3207,6 +3243,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+601156570478",
   "website": "https://medilove.com.my/our-kliniks/",
   "checked": "2026-11-15",
+  "geo": [
+   3.051252,
+   101.790295
+  ],
   "hours": {
    "0": [
     [
@@ -3378,6 +3418,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "03-8311 9300",
   "phoneIntl": "+60383119300",
   "checked": "2026-11-22",
+  "geo": [
+   2.936227,
+   101.655288
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -3564,6 +3608,10 @@ export const RESEARCHED_2026_11 = [
   "whatsapp": "010-669 2967",
   "website": "https://aidason.my/",
   "checked": "2026-11-15",
+  "geo": [
+   2.925421,
+   101.649624
+  ],
   "hours": {
    "0": [
     [
@@ -3666,6 +3714,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+601155013790",
   "website": "https://klinikputeri.com.my/cawangan/cyberjaya/",
   "checked": "2026-11-15",
+  "geo": [
+   2.934951,
+   101.63662
+  ],
   "hours": {
    "0": [
     [
@@ -3751,6 +3803,10 @@ export const RESEARCHED_2026_11 = [
   "whatsapp": "011-1666 4816",
   "website": "https://klinik-ohana.com/",
   "checked": "2026-11-15",
+  "geo": [
+   2.924803,
+   101.651181
+  ],
   "hours": {
    "0": [
     [
@@ -3847,6 +3903,10 @@ export const RESEARCHED_2026_11 = [
   "whatsapp": "019-779 1815",
   "website": "https://www.klinikhazramedic.com.my/locations/klinik-hazra-medic-cyberjaya/",
   "checked": "2026-11-15",
+  "geo": [
+   2.924234,
+   101.655922
+  ],
   "hours": {
    "0": [
     [
@@ -5232,6 +5292,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "03-8733 6775",
   "phoneIntl": "+60387336775",
   "checked": "2026-11-22",
+  "geo": [
+   2.98587,
+   101.771437
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -5317,6 +5381,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "03-8733 6312",
   "phoneIntl": "+60387336312",
   "checked": "2026-11-22",
+  "geo": [
+   3.023132,
+   101.775748
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -5876,6 +5944,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60387404239",
   "website": "https://mediviron.com.my/listings/klinik-mediviron-tmn-putra-kajang/",
   "checked": "2026-11-15",
+  "geo": [
+   2.978397,
+   101.772637
+  ],
   "hours": {
    "0": [
     [
@@ -6323,6 +6395,10 @@ export const RESEARCHED_2026_11 = [
   "whatsapp": "013-442 6942",
   "website": "https://qualitashealth.com.my/clinic/klinik-era-medik/",
   "checked": "2026-11-15",
+  "geo": [
+   2.984436,
+   101.780759
+  ],
   "hours": {
    "0": [
     [
@@ -6448,6 +6524,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "06-268 0333",
   "phoneIntl": "+6062680333",
   "checked": "2026-11-22",
+  "geo": [
+   2.207336,
+   102.315857
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -6622,6 +6702,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "06-312 3333",
   "phoneIntl": "+6063123333",
   "checked": "2026-11-22",
+  "geo": [
+   2.274395,
+   102.215156
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -6919,6 +7003,10 @@ export const RESEARCHED_2026_11 = [
   "phone": "06-336 0170",
   "phoneIntl": "+6063360170",
   "checked": "2026-11-22",
+  "geo": [
+   2.213776,
+   102.230051
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -7419,6 +7507,10 @@ export const RESEARCHED_2026_11 = [
   "whatsapp": "011-3928 5709",
   "website": "https://www.marissamediclinic.com/bukitbaru",
   "checked": "2026-11-15",
+  "geo": [
+   2.218145,
+   102.27387
+  ],
   "hours": {
    "0": [
     [
@@ -7638,6 +7730,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+601131455541",
   "website": "https://klinikprocare.com/melaka",
   "checked": "2026-11-15",
+  "geo": [
+   2.216408,
+   102.270573
+  ],
   "hours": {
    "0": [
     [
@@ -7716,6 +7812,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60165785541",
   "website": "https://klinikprocare.com/melaka",
   "checked": "2026-11-15",
+  "geo": [
+   2.238715,
+   102.302654
+  ],
   "hours": {
    "0": [
     [
@@ -7794,6 +7894,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+6063121625",
   "website": "https://klinikkeluargamedisha.com/",
   "checked": "2026-11-15",
+  "geo": [
+   2.28812,
+   102.181424
+  ],
   "hours": {
    "0": [
     [
@@ -8078,6 +8182,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60185788875",
   "website": "http://www.klinikklebang.com/",
   "checked": "2026-11-21",
+  "geo": [
+   2.215304,
+   102.198215
+  ],
   "hours": {
    "0": [
     [
@@ -8182,6 +8290,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+6062409533",
   "website": "https://www.facebook.com/kliniksalam.kotamelaka/",
   "checked": "2026-11-15",
+  "geo": [
+   2.211777,
+   102.234791
+  ],
   "hours": {
    "0": [
     [
@@ -8285,6 +8397,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+6062522000",
   "website": "https://www.facebook.com/klinikbukitkatil/",
   "checked": "2026-11-15",
+  "geo": [
+   2.230207,
+   102.293111
+  ],
   "hours": {
    "0": [
     [
@@ -12835,6 +12951,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60197135828",
   "website": "https://alpropharmacy.com.my/pages/alpro-clinic",
   "checked": "2026-11-15",
+  "geo": [
+   2.726075,
+   101.99917
+  ],
   "hours": {
    "0": [
     [
@@ -13553,6 +13673,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60355245213",
   "website": "https://mediviron.com.my/listings/klinik-mediviron-shah-alam-sec-7/",
   "checked": "2026-11-15",
+  "geo": [
+   3.067125,
+   101.489191
+  ],
   "hours": {
    "0": [
     [
@@ -14251,6 +14375,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60355191133",
   "website": "https://qualitashealth.com.my/clinic/qualitas-health-kumpulan-medic-shah-alam/",
   "checked": "2026-11-15",
+  "geo": [
+   3.057806,
+   101.506811
+  ],
   "hours": {
    "0": [],
    "1": [
@@ -14333,6 +14461,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60355425286",
   "website": "https://qualitashealth.com.my/clinic/qualitas-klinik-ng-dan-lee-shah-alam/",
   "checked": "2026-11-21",
+  "geo": [
+   3.048672,
+   101.534425
+  ],
   "hours": {
    "0": [
     [
@@ -14498,6 +14630,10 @@ export const RESEARCHED_2026_11 = [
   "phoneIntl": "+60350332528",
   "website": "https://qualitashealth.com.my/clinic/klinik-ardence/",
   "checked": "2026-11-15",
+  "geo": [
+   3.087295,
+   101.476643
+  ],
   "hours": {
    "0": [
     [

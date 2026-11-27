@@ -444,8 +444,8 @@ export function clinicPage(c, { clinics, articles, topics, coll }) {
     image: c.image, imageAlt: c.imageAlt,
     geo: { region: c.region, place: `${c.areaLabel}, ${c.locality}`, pos: c.geo },
     // Listings still missing hours, phone or address stay visible to visitors but out of Google's index
-    // (and out of the sitemap) until the details are confirmed.
-    noindex: c.incomplete,
+    // (and out of the sitemap) until the details are confirmed. So do template-only listings (THIN_CLINICS in build.mjs).
+    noindex: c.incomplete || c.noindex,
     ld,
   }) + header('clinics') + `
 <div class="wrap" style="padding-top:36px">${crumbs(items)}</div>

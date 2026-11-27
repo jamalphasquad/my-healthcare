@@ -40,6 +40,29 @@ for (const c of RAW_CLINICS) if (GBP[c.slug]) Object.assign(c, GBP[c.slug]); // 
 const CLINICS = RAW_CLINICS.map((c) => normalizeClinic(c, NETWORKS)).sort((a, b) => a.incomplete - b.incomplete);
 const dup = CLINICS.map((c) => c.slug).find((s, i, all) => all.indexOf(s) !== i);
 if (dup) throw new Error('Duplicate clinic slug: ' + dup);
+// Listings whose text is still a shared template (same sentence, only the name swapped) stay live
+// for visitors but out of Google's index and the sitemap until they get details of their own.
+// Remove a slug from this set once its listing has its own description, services and confirmed hours.
+const THIN_CLINICS = new Set([
+  'klinik-kesihatan-taman-nirwana-ampang', 'klinik-kesihatan-hulu-kelang-ampang', 'klinik-mediviron-ampang-point',
+  'klinik-mediviron-taman-cahaya-indah-ampang', 'klinik-mediviron-taman-nirwana-ampang', 'klinik-kesihatan-cheras',
+  'klinik-kesihatan-cheras-baru', 'klinik-kesihatan-bandar-tun-razak-cheras', 'klinik-kesihatan-batu-9-cheras',
+  'klinik-kesihatan-bandar-tun-hussein-onn-cheras', 'klinik-kesihatan-balakong-cheras', '24hr-klinik-medic-360-connaught-cheras',
+  '24hr-klinik-medic-360-bandar-mahkota-cheras', 'klinik-mediviron-cyberjaya', 'klinik-mediviron-sri-hartamas-desa-sri-hartamas',
+  'klinik-kesihatan-sungai-chua-kajang', 'klinik-kesihatan-sungai-sekamat-kajang', 'klinik-kesihatan-bandar-seri-putra-kajang',
+  'klinik-mediviron-jalan-bukit-mewah-kajang', 'klinik-mediviron-kajang-sentral', 'klinik-mediviron-mutiara-heights-kajang',
+  'klinik-mediviron-taman-putra-kajang', 'klinik-mediviron-sungai-long-kajang', 'klinik-kesihatan-ayer-molek-melaka',
+  'klinik-kesihatan-bukit-rambai-melaka', 'klinik-kesihatan-cheng-melaka', 'klinik-kesihatan-klebang-besar-melaka',
+  'klinik-kesihatan-jalan-gereja-melaka', 'klinik-kesihatan-tengkera-melaka', 'klinik-kesihatan-batu-berendam-melaka',
+  'klinik-medic-360-ss2-petaling-jaya', 'klinik-kesihatan-puchong', 'klinik-kesihatan-batu-13-puchong',
+  'klinik-mediviron-puchong-jaya', 'klinik-mediviron-pusat-bandar-puchong', 'klinik-mediviron-puchong-avenue',
+  'klinik-mediviron-puchong-16-sierra', 'klinik-kesihatan-seremban-2', 'klinik-kesihatan-senawang-seremban',
+  'klinik-kesihatan-ampangan-seremban', 'klinik-kesihatan-sikamat-seremban', 'klinik-mediviron-shah-alam-seksyen-7',
+  'klinik-mediviron-i-city-shah-alam', 'klinik-mediviron-bukit-jelutong', 'klinik-mediviron-eco-ardence-shah-alam',
+  'klinik-mediviron-kota-kemuning-shah-alam', 'klinik-mediviron-harmoni-square-elmina-shah-alam',
+]);
+for (const s of THIN_CLINICS) if (!CLINICS.some((c) => c.slug === s)) throw new Error('THIN_CLINICS lists an unknown clinic: ' + s);
+for (const c of CLINICS) c.noindex = c.incomplete || THIN_CLINICS.has(c.slug);
 const AREAS = deriveAreas(CLINICS);
 const comingSoon = COMING_SOON.filter((n) => !AREAS.some((a) => a.label.toLowerCase() === n.toLowerCase()));
 LAYOUT.areas = AREAS;
@@ -91,7 +114,7 @@ const indexed = buildIndex({ ...ctx, collectionPages });
 const urls = [
   ['/', '1.0', 'weekly'], ['/clinics/', '0.9', 'weekly'], ['/articles/', '0.9', 'daily'],
   ...collectionPages.filter((x) => !x.noindex).map((x) => [x.url, '0.8', 'weekly', x.image]),
-  ...CLINICS.filter((c) => !c.incomplete).map((c) => [`/clinics/${c.slug}/`, '0.8', 'monthly', c.image]),
+  ...CLINICS.filter((c) => !c.noindex).map((c) => [`/clinics/${c.slug}/`, '0.8', 'monthly', c.image]),
   ...ARTICLES.filter((a) => !a.noindex).map((a) => [`/articles/${a.slug}/`, '0.7', 'monthly', a.image, a.modified]),
   ['/about/', '0.4', 'yearly'], ['/contact/', '0.4', 'yearly'], ['/privacy/', '0.2', 'yearly'],
   ...(EDITOR ? [[editorPath(), '0.4', 'monthly']] : []),
