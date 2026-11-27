@@ -681,30 +681,30 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk', 'High blood pres
     title: 'Thalassaemia screening in Malaysia: who gets free tests, and what a carrier result means',
     crumb: 'Thalassaemia screening in Malaysia',
     desc: 'About 1 in 20 Malaysians carries thalassaemia. Who gets free screening, including Budget 2027’s expansion, how the blood test works, and what carrier results mean.',
-    excerpt: 'About 1 in 20 Malaysians carries a thalassaemia gene, usually without knowing it. Who can get screened for free, how the test works, and what to do if you or your partner is a carrier.',
-    standfirst: 'About 1 in 20 Malaysians carries a gene for thalassaemia (also spelled thalassemia), usually without any symptoms. If two carriers have children, each child has a 1 in 4 chance of a serious, lifelong blood disorder. Here is who can be screened for free, including the families newly covered by Budget 2027, how the test works, and what your result means.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'About 1 in 20 Malaysians carries a thalassaemia gene, usually without knowing it. This guide covers who can get screened for free, how the test works, and what to do if you or your partner is a carrier.',
+    standfirst: 'About 1 in 20 Malaysians carries a gene for thalassaemia (also spelled thalassemia), usually with no symptoms at all. When two carriers have children, each child has a 1 in 4 chance of a serious blood disorder that lasts for life. This guide explains who can be screened for free, including the families Budget 2027 adds, how the test works, and what your result means.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-27', author: AUTHOR, news: true, medical: true,
     about: ['Thalassemia', 'Talasemia'],
     image: 'paediatrician', imageAlt: 'A doctor listening to a baby’s chest with a stethoscope',
     keyPoints: [
-      'Thalassaemia is an inherited blood disorder. Carriers (thalassaemia trait) are healthy and need no treatment, but can pass the gene to their children.',
+      'Thalassaemia is an inherited blood disorder. Carriers (thalassaemia trait) are healthy and need no treatment, but they can pass the gene to their children.',
       'About 1 in 20 Malaysians is a carrier. Of more than 920,000 Form 4 students screened between 2017 and 2020, 5.8% were carriers.',
       'If both parents are carriers, each pregnancy has a 1 in 4 chance of a child with thalassaemia major.',
-      'Free screening is offered to Form 4 students, pregnant women and relatives of carriers. Budget 2027 extends it to husbands and children in at-risk carrier families.',
-      'Screening starts with a full blood count. Small red blood cells (MCV below 80 fL or MCH below 27 pg) lead to a haemoglobin analysis.',
+      'Form 4 students, pregnant women and relatives of carriers can be screened for free. Budget 2027 adds husbands and children in at-risk carrier families.',
+      'Screening starts with a full blood count. If the red blood cells are small (MCV below 80 fL or MCH below 27 pg), the next step is a haemoglobin analysis.',
     ],
     sections: [
-      { id: 'what', h: 'What is thalassaemia?', html: `<p>Thalassaemia is a group of inherited conditions in which the body makes too little normal haemoglobin, the protein in red blood cells that carries oxygen. The main types in Malaysia are <strong>alpha thalassaemia</strong>, <strong>beta thalassaemia</strong> and <strong>haemoglobin E (HbE)</strong>, which can combine with beta thalassaemia.</p>
-<p>There is a big difference between carrying the gene and having the disease:</p>
+      { id: 'what', h: 'What is thalassaemia?', html: `<p>Thalassaemia is a group of inherited conditions in which the body makes too little normal haemoglobin, the protein in red blood cells that carries oxygen. In Malaysia the main types are alpha thalassaemia, beta thalassaemia and haemoglobin E (HbE), which can occur together with beta thalassaemia.</p>
+<p>Carrying the gene and having the disease are very different:</p>
 <ul>
-<li><strong>Carrier (thalassaemia trait or minor):</strong> one altered gene. Carriers are healthy, may have slightly small red blood cells or mild anaemia, and need no treatment. Most don’t know they are carriers.</li>
-<li><strong>Thalassaemia major and other severe forms:</strong> two altered genes. Severe forms need blood transfusions every few weeks for life, plus daily medicine to remove the extra iron that transfusions build up in the body. Milder forms may need transfusions only sometimes.</li>
+<li>A carrier (thalassaemia trait, or thalassaemia minor) has one altered gene. Carriers are healthy, may have slightly small red blood cells or mild anaemia, and need no treatment. Most don’t know they are carriers.</li>
+<li>Thalassaemia major and the other severe forms come from two altered genes. Severe forms need blood transfusions every few weeks for life, plus daily medicine to clear the extra iron that transfusions leave in the body. Milder forms may only need a transfusion now and then.</li>
 </ul>
-<p>Malaysia’s Ministry of Health now groups patients by whether they depend on regular transfusions (transfusion-dependent thalassaemia) or not.</p>` },
-      { id: 'how-common', h: 'How common is it in Malaysia?', tocLabel: 'How common it is', html: `<p>Thalassaemia is one of the most common inherited conditions in Malaysia. Between 2017 and 2020, <strong>924,487 Form 4 students</strong> were screened, and <strong>53,559 (5.8%)</strong> were carriers, about 1 in 17. Rates differ between states and communities. In February 2026, the Health Minister told Parliament that carrier rates were highest in Sabah, Selangor and Kedah.</p>
-<p>The Malaysian Thalassaemia Registry’s 2023 report lists <strong>9,554 patients</strong> treated in public hospitals. Lifelong treatment is expensive: the Health Ministry estimates about <strong>RM3 million per patient</strong> from infancy to age 40.</p>
-<p>Screening is working. New thalassaemia births fell by about half between 2009 and 2021, and the national programme aims to cut them by up to 75% by 2030.</p>` },
-      { id: 'inheritance', h: 'How thalassaemia is passed on', tocLabel: 'How it is passed on', html: `<p>Everyone has two copies of the genes involved, one from each parent. When <strong>both parents are carriers</strong> of the same type, each pregnancy has:</p>
+<p>Malaysia’s Ministry of Health now groups patients by whether or not they depend on regular transfusions (transfusion-dependent thalassaemia).</p>` },
+      { id: 'how-common', h: 'How common is it in Malaysia?', tocLabel: 'How common it is', html: `<p>Thalassaemia is one of the most common inherited conditions in Malaysia. Between 2017 and 2020, 924,487 Form 4 students were screened and 53,559 of them (5.8%) were carriers, about 1 in 17. The rate varies between states and communities. In February 2026, the Health Minister told Parliament that carrier rates were highest in Sabah, Selangor and Kedah.</p>
+<p>The Malaysian Thalassaemia Registry’s 2023 report lists 9,554 patients treated in public hospitals. Treatment lasts a lifetime and costs a lot: the Health Ministry estimates about RM3 million per patient from infancy to age 40.</p>
+<p>Screening is working. The number of babies born with thalassaemia fell by about half between 2009 and 2021, and the national programme aims to cut it by up to 75% by 2030.</p>` },
+      { id: 'inheritance', h: 'How thalassaemia is passed on', tocLabel: 'How it is passed on', html: `<p>Everyone has two copies of the genes involved, one from each parent. When both parents carry the same type, the chances for each pregnancy are:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Chance</th><th>Child’s result</th></tr></thead>
 <tbody>
@@ -712,53 +712,50 @@ ${figure('bp-check-desk', 'A blood pressure monitor on a desk', 'High blood pres
 <tr><td>1 in 2 (50%)</td><td>Carrier, like the parents</td></tr>
 <tr><td>1 in 4 (25%)</td><td>Not affected and not a carrier</td></tr>
 </tbody></table></div>
-<p>These chances are the same for every pregnancy. Having one affected child doesn’t make the next one safer. When <strong>only one parent is a carrier</strong>, each child has a 1 in 2 chance of being a carrier, but not of having a severe form from those genes.</p>
-<p>This is why screening matters most for couples planning to marry or have children, and for the family of anyone found to be a carrier.</p>
+<p>The chances are the same every time. Having one affected child doesn’t make the next pregnancy any safer. If only one parent is a carrier, each child has a 1 in 2 chance of being a carrier, but can’t get a severe form from those genes.</p>
+<p>That is why screening matters most for couples who plan to marry or have children, and for the family of anyone found to be a carrier.</p>
 ${figure('mother-child', 'A mother and daughter sitting together', 'If one family member is a carrier, parents, brothers, sisters and children may be carriers too.')}` },
-      { id: 'budget-2027', h: 'What Budget 2027 changes', tocLabel: 'Budget 2027 changes', html: `<p>Budget 2027, tabled on 9 October 2026, extends <strong>free thalassaemia screening by the Ministry of Health to husbands and children in at-risk carrier families</strong>, to reduce the number of babies born with thalassaemia major.</p>
-<p>In practice, this means that if a woman is found to be a carrier, for example during pregnancy, her husband and children can be screened for free. The government has not yet announced a start date or how families will be called for screening. Ask at your Klinik Kesihatan if you think your family qualifies.</p>` },
-      { id: 'who', h: 'Who is screened for free', tocLabel: 'Free screening', html: `<ul>
-<li><strong>Form 4 students:</strong> the national school programme has offered free screening since 2016, with parents’ written consent. Each student gets a Thalassaemia Screening Card showing their result.</li>
-<li><strong>Pregnant women:</strong> screened as part of antenatal care at government clinics since 2009.</li>
-<li><strong>Relatives of carriers and patients:</strong> parents, brothers, sisters and children (known as cascade screening).</li>
-<li><strong>From 2027:</strong> husbands and children in at-risk carrier families, under Budget 2027.</li>
-<li><strong>Anyone who asks:</strong> government health clinics also offer voluntary screening, including for couples planning to marry. Premarital thalassaemia screening is voluntary in Malaysia, unlike HIV screening for Muslim couples.</li>
-</ul>
-<p>Keep your screening card or result safely. You only need to be screened once, as your genes don’t change.</p>` },
-      { id: 'test', h: 'How the test works', tocLabel: 'The test', html: `<ol>
-<li><strong>Full blood count (FBC):</strong> a routine blood test. Thalassaemia is suspected if your red blood cells are small, with an MCV below 80 fL or an MCH below 27 pg.</li>
-<li><strong>Haemoglobin analysis:</strong> a laboratory test (HPLC or capillary electrophoresis) that identifies beta thalassaemia, HbE and some other types.</li>
-<li><strong>DNA analysis:</strong> done when needed, mainly to confirm alpha thalassaemia, which a haemoglobin analysis can miss.</li>
-</ol>
-<p>You don’t usually need to fast. Some types, including mild alpha thalassaemia and HbE, can show normal red cell sizes, so a normal FBC doesn’t always rule out being a carrier. If thalassaemia runs in your family, tell the doctor.</p>
-${figure('blood-sample', 'A blood sample tube being prepared for testing', 'Screening starts with a routine full blood count, the same test used in a health check.')}` },
-      { id: 'iron', h: 'Thalassaemia trait or iron deficiency?', tocLabel: 'Trait or low iron?', html: `<p>Both thalassaemia trait and iron deficiency cause small red blood cells, and both are common in Malaysia, so they are easily confused. A doctor can tell them apart with an iron test (ferritin) and a haemoglobin analysis.</p>
+      { id: 'budget-2027', h: 'What Budget 2027 changes', tocLabel: 'Budget 2027 changes', html: `<p>Budget 2027, tabled on 9 October 2026, extends the Ministry of Health’s free thalassaemia screening to husbands and children in at-risk carrier families. The aim is fewer babies born with thalassaemia major.</p>
+<p>So if a woman is found to be a carrier, during pregnancy for example, her husband and children can be screened for free. The government hasn’t yet said when this starts or how families will be called in. If you think your family qualifies, ask at your Klinik Kesihatan.</p>` },
+      { id: 'who', h: 'Who is screened for free', tocLabel: 'Free screening', html: `<p>Free screening is open to:</p>
 <ul>
-<li><strong>Don’t start iron tablets</strong> just because a blood test shows small red cells or mild anaemia. Iron doesn’t help thalassaemia trait, and extra iron can build up over time.</li>
-<li>Severe iron deficiency can hide beta thalassaemia trait on the haemoglobin analysis. Your doctor may treat the iron deficiency first and repeat the test, although couples at risk should still be fully tested.</li>
-</ul>` },
-      { id: 'results', h: 'If you or your partner is a carrier', tocLabel: 'If you are a carrier', html: `<ul>
-<li><strong>You are healthy.</strong> Being a carrier doesn’t turn into thalassaemia major, and you don’t need treatment.</li>
-<li><strong>Tell your family.</strong> Your parents, brothers, sisters and children may also be carriers and can be screened.</li>
-<li><strong>Test your partner</strong> before or early in pregnancy. If only one of you is a carrier, your children cannot have a severe form from those genes.</li>
-<li><strong>If you are both carriers,</strong> ask for <strong>genetic counselling</strong>. A counsellor will explain your options without pressure. These include testing a pregnancy early by chorionic villus sampling (CVS) or amniocentesis, which carry a small risk of miscarriage, or IVF with genetic testing of embryos before pregnancy. Some of the DNA tests are done by private laboratories, so ask about costs.</li>
+<li>Form 4 students, through the national school programme that has run since 2016. Parents give written consent, and each student gets a Thalassaemia Screening Card with their result.</li>
+<li>Pregnant women, as part of antenatal care at government clinics since 2009.</li>
+<li>Relatives of carriers and patients: parents, brothers, sisters and children. This is called cascade screening.</li>
+<li>Husbands and children in at-risk carrier families, from 2027 under Budget 2027.</li>
+<li>Anyone who asks. Government health clinics also offer voluntary screening, including for couples who plan to marry. Premarital thalassaemia screening is voluntary in Malaysia, unlike HIV screening for Muslim couples.</li>
 </ul>
+<p>Keep your screening card or result somewhere safe. Your genes don’t change, so you only need to be screened once.</p>` },
+      { id: 'test', h: 'How the test works', tocLabel: 'The test', html: `<ol>
+<li>A full blood count (FBC), the routine blood test. Thalassaemia is suspected if your red blood cells are small, with an MCV below 80 fL or an MCH below 27 pg.</li>
+<li>A haemoglobin analysis, a laboratory test (HPLC or capillary electrophoresis) that picks up beta thalassaemia, HbE and some other types.</li>
+<li>A DNA analysis when needed, mainly to confirm alpha thalassaemia, which a haemoglobin analysis can miss.</li>
+</ol>
+<p>You don’t usually need to fast. Some types, including mild alpha thalassaemia and HbE, can show normal-sized red cells, so a normal FBC doesn’t always mean you aren’t a carrier. Tell the doctor if thalassaemia runs in your family.</p>
+${figure('blood-sample', 'A blood sample tube being prepared for testing', 'Screening starts with a routine full blood count, the same test used in a health check.')}` },
+      { id: 'iron', h: 'Thalassaemia trait or iron deficiency?', tocLabel: 'Trait or low iron?', html: `<p>Thalassaemia trait and iron deficiency both cause small red blood cells, and both are common in Malaysia, so they are easy to confuse. A doctor can tell them apart with an iron test (ferritin) and a haemoglobin analysis.</p>
+<p>Don’t start taking iron tablets just because a blood test shows small red cells or mild anaemia. Iron doesn’t help thalassaemia trait, and extra iron can build up over time.</p>
+<p>Severe iron deficiency can hide beta thalassaemia trait on the haemoglobin analysis. Your doctor may treat the iron deficiency first and then repeat the test, though couples at risk should still have the full set of tests.</p>` },
+      { id: 'results', h: 'If you or your partner is a carrier', tocLabel: 'If you are a carrier', html: `<p>Being a carrier doesn’t make you ill, and it never turns into thalassaemia major. You don’t need any treatment.</p>
+<p>Tell your family. Your parents, brothers, sisters and children may be carriers too, and they can be screened.</p>
+<p>Get your partner tested, ideally before pregnancy or early in it. If only one of you is a carrier, your children can’t have a severe form from those genes.</p>
+<p>If you are both carriers, ask for genetic counselling. A counsellor will explain your options without pushing you either way. They include testing a pregnancy early by chorionic villus sampling (CVS) or amniocentesis, both of which carry a small risk of miscarriage, or IVF with genetic testing of embryos before pregnancy. Private laboratories do some of the DNA tests, so ask about costs.</p>
 <div class="box box--pink" role="note"><span class="box__title">See a doctor if a child has</span><ul><li>Pale skin, poor feeding or slow growth</li><li>Unusual tiredness or breathlessness</li><li>A swollen tummy or yellow eyes</li></ul><p style="font-size:16px;line-height:1.6">Severe thalassaemia usually shows in the first two years of life.</p></div>` },
-      { id: 'where-to-go', h: 'Where to get screened in Kuala Lumpur', tocLabel: 'Where to get screened', html: `<p><strong>Klinik Kesihatan</strong> (government health clinics) offer free walk-in, voluntary and family screening. Bring your MyKad, and if you are a relative of a carrier, their screening card or result.</p>
-<p>Private GP clinics can do a full blood count and send blood for haemoglobin analysis at a private laboratory, for a fee. Children with thalassaemia in Kuala Lumpur are treated at government hospitals, including Hospital Tunku Azizah, which also offers stem cell transplants, the only established cure.</p>` },
+      { id: 'where-to-go', h: 'Where to get screened in Kuala Lumpur', tocLabel: 'Where to get screened', html: `<p>Government health clinics (Klinik Kesihatan) offer free screening for walk-ins, volunteers and families of carriers. Bring your MyKad, and if you are related to a carrier, bring their screening card or result.</p>
+<p>Private GP clinics can do a full blood count and send blood to a private laboratory for haemoglobin analysis, for a fee. In Kuala Lumpur, children with thalassaemia are treated at government hospitals, including Hospital Tunku Azizah, which also offers stem cell transplants, the only established cure.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Find a clinic for a blood test',
     clinicsTocLabel: 'Find a clinic',
-    clinicsIntro: 'Any GP clinic can do a full blood count and arrange further tests if your red blood cells are small. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, with opening hours and directions.',
+    clinicsIntro: 'Any GP clinic can do a full blood count and arrange more tests if your red blood cells are small. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, with opening hours and directions.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
-      ['Is thalassaemia screening free in Malaysia?', 'Yes, for Form 4 students, pregnant women, relatives of carriers and patients, and anyone who asks at a government health clinic. Budget 2027 extends free screening to husbands and children in at-risk carrier families.'],
-      ['How common is thalassaemia in Malaysia?', 'About 1 in 20 Malaysians is a carrier. Among more than 920,000 Form 4 students screened between 2017 and 2020, 5.8% were carriers.'],
-      ['What is the difference between thalassaemia minor and major?', 'Thalassaemia minor (trait) means you carry one altered gene. You are healthy and need no treatment. Thalassaemia major means two altered genes and usually needs regular blood transfusions for life.'],
-      ['If both parents are thalassaemia carriers, will the baby have it?', 'Not necessarily. Each pregnancy has a 1 in 4 chance of thalassaemia major, a 1 in 2 chance of being a carrier, and a 1 in 4 chance of being unaffected. Genetic counselling can explain your options.'],
-      ['Which blood test detects thalassaemia?', 'Screening starts with a full blood count. If the red cells are small (MCV below 80 fL or MCH below 27 pg), a haemoglobin analysis follows, and sometimes DNA analysis for alpha thalassaemia.'],
-      ['Is premarital thalassaemia screening compulsory in Malaysia?', 'No. Premarital thalassaemia screening is voluntary, although it is strongly encouraged. HIV screening is the premarital test that is compulsory for Muslim couples.'],
+      ['Is thalassaemia screening free in Malaysia?', 'Yes, for Form 4 students, pregnant women, relatives of carriers and patients, and anyone who asks at a government health clinic. Budget 2027 adds husbands and children in at-risk carrier families.'],
+      ['How common is thalassaemia in Malaysia?', 'About 1 in 20 Malaysians is a carrier. Of more than 920,000 Form 4 students screened between 2017 and 2020, 5.8% were carriers.'],
+      ['What is the difference between thalassaemia minor and major?', 'Thalassaemia minor (trait) means you carry one altered gene, and you are healthy and need no treatment. Thalassaemia major means two altered genes, and it usually needs regular blood transfusions for life.'],
+      ['If both parents are thalassaemia carriers, will the baby have it?', 'Not necessarily. Each pregnancy has a 1 in 4 chance of thalassaemia major, a 1 in 2 chance of a carrier, and a 1 in 4 chance of a child who is unaffected. Genetic counselling can explain your options.'],
+      ['Which blood test detects thalassaemia?', 'Screening starts with a full blood count. If the red cells are small (MCV below 80 fL or MCH below 27 pg), a haemoglobin analysis follows, and sometimes a DNA analysis for alpha thalassaemia.'],
+      ['Is premarital thalassaemia screening compulsory in Malaysia?', 'No. It is voluntary, though strongly encouraged. The premarital test that is compulsory for Muslim couples is HIV screening.'],
     ],
     sources: [
       ['MOH / MaHTAS — Clinical Practice Guidelines: Management of Thalassaemia, 2nd edition (2024)', 'https://mymahtas2.moh.gov.my/files/e-CPG%20Thalas-16_8_25.pdf'],

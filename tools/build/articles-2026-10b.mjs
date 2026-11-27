@@ -115,35 +115,35 @@ ${figure('glucometer', 'A blood glucose meter and test strips on a table', 'Ever
     title: 'Dengue vaccine in Malaysia: what Qdenga can and can’t do',
     crumb: 'Dengue vaccine in Malaysia',
     desc: 'Who can get the Qdenga dengue vaccine in Malaysia, how well it works, the DENV-3 caveat, side effects and typical cost. Not in the national programme.',
-    excerpt: 'With dengue cases up sharply in 2026, many people are asking about the vaccine. Who can get it, how well it works, the important DENV-3 caveat, and what it costs.',
-    standfirst: 'Dengue cases in Malaysia have risen sharply in 2026, and more people are asking about the dengue vaccine. Here is who can have it, how well it protects, an important caveat about this year’s main dengue strain, and what to expect.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'Dengue cases are up sharply in 2026, and many people are asking about the vaccine. This guide covers who can get it, how well it works, the DENV-3 caveat and what it costs.',
+    standfirst: 'Dengue cases in Malaysia have risen sharply in 2026, and more people are asking about the dengue vaccine. This guide explains who can have it, how well it protects, what to know about this year’s main dengue strain, and what to expect at the clinic.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-27', author: AUTHOR, news: true, medical: true,
     about: ['Dengue', 'Denggi'],
     image: 'vaccination', imageAlt: 'A vaccine injection being given in the upper arm',
     keyPoints: [
-      'Qdenga is the only dengue vaccine available in Malaysia. It is conditionally registered for people aged 4 and above, given as two doses three months apart.',
-      'It is not part of the National Immunisation Programme, so it is only available at private clinics and hospitals.',
-      'In trials it cut dengue hospitalisations by about 84% over four and a half years.',
-      'In people who have never had dengue, it did not protect against DENV-3, the strain driving Malaysia’s 2026 surge. Discuss this with your doctor.',
-      'The vaccine does not replace mosquito control or knowing the warning signs of severe dengue.',
+      'Qdenga is the only dengue vaccine available in Malaysia. It is conditionally registered for people aged 4 and above and given as two doses, three months apart.',
+      'It isn’t part of the National Immunisation Programme, so you can only get it at private clinics and hospitals.',
+      'In trials it cut hospital admissions for dengue by about 84% over four and a half years.',
+      'In people who had never had dengue, it gave no protection against DENV-3, the strain behind Malaysia’s 2026 surge. Ask your doctor about this.',
+      'You still need mosquito control, and you still need to know the warning signs of severe dengue.',
     ],
     sections: [
-      { id: 'situation', h: 'Dengue in Malaysia in 2026', tocLabel: 'Dengue in 2026', html: `<p>Malaysia recorded <strong>78,225 dengue cases and 68 deaths</strong> between 4 January and 25 October 2026, according to the national iDengue portal. Selangor accounts for the largest share, followed by the Federal Territories and Johor. By early September, cases were 66% higher than in the same period of 2025, and deaths had almost doubled.</p>
-<p>The Ministry of Health has linked the rise to a shift in the dominant dengue strain, from <strong>DENV-2 to DENV-3</strong>. That matters when thinking about the vaccine, as explained below.</p>
+      { id: 'situation', h: 'Dengue in Malaysia in 2026', tocLabel: 'Dengue in 2026', html: `<p>According to the national iDengue portal, Malaysia recorded 78,225 dengue cases and 68 deaths between 4 January and 25 October 2026. Selangor has the most cases, followed by the Federal Territories and Johor. By early September, cases were 66% higher than in the same period of 2025, and deaths had almost doubled.</p>
+<p>The Ministry of Health has linked the rise to a change in the most common dengue strain, from DENV-2 to DENV-3. That change affects how useful the vaccine is for some people, as the section on DENV-3 below explains.</p>
 ${figure('aedes-mosquito', 'A close-up of an Aedes mosquito on skin', 'Dengue is spread by Aedes mosquitoes, which bite mostly in the early morning and late afternoon.')}` },
-      { id: 'what', h: 'What is the dengue vaccine?', tocLabel: 'What the vaccine is', html: `<p>Qdenga (also known as TAK-003) is a live, weakened vaccine designed to protect against all four types of dengue virus (DENV-1 to DENV-4). It is given as an injection under the skin, in <strong>two doses three months apart</strong>. A booster dose is not currently part of the approved schedule.</p>
-<p>Malaysia’s Drug Control Authority gave it <strong>conditional registration in February 2024</strong>. That means the company must keep submitting safety and effectiveness data. A renewal of the conditional registration has been reported from February 2026.</p>
-<p>The vaccine is <strong>not in the National Immunisation Programme</strong>. In August 2026, the Health Minister said the Ministry was still studying whether to include it, including a cost-benefit analysis. For now, it is only offered privately.</p>` },
-      { id: 'who', h: 'Who can have it, and who should not', tocLabel: 'Who can have it', html: `<p>In Malaysia, it is registered for people <strong>aged 4 and above</strong>, whether or not they have had dengue before. There is little data for people over 60.</p>
-<p>The World Health Organization recommends it mainly for children aged 6 to 16 in areas with high dengue transmission, and says people up to 60 with conditions such as diabetes or high blood pressure may also be offered it.</p>
-<p><strong>You should not have it if you:</strong></p>
+      { id: 'what', h: 'What is the dengue vaccine?', tocLabel: 'What the vaccine is', html: `<p>Qdenga, also called TAK-003, is a live, weakened vaccine designed to protect against all four types of dengue virus (DENV-1 to DENV-4). It is injected under the skin in two doses, three months apart. The approved schedule doesn’t currently include a booster.</p>
+<p>Malaysia’s Drug Control Authority gave it conditional registration in February 2024, which means the company has to keep sending in data on safety and effectiveness. A renewal of the conditional registration has been reported from February 2026.</p>
+<p>The vaccine is not in the National Immunisation Programme. In August 2026, the Health Minister said the Ministry was still studying whether to add it, including a cost-benefit analysis. For now you can only get it privately.</p>` },
+      { id: 'who', h: 'Who can have it, and who should not', tocLabel: 'Who can have it', html: `<p>In Malaysia it is registered for people aged 4 and above, whether or not they have had dengue before. There is little data on people over 60.</p>
+<p>The World Health Organization recommends it mainly for children aged 6 to 16 in places where dengue spreads a lot. WHO says people up to 60 with conditions such as diabetes or high blood pressure may also be offered it.</p>
+<p>Don’t have the vaccine if you:</p>
 <ul>
-<li>are pregnant or breastfeeding (and you should avoid becoming pregnant for at least a month afterwards)</li>
-<li>have a weakened immune system, for example from chemotherapy, high-dose steroids or HIV with low immunity</li>
-<li>had a severe allergic reaction to a previous dose or to any ingredient</li>
+<li>are pregnant or breastfeeding (and avoid getting pregnant for at least a month afterwards)</li>
+<li>have a weakened immune system, for example because of chemotherapy, high-dose steroids or HIV with low immunity</li>
+<li>had a severe allergic reaction to an earlier dose or to any of its ingredients</li>
 </ul>
-<p>If you have a high fever on the day, the vaccination should be delayed.</p>` },
-      { id: 'how-well', h: 'How well does it work?', tocLabel: 'How well it works', html: `<p>The main trial followed about 20,000 children aged 4 to 16 in Asia and Latin America. Four and a half years after the second dose, the vaccine had reduced:</p>
+<p>If you have a high fever on the day, the vaccination should wait.</p>` },
+      { id: 'how-well', h: 'How well does it work?', tocLabel: 'How well it works', html: `<p>The main trial followed about 20,000 children aged 4 to 16 in Asia and Latin America. Four and a half years after the second dose, the vaccine had reduced dengue cases and hospital admissions by these amounts:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Group</th><th>Fewer dengue cases</th><th>Fewer hospital admissions</th></tr></thead>
 <tbody>
@@ -151,11 +151,11 @@ ${figure('aedes-mosquito', 'A close-up of an Aedes mosquito on skin', 'Dengue is
 <tr><td>Had dengue before</td><td>64%</td><td>86%</td></tr>
 <tr><td>Never had dengue</td><td>54%</td><td>79%</td></tr>
 </tbody></table></div>
-<p>Protection was highest in the first year and a half, and lowest in children aged 4 to 5.</p>` },
-      { id: 'denv3', h: 'The DENV-3 caveat', html: `<p>Protection was not the same against every dengue type. In people who had <strong>never had dengue</strong>, the trial found good protection against DENV-2 and some against DENV-1, but <strong>no protection against DENV-3</strong>, and too few DENV-4 cases to show any benefit.</p>
-<p>The few cases of severe dengue in vaccinated people who had never had dengue were all DENV-3. The difference was not statistically significant, but WHO says a higher risk “cannot be conclusively ruled out”. In people who <strong>had</strong> dengue before, the vaccine did protect against DENV-3, cutting hospital admissions by about three-quarters.</p>
-<div class="box box--pink" role="note"><span class="box__title">Why this matters in 2026</span><p style="font-size:16px;line-height:1.6">DENV-3 is now the main dengue type in Malaysia. If you have never had dengue, or don’t know, talk this through with your doctor before deciding. They can explain the likely benefit for you and your family.</p></div>` },
-      { id: 'side-effects', h: 'Side effects', html: `<p>Most side effects are mild to moderate, start within two days and last one to three days. They are less common after the second dose. In trials:</p>
+<p>Protection was strongest in the first year and a half, and weakest in children aged 4 to 5.</p>` },
+      { id: 'denv3', h: 'The DENV-3 caveat', html: `<p>The vaccine protected better against some dengue types than others. In people who had never had dengue, the trial found good protection against DENV-2 and some against DENV-1. It found none against DENV-3, and there were too few DENV-4 cases to show any benefit.</p>
+<p>Among vaccinated people who had never had dengue, the few cases of severe dengue were all DENV-3. The difference was not statistically significant, but WHO says a higher risk “cannot be conclusively ruled out”. In people who had dengue before, the vaccine did protect against DENV-3 and cut hospital admissions by about three-quarters.</p>
+<div class="box box--pink" role="note"><span class="box__title">Why this matters in 2026</span><p style="font-size:16px;line-height:1.6">DENV-3 is now the main dengue type in Malaysia. If you have never had dengue, or you don’t know whether you have, talk it through with your doctor before you decide. They can explain how much you and your family are likely to benefit.</p></div>` },
+      { id: 'side-effects', h: 'Side effects', html: `<p>Most side effects are mild to moderate. They start within two days, last one to three days, and are less common after the second dose. In the trials, people reported:</p>
 <ul>
 <li>Pain at the injection site: 50%</li>
 <li>Headache: 35%</li>
@@ -164,27 +164,27 @@ ${figure('aedes-mosquito', 'A close-up of an Aedes mosquito on skin', 'Dengue is
 <li>Feeling unwell or tired: 20–24%</li>
 <li>Fever: 11%</li>
 </ul>
-<p>Severe allergic reactions (anaphylaxis) are rare, so you will be asked to wait at the clinic for a short time afterwards. Because it is a live vaccine, some people briefly have the vaccine virus in their blood, and a dengue test taken soon after vaccination may be positive. Tell the doctor you were recently vaccinated if you need a dengue test.</p>` },
-      { id: 'cost', h: 'Cost and where to get it', tocLabel: 'Cost', html: `<p>Because the vaccine is only available privately, each clinic sets its own price. News reports from 2024 to 2026 put the cost of <strong>both doses at roughly RM400 to RM500</strong> in total. Ask for the full price, including the consultation, before your first dose.</p>
-<p>Vaccination costs can be claimed under the medical expenses tax relief for vaccinations. Keep your receipt.</p>` },
-      { id: 'still-prevent', h: 'Keep preventing bites, even if vaccinated', tocLabel: 'Prevention still matters', html: `<p>No dengue vaccine gives complete protection. Keep doing the basics:</p>
+<p>Severe allergic reactions (anaphylaxis) are rare, but the clinic will ask you to wait for a short time after the injection in case one happens. Because it is a live vaccine, some people briefly have the vaccine virus in their blood, so a dengue test taken soon after vaccination may come back positive. If you need a dengue test, tell the doctor you were vaccinated recently.</p>` },
+      { id: 'cost', h: 'Cost and where to get it', tocLabel: 'Cost', html: `<p>The vaccine is only available privately, so each clinic sets its own price. News reports from 2024 to 2026 put the total for both doses at roughly RM400 to RM500. Ask for the full price, including the consultation, before your first dose.</p>
+<p>You can claim vaccination costs under the medical expenses tax relief for vaccinations, so keep your receipt.</p>` },
+      { id: 'still-prevent', h: 'Keep preventing bites, even if vaccinated', tocLabel: 'Prevention still matters', html: `<p>No dengue vaccine protects completely, so keep up the usual precautions:</p>
 <ul>
-<li>Clear standing water around your home every week, including plant saucers, roof gutters and containers.</li>
-<li>Use mosquito repellent and cover up during the early morning and late afternoon.</li>
-<li>Know the <a href="/articles/dengue-klang-valley-first-three-days/">early symptoms and warning signs of dengue</a>. Severe stomach pain, persistent vomiting, bleeding gums or drowsiness need urgent care.</li>
+<li>Every week, clear standing water around your home, including plant saucers, roof gutters and containers.</li>
+<li>Use mosquito repellent, and cover up in the early morning and late afternoon.</li>
+<li>Learn the <a href="/articles/dengue-klang-valley-first-three-days/">early symptoms and warning signs of dengue</a>. Severe stomach pain, vomiting that won’t stop, bleeding gums or drowsiness need urgent care.</li>
 </ul>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to ask about the dengue vaccine',
     clinicsTocLabel: 'Where to ask',
-    clinicsIntro: 'Many private GP clinics can discuss whether the dengue vaccine is suitable for you and give both doses. Call ahead to check they have it in stock. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, with opening hours and directions.',
+    clinicsIntro: 'Many private GP clinics can tell you whether the dengue vaccine suits you and give both doses. Call ahead to check it is in stock. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states, with opening hours and directions.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-sunday/', 'Clinics open on Sunday'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
-      ['Is the dengue vaccine approved in Malaysia?', 'Yes, conditionally. Qdenga received conditional registration from Malaysia’s Drug Control Authority in February 2024 for people aged 4 and above, and a renewal has been reported from February 2026.'],
-      ['Is the dengue vaccine free in Malaysia?', 'No. It is not part of the National Immunisation Programme, so it is only available at private clinics and hospitals. The Health Ministry said in 2026 that it is still studying whether to include it.'],
-      ['How much is the dengue vaccine in Malaysia?', 'News reports from 2024 to 2026 put the cost of both doses at roughly RM400 to RM500 in total at private clinics. Prices vary, so ask before booking.'],
-      ['Should I get the dengue vaccine if I have never had dengue?', 'Talk to your doctor first. In people who had never had dengue, the vaccine did not protect against DENV-3 in trials, and DENV-3 is the main dengue type in Malaysia in 2026.'],
-      ['Can I get dengue after the vaccine?', 'Yes. The vaccine lowers the risk of dengue and especially of hospital admission, but it does not give complete protection. Keep preventing mosquito bites and watch for warning signs.'],
+      ['Is the dengue vaccine approved in Malaysia?', 'Yes, with conditions. Malaysia’s Drug Control Authority gave Qdenga conditional registration in February 2024 for people aged 4 and above, and a renewal has been reported from February 2026.'],
+      ['Is the dengue vaccine free in Malaysia?', 'No. It isn’t part of the National Immunisation Programme, so you can only get it at private clinics and hospitals. The Health Ministry said in 2026 that it is still studying whether to add it.'],
+      ['How much is the dengue vaccine in Malaysia?', 'News reports from 2024 to 2026 put the total for both doses at roughly RM400 to RM500 at private clinics. Prices differ, so ask before you book.'],
+      ['Should I get the dengue vaccine if I have never had dengue?', 'Talk to your doctor first. In the trials, the vaccine didn’t protect people who had never had dengue against DENV-3, and DENV-3 is the main dengue type in Malaysia in 2026.'],
+      ['Can I get dengue after the vaccine?', 'Yes. The vaccine lowers your risk of dengue, and especially of ending up in hospital, but it doesn’t protect completely. Keep avoiding mosquito bites and watch for the warning signs.'],
     ],
     sources: [
       ['iDengue — National dengue surveillance portal (accessed 26 Oct 2026)', 'https://idengue.mysa.gov.my/'],
@@ -287,83 +287,78 @@ ${figure('nurse-stethoscope', 'A nurse with a stethoscope in a clinic', 'The vac
     title: 'Pico laser for melasma in Malaysia: what it can do, the risks, and the 2026 rules',
     crumb: 'Pico laser for melasma',
     desc: 'What pico laser can and can’t do for melasma, pigmentation and acne scars, risks for Asian skin, the 2026 laser permit rules and how to check a clinic.',
-    excerpt: 'Pico laser is heavily advertised for melasma and pigmentation. What the evidence shows, why melasma keeps coming back, the risks for Asian skin, and Malaysia’s new laser rules.',
-    standfirst: 'Pico laser is one of the most advertised treatments for melasma and pigmentation in Malaysia. Here is what the evidence actually shows, why melasma keeps coming back, the risks for Asian skin, and how Malaysia’s 2026 rules on aesthetic lasers protect you.',
-    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: PUB, author: AUTHOR, news: true, medical: true,
+    excerpt: 'Pico laser is heavily advertised for melasma and pigmentation. This guide covers what the evidence shows, why melasma keeps coming back, the risks for Asian skin, and Malaysia’s new laser rules.',
+    standfirst: 'Pico laser is one of the most advertised treatments for melasma and pigmentation in Malaysia. This guide looks at what the studies show, why melasma keeps coming back, the risks for Asian skin, and how Malaysia’s 2026 rules on aesthetic lasers protect you.',
+    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: '2026-11-27', author: AUTHOR, news: true, medical: true,
     about: ['Melasma'],
     image: 'aesthetic-device', imageAlt: 'An aesthetic laser device in a clinic treatment room',
     keyPoints: [
-      'Melasma is a long-term skin condition. Treatments can fade it, but none cure it, and it often comes back.',
-      'Daily sunscreen, ideally a tinted one with iron oxides, and prescription creams from a doctor are the first-line treatment.',
-      'Lasers, including pico lasers, are usually kept for melasma that hasn’t improved with creams. They can make pigmentation worse in darker skin.',
-      'Since 1 June 2026, many aesthetic lasers are “designated medical devices” in Malaysia. Operating one without a permit is an offence.',
-      'Avoid whitening creams sold online. NPRA has cancelled several in 2026 for containing mercury, hydroquinone or tretinoin.',
+      'Melasma is a long-term skin condition. Treatment can fade it but can’t cure it, and it often comes back.',
+      'The first treatments to try are daily sunscreen, ideally a tinted one with iron oxides, and prescription creams from a doctor.',
+      'Lasers, pico lasers included, are usually kept for melasma that hasn’t improved with creams. In darker skin they can make pigmentation worse.',
+      'Since 1 June 2026, many aesthetic lasers are “designated medical devices” in Malaysia, and operating one without a permit is an offence.',
+      'Avoid whitening creams sold online. NPRA cancelled several in 2026 because they contained mercury, hydroquinone or tretinoin.',
     ],
     sections: [
-      { id: 'what', h: 'What is melasma?', html: `<p>Melasma is a common condition that causes flat, brown or grey-brown patches, usually on both cheeks, the forehead, upper lip, nose or chin. It is not itchy, infectious or cancerous. It is most common in women aged 20 to 40 and in people with light-brown to brown skin, including many Malaysians.</p>
-<p>Triggers include <strong>sunlight</strong> (both UV and visible light), <strong>hormones</strong> such as pregnancy, the contraceptive pill and hormone therapy, and a <strong>family tendency</strong>. Up to half of pregnant women may develop some melasma.</p>
-<p>It is easily confused with other pigmentation, which is treated differently:</p>
+      { id: 'what', h: 'What is melasma?', html: `<p>Melasma is a common condition that causes flat brown or grey-brown patches, usually on both cheeks, the forehead, upper lip, nose or chin. It doesn’t itch, it isn’t infectious and it isn’t cancer. It is most common in women aged 20 to 40 and in people with light-brown to brown skin, which includes many Malaysians.</p>
+<p>Sunlight (both UV and visible light) can trigger it, and so can hormones, for example during pregnancy, on the contraceptive pill or with hormone therapy. It also runs in families. Up to half of pregnant women may get some melasma.</p>
+<p>Other kinds of pigmentation look similar but are treated differently:</p>
 <ul>
-<li><strong>Sunspots</strong> (solar lentigines): separate, well-defined brown spots on sun-damaged skin.</li>
-<li><strong>Post-inflammatory hyperpigmentation</strong>: dark marks left after acne, eczema or injury.</li>
-<li><strong>Hori’s naevus</strong>: deeper, blue-grey patches, often on the cheeks.</li>
+<li>Sunspots (solar lentigines) are separate, sharply edged brown spots on sun-damaged skin.</li>
+<li>Post-inflammatory hyperpigmentation is the dark marks left after acne, eczema or an injury.</li>
+<li>Hori’s naevus is deeper blue-grey patches, often on the cheeks.</li>
 </ul>
-<p>Because the right treatment depends on the type, a doctor should diagnose your pigmentation before any laser.</p>` },
-      { id: 'recurs', h: 'Why melasma keeps coming back', tocLabel: 'Why it comes back', html: `<p>There is no cure for melasma. Even after a good result, sun exposure or hormonal changes can bring it back, and it often returns after treatment stops. Pregnancy-related melasma may fade after delivery but can return in a later pregnancy.</p>
-<p>That is why dermatologists treat melasma as a long-term condition that needs ongoing sun protection and, often, maintenance treatment. Be cautious of any clinic that promises permanent removal.</p>` },
-      { id: 'first-line', h: 'Treatments to try first', html: `<ul>
-<li><strong>Sun protection every day:</strong> a broad-spectrum sunscreen of SPF 30 or higher. A <strong>tinted sunscreen containing iron oxides</strong> also blocks visible light. In one trial it gave better results than a UV-only sunscreen. Reapply outdoors and wear a hat.</li>
-<li><strong>Prescription creams:</strong> creams that combine a lightening agent with a retinoid and a mild steroid are considered the most effective first treatment, improving 60–80% of cases. They must be prescribed and supervised by a doctor, used for limited periods, and avoided in pregnancy.</li>
-<li><strong>Other options</strong> your doctor may suggest include azelaic acid, and tablets or creams containing tranexamic acid. Tranexamic acid tablets are a medicine that needs a doctor’s assessment, as they are not suitable for everyone.</li>
-</ul>
+<p>The right treatment depends on which one you have, so a doctor should diagnose your pigmentation before you have any laser.</p>` },
+      { id: 'recurs', h: 'Why melasma keeps coming back', tocLabel: 'Why it comes back', html: `<p>Melasma can’t be cured. Even after a good result, sun or a change in hormones can bring it back, and it often returns once treatment stops. Melasma that started in pregnancy may fade after the birth but can come back in a later pregnancy.</p>
+<p>Dermatologists therefore treat melasma as a long-term condition, with sun protection that never stops and, often, maintenance treatment. Be cautious of any clinic that promises to remove it for good.</p>` },
+      { id: 'first-line', h: 'Treatments to try first', html: `<p>Sun protection comes first, every day. Use a broad-spectrum sunscreen of SPF 30 or higher. A tinted sunscreen that contains iron oxides also blocks visible light, and in one trial it gave better results than a sunscreen that blocked UV only. Reapply it when you are outdoors, and wear a hat.</p>
+<p>Prescription creams that combine a lightening agent with a retinoid and a mild steroid are considered the most effective first treatment, and they improve 60–80% of cases. A doctor has to prescribe and supervise them, they are used for limited periods, and they should be avoided in pregnancy.</p>
+<p>Your doctor may also suggest azelaic acid, or tablets or creams that contain tranexamic acid. Tranexamic acid tablets are a medicine that doesn’t suit everyone, so a doctor needs to assess you first.</p>
 ${figure('facial-treatment', 'A doctor examining facial skin in a clinic', 'A doctor should confirm the type of pigmentation before recommending treatment.')}` },
-      { id: 'pico', h: 'What pico laser is, and what it can do', tocLabel: 'What pico laser does', html: `<p>Picosecond (“pico”) lasers fire extremely short pulses of light, measured in trillionths of a second. The pulses shatter pigment mainly through a pressure effect rather than heat, using less energy than older nanosecond (Q-switched) lasers.</p>
-<p>The evidence differs by use:</p>
+      { id: 'pico', h: 'What pico laser is, and what it can do', tocLabel: 'What pico laser does', html: `<p>Picosecond (“pico”) lasers fire extremely short pulses of light, measured in trillionths of a second. The pulses break up pigment mostly through pressure rather than heat, and use less energy than older nanosecond (Q-switched) lasers.</p>
+<p>How well they work depends on what they are used for:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Use</th><th>What studies show</th></tr></thead>
 <tbody>
-<tr><td>Tattoo removal</td><td>Strongest evidence</td></tr>
-<tr><td>Melasma</td><td>Can help, especially with the 1064 nm wavelength. Results are often similar to, not better than, prescription creams, and melasma usually returns without maintenance</td></tr>
+<tr><td>Tattoo removal</td><td>The strongest evidence</td></tr>
+<tr><td>Melasma</td><td>Can help, especially at the 1064 nm wavelength. Results are often about the same as prescription creams, not better, and melasma usually returns without maintenance</td></tr>
 <tr><td>Acne scars</td><td>Moderate improvement over about six sessions with a fractional lens</td></tr>
-<tr><td>Sunspots and freckles</td><td>Often respond well, but are a different condition from melasma</td></tr>
+<tr><td>Sunspots and freckles</td><td>Often respond well, but they are a different condition from melasma</td></tr>
 </tbody></table></div>
-<p>For melasma, a 2023 analysis of trials found the 1064 nm pico laser effective without significant side effects, while the 755 nm laser was no better than creams and more likely to cause darkening. A 2026 review concluded that no single device is a definitive answer, and that maintenance is crucial.</p>` },
-      { id: 'risks', h: 'Risks for Asian and darker skin', tocLabel: 'Risks for Asian skin', html: `<p>Brown skin is more prone to pigment changes after any laser. Possible effects include:</p>
+<p>For melasma, a 2023 analysis of trials found the 1064 nm pico laser effective without significant side effects. The 755 nm laser did no better than creams and was more likely to cause darkening. A 2026 review concluded that no single device solves melasma and that maintenance treatment is essential.</p>` },
+      { id: 'risks', h: 'Risks for Asian and darker skin', tocLabel: 'Risks for Asian skin', html: `<p>Brown skin is more likely to change colour after any laser. The possible effects include:</p>
 <ul>
-<li><strong>Darkening</strong> (post-inflammatory hyperpigmentation), usually temporary but sometimes lasting months.</li>
-<li><strong>Rebound melasma</strong>, where melasma comes back darker.</li>
-<li><strong>Patchy white spots</strong> (mottled hypopigmentation), reported in about 10% of East Asian patients after repeated low-energy “laser toning”, and linked to too much total energy.</li>
-<li>Redness, swelling, blistering and, rarely, scarring or burns, which are more common when an untrained person operates the laser.</li>
+<li>darkening (post-inflammatory hyperpigmentation), which is usually temporary but can last for months</li>
+<li>rebound melasma, where the melasma comes back darker</li>
+<li>patchy white spots (mottled hypopigmentation), reported in about 10% of East Asian patients after repeated low-energy “laser toning” and linked to too much total energy</li>
+<li>redness, swelling, blistering and, rarely, scarring or burns, which happen more often when the person using the laser isn’t trained</li>
 </ul>
-<p>Avoid sun exposure before and after treatment, and tell the doctor if you are pregnant, take medicines that make the skin sensitive to light, or get cold sores.</p>` },
-      { id: 'rules', h: 'Malaysia’s 2026 rules on aesthetic lasers', tocLabel: 'The 2026 laser rules', html: `<p>Since <strong>1 June 2026</strong>, the Medical Device (Designated Medical Device) Order 2026 lists many aesthetic lasers as <strong>designated medical devices</strong>. These include Nd:YAG (532 and 1064 nm), alexandrite, ruby, diode, fractional CO2 and other lasers when used to reduce pigmentation such as melasma and freckles, or for other aesthetic purposes. HIFU devices are also covered.</p>
-<p>Under the Medical Device Act 2012, <strong>no one may operate a designated medical device without a permit</strong>. The penalty is a fine of up to RM100,000, up to a year in prison, or both. The Medical Device Authority says operators must have qualifications and skills recognised by the government.</p>
-<p>The Ministry of Health’s guidelines also class lasers for pigmentation as an aesthetic medical procedure, to be done by a registered doctor with the right training and credentials, in a registered clinic. A medical-grade laser in a salon or spa is a red flag.</p>` },
+<p>Stay out of the sun before and after treatment. Tell the doctor if you are pregnant, take medicines that make your skin sensitive to light, or get cold sores.</p>` },
+      { id: 'rules', h: 'Malaysia’s 2026 rules on aesthetic lasers', tocLabel: 'The 2026 laser rules', html: `<p>Since 1 June 2026, the Medical Device (Designated Medical Device) Order 2026 has listed many aesthetic lasers as designated medical devices. They include Nd:YAG (532 and 1064 nm), alexandrite, ruby, diode, fractional CO2 and other lasers when used to reduce pigmentation such as melasma and freckles, or for other aesthetic purposes. HIFU devices are covered too.</p>
+<p>Under the Medical Device Act 2012, nobody may operate a designated medical device without a permit. The penalty is a fine of up to RM100,000, up to a year in prison, or both. The Medical Device Authority says operators must have qualifications and skills the government recognises.</p>
+<p>The Ministry of Health’s guidelines also class laser treatment for pigmentation as an aesthetic medical procedure. It should be done by a registered doctor with the right training and credentials, in a registered clinic. A medical-grade laser in a salon or spa is a red flag.</p>` },
       { id: 'check', h: 'How to check a clinic before booking', tocLabel: 'Check the clinic', html: `<ol>
-<li><strong>Doctor:</strong> look them up on the Malaysian Medical Council’s <a href="https://merits.mmc.gov.my/" target="_blank" rel="noopener">MeRITS register</a> and ask whether they hold a Letter of Credentialing and Privileging (LCP) for aesthetic procedures.</li>
-<li><strong>Clinic:</strong> it should be registered with the Ministry of Health, not a salon or home business.</li>
-<li><strong>Device:</strong> ask which laser will be used and check it on the <a href="https://mdar.mda.gov.my/" target="_blank" rel="noopener">MDA medical device register</a>.</li>
-<li><strong>Plan:</strong> ask for a diagnosis, the expected number of sessions, the risks for your skin type, what happens if pigmentation gets worse, and a written quote.</li>
+<li>Look the doctor up on the Malaysian Medical Council’s <a href="https://merits.mmc.gov.my/" target="_blank" rel="noopener">MeRITS register</a>, and ask whether they hold a Letter of Credentialing and Privileging (LCP) for aesthetic procedures.</li>
+<li>Make sure the clinic is registered with the Ministry of Health. A salon or home business isn’t.</li>
+<li>Ask which laser they will use, and check it on the <a href="https://mdar.mda.gov.my/" target="_blank" rel="noopener">MDA medical device register</a>.</li>
+<li>Ask for a diagnosis, the expected number of sessions, the risks for your skin type, what happens if the pigmentation gets worse, and a written quote.</li>
 </ol>` },
-      { id: 'creams', h: 'A warning about whitening creams', tocLabel: 'Whitening creams', html: `<p>Many people with melasma try lightening creams bought online. Some contain hidden ingredients. In 2025 and 2026, the National Pharmaceutical Regulatory Agency (NPRA) cancelled the notification of 20 cosmetic products for containing <strong>mercury</strong>, <strong>hydroquinone</strong> or <strong>tretinoin</strong>. Half of them contained mercury.</p>
-<ul>
-<li><strong>Mercury</strong> is banned in cosmetics. It can damage the kidneys and nerves, and harm the developing brain of an unborn baby or young child.</li>
-<li><strong>Hydroquinone and tretinoin</strong> are medicines in Malaysia, not cosmetic ingredients. They should only be used with a health professional’s advice.</li>
-</ul>
-<p>Check a product on NPRA’s list of cancelled cosmetics before using it, and stop using any cream that is not properly labelled.</p>
+      { id: 'creams', h: 'A warning about whitening creams', tocLabel: 'Whitening creams', html: `<p>Many people with melasma try lightening creams bought online, and some of these contain ingredients that aren’t on the label. In 2025 and 2026, the National Pharmaceutical Regulatory Agency (NPRA) cancelled the notification of 20 cosmetic products because they contained mercury, hydroquinone or tretinoin. Half of them contained mercury.</p>
+<p>Mercury is banned in cosmetics. It can damage the kidneys and nerves, and harm the developing brain of an unborn baby or a young child. Hydroquinone and tretinoin are classed as medicines in Malaysia, not cosmetic ingredients, and should only be used on a health professional’s advice.</p>
+<p>Before you use a product, check NPRA’s list of cancelled cosmetics, and stop using any cream that isn’t properly labelled.</p>
 <div class="box box--pink" role="note"><span class="box__title">See a doctor if a patch</span><ul><li>is changing in size, shape or colour</li><li>bleeds, itches or doesn’t heal</li><li>appears on only one side, or looks different from your other marks</li></ul></div>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Finding a doctor for pigmentation',
     clinicsTocLabel: 'Finding a doctor',
-    clinicsIntro: 'A GP can diagnose your pigmentation and start first-line treatment, and refer you to a dermatologist if needed. For laser treatment, choose a doctor-led aesthetic clinic and check the doctor, clinic and device first. Our directory lists GP and aesthetic clinics with opening hours and directions.',
+    clinicsIntro: 'A GP can diagnose your pigmentation, start the first treatments and refer you to a dermatologist if needed. For laser treatment, choose a doctor-led aesthetic clinic and check the doctor, clinic and device first. Our directory lists GP and aesthetic clinics with opening hours and directions.',
     clinicLinks: [['/clinics/aesthetic-clinics/', 'Aesthetic clinics'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/bukit-bintang/', 'Clinics in Bukit Bintang'], ['/clinics/petaling-jaya/', 'Clinics in Petaling Jaya']],
     faqs: [
-      ['Can pico laser remove melasma permanently?', 'No. Pico laser can lighten melasma, but no treatment cures it, and melasma often returns, especially with sun exposure or hormonal changes. Ongoing sun protection and maintenance are usually needed.'],
-      ['Is pico laser safe for Malaysian skin?', 'It can be, in trained hands with suitable settings. Brown skin has a higher risk of darkening, rebound melasma and white spots after lasers, so a doctor should assess your skin and start cautiously.'],
-      ['How many pico laser sessions are needed for melasma?', 'Studies used anywhere from three to about ten sessions, usually several weeks apart, followed by maintenance. Your doctor should give you a plan based on your skin.'],
-      ['Who is allowed to do laser treatment in Malaysia?', 'Since 1 June 2026, many aesthetic lasers are designated medical devices, and operating one requires a permit from the Medical Device Authority. MOH guidelines also class laser pigmentation treatment as a medical procedure for trained, registered doctors in registered clinics.'],
-      ['What is the best treatment for melasma?', 'Daily broad-spectrum sunscreen, ideally tinted with iron oxides, plus prescription creams supervised by a doctor, is the usual first-line treatment. Lasers are generally kept for melasma that doesn’t respond.'],
+      ['Can pico laser remove melasma permanently?', 'No. Pico laser can lighten melasma, but no treatment cures it, and it often comes back, especially with sun or hormonal changes. Most people need sun protection and maintenance treatment for the long term.'],
+      ['Is pico laser safe for Malaysian skin?', 'It can be, with a trained doctor and suitable settings. Brown skin is more likely to darken, get rebound melasma or develop white spots after a laser, so a doctor should assess your skin and start cautiously.'],
+      ['How many pico laser sessions are needed for melasma?', 'Studies used anywhere from three to about ten sessions, usually several weeks apart, followed by maintenance. Your doctor should give you a plan for your own skin.'],
+      ['Who is allowed to do laser treatment in Malaysia?', 'Since 1 June 2026, many aesthetic lasers are designated medical devices, and you need a permit from the Medical Device Authority to operate one. MOH guidelines also class laser treatment for pigmentation as a medical procedure for trained, registered doctors in registered clinics.'],
+      ['What is the best treatment for melasma?', 'The usual first treatment is daily broad-spectrum sunscreen, ideally tinted with iron oxides, plus prescription creams supervised by a doctor. Lasers are generally kept for melasma that doesn’t respond to these.'],
     ],
     sources: [
       ['DermNet — Melasma', 'https://dermnetnz.org/topics/melasma'],
