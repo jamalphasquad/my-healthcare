@@ -114,82 +114,82 @@ ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls
     title: 'Semut charlie (Paederus) rash: what it looks like, first aid, treatment and keeping the beetles away',
     crumb: 'Semut charlie rash',
     desc: 'Semut charlie (semut cali) isn’t an ant and doesn’t bite: its toxin causes a burning, blistering rash. What it looks like, first aid, treatment, eye danger and prevention.',
-    excerpt: 'Woke up with a burning red streak or blisters on your neck or arm? It may be semut charlie. The insect doesn’t bite: the rash comes from a toxin released when it is crushed on the skin. What to do straight away, how the rash is treated, why the eyes are at risk, and how to keep the beetles out.',
-    standfirst: 'Semut charlie (also called semut cali or semut kayap) is not an ant but a small orange-and-black rove beetle. It doesn’t bite or sting. The painful rash, known as Paederus dermatitis, happens when the beetle is crushed against the skin, often while you sleep, releasing a toxin called pederin. Outbreaks are common in Malaysia in the rainy season, especially in hostels and flats near rice fields and greenery.',
-    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: PUB, author: AUTHOR, news: false, medical: true,
+    excerpt: 'A burning red streak or blisters on your neck or arm when you wake up may be from semut charlie. The insect doesn’t bite. The rash comes from a toxin released when it is crushed on the skin. This guide covers what to do straight away, how the rash is treated, why the eyes are at risk and how to keep the beetles out.',
+    standfirst: 'Semut charlie (also called semut cali or semut kayap) is a small orange-and-black rove beetle, not an ant, and it doesn’t bite or sting. The painful rash, known as Paederus dermatitis, happens when the beetle is crushed against the skin, often while you sleep, and releases a toxin called pederin. Outbreaks are common in Malaysia in the rainy season, especially in hostels and flats near rice fields and greenery.',
+    cat: 'aesthetics', catLabel: 'Aesthetics & skin', published: PUB, modified: '2026-11-28', author: AUTHOR, news: false, medical: true,
     about: ['Paederus dermatitis', 'Semut charlie', 'Rove beetle'],
     image: 'kl-street-night', imageAlt: 'Kuala Lumpur’s Petronas Twin Towers under a dark, cloudy evening sky',
     keyPoints: [
-      'Semut charlie is a rove beetle (Paederus), about 7 to 10 mm long, with an orange body, black head and dark blue wing cases. It is attracted to bright lights at night.',
-      'It doesn’t bite. The rash comes from a toxin in its body fluid when it is crushed or rubbed on the skin.',
-      'The rash usually appears within 1 to 2 days: a burning red streak or patch, often on the neck, face or arms, which then blisters.',
-      'If one lands on you, blow or flick it off rather than crushing it. If it was crushed, wash the skin straight away with soap and water.',
-      'Keep it away from your eyes, which can become badly inflamed. See a doctor for any eye symptoms or widespread blisters.',
+      'Semut charlie is a rove beetle (Paederus), about 7 to 10 mm long, with an orange body, black head and dark blue wing cases. Bright lights draw it in at night.',
+      'It doesn’t bite. The rash comes from a toxin in its body fluid, released when the beetle is crushed or rubbed on the skin.',
+      'The rash usually appears within 1 to 2 days as a burning red streak or patch, often on the neck, face or arms, and then blisters.',
+      'If one lands on you, blow or flick it off instead of crushing it. If it was crushed, wash the skin straight away with soap and water.',
+      'Keep the toxin away from your eyes, which can become badly inflamed. See a doctor for any eye symptoms or widespread blisters.',
     ],
     sections: [
-      { id: 'what', h: 'What is semut charlie?', tocLabel: 'What it is', html: `<p>Semut charlie is a <strong>rove beetle</strong>, <em>Paederus fuscipes</em>, not an ant. It is about 7 to 10 mm long, with a black head, an orange body, shiny dark blue wing cases and a black tip. When disturbed it may raise its tail, like a scorpion.</p>
+      { id: 'what', h: 'What is semut charlie?', tocLabel: 'What it is', html: `<p>Despite the name, semut charlie isn’t an ant. It is a rove beetle, <em>Paederus fuscipes</em>, about 7 to 10 mm long, with a black head, an orange body, shiny dark blue wing cases and a black tip. When disturbed it may raise its tail like a scorpion.</p>
 <ul>
-<li>It lives in rice fields and other vegetation, where it actually helps by eating crop pests.</li>
-<li>It flies into homes, especially during heavy rain, floods and the rice harvest, and is strongly attracted to <strong>bright lights</strong> at night. A Universiti Sains Malaysia study in Penang found far more beetles around bright lights than dim ones, and more on higher floors.</li>
-<li>It <strong>doesn’t bite or sting</strong>. Its body fluid contains <strong>pederin</strong>, a toxin made by bacteria living inside female beetles. The toxin is released when the beetle is crushed or rubbed against the skin.</li>
+<li>It lives in rice fields and other vegetation, where it eats crop pests.</li>
+<li>It flies into homes, especially during heavy rain, floods and the rice harvest, and bright lights at night draw it in. A Universiti Sains Malaysia study in Penang found far more beetles around bright lights than dim ones, and more on higher floors.</li>
+<li>It doesn’t bite or sting. Its body fluid contains pederin, a toxin made by bacteria that live inside female beetles. The toxin is released when the beetle is crushed or rubbed against the skin.</li>
 </ul>
-<p><strong>Outbreaks in Malaysia</strong> have included about 2,000 people in high-rise flats and school hostels in Penang in 2002, 360 cases in university hostels next to an oil palm estate in Selangor in 2010, and 21 cases in Kelantan in mid-2019, mostly in schools.</p>` },
+<p>Malaysia has had several outbreaks. About 2,000 people were affected in high-rise flats and school hostels in Penang in 2002, there were 360 cases in university hostels next to an oil palm estate in Selangor in 2010, and 21 cases in Kelantan in mid-2019, mostly in schools.</p>` },
       { id: 'signs', h: 'What the rash looks like', tocLabel: 'The rash', html: `<ul>
-<li>It usually appears <strong>within 1 to 2 days</strong> of contact, often noticed on waking.</li>
-<li>It starts as a <strong>burning, stinging red streak or patch</strong>, often in a line where the beetle was smeared across the skin (sometimes called a “whiplash” mark).</li>
+<li>It usually appears within 1 to 2 days of contact, and people often notice it when they wake up.</li>
+<li>It starts as a burning, stinging red streak or patch, often in a line where the beetle was smeared across the skin. This is sometimes called a “whiplash” mark.</li>
 <li>Blisters and small pus spots form over the next few days, then dry and crust.</li>
-<li><strong>“Kissing” lesions</strong> appear where two skin surfaces touch, such as inside the elbow or between the thighs, because the toxin transfers between them.</li>
-<li>It most often affects the face, neck, shoulders and arms.</li>
+<li>Matching patches, called “kissing” lesions, appear where two skin surfaces touch, such as inside the elbow or between the thighs, because the toxin passes from one to the other.</li>
+<li>The face, neck, shoulders and arms are affected most often.</li>
 </ul>
-<p>The toxin can be spread to other parts of the body on your fingers, including the genitals. The rash is often mistaken for shingles, burns or other rashes. See our guides to <a href="/articles/shingles-kayap-malaysia/">shingles (kayap)</a> and <a href="/articles/itchy-skin-eczema-hives-malaysia/">itchy skin</a>.</p>
-<p><strong>The eyes:</strong> rubbing your eyes with contaminated fingers can cause painful swelling of the eyelids and inflammation of the eye (sometimes called “Nairobi eye”), which can temporarily affect vision.</p>` },
+<p>Your fingers can carry the toxin to other parts of the body, including the genitals. The rash is often mistaken for shingles, a burn or another rash. See our guides to <a href="/articles/shingles-kayap-malaysia/">shingles (kayap)</a> and <a href="/articles/itchy-skin-eczema-hives-malaysia/">itchy skin</a>.</p>
+<p>If you rub your eyes with contaminated fingers, your eyelids can swell painfully and the eye itself can become inflamed (sometimes called “Nairobi eye”). This can affect your vision for a while.</p>` },
       { id: 'first-aid', h: 'First aid', tocLabel: 'First aid', html: `<ol>
-<li><strong>Don’t crush or slap the beetle.</strong> Blow it away or flick it off, or pick it up with a tissue.</li>
-<li>If it was crushed or crawled on your skin, <strong>wash the area straight away with soap and plenty of water</strong>.</li>
-<li><strong>Wash your hands</strong> and keep them away from your eyes.</li>
-<li>If any got near your eyes, rinse them gently with clean water.</li>
+<li>Don’t crush or slap the beetle. Blow it away, flick it off or pick it up with a tissue.</li>
+<li>If it was crushed or crawled on your skin, wash the area straight away with soap and plenty of water.</li>
+<li>Wash your hands, and keep them away from your eyes.</li>
+<li>If any toxin got near your eyes, rinse them gently with clean water.</li>
 <li>Wash any clothes or bedding the beetle was crushed on separately.</li>
 </ol>` },
       { id: 'treatment', h: 'Treatment', tocLabel: 'Treatment', html: `<ul>
-<li><strong>Cool, wet compresses</strong> soothe the burning.</li>
-<li>A doctor will usually prescribe a <strong>steroid cream</strong> to calm the inflammation, and an <strong>antihistamine</strong> tablet for itch. See our guide to <a href="/articles/allergies-resdung-antihistamines-malaysia/">antihistamines</a>.</li>
-<li><strong>Antibiotics</strong> are only needed if the blisters become infected, with spreading redness, pus or fever.</li>
+<li>Cool, wet compresses soothe the burning.</li>
+<li>A doctor will usually prescribe a steroid cream to calm the inflammation and an antihistamine tablet for the itch. See our guide to <a href="/articles/allergies-resdung-antihistamines-malaysia/">antihistamines</a>.</li>
+<li>You only need antibiotics if the blisters become infected, with spreading redness, pus or fever.</li>
 <li>Don’t scratch, and don’t burst the blisters.</li>
 <li>Home remedies such as toothpaste don’t help and can irritate the skin further.</li>
 </ul>
-<p>Most rashes heal within <strong>1 to 3 weeks</strong>. Dark marks can last for several months, especially on darker skin, and fade slowly.</p>
-<p><strong>See a doctor if:</strong></p>
+<p>Most rashes heal within 1 to 3 weeks. Dark marks can last for several months, especially on darker skin, and fade slowly.</p>
+<p>See a doctor if:</p>
 <ul>
-<li>your <strong>eye or eyelid</strong> is red, swollen or painful, or your vision is affected</li>
-<li>the rash is large, very painful or blistering widely, or on the face or genitals</li>
+<li>your eye or eyelid is red, swollen or painful, or your vision is affected</li>
+<li>the rash is large, very painful or blistering widely, or is on the face or genitals</li>
 <li>it looks infected</li>
 <li>a child is affected</li>
 </ul>
 ${figure('gp-consultation', 'A doctor talking with a patient across a desk in a consultation room', 'A GP can confirm the rash and prescribe a steroid cream, which helps it settle faster.')}` },
       { id: 'prevention', h: 'Keeping semut charlie away', tocLabel: 'Prevention', html: `<ul>
-<li><strong>Switch off lights</strong> you aren’t using at night, especially near open windows, and sleep with the lights off.</li>
-<li><strong>Close windows and doors</strong> at night, or fit fine insect screens.</li>
-<li>Use warm-coloured or LED lights rather than bright white fluorescent tubes, which attract more beetles.</li>
-<li>Use a bed net in hostels and homes where beetles are common.</li>
-<li>Shake out bedding, towels and clothes before using them.</li>
-<li>Cut back vegetation close to buildings. In outbreaks, local councils and health offices may carry out insecticide spraying.</li>
+<li>Switch off lights you aren’t using at night, especially near open windows, and sleep with the lights off.</li>
+<li>Close windows and doors at night, or fit fine insect screens.</li>
+<li>Bright white fluorescent tubes attract more beetles, so use warm-coloured or LED lights instead.</li>
+<li>Use a bed net in hostels and homes where the beetles are common.</li>
+<li>Shake out bedding, towels and clothes before you use them.</li>
+<li>Cut back plants growing close to buildings. During outbreaks, local councils and health offices may spray insecticide.</li>
 </ul>
-<p>Semut charlie rash isn’t spread from person to person, and it has nothing to do with hygiene. Anyone in an area with the beetles can be affected.</p>` },
+<p>Semut charlie rash doesn’t spread from person to person, and it has nothing to do with hygiene. Anyone living where the beetles are can get it.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get the rash checked',
     clinicsTocLabel: 'Find a clinic',
-    clinicsIntro: 'A GP can recognise a semut charlie rash, prescribe a steroid cream and antihistamine, and treat any infection. The rash is often noticed on waking, so our directory lists clinics open early, late and at weekends across Kuala Lumpur, Selangor and other states. For eye symptoms, ask to be seen urgently.',
+    clinicsIntro: 'A GP can recognise a semut charlie rash, prescribe a steroid cream and antihistamine, and treat any infection. People often notice the rash when they wake up, so our directory lists clinics open early, late and at weekends across Kuala Lumpur, Selangor and other states. If your eye is affected, ask to be seen urgently.',
     clinicLinks: [['/clinics/near-me/', 'Clinics near me'], ['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-24-hours/', '24-hour clinics']],
     faqs: [
-      ['Does semut charlie bite?', 'No. It doesn’t bite or sting. The rash is caused by a toxin in its body fluid, released when the beetle is crushed or rubbed on the skin.'],
-      ['What does a semut charlie rash look like?', 'A burning red streak or patch, often in a line, that appears within 1 to 2 days and then blisters. It is common on the neck, face and arms.'],
+      ['Does semut charlie bite?', 'No, it doesn’t bite or sting. The rash comes from a toxin in its body fluid, which is released when the beetle is crushed or rubbed on the skin.'],
+      ['What does a semut charlie rash look like?', 'A burning red streak or patch, often in a line, that appears within 1 to 2 days and then blisters. It usually shows up on the neck, face and arms.'],
       ['What should I do if semut charlie lands on me?', 'Blow or flick it off without crushing it. If it was crushed, wash the skin straight away with soap and water, and wash your hands.'],
-      ['How long does a semut charlie rash take to heal?', 'Usually 1 to 3 weeks. Dark marks may take several months to fade.'],
-      ['Is semut charlie dangerous for the eyes?', 'Yes. Rubbing the toxin into the eyes can cause painful eyelid swelling and eye inflammation. See a doctor promptly.'],
-      ['What cream is used for semut charlie rash?', 'A doctor usually prescribes a steroid cream, sometimes with an antihistamine for itch, and antibiotics only if the blisters get infected.'],
-      ['Why are there so many semut charlie at night?', 'They are attracted to bright lights, especially during the rainy season and rice harvest, and fly into homes near fields and vegetation.'],
-      ['Is semut charlie rash contagious?', 'No. It comes only from contact with the beetle’s toxin and doesn’t spread from person to person.'],
+      ['How long does a semut charlie rash take to heal?', 'Usually 1 to 3 weeks, though dark marks may take several months to fade.'],
+      ['Is semut charlie dangerous for the eyes?', 'Yes. Rubbing the toxin into your eyes can cause painful swelling of the eyelids and inflammation of the eye. See a doctor promptly.'],
+      ['What cream is used for semut charlie rash?', 'A doctor usually prescribes a steroid cream, sometimes with an antihistamine for the itch. Antibiotics are only needed if the blisters get infected.'],
+      ['Why are there so many semut charlie at night?', 'Bright lights attract them, especially during the rainy season and the rice harvest, and they fly into homes near fields and vegetation.'],
+      ['Is semut charlie rash contagious?', 'No. You can only get it from contact with the beetle’s toxin, and it doesn’t spread from person to person.'],
     ],
     sources: [
       ['Heo et al. — Dermatitis caused by Paederus fuscipes in student hostels in Selangor (SE Asian J Trop Med Public Health, 2013)', 'https://www.tm.mahidol.ac.th/seameo/2013-44-2-full/09-5421-5.pdf'],

@@ -653,83 +653,79 @@ ${figure('facial-treatment', 'A doctor examining facial skin in a clinic', 'A do
     title: 'Bowel cancer in Malaysia: symptoms, stool test screening and colonoscopy',
     crumb: 'Bowel cancer screening',
     desc: 'Bowel (colorectal) cancer is the most common cancer in Malaysian men. Symptoms (kanser usus simptom), risk factors, iFOBT stool tests from 50 and colonoscopy.',
-    excerpt: 'Bowel cancer is the most common cancer in Malaysian men, and 3 in 4 cases are found late. The symptoms to watch for, who is at risk, the stool test offered at government clinics from age 50, and what a colonoscopy involves.',
-    standfirst: 'Bowel cancer, also called colorectal or colon cancer (kanser usus), is now the most common cancer in Malaysian men and the second most common in women. Three in four cases are found only at a late stage, yet a simple home stool test can pick it up early, when it is far more treatable. Here are the symptoms, who should be screened, and how to get tested in Malaysia.',
-    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-13', author: AUTHOR, news: false, medical: true,
+    excerpt: 'Bowel cancer is the most common cancer in Malaysian men, and 3 in 4 cases are found late. This guide covers the symptoms, who is at risk, the stool test that government clinics offer from age 50, and what a colonoscopy involves.',
+    standfirst: 'Bowel cancer, also called colorectal or colon cancer (kanser usus), is now the most common cancer in Malaysian men and the second most common in women. Three in four cases are found only at a late stage, even though a simple home stool test can pick it up early, when it is far easier to treat. This guide explains the symptoms, who should be screened and how to get tested in Malaysia.',
+    cat: 'prevention', catLabel: 'Prevention', published: PUB, modified: '2026-11-28', author: AUTHOR, news: false, medical: true,
     about: ['Colorectal cancer', 'Kanser kolorektal'],
     image: 'nurse-stethoscope', imageAlt: 'A doctor holding a stethoscope',
     keyPoints: [
       'Bowel cancer is the most common cancer in Malaysian men and the second most common in women. Cases rose by more than half between 2012–2016 and 2017–2021.',
       'About 3 in 4 cases are diagnosed at stage 3 or 4. Early bowel cancer often causes no symptoms.',
-      'Symptoms include blood in the stool, a change in bowel habit, tummy pain or bloating, unexplained weight loss and tiredness from anaemia.',
-      'Adults aged 50 to 75 at average risk should do a stool test (iFOBT), offered at government health clinics. A positive result needs a colonoscopy.',
+      'Symptoms include blood in the stool, a change in bowel habit, tummy pain or bloating, weight loss you can’t explain, and tiredness from anaemia.',
+      'Adults aged 50 to 75 at average risk should do a stool test (iFOBT), which government health clinics offer. If the result is positive, you need a colonoscopy.',
       'If a close relative had bowel cancer, colonoscopy screening usually starts at 40, or earlier.',
     ],
     sections: [
-      { id: 'malaysia', h: 'Bowel cancer in Malaysia', tocLabel: 'In Malaysia', html: `<p>According to the Malaysia National Cancer Registry report for 2017–2021:</p>
+      { id: 'malaysia', h: 'Bowel cancer in Malaysia', tocLabel: 'In Malaysia', html: `<p>The Malaysia National Cancer Registry report for 2017–2021 found that:</p>
 <ul>
-<li>Bowel (colorectal) cancer made up <strong>14.1% of all cancers</strong>, the second most common overall after breast cancer, and the <strong>most common cancer in men</strong>.</li>
-<li>About <strong>23,900 people</strong> were diagnosed in those five years, up 54% from 2012–2016. About 15% were under 50.</li>
-<li>About <strong>three in four</strong> cases with a known stage were found at <strong>stage 3 or 4</strong>. Only about 6% were caught at stage 1.</li>
-<li>The lifetime risk is about <strong>1 in 44 for men</strong> and <strong>1 in 62 for women</strong>, and highest among Chinese Malaysians (1 in 30 men).</li>
+<li>Bowel (colorectal) cancer made up 14.1% of all cancers. It was the second most common cancer overall after breast cancer, and the most common in men.</li>
+<li>About 23,900 people were diagnosed in those five years, 54% more than in 2012–2016. About 15% of them were under 50.</li>
+<li>Of the cases with a known stage, about three in four were found at stage 3 or 4. Only about 6% were caught at stage 1.</li>
+<li>The lifetime risk is about 1 in 44 for men and 1 in 62 for women. It is highest among Chinese Malaysians, at 1 in 30 for men.</li>
 </ul>
-<p>Finding it early makes a big difference. In US data, about 9 in 10 people whose cancer is found before it spreads are alive 5 years later, compared with about 1 in 7 when it has spread to distant organs.</p>` },
+<p>In US data, about 9 in 10 people whose cancer is found before it spreads are alive 5 years later. When it has spread to distant organs, the figure is about 1 in 7.</p>` },
       { id: 'symptoms', h: 'Bowel cancer symptoms (kanser usus simptom)', tocLabel: 'Symptoms', html: `<ul>
-<li><strong>Blood in your stool</strong>, which may look red or black, or bleeding from the bottom</li>
-<li>A <strong>change in bowel habit</strong>, such as looser stools, constipation or going more often, lasting several weeks</li>
+<li>Blood in your stool, which may look red or black, or bleeding from the bottom</li>
+<li>A change in bowel habit that lasts several weeks, such as looser stools, constipation or going more often</li>
 <li>Feeling you need to go even after you have just been</li>
 <li>Tummy pain, a lump in the tummy, or bloating</li>
 <li>Losing weight without trying</li>
-<li>Tiredness or breathlessness from <strong>anaemia</strong> (low blood count)</li>
+<li>Tiredness or breathlessness from anaemia (a low blood count)</li>
 </ul>
-<p>Most people with these symptoms don’t have cancer. Haemorrhoids (piles), for example, are a common cause of bleeding. But you can’t tell the difference yourself, so <strong>always get bleeding from the bottom checked</strong> by a doctor. Malaysian guidelines advise an urgent colonoscopy within 2 weeks for unexplained rectal bleeding with a change in bowel habit or weight loss, or for iron-deficiency anaemia.</p>
-<p>Early bowel cancer often causes <strong>no symptoms at all</strong>, which is why screening matters.</p>` },
+<p>Most people with these symptoms don’t have cancer. Haemorrhoids (piles), for example, often cause bleeding. You can’t tell the difference yourself, though, so always get bleeding from the bottom checked by a doctor. Malaysian guidelines advise an urgent colonoscopy within 2 weeks for unexplained rectal bleeding with a change in bowel habit or weight loss, and for iron-deficiency anaemia.</p>
+<p>Early bowel cancer often causes no symptoms at all, so it is worth being screened even if you feel well.</p>` },
       { id: 'risk', h: 'Who is at higher risk?', tocLabel: 'Risk factors', html: `<ul>
-<li>Being <strong>50 or older</strong>, though younger adults can get it</li>
-<li>A <strong>close relative</strong> (parent, brother, sister or child) with bowel cancer, or inherited conditions such as Lynch syndrome</li>
+<li>Being 50 or older, though younger adults can get it too</li>
+<li>Having a close relative (parent, brother, sister or child) with bowel cancer, or an inherited condition such as Lynch syndrome</li>
 <li>A history of bowel polyps, or inflammatory bowel disease (Crohn’s disease or ulcerative colitis)</li>
 <li>Smoking, alcohol, being overweight and being inactive</li>
-<li>A diet high in <strong>processed meat</strong> (such as sausages, ham and luncheon meat) and red meat, and low in fruit and vegetables. The WHO’s cancer agency classifies processed meat as a cause of bowel cancer.</li>
+<li>Eating a lot of processed meat (such as sausages, ham and luncheon meat) and red meat, and little fruit and vegetables. The WHO’s cancer agency classifies processed meat as a cause of bowel cancer.</li>
 </ul>` },
-      { id: 'screening', h: 'Bowel cancer screening: the stool test', tocLabel: 'Screening', html: `<p>Malaysian guidelines recommend that adults aged <strong>50 to 75</strong> at average risk do an <strong>immunochemical faecal occult blood test (iFOBT)</strong>, also called a FIT test. It detects tiny amounts of blood in the stool that you can’t see.</p>
-<ul>
-<li><strong>Where:</strong> it is offered at <strong>government health clinics (Klinik Kesihatan)</strong> under the Ministry of Health’s national screening programme, which has supplied test kits to participating clinics since 2014. Ask for it at your next visit, and ask whether there is a charge. Selangor’s Selangor Saring programme has also included the test. The National Cancer Society Malaysia offers it for RM20, and private clinics and pharmacies set their own fees.</li>
-<li><strong>How:</strong> you collect a small stool sample at home with the kit, and return it to the clinic. There are no diet restrictions.</li>
-<li><strong>How often:</strong> the 2017 guidelines recommend yearly testing if negative. Some clinics schedule a repeat every 2 years.</li>
-<li><strong>If positive:</strong> you are referred for a colonoscopy. A positive test doesn’t mean you have cancer. Most positives are due to polyps or other causes, but it must be followed up.</li>
-</ul>
-<p>Too few Malaysians take part. Between 2014 and 2018, only about 55% of people with a positive stool test went on to have the colonoscopy they needed. In Selangor’s screening programme, only 15–27% of people with abnormal results followed up. <strong>If your test is positive, please go for the colonoscopy.</strong></p>
+      { id: 'screening', h: 'Bowel cancer screening: the stool test', tocLabel: 'Screening', html: `<p>Malaysian guidelines recommend that adults aged 50 to 75 at average risk do an immunochemical faecal occult blood test (iFOBT), also called a FIT test. It picks up tiny amounts of blood in the stool that you can’t see.</p>
+<p>Government health clinics (Klinik Kesihatan) offer the test under the Ministry of Health’s national screening programme, which has supplied test kits to participating clinics since 2014. Ask for it at your next visit, and ask whether there is a charge. Selangor’s Selangor Saring programme has also included the test. The National Cancer Society Malaysia offers it for RM20, and private clinics and pharmacies set their own fees.</p>
+<p>You collect a small stool sample at home with the kit and return it to the clinic. You don’t need to change what you eat beforehand.</p>
+<p>The 2017 guidelines recommend testing every year if the result is negative. Some clinics schedule the repeat every 2 years instead.</p>
+<p>If the result is positive, you are referred for a colonoscopy. A positive test doesn’t mean you have cancer, and most positives turn out to be polyps or other causes, but it still has to be followed up.</p>
+<p>Too few Malaysians follow up. Between 2014 and 2018, only about 55% of people with a positive stool test went on to have the colonoscopy they needed. In Selangor’s screening programme, only 15–27% of people with abnormal results followed up. If your test is positive, please go for the colonoscopy.</p>
 ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 'The stool test is done at home and returned to the clinic for testing.')}` },
-      { id: 'family', h: 'If bowel cancer runs in your family', tocLabel: 'Family history', html: `<p>Malaysian guidelines recommend colonoscopy, rather than the stool test, for people with a family history:</p>
+      { id: 'family', h: 'If bowel cancer runs in your family', tocLabel: 'Family history', html: `<p>For people with a family history, Malaysian guidelines recommend colonoscopy instead of the stool test:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Family history</th><th>When to start colonoscopy</th></tr></thead>
 <tbody>
 <tr><td>A parent, brother, sister or child diagnosed before 60, or any relative before 50</td><td>At 40, or 10 years younger than the youngest relative was at diagnosis, whichever is earlier. Repeat every 3 to 5 years.</td></tr>
 <tr><td>A parent, brother, sister or child diagnosed at 60 or older</td><td>At 40. Repeat every 10 years.</td></tr>
 </tbody></table></div>
-<p>Tell your doctor about your family history, including the age your relative was diagnosed.</p>` },
-      { id: 'colonoscopy', h: 'What happens during a colonoscopy', tocLabel: 'Colonoscopy', html: `<p>A colonoscopy uses a thin, flexible tube with a camera to look inside the large bowel. It can find cancer early, and <strong>remove polyps</strong> before they turn into cancer.</p>
-<ul>
-<li><strong>Before:</strong> you follow a special diet and take a strong laxative to empty the bowel.</li>
-<li><strong>During:</strong> the test usually takes 30 to 45 minutes. You are usually offered sedation and painkillers. Polyps can be removed and small samples (biopsies) taken.</li>
-<li><strong>After:</strong> don’t drive for 24 hours if you had sedation. Slight bleeding for a day or two is common.</li>
-<li><strong>Risks:</strong> serious complications are uncommon. In the UK screening programme, a tear in the bowel happens in about 1 in 1,700 colonoscopies.</li>
-</ul>` },
-      { id: 'treatment', h: 'Treatment', html: `<p>Surgery to remove the cancer is the main treatment and offers the best chance of cure. Chemotherapy and radiotherapy may be used before or after surgery, and newer targeted treatments and immunotherapy help some people with advanced cancer. Treatment is planned by a team of specialists.</p>
-<p>You can lower your risk by staying active, keeping a healthy weight, not smoking, limiting alcohol, eating less processed and red meat, and eating more fruit and vegetables.</p>` },
+<p>Tell your doctor about your family history, including how old your relative was when they were diagnosed.</p>` },
+      { id: 'colonoscopy', h: 'What happens during a colonoscopy', tocLabel: 'Colonoscopy', html: `<p>A colonoscopy uses a thin, flexible tube with a camera to look inside the large bowel. It can find cancer early, and polyps found during the test can be removed before they turn into cancer.</p>
+<p>Beforehand, you follow a special diet and take a strong laxative to empty your bowel.</p>
+<p>The test usually takes 30 to 45 minutes. You are usually offered sedation and painkillers. The doctor can remove polyps and take small samples (biopsies).</p>
+<p>If you had sedation, don’t drive for 24 hours afterwards. Slight bleeding for a day or two is common.</p>
+<p>Serious complications are uncommon. In the UK screening programme, a tear in the bowel happens in about 1 in 1,700 colonoscopies.</p>` },
+      { id: 'treatment', h: 'Treatment', html: `<p>Surgery to remove the cancer is the main treatment and gives the best chance of a cure. Chemotherapy and radiotherapy may be used before or after surgery, and newer targeted treatments and immunotherapy help some people with advanced cancer. A team of specialists plans the treatment.</p>
+<p>To lower your risk, stay active, keep to a healthy weight, don’t smoke, limit alcohol, eat less processed and red meat, and eat more fruit and vegetables.</p>` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to ask about bowel cancer screening',
     clinicsTocLabel: 'Where to get screened',
-    clinicsIntro: 'Your nearest Klinik Kesihatan can offer the stool test from age 50. Private GP clinics can also arrange a stool test, check symptoms such as bleeding, and refer you for colonoscopy. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
+    clinicsIntro: 'Your nearest Klinik Kesihatan can offer the stool test from age 50. Private GP clinics can also arrange a stool test, check symptoms such as bleeding, and refer you for a colonoscopy. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
-      ['What are the symptoms of bowel cancer? (Kanser usus simptom)', 'Blood in the stool or bleeding from the bottom, a change in bowel habit lasting weeks, tummy pain or bloating, unexplained weight loss, and tiredness from anaemia. Early bowel cancer often has no symptoms.'],
-      ['How much does bowel cancer screening cost in Malaysia?', 'Government health clinics offer the iFOBT stool test to eligible adults aged 50 to 75 under a national screening programme, so ask your clinic whether there is a charge. The National Cancer Society Malaysia charges RM20, and private clinics set their own fees. A positive result is followed by a colonoscopy.'],
-      ['How is the iFOBT stool test done?', 'You collect a small stool sample at home using the kit and return it to the clinic. It detects hidden blood. There are no diet restrictions.'],
-      ['At what age should I start bowel cancer screening?', 'At 50 for most people. If a close relative had bowel cancer, colonoscopy usually starts at 40, or 10 years before the age your relative was diagnosed, if they were under 60.'],
-      ['Can bowel cancer affect young people?', 'Yes. About 15% of bowel cancers in Malaysia in 2017–2021 were in people under 50. Don’t ignore symptoms such as bleeding because you are young.'],
-      ['Is bleeding from the bottom always cancer?', 'No. Haemorrhoids (piles) and fissures are common causes. But you can’t tell the cause yourself, so always have rectal bleeding checked by a doctor.'],
+      ['What are the symptoms of bowel cancer? (Kanser usus simptom)', 'Blood in the stool or bleeding from the bottom, a change in bowel habit that lasts weeks, tummy pain or bloating, weight loss you can’t explain, and tiredness from anaemia. Early bowel cancer often has no symptoms.'],
+      ['How much does bowel cancer screening cost in Malaysia?', 'Government health clinics offer the iFOBT stool test to eligible adults aged 50 to 75 under a national screening programme, so ask your clinic whether there is a charge. The National Cancer Society Malaysia charges RM20, and private clinics set their own fees. If the result is positive, the next step is a colonoscopy.'],
+      ['How is the iFOBT stool test done?', 'You collect a small stool sample at home with the kit and return it to the clinic, where it is tested for hidden blood. You don’t need to change your diet.'],
+      ['At what age should I start bowel cancer screening?', 'Most people start at 50. If a close relative had bowel cancer, colonoscopy usually starts at 40, or 10 years before the age your relative was diagnosed if they were under 60.'],
+      ['Can bowel cancer affect young people?', 'Yes. About 15% of bowel cancers in Malaysia in 2017–2021 were in people under 50. Being young is no reason to ignore symptoms such as bleeding.'],
+      ['Is bleeding from the bottom always cancer?', 'No. Haemorrhoids (piles) and fissures often cause it. You can’t tell the cause yourself, though, so always have rectal bleeding checked by a doctor.'],
     ],
     sources: [
       ['Institut Kanser Negara — Summary of Malaysia National Cancer Registry Report 2017–2021 (Jul 2024)', 'https://nci.moh.gov.my/images/pdf/SUMMARY-OF-MALAYSIA-NATIONAL-CANCER-REGISTRY-REPORT-2017-2021.pdf'],
@@ -754,28 +750,28 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
     title: 'High blood pressure and cholesterol: normal levels (tekanan darah and bacaan kolesterol normal), and how to lower them',
     crumb: 'Blood pressure and cholesterol',
     desc: 'Signs and causes of high blood pressure, normal BP and cholesterol readings in Malaysia, LDL targets by risk, fasting, why “lower it in 5 minutes” is a myth, and statins.',
-    excerpt: 'Nearly 1 in 3 Malaysian adults has high blood pressure, and 1 in 3 has high cholesterol, often without knowing. Normal levels, causes, what really lowers them and how fast, and what to know about blood pressure and cholesterol medicines.',
-    standfirst: 'High blood pressure (darah tinggi) and high cholesterol rarely cause symptoms, yet together they are the main reasons Malaysians have heart attacks and strokes. Here are the normal levels, what causes them to rise, what really brings them down, and what to expect from medicines.',
-    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: '2026-11-18', author: AUTHOR, news: false, medical: true,
+    excerpt: 'Nearly 1 in 3 Malaysian adults has high blood pressure, and 1 in 3 has high cholesterol, often without knowing. This guide covers normal levels, causes, what lowers them and how quickly, and what to know about the medicines.',
+    standfirst: 'High blood pressure (darah tinggi) and high cholesterol rarely cause symptoms, yet together they are the main reasons Malaysians have heart attacks and strokes. Below are the normal readings, the usual causes, the changes that bring the numbers down, and what to expect if you need medicine.',
+    cat: 'heart-diabetes', catLabel: 'Heart & diabetes', published: PUB, modified: '2026-11-28', author: AUTHOR, news: false, medical: true,
     about: ['Hypertension', 'Darah tinggi', 'Cholesterol'],
     image: 'bp-check-desk', imageAlt: 'A blood pressure monitor on a desk',
     keyPoints: [
-      '29.2% of Malaysian adults have high blood pressure and 33.3% have high cholesterol, according to NHMS 2023. Many don’t know.',
-      'High blood pressure usually has no signs. Only a blood pressure check can tell you. A reading of 140/90 or above, on repeated checks, is high.',
-      'There is no safe way to lower blood pressure in 5 minutes. Very high blood pressure with chest pain, breathlessness, weakness or vision changes is an emergency: call 999.',
-      'Cutting salt to less than 1 teaspoon a day, losing weight, exercise and less alcohol can lower blood pressure by several points each.',
-      'Statins lower LDL cholesterol by about 20–55%. True statin side effects are less common than many people think.',
-      'There is no single normal LDL: your target depends on your overall heart risk. You usually don’t need to fast for a cholesterol test.',
+      'According to NHMS 2023, 29.2% of Malaysian adults have high blood pressure and 33.3% have high cholesterol, and many of them don’t know it.',
+      'High blood pressure usually has no signs, so only a blood pressure check can tell you. Repeated readings of 140/90 or above count as high.',
+      'There is no safe way to bring blood pressure down in 5 minutes. A very high reading with chest pain, breathlessness, weakness or vision changes is an emergency, so call 999.',
+      'Cutting salt to less than 1 teaspoon a day, losing weight, exercising and drinking less alcohol can each lower blood pressure by several points.',
+      'Statins lower LDL cholesterol by about 20–55%. Real statin side effects are less common than many people think.',
+      'Your LDL target depends on your overall heart risk, so there is no single normal figure. You usually don’t need to fast for a cholesterol test.',
     ],
     sections: [
-      { id: 'malaysia', h: 'How common are they in Malaysia?', tocLabel: 'In Malaysia', html: `<p>According to the National Health and Morbidity Survey (NHMS) 2023:</p>
+      { id: 'malaysia', h: 'How common are they in Malaysia?', tocLabel: 'In Malaysia', html: `<p>The National Health and Morbidity Survey (NHMS) 2023 found that:</p>
 <ul>
-<li><strong>29.2%</strong> of adults have high blood pressure, and 11.9% of adults, about 2.7 million people, have it without knowing. Of those who are treated, fewer than half have it under control.</li>
-<li><strong>33.3%</strong> have high cholesterol, and <strong>about half</strong> of them don’t know.</li>
-<li>More than 60% of adults aged 18 to 39 with diabetes, high blood pressure or high cholesterol were unaware of it.</li>
+<li>29.2% of adults have high blood pressure, including 11.9% of adults (about 2.7 million people) who don’t know they have it. Fewer than half of those being treated have it under control.</li>
+<li>33.3% have high cholesterol, and about half of them don’t know.</li>
+<li>More than 60% of adults aged 18 to 39 with diabetes, high blood pressure or high cholesterol didn’t know they had it.</li>
 </ul>
-<p>Ischaemic heart disease, which both conditions lead to, is Malaysia’s leading cause of death. Screening finds both early. See our guide to <a href="/articles/free-health-screening-malaysia/">free health screening</a>.</p>` },
-      { id: 'bp-levels', h: 'Normal blood pressure levels (tekanan darah normal)', tocLabel: 'Blood pressure levels', html: `<p>Blood pressure is written as two numbers: the top (systolic) is the pressure when the heart beats, and the bottom (diastolic) is the pressure between beats. Malaysia’s hypertension guidelines classify it as:</p>
+<p>Both conditions lead to ischaemic heart disease, which is Malaysia’s leading cause of death. Screening picks them up early. See our guide to <a href="/articles/free-health-screening-malaysia/">free health screening</a>.</p>` },
+      { id: 'bp-levels', h: 'Normal blood pressure levels (tekanan darah normal)', tocLabel: 'Blood pressure levels', html: `<p>Blood pressure is written as two numbers. The top one (systolic) is the pressure when your heart beats, and the bottom one (diastolic) is the pressure between beats. Malaysia’s hypertension guidelines group readings like this:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Reading (mmHg)</th><th>Category</th></tr></thead>
 <tbody>
@@ -786,53 +782,53 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
 <tr><td>160–179 / 100–109</td><td>Stage 2 (moderate)</td></tr>
 <tr><td>180 / 110 or higher</td><td>Stage 3 (severe)</td></tr>
 </tbody></table></div>
-<p>One high reading doesn’t mean you have hypertension. Doctors confirm it with repeated readings, often at home. See our guide to <a href="/articles/check-blood-pressure-at-home/">checking your blood pressure at home</a>. On treatment, the target for most people is below 140/90, and lower for some people with diabetes, kidney disease or heart disease.</p>` },
-      { id: 'signs', h: 'Signs of high blood pressure (tanda darah tinggi)', tocLabel: 'Signs', html: `<p>High blood pressure is called a <strong>“silent disease”</strong>. Most people feel completely well. Headaches, dizziness or tiredness are not reliable signs, and only a blood pressure check can tell you.</p>
-<div class="box box--pink" role="note"><span class="box__title">When high blood pressure is an emergency</span><p style="font-size:16px;line-height:1.6">A reading of <strong>180/110 or higher</strong> needs prompt medical attention. Call <a href="tel:999">999</a> or go to an emergency department straight away if it comes with chest pain, breathlessness, severe headache, confusion, weakness or numbness, difficulty speaking, or vision changes. If you have no symptoms, sit quietly for 5 minutes, recheck, and see a doctor the same day if it is still very high.</p></div>` },
-      { id: 'causes', h: 'What causes high blood pressure? (Punca darah tinggi)', tocLabel: 'Causes', html: `<p>Most high blood pressure has no single cause. It builds up with:</p>
+<p>A single high reading doesn’t mean you have hypertension. Doctors confirm it with repeated readings, often taken at home (see our guide to <a href="/articles/check-blood-pressure-at-home/">checking your blood pressure at home</a>). Once you are on treatment, the target for most people is below 140/90. Some people with diabetes, kidney disease or heart disease aim lower.</p>` },
+      { id: 'signs', h: 'Signs of high blood pressure (tanda darah tinggi)', tocLabel: 'Signs', html: `<p>High blood pressure is often called a “silent disease” because most people who have it feel completely well. Headaches, dizziness and tiredness aren’t reliable signs. Only a blood pressure check can tell you.</p>
+<div class="box box--pink" role="note"><span class="box__title">When high blood pressure is an emergency</span><p style="font-size:16px;line-height:1.6">A reading of 180/110 or higher needs prompt medical attention. Call <a href="tel:999">999</a> or go straight to an emergency department if it comes with chest pain, breathlessness, a severe headache, confusion, weakness or numbness, trouble speaking, or changes in your vision. If you have no symptoms, sit quietly for 5 minutes and measure again. If it is still very high, see a doctor the same day.</p></div>` },
+      { id: 'causes', h: 'What causes high blood pressure? (Punca darah tinggi)', tocLabel: 'Causes', html: `<p>Most high blood pressure has no single cause. It builds up over time with:</p>
 <ul>
-<li>Too much <strong>salt</strong>. Malaysians eat around 8 to 9.5 g of salt a day, well above the recommended limit</li>
-<li>Being overweight, and not being active</li>
+<li>Too much salt. Malaysians eat around 8 to 9.5 g of salt a day, well above the recommended limit</li>
+<li>Being overweight or inactive</li>
 <li>Alcohol and smoking</li>
-<li>Getting older, and having a family history</li>
+<li>Getting older, or a family history of it</li>
 <li>Stress</li>
 </ul>
-<p>Sometimes another condition or medicine is the cause, especially in younger people. Examples include kidney disease, <strong>sleep apnoea</strong> (heavy snoring with daytime sleepiness), thyroid or hormone problems, and medicines such as anti-inflammatory painkillers, steroids, decongestants and the contraceptive pill. Tell your doctor about any traditional or herbal remedies you take, too.</p>` },
-      { id: 'lower-bp', h: 'How to lower blood pressure', tocLabel: 'Lowering blood pressure', html: `<p><strong>Can you lower blood pressure in 5 minutes?</strong> No, not safely. Slow, deep breathing may bring it down a little for a short time, and practised regularly it can help a few points. But there is no quick fix, and Malaysian guidelines warn that lowering very high blood pressure too fast can itself cause a stroke or heart attack. If a reading is very high, follow the emergency advice above.</p>
-<p>What does work, over weeks to months, according to Malaysia’s hypertension guidelines:</p>
+<p>Sometimes another condition or a medicine is to blame, especially in younger people. Examples are kidney disease, sleep apnoea (heavy snoring with daytime sleepiness), thyroid or hormone problems, and medicines such as anti-inflammatory painkillers, steroids, decongestants and the contraceptive pill. Tell your doctor about any traditional or herbal remedies you take as well.</p>` },
+      { id: 'lower-bp', h: 'How to lower blood pressure', tocLabel: 'Lowering blood pressure', html: `<p>Can you lower blood pressure in 5 minutes? Not safely. Slow, deep breathing may bring it down a little for a short time, and doing it regularly can help by a few points. There is no quick fix, though, and Malaysian guidelines warn that bringing very high blood pressure down too fast can itself cause a stroke or heart attack. If a reading is very high, follow the emergency advice above.</p>
+<p>According to Malaysia’s hypertension guidelines, these changes work over weeks to months:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Change</th><th>Typical effect on blood pressure</th></tr></thead>
 <tbody>
 <tr><td>Cut salt to less than 5 g (about 1 teaspoon) a day</td><td>Up to about 8/3 mmHg lower in Asian adults with hypertension</td></tr>
 <tr><td>Lose weight</td><td>About 1 mmHg lower per kg lost</td></tr>
-<tr><td>A healthy diet rich in fruit, vegetables and low-fat dairy</td><td>Several points lower</td></tr>
+<tr><td>A diet with plenty of fruit, vegetables and low-fat dairy</td><td>Several points lower</td></tr>
 <tr><td>150 minutes of moderate exercise a week</td><td>Several points lower</td></tr>
 <tr><td>Cut down alcohol</td><td>About 3/2 mmHg lower</td></tr>
 </tbody></table></div>
-<p>Cooking with less salt, soy sauce and stock cubes, and choosing fewer processed and hawker foods, makes the biggest difference for most Malaysians.</p>` },
-      { id: 'bp-medicines', h: 'Blood pressure medicines', tocLabel: 'BP medicines', html: `<p>If lifestyle changes aren’t enough, or your blood pressure is high, your doctor will prescribe one or more medicines. The main groups are ACE inhibitors, angiotensin receptor blockers (ARBs), calcium channel blockers, diuretics and beta blockers. Common side effects to know:</p>
+<p>For most Malaysians, the biggest difference comes from cooking with less salt, soy sauce and stock cubes, and eating fewer processed and hawker foods.</p>` },
+      { id: 'bp-medicines', h: 'Blood pressure medicines', tocLabel: 'BP medicines', html: `<p>If lifestyle changes aren’t enough, or your blood pressure is already high, your doctor will prescribe one or more medicines. The main types are ACE inhibitors, angiotensin receptor blockers (ARBs), calcium channel blockers, diuretics and beta blockers. Side effects worth knowing about:</p>
 <ul>
-<li><strong>ACE inhibitors</strong> (names often end in “-pril”): a dry, persistent cough in some people. Your doctor can switch you to an ARB.</li>
-<li><strong>Calcium channel blockers</strong> such as amlodipine: ankle swelling, flushing or headache.</li>
-<li><strong>Beta blockers</strong>: tiredness and cold hands and feet.</li>
+<li>ACE inhibitors (names often end in “-pril”) give some people a dry, persistent cough. If that happens, your doctor can switch you to an ARB.</li>
+<li>Calcium channel blockers such as amlodipine can cause ankle swelling, flushing or headaches.</li>
+<li>Beta blockers can make you tired and give you cold hands and feet.</li>
 </ul>
-<p>Most people need treatment for life. <strong>Don’t stop your medicine</strong> when your readings become normal, because that usually means the medicine is working. Talk to your doctor about any side effects instead.</p>` },
-      { id: 'cholesterol-levels', h: 'Normal cholesterol levels (bacaan kolesterol normal)', tocLabel: 'Cholesterol levels', html: `<p>These are the levels Malaysia’s dyslipidaemia guideline flags as abnormal:</p>
+<p>Most people need treatment for life. Don’t stop your medicine when your readings become normal, because that usually means it is working. If you have side effects, talk to your doctor.</p>` },
+      { id: 'cholesterol-levels', h: 'Normal cholesterol levels (bacaan kolesterol normal)', tocLabel: 'Cholesterol levels', html: `<p>Malaysia’s dyslipidaemia guideline flags these levels as abnormal:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Test</th><th>Flagged as abnormal</th><th>In mg/dL</th></tr></thead>
 <tbody>
-<tr><td><strong>Total cholesterol</strong></td><td>Above 5.2 mmol/L</td><td>Above about 200</td></tr>
-<tr><td><strong>HDL (“good”) cholesterol</strong></td><td>Below 1.0 (men) or 1.2 (women)</td><td>Below about 39 or 46</td></tr>
-<tr><td><strong>Triglycerides</strong></td><td>Above 1.7 mmol/L</td><td>Above about 150</td></tr>
-<tr><td><strong>LDL (“bad”) cholesterol</strong></td><td>Depends on your risk (see below)</td><td>Optimal is below about 100</td></tr>
+<tr><td>Total cholesterol</td><td>Above 5.2 mmol/L</td><td>Above about 200</td></tr>
+<tr><td>HDL (“good”) cholesterol</td><td>Below 1.0 (men) or 1.2 (women)</td><td>Below about 39 or 46</td></tr>
+<tr><td>Triglycerides</td><td>Above 1.7 mmol/L</td><td>Above about 150</td></tr>
+<tr><td>LDL (“bad”) cholesterol</td><td>Depends on your risk (see below)</td><td>Optimal is below about 100</td></tr>
 </tbody></table></div>
 <ul>
 <li>The guideline describes an LDL of 1.3 to 1.8 mmol/L as physiologically normal, and below 2.6 as optimal for adults.</li>
-<li><strong>Non-HDL cholesterol</strong> (total cholesterol minus HDL) is a useful extra measure, especially if you have diabetes or high triglycerides. Its target is your LDL target plus 0.8.</li>
+<li>Non-HDL cholesterol (total cholesterol minus HDL) is a useful extra measure, especially if you have diabetes or high triglycerides. Its target is your LDL target plus 0.8.</li>
 <li>To convert cholesterol from mmol/L to mg/dL, multiply by about 38.7. For triglycerides, multiply by about 88.6.</li>
 </ul>
-<p>See also our guide to <a href="/articles/blood-test-results-explained-malaysia/">blood test results</a>.</p>` },
-      { id: 'ldl-targets', h: 'Your LDL target depends on your risk', tocLabel: 'LDL targets', html: `<p>Doctors first decide your risk of a heart attack or stroke. If you already have heart disease, diabetes or kidney disease, you are automatically at high or very high risk. Otherwise, your doctor uses a score based on your age, sex, blood pressure, cholesterol, diabetes and smoking to estimate your 10-year risk.</p>
+<p>For the other numbers on your report, see our guide to <a href="/articles/blood-test-results-explained-malaysia/">blood test results</a>.</p>` },
+      { id: 'ldl-targets', h: 'Your LDL target depends on your risk', tocLabel: 'LDL targets', html: `<p>Your doctor first works out your risk of a heart attack or stroke. Heart disease, diabetes or kidney disease automatically put you at high or very high risk. Otherwise, the doctor uses a score based on your age, sex, blood pressure, cholesterol, diabetes and smoking to estimate your 10-year risk.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Risk</th><th>LDL target (2017 guideline)</th><th>2023 update</th></tr></thead>
 <tbody>
@@ -841,58 +837,53 @@ ${figure('blood-sample', 'A sample tube being prepared for laboratory testing', 
 <tr><td>High (over 20%, diabetes, kidney disease)</td><td>2.6 mmol/L, or a 50% reduction</td><td>1.8 mmol/L or less, and at least a 50% reduction</td></tr>
 <tr><td>Very high (heart attack, stroke, narrowed arteries)</td><td>Below 1.8 mmol/L, or a 50% reduction</td><td>1.4 mmol/L or less, and at least a 50% reduction</td></tr>
 </tbody></table></div>
-<p>An LDL above 4.9 mmol/L on its own puts you at high risk. The 2023 targets come from published summaries of the update, so your doctor may use slightly different figures. See our guide to <a href="/articles/tanda-sakit-jantung-heart-disease-signs-malaysia/">signs of heart disease</a>.</p>
+<p>An LDL above 4.9 mmol/L puts you at high risk on its own. The 2023 targets are taken from published summaries of the update, so your doctor may use slightly different figures. See our guide to <a href="/articles/tanda-sakit-jantung-heart-disease-signs-malaysia/">signs of heart disease</a>.</p>
 ${figure('blood-sample', 'A blood sample tube held for testing', 'A non-fasting blood test is fine for most cholesterol checks.')}` },
-      { id: 'cholesterol-testing', h: 'Cholesterol tests: who, when and do I need to fast?', tocLabel: 'Cholesterol tests', html: `<ul>
-<li><strong>Who:</strong> all adults over 30 should have a full lipid profile. Start from age 18 if you have a family history of early heart disease, diabetes, obesity around the waist or a known inherited cholesterol problem.</li>
-<li><strong>Fasting:</strong> usually not needed. Results differ by only about 0.2 mmol/L. You may be asked to fast if your triglycerides were very high, or if you are having other tests that need fasting.</li>
-<li><strong>How often:</strong> typically every few years if normal. If you start or change treatment, your doctor will recheck in 1 to 3 months, then every 6 to 12 months.</li>
-</ul>
-<p><strong>In Malaysia:</strong> the 2023 National Health and Morbidity Survey found high cholesterol in a third of adults, about 7.5 million people, and about half didn’t know it. Free screening is available through some schemes. See our guide to <a href="/articles/free-health-screening-malaysia/">free health screening</a>.</p>
-<p><strong>Inherited high cholesterol</strong> (familial hypercholesterolaemia) affects about 1 in 100 Malaysians. Suspect it if your LDL is very high, a parent or sibling had heart disease before 55 (men) or 65 (women), or you have fatty lumps on the tendons of your fingers or heels. Family members should be tested too.</p>` },
+      { id: 'cholesterol-testing', h: 'Cholesterol tests: who, when and do I need to fast?', tocLabel: 'Cholesterol tests', html: `<p>All adults over 30 should have a full lipid profile. Start from age 18 if you have a family history of early heart disease, diabetes, obesity around the waist or a known inherited cholesterol problem.</p>
+<p>Most people don’t need to fast, because the results differ by only about 0.2 mmol/L. You may be asked to fast if your triglycerides were very high before, or if you are having other tests that need fasting.</p>
+<p>If your results are normal, a repeat test every few years is typical. If you start or change treatment, your doctor will recheck in 1 to 3 months, then every 6 to 12 months.</p>
+<p>The 2023 National Health and Morbidity Survey found high cholesterol in a third of adults in Malaysia, about 7.5 million people, and about half of them didn’t know. Some schemes offer free screening. See our guide to <a href="/articles/free-health-screening-malaysia/">free health screening</a>.</p>
+<p>Inherited high cholesterol (familial hypercholesterolaemia) affects about 1 in 100 Malaysians. Suspect it if your LDL is very high, if a parent or sibling had heart disease before 55 (men) or 65 (women), or if you have fatty lumps on the tendons of your fingers or heels. Your family members should be tested too.</p>` },
       { id: 'lower-cholesterol', h: 'How to lower cholesterol', tocLabel: 'Lowering cholesterol', html: `<ul>
-<li><strong>Cut saturated fat</strong> to less than 10% of your energy. Santan, coconut oil and palm oil are high in saturated fat, as are fatty meat and fried food. A review of 16 trials found coconut oil raised LDL compared with other vegetable oils.</li>
-<li><strong>Avoid trans fats</strong>, found in some biscuits, pastries and fried snacks.</li>
-<li><strong>Eat more fibre</strong>: aim for 20 to 30g a day, from vegetables, fruit, beans and whole grains. Oats with 3g of beta-glucan a day lower LDL by about 0.25 mmol/L. Juicing removes fibre, so eat whole fruit.</li>
-<li><strong>Reduce refined carbohydrates</strong> such as white rice and sugary drinks, especially if your triglycerides are high.</li>
-<li><strong>Exercise:</strong> regular aerobic exercise raises HDL and lowers triglycerides.</li>
-<li><strong>Lose weight</strong> if you are overweight. Even 5 to 10% helps. See our <a href="/articles/bmi-calculator-malaysia/">BMI calculator</a>.</li>
-<li><strong>Stop smoking</strong>, which raises HDL.</li>
+<li>Cut saturated fat to less than 10% of your energy. Santan, coconut oil and palm oil are high in it, and so are fatty meat and fried food. A review of 16 trials found coconut oil raised LDL compared with other vegetable oils.</li>
+<li>Avoid trans fats, which are in some biscuits, pastries and fried snacks.</li>
+<li>Eat more fibre, aiming for 20 to 30g a day from vegetables, fruit, beans and whole grains. Oats with 3g of beta-glucan a day lower LDL by about 0.25 mmol/L. Juicing removes the fibre, so eat fruit whole.</li>
+<li>Eat less refined carbohydrate, such as white rice and sugary drinks, especially if your triglycerides are high.</li>
+<li>Regular aerobic exercise raises HDL and lowers triglycerides.</li>
+<li>If you are overweight, losing even 5 to 10% of your weight helps. See our <a href="/articles/bmi-calculator-malaysia/">BMI calculator</a>.</li>
+<li>Stopping smoking raises HDL.</li>
 </ul>
-<p><strong>Eggs:</strong> cholesterol in food has only a weak effect on blood cholesterol for most people. The American Heart Association says one egg a day is reasonable as part of a healthy diet.</p>
-<p><strong>How fast?</strong> Diet changes take weeks to months. Statins usually reach their full effect within about a month, and doctors recheck cholesterol 1 to 3 months after starting.</p>` },
-      { id: 'statin-side-effects', h: 'Cholesterol medicines and side effects (kesan sampingan ubat kolesterol)', tocLabel: 'Statins and side effects', html: `<p><strong>Statins</strong> lower LDL by about 21 to 55%, depending on the type and dose. Common generic statins include atorvastatin, rosuvastatin, simvastatin and pravastatin. Other options, such as ezetimibe or injections (PCSK9 inhibitors), may be added if targets aren’t reached.</p>
+<p>For most people, cholesterol in food such as eggs has only a weak effect on blood cholesterol. The American Heart Association says one egg a day is reasonable as part of a healthy diet.</p>
+<p>Diet changes take weeks to months to work. Statins usually reach their full effect within about a month, and doctors recheck cholesterol 1 to 3 months after you start.</p>` },
+      { id: 'statin-side-effects', h: 'Cholesterol medicines and side effects (kesan sampingan ubat kolesterol)', tocLabel: 'Statins and side effects', html: `<p>Statins lower LDL by about 21 to 55%, depending on the type and dose. Common generic statins are atorvastatin, rosuvastatin, simvastatin and pravastatin. If you don’t reach your target, your doctor may add another medicine such as ezetimibe or an injection (PCSK9 inhibitors).</p>
 <ul>
-<li><strong>Muscle aches:</strong> in blinded trials, muscle aches were almost as common on placebo (26.6%) as on statins (27.1%), and more than 90% of reported muscle symptoms weren’t caused by the statin. If you do get symptoms, most people can take a different statin.</li>
-<li><strong>Liver:</strong> a mild rise in liver tests happens in fewer than 3 in 100 people. Serious liver problems are very rare.</li>
-<li><strong>Diabetes:</strong> statins slightly increase the chance of developing diabetes, but the benefit for the heart is much greater.</li>
-<li><strong>Pregnancy:</strong> stop statins before trying for a baby, and don’t take them while pregnant or breastfeeding.</li>
-<li><strong>Grapefruit</strong> can interact with some statins.</li>
+<li>In blinded trials, muscle aches were almost as common on placebo (26.6%) as on statins (27.1%), and more than 90% of reported muscle symptoms weren’t caused by the statin. Most people who do get symptoms can take a different statin.</li>
+<li>Fewer than 3 in 100 people have a mild rise in liver tests. Serious liver problems are very rare.</li>
+<li>Statins slightly increase the chance of developing diabetes, but the benefit for the heart is much greater.</li>
+<li>Stop statins before trying for a baby, and don’t take them while pregnant or breastfeeding.</li>
+<li>Grapefruit can interact with some statins.</li>
 </ul>
-<p><strong>Supplements:</strong></p>
-<ul>
-<li><strong>Red yeast rice</strong> contains monacolin K, which is the same as the statin lovastatin. In Malaysia, these products must be registered, are limited to 10mg of monacolin K a day, and must carry warnings. Don’t take them with a prescribed statin, and check for a MAL number.</li>
-<li><strong>Fish oil</strong> at high doses lowers triglycerides, but doesn’t replace statins for LDL.</li>
-</ul>
-<p>Don’t stop a statin on your own. If you have side effects, talk to your doctor about changing the dose or type.</p>
+<p>Red yeast rice contains monacolin K, which is the same substance as the statin lovastatin. In Malaysia these products must be registered, are limited to 10mg of monacolin K a day, and must carry warnings. Check for a MAL number, and don’t take them with a prescribed statin.</p>
+<p>High-dose fish oil lowers triglycerides, but it doesn’t replace a statin for lowering LDL.</p>
+<p>Don’t stop a statin on your own. If you have side effects, ask your doctor about changing the dose or type.</p>
 ${figure('healthy-salad', 'A table of salad, fruit and vegetables in small bowls', 'More vegetables, fruit, oats and beans, and less saturated fat, help lower cholesterol.')}` },
     ],
     clinicsMode: 'directory',
     clinicsHeading: 'Where to get your blood pressure and cholesterol checked',
     clinicsTocLabel: 'Where to get checked',
-    clinicsIntro: 'Any GP clinic can check your blood pressure in minutes and arrange a cholesterol test. Government health clinics offer free checks, and many people qualify for free screening. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
+    clinicsIntro: 'Any GP clinic can check your blood pressure in a few minutes and arrange a cholesterol test. Government health clinics offer free checks, and many people qualify for free screening. Our directory lists GP clinics across Kuala Lumpur, Selangor and other states.',
     clinicLinks: [['/clinics/gp-clinics/', 'GP clinics'], ['/clinics/open-saturday/', 'Clinics open on Saturday'], ['/clinics/open-late/', 'Clinics open late']],
     faqs: [
-      ['What are the signs of high blood pressure? (Tanda darah tinggi)', 'Usually none. High blood pressure is a “silent disease”, and only a blood pressure check can tell you. Very high blood pressure with chest pain, breathlessness, severe headache, weakness or vision changes is an emergency.'],
-      ['How can I lower my blood pressure quickly? (Cara menurunkan darah tinggi dengan cepat)', 'There is no safe way to lower it within minutes, and lowering very high blood pressure too fast can be dangerous. Over weeks, cutting salt, losing weight, exercise and less alcohol all help. If a reading is 180/110 or higher with symptoms, call 999.'],
+      ['What are the signs of high blood pressure? (Tanda darah tinggi)', 'Usually there are none. High blood pressure is a “silent disease”, so only a blood pressure check can tell you. Very high blood pressure with chest pain, breathlessness, a severe headache, weakness or vision changes is an emergency.'],
+      ['How can I lower my blood pressure quickly? (Cara menurunkan darah tinggi dengan cepat)', 'You can’t lower it safely within minutes, and bringing very high blood pressure down too fast can be dangerous. Over weeks, cutting salt, losing weight, exercising and drinking less alcohol all help. If a reading is 180/110 or higher and you have symptoms, call 999.'],
       ['What is a normal cholesterol level? (Kadar kolesterol normal)', 'Malaysian guidelines flag total cholesterol above 5.2 mmol/L, HDL below 1.0 (men) or 1.2 (women), and triglycerides above 1.7. Your LDL target depends on your heart risk.'],
-      ['What are the side effects of cholesterol medicine? (Kesan ubat kolesterol)', 'Statins can cause muscle aches in some people, mild liver test changes and a slightly higher diabetes risk, but serious side effects are rare. Talk to your doctor rather than stopping it yourself.'],
-      ['Can I stop my blood pressure medicine when my readings are normal?', 'No. Normal readings usually mean the medicine is working. Most people need it long term. Talk to your doctor before changing anything.'],
-      ['How fast can I lower my cholesterol? (Menurunkan kolesterol dengan cepat)', 'Statins reach their full effect in about a month. Diet changes take weeks to months. Your doctor will usually recheck cholesterol 1 to 3 months after a change.'],
-      ['What is a normal LDL level?', 'An LDL below 2.6 mmol/L is optimal for most adults. People at low or intermediate risk aim for below 3.0, and people at high or very high risk aim much lower, down to 1.4 mmol/L.'],
-      ['Do I need to fast for a cholesterol test?', 'Usually not. Your doctor may ask you to fast if your triglycerides were very high before, or for other tests.'],
-      ['Are eggs bad for cholesterol?', 'For most people, eating eggs has only a small effect on blood cholesterol. About one egg a day is reasonable as part of a healthy diet.'],
-      ['Is red yeast rice safe?', 'It contains the same substance as a statin. Use only registered products with a MAL number, and don’t take it with a prescribed statin.'],
+      ['What are the side effects of cholesterol medicine? (Kesan ubat kolesterol)', 'Statins can cause muscle aches in some people, mild changes in liver tests and a slightly higher chance of diabetes. Serious side effects are rare. Talk to your doctor instead of stopping the medicine yourself.'],
+      ['Can I stop my blood pressure medicine when my readings are normal?', 'No. Normal readings usually mean the medicine is working, and most people need it long term. Talk to your doctor before changing anything.'],
+      ['How fast can I lower my cholesterol? (Menurunkan kolesterol dengan cepat)', 'Statins reach their full effect in about a month, while diet changes take weeks to months. Your doctor will usually recheck your cholesterol 1 to 3 months after a change.'],
+      ['What is a normal LDL level?', 'For most adults, an LDL below 2.6 mmol/L is optimal. People at low or intermediate risk aim for below 3.0, and people at high or very high risk aim much lower, down to 1.4 mmol/L.'],
+      ['Do I need to fast for a cholesterol test?', 'Usually not. Your doctor may ask you to fast if your triglycerides were very high before, or if you are having other tests that need fasting.'],
+      ['Are eggs bad for cholesterol?', 'For most people, eggs have only a small effect on blood cholesterol. About one egg a day is reasonable as part of a healthy diet.'],
+      ['Is red yeast rice safe?', 'It contains the same substance as a statin. Only use registered products with a MAL number, and don’t take it with a prescribed statin.'],
     ],
     sources: [
       ['Ministry of Health — Clinical Practice Guidelines: Management of Hypertension, 5th edition (2018)', 'https://mymahtas2.moh.gov.my/files/CPG%20Maagement%20of%20Hypertension%20CPG%202018%20V3.8%20FA.pdf'],
